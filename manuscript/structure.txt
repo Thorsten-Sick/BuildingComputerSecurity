@@ -1,0 +1,39 @@
+# Structure of this book
+
+This book is meant to be read twice. First by cherry picking interesting
+topics. A second time as toolbox when implementing a feature.
+
+For this reason the book is split. The first few chapters offer an introduction
+to the security landscape. The second part contains chapters helping to
+solve specific problems.
+
+Chapters contain:
+
+1. Short abstract of the topic
+2. Some DOs (low hanging fruit)
+3. Some DON'Ts (typical mistakes)
+4. In detailed description of the technology
+5. Details on how this technology can be attacked
+6. Details on the DOs and DON'Ts
+7. References to similar chapters
+8. References to external sources like books
+9. Authors of this chapter
+
+I will try to stick by this structure. But the main goal is a usable toolbox -
+if necessary I will break the rules.
+
+## Project phases
+
+A project has different phases. Depending on your institution different
+people could be reponsible for each phase. Everyone can contribute to security.
+And security will break at the weakest link.
+
+If possible I will put the responsible job description into the chapter name.
+But as the boundaries in your company between the responsibilities can be
+different do not hard-filter by that. Stages in development are:
+
+* Management
+* Architeckture/Design/Project Management
+* Development
+* Testing
+* Support
