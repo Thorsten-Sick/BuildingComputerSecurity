@@ -3,6 +3,8 @@
 As soon as your system reaches a certain level of complexity, you will require
 updates.
 
+%% TODO: Why updates
+
 ## Todo
 
 * Be able to rollback

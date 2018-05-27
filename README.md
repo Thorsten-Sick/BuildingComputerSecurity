@@ -14,10 +14,13 @@ License is: https://creativecommons.org/licenses/by-sa/4.0/
 I want to sell the book as well as EBook. And hope to get some money for my "war chest" to be able to push it even further (hard copy ?).
 
 My private goals:
-- Collect my knowledge and sort the ideas to untangle the knots in my brain :-)
-- Help other engineers to create products with at least "good" security level
-- Guide me when learning new technology: Learn - Hands On - TEACH cycle. Where this book is part of TEACH
 
+* Collect my knowledge and sort the ideas to untangle the knots in my brain :-)
+* Help other engineers to create products with at least "good" security level
+* Guide me when learning new technology: Learn - Hands On - TEACH cycle. Where this book is part of TEACH
 
 What I can NOT do:
-- Go deep in some special topics. There are better books for that. Those will be linked to the chapters.
+
+* Go deep in some special topics. There are better books for that. Those will be linked to the chapters.
+
+This book will be on: https://leanpub.com/buildingcomputersecurity
