@@ -1,0 +1,75 @@
+# Basics: Know your attackers
+
+Attackers come in several flavours and can even be enemies or friends.
+
+Just because someone found a vulnerability in your application he is not
+necessarily an enemy. What he does with this knowledge - help or harm you -
+will define the attacker.
+
+You will know maybe feel a reflex like "No one will hack my hardware/software".
+This is a protective reflex which will do you more harm than good. Relax,
+be open minded and enjoy the taxonomy of hackers.
+
+## Hackers
+
+The good Hackers will notify you as soon as they found a vulnerability in your code.
+Get into touch and they will help you to close it. Be aware: You will get a
+very expensive service (pen testing) for free!
+
+Goal: Curiosity. And fame. And creating a more secure world
+Target: Does not have to be a high value target. Crazy things work even better
+Resources: They will invest hundreds of engineering hours
+Responsible Disclosure: You can expect them to behave responsibly
+Do: Respond friendly to their mail, they are partners
+Don't: Respond with a lawsuite. This will harm you on the long run. You will never ever get a responsible disclosure anymore.
+
+
+An example:
+
+[Natalie Silvanovich] (#reference-tamagotchi): Who presented the hacking of Tamagotchis at a hacker conference. Twice.
+
+## University researchers
+
+Similar to hackers. They have more resources. But their goal is more academic:
+They do not necessarily want to produce a working exploit as long as the idea and
+approach are totally new.
+
+
+Do: Enjoy their ideas
+Don't: Be distracted. Be realistic if there is not some less fancy attack more likely to happen against your infrastructure.
+
+## Script kiddies
+
+Goal: Invoke mayhem, show off
+Target: They know a few tricks, have some tools and choose their target by what they can hack
+Resources: Some tools
+Do: Protect agains standard attacks
+
+## Organized Crime
+
+Those are the powers currently creating malware and are making lots of money.
+It is organised crime because they have spcialists for all those tasks needed to:
+
+* Build malware
+* Spread it
+* Control it (bot herders)
+* Cash in (money mules)
+
+Their major goal is to make money. As there are lots of ways to do that it is
+hard to predict what the next way will be. We currently have:
+
+* Stealing accounts
+* Using bandwidth for DDOS
+* Blackmail shops with DDOS attacks
+* Stealing private data and credentials (mail addresses for SPAM, credit card numbers, ....)
+* Ransomware
+* Cryptominer to use the victims power and CPU to mine crypto currencies
+
+Modern malware is modular and can be deployed with several of these attack modules.
+
+The Command and Control interfaces of the malware are shipped with statistics dashboard where
+attackers can decide what kind of module will currently have the best ROI.
+
+%% TODO: Nation states
+
+%% TODO: In house attackers
