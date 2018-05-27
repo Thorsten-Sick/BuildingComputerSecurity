@@ -1,0 +1,158 @@
+# User interfaces
+
+%% TODO: "Human Error" by James Reason lesen
+
+%% Add books on social engineering
+
+"The human mind is a stationary target"
+
+Attackers normally have to chain several steps until they control the target.
+Quite often the human mind is the weakest link. Hacking humans is named
+"Social engineering". To strengthen humans against attacks you have two options:
+
+* Education
+* Resilient user interfaces
+
+This is about the user interfaces.
+
+## Todo
+
+* Find usability experts
+* Secure setting is default
+* Prevent warning fatigue
+* Show marker on warning
+* Not deciding is the secure option
+* Unique warning ID
+* Create event log
+* Stop the user's momentum
+
+
+## Not todo
+
+* Show security UI on external content area
+* Over-simplify
+
+## Attacks
+
+Social engineering attacks normally abuse emotions like greed, fear, panic, ...
+Common for browsers is for example "To view this video, please download the codec/font".
+It is no codec. Even if the page looks like it is a Google page (designs can be faked).
+
+For emails panic subjects are common. Just check your spam folder for invoices,
+"urgent" and similar.
+
+Maybe it does not work on an average person. But if the timing is bad - the person
+is expecting somthing like that and it was a long day - everyone could be exploited.
+
+There is also technology for more advanced attacks:
+
+* Waterhole attack: A web page where a specific kind of people normally meet is "mined"
+* Phising: General targeting for credentials. Can be Social Engineering plus malware as attack vector
+* Spear Phising: First invest time to know the target and have a more convincing message
+* Whaling: Target the "big fish". Lots of prior time invested
+* Browser exploits like BEEF also have lots of convincing tools for UI modification
+
+## Details Todo list
+
+### Find usablility experts
+
+Find usability experts to design user interfaces. Especially those parts
+related to security are not seen daily by the user and tend to be arcane.
+Several psychological effects also are a part of the problem.
+Like panic of the user and not much experience. Double check the user
+interfaces here.
+
+## Secure setting is default
+
+If you have something like a firewall where the user can choose between
+
+* locking down the system (and preventing the attack) with the potential side effect to have restrited access himself
+
+and
+
+* opening the system and getting access to everything - with the side effect to allow attackers access
+
+Lock the system down. If access is missing the user will notice and can open up
+the specific access later. While if there is an attack and the attacker gets
+access to an opened system the user will not notice until it damage is done.
+
+This said: Create a simple way for the user to granualary get the reuwired access and things done.
+
+### Prevent warning fatigue
+
+If there are many warnings, people will start to ignore them and click them away.
+Maybe for some events it is better to "Just do the right thing and inform the user afterwards".
+
+Also: If your normal pop ups (especially things like ads) look like warnings
+you will train the users to click them away in top speed. Never ever do that !
+
+Show those things in different screen areas, with a different color scheme.
+
+Still have the warnings in a kind of "corporate identity" so the user can
+connect them to your software.
+
+### Show marker on warning
+
+If you have (browser) UI where a missing lock icon indicates the insecurity:
+This will fail. Users do not notice anything missing. Add a warning sign
+for the "not secure state" instead. Keep the lock icon for the secure state.
+
+### Unique warning ID ?
+
+In addition to an easy-to-understand warning message you maybe want to create
+a unique ID for the user to google and find help for. Display this ID in
+addition to the message. Give your support people a list with those IDs.
+
+### Create event log
+
+Create an event log containing all the recent warnings. Especially when
+building end-user software. Experts (or the most skilled family member) will
+want this info when they are faced with a help request
+"And there was this box and I clicked a button and then the computer did behave strange".
+
+### Stop the user's momentum
+
+A users wants to achieve a goal (like: visit this porn site). Any ux indicator
+stopping the user will have to stop the user long enough so that the neurons
+for more complex decission making can boot up. If you just show a simple
+block page here it will be dismissed as "False Positive" and clicked away. The
+user will be infected.
+
+* Block the user
+* Give enough (simple) information
+* Create a small UI "labyrinth" of buttons or "more..." links so that the brain can change direction
+* Then - and not before - you can offer something like "continue anyway"
+
+AFAIK: Debian even had a nice feature where the user had to enter a sentence like
+"I am a bonehead and this will fry my computer" into an edit box before
+being able to delete the OS kernel.
+
+## Details Not-todo list
+
+### Show security UI on external content area
+
+Especially for a browser: There is a Browser UI and a third party
+area (the homepage). The third party area is attacker controlled. They can fake any
+UI, Logos and things in there. Be aware of that.
+
+### Not deciding is the secure option
+
+Faced with a hard decission users can decide not-to-decide. If you dialog box
+has "Ok" and "Cancel" buttons the users will close the box bx the "X"....
+
+This should lead to the secure default.
+
+### Over-simplify
+
+Security is complex. Sometimes you can not have one indicator for all kinds of
+risks and attacks.
+
+This happened to the browser developers because the situation changed during
+the last years.
+The lock icon next to the URL bar always indicated "The connection is secure".
+But as users started to understand this icon as "This page is secure" malware started
+to encrypt the connction. So users would see the lock and assumed the page is ok.
+This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page,
+one for the connection). Or start indicating differently (red bar for
+unencrypted connections). While a malware attack will be blocked hard with the
+whole tab displaying info on a red background.

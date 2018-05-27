@@ -1,5 +1,7 @@
 structure.txt
 knowyourenemies.txt
+ux.txt
+updates.txt
 externalreferences.txt
 authors.txt
 license.txt

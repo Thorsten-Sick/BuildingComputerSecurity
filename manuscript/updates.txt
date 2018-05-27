@@ -1,0 +1,161 @@
+# Updates
+
+As soon as your system reaches a certain level of complexity, you will require
+updates.
+
+## Todo
+
+* Be able to rollback
+* Verifiy signature
+* Secure key handling
+* Verify version - only upgrade
+* Track distribution
+* Be able to stop updates
+* Distributing the updates
+* Compress updates
+* Diff updates
+* Incentives
+* Automatic updates
+
+
+## Not todo
+
+* TOCTTOU Time of check to time of use - error
+* Break the update chain
+
+## Response Time
+
+* If a vulnerability gets known to the bad guys, expect a time-to-exploit of a few days
+* If a vulnerability gets reported as "responsible disclosure" by a friendly hacker you will have about 90 days (standard) to release the fix to all customers
+
+Short: You will not be able to ship the fixes with the next regular update. Be ready to for quick response.
+Build your processes from support call to all-your-users update accordingly.
+
+## Details todo list
+
+### Be able to rollback
+
+Be able to roll back your changes either automatically or by user interaction if the update breaks something.
+User interaction could be "press the reset button for 10 seconds". Rollback could be to factory system or last-know-good software state.
+This will reduce your stress when doing emergency updates.
+
+### Verifiy signature
+
+Cryptographically sign your binaries (**public key cryptography** is the keyword).
+
+One way of signing your binaries is to create at least a sha256 hash of your binaries
+(md5, crc and sha1 are bad). Create a update config file containing all your
+files, their versions and their hashes. This update config file should also
+have a unique version number that is incremented only.
+
+Now sign this config file using **public key signatures**.
+
+This config file will be checked against the public key file on the end-system.
+If the key matches and the version is bigger than the current one the binaries
+can be downloaded and verified against the hashes.
+
+### Secure key handling
+
+The secret key must be stored on an isolated system. Not a build machine and
+especially not the download server. You sign the update binary or config config
+prior to release with this key.
+
+You will want a second emergency key (it's public part also distributed to the clients).
+This one is stored in a safe. If the first key is compromised you can can
+revoke it and do an emergency update now binding the emergency key to the clients.
+
+
+## Verify version - only upgrade
+
+Only update to a **newer** version. No updates to older versions. If you ever want to roll
+back a change, release an old version of your programs with a higher version number.
+
+The reason for this is that an attacker could roll out updates with older versions
+of your program that still contains known vulnerabilities. And hack the systems afterwards.
+
+## Track distribution
+
+You want to track your update roll out. And if systems are functional post-update.
+Especially that.
+
+## Be able to stop updates
+
+If you roll out a broken update, you should be able to remove it from your
+update servers very quick. So other users do not risk ruining their systems.
+Automatic roll back (mentioned a few chapters above) will take care for the
+updated systems.
+
+## Distributing the updates
+
+If your updates are big your servers will not have enough bandwidth for to
+update all clients in time.
+You could use a CDN for your updates. To further reduce load update in stages:
+
+1. Check if there is a newer version. This is a few bytes only
+2. Download config file. Verify.
+3. Download binaries
+
+As you have your files signed, an option to be protected against DDOS-es vs. your
+update infrastructure would be to also have a fallback to a peer-to-peer network
+(bittorrent). Some bigger software applications (games) use bittorrent.
+Do not makte that the only source ! Because bittorrent could be blocked in
+some environments like companies. Also do not waste the users bandwidth
+without asking. Could be expensive for some of them if they are connected
+using a mobile network.
+
+%% TODO: Details: Your updates should be served in chunks, where paused downloads can be continued. You either implement this by hand our your server supports pause and continue of downloads.
+
+## Compress updates
+
+Compressing updates reduces stress on your update servers and makes them more
+resilient agains DDOS attacks. Test common algorithms with your update files.
+The algorithms have different strengths and weaknesses. Also: De-compressing
+is very often much faster than compressing. And this is what your clients are doing.
+
+## Diff updates
+
+If you are shipping large updates, you want to ship them as diffs to previous versions.
+Depending on your file types there can be different diff algorithms that are
+quite effective. Please test before using.
+For PE files there is "courgette".
+Always verify after diffing if the created file is the proper one (by hash).
+If something went wrong, fall back to whole-file download.
+
+That way there is no additional risk.
+
+## Incentives
+
+Some users care more about new Emojis than about vulnerability fixes. Maybe bundle some
+eye candy (new backgrounds, ...) with the updates to get the users to update.
+Sad but true.
+
+%% TODO: interne und beta channels dazu zu updates
+
+## Automatic updates
+
+Do updates in the background. Without user interaction. Especially if you have
+corporate users, offer an Opt-out hidden in some config. Companies want to test
+before they deploy to thousands of users.
+
+If the update requires a restart of the software think about waiting for
+the user to naturally restart it - with a timer. If the user does not restart
+it after X days nudge him.
+
+## Details Not-todo list
+
+### TOCTTOU Time of check to time of use - error
+
+[Wikipedia on TOCTOU](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use)
+
+A possible issue when checking the signature of an update package:
+If the package is on an external medium and the updater is not copying it
+locally, the attacker can switch the (legit) package after verification with a
+malicious package. Copy the package into a local storage before
+verification and installation.
+
+## Break the update chain
+
+Never break the update chain for your devices. Offer a rollback to a know good
+version if an update breaks updateing for the future.
+Test your update and update +1. Get notified when an update failed on the end
+user systems. Roll out your updates slowly.

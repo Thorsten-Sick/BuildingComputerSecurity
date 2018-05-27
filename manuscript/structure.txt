@@ -10,11 +10,11 @@ solve specific problems.
 Chapters contain:
 
 1. Short abstract of the topic
-2. Some DOs (low hanging fruit)
-3. Some DON'Ts (typical mistakes)
+2. Todo list (low hanging fruit)
+3. Not-todo list (typical mistakes)
 4. In detailed description of the technology
 5. Details on how this technology can be attacked
-6. Details on the DOs and DON'Ts
+6. Detailed Todo list and Not-todo list
 7. References to similar chapters
 8. References to external sources like books
 9. Authors of this chapter
