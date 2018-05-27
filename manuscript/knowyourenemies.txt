@@ -26,7 +26,7 @@ Don't: Respond with a lawsuite. This will harm you on the long run. You will nev
 
 An example:
 
-[Natalie Silvanovich] (#reference-tamagotchi): Who presented the hacking of Tamagotchis at a hacker conference. Twice.
+[Natalie Silvanovich](#reference-tamagotchi): Who presented the hacking of Tamagotchis at a hacker conference. Twice.
 
 ## University researchers
 
@@ -36,7 +36,7 @@ approach are totally new.
 
 
 Do: Enjoy their ideas
-Don't: Be distracted. Be realistic if there is not some less fancy attack more likely to happen against your infrastructure.
+Don't: Be distracted. Most attacks used at the moment are several years old.
 
 ## Script kiddies
 

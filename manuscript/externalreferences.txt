@@ -1,9 +1,9 @@
 # External References
 
-# Hacking Tamagotchis {reference-tamagotchi}
+## Hacking Tamagotchis {#reference-tamagotchi}
 
 Natalie Silvanovich on hacking Tamagotchis
 
-[Many Tamagotchis Were Harmed in the Making of this Presentation] (https://media.ccc.de/v/29c3-5088-en-many_tamagotchis_were_harmed_in_the_making_of_this_presentation_h264)
+[Many Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/29c3-5088-en-many_tamagotchis_were_harmed_in_the_making_of_this_presentation_h264)
 
-[Even More Tamagotchis Were Harmed in the Making of this Presentation] (https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)
+[Even More Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)

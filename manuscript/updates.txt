@@ -27,11 +27,34 @@ updates.
 
 ## Response Time
 
-* If a vulnerability gets known to the bad guys, expect a time-to-exploit of a few days
-* If a vulnerability gets reported as "responsible disclosure" by a friendly hacker you will have about 90 days (standard) to release the fix to all customers
+This is the time you have to response to an incident. Normally it is the span between learning about an issue and successfully updating all your customers systems.
 
-Short: You will not be able to ship the fixes with the next regular update. Be ready to for quick response.
+If a vulnerability gets known to the *bad guys*, expect a time-to-exploit
+of a few days. Normal process is that someone identifies the vulnerability
+and writes an exploit (plus a blog post). The exploit is then stabilized and
+integrated into attack systems (metasploit for the more white hack side,
+exploit kits for the bad guys).
+
+
+If a vulnerability gets reported as "responsible disclosure" by a
+friendly hacker you will have about 90 days (standard) to release the fix
+to all customers. If you have good reasons (complex situation where it is
+hard to get all your users updated) you can maybe negotiate and get some
+more days. But there is a very good reason for the 90 days: It is a
+reasonable time to get the fix released and a longer time frame would
+increase the risk that a bad guy finds the same vulnerability in parallel.
+This happened more often than you think.
+
+Short: You will not be able to ship the fixes with the next regular update.
+Be ready to for quick response.
 Build your processes from support call to all-your-users update accordingly.
+
+One more thing: As soon as the first client gets an update, the bad guys
+could get it as well. Normally they do a binary diff
+(using tools like [IDA](https://www.hex-rays.com/products/ida/index.shtml)).
+From that diff they can learn which vulnerability you just patched.
+The race is on between the bad guys creating a reliable exploit and you
+getting the update to your last customer.
 
 ## Details todo list
 
@@ -152,12 +175,18 @@ it after X days nudge him.
 A possible issue when checking the signature of an update package:
 If the package is on an external medium and the updater is not copying it
 locally, the attacker can switch the (legit) package after verification with a
-malicious package. Copy the package into a local storage before
+malicious package.
+
+1. You verify the (clean) external data's signature
+2. Attacker replaces clean software with malicious software
+3. Your tool now installs the malicious software from external medium
+
+Solution:
+Copy the package into a local storage before
 verification and installation.
 
 ## Break the update chain
 
-Never break the update chain for your devices. Offer a rollback to a know good
-version if an update breaks updateing for the future.
-Test your update and update +1. Get notified when an update failed on the end
-user systems. Roll out your updates slowly.
+Never break the update chain for your devices. As long as updates work you can
+fix anything. Focus of your testers should be to (automatically) test updates
+over several versions.
