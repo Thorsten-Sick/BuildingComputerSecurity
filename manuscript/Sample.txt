@@ -1,3 +1,5 @@
 structure.txt
+principles.txt
+updates.txt
 authors.txt
 license.txt

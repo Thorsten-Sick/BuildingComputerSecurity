@@ -8,17 +8,61 @@ There is a list of the most basic principles you can build security on.
 These principles are very abstract, but are the basics for building more specific tools.
 This is not a complete list.
 
+## Bolt-on-security vs security-by-design
+
+Detecting attacks is a typical bolt-on way of security.
+Anti-Virus, Network intrusion detection, behaviour detection, ...
+This kind of things are **bolt-on-security**. The other big security
+philosophy is **security-by-design**.
+
+If you are responsible to build a system use **security-by-design**. In many
+cases you are not free to the right thing - for example a manager needs an old
+Internet Explorer to use am esoteric web based application installed on his PC.
+In this case **bolt-on-security** (filtering files and urls) is a valid approach.
+
+Disadvantages of Bolt-on-security is: It adds complexity (file parsing, for example)
+
+This can turn the bolt-on-security into a new infection vector.
+
+To protect against it, isolate it from other systems (segmentation):
+Sandboxing and an own machine for the file processing are options.
+
+Two tactics with bolt-on-security:
+
+* Add it to the outer perimenter of your network to reduce the normal
+"internet noise" of attacks. This will reduce your important monitor-log reports.
+* Add it to the innermost perimenter to detect attacks that bypassed your protection.
+
+The next principles are part of the security-by-design philosophy
+
 ## Threat modelling
 
+Threat modelling is a process organized by the designer of the software but
+including a multi-skill team of people involved int he project.
+Goal is to identify potential threats to the developed tool as early as possible
+and to find fixes and mitigations.
 
-Do threat modelling.
+It is not complex but can turn out to produce lots of documentation.
+
+There are three basic steps that need to be done to model threats:
+
+* Create overview
+* Brainstorm potential attacks
+* Rate severity
+* Define fixes and create priority to implement them
+
+For those steps there are many tools (methodologies/checklists) to guide
+your team through.
+
+Which one to pick will depend on mood, team, and especially your project.
+
+An improvised one would be:
 
 * Who will attack your technology ?
 * What is the goal of this person (data, money, ...)
 * Which resources can this person gather ?
 
-You will not be able to protect your tech against the most sophisticated
-attackers. But very likely you will not have to. Threat Modelling will help you there
+There will be a specific chapter on threat modelling
 
 %% .. TODO: details on threat modelling
 
@@ -27,35 +71,58 @@ attackers. But very likely you will not have to. Threat Modelling will help you 
 ## Reduce Attack Surface
 
 Attack surface is everything that can be reached from the outside.
-This is servers, interfaces, network connections. What do you really need ?
-How to put steel plates on the others ? How to reduce the potential impact ?
-Who do you trust ?
+This is servers, interfaces, network connections. You can reduce this surface by
+asking yourself some simple questions:
+
+* What do you really need ?
+* How to put steel plates on the other technologies ?
+* How to reduce the potential impact ?
+* Who do you (have to) trust ?
+
+## Compartmentalisation / Segementation
+
+Segment your system into small partitions. Define narrow communication channels.
+Maybe they can be one-way (data-diodes). Possible segments can be:
+
+* Multiple isolated VMs on a machine
+* Multiple isolated processes on an OS
+* Multiple isolated network segments
+* Sandbox the processes
+* Isolated servers
+
+Dropping privileges is a part of that.
+
+## Updates
+
+After a vendor created a patch it takes the bad guys a few hours to
+reverse engineer the patch and find the vulnerability which has just
+been patched. Within days there are attacks. Update everything ASAP.
+Especially if it is network connected.
+
+[More on updates](#chapter-updates)
 
 ## Flexibility
 
-Whatever you do: Be flexible. Expect the attacker to find a trick against your
-tools the next weeks. Have a plan how to handle that situation ready. Expect
-the attacker to do something unexpected. Plan for flexibility.
+Whatever you do: Be flexible. You did threat modelling during the design phase,
+you fixed all vulnerabilities you found. But there will be a hack.
+
+Expect the attacker to find a trick against your tools the next weeks.
+Have a plan how to handle that situation ready. Expect the attacker
+to do something unexpected. Plan for flexibility.
 
 ## Do not make mistakes
 
 "Bitte immer alles richtig machen" in German. This is the core principle
-especially in Design and Coding. It kind of sounds obvious and boring. But there
-are ways to engineer fault-reduction by tools and processes. Not only be coffee.
-
-## Update ASAP
-
-After a vendor created a patch it takes the bad guys a few hours to
-reverse engineer the patch and find the vulnerability which has just been patched.
-Within days there are attacks. Update everything ASAP. Especially if it is
-network connected.
+especially in Design and Coding. It kind of sounds obvious and boring.
+But there are ways to engineer fault-reduction by tools and processes.
 
 ## De-centralisation
 
-De-centralise everything. entralised components (servers) can be DDOS-ed.
-Will your IoT device still work when the server is down ?
+De-centralise everything. Centralised components (servers) can be DDOS-ed.
+Will your IoT device still work when the server is down ? Which functionality
+is available in offline mode ?
 Could you add fallback servers to the plan ?
-Could the user override the server for a short time (and still open his IoT lock)
+Could the user override the server for a short time ?
 
 ## Fail gracefully
 
@@ -63,72 +130,47 @@ Do you want your system to fail-close or fail-open ? What does the door lock
 do when there is a power outage ? Lock or Open ? Plan these failures and
 the consequences. How can these failures triggered and by whom ?
 
-## Compartmentalisation / Segementation
-
-Segment your system. Define narrow communication channels.
-Maybe they can be one-way (data-diodes). Possible segments can be:
-
-* Multiple isolated VMs on a machine
-* Multiple isolated processes on an OS
-* Multiple isolated network segments
-* Sandbox the processes
-
-Dropping privileges is a part of that.
-
 ## Monitor / Incident Response
 
-Monitor security incidents, create logs of strange events.
-This enables you to respond ("incident response") when something happens. And to
-learn from the incidents. And do forensic analysis afterwards. Learn from th
-mistakes and improve. Monitors should be write only and segmentationed away.
-Attackers may spam the logs to hide their tracks.
+Expect a hack to happen. But many hacked companies do not notice the breach -
+or do that hundreds of days later by accident (server misbehaves or similar).
 
-%% .. TODO: Read "Intelligence driven Incident Response"
+You do not want to be one of those. You could monitor the devices you own or
+the devices you sold to customers (IoT, for example) for security incidents.
+For "monitoring sold devices" scenario: respect privacy !
+
+There is SIEM (Security Information and Event Management) software for that.
+Connect your technology to a SIEM.
+
+This enables you to respond ("incident response") when something happens.
+This has several benefits:
+
+* You can respond (updates, isolate infected devices, ....)
+* Learn from this incident for the next projects
+
+
+
+%% .. TODO: Read "Intelligence driven Incident Response", write whole chapter
+
+%% Prevent spamming of logs -> attackers could hide their tracks
 
 ## Educate users
 
-Educate users. In an automated way (E-learning). This is no magic bullet.
-Also: Do not use as cover-your-ass security.
-Educating users is a respectful approach. Respect their intelligence.
+Users want the option to know what their technology is doing. Having two
+layers (simple and detailed) of information will very likely be embraced
+(depends on your users).
 
-## Bolt-on-security aka detection
+Your security plan should not depend on users reading, understanding and
+acting upon this information. But having smart users will add new "sensors"
+for unexpected attacks to your environment. Especially attacks containing
+social engineering.
 
-Detecting attacks is a typical bolt-on way of security.
-Anti-Virus, Network intrusion detection, behaviour detection, ...
-This kind of things.
-It is opposed to "security by design". If possible: Go for "security by design".
-Sometimes you can't...then the fallback is bolt-on-security.
-
-Adding bolt-on-security increases complexity. But has benefits.
-Add it to the outer perimenter to reduce the normal "internet noise" of attacks.
-This will reduce your monitor-log reports.
-Add it to the innermost perimenter to detect attacks that bypassed your protection.
-Handle the increased complexity by segmenting the bolt-on-security away.
-A Sandbox and maybe a separate system will do.
 
 ## Security by Obscurity
 
-A bad idea. There are tools (IDA plus hexrays, for example) that help to
-reverse engineer executables. If any security depends on secrecy it will break
-as soon as an experienced person attacks it. While you maybe are an
-experienced engineer but not an experienced attacker the guys your tools will
+A bad idea. There are [disassembler tools](#reference-disassembler-tools)
+that help to reverse engineer executables. If any security depends on secrecy
+it will break as soon as an experienced person attacks it. You are an
+experienced engineer but not an experienced attacker. The guys you
 face have the skillset switched: experienced attacker, ok-ish engineer.
 This is why they became attackers.
-
-%% .. TODO: Separate the principles from official tools /processes
-
-## Microsoft SDL
-
-https://www.microsoft.com/en-us/sdl
-
-## STRIDE
-
-The Microsoft checklist for Threat Modelling:
-
-https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx
-
-.. TODO: Add details
-
-## OWASP Embedded Application Security Project
-
-https://www.owasp.org/index.php/OWASP_Embedded_Application_Security
