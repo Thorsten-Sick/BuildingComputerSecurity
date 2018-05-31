@@ -69,7 +69,7 @@ This will reduce your stress when doing emergency updates.
 Cryptographically sign your binaries (**public key cryptography** is the keyword).
 
 One way of signing your binaries is to create at least a sha256 hash of your binaries
-(md5, crc and sha1 are bad). Create a update config file containing all your
+(md5, crc and sha1 are broken). Create a update config file containing all your
 files, their versions and their hashes. This update config file should also
 have a unique version number that is incremented only.
 
@@ -142,7 +142,7 @@ is very often much faster than compressing. And this is what your clients are do
 If you are shipping large updates, you want to ship them as diffs to previous versions.
 Depending on your file types there can be different diff algorithms that are
 quite effective. Please test before using.
-For PE files there is "courgette".
+For PE files there is ["courgette"](https://www.chromium.org/developers/design-documents/software-updates-courgette).
 Always verify after diffing if the created file is the proper one (by hash).
 If something went wrong, fall back to whole-file download.
 

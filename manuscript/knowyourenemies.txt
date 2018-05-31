@@ -17,10 +17,15 @@ Get into touch and they will help you to close it. Be aware: You will get a
 very expensive service (pen testing) for free!
 
 Goal: Curiosity. And fame. And creating a more secure world
+
 Target: Does not have to be a high value target. Crazy things work even better
+
 Resources: They will invest hundreds of engineering hours
+
 Responsible Disclosure: You can expect them to behave responsibly
+
 Do: Respond friendly to their mail, they are partners
+
 Don't: Respond with a lawsuite. This will harm you on the long run. You will never ever get a responsible disclosure anymore.
 
 
@@ -36,13 +41,17 @@ approach are totally new.
 
 
 Do: Enjoy their ideas
+
 Don't: Be distracted. Most attacks used at the moment are several years old.
 
 ## Script kiddies
 
 Goal: Invoke mayhem, show off
+
 Target: They know a few tricks, have some tools and choose their target by what they can hack
+
 Resources: Some tools
+
 Do: Protect agains standard attacks
 
 ## Organized Crime

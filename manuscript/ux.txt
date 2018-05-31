@@ -54,11 +54,11 @@ There is also technology for more advanced attacks:
 
 ## Details Todo list
 
-### Find usablility experts
+### Find usability experts
 
 Find usability experts to design user interfaces. Especially those parts
 related to security are not seen daily by the user and tend to be arcane.
-Several psychological effects also are a part of the problem.
+Several psychological effects contribute to the problem.
 Like panic of the user and not much experience. Double check the user
 interfaces here.
 
@@ -66,7 +66,7 @@ interfaces here.
 
 If you have something like a firewall where the user can choose between
 
-* locking down the system (and preventing the attack) with the potential side effect to have restrited access himself
+* locking down the system (and preventing the attack) with the potential side effect to have restricted access himself
 
 and
 
@@ -76,14 +76,14 @@ Lock the system down. If access is missing the user will notice and can open up
 the specific access later. While if there is an attack and the attacker gets
 access to an opened system the user will not notice until it damage is done.
 
-This said: Create a simple way for the user to granualary get the reuwired access and things done.
+This said: Create a simple way for the user to granulary get the extended permissions and things done.
 
 ### Prevent warning fatigue
 
 If there are many warnings, people will start to ignore them and click them away.
 Maybe for some events it is better to "Just do the right thing and inform the user afterwards".
 
-Also: If your normal pop ups (especially things like ads) look like warnings
+Also: If your normal pop-ups (especially things like ads) look like warnings
 you will train the users to click them away in top speed. Never ever do that !
 
 Show those things in different screen areas, with a different color scheme.
