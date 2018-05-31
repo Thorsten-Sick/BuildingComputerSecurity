@@ -35,6 +35,8 @@ Two tactics with bolt-on-security:
 
 The next principles are part of the security-by-design philosophy
 
+%% TODO Write Bolt-on-security and link to it
+
 ## Threat modelling
 
 Threat modelling is a process organized by the designer of the software but
@@ -79,6 +81,8 @@ asking yourself some simple questions:
 * How to reduce the potential impact ?
 * Who do you (have to) trust ?
 
+%% TODO: Write chapter on attack surface
+
 ## Compartmentalisation / Segementation
 
 Segment your system into small partitions. Define narrow communication channels.
@@ -91,6 +95,8 @@ Maybe they can be one-way (data-diodes). Possible segments can be:
 * Isolated servers
 
 Dropping privileges is a part of that.
+
+%% TODO: Write several chapters, depending on type of isolation
 
 ## Updates
 
@@ -115,6 +121,14 @@ to do something unexpected. Plan for flexibility.
 "Bitte immer alles richtig machen" in German. This is the core principle
 especially in Design and Coding. It kind of sounds obvious and boring.
 But there are ways to engineer fault-reduction by tools and processes.
+
+%% TODO: Secure coding chapter linked to here
+
+%% TODO: Compiler mitigation chapter linked to here
+
+%% TODO: Testing chapter linked to here
+
+%% TODO: Fuzzing chapter linked to here
 
 ## De-centralisation
 
@@ -154,6 +168,8 @@ This has several benefits:
 
 %% Prevent spamming of logs -> attackers could hide their tracks
 
+%% TODO: Write SIEM chapter for IoT projects and similar
+
 ## Educate users
 
 Users want the option to know what their technology is doing. Having two
@@ -165,6 +181,7 @@ acting upon this information. But having smart users will add new "sensors"
 for unexpected attacks to your environment. Especially attacks containing
 social engineering.
 
+%% TODO: Get C.S. to write a chapter
 
 ## Security by Obscurity
 

@@ -5,4 +5,5 @@ ux.txt
 updates.txt
 externalreferences.txt
 authors.txt
+changelog.txt
 license.txt

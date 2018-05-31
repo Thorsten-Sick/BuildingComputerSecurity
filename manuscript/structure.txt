@@ -10,30 +10,33 @@ solve specific problems.
 Chapters contain:
 
 1. Short abstract of the topic
-2. Todo list (low hanging fruit)
-3. Not-todo list (typical mistakes)
-4. In detailed description of the technology
-5. Details on how this technology can be attacked
-6. Detailed Todo list and Not-todo list
-7. References to similar chapters
-8. References to external sources like books
-9. Authors of this chapter
+2. Audience
+3. Todo list (low hanging fruit)
+4. Not-todo list (typical mistakes)
+5. In detailed description of the technology
+6. Details on how this technology can be attacked
+7. Detailed Todo list and Not-todo list
+8. References to similar chapters
+9. References to external sources like books
+10. Authors of this chapter
 
 I will try to stick by this structure. But the main goal is a usable toolbox -
 if necessary I will break the rules.
 
-## Project phases
+## Project phases and audience
 
 A project has different phases. Depending on your institution different
 people could be reponsible for each phase. Everyone can contribute to security.
 And security will break at the weakest link.
 
-If possible I will put the responsible job description into the chapter name.
+If possible I will put the responsible job description into the *Audience*
+block at the beginning of each chapter.
 But as the boundaries in your company between the responsibilities can be
-different do not hard-filter by that. Stages in development are:
+different: it is a suggestion. Stages in development are:
 
 * Management
-* Architeckture/Design/Project Management
+* Architecture/Design/Project Management
 * Development
 * Testing
 * Support
+* Analysis (analysis of attacks)

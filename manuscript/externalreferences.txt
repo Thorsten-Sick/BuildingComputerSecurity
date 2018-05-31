@@ -13,3 +13,53 @@ Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 IDA, paid and free test version. For Mac/Win/Linux: https://www.hex-rays.com/products/ida/index.shtml
 Hopper, Mac/Linux. Tes version available: https://www.hopperapp.com/
 Radare2, Mac/Windows/Linux/... : http://radare.org/r/
+
+## Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
+
+Practical Internet of Things Security by Drew Van Duren, Brian Russell
+
+A very methodic book covering
+
+* Threat modelling
+* Design
+* Lifecycle
+* Basic Cryptography
+* Authentication/Authorization
+* Complicance monitoring
+* IoT Incidence Response
+
+A good overview.
+
+Potential improvement: Go deeper into details and specific technology.
+For example: Crypto chapter is a good start but really using crypto will
+require more books to be read. Says the one writing a
+"security overview book"...I know....
+
+## Book: "Test driven development for embedded C" {#reference-book-tdd-4-embedded-c}
+
+Test Driven Development for Embedded C by James W. Grenning
+
+A pragmatic and step-by-step approach how to develop for embedded systems in C
+and still benefit from unit tests.
+
+This book will improve your software quality and security.
+
+## Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
+
+Getting Started with Bluetooth Low Energy by Robert Davidson, Akiba, Carles Cufí, Kevin Townsend
+
+From protocol basics and background to different hardware platforms and tools. A solid road to implement the first BTLE projects.
+
+Also contains tools and iOS/Android howtos.
+
+%% TODO: Security Engineering
+
+%% TODO: The car hacker's handbook
+
+%% TODO_: Driving Technical Change
+
+%% TODO: The Browser Hacker's handbook
+
+%% TODO: Windows Internals
+
+%% TODO: Secure C and C++ Development
