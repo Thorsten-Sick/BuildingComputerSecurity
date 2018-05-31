@@ -1,0 +1,13 @@
+# Changelog
+
+I want to "release early - release often". For this reason I will add a
+changelog to make it simpler for you to find the new sections.
+
+# May 2018, initial release
+
+* Added *principles* chapter
+* Added *updates* chapter
+* Added *Know your enemies* chapter
+* Added *UX* chapter
+* Added *structure* chapter
+* Added *external references* chapter
