@@ -103,7 +103,7 @@ In addition to an easy-to-understand warning message you maybe want to create
 a unique ID for the user to google and find help for. Display this ID in
 addition to the message. Give your support people a list with those IDs.
 
-### Create event log
+### Create event logs
 
 Create an event log containing all the recent warnings. Especially when
 building end-user software. Experts (or the most skilled family member) will

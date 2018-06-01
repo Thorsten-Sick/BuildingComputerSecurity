@@ -174,7 +174,7 @@ This has several benefits:
 
 Users want the option to know what their technology is doing. Having two
 layers (simple and detailed) of information will very likely be embraced
-(depends on your users).
+[^note2].
 
 Your security plan should not depend on users reading, understanding and
 acting upon this information. But having smart users will add new "sensors"
@@ -191,3 +191,5 @@ it will break as soon as an experienced person attacks it. You are an
 experienced engineer but not an experienced attacker. The guys you
 face have the skillset switched: experienced attacker, ok-ish engineer.
 This is why they became attackers.
+
+[^note2]: Depends on your users

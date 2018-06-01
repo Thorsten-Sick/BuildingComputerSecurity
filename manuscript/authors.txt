@@ -4,6 +4,11 @@ My goal is to write an anthology.
 Contributions from experts in their fields are welcome. Everyone contributing a
 chapter gets half a page of biography.
 
+I just do not want to start asking for contributions now. Not until the book
+has a well tested and established structure. I would hate to force external
+authors to re-write their chapter several times just because the structus is
+still developing....
+
 # Credits
 
 Credits are for all the contributors.

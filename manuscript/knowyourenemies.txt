@@ -1,10 +1,10 @@
 # Basics: Know your attackers
 
-Attackers come in several flavours and can even be enemies or friends.
+Attackers come in several flavours and can be enemies or friendly.
 
-Just because someone found a vulnerability in your application he is not
-necessarily an enemy. What he does with this knowledge - help or harm you -
-will define the attacker.
+Just because someone found a vulnerability in your application does not make him
+an enemy. What he does with this knowledge - help or harm you - will define
+the attacker's moral position.
 
 You will know maybe feel a reflex like "No one will hack my hardware/software".
 This is a protective reflex which will do you more harm than good. Relax,
@@ -12,9 +12,9 @@ be open minded and enjoy the taxonomy of hackers.
 
 ## Hackers
 
-The good Hackers will notify you as soon as they found a vulnerability in your code.
+The friendly Hackers will notify you as soon as they found a vulnerability in your code.
 Get into touch and they will help you to close it. Be aware: You will get a
-very expensive service (pen testing) for free!
+very expensive service (pen testing) for "free"[^note1]!
 
 Goal: Curiosity. And fame. And creating a more secure world
 
@@ -82,3 +82,5 @@ attackers can decide what kind of module will currently have the best ROI.
 %% TODO: Nation states
 
 %% TODO: In house attackers
+
+[^note1]: With a flexible definition of free.
