@@ -27,7 +27,7 @@ more knowledge as well.
 
 ## Stages of learning
 
-There are several smart ways to [learn] (#reference-book-pragmatic-thinking-and-learning).
+There are several smart ways to [learn](#reference-book-pragmatic-thinking-and-learning).
 
 A simplified version is:
 
@@ -42,7 +42,7 @@ This is also a goal when writing this book.
 One of the reasons I dare to write a book is leanpubs feature to release *early* and *often*.
 That way I can see progress and get feedback.
 
-Please visit the [forum] (https://community.leanpub.com/c/buildingcompute) and
+Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
 help me improve the book.
 
 As I have been spending lots of time with security focussed engineers the most
@@ -57,8 +57,8 @@ Boiling down to: What do you need from this book ?
 
 ## 80/20 or Pareto Principle
 
-Following the [Pareto principle] (https://en.wikipedia.org/wiki/Pareto_principle)
-I will focus on finding the *important* 80 percent first and later filling in the missing 20 %.
+Following the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle)
+I will focus on finding the *important* 80 percent first and later filling in the missing 20 percent.
 This will result in:
 
 * I start a new topic before I squished the last drop out of an older topic

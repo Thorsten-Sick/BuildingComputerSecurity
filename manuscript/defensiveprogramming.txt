@@ -64,7 +64,7 @@ complex calculations internally.
 Good things to check are pointers:
 
 {lang="c"}
-    assert(mypointer !=NULL);
+    assert(mypointer != NULL);
 
 or indexes / counters (here check for min/max value):
 

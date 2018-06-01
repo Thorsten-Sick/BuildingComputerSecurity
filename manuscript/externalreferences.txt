@@ -10,9 +10,9 @@ Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 
 ## Disassember tools {#reference-disassembler-tools}
 
-IDA, paid and free test version. For Mac/Win/Linux: https://www.hex-rays.com/products/ida/index.shtml
-Hopper, Mac/Linux. Tes version available: https://www.hopperapp.com/
-Radare2, Mac/Windows/Linux/... : http://radare.org/r/
+* [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
+* [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
+* [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
 
 ## Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
 
@@ -68,11 +68,11 @@ Also contains tools and iOS/Android howtos.
 
 ## Cuckoo Sandbox {#reference-cuckoo-sandbox}
 
-[Cuckoo Sandbox] (https://cuckoosandbox.org/) is a behaviour analysis tool for
+[Cuckoo Sandbox](https://cuckoosandbox.org/) is a behaviour analysis tool for
 malware. Malware is exewcuted in a simulated environment and all the behaviour
 is monitored.
 
-Try it online on [malwr.com] (https://malwr.com/)
+Try it online on [malwr.com](https://malwr.com/)
 
 ## Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
 

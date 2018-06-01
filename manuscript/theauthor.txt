@@ -23,10 +23,12 @@ architect role or the developer role. Amongst the things I did is:
 * A government founded research project:
     * Split an OS into several virtual machines for segmentation
     * Scan into these virtual machines without installing anything (Volatility)
-    * Classify malware based on behaviour ([Cuckoo Sandbox] (#reference-cuckoo-sandbox))
+    * Classify malware based on behaviour ([Cuckoo Sandbox](#reference-cuckoo-sandbox))
 * Create the architecture of a security/privacy focussed Chromium based browser
 
 Now I am moving towards the embedded and IoT world with my new job.
+
+And doing so I started to sort my knowledge and experience. Resulting in this book.
 
 
 **Thorsten Sick**

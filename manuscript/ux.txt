@@ -157,14 +157,6 @@ one for the connection). Or start indicating differently (red bar for
 unencrypted connections). While a malware attack will be blocked hard with the
 whole tab displaying info on a red background.
 
-## Similar chapters
-
-TODO: I will create focus chapters for different programming languages
-
-## External sources
-
-https://en.wikipedia.org/wiki/Defensive_programming
-
 ## Authors
 
 Thorsten Sick
