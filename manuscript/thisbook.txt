@@ -1,0 +1,75 @@
+# This book
+
+## Goals
+
+As experienced engineer, software developer and security guy I want to help you
+getting started with security in your projects.
+
+My observation is that there are many specific books for security topics. But
+it is hard to get started.
+
+This is the itch I want to scratch.
+
+## The origin: External brain
+
+This book was already written once. As my external brain. Just for me.
+I collect my knowledge in "external brains". My own wikis or similar.
+My security knowledge brain just grew to a stage where I thought
+"well, you just wrote a book". And after finding the leanpub options that
+could fit my style of tackling projects I decided I could transfer my external
+brain (written for me) into a book (written for tech people world wide).
+
+And this is currently happening.
+
+The quarry of my external brain currently contains 80 chaotic pages. I expect
+they translate into at least the same amount of book pages. And I will be adding
+more knowledge as well.
+
+## Stages of learning
+
+There are several smart ways to [learn] (#reference-book-pragmatic-thinking-and-learning).
+
+A simplified version is:
+
+1. Learn the *theory*
+2. Get *practical* experience
+3. *Explain* to others
+
+This is also a goal when writing this book.
+
+## Release early, release often
+
+One of the reasons I dare to write a book is leanpubs feature to release *early* and *often*.
+That way I can see progress and get feedback.
+
+Please visit the [forum] (https://community.leanpub.com/c/buildingcompute) and
+help me improve the book.
+
+As I have been spending lots of time with security focussed engineers the most
+imporant things I want to learn first from you:
+
+* What causes trouble ?
+* What kind of technology is currently introduced in normal engineering ?
+    * Where does it cause issues ?
+* What kind of normal technology (cloud, micro services, IoT) are you using ?
+
+Boiling down to: What do you need from this book ?
+
+## 80/20 or Pareto Principle
+
+Following the [Pareto principle] (https://en.wikipedia.org/wiki/Pareto_principle)
+I will focus on finding the *important* 80 percent first and later filling in the missing 20 %.
+This will result in:
+
+* I start a new topic before I squished the last drop out of an older topic
+* Instead of spending hours to fine tune the language and optics of an existing chapter I start a new chapter with dozens of new tips
+
+This does not mean I will not do that sooner or later. But I want to get the low hanging fruit first.
+I also feel like you expect a book containing lots of good tricks instead of poetry.
+
+## Form follows function
+
+With every iteration of the book I will tune the optics, improve the layout and
+maybe add images.
+
+But adding new chapters is more important.

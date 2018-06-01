@@ -1,3 +1,5 @@
+theauthor.txt
+thisbook.txt
 structure.txt
 knowyourenemies.txt
 principles.txt

@@ -1,7 +1,9 @@
 theauthor.txt
+thisbook.txt
 structure.txt
 principles.txt
 updates.txt
+externalreferences.txt
 authors.txt
 changelog.txt
 license.txt

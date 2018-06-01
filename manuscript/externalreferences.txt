@@ -64,6 +64,8 @@ Also contains tools and iOS/Android howtos.
 
 %% TODO: Secure C and C++ Development
 
+%% TODO: Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis; William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
+
 ## Cuckoo Sandbox {#reference-cuckoo-sandbox}
 
 [Cuckoo Sandbox] (https://cuckoosandbox.org/) is a behaviour analysis tool for
@@ -71,5 +73,12 @@ malware. Malware is exewcuted in a simulated environment and all the behaviour
 is monitored.
 
 Try it online on [malwr.com] (https://malwr.com/)
+
+## Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
+
+Pragmatic Thinking and Learning, by Andy Hunt
+
+Explains your most important tool as a computer expert: Your brain. How to use
+it, how to learn. A very important book for me. Written for the engineer.
 
 %% TODO: Add volatility, link to author

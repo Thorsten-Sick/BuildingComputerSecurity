@@ -12,3 +12,4 @@ changelog to make it simpler for you to find the new sections.
 * Added *structure* chapter
 * Added *external references* chapter
 * Added "The Author" chapter
+* Added "This book" chapter
