@@ -1,0 +1,184 @@
+# Defensive programming
+
+## Short abstract
+
+Defensive programming is coding while expecting your programm to being actively attacked.
+It needs some getting used to, but in the end debugging defensive code is much
+simpler than debugging normal code. This positive side effect is caused by
+stricter error handling.
+Errors will cause instant program termination and stack traces (thanks to
+asserts and better error handling in unlikely error conditions).
+
+## Audience
+
+Developers
+
+## Todo
+
+* Focus on vulnerable code first
+* Use asserts
+* Memory writing mess
+* Use external libraries
+* malloc/free best practice
+* Input validation
+* Encrypt all the data sent over network
+* Exceptions vs. return values
+
+## Typical attacks on programs
+
+* Attacker can overflow stack or heap memory space. This could be abused to insert malicious code into your program flow
+* Attacker can just cause loops in your program causing a DOS situation
+* Attackers can send network data to your program which responds to a third party service with even more data (aka aplificationa attack)
+* Attackers can cause programs to dump critical data like passwords or cryptographical credentials
+
+These are typical attacks. Operating system, system environment and programming
+language used will define the exact way the attacks will try to accomplish their goal.
+
+So the choice of the defense technology will also depend on those factors. The
+basic principles will stay the same.
+
+
+## Details todo list
+
+### Focus on vulnerable code first
+
+You want to especially harden parts in code that use external resources
+(memory, files, ...) and process external data (user input, files content,
+network packages ). Also keep an eye on external code being used (from 3rd party
+libs, from the other team's code, ...)
+
+You should expect every input to be at least *accidentially* wrong. In a malware
+attack situation you can even expect the input to be handcrafted to cause as
+much damage as possible (*remote code execution* would be one possible goal of an attacker).
+
+
+### Use asserts
+
+A simple way of doing module tests (as in "unit tests") is to use assert.
+Asserts are used during development and debug phase and will be switched off
+in release (by define NDEBUG for C). Asserts make sure a certain condition is
+true. If not, the program aborts and you can start debugging it.
+Good places for asserts are at the beginning and the end of functions and after
+complex calculations internally.
+
+Good things to check are pointers:
+
+{lang="c"}
+    assert(mypointer !=NULL);
+
+or indexes / counters (here check for min/max value):
+
+{lang="c"}
+    assert(size > 0);
+    assert(size < MAXSTRING);
+
+As said before:
+
+* Do this at the begin of your functions for all parameters
+  * If you verify the parameters at runtime: assert afterwards to check your verification code
+* Do this at the exit of your function with all return values
+* Maybe: Do this in complex calculations in the function core
+* Before calling 3rd party functions to check you honour their contract
+* After calling 3rd party functions: To verify they did not change their contract
+
+For release compile you will switch it off with NDEBUG. So there will be no
+runtime penalty for extreme validation. Overachieve !
+
+### Memory writing mess
+
+memcpy/strcpy/gets/...
+
+Do not copy more bytes than the buffer can contain. Strings in C have a
+terminating 0 byte, take this into consideration...
+
+Search in your code for strcpy, sprintf, ... those functions are to be replaced
+with strncpy and strnprintf right now. Those variantes respect the target
+buffer size. Benefits: You will kill a certain class of bugs that are very
+hard to debug because they only happen on a certain input.
+
+Even better than strncpy is **strlcpy** and **strlcat** (which guarantees null termination as well
+as proper size handling). If available, use that.
+
+### Use external libraries
+
+If you (or your company) solves the same problem in lots of projects, either
+use existing libraries or create your own ones. The behaviour of them should be
+verified and stress tested. That is a very efficient way of getting a
+problem solved with good quality code.
+
+If you are using external libraries:
+
+* Monitor the developers - red alert if they stop shipping new versions
+* Spend some time and money to test those libraries (fuzzing)
+* Get in touch with the developers and push some patches / issues to establish a channel
+    * Monitor their responsiveness
+* Wrap the external libraries in you own code: If the library has a bug that
+is not fixed you can filter the data to the lib on your own as a workaround.
+* Be ready to update a library in all your projects as soon as a bug is found
+
+If you create own libraries, maybe release them as open source. To get more
+users to "test" your libraries.
+
+This or establish this library in your company to get more valuable feedback.
+
+%% TODO: Merge with documentation above (we have this one twice)
+
+### malloc/free best practice
+
+It is hard not to leak memory in C. There are some fancy tricks to get it
+right anyway.
+
+* Define who will free allocated memory (caller or called). If you have a library, support init/deinit
+* After free, set pointer to null
+* after alloc, check if memory is there. Attackers can maybe deplete available memory.
+* depending on your situation: memset memory directly after allocation
+* make sure, memsetted structure to 0 is marked as "not initialised" and is not halfway valid and cause errors down the road when used premature
+* goto: have a section in your function to free up allocated memory
+    * Call this when errors happen internally
+    * For this short jump I will allow gotos. This is the only exception
+    * Always call the label you jump to the same. I like "cleanupthemess"
+* If the memory contained valuable data, memset it before freeing it. Freed memory is available but still contains the old data !
+
+%% TODO: malloc / free example for C
+
+### Input validation
+
+Do not start to blacklist characters or combinations of characters. Instead:
+Create a whitelist of characters and an exact pattern of data you allow.
+
+Validate your input against that and only process positive input.
+
+### Encrypt all the data sent over network
+
+No matter which network (Bluetooth, Wifi, Internet, Mobile): expect it to be
+hacked and broken. Plan accordingly. Encrypt.
+
+Do not use your own crypto. Fall back to standards like TLS.
+
+%% TODO: Find some crypto lib for TLS connection
+
+%% TODO: Find Public key crypto for embedded
+
+### Exceptions vs. return values
+
+Always handle error return values. You never know what a called
+function/library did internally and when. If you are not checking for errors the
+system can be in an *interesting* state when your code continues. This will
+cause hard to track errors.
+
+If possible: use exceptions (because someone else could forget to handle
+return values). Unhandled exceptions will trickle down and be at least handled
+by the default exception handler.
+
+
+## Similar chapters
+
+TODO: Create focus chapters for different programming languages.
+
+## External sources
+
+https://en.wikipedia.org/wiki/Defensive_programming
+
+## Authors
+
+Thorsten Sick

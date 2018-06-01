@@ -3,6 +3,7 @@ thisbook.txt
 structure.txt
 knowyourenemies.txt
 principles.txt
+defensiveprogramming.txt
 ux.txt
 updates.txt
 externalreferences.txt

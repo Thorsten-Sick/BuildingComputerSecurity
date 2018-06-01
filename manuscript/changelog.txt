@@ -13,3 +13,4 @@ changelog to make it simpler for you to find the new sections.
 * Added *external references* chapter
 * Added "The Author" chapter
 * Added "This book" chapter
+* Added "Defensive programming chapter" for default defensive programming
