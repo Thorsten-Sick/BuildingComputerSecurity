@@ -3,7 +3,7 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
-# May 2018, initial release
+## May 2018, initial release
 
 * Added *principles* chapter
 * Added *updates* chapter
@@ -11,3 +11,4 @@ changelog to make it simpler for you to find the new sections.
 * Added *UX* chapter
 * Added *structure* chapter
 * Added *external references* chapter
+* Added "The Author" chapter

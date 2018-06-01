@@ -63,3 +63,13 @@ Also contains tools and iOS/Android howtos.
 %% TODO: Windows Internals
 
 %% TODO: Secure C and C++ Development
+
+## Cuckoo Sandbox {#reference-cuckoo-sandbox}
+
+[Cuckoo Sandbox] (https://cuckoosandbox.org/) is a behaviour analysis tool for
+malware. Malware is exewcuted in a simulated environment and all the behaviour
+is monitored.
+
+Try it online on [malwr.com] (https://malwr.com/)
+
+%% TODO: Add volatility, link to author

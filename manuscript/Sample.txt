@@ -1,3 +1,4 @@
+theauthor.txt
 structure.txt
 principles.txt
 updates.txt
