@@ -81,6 +81,6 @@ attackers can decide what kind of module will currently have the best ROI.
 
 %% TODO: Nation states
 
-%% TODO: In house attackers
+%% TODO: In house attackers "Innentäter"
 
 [^note1]: With a flexible definition of free.
