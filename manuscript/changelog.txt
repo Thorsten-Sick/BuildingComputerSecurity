@@ -7,6 +7,7 @@ changelog to make it simpler for you to find the new sections.
 
 * Added *TLS chapter*
 * Extended *principles*
+* Added *passwords*
 
 ## May 2018, initial release
 

@@ -6,6 +6,7 @@ principles.txt
 defensiveprogramming.txt
 ux.txt
 updates.txt
+passwords.txt
 tls.txt
 externalreferences.txt
 authors.txt
