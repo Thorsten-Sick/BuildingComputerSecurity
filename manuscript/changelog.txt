@@ -3,6 +3,11 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
+## June 2018
+
+* Added *TLS chapter*
+* Extended *principles*
+
 ## May 2018, initial release
 
 * Added *principles* chapter

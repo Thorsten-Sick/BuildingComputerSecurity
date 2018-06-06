@@ -1,7 +1,7 @@
 # The author
 
 Trouble shooter and one-man-team somehow happend to be my role quite often.
-I am an engineer who also took the role of architect/project manager in many
+I am a software developer and engineer who also took the role of architect/project manager in many
 security related projects. Which gave me a good and wide perspective on things
 in the IT world.
 

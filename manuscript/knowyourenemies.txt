@@ -14,7 +14,7 @@ be open minded and enjoy the taxonomy of hackers.
 
 The friendly Hackers will notify you as soon as they found a vulnerability in your code.
 Get into touch and they will help you to close it. Be aware: You will get a
-very expensive service (pen testing) for "free"[^note1]!
+very expensive service (pen testing) for free[^note1]!
 
 Goal: Curiosity. And fame. And creating a more secure world
 

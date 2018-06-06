@@ -183,6 +183,30 @@ social engineering.
 
 %% TODO: Get C.S. to write a chapter
 
+## Defense in Depth
+
+As protection mechanism will fail - the attackers will find holes - it is better
+to layer defenses.
+To protect an asset it is essentail to layer **different kinds** of defenses
+to make attacking more complicated to request different skills.
+
+As for a castle example:
+
+A castle **on a hill** has a **moat**, **walls** and **archers**.
+
+So attackers have to be:
+
+* Good runners
+* Swimmers
+* Climbers
+* Lucky
+
+This will narrow down the number of succefull survivors/attackers quite well.
+
+The same is true for your computer system. Combine different technologies to
+protect an asset. Even if you think the one specific layer you just designed
+offers 100 % protection.
+
 ## Security by Obscurity
 
 A bad idea. There are [disassembler tools](#reference-disassembler-tools)
