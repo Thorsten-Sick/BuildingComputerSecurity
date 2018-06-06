@@ -9,6 +9,9 @@ changelog to make it simpler for you to find the new sections.
 * Extended *principles*
 * Added *passwords*
 
+%% TODO Hashes
+%% TODO GCC features
+
 ## May 2018, initial release
 
 * Added *principles* chapter
