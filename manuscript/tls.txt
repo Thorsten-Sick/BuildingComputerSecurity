@@ -1,0 +1,118 @@
+# TLS aka SSL aka HTTPS
+
+TLS is the name of the newer versions of the SSL protocol. HTTPS is HTTP over TLS, a common use case.
+But TLS can be used to secure all kinds of connections.
+
+By using TLS you get **authencity**, **integrity** and **confidentiality** and you really want those.
+
+TLS is a protocol that defines how computers negotiate their encrption settings and do the encryption afterwards.
+It offers to choose between different algorithms being used as a kind of set of building blocks. Depending on your situation
+(especially: Are old systems involved) you can have TLS go for the more secure or the weaker algorithms.
+
+Current version of TLS is 1.3, just being rolled out.
+
+## Mozilla server side TLS config guide
+
+TLS is a toolbox for encryption which is mainly used in the browser to server configuration. For this reason Mozilla offers a simple guide how to best set up your server.
+
+https://wiki.mozilla.org/Security/Server_Side_TLS
+
+## Certificates
+
+TLS requires the server to have a certificate.
+
+Normally the server authenticates itself with a certificate. Those certificates are verified by a Certificate Authority (CA).
+This one can either sign either "This person controlled the infrastructure when we checked" or the more expensive "Extended Validation" certificate "This person has the name Mr. Foo Bar and lives in Wherever, we checked the passport".
+
+The certificate system has serious flaws. Basic sin is trusting at least dozens of companies that can sign any kind of certificate. Which will then be trusted.
+Certificate Transparency want to fix this (see below).
+
+**Let's Encrypt** is a new initiative whith a set of tools and infrastructure where everyone can get themselves a certificate within minutes. Those are just not EV certificates.
+
+Not hiding it: The simples kind of certificates are *self signed* certificates. No CA signed it and the clients will normally complain and have you manually accept it as a user.
+
+Thanks to Let's encrypt you should not need those that often.
+
+%% TODO Add Let's Encrypt chapter
+
+
+
+## Revocation (OCSP = Online Certificate Status Protocol)
+
+If control over a certificate gets lost it needs to be revoked. Together with CRL (Certificate Revocation Lists) this online protocol and the servers using it offer revocation management.
+
+It does not work properly: If an attacker fakes a certificate, the attacker can as well block the connection to those servers. How should the browsers react ? Block the connection (and do that whenever the revocation server can not be reached) or allow it and do not block the attack ?
+
+**OCSP Stapling** solves this problem.
+
+## OCSP Stapling
+
+Here the server serving the homepage does not only send the certificate but also a signed validation (signed by the validation server) that the certificate was not revoked. This validation has a time stamp and a very short time to life. The server has to renew the validation quite often.
+But it fixes the OCSP problem because no extra connection to a revocation server needs to be established from the client.
+
+## Key/Certificate lifetime
+
+Certificates have a lifetime. After this they have to be renewed. The first reflex is to set it high (2 years) and be done with it.
+This results in all those pages where the key timed out and no one can remember how to generate a new key.
+
+The true simple path is to set it to a short life time (weeks) and implement an automatic renewing process right from the start. Witht this short life time it is directly tested while you still remember what you did and everything is smooth.
+
+## Testing TLS
+
+SSLLabs offers a testing service that checks the TLS settings of your web page. (https://www.ssllabs.com/). They also offer lots of guides and documentation. Monitor the configuration of oyur servers regularly (there might be a new attack available to the bad guys).
+
+## HSTS - HTTP Strict Transport Security
+
+HTTP servers can send a special header promising to always encrypt and prevent downgrade attacks down to HTTP. The browser will store that fact after the first connection and is now immunized. It will always replace *http* urls with *https* ones and handle encryption failures as hard errors.
+
+%% TODO: Add header code: Strict-Transport-Security: max-age=31536000
+
+This is a TOFU (trust on first use) technology and the attacker can intercept the first connection between client and server, deleting the special HSTS header.
+
+As an option the browser vendors offer a *preload list* where web sites can register and get their HSTS setting hard coded into the browsers.
+
+%% TODO Link to the list
+
+## HPKP - HTTP Public Key Pinning
+
+More security against MITM attacks. With lots of nasty side effects. Here a header in the
+HTTP protocol defines a key id. The browser stores that and will now only:
+
+* communicate encrypted with this page
+* only accept this specific key
+
+This is also a TOFU technology.
+
+As many things can go wrong (keys lost) and pages could be permanently unreachable
+for a group of users you will want to have fallback plans/keys, ...
+or maybe use other technologies. If you can use HPKP in a reliable way: Great.
+If you do not feel comfortable: Do not use it.
+
+%% TODO; https://textslashplain.com/tag/security/ for quotes and details
+
+## Certificate Transparency
+
+[Certificate Transparency](https://www.certificate-transparency.org/) is a google project
+to extend the CA way of certificate validation and maybe replace it in the future.
+
+Services will create logs of certificates seen in the wild. Any anomaly can be
+found that way (like Google page certificates only seen by computers in Foobaristan).
+
+%% TODO Different TLS libraries
+
+## Weaknesses and catastrophes
+
+The issues that happened the last years have been found on several layers:
+
+* Broken algorithms
+* Issues with the TLS protocol
+* Problem with the implementation (libraries)
+* Rogue CAs
+  * DigiNotar https://en.wikipedia.org/wiki/DigiNotar
+  * Symantec (VeriSign) https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html
+
+
+
+## Author
+
+Thorsten Sick
