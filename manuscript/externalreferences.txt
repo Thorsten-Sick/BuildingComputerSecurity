@@ -84,3 +84,9 @@ Explains your most important tool as a computer expert: Your brain. How to use
 it, how to learn. A very important book for me. Written for the engineer.
 
 %% TODO: Add volatility, link to author
+
+## Book: IoT Penetration Cookbook {#reference-book-iot-penetration-cookbook}
+
+IoT Penetration Cookbook by Aaron Guzman, Aditya Gupta
+
+Wide spectrum of offensive technologies. Good to create a checklist what to protect. Be prepared to read more in-depth books for the technologies you are interested in.
