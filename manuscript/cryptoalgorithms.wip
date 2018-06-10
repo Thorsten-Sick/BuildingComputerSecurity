@@ -1,0 +1,76 @@
+# Crypto algorithms {#chapter-crypto-algorithms}
+
+A good crypto algorithm is created and tested in challenges. It will get a good
+peer review by other crypto experts.
+When mathematics inproves (and computers get faster as well) the
+*estimated time to crack it* will shrink.
+Moore's law predicts a increase of processing power by factor 2 every 18 months.
+GPUs, ASICs and Clouds (lots of cheap computers from Amazon Cloud, for example) can
+also bring down the attack time.
+
+Normally experts will warn months or even years before a realistic attack on
+an algorithm is possible. Thats the time to move on to use a better algorithm.
+
+**Be prepared to swap the algorithm used in your protocol and files**
+
+## Hash functions
+
+|Name   |Output Length (Byte)|Quality|
+|-------|--------------------|-------|
+|MD5    |16                  |Broken |
+|SHA-1  |20                  |Broken |
+|SHA256 |32                  |Good   |
+|SHA512 |64                  |Good   |
+
+
+https://en.wikipedia.org/wiki/Hash_function_security_summary
+https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions
+
+
+## Password hash functions
+
+While other hash functions are efficient, for password hashes we want
+inefficient hash functions. On a normal server it does not matter that much.
+But thet attacker gets into lots of trouble thanks to the in-efficient hash.
+
+
+|Name    |Output Length (Byte)|Quality|Comments                                   |
+|--------|--------------------|-------|-------------------------------------------|
+|Argon2d |                    |       |GPU attack resistance                      |
+|Argon2i |                    |       |side channel attack resistance             |
+|bcrypt  |                    |       |Vulnerable to FPGA, ASIC attacks           |
+|scrypt  |                    |       |Vulnerable to GPU attacks                  |
+|PBKDF2  |                    |       |Vulnerable to FPGS, ASIC and GPU attacks   |
+
+Links:
+* [Argon](https://www.argon2.com/)
+* [BCrypt](https://de.wikipedia.org/wiki/Bcrypt)
+* [PBKDF2](https://de.wikipedia.org/wiki/PBKDF2)
+
+%% .. TODO: Verify and dig deeper
+
+
+**TODO**
+
+## Post quantum crypto functions
+
+To de-buzzword it:
+
+Quantum computers are currently developed. We are at a state where they are small
+and complicated to use.
+
+But they are very good at computing a certain kind of mathematical problems.
+Many current crypto algorithms are based on the assumption that a certain
+mathematical probelm is hard to compute....this assumption will break witht he
+quantum computers.
+
+If you are planning ahead 5 or more years it could be relevant for oyur choice
+of algorithm to also take quantum computers into consideration.
+
+%% TODO: Research Google Quantum computer
+
+%% TODO: List of algorithms or sane bit lengths
+
+**TODO**
+
+%% TODO: More algorithms: Public key and aes and similar
