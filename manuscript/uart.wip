@@ -1,0 +1,24 @@
+# UART security
+
+* Do not send on startup
+* Lock down with password (Basic security)
+* More complex challenge-response public key based security
+
+# Do not send on startup
+
+LINK TO IOT PENTEST BUCH
+
+attackers can identify UART TX pin by fluctuating power on startup. Do not send until pwd is entered to make it harder to identify.
+
+
+# Password lockdown
+
+Lock down UART IO with a pwd that needs to be entered.
+As the password is in the firmware, a string command could uncover it.
+
+>example<
+
+If you build your password on runtime with string manipulation commands, the attacker needs at least some assembler knowledge.
+If all your devices have the same password you could have a *class break*: Break one, get access to all of them.
+
+TL;DR: Do at least password based UART protection. Be aware: There is better technology available.

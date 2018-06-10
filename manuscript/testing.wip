@@ -1,0 +1,65 @@
+Testing practice
+****************
+
+.. State: 70 % Testing
+
+Have testers
+------------
+
+Have those guys with the magic abilities to break things. Make them break your
+product. The more the better. They scale by numbers.
+
+Many teams are using the coders to also test. But they subconciously avoid tricky
+situations and will not find the issues.
+
+Automate tests
+--------------
+
+Automate tests for things that break all the time
+
+Infrastructure tests
+--------------------
+
+Compliance tests automation
+
+https://www.inspec.io/
+
+(https://github.com/chef/inspec)
+
+.. TODO: Test it
+
+Also: CIS for Ubuntu: https://www.cisecurity.org/benchmark/ubuntu_linux/
+
+.. TODO: Lynis security auditing for Linux
+.. https://linuxsecurity.expert/tools/lynis/
+.. https://linuxsecurity.expert/tools/lunar/
+
+Unit test interfaces
+--------------------
+
+If an interface (or code function) promises a certain behaviour: Unit test it.
+This prevents re-factoring from breaking other code. Unit tests are good at that.
+But you will need other tests as well.
+
+Second use of unit tests: Write tests to verify external libs behave the same
+after updates. This reduces risk from updating external libraries - and makes
+it easier to do that after vulnerabilities are found there.
+
+External reviews
+----------------
+
+You should hire external companies to verify your software design and your code.
+If on a limited budget: Verify final product and pray there are no design flaws.
+
+There are basically two kinds of tests: "white box testing" and "black box testing":
+While white box testing (testers get documentation and source code) will give
+you more found bugs for your money - black box testing will give you the hacker
+feeling and as a stunt can maybe better convince more managers to invest into security.
+
+Go for white box testing.
+
+
+
+.. TODO: Bug bounties
+
+.. TODO: Code coverage

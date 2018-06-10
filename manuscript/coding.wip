@@ -1,0 +1,155 @@
+Coding
+######
+
+.. State: 80 % Coding
+
+Tactics
+*******
+
+During coding there are several tactics to improve code quality manually
+and by tools.
+The tools are getting better and smarter every month - so it is worth
+re-visiting the documentation every few months.
+
+Not wasting money
+=================
+
+The earlier a bug is found the cheaper it is to fix it. Best would be before
+commit. Worst: After release and shipping. So put effort into finding them
+early and automatic.
+
+Also: Watch out for design errors. A broken design could force you to
+re-write tons of code.
+
+Coding practice
+***************
+
+Pair programming/Code reviews
+=============================
+
+Have an experienced engineer (at least one) code review a beginner's code.
+Be a good teacher and help your padawan. Focus on security issues first.
+Start knit-picking coding style issues later. Everyone has a certain limit
+he can learn at a time. Teacher: prioritize and be gentle.
+See yourself as "Jedi and Padawan".
+
+Every team as is good as the weakest programmer - if there are no code reviews.
+
+Pair programming: Depends on the personalities. It is hard to get into a
+flow doing pair programming. If some coders are not pair programming
+personalities, find alternatives for reviews.
+
+You can also automate the system of reviews by enforcing them before merge.
+If your tool supports it: Do so.
+
+Code reviews
+============
+
+A good source for a code review checklist is http://cwe.mitre.org/ (Common weakness enumeration).
+
+I'd get the top 5 of those weaknesses (depending on what I expect to find in my
+project's code). And start grepping for them. Low hanging fruit.
+
+After that they should be added to the Coding Style document of the team.
+
+Other secure coding standards can be found here:
+
+https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards
+
+Also the book "Secure coding in C and C++"
+
+
+Tools for code reviews
+----------------------
+
+Use tools for code reviews (details in "compiling"). Static and Dynamic code
+analysis can improve your code a lot. But do not trust them blindly. They will
+not find everything.
+
+General
+=======
+
+Reduce Complexity
+-----------------
+
+Complexity kills. Make the code as simple as possible.
+To achieve that, maybe you should ponder:
+
+* Do not use all the possible fancy language features available. Especially those making the code harder to read
+* Reduce dependencies to libraries (especially on Javascript)
+* Refactor for simplicity
+* Simplify used data and file formats
+* Remove old features
+
+.. TODO: More
+
+.. TODO: Secure coding standards
+
+Keep third party libraries up to date
+-------------------------------------
+
+If you use third party libraries they are an essential part of your code base.
+Monitor them for bugfixes. Keep them up to date. Maybe even fuzz them and
+report bugs.
+
+Also create a thin wrapping layer around them. This way you can later on add
+quick fixes or verification (minimum version number used, ...) that will spread
+to all your projects where you use this library in. That way you reduce
+dependency on the library developer. If the worst case happens you could even
+replace this library and use a similar one - and your abstraction layer
+hides that from the application code.
+
+A wrapper also reduces complexity the application developer will have to face.
+Just only offer the required core functionality to them. All the fancy bonus
+feature the library will have to handle special cases will be hidden from the
+application programmers.
+
+Another benefit of wrappers: You can work around broken stuff in the library
+without the developers noticing.
+
+Stil more benefits: You can streamline the behaviour of different versions of
+the wrapped library. Just in case they broke/improved the interface while also
+shipping essential security fixes.
+
+Segmentation
+------------
+
+Segmenting programs on a system protects the system from being hacked.
+
+Seccomp
+~~~~~~~
+
+.. TODO: write more
+
+The linux way of dropping privileges. At program start the program can drop
+privileges it does not need. This does not interfere. But if ever shellcode is
+injected, this shellcode is restricted to the permissions in this contract.
+
+
+AppArmor
+~~~~~~~~
+
+Exernal restrictions on program permissions set by the administrator
+(or maintainer). This prevents hacked programs from mis-behaving.
+
+It is very strong on Ubuntu.
+
+.. TODO: AppArmor write more
+
+Reduce power of network tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have pre-installed network tools (wget, ftp, telnet) on your system
+and a hacker gets in, he can use those for lateral movement and to get his
+tools onto your system.
+
+Depending on your setup it could be smart to reduce the computers those can access.
+
+What you could want to block is:
+
+* local network
+* other servers than your https update servers
+
+You could do the blocking by modifying the code of those tools or by AppArmor
+
+Also: Maybe you could want to uninstall some of those tools....
