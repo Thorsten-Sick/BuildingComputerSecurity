@@ -4,10 +4,12 @@ structure.txt
 knowyourenemies.txt
 principles.txt
 defensiveprogramming.txt
+compiling.txt
 ux.txt
 updates.txt
 passwords.txt
 tls.txt
+cryptoalgorithms.txt
 externalreferences.txt
 authors.txt
 changelog.txt

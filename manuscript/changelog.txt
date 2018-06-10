@@ -8,9 +8,10 @@ changelog to make it simpler for you to find the new sections.
 * Added *TLS chapter*
 * Extended *principles*
 * Added *passwords*
+* Added basic *compiling*
+* Added *crypto algorithms* for hashes
 
-%% TODO Hashes
-%% TODO GCC features
+%% TODO GCC features more details
 
 ## May 2018, initial release
 
