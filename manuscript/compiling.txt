@@ -19,6 +19,43 @@ There are currently two major ways to manage that.
 1. Docker (for Linux based building)
 2. Vagrant (for more flexible builds)
 
+## Use Docker
+
+Docker is a container system for Linux. If you develop on Linux and create
+for Linux (or cross compile) - it is the way to go.
+
+Thanks to Docker you can create a container that you can transfer between different
+build machines. The installed tools and libraries will always have the same
+version number - reducing bugs that just happen on one machines and creating
+a stable build experience.
+
+## Use Vagrant
+
+Vagrant is one step up from Docker: It is cross platform and you choose this
+one if you build on Windows or your build machines are Window based.
+Small print: running Windows in a Vagrant instance could force you to pay for an
+extra license. Linux is not a problem here.
+
+https://www.vagrantup.com/
+
+A system doing just that can be experienced here:
+
+https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
+
+Your benefits:
+
+* You can **check in** the vagrant **config** into your build system
+* You can re-run a **build on any developer PC** with the same outcome
+* You can **ship the build system** between developers and build machines as you please
+* Developers are more **flexible** in their **choice of tools**
+* You can **experiment** with build system improvements without breaking your system
+    * New basic OS
+    * New compiler
+    * New compiler flags
+    * Updated libraries
+
+%% TODO: A list of vagrant examples.
+
 ## Compile for Linux
 
 Linux has many powerful code verification tools (fuzzing, ...).
@@ -32,27 +69,7 @@ https://twitter.com/taviso/status/867134496935563264
 and
 https://github.com/taviso/loadlibrary
 
-## Use Vagrant
 
-https://www.vagrantup.com/
-
-A system doing just that can be experienced here:
-
-https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
-
-Your benefits:
-
-* You can check in the vagrant config into your build system
-* You can re-run a build on any developer PC with the same outcome
-* You can ship the build system between developers and buld machines as you please
-* Developers are more flexible in their choice of tools
-* You can experiment with build system improvements without breaking your system
-    * New basic OS
-    * New compiler
-    * New compiler flags
-    * Updated libraries
-
-%% TODO: A list of vagrant examples.
 
 ## Reproducible builds
 
