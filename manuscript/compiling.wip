@@ -1,135 +1,3 @@
-# Compiling
-
-
-%% .. State: 80 % Compiling
-
-## Build system
-
-You want to be able to build old versions with new bugfixes, link to newer
-library versions (because the old ones are broken), ...
-This requires a build system that is
-
-* At a very well defined state (libraries, compiler version, ....)
-* Can be transfered to other build machines
-* Can be updated and has a roll back option
-* Having a build system in your VCS would be awesome...
-* Avoid vendor lock in
-* Make sure you still get old versions of libraries and compile tools if needed
-
-The proper build system unlocks many options. Go for it.
-There are currently two major ways to manage that.
-
-1. Docker (for Linux based building)
-2. Vagrant (for more flexible builds)
-
-## Compile for Linux
-
-Linux has many powerful code verification tools (fuzzing, ...).
-You want to be able to compile at least parts of your system on Linux
-(especially libraries to process file or data formats). Maybe even everything.
-So you can use these tools to test your code.
-
-This is why Tavis Ormandy ported Windows Defender to Linux: to test it for
-vulnerabilities:
-https://twitter.com/taviso/status/867134496935563264
-and
-https://github.com/taviso/loadlibrary
-
-## Use Vagrant
-
-https://www.vagrantup.com/
-
-A system doing just that can be experienced here:
-
-https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
-
-Your benefits:
-
-* You can check in the vagrant config into your build system
-* You can re-run a build on any developer PC with the same outcome
-* You can ship the build system between developers and buld machines as you please
-* Developers are more flexible in their choice of tools
-* You can experiment with build system improvements without breaking your system
-    * New basic OS
-    * New compiler
-    * New compiler flags
-    * Updated libraries
-
-## Reproducible builds
-
-So you have a page with Open Source code and a binary to download. You checked
-the source and installed the binary. But how do you know the binary is linked
-to the source ? Maybe some backdoors where added just before compilation ?
-Or maybe even by a malicious compiler ?
-
-If you do not trust your toolchain, create reproducible builds.
-You ship source code and build config. Reproducible builds will genereate
-the exact same files (hash wise) on any build system. Your customers and
-co-workers can verify your build.
-
-This is how debian is doing it: https://wiki.debian.org/ReproducibleBuilds
-And this is the big project: https://reproducible-builds.org/
-
-## Compiler warnings/static code analysis
-
-The cheapest way to increase security is to activate warnings in your compiler.
-Fix all those warnings. After that you have a useful system that warns you
-during development of anything strange in your code.
-
-## Static code analysis
-
-### Compile switches
-
-**GCC**
-
-
-* printf format checks: gcc -Wformat -Wformat-security -Werror=format-security
-* gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time (https://access.redhat.com/blogs/766093/posts/1976213)
-
-**CLANG**
-
-https://clang-analyzer.llvm.org/
-
-It is a separate Clang Project and has a command line tool described here: https://clang-analyzer.llvm.org/scan-build.html
-
-It will use the project's Makefile to build the project and analyse it.
-
-Available directly in the compiler:
-
-* Security warnings: -Wformat -Wformat-security -Werror=format-security
-
-**Embedded: MISRA**
-
-There is a safety standard called "MISRA" - it is especially relevant for
-Embedded Systems. The TI compiler for example is not very strong on Warnings
-but offers to do MISRA checks. Find that setting in the TI compiler and
-cherry pick some MISRA requirements to check your code for - and you'll have
-some enhancement for warnings in this compiler. Even if MISRA is not a
-requirement at your workplace.
-
-https://en.wikipedia.org/wiki/MISRA_C
-
-
-### Special tool: Splint
-
-A classic tool for Code analysis (C). Works out of the box and is a simple entry tool.
-
-### Special tool: CPPCheck
-
-A more advanced tool than splint. Does work out of the box but also supports configuration files.
-in those files you describe your library interfaces and the parameters they accept.
-CPPCheck then can validate all calls to those functions.
-If you plan more serious validation, go for this tool.
-
-Page: http://cppcheck.sourceforge.net/
-Manual: http://cppcheck.sourceforge.net/manual.pdf
-Code: https://github.com/danmar/cppcheck
-
-On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui).
-Also: There seems to be a bug. Packages do not properly install the config files.
-Get the current folder witht he config files from the repo.
-
-A feature is a MISRA C 2012 compliance checker.
 
 ## Dynamic code analysis
 
@@ -195,53 +63,6 @@ ASAN: http://www.mono-project.com/docs/debug+profile/clang/addresssanitizer/
 Profiling: http://www.mono-project.com/docs/debug+profile/profile/
 
 
-## Mitigation and hardening
-
-Mitigation makes exploits harder to write and reduces the chance they work.
-If skilled attackers share the exploits with others or the attackers can attack
-multiple times without being stopped - until the exploit works - this will
-not protect you.
-
-This is why mitigation has a bad reputation amongst defenders who focus on the
-100% approach. But: as they are simple to activate - just one compile
-switch - you should do it anyway. Just do not get false sense of security.
-
-### Mitigation/hardening switches
-
-#### GCC
-
-
-See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.debian.org/Hardening
-See more Clang: https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
-
-* stack protector: -fstack-protector-all (=all functions protected)
-* stack protector (since gcc 4.9, replaces the old one): -fstack-protector-strong (+= local array definitions)
-* gcc -D_FORTIFY_SOURCE=2: Macros replace some risky functions (memcpy, ...) and check the parameters - more aggressive run time checks. Can modify runtime behaviour.
-* position independent executable: gcc -pie -fPIE
-* position independent code for libraries: -fPIC
-* Read only memory sections in ELF: ld -z relro
-* Resolve all dynamic symbols during program load: ld -z now
-
-%% .. TODO: * heap protector:
-%% .. TODO: * libc pointer encryptionL:
-
-
-#### CLANG
-
-* -D_FORTIFY_SOURCE=2 (as with GCC)
-* ASLR for binaries: -fPIE -pie
-* ASLR for libraries: -fPIC
-* Stack protector:
-    * -fstack-protector is basic
-    * -fstack-protector-strong adds more functions
-    * -fstack-protector-all adds all functions and is more expensive
-* -fsanitize=safe-stack adds a second stack for re turn addresses and other valuable data
-* Control flow integrity checks: -fsanitize=cfi -fuse-ld=gold -flto (http://clang.llvm.org/docs/ControlFlowIntegrity.html )
-* Read only memory sections in ELF: -Wl,-z,relro
-* Resolve all dynamic symbols during program load:  -Wl,-z,now
-
-%% .. TODO: Visual Studio /RTCs flag research and add add proper place
-%% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
 
 
 ### Testing the results
@@ -250,6 +71,8 @@ You want to test the binaries if the hardening worked.
 
 * Relro: objdump -x <program> | grep RELRO
 * ld bind now: readelf -d trivial | grep BIND
+
+%% TODO Test and add examples
 
 ## Windows
 
