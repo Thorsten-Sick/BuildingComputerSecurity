@@ -52,19 +52,43 @@ From protocol basics and background to different hardware platforms and tools. A
 
 Also contains tools and iOS/Android howtos.
 
-%% TODO: Security Engineering
+## Security Engineering {#reference-book-security-engineering}
+
+Security Engineering by	Ross J. Anderson
+
+A book more focussed on Designers/Architects. Lots of chapters with specific topics.
+Some may not be relevant for you. But as the book is very good you either soldier on or you
+cherry pick interesting chapters. No matter what of those you are doing: Read it.
+
 
 %% TODO: The car hacker's handbook
 
-%% TODO_: Driving Technical Change
+## Driving Technical Change {#reference-book-driving-technical-change}
 
-%% TODO: The Browser Hacker's handbook
+Driving Technical Change, by Terrence Ryan
+
+A book explaining how to introduce new technologies in a team or company. Simple
+to read but with very essential tricks for the tech guy how to get mental
+boulders blocking change out of the way.
+
+## The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
+
+The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn.
+Essential knowledga how to hack and secure a browser. Lots of focus on Beef
+technology.
+
 
 %% TODO: Windows Internals
 
 %% TODO: Secure C and C++ Development
 
-%% TODO: Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis; William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
+## Anti Patterns {#reference-book-anti-patterns}
+
+Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis by William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
+
+A book showing typical anti-patterns that just happen in larger (software)
+projects. Your project will also suffer from some of those. Read this to
+understand those patterns and leran how to eliminate them.
 
 %% TODO: Add Viega book
 
@@ -84,6 +108,8 @@ Explains your most important tool as a computer expert: Your brain. How to use
 it, how to learn. A very important book for me. Written for the engineer.
 
 %% TODO: Add volatility, link to author
+
+%% TODO: Add Beef, link to browser hacker book
 
 ## Book: IoT Penetration Cookbook {#reference-book-iot-penetration-cookbook}
 
