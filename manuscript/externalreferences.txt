@@ -116,3 +116,18 @@ it, how to learn. A very important book for me. Written for the engineer.
 IoT Penetration Cookbook by Aaron Guzman, Aditya Gupta
 
 Wide spectrum of offensive technologies. Good to create a checklist what to protect. Be prepared to read more in-depth books for the technologies you are interested in.
+
+## Book: Make: Bluetooth {#reference-book-make-bluetooth}
+
+Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan
+
+A Bluetooth LE book. For people who prefer to learn with their hands. Lots of Arduino and NodeJS based projects.
+
+Not mentioning security. But a good way to get you started.
+
+
+## Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
+
+IoT Projects with Bluetooth Low Energy by Madhur Bhargava
+
+%% TODO: More content
