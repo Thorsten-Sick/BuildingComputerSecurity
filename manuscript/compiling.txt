@@ -99,8 +99,11 @@ during development of anything strange in your code.
 **GCC**
 
 
+* use *-Wall*. This will switch on many warnings, but not everything.
+* use *-Wextra* for even more tests than by -Wall
 * printf format checks: gcc -Wformat -Wformat-security -Werror=format-security
 * gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time (https://access.redhat.com/blogs/766093/posts/1976213)
+* Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
 **CLANG**
 
