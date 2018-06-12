@@ -1,0 +1,184 @@
+Bluetooth LE
+============
+
+.. State: 40 % BluetoothLE
+
+Basics
+------
+
+Built for short and small data bursts. Info packages sent to well defined "ports".
+
+Getting started: https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction
+
+.. TODO: More !
+
+Encryption
+~~~~~~~~~~
+
+Security Keys:
+
+All keys are asymmetrical
+
+* TK Temporary Key: Input to derivation of STK
+* STK (Short Term Key): Used for key material distribution. Based on TK and random values
+* Long Term Key aka LTK: 128 bit encryption key shared
+** Also: Master Identification (EDIV + Rand) as identifier for this connection
+* IRK aka Identity Resolving Key: For privacy, hides addresses
+** Identity Address Information: Address Type + Bluetooth Device Address
+* CSRK aka Connection Signature Resolving Key: Digitally sign unencrypted data at ATT layer
+
+It is possible to go without encryption. Key exchange happens during the bonding procedure.
+
+.. TODO: Check and verify
+
+Python programming
+------------------
+
+
+Bluepy for bluetooth LE
+~~~~~~~~~~~~~~~~~~~~~~~
+
+https://github.com/IanHarvey/bluepy
+https://ianharvey.github.io/bluepy-doc/
+
+.. TODO: Test Bluetooth LE
+
+Potential attacks
+-----------------
+
+List of potential attacks for threat modelling:
+
+* Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
+* Inpersonating (cloning) of a device
+* Passive sniffing (if there is no link layer encryption)
+* For encrypted layer: Sniff with ubertooth, sniff the pairing, use crackle to crack it
+* DOS a device
+* Footprinting (stalking)
+* MITM attacks (BTLE)
+* Social engineer users into pairing
+* MITM by cloning device. If encryption was established before, the connection will not work. The user will very liekly delete/re-pair and end up paired with the attacking device
+* to break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
+
+.. TODO: Verify list of attacks
+
+
+(Attack) Tools
+--------------
+
+Nordic Semiconductor: nRF Connect
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bluetooth LE tool for Android
+
+Adafruit Bluetooth LE sniffer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0
+https://www.adafruit.com/product/2269
+
+https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-sniffer
+
+Call it with::
+
+  python sniffer.py  /dev/ttyUSB0
+
+After selecting a device it will log the BTLE messages for this device
+connection into a pcap file.
+
+To view it properly with wireshark, define the DLT_USER id to be "btle":
+Preferences->Protocols->DLT_USER, set ID as "btle"
+
+.. TODO: Research: Monitor connection when sending commands.
+
+
+
+.. TODO: Fill tools
+
+MITM on BTLE
+~~~~~~~~~~~~
+
+
+* https://github.com/DigitalSecurity/btlejuice
+
+.. TODO: Test
+
+
+Crack BTLE keys
+~~~~~~~~~~~~~~~
+
+Crackle brute force temp key
+https://lacklustre.net/projects/crackle/
+https://github.com/mikeryan/crackle/
+
+Input file must contain the complete pairing conversation.
+
+Getting the LTK key::
+
+   crackle -v -i logs/c2.pcap
+
+Decrypting the pcap::
+
+     crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
+
+Basic OS tools
+~~~~~~~~~~~~~~
+
+.. TODO: BAsic tools as well
+
+Pinging BTLE
+~~~~~~~~~~~~
+
+.. TODO: Document, including DOS
+
+Bleah
+~~~~~
+
+https://github.com/evilsocket/bleah   (BLE smart device hacking)
+
+pip install bluepy
+
+https://github.com/IanHarvey/bluepy
+
+
+Gattack.io
+~~~~~~~~~~
+
+GATT: The "application" layer. While the lower layers very often do not
+do encryption (pre-shared keys would be possible, but default is more likely
+"none" or something weak), GATT layer could have some DIY encryption.
+
+For the other BTLE encryption methods:
+
+* Unencrypted: Can be broken
+* "Just works": The device talks to the MITM encrypted. The MITM to the central unencrypted....broken.
+* "Passkey entry" BTLE specification: “Just Works and Passkey
+Entry do not provide any passive eavesdropping protection”
+* Sometimes the pairing has to be broken first (also for crackle to work)
+
+Gattacker is a node.js based MITM tool for BTLE.
+
+http://gattack.io/
+
+https://github.com/securing/gattacker
+https://github.com/securing/docs/raw/master/slides.pdf
+
+The Gattacker Whitepaper has  a good overview covering BTLE
+technology and the possible attacks:
+https://github.com/securing/docs/raw/master/whitepaper.pdf
+
+Gattack offers those attacks:
+
+* DOS the broadcasting phase (before pairing)
+* Cloning and spoofing a device
+* passive interception of unencrypted transmissions
+* active interception (MITM)
+* module interface - attack open GATT services
+* password brute forcing
+* GATT value fuzzing
+
+.. TODO: Check in tool of those are there
+
+Books
+-----
+
+Book: Getting started with BLE: https://www.adafruit.com/product/1978

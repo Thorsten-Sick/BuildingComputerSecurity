@@ -1,0 +1,201 @@
+Bluetooth Classic
+=================
+
+.. State: 30 % Bluetooth
+
+The way to connect things to your phone. Or car. Or computer.
+
+
+There are different kinds of Bluetooth, versions 1-5, where 4 currently seems
+the most common one. It is built for long time connections and replaces wires.
+
+Older versions had big security issues. It seems those exploits do not work anymore.
+.. TODO. Verify
+
+.. TODO: Integrate https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf
+
+Python programming
+------------------
+
+Bluetooth library
+~~~~~~~~~~~~~~~~~
+
+https://github.com/karulis/pybluez
+::
+
+    apt install python-bluez
+
+or::
+
+    pip install pybluez
+
+(https://github.com/karulis/pybluez)
+
+
+Potential attacks
+-----------------
+
+List of potential attacks for threat modelling:
+
+* Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
+* Inpersonating (cloning) of a device
+* Passive sniffing (if there is no link layer encryption)
+* For encrypted layer: Sniff with ubertooth, sniff the pairing, use crackle to crack it
+* DOS a device
+* Footprinting (stalking)
+* MITM attacks (BTLE)
+* Blueborne RCE https://www.armis.com/blueborne/
+
+.. TODO: Verify list of attacks
+
+(Attack) tools
+---------------
+
+Ubertooth One
+~~~~~~~~~~~~~
+
+https://github.com/greatscottgadgets/ubertooth/wiki
+
+.. TODO: Resarch and test
+
+
+
+Scan
+~~~~
+
+Scan for hidden BT devices: Redfang
+
+.. TODO: Check LE or Classic ?
+
+
+Cloning devices
+~~~~~~~~~~~~~~~
+
+Spooftooph->Spoofing + cloning BT devices
+
+.. TODO: Check if LE or classic
+
+
+
+Btcrack: Crack BT ???
+~~~~~~~~~~~~~~~~~~~~~
+
+https://github.com/mikeryan/btcrack
+
+https://web.archive.org/web/20070609092815/http://www.nruns.com/_en/security_tools_btcrack.php
+
+Footprinting and stalking
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Blueranger-> Locate BT devices
+www.hackfromacave.com
+
+Bluelog -> monitor BT devices (log them)
+Blueprinting->Footprints
+
+.. TODO: MAybe bluemoon bt configuration
+
+.. TODO: MAybe add interactive bt config tool bluetoothctl
+
+DOS
+~~~
+
+Bluesmack -> DOS attack (Software l2cap)
+https://trifinite.org/trifinite_stuff_bluesmack.html
+https://computersecuritypgp.blogspot.de/2016/02/what-is-bluesmack-attack.html
+
+Honeypots
+~~~~~~~~~
+
+Bluepot-> bluetooth honey pot
+
+
+Basic tools
+~~~~~~~~~~~
+
+Innocent basic tools to handle BT from command line
+
+.. TODO: hciconfig
+
+.. TODO: hcitool for Bluetooth
+
+**hcitool** for BT and BT LE
+
+scan for le devices::
+
+    hcitool lescan
+
+create a le connection::
+
+    hcitool lecc <address>
+
+delete a le connection::
+
+    hcitool ledc <handle>
+
+
+
+**gatttool** for Bluetooth LE::
+
+    gatttool -i <interface> -b <device address> -I
+    > connect
+
+to connect to a found device
+
+
+
+
+
+
+Bluetooth commissioning methods
+-------------------------------
+
+Very important for IoT is commissioning. How to set up a network if
+the devices have limited IO ?
+
+(Watch the talk: https://media.ccc.de/v/SHA2017-325-commissioning_methods_for_iot)
+
+The options are
+
+* Public key based key exchange ( ver. >= 4.2)
+* "Just works" - permissive method
+* Numeric comparison (compare two 6 digit numbers) - shared key
+* Passkey entry (Enter 6 digit number) - shared key
+* Out-of-Band (NFC or similar). Tricky but offers good security.
+
+.. TODO: Verify and research
+
+Books
+-----
+
+.. TODO: Find books
+
+
+
+
+Attacks
+-------
+
+De-Auth attacks
+~~~~~~~~~~~~~~~
+
+The attacker de-auths the client at a specific point. This one can keep
+Amazon locks open (or similar): https://www.youtube.com/watch?v=YFgKJ2liAUs
+
+http://www.zdnet.com/article/after-dismissing-security-flaw-amazon-patches-key-smart-lock-anyway/
+
+
+Be aware of this threat and be prepared to fail safe on de-auth.
+
+.. TODO: Is it BT or Wifi ?
+
+On Bluetooth Credit Cards
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://hackaday.com/2018/04/08/cracking-a-bluetooth-credit-card/
+https://blog.ice9.us/2018/04/stealing-credit-cards-from-fuze-bluetooth.html
+
+Their problem: For pairing physical access is required. But that is a
+standard use case for credit cards - giving them to strangers for a short time.
+
+.. TODO: More details and takeaways: Is it LE ?
