@@ -1,6 +1,6 @@
 # External references and ressources
 
-## Hacking Tamagotchis {#reference-tamagotchi}
+### Hacking Tamagotchis {#reference-tamagotchi}
 
 Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 
@@ -8,13 +8,13 @@ Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 
 [Even More Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)
 
-## Disassember tools {#reference-disassembler-tools}
+### Disassember tools {#reference-disassembler-tools}
 
 * [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
 * [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
 * [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
 
-## Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
+### Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
 
 Practical Internet of Things Security by Drew Van Duren, Brian Russell
 
@@ -35,7 +35,7 @@ For example: Crypto chapter is a good start but really using crypto will
 require more books to be read. Says the one writing a
 "security overview book"...I know....
 
-## Book: "Test driven development for embedded C" {#reference-book-tdd-4-embedded-c}
+### Book: "Test driven development for embedded C" {#reference-book-tdd-4-embedded-c}
 
 Test Driven Development for Embedded C by James W. Grenning
 
@@ -44,15 +44,9 @@ and still benefit from unit tests.
 
 This book will improve your software quality and security.
 
-## Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
 
-Getting Started with Bluetooth Low Energy by Robert Davidson, Akiba, Carles Cufí, Kevin Townsend
 
-From protocol basics and background to different hardware platforms and tools. A solid road to implement the first BTLE projects.
-
-Also contains tools and iOS/Android howtos.
-
-## Security Engineering {#reference-book-security-engineering}
+### Security Engineering {#reference-book-security-engineering}
 
 Security Engineering by	Ross J. Anderson
 
@@ -63,7 +57,7 @@ cherry pick interesting chapters. No matter what of those you are doing: Read it
 
 %% TODO: The car hacker's handbook
 
-## Driving Technical Change {#reference-book-driving-technical-change}
+### Driving Technical Change {#reference-book-driving-technical-change}
 
 Driving Technical Change, by Terrence Ryan
 
@@ -71,7 +65,7 @@ A book explaining how to introduce new technologies in a team or company. Simple
 to read but with very essential tricks for the tech guy how to get mental
 boulders blocking change out of the way.
 
-## The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
+### The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
 
 The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn.
 Essential knowledga how to hack and secure a browser. Lots of focus on Beef
@@ -82,7 +76,7 @@ technology.
 
 %% TODO: Secure C and C++ Development
 
-## Anti Patterns {#reference-book-anti-patterns}
+### Anti Patterns {#reference-book-anti-patterns}
 
 Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis by William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
 
@@ -92,7 +86,7 @@ understand those patterns and leran how to eliminate them.
 
 %% TODO: Add Viega book
 
-## Cuckoo Sandbox {#reference-cuckoo-sandbox}
+### Cuckoo Sandbox {#reference-cuckoo-sandbox}
 
 [Cuckoo Sandbox](https://cuckoosandbox.org/) is a behaviour analysis tool for
 malware. Malware is exewcuted in a simulated environment and all the behaviour
@@ -100,7 +94,7 @@ is monitored.
 
 Try it online on [malwr.com](https://malwr.com/)
 
-## Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
+### Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
 
 Pragmatic Thinking and Learning, by Andy Hunt
 
@@ -111,13 +105,18 @@ it, how to learn. A very important book for me. Written for the engineer.
 
 %% TODO: Add Beef, link to browser hacker book
 
-## Book: IoT Penetration Cookbook {#reference-book-iot-penetration-cookbook}
+### Book: IoT Penetration Cookbook {#reference-book-iot-penetration-cookbook}
 
 IoT Penetration Cookbook by Aaron Guzman, Aditya Gupta
 
 Wide spectrum of offensive technologies. Good to create a checklist what to protect. Be prepared to read more in-depth books for the technologies you are interested in.
 
-## Book: Make: Bluetooth {#reference-book-make-bluetooth}
+
+
+
+## Bluetooth LE {#reference-collection-btle}
+
+### Book: Make: Bluetooth {#reference-book-make-bluetooth}
 
 Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan
 
@@ -126,17 +125,37 @@ A Bluetooth LE book. For people who prefer to learn with their hands. Lots of Ar
 Not mentioning security. But a good way to get you started.
 
 
-## Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
+### Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
 
-IoT Projects with Bluetooth Low Energy by Madhur Bhargava
+IoT Projects with Bluetooth Low Energy by Madhur Bhargava. Still a hands-on
+book. But the *Make: Bluetooth* is simpler. This one has more theory.
+It also covers BTLE 5.0
 
-* Also covers BTLE 5.0
 
-
-%% TODO: More content
-
-## Book: Building Bluetooth Low Energy Systems {#reference-book-building-btle-systems}
+### Book: Building Bluetooth Low Energy Systems {#reference-book-building-btle-systems}
 
 Building Bluetooth Low Energy Systems, by Muhammad Usama bin Aftab
 
 %% todo: More content
+
+### Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
+
+Getting Started with Bluetooth Low Energy by Robert Davidson, Akiba, Carles Cufí, Kevin Townsend
+
+From protocol basics and background to different hardware platforms and tools. A solid road to implement the first BTLE projects.
+
+Also contains tools and iOS/Android howtos.
+
+### Bleah {#reference-bleah}
+
+Bleah is a Bluetooth Low Energy hacking tool. It requires Bluepy.
+
+https://github.com/IanHarvey/bluepy
+https://github.com/evilsocket/bleah
+
+To install bluepy:
+
+{lang="bash"}
+    pip install bluepy
+
+How to use: See at the [BTLE](#chapter-btle) chapter.

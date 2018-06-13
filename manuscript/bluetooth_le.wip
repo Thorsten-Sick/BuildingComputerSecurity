@@ -1,19 +1,19 @@
-Bluetooth LE
-============
+# Bluetooth LE {#chapter-btle}
 
-.. State: 40 % BluetoothLE
 
-Basics
-------
+%% .. State: 40 % BluetoothLE
+
+## Basics
+
 
 Built for short and small data bursts. Info packages sent to well defined "ports".
 
 Getting started: https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction
 
-.. TODO: More !
+%% .. TODO: More !
 
-Encryption
-~~~~~~~~~~
+### Encryption
+
 
 Security Keys:
 
@@ -22,29 +22,26 @@ All keys are asymmetrical
 * TK Temporary Key: Input to derivation of STK
 * STK (Short Term Key): Used for key material distribution. Based on TK and random values
 * Long Term Key aka LTK: 128 bit encryption key shared
-** Also: Master Identification (EDIV + Rand) as identifier for this connection
+    * Also: Master Identification (EDIV + Rand) as identifier for this connection
 * IRK aka Identity Resolving Key: For privacy, hides addresses
-** Identity Address Information: Address Type + Bluetooth Device Address
+    * Identity Address Information: Address Type + Bluetooth Device Address
 * CSRK aka Connection Signature Resolving Key: Digitally sign unencrypted data at ATT layer
 
 It is possible to go without encryption. Key exchange happens during the bonding procedure.
 
-.. TODO: Check and verify
+%% .. TODO: Check and verify
 
-Python programming
-------------------
+## Python programming
 
 
-Bluepy for bluetooth LE
-~~~~~~~~~~~~~~~~~~~~~~~
+### Bluepy for bluetooth LE
 
 https://github.com/IanHarvey/bluepy
 https://ianharvey.github.io/bluepy-doc/
 
-.. TODO: Test Bluetooth LE
+%% .. TODO: Test Bluetooth LE
 
-Potential attacks
------------------
+## Potential attacks
 
 List of potential attacks for threat modelling:
 
@@ -59,19 +56,17 @@ List of potential attacks for threat modelling:
 * MITM by cloning device. If encryption was established before, the connection will not work. The user will very liekly delete/re-pair and end up paired with the attacking device
 * to break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
 
-.. TODO: Verify list of attacks
+%% .. TODO: Verify list of attacks
 
 
-(Attack) Tools
---------------
+## (Attack) Tools
 
-Nordic Semiconductor: nRF Connect
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Nordic Semiconductor: nRF Connect
 
 Bluetooth LE tool for Android
 
-Adafruit Bluetooth LE sniffer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Adafruit Bluetooth LE sniffer
+
 
 Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0
 https://www.adafruit.com/product/2269
@@ -80,6 +75,7 @@ https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-sniffer
 
 Call it with::
 
+{lang="bash"}
   python sniffer.py  /dev/ttyUSB0
 
 After selecting a device it will log the BTLE messages for this device
@@ -88,23 +84,21 @@ connection into a pcap file.
 To view it properly with wireshark, define the DLT_USER id to be "btle":
 Preferences->Protocols->DLT_USER, set ID as "btle"
 
-.. TODO: Research: Monitor connection when sending commands.
+%% .. TODO: Research: Monitor connection when sending commands.
 
 
 
-.. TODO: Fill tools
+%% .. TODO: Fill tools
 
-MITM on BTLE
-~~~~~~~~~~~~
+### MITM on BTLE
 
 
 * https://github.com/DigitalSecurity/btlejuice
 
-.. TODO: Test
+%% .. TODO: Test
 
 
-Crack BTLE keys
-~~~~~~~~~~~~~~~
+### Crack BTLE keys
 
 Crackle brute force temp key
 https://lacklustre.net/projects/crackle/
@@ -114,29 +108,34 @@ Input file must contain the complete pairing conversation.
 
 Getting the LTK key::
 
+{lang="bash"}
    crackle -v -i logs/c2.pcap
 
 Decrypting the pcap::
 
+{lang="bash"}
      crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
 
-Basic OS tools
-~~~~~~~~~~~~~~
+### Basic OS tools
 
-.. TODO: BAsic tools as well
+
+%% .. TODO: BAsic tools as well
 
 hciconfig hci0 up
 
 scan for le devices::
 
+{lang="bash"}
     hcitool lescan
 
 create a le connection::
 
+{lang="bash"}
     hcitool lecc <address>
 
 delete a le connection::
 
+{lang="bash"}
     hcitool ledc <handle>
 
 hcitool leinfo <handle> => get some info like manufacturer
@@ -145,6 +144,7 @@ hcitool leinfo <handle> => get some info like manufacturer
 
 **gatttool** for Bluetooth LE::
 
+{lang="bash"}
     gatttool -i <interface> -b <device address> -I
     > connect
 
@@ -152,33 +152,28 @@ hcitool leinfo <handle> => get some info like manufacturer
 
 to connect to a found device
 
-Pinging BTLE
-~~~~~~~~~~~~
+### Pinging BTLE
 
 .. TODO: Document, including DOS
 
-Blue Hydra
-~~~~~~~~~~
+### Blue Hydra
 
  https://github.com/pwnieexpress/blue_hydra
 
-Ubertooth Utils
-~~~~~~~~~~~~~~~
+### Ubertooth Utils
 
 https://github.com/greatscottgadgets/ubertooth
 
-Bleah
-~~~~~
+### Bleah
 
-https://github.com/evilsocket/bleah   (BLE smart device hacking)
-
-pip install bluepy
-
-https://github.com/IanHarvey/bluepy
+  (BLE smart device hacking)
 
 
-Gattack.io
-~~~~~~~~~~
+
+
+
+
+### Gattack.io
 
 GATT: The "application" layer. While the lower layers very often do not
 do encryption (pre-shared keys would be possible, but default is more likely
@@ -213,22 +208,35 @@ Gattack offers those attacks:
 * password brute forcing
 * GATT value fuzzing
 
-.. TODO: Check in tool of those are there
+%% .. TODO: Check in tool of those are there
 
+%% TODO: https://blog.attify.com/hacking-bluetooth-low-energy/
 
 %% TO Add: BTLEJUICE
 
-Books
------
+## Books
 
-Book: Getting started with BLE: https://www.adafruit.com/product/1978
+There is a [list of books](#reference-collection-btle) and tools.
 
-Glossary
---------
+BTLE is a complex topic and depending on your learning style you should
+either start at the *hands-on* side or at the *theoretical* side.
+
+No matter where you start, it is very likely that you will also need some
+(cheap) btle tools and products.
+
+## Beacons
+
+%% TODO: Write
+
+Apple: iBeacon
+Google: Eddystone/Physical Web http://google.github.io/physical-web/
+
+
+## Glossary
 
 GAP: Advertisements, connection handling, defining device roles in communication
 GATT: Organizes the data offered by the device
 Characteristic: Value + Descriptor
-Service:
-Profile:
+Service: Several Characteristics combined create a service. A default service for BTLE would contain device information
+Profile: Profiles combine several services. They standardize specific device classes
 L2CAP: Encapsulating data into packets
