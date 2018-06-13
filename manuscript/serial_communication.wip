@@ -1,0 +1,24 @@
+Serial Communication/UART:
+
+https://learn.sparkfun.com/tutorials/serial-communication
+
+Bus Pirate:
+https://learn.sparkfun.com/tutorials/bus-pirate-v36a-hookup-guide
+http://dangerousprototypes.com/docs/Bus_Pirate#JTAG_and_OpenOCD
+
+Hardware Implementation of serial communication can be:
+* TTL: transistor-transistor logic, common. Between microcontrollers
+* RS232: ancient. For long transmissions
+
+* RS-485: More complex than RS-232 but better suited
+
+UART: The circuit responsible to implement serial communication. Eight parallel data lines to Serial RX/TX
+Microcontrollers can have 1-X UARTS. Some UARTs have internal buffers tos tore the data until the controller fetches it.
+
+
+I2C:
+https://learn.sparkfun.com/tutorials/i2c
+Linux Tools: https://i2c.wiki.kernel.org/index.php/I2C_Tools
+
+SPI:
+https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi
