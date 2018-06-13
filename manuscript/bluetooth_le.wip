@@ -125,10 +125,47 @@ Basic OS tools
 
 .. TODO: BAsic tools as well
 
+hciconfig hci0 up
+
+scan for le devices::
+
+    hcitool lescan
+
+create a le connection::
+
+    hcitool lecc <address>
+
+delete a le connection::
+
+    hcitool ledc <handle>
+
+hcitool leinfo <handle> => get some info like manufacturer
+
+
+
+**gatttool** for Bluetooth LE::
+
+    gatttool -i <interface> -b <device address> -I
+    > connect
+
+%% TODO: Experiment with it !
+
+to connect to a found device
+
 Pinging BTLE
 ~~~~~~~~~~~~
 
 .. TODO: Document, including DOS
+
+Blue Hydra
+~~~~~~~~~~
+
+ https://github.com/pwnieexpress/blue_hydra
+
+Ubertooth Utils
+~~~~~~~~~~~~~~~
+
+https://github.com/greatscottgadgets/ubertooth
 
 Bleah
 ~~~~~
@@ -178,7 +215,20 @@ Gattack offers those attacks:
 
 .. TODO: Check in tool of those are there
 
+
+%% TO Add: BTLEJUICE
+
 Books
 -----
 
 Book: Getting started with BLE: https://www.adafruit.com/product/1978
+
+Glossary
+--------
+
+GAP: Advertisements, connection handling, defining device roles in communication
+GATT: Organizes the data offered by the device
+Characteristic: Value + Descriptor
+Service:
+Profile:
+L2CAP: Encapsulating data into packets

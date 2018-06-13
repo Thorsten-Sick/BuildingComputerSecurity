@@ -130,4 +130,13 @@ Not mentioning security. But a good way to get you started.
 
 IoT Projects with Bluetooth Low Energy by Madhur Bhargava
 
+* Also covers BTLE 5.0
+
+
 %% TODO: More content
+
+## Book: Building Bluetooth Low Energy Systems {#reference-book-building-btle-systems}
+
+Building Bluetooth Low Energy Systems, by Muhammad Usama bin Aftab
+
+%% todo: More content

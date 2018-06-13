@@ -121,26 +121,7 @@ Innocent basic tools to handle BT from command line
 
 **hcitool** for BT and BT LE
 
-scan for le devices::
 
-    hcitool lescan
-
-create a le connection::
-
-    hcitool lecc <address>
-
-delete a le connection::
-
-    hcitool ledc <handle>
-
-
-
-**gatttool** for Bluetooth LE::
-
-    gatttool -i <interface> -b <device address> -I
-    > connect
-
-to connect to a found device
 
 
 
