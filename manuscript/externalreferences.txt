@@ -159,3 +159,22 @@ To install bluepy:
     pip install bluepy
 
 How to use: See at the [BTLE](#chapter-btle) chapter.
+
+### Woot13 presentation on BTLE hacking (especially sniffing) {#reference-presentation-btle-sniffing}
+
+by Mike Ryan
+
+https://www.usenix.org/conference/woot13/workshop-program/presentation/Ryan
+
+tags:
+
+* Ubertooth
+* wireshark
+* pcap
+* sniffing
+* BTLE key exchange protocol
+* crackle
+
+### SHA2017 presentation on BTLE hacking "hack-a-ble" {#reference}
+
+https://media.ccc.de/v/SHA2017-230-hack-a-ble
