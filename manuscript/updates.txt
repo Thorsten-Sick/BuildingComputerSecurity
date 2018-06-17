@@ -166,6 +166,19 @@ If the update requires a restart of the software think about waiting for
 the user to naturally restart it - with a timer. If the user does not restart
 it after X days nudge him.
 
+## Control the update infrastructure
+
+It is essential that you control your update infrastructure. There are several
+things that can break given time:
+
+* certificates run out
+* You lose ownership of your domain
+* server needs system updates
+
+Plan ahead and create scripts that test your current situation and warn you
+weeks ahead before your domain ownership runs out or before you should create
+a new certificate.
+
 ## Details Not-todo list
 
 ### TOCTTOU Time of check to time of use - error

@@ -217,3 +217,26 @@ face have the skillset switched: experienced attacker, ok-ish engineer.
 This is why they became attackers.
 
 [^note2]: Depends on your users
+
+## Security Theater
+
+A big show towards the customer faking security features. Most often has an intended
+negative effect on usability - you want it to be noticed. It is also not necessarily cheap.
+
+One typical example is the water bottle ban at airports.
+
+Please double check if what you are implementing is just smoke and mirrors or
+some proper solution. And go for the proper solution.
+
+## Hollywood threats
+
+Also on the negative side: Thanks to Hollywood movies everyone seems to know
+how an attack looks like - with lots of show effects and world shattering scale.
+When discussing security with security-beginners there will be a tendency for
+the discussion towards those Hollywood threats. Explain to everyone this concept.
+Have some real-world hacker stories ready and try to steer the discussion
+towards a productive region. Even if it is less exciting.
+
+%% TODO: Link Mitnick "Ghost in The Wires"
+%% TODO: Link Beyond Fear
+%% TODO: Link Future Crimes by Marc Goodman
