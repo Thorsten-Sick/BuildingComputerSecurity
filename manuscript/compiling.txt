@@ -105,17 +105,6 @@ during development of anything strange in your code.
 * gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time (https://access.redhat.com/blogs/766093/posts/1976213)
 * Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
-**CLANG**
-
-https://clang-analyzer.llvm.org/
-
-It is a separate Clang Project and has a command line tool described here: https://clang-analyzer.llvm.org/scan-build.html
-
-It will use the project's Makefile to build the project and analyse it.
-
-Available directly in the compiler:
-
-* Security warnings: -Wformat -Wformat-security -Werror=format-security
 
 **Embedded: MISRA**
 
@@ -170,7 +159,6 @@ switch - you should do it anyway. Just do not get false sense of security.
 
 
 See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.debian.org/Hardening
-See more Clang: https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
 
 * stack protector: -fstack-protector-all (=all functions protected)
 * stack protector (since gcc 4.9, replaces the old one): -fstack-protector-strong (+= local array definitions)
@@ -184,19 +172,7 @@ See more Clang: https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
 %% .. TODO: * libc pointer encryptionL:
 
 
-#### CLANG
 
-* -D_FORTIFY_SOURCE=2 (as with GCC)
-* ASLR for binaries: -fPIE -pie
-* ASLR for libraries: -fPIC
-* Stack protector:
-    * -fstack-protector is basic
-    * -fstack-protector-strong adds more functions
-    * -fstack-protector-all adds all functions and is more expensive
-* -fsanitize=safe-stack adds a second stack for re turn addresses and other valuable data
-* Control flow integrity checks: -fsanitize=cfi -fuse-ld=gold -flto (http://clang.llvm.org/docs/ControlFlowIntegrity.html )
-* Read only memory sections in ELF: -Wl,-z,relro
-* Resolve all dynamic symbols during program load:  -Wl,-z,now
 
 %% .. TODO: Visual Studio /RTCs flag research and add add proper place
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)

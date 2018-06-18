@@ -1,0 +1,32 @@
+# CLANG
+
+Clang is a compiler in the same league as GCC. It has some different features.
+As you will either use one or the other in your project it gets an own chapter.
+
+https://clang-analyzer.llvm.org/
+
+It is a separate Clang Project and has a command line tool described here: https://clang-analyzer.llvm.org/scan-build.html
+
+It will use the project's Makefile to build the project and analyse it.
+
+Available directly in the compiler:
+
+* Security warnings: -Wformat -Wformat-security -Werror=format-security
+
+
+#### CLANG
+
+* -D_FORTIFY_SOURCE=2 (as with GCC)
+* ASLR for binaries: -fPIE -pie
+* ASLR for libraries: -fPIC
+* Stack protector:
+    * -fstack-protector is basic
+    * -fstack-protector-strong adds more functions
+    * -fstack-protector-all adds all functions and is more expensive
+* -fsanitize=safe-stack adds a second stack for re turn addresses and other valuable data
+* Control flow integrity checks: -fsanitize=cfi -fuse-ld=gold -flto (http://clang.llvm.org/docs/ControlFlowIntegrity.html )
+* Read only memory sections in ELF: -Wl,-z,relro
+* Resolve all dynamic symbols during program load:  -Wl,-z,now
+
+
+See more Clang: https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
