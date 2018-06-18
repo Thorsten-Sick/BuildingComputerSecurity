@@ -153,3 +153,6 @@ What you could want to block is:
 You could do the blocking by modifying the code of those tools or by AppArmor
 
 Also: Maybe you could want to uninstall some of those tools....
+
+
+%% TODO: Intel/safestringlib on github

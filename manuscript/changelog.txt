@@ -10,7 +10,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *passwords*
 * Added basic *compiling*
 * Added *crypto algorithms* for hashes
-* Improved external references
+* Improved *external references*
 * Extended *update*
 
 %% TODO GCC features more details
