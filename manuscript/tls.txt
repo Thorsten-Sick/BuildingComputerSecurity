@@ -35,7 +35,9 @@ Thanks to Let's encrypt you should not need those that often.
 
 %% TODO Add Let's Encrypt chapter
 
+%% TODO Verify certificate (hostname !)
 
+%% TODO: No self-signed certificates
 
 ## Revocation (OCSP = Online Certificate Status Protocol)
 
