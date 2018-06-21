@@ -1,10 +1,49 @@
 # Compiling
 
+There are several ways to improve security at the compiling step. This ranges from
+static code analysis, dynamic code analysis to mitigation.
+
+There are several pros and cons for all of those and you will want to combine them.
+
+As your investment is just "collect new tools and test them" for a large bunch of
+benefits you should go there.
+
+**Static code analysis**:
+It has the benefits that it is fast and simple. It can be run with commit hooks
+or at least nightly on your servers.
+Disadvantage is the potential for false positives and that it will miss a big
+chunk of vulnerabilities. As it is simple and cheap: Do it. And do other things
+as well.
+
+**Dynamic code analysis**:
+Runs a specially compiled version of your program and checks it for
+mis-behaviour. Very good and finding tricky memory bugs and similar. It is
+powerful if you have an automated test framework or fuzzer that does the
+running of your program for you. Can be done nightly or at least during weekends.
+You should of course fix all found bugs.
+You do not want to release this special version with dynamic code analysis.
+It is for your testers only.
+
+**Mitigation**:
+Mitigation is extra linker/compiler settings that make it harder to exploit
+your program. It will **not** fix the vulernabilities and make our program better.
+Instead it will make it harder to create a reliable exploit. Buying you time
+to push an update. Some security experts do not like mitigation because they
+saw people going for it **only**. As an additional layer of security it i cool.
+But base line is: Fix your bugs and do your updates.
+Possible side effects: Programs compiled with mitigation could be slower,
+larger, ...
+Please test for these effects !
+
+%% Todo: Write description for those and pros/cons
+
+%% TODO: Fix markup
+
 ## Build system
 
-You want to be able to build old versions with new bugfixes, link to newer
+If you want to be able to build old versions with new bugfixes, link to newer
 library versions (because the old ones are broken), ...
-This requires a build system that is
+You require a build system that is
 
 * At a very well defined state (libraries, compiler version, ....)
 * Can be transfered to other build machines
@@ -122,6 +161,12 @@ https://en.wikipedia.org/wiki/MISRA_C
 
 A classic tool for Code analysis (C). Works out of the box and is a simple entry tool.
 
+### Special tool: Flawfinder
+
+As simple as Splint. Run it in your directory and it will point out risky
+regions of your code. As it is a "grep on speed" it will have it's limits. But
+use it and fix all bugs it finds before going to the next level.
+
 ### Special tool: CPPCheck
 
 A more advanced tool than splint. Does work out of the box but also supports configuration files.
@@ -160,17 +205,18 @@ switch - you should do it anyway. Just do not get false sense of security.
 
 See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.debian.org/Hardening
 
-* stack protector: -fstack-protector-all (=all functions protected)
-* stack protector (since gcc 4.9, replaces the old one): -fstack-protector-strong (+= local array definitions)
-* gcc -D_FORTIFY_SOURCE=2: Macros replace some risky functions (memcpy, ...) and check the parameters - more aggressive run time checks. Can modify runtime behaviour.
-* position independent executable: gcc -pie -fPIE
-* position independent code for libraries: -fPIC
-* Read only memory sections in ELF: ld -z relro
-* Resolve all dynamic symbols during program load: ld -z now
+* stack protector: *-fstack-protector-all* (=all functions protected)
+* stack protector (since gcc 4.9, replaces the old one): *-fstack-protector-strong* (+= local array definitions)
+* Macros replace some risky functions (memcpy, ...) and check the parameters: *-D_FORTIFY_SOURCE=2*
+  * more aggressive run time checks. Can modify runtime behaviour.
+* position independent executable: *gcc -pie -fPIE*
+* position independent code for libraries: *-fPIC*
+* Read only memory sections in ELF: *ld -z relro*
+* Resolve all dynamic symbols during program load: *ld -z now*
 
 %% .. TODO: * heap protector:
 %% .. TODO: * libc pointer encryptionL:
-
+%% TODO Strip and how to verify
 
 
 

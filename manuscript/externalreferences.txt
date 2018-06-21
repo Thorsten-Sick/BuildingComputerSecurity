@@ -57,13 +57,7 @@ cherry pick interesting chapters. No matter what of those you are doing: Read it
 
 %% TODO: The car hacker's handbook
 
-### Driving Technical Change {#reference-book-driving-technical-change}
 
-Driving Technical Change, by Terrence Ryan
-
-A book explaining how to introduce new technologies in a team or company. Simple
-to read but with very essential tricks for the tech guy how to get mental
-boulders blocking change out of the way.
 
 ### The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
 
@@ -76,13 +70,6 @@ technology.
 
 %% TODO: Secure C and C++ Development
 
-### Anti Patterns {#reference-book-anti-patterns}
-
-Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis by William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
-
-A book showing typical anti-patterns that just happen in larger (software)
-projects. Your project will also suffer from some of those. Read this to
-understand those patterns and leran how to eliminate them.
 
 %% TODO: Add Viega book
 
@@ -94,12 +81,6 @@ is monitored.
 
 Try it online on [malwr.com](https://malwr.com/)
 
-### Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
-
-Pragmatic Thinking and Learning, by Andy Hunt
-
-Explains your most important tool as a computer expert: Your brain. How to use
-it, how to learn. A very important book for me. Written for the engineer.
 
 %% TODO: Add volatility, link to author
 
@@ -111,6 +92,30 @@ IoT Penetration Cookbook by Aaron Guzman, Aditya Gupta
 
 Wide spectrum of offensive technologies. Good to create a checklist what to protect. Be prepared to read more in-depth books for the technologies you are interested in.
 
+## The human mind
+
+### Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
+
+Pragmatic Thinking and Learning, by Andy Hunt
+
+Explains your most important tool as a computer expert: Your brain. How to use
+it, how to learn. A very important book for me. Written for the engineer.
+
+### Driving Technical Change {#reference-book-driving-technical-change}
+
+Driving Technical Change, by Terrence Ryan
+
+A book explaining how to introduce new technologies in a team or company. Simple
+to read but with very essential tricks for the tech guy how to get mental
+boulders blocking change out of the way.
+
+### Anti Patterns {#reference-book-anti-patterns}
+
+Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis by William H. Brown Raphael C. Malveau, Hays W. "Skip" McCormick III, Thomas J. Mowbray
+
+A book showing typical anti-patterns that just happen in larger (software)
+projects. Your project will also suffer from some of those. Read this to
+understand those patterns and leran how to eliminate them.
 
 
 
@@ -141,6 +146,8 @@ Building Bluetooth Low Energy Systems, by Muhammad Usama bin Aftab
 ### Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
 
 Getting Started with Bluetooth Low Energy by Robert Davidson, Akiba, Carles Cufí, Kevin Townsend
+
+%% TODO: Fix name encoding
 
 From protocol basics and background to different hardware platforms and tools. A solid road to implement the first BTLE projects.
 
@@ -199,8 +206,16 @@ https://www.usenix.org/conference/woot13/workshop-program/presentation/ryan
   * PCAP
 
 Take aways:
+
 * BLE key exchange protocol weak
   * but AES-CCM is good
 * Attackers can enforce re-pairing to get a new key exchange
 * *crackle* needs less than a second
   * But needs pairing sniffed to crack
+
+
+## Testing projects
+
+### Fuzzgoat {#reference-fuzzgoat}
+
+Fuzzgoat is a vulnerable C program: https://github.com/fuzzstati0n/fuzzgoat

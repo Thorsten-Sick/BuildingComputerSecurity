@@ -86,7 +86,12 @@ Preferences->Protocols->DLT_USER, set ID as "btle"
 
 %% .. TODO: Research: Monitor connection when sending commands.
 
+%% Wireshark does not recognize DLT_USER
+%% https://github.com/greatscottgadgets/ubertooth/issues/61
+%% go to Preferences->Protocols->DLT_USER and enter "btle" as protocol
+that should help
 
+%% Convert PCAP: https://github.com/mikeryan/crackle/issues/26
 
 %% .. TODO: Fill tools
 
@@ -244,8 +249,6 @@ L2CAP: Encapsulating data into packets
 
 %% TODO: https://media.blackhat.com/us-13/us-13-Ryan-Bluetooth-Smart-The-Good-The-Bad-The-Ugly-and-The-Fix.pdf
 
-%% TODO: https://media.ccc.de/v/SHA2017-230-hack-a-ble: Lots of info
-
 
 %% TODO hcidump -x -t hci0
 
@@ -253,7 +256,7 @@ L2CAP: Encapsulating data into packets
 
 %% TODO: https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security
 
-%% TODO: REFERENCE: #reference-presentation-btle-sniffing   https://www.usenix.org/conference/woot13/workshop-program/presentation/Ryan  by Mike Ryan
+%% TODO: REFERENCE: #reference-presentation-btle-sniffing
 
 
 %% BTLE Capture the Flag: https://github.com/hackgnar/ble_ctf

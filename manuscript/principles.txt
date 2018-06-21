@@ -68,8 +68,6 @@ There will be a specific chapter on threat modelling
 
 %% .. TODO: details on threat modelling
 
-%% .. TODO hollywood threat
-
 ## Reduce Attack Surface
 
 Attack surface is everything that can be reached from the outside.
