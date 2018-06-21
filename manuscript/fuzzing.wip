@@ -1,0 +1,11 @@
+# Fuzzing
+
+I will experiment with fuzzing using [Fuzzgoat](#reference-fuzzgoat)
+
+%% TODO Fuzzgoat (vulnerable C program): https://github.com/fuzzstati0n/fuzzgoat
+
+%% AFL
+
+%% LibFuzz
+
+%% The command line tool...whatsitsname
