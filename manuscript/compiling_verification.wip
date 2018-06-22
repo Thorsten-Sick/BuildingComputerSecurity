@@ -1,0 +1,13 @@
+# Compiling verification
+
+As the results of mitigation and hardening settings are "invisible" you
+should implement automated tests to verify that the settings worked and have
+not been accidentially switched off.
+
+Checking with a hex editor or disassembler just does not scale.
+
+%% Verify strip
+
+%% PE verification https://github.com/NetSPI/PESecurity
+
+%% Verify on linux
