@@ -75,7 +75,18 @@ Spooftooph->Spoofing + cloning BT devices
 
 .. TODO: Check if LE or classic
 
+Does also change the MAC address.
 
+{lang="bash"}
+    spooftooph -i hci1 -a F4:96:34:11:4F:85 -n FooBar
+    Manufacturer:   Cambridge Silicon Radio (10)
+    Device address: 00:15:83:E8:30:C8
+    New BD address: F4:96:34:11:4F:85
+
+Address changed
+
+
+Will not work with BT devices from all manufacturers !
 
 Btcrack: Crack BT ???
 ~~~~~~~~~~~~~~~~~~~~~

@@ -12,6 +12,13 @@ other tools and code-reviews even if flawfinder gives you green lights.
 
 But it will guide you to areas of your code that are smelly.
 
+Flawfinder has two important modes:
+
+* Finding smelly code that could have vulnerabilities
+* Finding code that handles inputs
+
+## Finding issues
+
 Running flawfinder on [Fuzzgoat](#reference-fuzzgoat) results in this kind of log:
 
 {lang="bash"}
@@ -63,6 +70,45 @@ Running flawfinder on [Fuzzgoat](#reference-fuzzgoat) results in this kind of lo
     Hits/KSLOC@level+ = [0+] 26.9675 [1+] 26.9675 [2+] 26.9675 [3+] 1.10072 [4+] 1.10072 [5+]   0
     Dot directories skipped = 1 (--followdotdir overrides)
     Minimum risk level = 1
+    Not every hit is necessarily a security vulnerability.
+    There may be other security vulnerabilities; review your code!
+    See 'Secure Programming for Linux and Unix HOWTO'
+    (http://www.dwheeler.com/secure-programs) for more information.
+
+
+## Finding inputs
+
+As inputs into a program must be verified, filtered and sanitized it is a
+handy feature of flawfinder to search for code offering inputs.
+
+Use that tool and spend some time writing code to verify the input data.
+
+{language="bash"}
+    flawfinder -I .
+    Flawfinder version 1.31, (C) 2001-2014 David A. Wheeler.
+    Number of rules (primarily dangerous function names) in C/C++ ruleset: 169
+    Examining ./main.c
+    Examining ./fuzzgoatNoVulns.c
+    Examining ./fuzzgoat.c
+    Warning: Skipping directory with initial dot ./.git
+    Examining ./fuzzgoat.h
+
+    FINAL RESULTS:
+
+    ./main.c:142:  [0] (input) fread:
+      Function accepts input from outside program (CWE-20). Make sure input data
+      is filtered, especially if an attacker could manipulate it.
+
+    ANALYSIS SUMMARY:
+
+    Hits = 1
+    Lines analyzed = 2545 in approximately 0.04 seconds (70448 lines/second)
+    Physical Source Lines of Code (SLOC) = 1817
+    Hits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+    Hits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+    Hits/KSLOC@level+ = [0+] 0.550358 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+    Dot directories skipped = 1 (--followdotdir overrides)
+    Minimum risk level = 0
     Not every hit is necessarily a security vulnerability.
     There may be other security vulnerabilities; review your code!
     See 'Secure Programming for Linux and Unix HOWTO'
