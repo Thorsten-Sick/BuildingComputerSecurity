@@ -190,4 +190,8 @@ https://blog.ice9.us/2018/04/stealing-credit-cards-from-fuze-bluetooth.html
 Their problem: For pairing physical access is required. But that is a
 standard use case for credit cards - giving them to strangers for a short time.
 
-.. TODO: More details and takeaways: Is it LE ?
+%% .. TODO: More details and takeaways: Is it LE ?
+
+
+%% Bluetooth security: https://csrc.nist.gov/publications/detail/sp/800-121/rev-1/archive/2012-06-11
+%% https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf

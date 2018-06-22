@@ -22,3 +22,8 @@ If you build your password on runtime with string manipulation commands, the att
 If all your devices have the same password you could have a *class break*: Break one, get access to all of them.
 
 TL;DR: Do at least password based UART protection. Be aware: There is better technology available.
+
+
+%% Bus pirate: http://dangerousprototypes.com/docs/3EEPROM_explorer_board
+
+%% https://blog.attify.com/hack-iot-device/

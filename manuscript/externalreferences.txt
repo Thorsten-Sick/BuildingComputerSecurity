@@ -219,3 +219,13 @@ Take aways:
 ### Fuzzgoat {#reference-fuzzgoat}
 
 Fuzzgoat is a vulnerable C program: https://github.com/fuzzstati0n/fuzzgoat
+
+
+%% TODO: http://opensecuritytraining.info/Training.html
+
+%% TODO: CTF: https://apsdehal.in/awesome-ctf/
+
+%% Vulnerable Web Applications:  https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project.
+
+
+%% Hardsploit: https://hardsploit.io/
