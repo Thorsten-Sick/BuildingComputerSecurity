@@ -1,0 +1,69 @@
+Web security
+============
+
+.. State: 10 % Web
+
+SRI
+---
+
+
+.. TODO: test it
+
+Oneliner: curl -s [url]|sha256sum|xxd -r -p|base64
+
+Standard attacks on browsers
+----------------------------
+
+.. TODO: Write about it
+
+Beef
+~~~~
+
+.. TODO: Write about it
+
+
+Standard attacks on web sites
+-----------------------------
+
+.. TODO: Write about it
+
+Burp
+~~~~
+
+.. TODO: Write about it
+
+Th3inspector
+~~~~~~~~~~~~
+
+https://github.com/Moham3dRiahi/Th3inspector
+
+.. TODO: Check it out
+
+Snallygaster
+~~~~~~~~~~~~
+
+Scanning web sites for secret files
+
+https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-Secrets-on-Web-Servers.html
+
+* git
+* dump.sql
+* xaa
+* private keys
+* coredumps
+
+CTFR
+~~~~
+
+Use CT logs to get web site sub domains
+
+https://github.com/UnaPibaGeek/ctfr
+
+Od1N
+~~~~
+
+Automated attacks on web packages
+
+https://github.com/CoolerVoid/0d1n
+
+.. TODO: Test

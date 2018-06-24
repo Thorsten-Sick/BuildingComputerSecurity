@@ -1,0 +1,11 @@
+Thread
+======
+
+IP enabled Mesh protocol. Good for home automations, no/low market penetration yet.
+
+Commissioning
+-------------
+
+* Secret key: short install codes, unique per device, uses J-PAKE, DTLS
+
+.. TODO: Verify and research
