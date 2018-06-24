@@ -60,6 +60,10 @@ There are currently two major ways to manage that.
 1. Docker (for Linux based building)
 2. Vagrant (for more flexible builds)
 
+Besides those two there are even more complex Continuous Integration
+technologies (CI). IF your team already uses those: Congratulations.
+
+
 ## Use Docker
 
 Docker is a container system for Linux. If you develop on Linux and create
@@ -69,6 +73,8 @@ Thanks to Docker you can create a container that you can transfer between differ
 build machines. The installed tools and libraries will always have the same
 version number - reducing bugs that just happen on one machines and creating
 a stable build experience.
+
+%% TODO: Extra docker details
 
 ## Use Vagrant
 
@@ -142,7 +148,7 @@ during development of anything strange in your code.
 
 * use *-Wall*. This will switch on many warnings, but not everything.
 * use *-Wextra* for even more tests than by -Wall
-* printf format checks: gcc -Wformat -Wformat-security -Werror=format-security
+* printf format checks: *gcc -Wformat -Wformat-security -Werror=format-security*
 * gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time (https://access.redhat.com/blogs/766093/posts/1976213)
 * Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
@@ -184,7 +190,7 @@ Code: https://github.com/danmar/cppcheck
 
 On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui).
 Also: There seems to be a bug. Packages do not properly install the config files.
-Get the current folder witht he config files from the repo.
+Get the current folder with the config files from the repo.
 
 %% TODO: More hands on examples for CppCheck
 
@@ -210,7 +216,7 @@ switch - you should do it anyway. Just do not get false sense of security.
 See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.debian.org/Hardening
 
 * stack protector: *-fstack-protector-all* (=all functions protected)
-* stack protector (since gcc 4.9, replaces the old one): *-fstack-protector-strong* (+= local array definitions)
+* stack protector (since gcc 4.9, replaces the old one): *-fstack-protector-strong* (adds local array definitions)
 * Macros replace some risky functions (memcpy, ...) and check the parameters: *-D_FORTIFY_SOURCE=2*
   * more aggressive run time checks. Can modify runtime behaviour.
 * position independent executable: *gcc -pie -fPIE*
