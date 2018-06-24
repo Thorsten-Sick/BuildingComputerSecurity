@@ -3,7 +3,6 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
-%% Phishtank https://www.phishtank.com/
 
 ## July 2018
 
