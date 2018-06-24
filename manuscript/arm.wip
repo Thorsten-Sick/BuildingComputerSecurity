@@ -1,0 +1,62 @@
+Arm
+===
+
+.. State: 10 % Arm
+
+Arm specific knowledge (which is IoT relevant). Some things may be specific for TI TM4C129E eval boards.
+
+
+Compiling
+---------
+
+Compile::
+
+	arm-none-eabi-gcc -g -nostartfiles -mcpu=cortex-m4 -mthumb -I/usr/lib/arm-none-eabi/include -I/media/sf_work/to_linux/TivaWare_C_Series-2.1.2.111/ -L/usr/lib/arm-none-eabi/newlib -L/media/sf_work/to_linux/TivaWare_C_Series-2.1.2.111/driverlib/gcc -T "blinky.ld" -o blinky.elf blinky.c startup_gcc.c -ldriver
+
+
+Convert::
+
+	arm-none-eabi-objcopy -O binary  blinky_test.elf blinky_test.bin
+
+Transfer::
+
+	sudo lm4flash -s 0F800A4E  -v   blinky_test_blinkt.bin
+
+0F800A4E is the ID of the board. lmm4flash will extract it.
+
+Debugging
+---------
+
+Installing::
+
+    sudo apt install gdb-arm-none-eabi openocd
+
+    For Ubuntu 18.04 for GDB:
+    sudo apt install gdb-multiarch
+
+    (which will NOT install the arm-none-eabi-gdbm, but other stuff)
+
+Long story short: With modern systems you do not need a specific gdb anymore. just *gdb* works.
+
+More info:
+
+OpenOCD: http://openocd.org/doc/html/index.html
+
+Config can look like:
+"""
+source [find interface/ti-icdi.cfg]
+source [find board/ek-tm4c1294xl.cfg]
+"""
+
+Basic dance::
+
+    openocd -f openocd.cfg
+    arm-none-eabi-gdb example.elf
+    > target remote localhost:3333
+    > monitor reset halt
+    > load
+    > continue
+
+.. TODO: Enhance DEbugging
+
+.. TODO: Check Shellcode

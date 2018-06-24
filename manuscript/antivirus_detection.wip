@@ -1,0 +1,173 @@
+Detection
+#########
+
+.. State: 30 % Detection
+
+Detection and filtering are bolt-on-security. It can be added to any existing system.
+
+
+Pro
+---
+
+* Simple to add on top
+* With bought signatures: Can filter the outer perimeter for common attacks
+* Own signatures in the innermost layer identify when other security features did break
+* Fast response (within minutes) - can cover the gap untill a patch is rolled out
+
+Con
+---
+
+* Fast Flux beats IP filtering
+* It is a statistics game. Do not expect perfect security
+* Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
+* If file processing is not sandboxed: Not good
+* If file processing is done in kernel: Double plus not good
+
+Tips
+----
+
+* Double Tap: Use two different technologies to detect one malware
+* Malware behaviour does not change often. Behaviour detection can stay stable for months
+* Malware hash chances constantly. Only do this if fully automated
+* Detection patterns will be ok for minutes or hours
+* Structural generics will be ok for hours
+* Bad guys have their own "VirusTotal" malware scanner to create their malware FUD (FullyUnDetected)
+** Malware authors even offer support contracts for updates should the malwar be detected
+** This update-test-release cycle is at least semi automatic
+** Detection technology that is not accessible for the bad guys lasts a lot longer (smaller "AVs" benefit - create you own in house AV ?)
+* Do not send feedback to the attack ("Your mail has been blocked"). Maybe postpone feedback for one day. That way the attacker can not tune the attack to your defense
+
+There is a statistics trick how to boost the combination of different detection technologies.
+To get a good combination combine several _different_ technolgies together.
+
+I will be using simple numbers to make a point now:
+Lets assume we have three different scanners each having 90% detection (a bad detection quality).
+Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second scanner.
+1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technolgies. Or the same samples
+not detected by number one will also not be detected by number 2....
+
+Choosing technology
+-------------------
+
+You can pick any AV of the top 5 in the tests. Basically you will pick the one that has
+
+* Low resource requirements
+* Stability
+* Good self protection (security)
+* Simple UI
+* Maybe remote managability (for companies)
+* Supports your mail system, web proxy, ....
+* Check for False Positives as well in those tests
+
+It could also be important to check for privacy commitment. F-Secure has some detailed ones, for example:
+
+https://www.f-secure.com/en/web/legal/principles
+
+Numbers
+~~~~~~~
+
+In tests yous should aim for a detection rating north of 95 %, a False Positive Rating south of 0.05 %.
+For False Positives (detection on innocent files): If you have a well maintained
+system with only basic and boring files a higher FP rating will also work for you.
+If you have a heterogenious landscape, many computers, fancy extraordinard tools:
+Aim for a lower FP rating.
+
+Test institutions
+~~~~~~~~~~~~~~~~~
+
+Those insitutions are the source for magazine articles.
+
+Virus Bulletin:
+https://www.virusbulletin.com/testing/vb100/
+
+Main challenge is stability and low FP rate here.
+
+Av-test:
+https://www.av-test.org/de/antivirus/
+
+Also includes usability and speed
+
+Av-comparatives:
+https://www.av-comparatives.org/dynamic-tests/
+
+Has monthly real-world detection tests
+
+Test methods
+~~~~~~~~~~~~
+
+There are two major ways of testing security products:
+
+Mass scans:
+
+The old way. A large batch of malware is scanned. Percentage of detection is the result.
+Problem here:
+
+* Not all detection technology is tested. Especially behaviour detection is not used on static scans
+* Many samples will be weeks or months old in this set. Current malware is under-represented
+
+Real-world-tests:
+
+A VM set prepared and a script surfs to an infected page. The whole product can now prevent infection of the system.
+
+This has it's own challenges for the testers.
+
+* Good: The whole product is tested
+* Bad: It is hard to simulate the exact infection vector of the malware
+* Bad: Testers have a small time window to test all the products against a specific malware attack (before the attack is taken down)
+* Bad: Hard to reproduce
+* Bad: Only small sample set because it is so complex
+
+As for which test to trust: Go for Real-world tests. As soon as you have the
+product test your specific entry points for malware with Eicar test file or
+simulated malicious URLs. If the products properly cover those.
+
+DIY detection
+-------------
+
+There are different tools to detect malware. Normally you do have some internal
+knowledge covering which apps are malicious and which benign. For more on
+that see the "DIY classification" chapter. Detection is how you get this knowledge
+from your lab to the computer you want to protect.
+
+Hashes
+~~~~~~
+
+The simplest and most reliable way is file hashes. The good thing: If your
+classification is correct they will not add FPs on their own. The bad news:
+They will not detect much as malware is normally polymorphic. But if you can
+create them by a script "for free" and without effort: Use them in addition
+to better tools.
+
+Important: CRC32, MD5 and SHA1 are dead.
+Use Sha256 instead. If you feel fancy look at SSDeep
+
+    Optional background: With the large number of files currently released it is
+    even possible to have accidential MD5 collissions. Result will be two totally
+    different files with the same MD5. And this will fuck up your DB if it is MD5 based.
+
+Yara
+~~~~
+
+The tool to create your own file detection is Yara. A tutorial can be found here:
+
+https://www.real0day.com/hacking-tutorials/yara
+
+Yara combines logic and (regex) patterns into a quite simple config language.
+
+
+SNORT
+~~~~~
+
+To detect network packages
+
+https://www.snort.org/
+
+
+DIY classification
+------------------
+
+You have an unknown sample and want to learn if it is malicious. This is the step
+you normally do _before_ you do detection.
+
+.. TODO Cuckoo / malwr.com
+.. TODO virustotal
