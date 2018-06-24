@@ -1,0 +1,93 @@
+# Antivirus Integration {#chapter-antivirus-integration}
+
+Anti Virus technology can be integrated into your program without adding much
+extra code.
+
+If your program handles scripts and files from external sources it may be worth
+the effort.
+
+## Audience
+
+Architects, developer
+
+## What to scan
+
+* Any kind of URLs before handling them
+* Files from external sources
+* Files extracted from archives
+    * In addition to sending the full archive to be scanned
+    * Especially if the archive was password protected
+* Scripts from external sources
+
+When data is identified as malicious, you should do:
+
+1. Stop executing it
+2. Mark as "potential malicious"
+3. Notify the user
+4. Give the user a "Don't Panic" message and an option to pull it out of quarantine
+
+As in some cases you do not really know which kind of scanner did report your
+data as malicious you should have somewhere - deep down in our settings - the
+option to de-activate the scanning.
+
+For example AMSI is offering a interface to the currently installed virus
+scanner. And this software could be some old version of a discontinued s***ty
+virus scanner.
+
+## AMSI
+
+It is a Windows API where programs can contact the local virus scanner and
+request a scan.
+The interface is very simple - it would even love some additional features.
+
+It can scan a string or buffer and return a flag if it was malicious or not.
+
+That's it. Simple.
+
+I would love the AMSI 2.0 to also offer:
+
+* Get the brand/vendor of the attached scanner
+* Get the version of the attached scanner
+* When was the last time it was updated ?
+* Get the name of the malware that was detected (for display reasons)
+
+But that is missing.
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
+
+If your program handles archives, scan them twice:
+
+1. The full archive
+2. Every single contained file while extracting
+
+The reason for that:
+
+* The full archive in case the malware is split into several files. So the scanner can build up the context graph.
+* The single files: If the archive is password protected it is possible that the scanner was not able to handle it. But after you extracted the files, everthing is fine.
+
+You can test your implementation with the [EICAR](#chapter-eicar) test malware.
+
+Keep in mind: Not all the Antivirus scanners connect to the AMSI interface.
+Maybe you had bad luck and the one on your development PC just is not connected.
+
+## Google Safe Browsing
+
+Google offers a service to verify if a url is malicious. The servicec can be
+found here: https://developers.google.com/safe-browsing/
+
+It offers two ways to access the data. One is simple, the other one privacy
+respecting.
+
+You should scan at least the URLs that are followed. Maybe even the URLs
+contained in a document. If there is one URL in there that is malicious, the
+whole document could be dangerous.
+
+Like a interactive text document with a script that contains the url to a
+malware server. This would very likely be a downloader - one of the steps
+between *exploit* and *infection*.
+
+To test your implementation, you can use this test url:
+
+http://malware.testing.google.test/testing/malware/
+
+A reference implementation of GSB can be found here: https://github.com/google/safebrowsing

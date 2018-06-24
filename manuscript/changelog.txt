@@ -3,15 +3,17 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
+%% Phishtank https://www.phishtank.com/
+
 ## July 2018
 
 * Added *attacker's goals*
 * Added *antivirus-tests*
+* Added *antivirus-integration*
 %% Cryptoalgorithms
 %% Fuzzing
 %% Extend defensive programming / compiling
-%% url BLACKLISTS
-%% antivirus API AMSI: https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
+
 
 ## June 2018
 

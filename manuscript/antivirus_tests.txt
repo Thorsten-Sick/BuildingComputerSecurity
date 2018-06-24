@@ -74,7 +74,7 @@ malware samples could have broken them: not detecting them is the right thing.
 
 Be careful when you se DIY malware tests and always verify.
 
-## Eicar
+## Eicar {#chapter-eicar}
 
 What you can and should tests is if you antivirus is properly attached to your
 system.

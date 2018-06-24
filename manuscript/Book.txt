@@ -11,6 +11,7 @@ ux.txt
 updates.txt
 passwords.txt
 antivirus_tests.txt
+antivirus_integration.txt
 tls.txt
 cryptoalgorithms.txt
 externalreferences.txt
