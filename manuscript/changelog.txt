@@ -3,6 +3,12 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
+%% July
+
+%% Flawfinder
+%% Cryptoalgorithms
+
+
 ## June 2018
 
 * Added *TLS chapter*
@@ -11,6 +17,7 @@ changelog to make it simpler for you to find the new sections.
 * Added basic *compiling*
 * Improved *external references*
 * Extended *update*
+* Added flawfinder chapter
 
 %% TODO GCC features more details
 

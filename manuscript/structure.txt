@@ -1,4 +1,4 @@
-# Structure of this book
+# Structure of this book {#chapter-structure}
 
 This book is meant to be read twice. First by cherry picking interesting
 topics. A second time as toolbox when implementing a feature.

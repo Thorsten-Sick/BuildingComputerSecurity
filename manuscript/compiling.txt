@@ -1,4 +1,4 @@
-# Compiling
+# Compiling {#chapter-compiling}
 
 There are several ways to improve security at the compiling step. This ranges from
 static code analysis, dynamic code analysis to mitigation.
@@ -168,6 +168,8 @@ A classic tool for Code analysis (C). Works out of the box and is a simple entry
 As simple as Splint. Run it in your directory and it will point out risky
 regions of your code. As it is a "grep on speed" it will have it's limits. But
 use it and fix all bugs it finds before going to the next level.
+
+[Flawfinder has an own chapter](#chapter-flawfinder)
 
 ### Special tool: CPPCheck
 

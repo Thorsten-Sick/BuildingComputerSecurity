@@ -5,6 +5,7 @@ knowyourenemies.txt
 principles.txt
 defensiveprogramming.txt
 compiling.txt
+flawfinder.txt
 ux.txt
 updates.txt
 passwords.txt

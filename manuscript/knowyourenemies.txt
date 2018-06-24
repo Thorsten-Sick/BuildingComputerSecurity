@@ -1,4 +1,4 @@
-# Basics: Know your attackers
+# Basics: Know your attackers {#chapter-attackers}
 
 Attackers come in several flavours and can be enemies or friendly.
 

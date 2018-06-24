@@ -1,4 +1,4 @@
-# The author
+# The author {#chapter-the-author}
 
 Trouble shooter and one-man-team somehow happend to be my role quite often.
 I am a software developer and engineer who also took the role of architect/project manager in many

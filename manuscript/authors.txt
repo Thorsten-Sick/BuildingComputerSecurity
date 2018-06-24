@@ -1,4 +1,4 @@
-# Authors
+# Authors {#chapter-authors}
 
 My goal is to write an anthology.
 Contributions from experts in their fields are welcome. Everyone contributing a

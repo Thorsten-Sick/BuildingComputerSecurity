@@ -1,4 +1,4 @@
-# This book
+# This book {#chapter-this-book}
 
 ## Goals
 
