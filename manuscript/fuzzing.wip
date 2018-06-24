@@ -6,6 +6,98 @@ I will experiment with fuzzing using [Fuzzgoat](#reference-fuzzgoat)
 
 %% AFL
 
-%% LibFuzz
-
 %% The command line tool...whatsitsname
+
+%% .. State: 50 % Fuzzing
+
+Fuzzing is bombarding code with broken data until it breaks. All kind of APIs
+and other interfaces (command line, network, files, ...) are targets.
+
+There are several fuzzers, from simple generators to coverage based like libfuzz and AFL.
+All of them have advantages and disadvantages.
+
+## Fuzzing third party programs and libaries
+
+Especially with an OS involved there are pre-installed servers and clients
+communicating. Also tons of liberaries. DHCP for example. Fuzz those as well.
+
+Some basics for fuzzing.
+
+## Generating data
+
+There are several ways to generate fuzzing-data. Even simple ones are a good start:
+
+* Simple random data
+* Random but sticking to a structure
+* permutate existing data
+* coverage based (see AFL)
+
+If you do not want to code that yourself, you can use some data generator like
+Radamsa to do that for you: https://github.com/aoh/radamsa
+
+%% .. TODO: Test Radamsa
+
+## Detecting bugs
+
+Be prepared to find different kind of bugs and detect them
+
+* Crashes
+* unresponsivenes
+* loops / log storms, ...
+* memory issues
+
+## Attaching the fuzzer
+
+There are different positions where you can attach the fuzzer:
+
+* File level
+* Command line fuzzing
+* network package fuzzing
+* simulated interfaces
+* at the library (libfuzz)
+
+## Tips
+
+* Fix found bugs ASAP, so your fuzzer can dig deeper
+* Create valid checksums in your random data
+* Be aware which sub-components are tested and start small scale, extend scope step by step
+* parallelize
+* Make parts of your tools (at least) Linux compatible. You can fuzz these parts with libfuzz
+* If you have hardware specific code in your system: Mock it away or abstract it, create dummy code, ... get your code to run on Linux
+
+%% .. TODO: Detailed fuzzing
+
+Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/master/doc/README.md)::
+
+    import socket
+    import os
+
+    UDP_IP = "192.168.100.151"
+    UDP_PORT = 53
+
+    sock = socket.socket(socket.AF_INET,
+                     socket.SOCK_DGRAM)
+                     sock.bind((UDP_IP, UDP_PORT))
+
+    while True:
+        data, addr = sock.recvfrom(1024)
+        packet = str(data[0]) + str(data[1]) + b"\x81\x80" + os.urandom(128)
+        sock.sendto(packet, addr)
+
+%% .. TODO: DHCP fuzzer
+
+%% .. TODO: AFL: https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/
+
+## LibFuzz
+
+The most effective way if you have access to the API and code. It is part of Clang 6.0+.
+You may notice: Ubuntu 17.10 at least does not have this Clang installed yet. So you will
+want to install a Clang 6.0 from a PPA.
+
+https://llvm.org/docs/LibFuzzer.html
+
+LibFuzzer supports a Corpus for Input and Output samples to test with. This improves speed a lot.
+
+%% .. TODO: more libfuzz
+
+%% .. TODO: Angora fuzzing (no code released yet): https://arxiv.org/abs/1803.01307

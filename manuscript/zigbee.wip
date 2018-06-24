@@ -9,3 +9,29 @@ https://www.safaribooksonline.com/library/view/iot-penetration-testing/978178728
     Hardware: Atmel RzRaven USB Stick flashed with KillerBee firmware
 
 https://github.com/riverloopsec/killerbee.
+
+ZigBee
+======
+
+.. Status: 5 % ZigBee
+
+Same same but different
+
+Commissioning
+-------------
+
+* ZigBee Home automation: Permissive , uses fixed key. Broken
+* ZigBee v 3.0: Unique shared key "install codes" - pre share
+* ZigBee Light Link (ZLL): Permissive, uses RSSI / proximity window
+* ZigBee Smart Energy: Unique shared secrets / install codes per device
+
+.. TODO: Verify and research
+
+From "Practical Internet of Things Security 5.3": Zigbee can encrypt between
+nodes or network wide. Direct encryption between nodes would be cool,
+but needs resources.
+
+Exploits
+--------
+
+https://www.blackhat.com/docs/us-15/materials/us-15-Zillner-ZigBee-Exploited-The-Good-The-Bad-And-The-Ugly.pdf
