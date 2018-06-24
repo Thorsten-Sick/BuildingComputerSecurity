@@ -79,7 +79,7 @@ Modern malware is modular and can be deployed with several of these attack modul
 The Command and Control interfaces of the malware are shipped with statistics dashboard where
 attackers can decide what kind of module will currently have the best ROI.
 
-%% TODO: Nation states
+%% TODO: Nation states: NSA and angry birds
 
 %% TODO: In house attackers "Innentäter"
 

@@ -30,5 +30,6 @@ Now I am moving towards the embedded and IoT world with my new job.
 
 And doing so I started to sort my knowledge and experience. Resulting in this book.
 
+%% TODO: Add links to the achievements above
 
 **Thorsten Sick**

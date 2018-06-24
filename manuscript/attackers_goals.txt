@@ -1,0 +1,147 @@
+# Attacker's goals {#chapter-attackers-goals}
+
+Attackers have goals they want to achieve. Many of them are linked to *making money*.
+In those cases there are some specific things to be aware of:
+
+* Very often the damage to the victim is larger than the gain of the attacker
+* The attacker automates the attacks and aims for high numbers of victims
+    * several hundred thousand or millions of victims is possible or even common
+    * gain per victim can be in the $1-5 range. But with the big number of victims results for the attacker are still hughe
+* Attackers can sit in countries with good infrastructure, good computer science education and no well paid it jobs.
+    * Even if the money the "earn" by the attack does not sound a lot to you - for them it is
+    * According tho their local living standards they will be rich after a modestly successfull attack
+
+An attack (let's say *malware*) can have several goals. Malware is modular and
+different attack modules can be downloaded by the attacker sitting and the
+command console of the malware.
+
+Stolen cfredentials (passwords, accounts, credit card numbers) are shared as bulk on the black market.
+Offers like "1000 unverified credit card numbers for $X" are the result.
+
+Another criminal will pay for those numbers and check if the numbers are valid and working and retrieve the cash.
+
+## Ransomware
+
+Ransomware has a direct and obvious way to generate money for the criminals. Files are taken
+hostage by encrpting them forcing the user to pay to get the decryption key.
+
+Protection would be to do **regular backups**.
+
+## Mining
+
+Mining malware generates crypto currencies by running mining tools on the victim's computer. As the energy
+and processing power is stolen that way the take away of this can be significant - or minor, if the
+criminal did not estimate the cloud processing power his botnet would generate.
+
+Protection is detecting processes sucking up processing power. **Monitor system behaviour for anomalies**
+
+## Credential stealing
+
+A common module for malware is Pony aka Fareit. It extracts passwords from
+browser - stealing generic account data and from FTP clients.
+
+The FTP credentials are very often accounts used for maintaining web pages.
+Those are valuable to later hack those web pages and add exploits for attacks
+on new victims.
+
+%% TODO: Add link to pony description
+
+There is also the component Mimikatz (https://github.com/gentilkiwi/mimikatz).
+It is able to extraxt thoe credentials from memory.
+
+Technologies to reduce the impact of those attacks would be:
+
+* Always store data encrypted
+* overwrite memory containing those credentials ASAP
+* monitor access to those db files
+* protect against malware infections
+
+None of these is perfect.
+If a computer is infected by a running malware, the game is over.
+
+## Injecting advertising
+
+Advertising is a crazy market with lots of actors. Some of the Ad companies do
+not validate the Ads they are circulating to be shown in browsers. That way
+they spread malicious ads that infect computers - this practice is named *malvertizing*.
+
+In this grey market malware intercepts web requests to replace them to Ads that
+are affiliated to the attacker.
+
+Going for peanuts. But heaps of peanuts.
+
+Protection would be to **block Ads** in the browser, **protect the router**
+and **encrypt network connections**.
+
+## Banking
+
+Attackers can either infect you PC or your router (with a malware called
+DNSChanger) to intercept and modify your banking transactions.
+
+If you are running any kind of banking or money-oriented web service, your
+countermeasures should include:
+
+* **End to end encryption with authentication (TLS)**
+* **Two factor authentication** (SMS, special crypto tokens, ...)
+    * The last one is not perfect, especially if the mobile phone is used for online banking *and* as the second factor.
+
+## Wiping
+
+There are attacks covering as Ransomware - but without any hope of getting the
+data back. Those are called "Wipers". Either the criminals failed and
+implementing the crypto part properly or they are not interested in the ransom
+but want to invoke mayhem.
+
+One more reason to wipe the system as part of an attack is to hide evidence.
+The cover story of a "normal" ransomware attack is convenient.
+
+Protection is **backups**
+
+## Sending SPAM
+
+Still a goal of malware authors is to use the aquired botnet to send out SPAM.
+The reasons they need a cluster of hacked computers are:
+
+* They need the bandwidth for millions of SPAMs
+* machines sending SPAM get blacklisted at central lists. The criminals have to rotate those machines
+    * *If your mails end up as SPAM quite often, check if you are blacklisted somewhere*
+
+Protection is to **monitor (firewall) outbound traffic**
+
+## DDOS for hire
+
+Hacked machines are used to DDOS web servers and services. Those server's
+owners are blackmailed to pay the attacker to stop the attacks.
+The computers being part of the DDOS botnet are victims and attackers at the
+same time.
+
+Protection is to **monitor (firewall) outbound traffic**
+
+## Proxy for further attacks
+
+The hacked computer system can be used as a proxy to hide the attacker
+doing further attacks on other systems. If those 3rd parties notice the attack
+they can not trace the connection back to the attacker. On a network level it
+looks like the attack originated from the proxy.
+
+Those would get blacklisted or sued.
+
+Protection is **network monitoring**. Also of outbound traffic.
+
+## Persistence
+
+A part of the attack is to achieve persistence. This is: The attack tool even
+survives a system reboot or even some kind of cleanup.
+
+This is not necessary for an attack, some just accept that after a reboot they
+either lose the infected system from their botnet or hope for a re-infection
+through the channels that worked the first time.
+
+For the defender the persistence part is relevant because they can **check at
+well known parts of the system** for traces of the malware.
+
+* autostarted programs
+* boot record
+* registry keys
+
+%% TODO Ask Stefan for typical persistence tricks. Maybe write a chapter.

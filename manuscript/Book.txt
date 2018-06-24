@@ -2,6 +2,7 @@ theauthor.txt
 thisbook.txt
 structure.txt
 knowyourenemies.txt
+attackers_goals.txt
 principles.txt
 defensiveprogramming.txt
 compiling.txt

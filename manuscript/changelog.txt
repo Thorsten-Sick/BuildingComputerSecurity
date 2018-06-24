@@ -3,10 +3,13 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
-%% July
+## July 2018
 
-%% Flawfinder
+* Added *attacker's goals*
+
 %% Cryptoalgorithms
+%% Fuzzing
+%% Extend defensive programming / compiling
 
 
 ## June 2018
