@@ -3,9 +3,9 @@
 TLS is the name of the newer versions of the SSL protocol. HTTPS is HTTP over TLS, a common use case.
 But TLS can be used to secure all kinds of connections.
 
-By using TLS you get **authencity**, **integrity** and **confidentiality** and you really want those.
+By using TLS you get **authenticity**, **integrity** and **confidentiality** and you really want those.
 
-**authencity** is identifying the other communication partner. Especially the web server out there. By checking that
+**authenticity** is identifying the other communication partner. Especially the web server out there. By checking that
 it protects against MITM attacks and DNS spoofing attacks.
 
 **integrity** is protection against modification of the data in transit. For example replacing the receiver of a
@@ -16,7 +16,7 @@ large money transfer.
 What you do not get is the hiding of the identity of the communication partners. For that you would need TOR or
 similar technology.
 
-TLS is a protocol that defines how computers negotiate their encrption settings and do the encryption afterwards.
+TLS is a protocol that defines how computers negotiate their encryption settings and do the encryption afterwards.
 By TLS the client (browser or similar) and the server (web server) negotiate their features and choose
 the best of the available options.
 The options are different combinations of algorithms and their settings.
@@ -62,7 +62,7 @@ with the current CA system even if it is not perfect.
 The project *Certificate Transparency* wants to fix this (see below).
 You can add CT on top of the classic CA system.
 
-**Let's Encrypt** is a new initiative whith a set of tools and infrastructure
+**Let's Encrypt** is a new initiative with a set of tools and infrastructure
 where everyone can get themselves a certificate within minutes and for free.
 Those are just not EV certificates.
 
@@ -74,7 +74,7 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 %% TODO Add Let's Encrypt chapter
 
-%% TODO Verify certificate (hostname !)
+%% TODO Verify certificate (host name !)
 
 ## Revocation (OCSP = Online Certificate Status Protocol)
 
@@ -128,7 +128,7 @@ Monitor the configuration of your servers regularly
 HTTP servers can send a special header promising to *always* encrypt and prevent
 downgrade attacks down to HTTP that way. The browser will store that fact that
 there is TLS every time after the first connection and is now immunized against
-MITM attacks. It will always replace *http* urls with *https* ones and handle
+MITM attacks. It will always replace *HTTP* URLs with *HTTPS* ones and handle
 encryption failures as hard errors.
 
 %% TODO: Add header code: Strict-Transport-Security: max-age=31536000

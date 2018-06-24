@@ -11,7 +11,7 @@ Chapters contain:
 
 1. Short abstract of the topic
 2. Audience
-3. Todo list (low hanging fruit)
+3. TODO list (low hanging fruit)
 4. Not-todo list (typical mistakes)
 5. In detailed description of the technology
 6. Details on how this technology can be attacked
@@ -26,7 +26,7 @@ if necessary I will break the rules.
 ## Project phases and audience
 
 A project has different phases. Depending on your institution different
-people could be reponsible for each phase. Everyone can contribute to security.
+people could be responsible for each phase. Everyone can contribute to security.
 And security will break at the weakest link.
 
 If possible I will put the responsible job description into the *Audience*

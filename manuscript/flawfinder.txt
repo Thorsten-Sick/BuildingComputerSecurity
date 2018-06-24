@@ -24,7 +24,7 @@ Running flawfinder on [Fuzzgoat](#reference-fuzzgoat) results in this kind of lo
 {lang="bash"}
     flawfinder .
     Flawfinder version 1.31, (C) 2001-2014 David A. Wheeler.
-    Number of rules (primarily dangerous function names) in C/C++ ruleset: 169
+    Number of rules (primarily dangerous function names) in C/C++ rule set: 169
     Examining ./main.c
     Examining ./fuzzgoatNoVulns.c
     Examining ./fuzzgoat.c

@@ -46,13 +46,13 @@ For emails panic subjects are common. Just check your spam folder for invoices,
 "urgent" and similar.
 
 Maybe it does not work on an average person. But if the timing is bad - the person
-is expecting somthing like that and it was a long day - everyone could be exploited.
+is expecting something like that and it was a long day - everyone could be exploited.
 
 There is also technology for more advanced attacks:
 
 * Waterhole attack: A web page where a specific kind of people normally meet is "mined"
-* Phising: General targeting for credentials. Can be Social Engineering plus malware as attack vector
-* Spear Phising: First invest time to know the target and have a more convincing message
+* Phishing: General targeting for credentials. Can be Social Engineering plus malware as attack vector
+* Spear Phishing: First invest time to know the target and have a more convincing message
 * Whaling: Target the "big fish". Lots of prior time invested
 * Browser exploits like BEEF also have lots of convincing tools for UI modification
 
@@ -80,7 +80,7 @@ Lock the system down. If access is missing the user will notice and can open up
 the specific access later. While if there is an attack and the attacker gets
 access to an opened system the user will not notice until it damage is done.
 
-This said: Create a simple way for the user to granulary get the extended permissions and things done.
+This said: Create a simple way for the user to granular get the extended permissions and things done.
 
 ### Prevent warning fatigue
 
@@ -116,9 +116,9 @@ want this info when they are faced with a help request
 
 ### Stop the user's momentum
 
-A users wants to achieve a goal (like: visit this porn site). Any ux indicator
+A users wants to achieve a goal (like: visit this porn site). Any UX indicator
 stopping the user will have to stop the user long enough so that the neurons
-for more complex decission making can boot up. If you just show a simple
+for more complex decision making can boot up. If you just show a simple
 block page here it will be dismissed as "False Positive" and clicked away. The
 user will be infected.
 
@@ -141,8 +141,8 @@ UI, Logos and things in there. Be aware of that.
 
 ### Not deciding is the secure option
 
-Faced with a hard decission users can decide not-to-decide. If you dialog box
-has "Ok" and "Cancel" buttons the users will close the box bx the "X"....
+Faced with a hard decision users can decide not-to-decide. If you dialog box
+has "OK" and "Cancel" buttons the users will close the box bx the "X"....
 
 This should lead to the secure default.
 
@@ -155,7 +155,7 @@ This happened to the browser developers because the situation changed during
 the last years.
 The lock icon next to the URL bar always indicated "The connection is secure".
 But as users started to understand this icon as "This page is secure" malware started
-to encrypt the connction. So users would see the lock and assumed the page is ok.
+to encrypt the connection. So users would see the lock and assumed the page is OK.
 This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page,
 one for the connection). Or start indicating differently (red bar for
 unencrypted connections). While a malware attack will be blocked hard with the

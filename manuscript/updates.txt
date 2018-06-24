@@ -8,7 +8,7 @@ updates.
 ## Todo
 
 * Be able to rollback
-* Verifiy signature
+* Verify signature
 * Secure key handling
 * Verify version - only upgrade
 * Track distribution
@@ -64,7 +64,7 @@ Be able to roll back your changes either automatically or by user interaction if
 User interaction could be "press the reset button for 10 seconds". Rollback could be to factory system or last-know-good software state.
 This will reduce your stress when doing emergency updates.
 
-### Verifiy signature
+### Verify signature
 
 Cryptographically sign your binaries (**public key cryptography** is the keyword).
 
@@ -122,8 +122,8 @@ You could use a CDN for your updates. To further reduce load update in stages:
 
 As you have your files signed, an option to be protected against DDOS-es vs. your
 update infrastructure would be to also have a fallback to a peer-to-peer network
-(bittorrent). Some bigger software applications (games) use bittorrent.
-Do not makte that the only source ! Because bittorrent could be blocked in
+(BitTorrent). Some bigger software applications (games) use BitTorrent.
+Do not make that the only source ! Because BitTorrent could be blocked in
 some environments like companies. Also do not waste the users bandwidth
 without asking. Could be expensive for some of them if they are connected
 using a mobile network.
@@ -133,7 +133,7 @@ using a mobile network.
 ## Compress updates
 
 Compressing updates reduces stress on your update servers and makes them more
-resilient agains DDOS attacks. Test common algorithms with your update files.
+resilient against DDOS attacks. Test common algorithms with your update files.
 The algorithms have different strengths and weaknesses. Also: De-compressing
 is very often much faster than compressing. And this is what your clients are doing.
 

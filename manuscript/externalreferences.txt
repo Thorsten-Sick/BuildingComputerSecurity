@@ -1,4 +1,4 @@
-# External references and ressources
+# External references and resources
 
 ### Hacking Tamagotchis {#reference-tamagotchi}
 
@@ -8,7 +8,7 @@ Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 
 [Even More Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)
 
-### Disassember tools {#reference-disassembler-tools}
+### Disassembler tools {#reference-disassembler-tools}
 
 * [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
 * [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
@@ -18,14 +18,14 @@ Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
 
 Practical Internet of Things Security by Drew Van Duren, Brian Russell
 
-A very methodic book covering
+A very methodical book covering
 
 * Threat modelling
 * Design
-* Lifecycle
+* Life cycle
 * Basic Cryptography
 * Authentication/Authorization
-* Complicance monitoring
+* Compliance monitoring
 * IoT Incidence Response
 
 A good overview.
@@ -50,7 +50,7 @@ This book will improve your software quality and security.
 
 Security Engineering by	Ross J. Anderson
 
-A book more focussed on Designers/Architects. Lots of chapters with specific topics.
+A book more focused on Designers/Architects. Lots of chapters with specific topics.
 Some may not be relevant for you. But as the book is very good you either soldier on or you
 cherry pick interesting chapters. No matter what of those you are doing: Read it.
 
@@ -62,7 +62,7 @@ cherry pick interesting chapters. No matter what of those you are doing: Read it
 ### The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
 
 The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn.
-Essential knowledga how to hack and secure a browser. Lots of focus on Beef
+Essential knowledge how to hack and secure a browser. Lots of focus on Beef
 technology.
 
 
@@ -76,7 +76,7 @@ technology.
 ### Cuckoo Sandbox {#reference-cuckoo-sandbox}
 
 [Cuckoo Sandbox](https://cuckoosandbox.org/) is a behaviour analysis tool for
-malware. Malware is exewcuted in a simulated environment and all the behaviour
+malware. Malware is executed in a simulated environment and all the behaviour
 is monitored.
 
 Try it online on [malwr.com](https://malwr.com/)
@@ -115,7 +115,7 @@ Anti Patterns, Refactoring Software, Architectures, and Projects in Crisis by Wi
 
 A book showing typical anti-patterns that just happen in larger (software)
 projects. Your project will also suffer from some of those. Read this to
-understand those patterns and leran how to eliminate them.
+understand those patterns and learn how to eliminate them.
 
 
 
@@ -141,7 +141,7 @@ It also covers BTLE 5.0
 
 Building Bluetooth Low Energy Systems, by Muhammad Usama bin Aftab
 
-%% todo: More content
+%% TODO: More content
 
 ### Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
 

@@ -6,16 +6,16 @@ In those cases there are some specific things to be aware of:
 * Very often the damage to the victim is larger than the gain of the attacker
 * The attacker automates the attacks and aims for high numbers of victims
     * several hundred thousand or millions of victims is possible or even common
-    * gain per victim can be in the $1-5 range. But with the big number of victims results for the attacker are still hughe
+    * gain per victim can be in the $1-5 range. But with the big number of victims results for the attacker are still huge
 * Attackers can sit in countries with good infrastructure, good computer science education and no well paid it jobs.
     * Even if the money the "earn" by the attack does not sound a lot to you - for them it is
-    * According tho their local living standards they will be rich after a modestly successfull attack
+    * According tho their local living standards they will be rich after a modestly successful attack
 
 An attack (let's say *malware*) can have several goals. Malware is modular and
 different attack modules can be downloaded by the attacker sitting and the
 command console of the malware.
 
-Stolen cfredentials (passwords, accounts, credit card numbers) are shared as bulk on the black market.
+Stolen credentials (passwords, accounts, credit card numbers) are shared as bulk on the black market.
 Offers like "1000 unverified credit card numbers for $X" are the result.
 
 Another criminal will pay for those numbers and check if the numbers are valid and working and retrieve the cash.
@@ -23,7 +23,7 @@ Another criminal will pay for those numbers and check if the numbers are valid a
 ## Ransomware
 
 Ransomware has a direct and obvious way to generate money for the criminals. Files are taken
-hostage by encrpting them forcing the user to pay to get the decryption key.
+hostage by encrypting them forcing the user to pay to get the decryption key.
 
 Protection would be to do **regular backups**.
 
@@ -47,7 +47,7 @@ on new victims.
 %% TODO: Add link to pony description
 
 There is also the component Mimikatz (https://github.com/gentilkiwi/mimikatz).
-It is able to extraxt thoe credentials from memory.
+It is able to extract the credentials from memory.
 
 Technologies to reduce the impact of those attacks would be:
 
@@ -99,10 +99,10 @@ Protection is **backups**
 
 ## Sending SPAM
 
-Still a goal of malware authors is to use the aquired botnet to send out SPAM.
+Still a goal of malware authors is to use the acquired botnet to send out SPAM.
 The reasons they need a cluster of hacked computers are:
 
-* They need the bandwidth for millions of SPAMs
+* They need the bandwidth for millions of Spams
 * machines sending SPAM get blacklisted at central lists. The criminals have to rotate those machines
     * *If your mails end up as SPAM quite often, check if you are blacklisted somewhere*
 

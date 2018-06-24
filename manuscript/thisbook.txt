@@ -39,14 +39,14 @@ This is also a goal when writing this book.
 
 ## Release early, release often
 
-One of the reasons I dare to write a book is leanpubs feature to release *early* and *often*.
+One of the reasons I dare to write a book is leanpub's feature to release *early* and *often*.
 That way I can see progress and get feedback.
 
 Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
 help me improve the book.
 
-As I have been spending lots of time with security focussed engineers the most
-imporant things I want to learn first from you:
+As I have been spending lots of time with security focused engineers the most
+important things I want to learn first from you:
 
 * What causes trouble ?
 * What kind of technology is currently introduced in normal engineering ?

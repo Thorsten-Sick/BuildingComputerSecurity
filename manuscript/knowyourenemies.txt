@@ -26,7 +26,7 @@ Responsible Disclosure: You can expect them to behave responsibly
 
 Do: Respond friendly to their mail, they are partners
 
-Don't: Respond with a lawsuite. This will harm you on the long run. You will never ever get a responsible disclosure anymore.
+Don't: Respond with a law suite. This will harm you on the long run. You will never ever get a responsible disclosure anymore.
 
 
 An example:
@@ -52,12 +52,12 @@ Target: They know a few tricks, have some tools and choose their target by what 
 
 Resources: Some tools
 
-Do: Protect agains standard attacks
+Do: Protect against standard attacks
 
 ## Organized Crime
 
 Those are the powers currently creating malware and are making lots of money.
-It is organised crime because they have spcialists for all those tasks needed to:
+It is organised crime because they have specialists for all those tasks needed to:
 
 * Build malware
 * Spread it
@@ -72,7 +72,7 @@ hard to predict what the next way will be. We currently have:
 * Blackmail shops with DDOS attacks
 * Stealing private data and credentials (mail addresses for SPAM, credit card numbers, ....)
 * Ransomware
-* Cryptominer to use the victims power and CPU to mine crypto currencies
+* Crypto miner to use the victims power and CPU to mine crypto currencies
 
 Modern malware is modular and can be deployed with several of these attack modules.
 

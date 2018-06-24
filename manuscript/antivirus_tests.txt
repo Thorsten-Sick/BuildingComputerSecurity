@@ -42,7 +42,7 @@ Basically there are two kinds of tests.
 ### Classic scan
 
 A large folder containing historic and current malware is scanned. The results
-will be biased becaue the focus is on historic malware. The
+will be biased because the focus is on historic malware. The
 dangerous - current - malware is under-represented.
 
 Also the tested AV products can not use some of their protection tools like
@@ -72,7 +72,7 @@ Some people do malware tests (by modifying malware, finding some stuff on the
 internet, ...) and do their own testing. Please do not do that. As patching the
 malware samples could have broken them: not detecting them is the right thing.
 
-Be careful when you se DIY malware tests and always verify.
+Be careful when you see DIY malware tests and always verify.
 
 ## Eicar {#chapter-eicar}
 

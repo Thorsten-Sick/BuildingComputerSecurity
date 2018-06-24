@@ -9,6 +9,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *attacker's goals*
 * Added *antivirus-tests*
 * Added *antivirus-integration*
+
 %% Cryptoalgorithms
 %% Fuzzing
 %% Extend defensive programming / compiling

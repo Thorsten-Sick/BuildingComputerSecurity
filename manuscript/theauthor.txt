@@ -1,6 +1,6 @@
 # The author {#chapter-the-author}
 
-Trouble shooter and one-man-team somehow happend to be my role quite often.
+Trouble shooter and one-man-team somehow happened to be my role quite often.
 I am a software developer and engineer who also took the role of architect/project manager in many
 security related projects. Which gave me a good and wide perspective on things
 in the IT world.
@@ -12,19 +12,19 @@ spiders are involved....
 After studying Computer Science (Dipl. Ing FH at University Ravensburg
 Weingarten, a German title) I went to Avira. An Anti-Virus/Endpoint
 bolt-on-security company.
-I handled several projects in teams or connected to teams. More focussed on the
+I handled several projects in teams or connected to teams. More focused on the
 architect role or the developer role. Amongst the things I did is:
 
 * An AI SPAM filter in C: String processing in C....
 * A full Anti-Virus engine. Cross-compilable. For WinCE, Linux, PalmOS and Symbian. C
 * A generic module to detect malware in homepages. Building a kind of DOM. String processing. In C.
 * Management security consulting
-* Browser extension development - self learning phising detection. Javascript
+* Browser extension development - self learning phishing detection. JavaScript
 * A government founded research project:
     * Split an OS into several virtual machines for segmentation
     * Scan into these virtual machines without installing anything (Volatility)
     * Classify malware based on behaviour ([Cuckoo Sandbox](#reference-cuckoo-sandbox))
-* Create the architecture of a security/privacy focussed Chromium based browser
+* Create the architecture of a security/privacy focused Chromium based browser
 
 Now I am moving towards the embedded and IoT world with my new job.
 

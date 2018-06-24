@@ -2,7 +2,7 @@
 
 ## Short abstract
 
-Defensive programming is coding while expecting your programm to being actively attacked.
+Defensive programming is coding while expecting your program to being actively attacked.
 It needs some getting used to, but in the end debugging defensive code is much
 simpler than debugging normal code. This positive side effect is caused by
 stricter error handling.
@@ -13,7 +13,7 @@ asserts and better error handling in unlikely error conditions).
 
 Developers
 
-## Todo
+## TODO
 
 * Focus on vulnerable code first
 * Use asserts
@@ -28,8 +28,8 @@ Developers
 
 * Attacker can overflow stack or heap memory space. This could be abused to insert malicious code into your program flow
 * Attacker can just cause loops in your program causing a DOS situation
-* Attackers can send network data to your program which responds to a third party service with even more data (aka aplificationa attack)
-* Attackers can cause programs to dump critical data like passwords or cryptographical credentials
+* Attackers can send network data to your program which responds to a third party service with even more data (aka amplification attack)
+* Attackers can cause programs to dump critical data like passwords or crypto-graphical credentials
 
 These are typical attacks. Operating system, system environment and programming
 language used will define the exact way the attacks will try to accomplish their goal.
@@ -47,7 +47,7 @@ You want to especially harden parts in code that use external resources
 network packages ). Also keep an eye on external code being used (from 3rd party
 libs, from the other team's code, ...)
 
-You should expect every input to be at least *accidentially* wrong. In a malware
+You should expect every input to be at least *accidentally* wrong. In a malware
 attack situation you can even expect the input to be handcrafted to cause as
 much damage as possible (*remote code execution* would be one possible goal of an attacker).
 
@@ -92,7 +92,7 @@ Do not copy more bytes than the buffer can contain. Strings in C have a
 terminating 0 byte, take this into consideration...
 
 Search in your code for strcpy, sprintf, ... those functions are to be replaced
-with strncpy and strnprintf right now. Those variantes respect the target
+with strncpy and strnprintf right now. Those variants respect the target
 buffer size. Benefits: You will kill a certain class of bugs that are very
 hard to debug because they only happen on a certain input.
 
@@ -150,7 +150,7 @@ Validate your input against that and only process positive input.
 
 ### Encrypt all the data sent over network
 
-No matter which network (Bluetooth, Wifi, Internet, Mobile): expect it to be
+No matter which network (Bluetooth, WiFi, Internet, Mobile): expect it to be
 hacked and broken. Plan accordingly. Encrypt.
 
 Do not use your own crypto. Fall back to standards like TLS.

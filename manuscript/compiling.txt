@@ -26,7 +26,7 @@ It is for your testers only.
 
 **Mitigation**:
 Mitigation is extra linker/compiler settings that make it harder to exploit
-your program. It will **not** fix the vulernabilities and make our program better.
+your program. It will **not** fix the vulnerabilities and make our program better.
 Instead it will make it harder to create a reliable exploit. Buying you time
 to push an update. Some security experts do not like mitigation because they
 saw people going for it **only**. As an additional layer of security it i cool.
@@ -43,12 +43,12 @@ Developers and testers
 
 ## Build system
 
-If you want to be able to build old versions with new bugfixes, link to newer
+If you want to be able to build old versions with new bug fixes, link to newer
 library versions (because the old ones are broken), ...
 You require a build system that is
 
 * At a very well defined state (libraries, compiler version, ....)
-* Can be transfered to other build machines
+* Can be transferred to other build machines
 * Can be updated and has a roll back option
 * Having a build system in your VCS would be awesome...
 * Avoid vendor lock in
@@ -126,11 +126,11 @@ to the source ? Maybe some backdoors where added just before compilation ?
 Or maybe even by a malicious compiler ?
 
 If you do not trust your toolchain, create reproducible builds.
-You ship source code and build config. Reproducible builds will genereate
+You ship source code and build config. Reproducible builds will generate
 the exact same files (hash wise) on any build system. Your customers and
 co-workers can verify your build.
 
-This is how debian is doing it: https://wiki.debian.org/ReproducibleBuilds
+This is how Debian is doing it: https://wiki.debian.org/ReproducibleBuilds
 And this is the big project: https://reproducible-builds.org/
 
 ## Compiler warnings/static code analysis
@@ -192,7 +192,7 @@ On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui
 Also: There seems to be a bug. Packages do not properly install the config files.
 Get the current folder with the config files from the repo.
 
-%% TODO: More hands on examples for CppCheck
+%% TODO: More hands on examples for CPPCheck
 
 %% A feature is a MISRA C 2012 compliance checker. Check that one
 
@@ -225,7 +225,7 @@ See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.d
 * Resolve all dynamic symbols during program load: *ld -z now*
 
 %% .. TODO: * heap protector:
-%% .. TODO: * libc pointer encryptionL:
+%% .. TODO: * libc pointer encryption:
 %% TODO Strip and how to verify
 
 

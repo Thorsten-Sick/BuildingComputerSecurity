@@ -63,7 +63,7 @@ If your program handles archives, scan them twice:
 The reason for that:
 
 * The full archive in case the malware is split into several files. So the scanner can build up the context graph.
-* The single files: If the archive is password protected it is possible that the scanner was not able to handle it. But after you extracted the files, everthing is fine.
+* The single files: If the archive is password protected it is possible that the scanner was not able to handle it. But after you extracted the files, everything is fine.
 
 You can test your implementation with the [EICAR](#chapter-eicar) test malware.
 
@@ -72,7 +72,7 @@ Maybe you had bad luck and the one on your development PC just is not connected.
 
 ## Google Safe Browsing
 
-Google offers a service to verify if a url is malicious. The servicec can be
+Google offers a service to verify if a URL is malicious. The service can be
 found here: https://developers.google.com/safe-browsing/
 
 It offers two ways to access the data. One is simple, the other one privacy
@@ -82,11 +82,11 @@ You should scan at least the URLs that are followed. Maybe even the URLs
 contained in a document. If there is one URL in there that is malicious, the
 whole document could be dangerous.
 
-Like a interactive text document with a script that contains the url to a
+Like a interactive text document with a script that contains the URL to a
 malware server. This would very likely be a downloader - one of the steps
 between *exploit* and *infection*.
 
-To test your implementation, you can use this test url:
+To test your implementation, you can use this test URL:
 
 http://malware.testing.google.test/testing/malware/
 

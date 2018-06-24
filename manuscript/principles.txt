@@ -18,7 +18,7 @@ philosophy is **security-by-design**.
 If you are responsible to build a system use **security-by-design**. In many
 cases you are not free to the right thing - for example a manager needs an old
 Internet Explorer to use am esoteric web based application installed on his PC.
-In this case **bolt-on-security** (filtering files and urls) is a valid approach.
+In this case **bolt-on-security** (filtering files and URLs) is a valid approach.
 
 Disadvantages of Bolt-on-security is: It adds complexity (file parsing, for example)
 
@@ -29,9 +29,9 @@ Sandboxing and an own machine for the file processing are options.
 
 Two tactics with bolt-on-security:
 
-* Add it to the outer perimenter of your network to reduce the normal
+* Add it to the outer perimeter of your network to reduce the normal
 "internet noise" of attacks. This will reduce your important monitor-log reports.
-* Add it to the innermost perimenter to detect attacks that bypassed your protection.
+* Add it to the innermost perimeter to detect attacks that bypassed your protection.
 
 The next principles are part of the security-by-design philosophy
 
@@ -81,7 +81,7 @@ asking yourself some simple questions:
 
 %% TODO: Write chapter on attack surface
 
-## Compartmentalisation / Segementation
+## Compartmentalisation / Segmentation
 
 Segment your system into small partitions. Define narrow communication channels.
 Maybe they can be one-way (data-diodes). Possible segments can be:
@@ -185,7 +185,7 @@ social engineering.
 
 As protection mechanism will fail - the attackers will find holes - it is better
 to layer defenses.
-To protect an asset it is essentail to layer **different kinds** of defenses
+To protect an asset it is essential to layer **different kinds** of defenses
 to make attacking more complicated to request different skills.
 
 As for a castle example:
@@ -199,7 +199,7 @@ So attackers have to be:
 * Climbers
 * Lucky
 
-This will narrow down the number of succefull survivors/attackers quite well.
+This will narrow down the number of successful survivors/attackers quite well.
 
 The same is true for your computer system. Combine different technologies to
 protect an asset. Even if you think the one specific layer you just designed
@@ -211,7 +211,7 @@ A bad idea. There are [disassembler tools](#reference-disassembler-tools)
 that help to reverse engineer executables. If any security depends on secrecy
 it will break as soon as an experienced person attacks it. You are an
 experienced engineer but not an experienced attacker. The guys you
-face have the skillset switched: experienced attacker, ok-ish engineer.
+face have the skill set switched: experienced attacker, OK-ish engineer.
 This is why they became attackers.
 
 [^note2]: Depends on your users
