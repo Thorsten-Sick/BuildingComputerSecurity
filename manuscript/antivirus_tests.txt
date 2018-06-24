@@ -1,0 +1,103 @@
+# Anti Virus tests {#chapter-antivirus-tests}
+
+
+## Audience
+
+Architects, Manager
+
+## Abstract
+
+Modern anti-virus tools are a combination of hash databases,
+pattern matching, behaviour blocking, cloud technology and sandboxes.
+
+Testing them is tricky.
+
+Malware has a short life span. New malware is generated every few minutes
+(this is called *server side polymorphic*).
+
+Testing malware is tricky as well.
+
+A testing lab needs access to large heaps of current malware, lots of virtual
+machines, verification tools if the malware is a dud or dangerous, ...
+
+Normally it requires teams, racks of computers, terabytes of malware and
+cleanstuff (for FP tests) and years of experience.
+
+Computer magazines normally let external experts test the AV software for
+detection and protection and add their own usability and speed tests on top.
+
+External experts are
+
+* https://www.av-test.org/de/antivirus/
+* https://www.av-comparatives.org/
+* https://www.virusbulletin.com/testing/
+    * Here not having a FP is the most tricky part of the test
+
+Also check out who is not participating in those tests....could be a red flag.
+
+## Methods
+
+Basically there are two kinds of tests.
+
+### Classic scan
+
+A large folder containing historic and current malware is scanned. The results
+will be biased becaue the focus is on historic malware. The
+dangerous - current - malware is under-represented.
+
+Also the tested AV products can not use some of their protection tools like
+URL blacklists, behaviour detection, cloud technology, ...
+
+For that reason this kind of tests is replaced by:
+
+### Real-world protection tests
+
+Current malware is used to "infect" machines where a full AV product is running.
+The antivirus can use all it's features to protect.
+
+* URL blacklist
+* Static file scanning
+* Cloud scanning
+* Behaviour analysis
+* Sandbox
+
+The results of this test are much more significant but the test is harder to run
+and the malware sample set will be smaller.
+
+This is the future.
+
+### DIY malware tests
+
+Some people do malware tests (by modifying malware, finding some stuff on the
+internet, ...) and do their own testing. Please do not do that. As patching the
+malware samples could have broken them: not detecting them is the right thing.
+
+Be careful when you se DIY malware tests and always verify.
+
+## Eicar
+
+What you can and should tests is if you antivirus is properly attached to your
+system.
+
+Basic questions should be:
+
+* Is the proxy intercepting web traffic to scan it ?
+* Is the proxy scanning mails when I fetch them with my client ?
+* Is the AV scanning files when they are stored on hard-disk (called: On-access scanning)
+* Is it scanning when I execute a file ?
+* Is it scanning when I copy a file to a USB stick ?
+
+Exactly for these kind of tests there is the EICAR test file. Every AV should detect it.
+It is for testing exact this kind of situations mentioned above.
+
+The file can be found here: http://www.eicar.org/86-0-Intended-use.html
+
+It is just a few bytes long and you can copy & paste it.
+
+## Windows Defender
+
+Windows Defender - pre-installed on Windows - is a kind of fallback if no other
+AV is installed. It improved the detection rate over the last years and already
+offers a decent baseline. There are still good reasons to hunt for 3rd party
+scanner. But from an engineering perspective you can expect:
+**A current Windows with Defender has a decent scanner installed**

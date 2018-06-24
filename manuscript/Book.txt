@@ -10,6 +10,7 @@ flawfinder.txt
 ux.txt
 updates.txt
 passwords.txt
+antivirus_tests.txt
 tls.txt
 cryptoalgorithms.txt
 externalreferences.txt

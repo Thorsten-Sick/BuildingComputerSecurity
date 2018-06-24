@@ -6,11 +6,12 @@ changelog to make it simpler for you to find the new sections.
 ## July 2018
 
 * Added *attacker's goals*
-
+* Added *antivirus-tests*
 %% Cryptoalgorithms
 %% Fuzzing
 %% Extend defensive programming / compiling
-
+%% url BLACKLISTS
+%% antivirus API AMSI: https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
 
 ## June 2018
 
