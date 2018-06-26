@@ -234,3 +234,9 @@ Fuzzgoat is a vulnerable C program: https://github.com/fuzzstati0n/fuzzgoat
 
 %% Phishtank https://www.phishtank.com/
 %% stopbadware.org
+
+%% https://www.safaribooksonline.com/library/view/beginning-software-engineering/9781118969175/c03.xhtml
+
+%% https://www.safaribooksonline.com/library/view/managing-the-unmanageable/9780132981187/
+
+%% https://www.safaribooksonline.com/library/view/agile-estimating-and/9780137126347/
