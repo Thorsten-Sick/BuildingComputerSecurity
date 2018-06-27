@@ -1,0 +1,95 @@
+# Fuzzing {#chapter-fuzzing}
+
+Fuzzing is inserting random data into the system with the goal to caus invalid
+states. This can be crashing, memory leaks, endless loops, ...
+
+Data can be send to any kind of input:
+
+* Command line
+* File
+* Network data
+* Images (camera)
+* Audio
+* UART/...
+* UI (testing buttons, edit boxes, ...)
+* System messages (MQTT, DBUS, ...)
+* Shared memory
+* Environment variables
+
+There are several fuzzers, from simple random data generators to coverage
+based like libfuzz and AFL.
+All of them have advantages and disadvantages.
+
+You can start with a simple variant if your program has not been hardened yet
+and while patching the bugs you find improve the fuzzer.
+
+## Audience
+
+Developers, Testers
+
+## Training project
+
+There is a practice target for fuzzing: [Fuzzgoat](#reference-fuzzgoat).
+As there are many kinds of fuzzers and you maybe want to experiment with them
+before getting started with your project.
+
+## DIY fuzzer
+
+It is quite simple to write own fuzzers. The tools later in this chapter will
+be much more powerful, but with some tricks the core concept of fuzzers is simple:
+
+* Create data that has a *almost* valid structure. You want it to be processed code deeper in the victim's project
+* For the same reason: Create *valid checksums* for your fake data
+* Let it run for hours, maybe days
+* Detect if you break the victim:
+    * crashes,
+    * buffer overflows (AddressSanitizer)
+    * loops, non-responsive, ... (ThreadSanitizer)
+    * memory leaks (LeakSanitizer)
+
+%% TODO: Valgrind is also an option to detect buggy behaviour
+
+* As soon as you break the victim: Store the responsible data chunk away for the debugging session
+
+To improve the fuzzing results, sprinkle the victim code with *assertions* to
+provoke crashes on invalid states.
+
+Fuzzers can be simple, see the next example:
+
+Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/master/doc/README.md)
+
+{lang="python"}
+    import socket
+    import os
+
+    UDP_IP = "192.168.100.151"
+    UDP_PORT = 53
+
+    sock = socket.socket(socket.AF_INET,
+                     socket.SOCK_DGRAM)
+                     sock.bind((UDP_IP, UDP_PORT))
+
+    while True:
+        data, addr = sock.recvfrom(1024)
+        packet = str(data[0]) + str(data[1]) + b"\x81\x80" + os.urandom(128)
+        sock.sendto(packet, addr)
+
+%% Radamsa
+
+%% AFL
+
+
+%% .. TODO: AFL: https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/
+
+
+## LibFuzzer
+
+The most effective way if you have access to the API and code. It is part of Clang 6.0+.
+You may notice: Ubuntu 17.10 at least does not have this Clang installed yet. So you will
+want to install a Clang 6.0 from a PPA.
+
+https://llvm.org/docs/LibFuzzer.html
+
+LibFuzzer supports a Corpus for Input and Output samples to test with. This improves speed a lot.
+
+%% .. TODO: more libfuzz

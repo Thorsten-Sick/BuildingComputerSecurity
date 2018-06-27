@@ -1,11 +1,5 @@
 # Fuzzing
 
-I will experiment with fuzzing using [Fuzzgoat](#reference-fuzzgoat)
-
-%% TODO Fuzzgoat (vulnerable C program): https://github.com/fuzzstati0n/fuzzgoat
-
-%% AFL
-
 %% The command line tool...whatsitsname
 
 %% .. State: 50 % Fuzzing
@@ -13,8 +7,7 @@ I will experiment with fuzzing using [Fuzzgoat](#reference-fuzzgoat)
 Fuzzing is bombarding code with broken data until it breaks. All kind of APIs
 and other interfaces (command line, network, files, ...) are targets.
 
-There are several fuzzers, from simple generators to coverage based like libfuzz and AFL.
-All of them have advantages and disadvantages.
+
 
 ## Fuzzing third party programs and libaries
 
