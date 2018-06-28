@@ -1,7 +1,9 @@
 # Fuzzing {#chapter-fuzzing}
 
-Fuzzing is inserting random data into the system with the goal to caus invalid
+Fuzzing is inserting random data into the system with the goal to cause invalid
 states. This can be crashing, memory leaks, endless loops, ...
+
+Once set up fuzzing tools run full-auto for nights and collect crash logs.
 
 Data can be send to any kind of input:
 
@@ -16,6 +18,10 @@ Data can be send to any kind of input:
 * Shared memory
 * Environment variables
 * WiFi and Bluetooth
+* at the library api (libfuzzer)
+
+If you ship software that includes 3rd party libraries or programs, you should
+fuzz those as well. You ship it to customers - you are responsible.
 
 There are several fuzzers, from simple random data generators to coverage
 based like libfuzz and AFL.
@@ -54,7 +60,7 @@ be much more powerful, but with some tricks the core concept of fuzzers is simpl
 * Detect if you break the victim:
     * crashes,
     * buffer overflows (AddressSanitizer)
-    * loops, non-responsive, ... (ThreadSanitizer)
+    * loops, hangs, ... (ThreadSanitizer)
     * memory leaks (LeakSanitizer)
 
 %% TODO: Valgrind is also an option to detect buggy behaviour
@@ -84,13 +90,55 @@ Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/
         packet = str(data[0]) + str(data[1]) + b"\x81\x80" + os.urandom(128)
         sock.sendto(packet, addr)
 
-%% Radamsa
+## Radamsa
 
-%% AFL
+https://gitlab.com/akihe/radamsa
+
+A simple way to detect crashed programs in bash scripts is to check the exit value.
+
+Taking an example from Radamsa (check out the link, there are more examples).
+
+{lang="bash"}
+    while true
+     do
+       # Generate test-sample files
+       # call program with sample files
+       test $? -gt 127 && break
+     done
 
 
-%% .. TODO: AFL: https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/
 
+## AFL american fuzzy lop
+
+Uses compile-time instrumentation and a genetic algorithm to discover new
+test cases.
+
+Pro:
+    * It is fast
+    * It is exhaustive
+
+Con:
+    * It needs instrumented binaries - you have to re-compile them
+
+{lang="bash"}
+    apt install afl
+
+To use AFL the program must be compiled with a special AFL compiler.
+AFL is available for clang (afl-clang) and gcc (afl-gcc).
+
+After compiling you call it with *afl-fuzz*.
+
+A good example is the *fuzzgoat* project which has a vunerable program and a
+Makefile to show how AFL is compiled into it and then executed.
+
+The home page of AFL: http://lcamtuf.coredump.cx/afl/
+
+Some technical overview:
+https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/
+
+The best resource so far is the README:
+
+*/usr/share/doc/afl-doc/docs/README*
 
 ## LibFuzzer
 
@@ -103,3 +151,15 @@ https://llvm.org/docs/LibFuzzer.html
 LibFuzzer supports a Corpus for Input and Output samples to test with. This improves speed a lot.
 
 %% .. TODO: more libfuzz
+
+## More fuzzing tricks
+
+* Parallelize fuzzing
+    * Google's ClusterFuzz is an example: https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md
+* Do it on Linux. It has more powerful monitoring tools for dynamic code analysis
+* Fix found bugs ASAP, so your fuzzer can dig deeper
+    * There are smart fuzzers that can cluster the crashes by the bugs they very likely belong to
+
+
+
+%% TODO run under valgrind or strace or gdb

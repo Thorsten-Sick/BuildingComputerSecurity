@@ -4,6 +4,8 @@
 
 %% TODO: Add books on social engineering
 
+%% Daniel Suarez: "From the perspective of an AI, the human mind is a stationary target"
+
 "The human mind is a stationary target"
 
 Attackers normally have to chain several steps until they control the target.
