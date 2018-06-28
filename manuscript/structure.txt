@@ -29,6 +29,10 @@ A project has different phases. Depending on your institution different
 people could be responsible for each phase. Everyone can contribute to security.
 And security will break at the weakest link.
 
+%% Add Software engineering stages. Also to the chapters
+%% Management, Requirement gathering, High-level design, low-level design, development, testing, deployment, metrics, maintenance
+%% Connect to reference "Beginning Software Engineering"
+
 If possible I will put the responsible job description into the *Audience*
 block at the beginning of each chapter.
 But as the boundaries in your company between the responsibilities can be

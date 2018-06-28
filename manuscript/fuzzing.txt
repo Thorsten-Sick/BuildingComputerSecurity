@@ -15,6 +15,7 @@ Data can be send to any kind of input:
 * System messages (MQTT, DBUS, ...)
 * Shared memory
 * Environment variables
+* WiFi and Bluetooth
 
 There are several fuzzers, from simple random data generators to coverage
 based like libfuzz and AFL.
@@ -32,6 +33,15 @@ Developers, Testers
 There is a practice target for fuzzing: [Fuzzgoat](#reference-fuzzgoat).
 As there are many kinds of fuzzers and you maybe want to experiment with them
 before getting started with your project.
+
+## Fuzzing hardware
+
+You can fuzz embedded devices. In addition to be able to send the broken data
+to the device (UART, BLE, ...) you also need a way to evaluate the system health.
+Anything that works like a ping (like: request version information over WiFi)
+is already quite good.
+Another thing is: You want to be able to reset the device. LAN controlled
+power sockets are a way. Or toggling the reset button using a micro controller.
 
 ## DIY fuzzer
 

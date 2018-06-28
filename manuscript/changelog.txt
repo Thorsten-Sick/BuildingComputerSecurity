@@ -10,6 +10,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *antivirus-tests*
 * Added *antivirus-integration*
 * Changed PDF format to A5 for a typical book-size PDF
+* Added minimal *fuzzing* chapter
 %% Cryptoalgorithms
 %% Fuzzing
 %% Extend defensive programming / compiling
