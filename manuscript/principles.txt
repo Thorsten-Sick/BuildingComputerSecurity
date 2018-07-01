@@ -252,6 +252,8 @@ the discussion towards those Hollywood threats. Explain to everyone this concept
 Have some real-world hacker stories ready and try to steer the discussion
 towards a productive region. Even if it is less exciting.
 
-%% TODO: Link Mitnick "Ghost in The Wires"
-%% TODO: Link Beyond Fear
-%% TODO: Link Future Crimes by Marc Goodman
+Books to read:
+
+* [Ghost in The Wires](#reference-book-ghost-in-the-wires)
+* [Beyond Fear](#reference-book-beyond-fear)
+* [Future Crimes](#reference-book-future-crimes)

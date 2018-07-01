@@ -17,6 +17,7 @@ changelog to make it simpler for you to find the new sections.
 * Extended "Defensive programming"
 * Extended "principles"
 * Extended "TLS chapter"
+* Extended "External references"
 
 
 ## June 2018
