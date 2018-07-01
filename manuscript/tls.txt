@@ -35,6 +35,35 @@ Older versions have vulnerabilities.
 
 Architects and developers
 
+## What to encrypt (for web pages)
+
+It is possible to encrypt only selected parts of a page (login form, for example).
+
+So what to encrypt ? The answer is:
+
+**Encrypt everything**
+
+For several reasons:
+
+* Encrypted pages get a better Google ranking
+* Encrypted pages will not show a "this side is insecure" url bar in the browser
+* You will not forget to encrypt sensitive parts of your page if you encrypt everything
+* An active attacker can modify unencrypted parts of the page while the data is in transit (for example if the attacker is on the same WiFi network as the victim)
+    * The attacker will the modify the link to the login form
+    * The new link will point to an attacker controlled server
+    * This server could offer encryption (for a better reputation)
+    * And the login credentials the user enters will now be phished by the attacker.
+    * Afterwards the attacker can redirect the user to the real server (entering the credentials just stolen for the user)
+    * The user will not know he was attacked
+
+These are the reasons why you should **Encrypt everything**
+
+Tools for that kind of attacks are:
+
+* MITMPROXY https://mitmproxy.org/
+* Wifi Pineapple https://www.wifipineapple.com/
+* Fiddler https://www.telerik.com/fiddler
+
 ## Mozilla server side TLS config guide
 
 TLS is a toolbox for encryption which is mainly used in the browser to server

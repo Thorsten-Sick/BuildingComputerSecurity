@@ -3,6 +3,9 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
+%% Cryptoalgorithms
+%% Extend defensive programming / compiling
+
 
 ## July 2018
 
@@ -12,8 +15,8 @@ changelog to make it simpler for you to find the new sections.
 * Changed PDF format to A5 for a typical book-size PDF
 * Added minimal *fuzzing* chapter
 * Extended "Defensive programming"
-%% Cryptoalgorithms
-%% Extend defensive programming / compiling
+* Extended "principles"
+* Extended "TLS chapter"
 
 
 ## June 2018

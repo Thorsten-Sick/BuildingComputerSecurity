@@ -23,8 +23,13 @@ Data can be send to any kind of input:
 If you ship software that includes 3rd party libraries or programs, you should
 fuzz those as well. You ship it to customers - you are responsible.
 
+An important step in fuzzing is to keep the relevant input data for the
+debugging session later. This can be done by keeping the files. Some fuzzers
+have a predictable algorithm that generates the same permutations for a given seed.
+For those keep the seed in a database and re-create the input data before debugging.
+
 There are several fuzzers, from simple random data generators to coverage
-based like libfuzz and AFL.
+based like libfuzzer and AFL.
 All of them have advantages and disadvantages.
 
 You can start with a simple variant if your program has not been hardened yet
@@ -56,6 +61,7 @@ be much more powerful, but with some tricks the core concept of fuzzers is simpl
 
 * Create data that has a *almost* valid structure. You want it to be processed code deeper in the victim's project
 * For the same reason: Create *valid checksums* for your fake data
+* An alternative is to de-activate the checksum-validation code while fuzzing the application
 * Let it run for hours, maybe days
 * Detect if you break the victim:
     * crashes,
