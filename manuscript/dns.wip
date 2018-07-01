@@ -1,2 +1,12 @@
 %% DNS hijacking: https://thehackernews.com/2018/04/android-dns-hijack-malware.html
 %% Research DANE/DNSSEC
+
+## DNS over HTTPS
+
+%% DNS over HTTPS: https://blog.nightly.mozilla.org/2018/06/01/improving-dns-privacy-in-firefox/
+
+
+## DNS Rebinding attacks
+
+%% https://medium.com/@brannondorsey/attacking-private-networks-from-the-internet-with-dns-rebinding-ea7098a2d325
+%% Also: IoT

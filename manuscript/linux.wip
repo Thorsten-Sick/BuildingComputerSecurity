@@ -1,0 +1,26 @@
+# Linux
+
+
+## Malware
+
+Rootkits: https://linux-audit.com/intrusion-detection-linux-rootkits/
+
+## Lynis
+
+https://linux-audit.com/how-to-create-custom-tests-in-lynis/
+
+## Hardening
+
+Hiding processes: https://linux-audit.com/linux-system-hardening-adding-hidepid-to-proc/
+
+Capablities: https://linux-audit.com/linux-capabilities-101/
+
+Finding SETUID binaries: https://linux-audit.com/finding-setuid-binaries-on-linux-and-bsd/
+
+Kernel: https://linux-audit.com/linux-kernel-security-and-how-to-improve-it/
+
+Server hardening: https://linux-audit.com/linux-server-hardening-most-important-steps-to-secure-systems/
+
+## Debugging
+
+Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/

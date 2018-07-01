@@ -54,7 +54,11 @@ Links:
 
 **TODO**
 
-## Post quantum crypto functions
+## Quantum crypto
+
+%% tODO: https://www.theregister.co.uk/2018/06/14/quantum_crypto_commercial_optical_network/
+
+## Post quantum computer crypto functions
 
 To de-buzzword it:
 
@@ -71,6 +75,8 @@ of algorithm to also take quantum computers into consideration.
 
 %% TODO: Research Google Quantum computer
 
+%% TODO: https://www.computing.co.uk/ctg/interview/3033976/interview-cyber-wars-veteran-phil-zimmermann-talks-quantum-proof-encryption-backdoors
+
 %% TODO: https://www.heise.de/security/meldung/Erster-Standard-fuer-Post-Quantum-Signaturen-4085522.html
 
 %% TODO: List of algorithms or sane bit lengths
@@ -78,3 +84,5 @@ of algorithm to also take quantum computers into consideration.
 **TODO**
 
 %% TODO: More algorithms: Public key and aes and similar
+
+%% SHA3 for AVR code: https://gitlab.com/mjos/sha3-avr
