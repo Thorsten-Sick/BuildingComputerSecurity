@@ -271,3 +271,7 @@ training critical thinking and security thinking.
 %% Time for attackers and defenders : https://www.recordedfuture.com/cyber-operations-time/
 
 %% More CTF: https://twitter.com/realgam3/status/1009805751894896640?s=09
+
+%% https://exploit-exercises.com/
+
+%% Security resource list: https://github.com/sbilly/awesome-security

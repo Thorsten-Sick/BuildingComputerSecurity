@@ -5,6 +5,7 @@
 
 %% DNS over HTTPS: https://blog.nightly.mozilla.org/2018/06/01/improving-dns-privacy-in-firefox/
 
+%% https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/
 
 ## DNS Rebinding attacks
 

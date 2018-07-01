@@ -24,3 +24,8 @@ Server hardening: https://linux-audit.com/linux-server-hardening-most-important-
 ## Debugging
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/
+
+
+## Apparmor
+
+https://linux-audit.com/introduction-into-linux-security-modules/
