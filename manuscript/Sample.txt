@@ -1,10 +1,10 @@
-theauthor.txt
 thisbook.txt
 structure.txt
 principles.txt
 flawfinder.txt
 updates.txt
 externalreferences.txt
+theauthor.txt
 authors.txt
 changelog.txt
 license.txt

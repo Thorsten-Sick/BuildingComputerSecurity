@@ -1,4 +1,3 @@
-theauthor.txt
 thisbook.txt
 structure.txt
 knowyourenemies.txt
@@ -16,6 +15,7 @@ antivirus_integration.txt
 tls.txt
 cryptoalgorithms.txt
 externalreferences.txt
+theauthor.txt
 authors.txt
 changelog.txt
 license.txt
