@@ -18,6 +18,8 @@ changelog to make it simpler for you to find the new sections.
 * Extended "principles"
 * Extended "TLS chapter"
 * Extended "External references"
+* Added *antivirus-spreading-samples*
+* Added *antivirus virustotal*
 
 
 ## June 2018
