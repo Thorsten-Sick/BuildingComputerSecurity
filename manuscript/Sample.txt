@@ -3,6 +3,7 @@ structure.txt
 principles.txt
 flawfinder.txt
 updates.txt
+passwords.txt
 externalreferences.txt
 theauthor.txt
 authors.txt
