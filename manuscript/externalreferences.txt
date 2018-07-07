@@ -275,3 +275,5 @@ training critical thinking and security thinking.
 %% https://exploit-exercises.com/
 
 %% Security resource list: https://github.com/sbilly/awesome-security
+
+%% https://www.iamthecavalry.org/

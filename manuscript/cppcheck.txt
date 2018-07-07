@@ -1,0 +1,59 @@
+# CppCheck
+
+CppCheck is a more advanced static code analysis tool than flawfinder.
+The drawback: It is more complicated.
+
+Where flawfinder checks with string searches for dangerous function calls,
+CppCheck compiles the program an can go more in depth. Wit a better
+understanding of what is happening than flawfinder does.
+
+For that reason it also has some more additional features.
+
+You can find CppCheck here:
+
+http://cppcheck.sourceforge.net/
+
+And a detailed documentation here:
+
+http://cppcheck.sourceforge.net/manual.pdf
+
+On Ubuntu just install it with
+
+{lang="bash"}
+    sudo apt install cppcheck cppcheck-gui
+
+## Audience
+
+Developers and Testers
+
+## The Makefile
+
+As you basically call CppCheck like any compiler you can integrate it into your
+default makfile as a specific target.
+
+A
+
+{lang="bash"}
+    make cppcheck
+
+would then run CPPCheck.
+
+## Feature: Library verification
+
+CppCheck checks if library functions are used as intended. It knows about the
+standard libraries. If you use less common ones ou should add your own
+configuration for those. The manual has more about that.
+
+To edit the configuration file for the library use the CppCheck GUI.
+
+If the library is a common and public one, you may think about contributing the
+configuration to the CppCheck project.
+
+Now for the extra trick: If your team produces in-house libraries you should
+generate one of those config files and ship it with the library. This enables
+others to properly use the library. And improves code quality and reduces silly
+bug reports to your team.
+
+%% TODO ## Feature: MISRA
+
+%% TODO: ## Feature: Dumping data for Python aka addons

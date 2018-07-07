@@ -103,6 +103,8 @@ Your benefits:
 
 %% TODO: A list of vagrant examples.
 
+%% TODO: Vagrant code verification toolbox
+
 ## Compile for Linux
 
 Linux has many powerful code verification tools (fuzzing, ...).

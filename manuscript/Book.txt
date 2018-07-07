@@ -6,6 +6,7 @@ principles.txt
 defensiveprogramming.txt
 compiling.txt
 flawfinder.txt
+cppcheck.txt
 fuzzing.txt
 ux.txt
 updates.txt
