@@ -1,0 +1,31 @@
+# Testing compiling features {#chapter-testing-compiling}
+
+As many mitigation features are kind of invisible you will needs tools
+to test the binary before release.
+
+You want to automatically test:
+
+* Is this a beta release or the real one ?
+* Is it a debug release ? (with or without debug symbols)
+* Is ASLR on ?
+* Are there additional dependencies ?
+    * linked libs ?
+    * attached info (see there)
+
+Having prepeared a set of tools for manual verification plus a automatic test
+at least before the binaries are shipped is very smart.
+
+## Audience
+
+Developers and Testers
+
+## Attached info
+
+It is possible to attach an info blob (like xml) to a PE and ELF file.
+Your compiler could create that and your release system verify it. It can
+contain things like a "beta" flag - to avoid accidentially release a beta on
+the stable update channel. Or it could be a list of dependencies (modules and
+their version) to otehr components you offer.
+
+Of course this can also be achieved by registering the binary in your file
+database by sha256 and putting the flags in there.
