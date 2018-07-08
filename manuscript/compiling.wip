@@ -25,6 +25,8 @@ https://gist.github.com/kwk/4171e37f4bcdf7705329
 
 %% .. TODO: Experiment with it
 
+%% https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
+
 ## ASAN (Address Sanitizer)
 
 Detects memory errors (out-of-bounds access, user-after-free, ...)
@@ -65,21 +67,8 @@ Profiling: http://www.mono-project.com/docs/debug+profile/profile/
 
 
 
-### Testing the results
 
-You want to test the binaries if the hardening worked.
-
-* Relro: objdump -x <program> | grep RELRO
-* ld bind now: readelf -d trivial | grep BIND
-
-%% TODO Test and add examples
-
-## Windows
-
-Check for ASLR, DEP, SafeSEH, ... in Windows binaries
-
-https://github.com/NetSPI/PESecurity
-
-%% .. TODO: Test
 
 %% .. TODO: Show tools
+
+%% strip to remove debug

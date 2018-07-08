@@ -19,6 +19,63 @@ at least before the binaries are shipped is very smart.
 
 Developers and Testers
 
+## Linux
+
+On linux a tool to verify the hardening settings is *hardening-check* which can
+be found here:
+
+https://github.com/ProhtMeyhet/hardening-check
+
+It will check for:
+
+* PIE (ASLR)
+* Stack protection
+* Fortified source
+* Read-only relocations (relro)
+* Immediate binding
+
+Testing specifically for **RELRO**:
+
+{lang = "bash"}
+    objdump -x program|grep RELRO
+
+Testing specifically for **immediate binding**:
+
+{lang="bash"}
+    readelf -d program | grep BIND
+
+Checking for **forgotten debug symbols**:
+
+{lang="bash"}
+    >objdump --syms program
+
+    program:     file format elf64-x86-64
+
+    SYMBOL TABLE:
+    no symbols
+
+If you see anything else (especially a list of symbols) you forgot them in
+the binary. Remove them by calling *strip*.
+
+%% TODO: Verify those two with the secure gcc setting
+
+%% TODO: readelf
+%% TODO: objdump
+%% Also relevant for "elf_format.wip": https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
+
+%% Todo: ldd and lddtree
+
+%% TODO: apt install pax-utils; scanelf
+
+## Windows
+
+Check for ASLR, DEP, SafeSEH, ... in Windows binaries
+
+https://github.com/NetSPI/PESecurity
+
+%% .. TODO: Test
+
+
 ## Attached info
 
 It is possible to attach an info blob (like xml) to a PE and ELF file.
