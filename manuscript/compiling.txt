@@ -225,11 +225,11 @@ See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.d
 * position independent code for libraries: *-fPIC*
 * Read only memory sections in ELF: *ld -z relro*
 * Resolve all dynamic symbols during program load: *ld -z now*
+* Do not leave debug symbols in the released binary. **DO NOT ADD** *-g*
+    * Call the *strip* command on your binary to remove the debug symbols
 
 %% .. TODO: * heap protector:
 %% .. TODO: * libc pointer encryption:
-%% TODO Strip and how to verify
-
 
 
 %% .. TODO: Visual Studio /RTCs flag research and add add proper place
