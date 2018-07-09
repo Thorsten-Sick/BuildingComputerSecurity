@@ -86,3 +86,9 @@ of algorithm to also take quantum computers into consideration.
 %% TODO: More algorithms: Public key and aes and similar
 
 %% SHA3 for AVR code: https://gitlab.com/mjos/sha3-avr
+
+%% TODO: BetterCrypto.org
+
+%% TODO: wolfssl.com
+
+%% https://www.keylength.com/en/compare/
