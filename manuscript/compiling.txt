@@ -235,6 +235,8 @@ See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.d
 %% .. TODO: Visual Studio /RTCs flag research and add add proper place
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
 
+%% TODO: https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables
+
 ## Authors
 
 Thorsten Sick

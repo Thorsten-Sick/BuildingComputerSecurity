@@ -1,13 +1,21 @@
 # Linux
 
+## General
+
+https://linux-audit.com/security-program-implementing-linux-security/
 
 ## Malware
 
 Rootkits: https://linux-audit.com/intrusion-detection-linux-rootkits/
+https://linux-audit.com/dealing-with-linux-malware-insights-by-the-author-of-rkhunter/
 
 ## Lynis
 
 https://linux-audit.com/how-to-create-custom-tests-in-lynis/
+
+## Updates and upgrades
+
+https://linux-audit.com/upgrading-external-packages-with-unattended-upgrade/
 
 ## Hardening
 
@@ -21,11 +29,55 @@ Kernel: https://linux-audit.com/linux-kernel-security-and-how-to-improve-it/
 
 Server hardening: https://linux-audit.com/linux-server-hardening-most-important-steps-to-secure-systems/
 
+Ptrace protection: https://linux-audit.com/protect-ptrace-processes-kernel-yama-ptrace_scope/
+
+https://github.com/roxyd/roxyd.github.io/blob/master/talks/linux_strengthening.pdf
+
+Sysctl: https://linux-audit.com/linux-hardening-with-sysctl/
+
+File integrity: https://linux-audit.com/linux-system-integrity-explained-ensure-data-logging-and-kernel-integrity/
+
+Step-by-step hardening: https://linux-audit.com/linux-server-hardening-most-important-steps-to-secure-systems/
+
+Hosts file: https://linux-audit.com/is-your-etc-hosts-file-healthy/
+
 ## Debugging
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/
+
+## Password
+
+https://linux-audit.com/password-security-with-linux-etc-shadow-file/
 
 
 ## Apparmor
 
 https://linux-audit.com/introduction-into-linux-security-modules/
+
+## Firewall and networking
+
+IP blocking: https://linux-audit.com/blocking-ip-addresses-in-linux-with-iptables/
+
+netstat ++ https://linux-audit.com/alternative-netstat-ss-tool/
+
+HTTP Evader: Firewall evasion testing: https://noxxi.de/research/http-evader.html
+
+## NTP
+
+https://linux-audit.com/tlsdate-the-secure-alternative-for-ntpd-ntpdate-and-rdate/
+
+https://www.theregister.co.uk/2018/07/02/ntp_revision_to_end_timing_attacks/
+
+## Auditing
+
+https://linux-audit.com/tuning-auditd-high-performance-linux-auditing/
+
+Monitor file access: https://linux-audit.com/monitor-file-access-by-linux-processes/
+
+## Post compromise
+
+https://linux-audit.com/dealing-with-a-compromised-linux-system/
+
+## Core dumps
+
+https://linux-audit.com/understand-and-configure-core-dumps-work-on-linux/

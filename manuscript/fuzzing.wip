@@ -94,3 +94,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 %% .. TODO: more libfuzz
 
 %% .. TODO: Angora fuzzing (no code released yet): https://arxiv.org/abs/1803.01307
+
+## Wax
+
+https://github.com/evilsocket/wax

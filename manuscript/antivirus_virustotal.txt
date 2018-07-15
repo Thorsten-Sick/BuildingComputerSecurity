@@ -68,3 +68,6 @@ detected it and blocked it, you could want to play for time. Prepare for the
 next attack. In this case: Do not upload it to VirusTotal.
 
 But this is a very special case.
+
+
+%% TODO: https://thehackernews.com/2018/07/windows-adobe-zero-exploit.html

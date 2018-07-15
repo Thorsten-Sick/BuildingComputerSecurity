@@ -103,6 +103,8 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 %% TODO Add Let's Encrypt chapter
 
+%% https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579
+
 %% TODO Verify certificate (host name !)
 
 ## Revocation (OCSP = Online Certificate Status Protocol)
@@ -169,6 +171,8 @@ As an option the browser vendors offer a *preload list* where web sites can
 register and get their HSTS setting hard coded into the browsers.
 
 %% TODO Link to the list
+
+%% TODO: https://linux-audit.com/configure-hsts-http-strict-transport-security-apache-nginx/
 
 ## HPKP - HTTP Public Key Pinning
 

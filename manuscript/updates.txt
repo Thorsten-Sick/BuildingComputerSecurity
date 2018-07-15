@@ -203,3 +203,7 @@ verification and installation.
 Never break the update chain for your devices. As long as updates work you can
 fix anything. Focus of your testers should be to (automatically) test updates
 over several versions.
+
+
+%% Certificates
+%% Stolen Certificates: https://thehackernews.com/2018/07/digital-certificate-malware.html

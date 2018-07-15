@@ -60,3 +60,9 @@ Basic dance::
 .. TODO: Enhance DEbugging
 
 .. TODO: Check Shellcode
+
+
+%% Assembly cheat sheet: https://gumroad.com/l/arm-assembly-cheat-sheet
+
+
+%% ARM in memory reverse shell: https://versprite.com/blog/application-security/frida-engage-part-two-shellcoding-an-arm64-in-memory-reverse-tcp-shell-with-frida/
