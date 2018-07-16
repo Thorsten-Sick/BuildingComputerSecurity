@@ -1,15 +1,15 @@
-# CppCheck
+# Cppcheck
 
-CppCheck is a more advanced static code analysis tool than flawfinder.
+Cppcheck is a more advanced static code analysis tool than flawfinder.
 The drawback: It is more complicated.
 
 Where flawfinder checks with string searches for dangerous function calls,
-CppCheck compiles the program an can go more in depth. Wit a better
+Cppcheck compiles the program an can go more in depth. Wit a better
 understanding of what is happening than flawfinder does.
 
 For that reason it also has some more additional features.
 
-You can find CppCheck here:
+You can find Cppcheck here:
 
 http://cppcheck.sourceforge.net/
 
@@ -28,8 +28,8 @@ Developers and Testers
 
 ## The Makefile
 
-As you basically call CppCheck like any compiler you can integrate it into your
-default makfile as a specific target.
+As you basically call Cppcheck like any compiler you can integrate it into your
+default Makefile as a specific target.
 
 A
 
@@ -40,14 +40,14 @@ would then run CPPCheck.
 
 ## Feature: Library verification
 
-CppCheck checks if library functions are used as intended. It knows about the
-standard libraries. If you use less common ones ou should add your own
+Cppcheck checks if library functions are used as intended. It knows about the
+standard libraries. If you use less common ones you should add your own
 configuration for those. The manual has more about that.
 
-To edit the configuration file for the library use the CppCheck GUI.
+To edit the configuration file for the library use the Cppcheck GUI.
 
 If the library is a common and public one, you may think about contributing the
-configuration to the CppCheck project.
+configuration to the Cppcheck project.
 
 Now for the extra trick: If your team produces in-house libraries you should
 generate one of those config files and ship it with the library. This enables

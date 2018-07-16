@@ -188,7 +188,7 @@ Very dense talk on Bluetooth LE security.
 
 https://media.ccc.de/v/SHA2017-230-hack-a-ble
 
-### Lockpicking in the IoT {#reference-presentation-lockpicking-in-the-iot}
+### Lock-picking in the IoT {#reference-presentation-lockpicking-in-the-iot}
 
 https://media.ccc.de/v/33c3-8019-lockpicking_in_the_iot
 
@@ -241,7 +241,7 @@ non-technical people.
 
 ### Future Crimes {#reference-book-future-crimes}
 
-Future Crimes by Marc Goodman is a book covering the experience of a cybercrime
+Future Crimes by Marc Goodman is a book covering the experience of a cyber crime
 police officer. Every chapter is a noteworthy and often entertaining example of
 a real crime. Entertaining and does not require technical knowledge. Good for
 training critical thinking and security thinking.

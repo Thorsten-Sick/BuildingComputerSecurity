@@ -18,7 +18,7 @@ Data can be send to any kind of input:
 * Shared memory
 * Environment variables
 * WiFi and Bluetooth
-* at the library api (libfuzzer)
+* at the library API (libfuzzer)
 
 If you ship software that includes 3rd party libraries or programs, you should
 fuzz those as well. You ship it to customers - you are responsible.
@@ -114,7 +114,7 @@ Taking an example from Radamsa (check out the link, there are more examples).
 
 
 
-## AFL american fuzzy lop
+## AFL American fuzzy lop
 
 Uses compile-time instrumentation and a genetic algorithm to discover new
 test cases.
@@ -127,14 +127,14 @@ Con:
     * It needs instrumented binaries - you have to re-compile them
 
 {lang="bash"}
-    apt install afl
+    apt install AFL
 
 To use AFL the program must be compiled with a special AFL compiler.
 AFL is available for clang (afl-clang) and gcc (afl-gcc).
 
 After compiling you call it with *afl-fuzz*.
 
-A good example is the *fuzzgoat* project which has a vunerable program and a
+A good example is the *fuzzgoat* project which has a vulnerable program and a
 Makefile to show how AFL is compiled into it and then executed.
 
 The home page of AFL: http://lcamtuf.coredump.cx/afl/
@@ -146,7 +146,7 @@ The best resource so far is the README:
 
 */usr/share/doc/afl-doc/docs/README*
 
-## LibFuzzer
+## libFuzzer
 
 The most effective way if you have access to the API and code. It is part of Clang 6.0+.
 You may notice: Ubuntu 17.10 at least does not have this Clang installed yet. So you will
@@ -156,7 +156,7 @@ https://llvm.org/docs/LibFuzzer.html
 
 LibFuzzer supports a Corpus for Input and Output samples to test with. This improves speed a lot.
 
-%% .. TODO: more libfuzz
+%% .. TODO: more libFuzzer
 
 ## More fuzzing tricks
 
@@ -168,4 +168,4 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 
 
-%% TODO run under valgrind or strace or gdb
+%% TODO run under Valgrind or strace or gdb

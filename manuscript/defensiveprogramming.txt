@@ -59,7 +59,7 @@ Asserts are used during development and debug phase and will be switched off
 in release (by define NDEBUG for C). Asserts make sure a certain condition is
 true. If not, the program aborts and you can start debugging it.
 By using asserts you can trigger this easy to debug abort close to the issue
-where an invalid state has been generated. Without an assert it coul dhappen
+where an invalid state has been generated. Without an assert it could happen
 that your program limps on and crashes in some very unrelated function.
 Debugging that is much harder.
 

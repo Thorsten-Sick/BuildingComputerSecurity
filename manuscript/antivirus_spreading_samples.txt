@@ -41,7 +41,7 @@ With this information the AV vendors will start to investigate.
 
 ## The reason why your software is detected as a false positive (all the time)
 
-In the AV companie's virus lab unknown software is classified. Basically into
+In the AV company's virus lab unknown software is classified. Basically into
 the categories "cleanstuff" (harmless) and "malware".
 
 There are lots of classifiers in virus labs. And normally unknown software
@@ -82,7 +82,7 @@ Avast, Kaspersky, Eset, Avira, Microsoft Windows Defender, F-Secure, Bitdefender
 
 Sometimes AV people send mails with attached malware around. The tradition is:
 The malware sample is zipped. And password protected. The password is "infected".
-This is to prevent anyone from accidentially double click the wrong file.
+This is to prevent anyone from accidentally double click the wrong file.
 
 Dealing the while day with malware you learn one thing: Double clicks happen.
 Do not ask for detail.
@@ -112,7 +112,7 @@ https://www.ccc.de/
 ## Sucker punch
 
 The AV companies are on the side of their customers and fight online crime. With
-the Kasperky accusations and more and more state sponsored malware trust in the
+the Kaspersky accusations and more and more state sponsored malware trust in the
 AV companies is shrinking. IMHO the big ones practice fair play. But I can
 understand that non-insiders do not trust them.
 

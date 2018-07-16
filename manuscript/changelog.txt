@@ -21,7 +21,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *antivirus-spreading-samples*
 * Added *antivirus virustotal*
 * Added *Cppcheck chapter*
-
+* Added *Testing compiling* chapter
 
 ## June 2018
 

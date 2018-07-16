@@ -46,7 +46,7 @@ So what to encrypt ? The answer is:
 For several reasons:
 
 * Encrypted pages get a better Google ranking
-* Encrypted pages will not show a "this side is insecure" url bar in the browser
+* Encrypted pages will not show a "this side is insecure" URL bar in the browser
 * You will not forget to encrypt sensitive parts of your page if you encrypt everything
 * An active attacker can modify unencrypted parts of the page while the data is in transit (for example if the attacker is on the same WiFi network as the victim)
     * The attacker will the modify the link to the login form
@@ -61,7 +61,7 @@ These are the reasons why you should **Encrypt everything**
 Tools for that kind of attacks are:
 
 * MITMPROXY https://mitmproxy.org/
-* Wifi Pineapple https://www.wifipineapple.com/
+* WiFi Pineapple https://www.wifipineapple.com/
 * Fiddler https://www.telerik.com/fiddler
 
 ## Mozilla server side TLS config guide

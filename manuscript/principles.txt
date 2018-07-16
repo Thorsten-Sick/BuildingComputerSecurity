@@ -218,7 +218,7 @@ Scanning as MITM is a very bad idea.
 The solution is: Filter at the endpoints. In the browser, When files are
 written to the endpoint system, ...
 
-The user (or the admin - for larger installations) should also have full controll
+The user (or the admin - for larger installations) should also have full control
 about what is filtered.
 
 

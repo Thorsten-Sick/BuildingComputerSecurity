@@ -1,6 +1,6 @@
-# Virustotal  {#chapter-virustotal}
+# VirusTotal  {#chapter-virustotal}
 
-Virustotal is an online service that scans uploaded files with
+VirusTotal is an online service that scans uploaded files with
 multiple AV solutions. Currently it is owned by Google.
 
 https://www.virustotal.com/
@@ -11,13 +11,13 @@ extra knowledge.
 
 1. Scanners are not necessarily up-to-date
 2. Some scanners in there are small, unknown, or have a very specific target
-3. More about targets: In an office environment, finding some admin tools on a normal working pc is highly suspicious (*nmap* for example). But it is quite normal on a network admin's PC. This grey area is handled differently by different scanners.
+3. More about targets: In an office environment, finding some admin tools on a normal working PC is highly suspicious (*nmap* for example). But it is quite normal on a network admin's PC. This grey area is handled differently by different scanners.
 4. Some scanners are optimized to find a very specific malware type. And ignore the rest (rootkits, ...)
-5. Some scanners need cloud connection or behaviour analysis for full performance. The under perform on Virustotal
+5. Some scanners need cloud connection or behaviour analysis for full performance. The under perform on VirusTotal
 6. Uploaded files are shared with AV vendors or other people with API access
 7. It can be detected if a file has already been uploaded before. And when.
 
-VirusTotal accepts files, hashes, urls, ips and domains and checks them against
+VirusTotal accepts files, hashes, URLs, IPs and domains and checks them against
 multiple detection solutions and it's own history database.
 
 Now for specific use cases:
@@ -34,7 +34,7 @@ AV testing is hard.
 
 ## Getting a feeling for a file
 
-If you upload a file or URL it will be scanned by mutliple scanners and you
+If you upload a file or URL it will be scanned by multiple scanners and you
 will get the results. You should check for the scanners with detection on the file first.
 Are there any with some reputation ? If yes this is a good sign for "this could really be malicious".
 Has this file been uploaded already some days ago ? If there is detection and the labs
@@ -53,9 +53,9 @@ file locked away in your local quarantine.
 
 By uploading a sample to VirusTotal you are submitting it to the whole AV
 community. And they can cause trouble for the adversaries who wrote the malware
-by detecting it and it's sibblings.
+by detecting it and it's siblings.
 
-This is a good thing and you should upload suspicious things. Just iun case.
+This is a good thing and you should upload suspicious things. Just in case.
 
 See also [spreading samples](#chapter-spreading-samples).
 

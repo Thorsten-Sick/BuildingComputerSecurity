@@ -140,7 +140,7 @@ through the channels that worked the first time.
 For the defender the persistence part is relevant because they can **check at
 well known parts of the system** for traces of the malware.
 
-* autostarted programs
+* auto-started programs
 * boot record
 * registry keys
 
