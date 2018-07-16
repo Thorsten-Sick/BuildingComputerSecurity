@@ -37,9 +37,15 @@ Sysctl: https://linux-audit.com/linux-hardening-with-sysctl/
 
 File integrity: https://linux-audit.com/linux-system-integrity-explained-ensure-data-logging-and-kernel-integrity/
 
+File access: https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
+
 Step-by-step hardening: https://linux-audit.com/linux-server-hardening-most-important-steps-to-secure-systems/
 
 Hosts file: https://linux-audit.com/is-your-etc-hosts-file-healthy/
+
+Kernel modules: https://linux-audit.com/increase-kernel-integrity-with-disabled-linux-kernel-modules-loading/
+
+Otseca: https://linuxsecurity.expert/tools/otseca/
 
 ## Debugging
 
