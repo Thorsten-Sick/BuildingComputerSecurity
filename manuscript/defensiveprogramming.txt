@@ -54,6 +54,8 @@ much damage as possible (*remote code execution* would be one possible goal of a
 
 ### Use asserts
 
+Asserts are debugging tools.
+
 A simple way of doing module tests (as in "unit tests") is to use assert.
 Asserts are used during development and debug phase and will be switched off
 in release (by define NDEBUG for C). Asserts make sure a certain condition is
