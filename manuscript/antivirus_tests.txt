@@ -1,6 +1,5 @@
 # Anti Virus tests {#chapter-antivirus-tests}
 
-
 ## Audience
 
 Architects, Manager
@@ -18,9 +17,9 @@ Malware has a short life span. New malware is generated every few minutes
 Testing malware is tricky as well.
 
 A testing lab needs access to large heaps of current malware, lots of virtual
-machines, verification tools if the malware is a dud or dangerous, ...
+machines, verification tools to identify if the malware is a dud or dangerous, ...
 
-Normally it requires teams, racks of computers, terabytes of malware and
+This it requires teams, racks of computers, terabytes of malware and
 cleanstuff (for FP tests) and years of experience.
 
 Computer magazines normally let external experts test the AV software for
@@ -31,9 +30,9 @@ External experts are
 * https://www.av-test.org/de/antivirus/
 * https://www.av-comparatives.org/
 * https://www.virusbulletin.com/testing/
-    * Here not having a FP is the most tricky part of the test
+    * Which is a AV industry internal organisation
 
-Also check out who is not participating in those tests....could be a red flag.
+Also check out who is **not** participating in those tests....this could be a red flag.
 
 ## Methods
 
@@ -45,7 +44,7 @@ A large folder containing historic and current malware is scanned. The results
 will be biased because the focus is on historic malware. The
 dangerous - current - malware is under-represented.
 
-Also the tested AV products can not use some of their protection tools like
+The tested AV products can not use some of their protection tools like
 URL blacklists, behaviour detection, cloud technology, ...
 
 For that reason this kind of tests is replaced by:
@@ -53,7 +52,7 @@ For that reason this kind of tests is replaced by:
 ### Real-world protection tests
 
 Current malware is used to "infect" machines where a full AV product is running.
-The antivirus can use all it's features to protect.
+The antivirus can use all it's features to protect the machine.
 
 * URL blacklist
 * Static file scanning
@@ -64,15 +63,17 @@ The antivirus can use all it's features to protect.
 The results of this test are much more significant but the test is harder to run
 and the malware sample set will be smaller.
 
-This is the future.
+This kind of tests is the future.
 
 ### DIY malware tests
 
 Some people do malware tests (by modifying malware, finding some stuff on the
-internet, ...) and do their own testing. Please do not do that. As patching the
-malware samples could have broken them: not detecting them is the right thing.
+internet, ...) and do their own testing. Especially patching malware samples
+is a critical thing. Please do not do that. Patching the
+malware sample could have broken it: it is not running properly and
+is causing no harm. **Not** detecting them is the right thing.
 
-Be careful when you see DIY malware tests and always verify.
+Be careful when you see DIY malware tests and always verify with other sources.
 
 ## Eicar {#chapter-eicar}
 
@@ -82,22 +83,26 @@ system.
 Basic questions should be:
 
 * Is the proxy intercepting web traffic to scan it ?
-* Is the proxy scanning mails when I fetch them with my client ?
+* Is the proxy scanning mails when I fetch them with the mail client ?
 * Is the AV scanning files when they are stored on hard-disk (called: On-access scanning)
 * Is it scanning when I execute a file ?
 * Is it scanning when I copy a file to a USB stick ?
 
-Exactly for these kind of tests there is the EICAR test file. Every AV should detect it.
-It is for testing exact this kind of situations mentioned above.
+Exactly for these kind of tests there is the EICAR test file. Every AV should
+detect it. And it is easy to detect. It was created for testing exact this kind of
+situations mentioned above.
 
 The file can be found here: http://www.eicar.org/86-0-Intended-use.html
 
 It is just a few bytes long and you can copy & paste it.
 
+Move it around your system and test which entry points are not protected by
+your antivirus scanner.
+
 ## Windows Defender
 
 Windows Defender - pre-installed on Windows - is a kind of fallback if no other
-AV is installed. It improved the detection rate over the last years and already
-offers a decent baseline. There are still good reasons to hunt for 3rd party
+AV is installed. It improved it's detection rate over the last years and already
+offers a decent baseline. There are still good reasons to install 3rd party
 scanner. But from an engineering perspective you can expect:
-**A current Windows with Defender has a decent scanner installed**
+**A current Windows with Defender has a decent scanner already installed**

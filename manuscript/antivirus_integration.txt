@@ -52,6 +52,7 @@ I would love the AMSI 2.0 to also offer:
 * Get the name of the malware that was detected (for display reasons)
 
 But that is missing.
+To make it simple
 
 https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
 
@@ -68,7 +69,7 @@ The reason for that:
 You can test your implementation with the [EICAR](#chapter-eicar) test malware.
 
 Keep in mind: Not all the Antivirus scanners connect to the AMSI interface.
-Maybe you had bad luck and the one on your development PC just is not connected.
+Maybe you had bad luck and the one on your development PC is just not connected.
 
 ## Google Safe Browsing
 
@@ -79,12 +80,12 @@ It offers two ways to access the data. One is simple, the other one privacy
 respecting.
 
 You should scan at least the URLs that are followed. Maybe even the URLs
-contained in a document. If there is one URL in there that is malicious, the
-whole document could be dangerous.
+contained in a document. If there is one URL in the document you are processing
+that is malicious, the whole document could be dangerous.
 
-Like a interactive text document with a script that contains the URL to a
-malware server. This would very likely be a downloader - one of the steps
-between *exploit* and *infection*.
+A common attack would be an interactive text document with a script that
+contains the URL to a malware server. This would be a so called *downloader* -
+one of the stages of a malware attack between *exploit* and *infection*.
 
 To test your implementation, you can use this test URL:
 

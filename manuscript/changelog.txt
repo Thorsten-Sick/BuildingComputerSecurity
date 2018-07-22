@@ -9,9 +9,9 @@ changelog to make it simpler for you to find the new sections.
 
 ## July 2018
 
-* Added *attacker's goals*
-* Added *antivirus-tests*
-* Added *antivirus-integration*
+* Added *attacker's goals*  %% Reviewed
+* Added *antivirus-tests*  %% Reviewed
+* Added *antivirus-integration*  %% TODO: Split URL
 * Changed PDF format to A5 for a typical book-size PDF
 * Added minimal *fuzzing* chapter
 * Extended "Defensive programming"

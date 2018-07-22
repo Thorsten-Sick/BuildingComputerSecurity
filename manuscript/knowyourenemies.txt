@@ -1,10 +1,12 @@
-# Basics: Know your attackers {#chapter-attackers}
+# Basics: Know your enemies {#chapter-attackers}
 
 Attackers come in several flavours and can be enemies or friendly.
+I'll do what most of the security books do: Call the attacker
+the *adversary*.
 
 Just because someone found a vulnerability in your application does not make him
 an enemy. What he does with this knowledge - help or harm you - will define
-the attacker's moral position.
+the adversarie's moral position.
 
 You will know maybe feel a reflex like "No one will hack my hardware/software".
 This is a protective reflex which will do you more harm than good. Relax,
@@ -18,7 +20,7 @@ very expensive service (pen testing) for free[^note1]!
 
 Goal: Curiosity. And fame. And creating a more secure world
 
-Target: Does not have to be a high value target. Crazy things work even better
+Target: Does not have to be a high value target. Crazy things work even better for fame
 
 Resources: They will invest hundreds of engineering hours
 
@@ -37,12 +39,12 @@ An example:
 
 Similar to hackers. They have more resources. But their goal is more academic:
 They do not necessarily want to produce a working exploit as long as the idea and
-approach are totally new.
-
+approach are totally new. They will also try to create new hacking technologies
+and push the boundaries a lot more.
 
 Do: Enjoy their ideas
 
-Don't: Be distracted. Most attacks used at the moment are several years old.
+Don't: Be distracted. Most attacks used by malicious attackers are several years old.
 
 ## Script kiddies
 
@@ -52,11 +54,11 @@ Target: They know a few tricks, have some tools and choose their target by what 
 
 Resources: Some tools
 
-Do: Protect against standard attacks
+Do: Protect against standard attacks - this is what they will use.
 
 ## Organized Crime
 
-Those are the powers currently creating malware and are making lots of money.
+Those are the powers currently creating malware and making lots of money.
 It is organised crime because they have specialists for all those tasks needed to:
 
 * Build malware
@@ -72,12 +74,19 @@ hard to predict what the next way will be. We currently have:
 * Blackmail shops with DDOS attacks
 * Stealing private data and credentials (mail addresses for SPAM, credit card numbers, ....)
 * Ransomware
-* Crypto miner to use the victims power and CPU to mine crypto currencies
+* Crypto miner malware to use the victims power and CPU to mine crypto currencies
 
-Modern malware is modular and can be deployed with several of these attack modules.
+Modern malware is modular and can be deployed with several of these attacks
+implemented as modules for the malware.
 
 The Command and Control interfaces of the malware are shipped with statistics dashboard where
 attackers can decide what kind of module will currently have the best ROI.
+
+There is malware that first measures the processing power of the machine and
+the number of potential valuable file son disk.
+
+* If it finds high processing power and not much user generated content: it runs a crypto miner
+* If it finds lots of user generated content and low processing power it runs as ransomware
 
 %% TODO: Nation states: NSA and angry birds
 
