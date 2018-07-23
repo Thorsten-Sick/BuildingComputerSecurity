@@ -13,6 +13,23 @@ Available directly in the compiler:
 
 * Security warnings: -Wformat -Wformat-security -Werror=format-security
 
+## Static analysis
+
+https://clang-analyzer.llvm.org/
+
+sudo apt install clang clang-tools
+
+sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
+
+scan-build <C-Compiler and it's settings>
+
+## Dynamic analysis
+
+https://clang.llvm.org/docs/AddressSanitizer.html
+https://clang.llvm.org/docs/MemorySanitizer.html
+https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
+https://clang.llvm.org/docs/LeakSanitizer.html
+https://clang.llvm.org/docs/SanitizerCoverage.html
 
 #### CLANG
 
