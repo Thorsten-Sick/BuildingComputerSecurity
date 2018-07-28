@@ -1,7 +1,7 @@
 # Testing compiling features {#chapter-testing-compiling}
 
 As many mitigation features are kind of invisible you will needs tools
-to test the binary before release.
+to test the compiled binary before you release it.
 
 You want to automatically test:
 
@@ -21,7 +21,7 @@ Developers and Testers
 
 ## Linux
 
-On Linux a tool to verify the hardening settings is *hardening-check* which can
+On Linux, a tool to verify the hardening settings is *hardening-check* which can
 be found here:
 
 https://github.com/ProhtMeyhet/hardening-check
@@ -34,7 +34,9 @@ It will check for:
 * Read-only relocations (relro)
 * Immediate binding
 
-Testing specifically for **immediate binding**:
+You can do many of these verifications using built-in tools.
+
+Testing specifically for **immediate binding** manually:
 
 {lang="bash"}
     readelf -d program | grep BIND
@@ -64,7 +66,7 @@ Checking for **forgotten debug symbols** in a secure program:
     no symbols
 
 If you see anything else (especially a list of symbols) you forgot them in
-the binary. Remove them by calling *strip*.
+the binary. Remove them by calling the command line tool *strip*.
 
 %% Also relevant for "elf_format.wip": https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
 
@@ -78,16 +80,20 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
 https://github.com/NetSPI/PESecurity
 
+*I had no time so far to test this tool. I will update this paragraph as soon as I did. I am still leaving it here because it is very valuable even as unverified information*
+
 %% .. TODO: Test
 
 
 ## Attached info
 
 It is possible to attach an info blob (like xml) to a PE and ELF file.
-Your compiler could create that and your release system verify it. It can
-contain things like a "beta" flag - to avoid accidentally release a beta on
-the stable update channel and version numbers. Or it could be a list of
-dependencies (modules and their version) to other components you offer.
+Directly after you compiled the binary, your build tool could create that info blob
+and your release system could later verify it - to be sure to release the
+intended version of the file. It can contain things like a "beta" flag -
+to avoid accidentally release a beta on the stable update channel and
+version numbers - to ensure to release the proper version. Or it could be a
+list of dependencies (modules and their version) to other components you offer.
 
 Of course this can also be achieved by registering the binary in your file
 database by sha256 and putting the flags in there.
