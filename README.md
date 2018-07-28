@@ -24,3 +24,11 @@ What I can NOT do:
 * Go deep in some special topics. There are better books for that. Those will be linked to the chapters.
 
 This book will be on: https://leanpub.com/buildingcomputersecurity
+
+
+Sources
+-------
+
+Font: https://www.freejapanesefont.com/zin-hena-bokuryu-calligraphy-font-download/
+https://www.freejapanesefont.com/nagayama-kai-calligraphy-font-download/
+
