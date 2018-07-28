@@ -4,10 +4,11 @@ Cppcheck is a more advanced static code analysis tool than flawfinder.
 The drawback: It is more complicated.
 
 Where flawfinder checks with string searches for dangerous function calls,
-Cppcheck compiles the program an can go more in depth. Wit a better
-understanding of what is happening than flawfinder does.
+Cppcheck compiles the program to go more in depth. It does care for the
+structure of the program - which flawfinder just can not do.
 
-For that reason it also has some more additional features.
+These more complex pre-processing steps are the base for the additional fancy
+features Cppcheck offers.
 
 You can find Cppcheck here:
 
@@ -42,7 +43,7 @@ would then run CPPCheck.
 
 Cppcheck checks if library functions are used as intended. It knows about the
 standard libraries. If you use less common ones you should add your own
-configuration for those. The manual has more about that.
+configuration for those. The Cppcheck manual has more about that.
 
 To edit the configuration file for the library use the Cppcheck GUI.
 

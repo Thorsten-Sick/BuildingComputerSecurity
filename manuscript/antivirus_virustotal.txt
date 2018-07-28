@@ -6,15 +6,15 @@ multiple AV solutions. Currently it is owned by Google.
 https://www.virustotal.com/
 
 Using it is kind of tricky. File upload is simple enough, but
-reading the results and properly interpreting them require some
+reading the results and properly interpreting them requires some
 extra knowledge.
 
 1. Scanners are not necessarily up-to-date
 2. Some scanners in there are small, unknown, or have a very specific target
-3. More about targets: In an office environment, finding some admin tools on a normal working PC is highly suspicious (*nmap* for example). But it is quite normal on a network admin's PC. This grey area is handled differently by different scanners.
+3. More about targets: In an office environment, finding some admin tools on a normal office PC is highly suspicious (*nmap* for example). But it is quite normal on a network admin's PC. This grey area is handled differently by different scanners.
 4. Some scanners are optimized to find a very specific malware type. And ignore the rest (rootkits, ...)
-5. Some scanners need cloud connection or behaviour analysis for full performance. The under perform on VirusTotal
-6. Uploaded files are shared with AV vendors or other people with API access
+5. Some scanners need cloud connection or behaviour analysis for full performance. They under perform on VirusTotal
+6. Uploaded files are shared with AV vendors or other people with VirusTotal-API access
 7. It can be detected if a file has already been uploaded before. And when.
 
 VirusTotal accepts files, hashes, URLs, IPs and domains and checks them against
@@ -24,13 +24,15 @@ Now for specific use cases:
 
 ## DIY AV testing using VirusTotal: Does not work
 
-Doing your own AV test will not give you proper results.
+Doing your own AV test using VirusTotal will not give you proper results.
 Some AVs will be under-performing because their coolest feature
-(for example: behaviour) will not work on Google's servers. Other AV solutions
+(for example: behaviour detection) will not work on Google's servers. Other AV solutions
 will not necessarily be up-to-date. And another group will target only very
 specific malware.
 
 AV testing is hard.
+
+And basing your results on VirusTotal will not work.
 
 ## Getting a feeling for a file
 
@@ -38,7 +40,7 @@ If you upload a file or URL it will be scanned by multiple scanners and you
 will get the results. You should check for the scanners with detection on the file first.
 Are there any with some reputation ? If yes this is a good sign for "this could really be malicious".
 Has this file been uploaded already some days ago ? If there is detection and the labs
-have this file already for some time you can assume it has been properly analysed.
+have this file already for some time you can assume it has been properly analysed. And the detection is no false positive.
 
 Maybe, if you have some time (days): Re-upload your file in a few days again and
 check if the detection did change.
@@ -62,12 +64,12 @@ See also [spreading samples](#chapter-spreading-samples).
 ## Not to do: Uploading APT samples
 
 If you have a suspicion that the malware sample was a targeted attack (you are
-a NGO or admin for a big company) it could be wise not to upload it to VirusTotal.
+working for a NGO, journalist, blogger in a regime or admin for a big company)
+it could be wise **not** to upload it to VirusTotal.
 You will give the attacker the information that you detected the attack. If you
 detected it and blocked it, you could want to play for time. Prepare for the
 next attack. In this case: Do not upload it to VirusTotal.
 
 But this is a very special case.
-
 
 %% TODO: https://thehackernews.com/2018/07/windows-adobe-zero-exploit.html

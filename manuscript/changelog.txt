@@ -20,8 +20,8 @@ changelog to make it simpler for you to find the new sections.
 * Extended "External references"
 * Added *antivirus-spreading-samples*
   * Renamed to *antivirus-sharing-samples* Less funny, better to understand that way
-* Added *antivirus virustotal*
-* Added *Cppcheck chapter*
+* Added *antivirus virustotal* %% Reviewed
+* Added *Cppcheck chapter*  %% Reviewed
 * Added *Testing compiling* chapter
 
 ## June 2018
