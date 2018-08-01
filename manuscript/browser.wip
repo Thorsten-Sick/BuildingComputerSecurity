@@ -18,6 +18,8 @@ Exploit Kits
 
 .. TODO: Write fallback social engineering
 
+https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
 Cookies
 -------
 
@@ -55,3 +57,12 @@ BEEF
 ----
 
 .. TODO Write about beef
+
+%% TODO: Malwarebytes browser extension https://news.hitb.org/content/introducing-malwarebytes-browser-extension
+
+%% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
+
+## Phishing
+
+https://github.com/MalwareReverseBrasil/phishreport

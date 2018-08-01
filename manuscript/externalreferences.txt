@@ -280,3 +280,8 @@ training critical thinking and security thinking.
 
 
 %% https://github.com/sindresorhus/awesome
+
+%% Malware economics: https://www.techrepublic.com/article/starting-at-40-hackers-can-attack-your-business-with-services-bought-on-the-dark-web/#ftag=RSS56d97e7
+
+
+%% CTF by Samsung: https://research.samsung.com/sctf

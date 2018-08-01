@@ -47,6 +47,16 @@ Kernel modules: https://linux-audit.com/increase-kernel-integrity-with-disabled-
 
 Otseca: https://linuxsecurity.expert/tools/otseca/
 
+ACLs: https://linux-audit.com/using-file-acls-linux-additional-security/
+
+https://linux-audit.com/determine-processes-which-need-a-restart-with-checkrestart-needrestart/
+
+https://linux-audit.com/using-xattrs-extended-attributes-on-linux/
+
+https://linux-audit.com/security-integration-configuration-management-and-auditing/
+
+https://linux-audit.com/linux-audit-framework-101-basic-rules-for-configuration/
+
 ## Debugging
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/
@@ -73,6 +83,10 @@ HTTP Evader: Firewall evasion testing: https://noxxi.de/research/http-evader.htm
 https://linux-audit.com/tlsdate-the-secure-alternative-for-ntpd-ntpdate-and-rdate/
 
 https://www.theregister.co.uk/2018/07/02/ntp_revision_to_end_timing_attacks/
+
+## Shell scripts
+
+https://linuxsecurity.expert/tools/shellharden/
 
 ## Auditing
 
