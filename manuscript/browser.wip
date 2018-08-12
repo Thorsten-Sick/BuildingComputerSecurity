@@ -1,57 +1,58 @@
-Browser security
-================
+# Browser security
 
-.. State: 10 % Browser
+%%  State: 10 % Browser
 
 
-Hardening
----------
+## Hardening
 
 https://twitter.com/_ifis/status/988774413565943808?s=09
 
-.. TODO: Use this list and write something
+%% TODO: Use this list and write something
 
-Exploit Kits
-------------
+## Exploit Kits
 
-.. TODO: Write Info source
+%% TODO: Write Info source
 
-.. TODO: Write fallback social engineering
+%% TODO: Write fallback social engineering
 
-Cookies
--------
+## Cookies
 
-.. TODO: write
+%% TODO: write
 
-Fingerprinting
---------------
+## Fingerprinting
 
-.. TODO: Write
+%% TODO: Write
 
-.. TODO: Write HPKP Fingerprinting
+%% TODO: Write HPKP Fingerprinting
 
-Ads/Malvertizing
-----------------
+%% TODO: Fingerprinting test page
 
-.. TODO: Write
+## Ads/Malvertizing
 
-TLS/SSL/HTTPS
--------------
+%% TODO: Write
 
-.. TODO: Write HTTPS-Everywhere
+## TLS/SSL/HTTPS
 
-.. TODO: Write CA trouble
+%% TODO: Write HTTPS-Everywhere
 
-.. TODO: Write HSTS/HPKP
+%% TODO: Write CA trouble
 
-.. TODO: write CT
+%% TODO: Write HSTS/HPKP
 
-Facebook
---------
+%% TODO: write CT
+
+## Facebook
 
 https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing
 
-BEEF
-----
+## BEEF
 
-.. TODO Write about beef
+%% TODO Write about beef
+
+## Burp Suite
+
+## Attacks on Routers
+
+## Exploit Kits
+
+## Pseudonymity
