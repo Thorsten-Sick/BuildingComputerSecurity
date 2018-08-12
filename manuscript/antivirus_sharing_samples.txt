@@ -1,0 +1,151 @@
+# Spreading malware samples {#chapter-spreading-malware-samples}
+
+This chapter is about contacting AV vendors and sending them malware you found.
+Also about fixing false positives with the help of those vendors.
+
+Some software companies seem to have bad karma and the software they release
+has a hight likelyhood of being flagged as malware  - despite being harmless.
+This can be caused by uncommon build tools and post-build processing of the
+software. For those unlucky software teams: Get into close contact with the
+AV companies and fix this problem together. More about that in this chapter.
+
+**AV companies hate causing false positives**
+
+By reporting found FPs you help yourself and them.
+
+They are also interested in the newset malware. Are you running a server that
+turned out to be a malware magnet ? Contact your AV vendor.
+
+The basic data the vendors need is the files. But they will also love to have
+some background information. Maybe they already have the sample in their large
+database. But it did not get a proper name or the proper priority because it
+was just "one in a million". So the detection name will just be a number
+or "Agent-something-number" kind of name.
+
+But if you are an NGO or run essential government infrastructure, that could
+increase the priority of the malware a lot - tell the AV vendor that!
+
+In addition to the file, there is more information that will help the virus
+labs to process the data.
+
+You do not have to submit all those info, the list is more an inspiration.
+
+**Info for malware**
+
+* Are you a NGO or special target ?
+* How did you get the malware ? (Infection chain)
+    * Mail
+    * Mail sending you to a URL
+    * Other social media
+* Did it do anything to your system ?
+* Any URLs connected to this malware - do your server logs show any traffic caused by the sample ?
+* Any registry keys or mutexes created by the sample ?
+
+**Info for false positives**
+
+* Did you write this software yourself ?
+* Did you have FPs before on your software ?
+* Where did you get this software ?
+
+** IOC **
+
+No matter if reporting false positives or malware, having the IOCs (Indicators Of Compromise)
+in your report will help the AV labs to scan their databse for info:
+
+* The file
+* A hash of your file (md5, sha1) - which one to use depends on the database of the AV vendor
+* URLs
+
+## The reason why your software is detected as a false positive (all the time)
+
+In the AV company's virus lab unknown software is classified. Basically into
+the categories "cleanstuff" (harmless) and "malware".
+
+There are lots of classifiers in virus labs. And normally unknown software
+will have to face all of them.
+
+**Analysis sandboxes**: Virtual Machines that observe the software
+running and modifying the system.
+
+**Structural analysis**: Checks if it is compiled using an exotic compiler, modified from assembler, ...
+
+**Reputation based** could analyse how your software is globally distributed. A low
+install base and something "sneaky" could be an indicator for a targeted malware.
+
+**Automatic debuggers**: Stepping through your software and trying to find strange behaviour.
+
+** Artificial Intelligence**: Grouping similar samples. And checking if the new
+sample is closer to a "cleanstuff" or the "malware" group.
+
+**Humans**: Analysing unknown software that is in the dark grey area.
+
+Normally a virus lab can get about 4 new malware samples per second. And even
+more clean or broken files in addition. Automatic classification is king.
+
+If you contact the virus lab they could give you a hint what triggered their
+machines. And how to avoid it.
+
+## Where to submit to AV companies
+
+I just googled "avast submit sample" and got directly sent to their page for
+submission: https://www.avast.com/report-malicious-file.php. You should submit
+to the AV you are using and maybe to 3 more (for good measure).
+
+I'll just drop some names here and you can start searching yourself:
+
+Avast, Kaspersky, Eset, Avira, Microsoft Windows Defender, F-Secure, Bitdefender
+
+## Submission by Mail
+
+Sometimes AV people send mails with attached malware around (from support people
+to the lab, for example). The tradition is:
+The malware sample is zipped. And password protected. The password is "infected".
+This is to prevent anyone from accidentally double click the wrong file.
+
+No, it is not top-secure. This is not the goal. It is to prevent accidents.
+
+When dealing the whole day with malware you learn one thing: Double clicks happen.
+Do not ask for detail. Renaming a *.exe into a *.vir protects you.
+
+## Security without borders
+
+One of the NGOs handling potential cyber attacks on endangered people is
+"Security Without Borders" https://www.securitywithoutborders.org/
+
+If you are in special danger contact them as well.
+
+## Citizen Lab
+
+Also relevant for high profile attacks on NGOs is the Citizen Lab. They did
+some interesting and relevant research the last few years.
+
+https://citizenlab.ca/
+
+If you are in special danger contact them as well.
+
+## CCC
+
+The German hackers - organized in the CCC club - already got some fame for
+finding and analysing the German Government-Trojan. If you have a sample of a
+malware that is state sponsored it may be worth the effort to contact them.
+
+https://www.ccc.de/
+
+## Sucker punch
+
+The AV companies are on the side of their customers and fight online crime. With
+the Kaspersky accusations and more and more state sponsored malware, trust in the
+AV companies is eroding. IMHO the big AV companies practice fair play -
+including Kaspersky. But I can understand that non-insiders do not trust them.
+
+If you should not trust the AV guys (because your malware is for example
+Russian state malware and you do not trust Kaspersky), you could do the following:
+
+* Send the malware to all AV vendors with details why you think it is state sponsored
+* Also send the same samples and description to the big testers
+    * https://www.av-test.org/
+    * https://www.av-comparatives.org/
+
+They could include it in the next test. And pressure the AV companies to act.
+AFAIK this has never been done before and I do not know it it will work.
+But as we live in desperate times...I hate peer pressure. But it gets the job done

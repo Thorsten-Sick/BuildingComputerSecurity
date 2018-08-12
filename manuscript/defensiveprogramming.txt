@@ -1,5 +1,7 @@
 # Defensive programming {#chapter-defensive-programming}
 
+%% TODO: https://linux-audit.com/secure-software-development-cii-best-practices/
+
 ## Short abstract
 
 Defensive programming is coding while expecting your program to being actively attacked.

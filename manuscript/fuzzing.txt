@@ -3,9 +3,10 @@
 Fuzzing is inserting random data into the system with the goal to cause invalid
 states. This can be crashing, memory leaks, endless loops, ...
 
-Once set up fuzzing tools run full-auto for nights and collect crash logs.
+After you did set up fuzzing tools it runs full-auto for nights and collects
+crash logs and especially the data that caused the crashes.
 
-Data can be send to any kind of input:
+This generated data can be send to any kind of input:
 
 * Command line
 * File
@@ -21,19 +22,19 @@ Data can be send to any kind of input:
 * at the library API (libfuzzer)
 
 If you ship software that includes 3rd party libraries or programs, you should
-fuzz those as well. You ship it to customers - you are responsible.
+fuzz those as well. You ship it to customers with your tools - you are responsible.
 
 An important step in fuzzing is to keep the relevant input data for the
 debugging session later. This can be done by keeping the files. Some fuzzers
 have a predictable algorithm that generates the same permutations for a given seed.
-For those keep the seed in a database and re-create the input data before debugging.
+For those just keep the seed in a database and re-create the input data before debugging.
 
 There are several fuzzers, from simple random data generators to coverage
 based like libfuzzer and AFL.
 All of them have advantages and disadvantages.
 
-You can start with a simple variant if your program has not been hardened yet
-and while patching the bugs you find improve the fuzzer.
+You should start with a simple variant if your program has not been hardened yet.
+And while patching the bugs you find, you can improve the fuzzer.
 
 ## Audience
 
@@ -52,7 +53,8 @@ to the device (UART, BLE, ...) you also need a way to evaluate the system health
 Anything that works like a ping (like: request version information over WiFi)
 is already quite good.
 Another thing is: You want to be able to reset the device. LAN controlled
-power sockets are a way. Or toggling the reset button using a micro controller.
+power sockets are a way. Or toggling the reset button using a micro controller
+and a small circuit.
 
 ## DIY fuzzer
 
@@ -100,6 +102,10 @@ Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/
 
 https://gitlab.com/akihe/radamsa
 
+Radamsa is a smart data permutation engine. Sending this permutated data into
+the program to fuzz and handling crashes is your responsibility. The Radamsa
+README has some very good examples how to do that.
+
 A simple way to detect crashed programs in bash scripts is to check the exit value.
 
 Taking an example from Radamsa (check out the link, there are more examples).
@@ -116,7 +122,8 @@ Taking an example from Radamsa (check out the link, there are more examples).
 
 ## AFL American fuzzy lop
 
-Uses compile-time instrumentation and a genetic algorithm to discover new
+AFL is a very sophisticated fuzzer.
+It uses compile-time instrumentation and a genetic algorithm to discover new
 test cases.
 
 Pro:
@@ -146,10 +153,14 @@ The best resource so far is the README:
 
 */usr/share/doc/afl-doc/docs/README*
 
+on your system if you installed the package.
+
 ## libFuzzer
 
 The most effective way if you have access to the API and code. It is part of Clang 6.0+.
-You may notice: Ubuntu 17.10 at least does not have this Clang installed yet. So you will
+Clang is available for Ubuntu 18.4
+
+You may notice: Ubuntu 17.10 does not have this Clang installed yet. So you will
 want to install a Clang 6.0 from a PPA.
 
 https://llvm.org/docs/LibFuzzer.html

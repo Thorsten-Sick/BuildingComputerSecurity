@@ -9,18 +9,18 @@ changelog to make it simpler for you to find the new sections.
 
 ## July 2018
 
-* Added *attacker's goals*  %% Reviewed
-* Added *antivirus-tests*  %% Reviewed
+* Added *attacker's goals*
+* Added *antivirus-tests*
 * Added *antivirus-integration*  %% TODO: Split URL
 * Changed PDF format to A5 for a typical book-size PDF
-* Added minimal *fuzzing* chapter
+* Added basic *fuzzing* chapter
 * Extended "Defensive programming"
 * Extended "principles"
 * Extended "TLS chapter"
 * Extended "External references"
-* Added *antivirus-spreading-samples*
-* Added *antivirus virustotal* %% Reviewed
-* Added *Cppcheck chapter*  %% Reviewed
+* Added *antivirus-sharing-samples*
+* Added *antivirus virustotal*
+* Added *Cppcheck chapter*
 * Added *Testing compiling* chapter
 
 ## June 2018

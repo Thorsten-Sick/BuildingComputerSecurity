@@ -1,0 +1,78 @@
+# Browser security
+
+%%  State: 10 % Browser
+
+
+## Hardening
+
+https://twitter.com/_ifis/status/988774413565943808?s=09
+
+%% TODO: Use this list and write something
+
+## Exploit Kits
+
+%% TODO: Write Info source
+
+%% TODO: Write fallback social engineering
+
+<<<<<<< HEAD
+## Cookies
+=======
+https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
+Cookies
+-------
+>>>>>>> 2e563c9e22a9bf4d39b87b99443e7bf885e162de
+
+%% TODO: write
+
+## Fingerprinting
+
+%% TODO: Write
+
+%% TODO: Write HPKP Fingerprinting
+
+%% TODO: Fingerprinting test page
+
+## Ads/Malvertizing
+
+%% TODO: Write
+
+## TLS/SSL/HTTPS
+
+%% TODO: Write HTTPS-Everywhere
+
+%% TODO: Write CA trouble
+
+%% TODO: Write HSTS/HPKP
+
+%% TODO: write CT
+
+## Facebook
+
+https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing
+
+## BEEF
+
+%% TODO Write about beef
+
+## Burp Suite
+
+## Attacks on Routers
+
+## Exploit Kits
+
+<<<<<<< HEAD
+## Pseudonymity
+=======
+.. TODO Write about beef
+
+%% TODO: Malwarebytes browser extension https://news.hitb.org/content/introducing-malwarebytes-browser-extension
+
+%% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
+
+## Phishing
+
+https://github.com/MalwareReverseBrasil/phishreport
+>>>>>>> 2e563c9e22a9bf4d39b87b99443e7bf885e162de

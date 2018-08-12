@@ -56,6 +56,8 @@ To make it simple
 
 https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
 
+%% TODO: Split URL
+
 If your program handles archives, scan them twice:
 
 1. The full archive

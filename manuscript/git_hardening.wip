@@ -5,3 +5,7 @@
 https://blog.github.com/2018-07-12-security-vulnerability-alerts-for-python/
 
 https://github.com/srcclr/commit-watcher
+
+## Do not commit credentials and secrets
+
+https://github.com/awslabs/git-secrets
