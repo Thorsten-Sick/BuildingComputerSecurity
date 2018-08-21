@@ -2,9 +2,7 @@
 
 %%  State: 30 % Browser
 
-Browsers are
-
-## Hardeningone of the most complex things running on your computer. They are
+Browsers are one of the most complex things running on your computer. They are
 basically a small operating system.
 
 They run code from external sources: scripts from homepages, extensions, pdfs.
@@ -26,6 +24,12 @@ some things you should do to improve security of the browser you installed.
 * Install HTTPS-everywhere
 * Install Privacy Badger
 * If you are skilled: Install NoScript for Firefox
+
+A more basic checklist is that you ensure three things are secured:
+
+* The web server and it's content - it will be executed within your browser
+* The network connection - TLS all the things
+* The client side: Browser and Extensions
 
 %% TODO: Check this and add links
 
@@ -162,14 +166,40 @@ https://panopticlick.eff.org/
 
 ## TLS/SSL/HTTPS
 
-%% TODO: Write HTTPS-Everywhere
+TLS (aka HTTPS or SSL) encrypts the connection between your browser and the server.
+It also verifies the identity of the server.
+
+There are several ways to enable HTTPS. Most of them depend on the admin or web designer
+to set the right config.
+
+One way to get some more encrypted connections out of the web to have your browser request them.
+This can be done by the HTTPS-everywhere https://www.eff.org/https-everywhere plugin.
+Just install it.
+
+There are more advanced use cases for TLS with the acronyms HSTS and HPKP where
+the server promises to always use a certain encryption standard.
+This is described in the [TLS chapter](#chapter-tls). On the browser side you
+can access the HPKP and HSTS settings:
+
+Chrome:
+
+To make Chrome forget about the HPKP of a site visit:
+
+chrome://net-internals/#hsts
+
+*Query* your domain there to check the settings. After you found it, copy & paste it to *Delete Domain*.
+
+Firefox:
+
+It is either available through the history and right-clicking on an entry selecting "forget about this site"
+or through fiddinlg with your profile.
+
+For both browsers see more on: https://www.thesslstore.com/blog/clear-hsts-settings-chrome-firefox/
+
 
 %% TODO: Write CA trouble
 
-%% TODO: Write HSTS/HPKP
-
 %% TODO: write CT
-
 
 %% TODO: Write HPKP Fingerprinting
 
@@ -178,23 +208,52 @@ https://panopticlick.eff.org/
 
 https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing
 
-## BEEF
+## BeEF
 
-%% TODO Write about beef
+BeEF is a browser exploitation framework - it contains lots of attacks on browsers.
+It does not necessarily exploit buffer overflow vulnerabilities in the
+browser - escaping the sandbox - but invokes mayhem within the constraints
+of web pages.
 
-%% TODO: Malwarebytes browser extension https://news.hitb.org/content/introducing-malwarebytes-browser-extension
+As BeEF is a very specific tool and not many people will require it it gets a
+specific chapter - feel free to either read or skip it.
 
-%% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+[See BeEf chapter](#chapter-beef)
 
 ## Burp Suite
 
+Burp suite is a tool to check web pages for vulnerabilites. Vulnerabilities in
+web sites lead to hacked web sites. Hacked web sites lead to web sites with
+browser exploits (BeEF or Exploit Kits). Browser exploits lead to hacked
+browsers after they visited this page.
+
+So please harden your web sites if you run any. To help you do that there is the Burp Suite.
+As it is very specific and more web-site security oriented I will just leave
+this few lines here for the bigger picture and direct you to the specific chapter.
+
+[See Burp chapter](#chapter-burp)
+
 ## Attack on Routers
+
+As the browser is the configuration interface for your local network
+(WiFi Access point, routers, ....) malware running in hacked pages can try to exploit
+standard user names, vulnerabilities or long lasting login cookies to manipulate
+the settings of your router.
+
+A standard goal is to set the DNS used by your router to the attacker's DNS server.
+Every entry there is the same as for an official DNS. Exceptions are: Banks
+(now leading to phishing sites) and maybe update sites for your Anti-Virus
+leading to nowhere.
+
+Update your router, do not go for the cheap ones. Log out after configuration.
+Maybe use a different browser profile or browser for Administration tasks  -
+and not the one you use for browsing for cat videos.
 
 ## Pseudonymity
 
 ## Phishing
 
-https://github.com/MalwareReverseBrasil/phishreport
+%% TODO: https://github.com/MalwareReverseBrasil/phishreport
 
 ## Spying Extensions
 
@@ -203,3 +262,13 @@ https://github.com/MalwareReverseBrasil/phishreport
 ## Harden accounts
 
 Especially Facebook and similar privacy settings
+
+
+
+%% OTHER THINGS
+
+%% TODO: Malwarebytes browser extension https://news.hitb.org/content/introducing-malwarebytes-browser-extension
+
+%% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
+# TODO: Metasploit vs. browsers: https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/
