@@ -1,37 +1,164 @@
 # Browser security
 
-%%  State: 10 % Browser
+%%  State: 30 % Browser
 
+Browsers are
 
-## Hardening
+## Hardeningone of the most complex things running on your computer. They are
+basically a small operating system.
 
-https://twitter.com/_ifis/status/988774413565943808?s=09
+They run code from external sources: scripts from homepages, extensions, pdfs.
+They are the user interface to many of your devices at home
+(wifi access points, your NAS), They do your online banking, store your passwords and are
+the main interface to the development process in your company (JIRA, github).
 
-%% TODO: Use this list and write something
+Browsers are also built for user interaction  and forcing the useer to decide
+complex technical topics (for example: the certificate of a page is not valid).
 
-## Exploit Kits
+A scary combination.
 
-%% TODO: Write Info source
+Even if you do not develop your own browser (I guess you do not...) there are
+some things you should do to improve security of the browser you installed.
 
-%% TODO: Write fallback social engineering
+* Keep your browser up to date (your browser should do that)
+* Keep the installed extensions up to date (your browser should take care)
+* Install an Ad-blocker: UBlock Origin
+* Install HTTPS-everywhere
+* Install Privacy Badger
+* If you are skilled: Install NoScript for Firefox
 
-https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
-
-## Cookies
-
-%% TODO: write
-
-## Fingerprinting
-
-%% TODO: Write
-
-%% TODO: Write HPKP Fingerprinting
-
-%% TODO: Fingerprinting test page
+%% TODO: Check this and add links
 
 ## Ads/Malvertizing
 
-%% TODO: Write
+Advertising is one of the central ways malware is devilered to you.
+
+The Ads you see online are very often not only pictures or animations - they
+also contain scripts. Many have to contain them to propery measure the impact
+factor - which is relevant for the price that the advertising party has to pay.
+
+Web pages are selling parts of the screen space to Ad companies. They either
+re-sell it to other Ad companies or offer the space to entities who want to
+advertise something.
+
+So it is very unclear who is responsible for the ad you see embedded in a page.
+
+As the Ads are targeted, the company paying to display the Ad can define who
+will see it:
+
+"Display it to older people who do a lot of online shopping and maybe banking
+who surf with an old Internet Explorer"
+
+And this is what makes it simple to spread malware and exploits in a very
+reliable way.
+
+Protection against this is an "Ad BLocker". If you do not have a favourite one yet:
+*UBlock origin* is a good option.
+
+## Privacy
+
+Home pages contain trackers. They observe the usage of the pages and are
+relevant for measuring the impact of specific articles or if people do find a
+button on a page.
+
+External companies offer these tracking services and are easy to embed - many
+pages contain several types of tracker.
+
+But those trackers are not only monitoring the usage of a specific page for
+the page owners but are also able to follow a user while he is surfing
+several pages and create a profile. This one can be sold to Ad companies for
+targeted Ads.
+
+There are projects to monitor pages for privacy features. Or you can just
+check with your Privacy Extension how many trackers just got blocked.
+
+https://privacyscore.org/
+
+To protect yourself and do your own tracker-tracking use
+
+Privacy Badger
+
+### Social Icons: Facebook and Twitter trackers
+
+The Facebook and Twitter buttons you can find on many pages ("Share on Twitter")
+are trackers: As soon as you see the Facebook button, Facebook knows you
+visited this page. If you have a Facebook account you use with this browser:
+It will have your Facebook identity.
+If you do not have a Facebook account it will track you as pseudonymous id
+until you create an account: after that it can link this to your id.
+
+What exactly each of the companies is doing on their backend DB us unknown. But
+this scenario is possible and the most likely one.
+
+To protect yourself there are ways to **de-activate** the button until it is
+**activated** with a first click. The the social media company will know - and
+the user can use the button as normal.
+
+Several Extensions offer this. Privacy Badger is amongst them.
+
+https://threatpost.com/privacy-badger-extension-blocks-tracking-through-social-icons/107348/
+
+## Exploit Kits
+
+Exploit Kits are simple to use tools. They help criminals run a large scale
+attack on browser users to spread malware.
+
+They offer a simple user interface to infect thousands of homepages with the
+exploits. Once a user visits these pages the attack against the user is chose
+based on the browser and flash version the user has. Success statistics are
+available to the attacker.
+
+If all the attacks against your browser failed, exploit kits can offer a so
+called *social engineering* attack against the user. Like "Please download this codec to view this video now".
+
+For a defender the take-aways are:
+
+* A page that was bening yesterday can suddenly be malicious
+* Attackers go for scale
+* The do not necessarily target you, you just happend to be at the wrong place at the wrong time
+* Several ways of attacks are tried against you until one succeeds
+* Even if the system is hardened: The user is another vulnerability
+
+%% TODO: Write Info source
+
+https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+
+https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/
+
+https://malware.dontneedcoffee.com/blog/
+
+## Cookies
+
+Cookies are essential for many homepages to work properly. The reason is that
+there is not other way to memorize the history of a user
+(even the most recent one) for a web server.
+
+So it sets cookies (key and value pairs) in the user's browser. The browser
+submits the cookies linked to a page whenever a new page is requested.
+
+But the same technology can be used to track users and observe them.
+
+In a browser blocking "Third party cookies" is a way to restrict information
+leakage. These cookies are set by sub-content in a web site from third paries.
+
+It is ok if the page offering a service to you is setting it's cookies. It is
+bad if every third party content does that.
+
+%% TODO Cookie security. Not in scripts and encrypted only. Lifetime
+
+## Fingerprinting
+
+Besides cookies there are other ways to identify a unique user. This is
+called *fingerprinting*. By using as many system specific features that
+are available in the browser as possible it creats a kind of unique id.
+
+Screen size, languages, installed fonts, user agent, os platform,
+browser plugins ...
+
+To test your own setup visit:
+
+https://panopticlick.eff.org/
+
 
 ## TLS/SSL/HTTPS
 
@@ -42,6 +169,10 @@ https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attac
 %% TODO: Write HSTS/HPKP
 
 %% TODO: write CT
+
+
+%% TODO: Write HPKP Fingerprinting
+
 
 ## Facebook
 
@@ -58,11 +189,17 @@ https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-
 ## Burp Suite
 
 ## Attack on Routers
-s
-## Exploit Kits
 
 ## Pseudonymity
 
 ## Phishing
 
 https://github.com/MalwareReverseBrasil/phishreport
+
+## Spying Extensions
+
+%% Add CCC talk
+
+## Harden accounts
+
+Especially Facebook and similar privacy settings
