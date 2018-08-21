@@ -1,6 +1,6 @@
 # Browser security
 
-%%  State: 30 % Browser
+%%  State: 80 % Browser
 
 Browsers are one of the most complex things running on your computer. They are
 basically a small operating system.
@@ -32,6 +32,20 @@ A more basic checklist is that you ensure three things are secured:
 * The client side: Browser and Extensions
 
 %% TODO: Check this and add links
+
+## Basic browser security philosophy
+
+The most essential philosophy in browser security is *compartments*.
+Extensions are isolated from each other. Extensions have only a very
+restricted ability to interact with web pages (and those depend on the manifest
+they ship with).
+Tabs and web sites are isolated from each other. IFrames are isolated in web
+pages (with special arguments in the iframe tag to further restrict their abilities).
+The whole browser is sandboxed away from the system.
+
+Being aware of those boundaries will help you to understand why some design
+decissions first look strange and alien. Especially when developing Extensions
+and web pages.
 
 ## Ads/Malvertizing
 
@@ -249,19 +263,19 @@ Update your router, do not go for the cheap ones. Log out after configuration.
 Maybe use a different browser profile or browser for Administration tasks  -
 and not the one you use for browsing for cat videos.
 
-## Pseudonymity
+%% ## Pseudonymity
 
-## Phishing
+%% ## Phishing
 
 %% TODO: https://github.com/MalwareReverseBrasil/phishreport
 
-## Spying Extensions
+%% ## Spying Extensions
 
 %% Add CCC talk
 
-## Harden accounts
+%% ## Harden accounts
 
-Especially Facebook and similar privacy settings
+%% Especially Facebook and similar privacy settings
 
 
 
@@ -271,4 +285,4 @@ Especially Facebook and similar privacy settings
 
 %% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
 
-# TODO: Metasploit vs. browsers: https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/
+%%  TODO: Metasploit vs. browsers: https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/

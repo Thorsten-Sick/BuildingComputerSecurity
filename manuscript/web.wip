@@ -1,5 +1,5 @@
-Web security
-============
+# Web security
+
 
 .. State: 10 % Web
 
@@ -7,44 +7,35 @@ Web security
 
 https://engineering.videoblocks.com/web-architecture-101-a3224e126947
 
-SRI
----
+## SRI
 
 
-.. TODO: test it
+
+%% TODO: test it
 
 Oneliner: curl -s [url]|sha256sum|xxd -r -p|base64
 
-Standard attacks on browsers
-----------------------------
-
-.. TODO: Write about it
-
-Beef
-~~~~
+## Standard attacks on browsers
 
 .. TODO: Write about it
 
 
-Standard attacks on web sites
------------------------------
 
-.. TODO: Write about it
+## Standard attacks on web sites
 
-Burp
-~~~~
+%% TODO: Write about it
 
-.. TODO: Write about it
+## Burp
 
-Th3inspector
-~~~~~~~~~~~~
+%% TODO: Write about it
+
+## Th3inspector
 
 https://github.com/Moham3dRiahi/Th3inspector
 
-.. TODO: Check it out
+%% TODO: Check it out
 
-Snallygaster
-~~~~~~~~~~~~
+## Snallygaster
 
 Scanning web sites for secret files
 
@@ -56,15 +47,15 @@ https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-
 * private keys
 * coredumps
 
-CTFR
-~~~~
+## CTFR
+
 
 Use CT logs to get web site sub domains
 
 https://github.com/UnaPibaGeek/ctfr
 
-Od1N
-~~~~
+## Od1N
+
 
 Automated attacks on web packages
 
@@ -76,3 +67,22 @@ https://github.com/CoolerVoid/0d1n
 
 https://www.heise.de/security/meldung/Malvertising-Kriminelle-nutzen-Tausende-WordPress-Sites-als-Malware-Schleudern-4125985.html
 
+## CORS
+
+
+
+## CSP
+
+## Corb
+
+## IFrame isolation
+
+## Buy similar URLs
+
+Buy similar urls. Also maintain your hold on the domains you own. Maybe even
+past the time you use them - if you are running your mails over your domain
+your customers may continue to use that - and by accident communicate with the
+attacker who bought the domain after you quit.
+
+* Typo squatting
+* Certificates
