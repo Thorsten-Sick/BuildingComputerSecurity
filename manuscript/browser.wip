@@ -263,11 +263,39 @@ Update your router, do not go for the cheap ones. Log out after configuration.
 Maybe use a different browser profile or browser for Administration tasks  -
 and not the one you use for browsing for cat videos.
 
-%% ## Pseudonymity
+## Phishing
 
-%% ## Phishing
+Phishing - social engineering users to get their credentials - will continue as
+it is a very powerful attack.
+
+Phising is a social enginerering attack but can contain steps that are
+technical ("Please install our support software you can download here: https://..."),
+
+As the goal is credentials browsers normally store them - and are also a part
+of the social engineering aspect.
+
+Besindes blacklisting phishing sites user education is also an important step.
+
+Many browsers do already blacklist phising sites. If you want to build
+something similar, phishtank could be a source for your blacklist. Adding
+internal data (submitted by aware users) to your blacklist is also smart. So if
+several of your customers are targeted in parallel and the first one reports a
+url you protect the others by adding it to a blacklist.
 
 %% TODO: https://github.com/MalwareReverseBrasil/phishreport
+
+%% TODO: phishtank
+
+## Pseudonymity
+
+A good way to protect yourself online is to create pseudonyms for our identiy.#
+Changing your real name and you home is hard if things go south (stalking,
+mobbing, ...). But a pseudonym can be replaced. Nowadays having a pseudonym is
+quite common and some people became famous without having to publish their real
+identity.
+
+This and the fact that Facebook want your account to be linked to your real
+name should be good reasons to have one or more pseudonyms.
 
 %% ## Spying Extensions
 
