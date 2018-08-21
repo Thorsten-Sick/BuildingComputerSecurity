@@ -8,7 +8,14 @@ changelog to make it simpler for you to find the new sections.
 
 ## August 2018
 
-* Extended Principles
+This is the holiday release: Focus is on improving text quality
+of existing chapters.
+
+* Extended "Principles"
+* Added new chapter "browser security" (not finished yet)
+* Added new chapter "IOT security" (not finished yet)
+
+
 
 ## July 2018
 

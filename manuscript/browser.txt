@@ -284,7 +284,7 @@ url you protect the others by adding it to a blacklist.
 
 %% TODO: https://github.com/MalwareReverseBrasil/phishreport
 
-%% TODO: phishtank
+https://www.phishtank.com
 
 ## Pseudonymity
 
