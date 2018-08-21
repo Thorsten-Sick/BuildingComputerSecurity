@@ -221,6 +221,25 @@ written to the endpoint system, ...
 The user (or the admin - for larger installations) should also have full control
 about what is filtered.
 
+## Tripwires
+
+Add tripwires to your design. One example is to fill your database with some
+fake customers with made up mail addresses. As soon as those mail addresses
+start receiving mails, you know the db has been compromised.
+
+The same for fake "password.txt" files in your system. They get accessed ? You got
+hacked.
+
+Tripwires are usless if you do not have a monitoring system and a plan how to
+react.
+
+## Slow down the attacker
+
+Bank safes have a timed lock. Only after a certain time they open. Thieves will
+be slowed down. With an alarm system and a police unit to respond this is powerful.
+Without those to additional ingredients it is useless.
+Maybe you can build something similar into your systems. Slow down, alerts
+and response.
 
 ## Security by Obscurity
 

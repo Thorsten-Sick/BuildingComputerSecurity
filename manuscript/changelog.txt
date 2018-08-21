@@ -6,6 +6,9 @@ changelog to make it simpler for you to find the new sections.
 %% Cryptoalgorithms
 %% Extend defensive programming / compiling
 
+## August 2018
+
+* Extended Principles
 
 ## July 2018
 
