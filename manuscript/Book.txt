@@ -16,7 +16,7 @@ browser.txt
 iot.txt
 antivirus_tests.txt
 antivirus_integration.txt
-antivirus_spreading_samples.txt
+antivirus_sharing_samples.txt
 antivirus_virustotal.txt
 tls.txt
 cryptoalgorithms.txt
