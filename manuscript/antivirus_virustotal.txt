@@ -59,7 +59,7 @@ by detecting it and it's siblings.
 
 This is a good thing and you should upload suspicious things. Just in case.
 
-See also [spreading samples](#chapter-spreading-samples).
+See also [sharing samples](#chapter-sharing-samples).
 
 ## Not to do: Uploading APT samples
 

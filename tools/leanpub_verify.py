@@ -4,6 +4,16 @@
 #
 
 import os
+import re
+
+class Link():
+    def __init__(self, title, link):
+        """An outgoing link
+        """
+        self.title = title
+        self.link = link.strip() if link else None
+        self.local = True if link.startswith("#") else False
+
 
 class Chapter():
     def __init__(self, title, link, level = 1, infile=None):
@@ -17,7 +27,7 @@ class Chapter():
         @infile: file of the chapter
         """
         self.title = title
-        self.link = link
+        self.link = link.strip() if link else None
         self.level = level
         self.infile = infile
 
@@ -31,8 +41,10 @@ class LeanpubVerify():
         self.basedir = basedir
         self.chapterfiles = []
         self.chapters = []
+        self.outgoingLinks = []
         self.getBookFiles()
         self.getChapters()
+        self.getOutgoingLinks()
 
     def getBookFiles(self):
         """find all txt files in manuscriptdir"""
@@ -64,7 +76,7 @@ class LeanpubVerify():
                             level = 4
                         if "{" in line:
                             title, link = line[level+1:].split("{")
-                            link = link[1:].replace("}","")
+                            link = link.replace("}","")
                         else:
                             title = line[level+1:]
                         title = title.strip()
@@ -79,10 +91,38 @@ class LeanpubVerify():
         for c in self.chapters:
             if c.level <= up_to_level:
                 if c.link == None:
-                    print("Chapter has no link: {} ({})".format(c.title, c.infile))
+                    print("Error: Chapter has no link: {} ({})".format(c.title, c.infile))
+
+    def checkLinksLocal(self):
+        """Check if local links lead somewhere
+        """
+
+        for l in self.outgoingLinks:
+            if l.local:
+                good = False
+                for c in self.chapters:
+                    if c.link == l.link:
+                        good = True
+                if not good:
+                    print("Error: Local link has no chapter: {}".format(l.link))
+
+    def getOutgoingLinks(self):
+        """ Collect all link to somewhere
+        """
+
+        linkpattern = re.compile("\[(.*?)\]\((.*?)\)")
+        for afile in self.chapterfiles:
+            with open(os.path.join(self.basedir, afile)) as fh:
+                for line in fh:
+                    matches = linkpattern.findall(line)
+                    for a in matches:
+                        print("{}->{}".format(a[0],a[1]))
+                        self.outgoingLinks.append(Link(a[0], a[1]))
 
 if __name__ == "__main__":
     lpbase="../manuscript/Book.txt"
     lpv = LeanpubVerify(lpbase)
     print(lpv.chapterfiles)
     lpv.checkChapters()
+    lpv.checkLinksLocal()
+    # TODO: Check external links exist

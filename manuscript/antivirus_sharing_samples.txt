@@ -1,4 +1,4 @@
-# Spreading malware samples {#chapter-spreading-malware-samples}
+# Spreading malware samples {#chapter-sharing-samples}
 
 This chapter is about contacting AV vendors and sending them malware you found.
 Also about fixing false positives with the help of those vendors.
