@@ -13,6 +13,8 @@ https://linux-audit.com/dealing-with-linux-malware-insights-by-the-author-of-rkh
 
 https://linux-audit.com/how-to-create-custom-tests-in-lynis/
 
+https://cisofy.com/lynis/
+
 ## Updates and upgrades
 
 https://linux-audit.com/upgrading-external-packages-with-unattended-upgrade/
@@ -91,6 +93,9 @@ https://linuxsecurity.expert/tools/shellharden/
 ## Auditing
 
 https://linux-audit.com/tuning-auditd-high-performance-linux-auditing/
+https://github.com/bfuzzy/auditd-attack
+
+
 
 Monitor file access: https://linux-audit.com/monitor-file-access-by-linux-processes/
 

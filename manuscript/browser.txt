@@ -314,3 +314,5 @@ name should be good reasons to have one or more pseudonyms.
 %% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
 
 %%  TODO: Metasploit vs. browsers: https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/
+
+%% TODO: Selenium with Python: https://selenium-python.readthedocs.io/installation.html
