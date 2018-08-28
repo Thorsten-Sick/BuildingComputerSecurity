@@ -20,9 +20,38 @@ candump can0
 
 ## wireshark
 
+## Raspberry Pi specific
+
+(Kali Linux on Raspberry Pi)
+
+You can find the driver source here: https://www.peak-system.com/fileadmin/media/linux/index.htm
+
+%% TODO: Make bash source
+
+sudo apt-get install linux-headers-$(uname -r) libpopt-dev
+wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.6.0.tar.gz
+make PCI=NO PCIEC=NO PCC=NO DNG=NO PAR=NO ISA=NO NET=NETDEV_SUPPORT
+sudo make install
+sudo modprobe pcan
+# check pcan devices
+cat /proc/pcan
+ifconfig -a
+# Config
+ip link set can0 type can bitrate 500000
+
+
+
+https://www.peak-system.com/forum/viewtopic.php?f=59&t=283&start=90#p5327
+
+## Python
+
+https://python-can.readthedocs.io/en/2.1.0/
 
 ## Further reading
 
 https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
 
 Car hackers Handbook 
+
+https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/
+
