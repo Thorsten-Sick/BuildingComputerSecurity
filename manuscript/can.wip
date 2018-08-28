@@ -1,0 +1,28 @@
+# CAN Bus
+
+The CAN bus is central in many vehicles and more complex embedded things. There are adapters to connect a PC to a CAN bus (PEAK, for example).
+
+# TODO: Make source, bash
+sudo apt-get install can-utils
+sudo ip link set can0 up type can bitrate 500000
+candump can0
+
+
+## candump
+
+## cangen
+
+## cansniffer
+
+## canplayer
+
+## cansend
+
+## wireshark
+
+
+## Further reading
+
+https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
+
+Car hackers Handbook 
