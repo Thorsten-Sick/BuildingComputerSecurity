@@ -219,6 +219,18 @@ Gattack offers those attacks:
 
 %% TO Add: BTLEJUICE
 
+## BtleJack
+
+Is a new attack on BLE
+
+https://github.com/virtualabs/btlejack
+
+* Sniffing existing connections
+* Sniffing new BLE connections
+* Jamming BLE connections
+* Hijacking connections
+* Can export sniffed packets as PCAP
+
 ## Books
 
 There is a [list of books](#reference-collection-btle) and tools.
