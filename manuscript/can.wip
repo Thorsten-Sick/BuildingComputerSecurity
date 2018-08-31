@@ -47,6 +47,8 @@ https://www.peak-system.com/forum/viewtopic.php?f=59&t=283&start=90#p5327
 
 https://python-can.readthedocs.io/en/2.1.0/
 
+apt install python3-can
+
 ## Further reading
 
 https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
@@ -54,4 +56,6 @@ https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
 Car hackers Handbook 
 
 https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/
+
+%% Cheap CAN Adapter: https://shop.8devices.com/usb2can?product_id=54
 
