@@ -9,7 +9,7 @@ A thing very relevant for IoT devices is the *class break* (it is still relevant
 for many other systems, but here it is devastating).
 
 Class breaks is when a vulnerability exists in all devices of a specific class.
-The adversary buys one of the devices (maybe second hand on ebay) and has
+The adversary buys one of the devices (maybe second hand on eBay) and has
 plenty of time to hack it. The attack itself can then be described (blog posts)
 or weaponized - simple to use scripts are created for everyone to run the attack.
 
@@ -24,9 +24,9 @@ updated, are easy to get and a break will hit thousands or millions of devices.
 Interfaces like JTAG or UART are very convenient for development or debugging.
 UART is a serial interface that can be used to accept commands or at least
 send logging data.
-JTAG is an offical debugging interface to debug the firmware.
+JTAG is an official debugging interface to debug the firmware.
 
-Controlling them is a big step for an attacker towards tackover of the device.
+Controlling them is a big step for an attacker towards takeover of the device.
 
 Sometimes an embedded device has connectors for those interfaces soldered
 already. If not it is at least very likely there are the solder points to
@@ -37,14 +37,14 @@ effects and weaknesses.
 
 * Use #ifdefs to kill the code for UART for the production release
     * Side effect: Can not be used to debug in-the-field
-* Set a password for UART. Password must be entered befor getting logs or sending commands
+* Set a password for UART. Password must be entered before getting logs or sending commands
     * Side effect: Technicians can leak password
     * Side effect: Password can be found in firmware (*strings* command or similar)
 * Build password by code at runtime
     * Weakness: Better than hard coded password (strings does not work)
     * But: Attackers with disassembly skills can break it
     * Weakness: Leaks by support engineers still possible
-* Burn Microcontroller fuse to break UART and JTAG right before shipping
+* Burn Micro controller fuse to break UART and JTAG right before shipping
     * Side effect: No field debugging possible anymore
 * Public key challenge response to access debugging functionality
     * Side effect: Complex

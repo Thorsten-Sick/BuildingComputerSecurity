@@ -5,12 +5,12 @@
 Browsers are one of the most complex things running on your computer. They are
 basically a small operating system.
 
-They run code from external sources: scripts from homepages, extensions, pdfs.
+They run code from external sources: scripts from homepages, extensions, PDFs.
 They are the user interface to many of your devices at home
-(wifi access points, your NAS), They do your online banking, store your passwords and are
-the main interface to the development process in your company (JIRA, github).
+(WiFi access points, your NAS), They do your online banking, store your passwords and are
+the main interface to the development process in your company (JIRA, GitHub).
 
-Browsers are also built for user interaction  and forcing the useer to decide
+Browsers are also built for user interaction  and forcing the user to decide
 complex technical topics (for example: the certificate of a page is not valid).
 
 A scary combination.
@@ -40,19 +40,19 @@ Extensions are isolated from each other. Extensions have only a very
 restricted ability to interact with web pages (and those depend on the manifest
 they ship with).
 Tabs and web sites are isolated from each other. IFrames are isolated in web
-pages (with special arguments in the iframe tag to further restrict their abilities).
+pages (with special arguments in the Iframe tag to further restrict their abilities).
 The whole browser is sandboxed away from the system.
 
 Being aware of those boundaries will help you to understand why some design
-decissions first look strange and alien. Especially when developing Extensions
+decisions first look strange and alien. Especially when developing Extensions
 and web pages.
 
 ## Ads/Malvertizing
 
-Advertising is one of the central ways malware is devilered to you.
+Advertising is one of the central ways malware is delivered to you.
 
 The Ads you see online are very often not only pictures or animations - they
-also contain scripts. Many have to contain them to propery measure the impact
+also contain scripts. Many have to contain them to property measure the impact
 factor - which is relevant for the price that the advertising party has to pay.
 
 Web pages are selling parts of the screen space to Ad companies. They either
@@ -70,7 +70,7 @@ who surf with an old Internet Explorer"
 And this is what makes it simple to spread malware and exploits in a very
 reliable way.
 
-Protection against this is an "Ad BLocker". If you do not have a favourite one yet:
+Protection against this is an "Ad Blocker". If you do not have a favourite one yet:
 *UBlock origin* is a good option.
 
 ## Privacy
@@ -131,9 +131,9 @@ called *social engineering* attack against the user. Like "Please download this 
 
 For a defender the take-aways are:
 
-* A page that was bening yesterday can suddenly be malicious
+* A page that was benign yesterday can suddenly be malicious
 * Attackers go for scale
-* The do not necessarily target you, you just happend to be at the wrong place at the wrong time
+* The do not necessarily target you, you just happened to be at the wrong place at the wrong time
 * Several ways of attacks are tried against you until one succeeds
 * Even if the system is hardened: The user is another vulnerability
 
@@ -157,9 +157,9 @@ submits the cookies linked to a page whenever a new page is requested.
 But the same technology can be used to track users and observe them.
 
 In a browser blocking "Third party cookies" is a way to restrict information
-leakage. These cookies are set by sub-content in a web site from third paries.
+leakage. These cookies are set by sub-content in a web site from third parties.
 
-It is ok if the page offering a service to you is setting it's cookies. It is
+It is OK if the page offering a service to you is setting it's cookies. It is
 bad if every third party content does that.
 
 %% TODO Cookie security. Not in scripts and encrypted only. Lifetime
@@ -168,9 +168,9 @@ bad if every third party content does that.
 
 Besides cookies there are other ways to identify a unique user. This is
 called *fingerprinting*. By using as many system specific features that
-are available in the browser as possible it creats a kind of unique id.
+are available in the browser as possible it creates a kind of unique id.
 
-Screen size, languages, installed fonts, user agent, os platform,
+Screen size, languages, installed fonts, user agent, OS platform,
 browser plugins ...
 
 To test your own setup visit:
@@ -192,7 +192,7 @@ Just install it.
 
 There are more advanced use cases for TLS with the acronyms HSTS and HPKP where
 the server promises to always use a certain encryption standard.
-This is described in the [TLS chapter](#chapter-tls). On the browser side you
+This is described in the [TLS chapter](#chapter-TLS). On the browser side you
 can access the HPKP and HSTS settings:
 
 Chrome:
@@ -206,7 +206,7 @@ chrome://net-internals/#hsts
 Firefox:
 
 It is either available through the history and right-clicking on an entry selecting "forget about this site"
-or through fiddinlg with your profile.
+or through fiddling with your profile.
 
 For both browsers see more on: https://www.thesslstore.com/blog/clear-hsts-settings-chrome-firefox/
 
@@ -232,11 +232,11 @@ of web pages.
 As BeEF is a very specific tool and not many people will require it it gets a
 specific chapter - feel free to either read or skip it.
 
-[See BeEf chapter](#chapter-beef)
+[See BeEF chapter](#chapter-beef)
 
 ## Burp Suite
 
-Burp suite is a tool to check web pages for vulnerabilites. Vulnerabilities in
+Burp suite is a tool to check web pages for vulnerabilities. Vulnerabilities in
 web sites lead to hacked web sites. Hacked web sites lead to web sites with
 browser exploits (BeEF or Exploit Kits). Browser exploits lead to hacked
 browsers after they visited this page.
@@ -268,19 +268,19 @@ and not the one you use for browsing for cat videos.
 Phishing - social engineering users to get their credentials - will continue as
 it is a very powerful attack.
 
-Phising is a social enginerering attack but can contain steps that are
+Phishing is a social engineering attack but can contain steps that are
 technical ("Please install our support software you can download here: https://..."),
 
 As the goal is credentials browsers normally store them - and are also a part
 of the social engineering aspect.
 
-Besindes blacklisting phishing sites user education is also an important step.
+Besides blacklisting phishing sites user education is also an important step.
 
-Many browsers do already blacklist phising sites. If you want to build
-something similar, phishtank could be a source for your blacklist. Adding
+Many browsers do already blacklist phishing sites. If you want to build
+something similar, Phishtank could be a source for your blacklist. Adding
 internal data (submitted by aware users) to your blacklist is also smart. So if
 several of your customers are targeted in parallel and the first one reports a
-url you protect the others by adding it to a blacklist.
+URL you protect the others by adding it to a blacklist.
 
 %% TODO: https://github.com/MalwareReverseBrasil/phishreport
 
@@ -288,7 +288,7 @@ https://www.phishtank.com
 
 ## Pseudonymity
 
-A good way to protect yourself online is to create pseudonyms for our identiy.#
+A good way to protect yourself online is to create pseudonyms for our identity.#
 Changing your real name and you home is hard if things go south (stalking,
 mobbing, ...). But a pseudonym can be replaced. Nowadays having a pseudonym is
 quite common and some people became famous without having to publish their real
