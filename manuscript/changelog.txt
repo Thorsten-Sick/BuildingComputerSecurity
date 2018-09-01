@@ -6,6 +6,10 @@ changelog to make it simpler for you to find the new sections.
 %% Cryptoalgorithms
 %% Extend defensive programming / compiling
 
+## September 2018
+
+* CAN bus hacking
+
 ## August 2018
 
 This is the holiday release: Focus is on improving text quality

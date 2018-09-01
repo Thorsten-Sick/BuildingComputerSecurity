@@ -1,61 +1,97 @@
 # CAN Bus
 
-The CAN bus is central in many vehicles and more complex embedded things. There are adapters to connect a PC to a CAN bus (PEAK, for example).
+The CAN bus is central in many vehicles and other more complex embedded things.
+It connects different microcontrollers and systems in the vehicle. CAN is
+simple and cheap - but not the most simple and not the cheapest connection in a system.
 
-# TODO: Make source, bash
+It is designed to be reliable - safety - but not for security.
+
+CAN messages do have a message identifier and a payload. There is no *sender*
+or *receiver* in the CAN philosophy.
+
+The message identifiers do identify **what** is sent. And every chip listens and
+reacts to the messages relevant to it.
+
+On the physical layer: Lower message ids beat higher ones if a collission happens.
+
+There are adapters to connect a PC to a CAN bus (PEAK, for example).
+
+Linux is very well equipped to handle CAN - on current Linux variants you will
+see it as a network interface like "can0".
+
+## can-utils
+
+On linux the can-utils offer the basic command line bash interaction functionality.
+As stated before, a can bus is just another network interface for Linux.
+
+{lang="bash"}
 sudo apt-get install can-utils
 sudo ip link set can0 up type can bitrate 500000
-candump can0
+candump can0 -L
 
+Now you should see a list of can messages scrolling through.
 
-## candump
+### candump
 
-## cangen
+### cangen
 
-## cansniffer
+### cansniffer
 
-## canplayer
+### canplayer
 
-## cansend
+### cansend
 
 ## wireshark
 
-## Raspberry Pi specific
+### Raspberry Pi specific
 
-(Kali Linux on Raspberry Pi)
+While the PC Kali OS has drivers for the PEAK can controllers pre-installed,
+they are missing for the Raspberry Pi (Kali and Raspbian have been tested).
+
+But the company offered the source code and it is simple to compile them yourself.
 
 You can find the driver source here: https://www.peak-system.com/fileadmin/media/linux/index.htm
 
-%% TODO: Make bash source
-
+{lang="bash"}
 sudo apt-get install linux-headers-$(uname -r) libpopt-dev
 wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.6.0.tar.gz
+tar xvzf peak-linux-driver-8.6.0.tar.gz
+cd peak-linux-driver-8.6.0
 make PCI=NO PCIEC=NO PCC=NO DNG=NO PAR=NO ISA=NO NET=NETDEV_SUPPORT
 sudo make install
 sudo modprobe pcan
 # check pcan devices
 cat /proc/pcan
 ifconfig -a
-# Config
-ip link set can0 type can bitrate 500000
 
-
+More in the forum:
 
 https://www.peak-system.com/forum/viewtopic.php?f=59&t=283&start=90#p5327
 
 ## Python
 
+There is a python api to interact with can. For complex automation and tests I
+would prefer that to the command line interface.
+
+Automation includes stress testing and fuzzing.
+
 https://python-can.readthedocs.io/en/2.1.0/
 
+{lang="bash"}
 apt install python3-can
+
+or use *pip* to install it
 
 ## Further reading
 
-https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
+%% https://www.karambasecurity.com/blog/2018-01-17-how-to-build-a-can-sniffer
 
-Car hackers Handbook 
+### The Car Hacker's Handbook: A Guide for the Penetration Tester
 
-https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/
+A very good book covering hacking of cars. With a big focus on CAN bus hacking.
+There is a free version for it available on *opengarages.org* but this page
+can currently not be reached. I wish you luck.
+
+%% https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/
 
 %% Cheap CAN Adapter: https://shop.8devices.com/usb2can?product_id=54
-
