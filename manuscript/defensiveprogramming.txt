@@ -4,7 +4,7 @@
 
 ## Short abstract
 
-Defensive programming is coding while expecting your program to being actively attacked.
+Defensive programming is coding while expecting your program to be actively attacked.
 It needs some getting used to, but in the end debugging defensive code is much
 simpler than debugging normal code. This positive side effect is caused by
 stricter error handling.
@@ -28,8 +28,8 @@ Developers
 
 ## Typical attacks on programs
 
-* Attacker can overflow stack or heap memory space. This could be abused to insert malicious code into your program flow
-* Attacker can just cause loops in your program causing a DOS situation
+* Attackers can overflow stack or heap memory space. This could be abused to insert malicious code into your program flow
+* Attackers can just cause loops in your program causing a DOS situation
 * Attackers can send network data to your program which responds to a third party service with even more data (aka amplification attack)
 * Attackers can cause programs to dump critical data like passwords or crypto-graphical credentials
 
@@ -58,8 +58,8 @@ much damage as possible (*remote code execution* would be one possible goal of a
 
 Asserts are debugging tools.
 
-A simple way of doing module tests (as in "unit tests") is to use assert.
-Asserts are used during development and debug phase and will be switched off
+A simple way of doing module tests (as in "unit tests") is to use an assert.
+Asserts are used during the development and debug phase and will be switched off
 in release (by define NDEBUG for C). Asserts make sure a certain condition is
 true. If not, the program aborts and you can start debugging it.
 By using asserts you can trigger this easy to debug abort close to the issue
@@ -102,11 +102,11 @@ or indexes / counters (here check for min/max value):
 
 As said before:
 
-* Do this at the begin of your functions for all parameters
+* Do this at the beginning of your functions for all parameters
   * If you verify the parameters at runtime: assert afterwards to check your verification code
 * Do this at the exit of your function with all return values
 * Maybe: Do this in complex calculations in the function core
-* Before calling 3rd party functions to check you honour their contract
+* Before calling 3rd party functions check you honour their contract
 * After calling 3rd party functions: To verify they did not change their contract
 
 For release compile you will switch it off with NDEBUG. So there will be no
@@ -134,12 +134,12 @@ memcpy/strcpy/gets/...
 Do not copy more bytes than the buffer can contain. Strings in C have a
 terminating 0 byte, take this into consideration...
 
-Search in your code for strcpy, sprintf, ... those functions are to be replaced
-with strncpy and strnprintf right now. Those variants respect the target
+Search in your code for **strcpy**, **sprintf**, ... those functions are to be replaced
+with **strncpy** and **strnprintf** right now. Those variants respect the target
 buffer size. Benefits: You will kill a certain class of bugs that are very
 hard to debug because they only happen on a certain input.
 
-Even better than strncpy is **strlcpy** and **strlcat** (which guarantees null termination as well
+Even better than **strncpy** is **strlcpy** and **strlcat** (which guarantees null termination as well
 as proper size handling). If available, use that.
 
 ### Use external libraries
@@ -159,7 +159,7 @@ If you are using external libraries:
 is not fixed you can filter the data to the lib on your own as a workaround.
 * Be ready to update a library in all your projects as soon as a bug is found
 
-If you create own libraries, maybe release them as open source. To get more
+If you create your own libraries, maybe release them as open source. To get more
 users to "test" your libraries.
 
 This or establish this library in your company to get more valuable feedback.
@@ -173,7 +173,7 @@ right anyway.
 
 * Define who will free allocated memory (caller or called). If you have a library, support init/deinit
 * After free, set pointer to null
-* after alloc, check if memory is there. Attackers can maybe deplete available memory.
+* after alloc, check if memory is there. Attackers can possibly deplete available memory.
 * depending on your situation: memset memory directly after allocation
 * make sure, memsetted structure to 0 is marked as "not initialised" and is not halfway valid and cause errors down the road when used premature
 * goto: have a section in your function to free up allocated memory

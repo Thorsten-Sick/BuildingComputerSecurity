@@ -2,7 +2,7 @@
 
 ## Goals
 
-As experienced engineer, software developer and security guy I want to help you
+As an experienced engineer, software developer and security guy I want to help you
 getting started with security in your projects.
 
 My observation is that there are many specific books for security topics. But
@@ -23,7 +23,7 @@ And this is currently happening.
 
 The quarry of my external brain currently contains 80 chaotic pages. I expect
 they translate into at least the same amount of book pages. And I will be adding
-more knowledge as well.
+more knowledge later.
 
 ## Stages of learning
 
@@ -33,7 +33,7 @@ A simplified version is:
 
 1. Learn the *theory*
 2. Get *practical* experience
-3. *Explain* to others
+3. *Explain* it to others
 
 This is also a goal when writing this book.
 
@@ -45,7 +45,7 @@ That way I can see progress and get feedback.
 Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
 help me improve the book.
 
-As I have been spending lots of time with security focused engineers the most
+As I have been spending lots of time with security focused engineers, the most
 important things I want to learn first from you:
 
 * What causes trouble ?
@@ -58,7 +58,9 @@ Boiling down to: What do you need from this book ?
 ## 80/20 or Pareto Principle
 
 Following the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle)
-I will focus on finding the *important* 80 percent first and later filling in the missing 20 percent.
+I will focus on finding the *important* 80 percent of security tips first and
+later filling in the missing 20 percent.
+
 This will result in:
 
 * I start a new topic before I squished the last drop out of an older topic

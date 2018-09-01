@@ -14,6 +14,12 @@ of existing chapters.
 * Extended "Principles"
 * Added new chapter "browser security" (not finished yet)
 * Added new chapter "IoT security" (not finished yet)
+* Quality improvements in
+    * defensive programming
+    * know your enemies
+    * principles
+    * structure
+    * this book
 
 
 

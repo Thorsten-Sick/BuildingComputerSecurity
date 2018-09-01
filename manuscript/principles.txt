@@ -12,11 +12,11 @@ This is not a complete list.
 
 Detecting attacks is a typical bolt-on way of security.
 Anti-Virus, Network intrusion detection, behaviour detection, ...
-This kind of things are **bolt-on-security**. The other big security
+These kind of things are **bolt-on-security**. The other big security
 philosophy is **security-by-design**.
 
-If you are responsible to build a system use **security-by-design**. In many
-cases you are not free to the right thing - for example a manager needs an old
+If you are responsible for building a system use **security-by-design**. In many
+cases you are not free to do it the perfect way - for example a manager needs an old
 Internet Explorer to use am esoteric web based application installed on his PC.
 In this case **bolt-on-security** (filtering files and URLs) is a valid approach.
 
@@ -40,13 +40,13 @@ The next principles are part of the security-by-design philosophy
 ## Threat modelling
 
 Threat modelling is a process organized by the designer of the software but
-including a multi-skill team of people involved int he project.
+including a multi-skill team of people involved in the project.
 Goal is to identify potential threats to the developed tool as early as possible
 and to find fixes and mitigations.
 
 It is not complex but can turn out to produce lots of documentation.
 
-There are three basic steps that need to be done to model threats:
+There are four basic steps that need to be done to model threats:
 
 * Create overview
 * Brainstorm potential attacks
@@ -71,7 +71,7 @@ There will be a specific chapter on threat modelling
 ## Reduce Attack Surface
 
 Attack surface is everything that can be reached from the outside.
-This is servers, interfaces, network connections. You can reduce this surface by
+These are servers, interfaces, network connections. You can reduce this surface by
 asking yourself some simple questions:
 
 * What do you really need ?
@@ -110,15 +110,15 @@ Especially if it is network connected.
 Whatever you do: Be flexible. You did threat modelling during the design phase,
 you fixed all vulnerabilities you found. But there will be a hack.
 
-Expect the attacker to find a trick against your tools the next weeks.
-Have a plan how to handle that situation ready. Expect the attacker
+Expect the attacker to find a trick against your tools in the following weeks.
+Have a plan ready to handle that situation ready. Expect the attacker
 to do something unexpected. Plan for flexibility.
 
 ## Do not make mistakes
 
 "Bitte immer alles richtig machen" in German. This is the core principle
 especially in Design and Coding. It kind of sounds obvious and boring.
-But there are ways to engineer fault-reduction by tools and processes.
+But there are ways to engineer fault-reduction with tools and processes.
 
 %% TODO: Secure coding chapter linked to here
 
@@ -138,14 +138,14 @@ Could the user override the server for a short time ?
 
 ## Fail gracefully
 
-Do you want your system to fail-close or fail-open ? What does the door lock
+Do you want your system to fail-close or fail-open ? What does the car's door lock
 do when there is a power outage ? Lock or Open ? Plan these failures and
-the consequences. How can these failures triggered and by whom ?
+the consequences. How can these failures be triggered and by whom ?
 
 ## Monitor / Incident Response
 
 Expect a hack to happen. But many hacked companies do not notice the breach -
-or do that hundreds of days later by accident (server misbehaves or similar).
+or do, hundreds of days later by accident (server misbehaves or similar).
 
 You do not want to be one of those. You could monitor the devices you own or
 the devices you sold to customers (IoT, for example) for security incidents.
@@ -177,7 +177,8 @@ layers (simple and detailed) of information will very likely be embraced
 Your security plan should not depend on users reading, understanding and
 acting upon this information. But having smart users will add new "sensors"
 for unexpected attacks to your environment. Especially attacks containing
-social engineering.
+social engineering. Those users would need a fast channel to contact the
+person in charge for reports on attacks.
 
 %% TODO: Get C.S. to write a chapter
 

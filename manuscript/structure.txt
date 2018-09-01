@@ -1,7 +1,7 @@
 # Structure of this book {#chapter-structure}
 
 This book is meant to be read twice. First by cherry picking interesting
-topics. A second time as toolbox when implementing a feature.
+topics and a second time as toolbox when implementing a feature.
 
 For this reason the book is split. The first few chapters offer an introduction
 to the security landscape. The second part contains chapters helping to
@@ -20,7 +20,7 @@ Chapters contain:
 9. References to external sources like books
 10. Authors of this chapter
 
-I will try to stick by this structure. But the main goal is a usable toolbox -
+I will try to stick to this structure. But the main goal is a usable toolbox -
 if necessary I will break the rules.
 
 ## Project phases and audience
