@@ -9,6 +9,7 @@ changelog to make it simpler for you to find the new sections.
 ## September 2018
 
 * CAN bus hacking
+* Bluetooth LE (BLE)
 
 ## August 2018
 

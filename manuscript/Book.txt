@@ -15,6 +15,7 @@ passwords.txt
 browser.txt
 iot.txt
 can.txt
+bluetooth_le.txt
 antivirus_tests.txt
 antivirus_integration.txt
 antivirus_sharing_samples.txt
