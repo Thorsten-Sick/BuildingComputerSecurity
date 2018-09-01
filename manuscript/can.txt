@@ -1,5 +1,7 @@
 # CAN Bus
 
+C> Thorsten Sick
+
 The CAN bus is central in many vehicles and other more complex embedded things.
 It connects different microcontrollers and systems in the vehicle. CAN is
 simple and cheap - but not the most simple and not the cheapest connection in a system.
@@ -81,6 +83,8 @@ https://python-can.readthedocs.io/en/2.1.0/
 apt install python3-can
 
 or use *pip* to install it
+
+%% TODO: Add simple python example
 
 ## Further reading
 
