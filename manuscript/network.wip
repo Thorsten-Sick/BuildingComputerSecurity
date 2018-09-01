@@ -2,6 +2,8 @@
 
 https://linux-audit.com/linux-host-discovery-with-nmap/
 
+%% TODO: NMAP scripting
+
 
 ## Packet manipulation
 
@@ -18,3 +20,17 @@ https://linux-audit.com/linux-security-guide-for-hardening-ipv6/
 ## Firewall
 
 https://linux-audit.com/bpfilter-next-generation-linux-firewall/
+
+## Bettercap
+
+https://www.bettercap.org/
+
+%% TODO: Check NG
+
+## Mitmproxy
+
+https://mitmproxy.org/
+
+## ARP
+
+Netdiscover ARP scanner: https://sourceforge.net/projects/netdiscover/

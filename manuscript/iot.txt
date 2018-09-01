@@ -72,6 +72,10 @@ Of course the support Technician also needs to authenticate himself at the serve
 This is all a bit much for a WiFi enabled toaster. But maybe in some cases this
 kind of approach is the right size of paranoia.
 
+## Author
+
+Thorsten Sick
+
 %% encrypted MQTT
 %% https://teserakt.io/
 

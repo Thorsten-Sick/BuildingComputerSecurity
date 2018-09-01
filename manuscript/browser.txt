@@ -297,6 +297,10 @@ identity.
 This and the fact that Facebook want your account to be linked to your real
 name should be good reasons to have one or more pseudonyms.
 
+## Author
+
+Thorsten Sick
+
 %% ## Spying Extensions
 
 %% Add CCC talk

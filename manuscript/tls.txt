@@ -228,3 +228,5 @@ Thorsten Sick
 %% https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/
 %% https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/
 %% https://www.wst.space/ssl-part-3-certificate-authority/
+
+%% Tool to get TLS certificate info: https://github.com/genkiroid/cert
