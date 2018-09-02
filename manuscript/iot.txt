@@ -1,5 +1,7 @@
 # IoT security {#chapter-iot}
 
+C> Thorsten Sick
+
 IoT is cheap embedded devices with (optional) network connectivity.
 They have their own security challenge plus many things from the network chapter.
 
@@ -71,10 +73,6 @@ Of course the support Technician also needs to authenticate himself at the serve
 
 This is all a bit much for a WiFi enabled toaster. But maybe in some cases this
 kind of approach is the right size of paranoia.
-
-## Author
-
-Thorsten Sick
 
 %% encrypted MQTT
 %% [teserakt](https://teserakt.io/)

@@ -1,5 +1,7 @@
 # Compiling {#chapter-compiling}
 
+C> Thorsten Sick
+
 There are several ways to improve security at the compiling step. This ranges from
 static code analysis, dynamic code analysis to mitigation.
 
@@ -236,7 +238,3 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
 
 %% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
-
-## Authors
-
-Thorsten Sick

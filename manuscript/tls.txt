@@ -1,5 +1,7 @@
 # TLS aka SSL aka HTTPS {#chapter-tls}
 
+C> Thorsten Sick
+
 TLS is the name of the newer versions of the SSL protocol. HTTPS is HTTP over TLS, a common use case.
 But TLS can be used to secure all kinds of connections.
 
@@ -218,10 +220,6 @@ The issues that happened the last years have been found on several layers:
   * [Symantec (VeriSign)](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html)
 
 %% TODO: Check out [NoGotoFail](https://github.com/google/nogotofail)
-
-## Author
-
-Thorsten Sick
 
 
 %% TODO:

@@ -1,5 +1,7 @@
 # Browser security {#chapter-browsersecurity}
 
+C> Thorsten Sick
+
 %%  State: 80 % Browser
 
 Browsers are one of the most complex things running on your computer. They are
@@ -296,10 +298,6 @@ identity.
 
 This and the fact that Facebook want your account to be linked to your real
 name should be good reasons to have one or more pseudonyms.
-
-## Author
-
-Thorsten Sick
 
 %% ## Spying Extensions
 

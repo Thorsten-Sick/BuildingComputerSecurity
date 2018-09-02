@@ -1,5 +1,7 @@
 # Defensive programming {#chapter-defensive-programming}
 
+C> Thorsten Sick
+
 %% TODO: [CII best practice](https://linux-audit.com/secure-software-development-cii-best-practices/)
 
 ## Short abstract
@@ -221,7 +223,3 @@ TODO: Create focus chapters for different programming languages.
 ## External sources
 
 [Wikipedia on Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming)
-
-## Authors
-
-Thorsten Sick
