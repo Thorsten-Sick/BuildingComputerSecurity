@@ -27,9 +27,9 @@ On linux the can-utils offer the basic command line bash interaction functionali
 As stated before, a can bus is just another network interface for Linux.
 
 {lang="bash"}
-sudo apt-get install can-utils
-sudo ip link set can0 up type can bitrate 500000
-candump can0 -L
+    sudo apt-get install can-utils
+    sudo ip link set can0 up type can bitrate 500000
+    candump can0 -L
 
 Now you should see a list of can messages scrolling through.
 
@@ -55,16 +55,16 @@ But the company offered the source code and it is simple to compile them yoursel
 You can find the driver source here: https://www.peak-system.com/fileadmin/media/linux/index.htm
 
 {lang="bash"}
-sudo apt-get install linux-headers-$(uname -r) libpopt-dev
-wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.6.0.tar.gz
-tar xvzf peak-linux-driver-8.6.0.tar.gz
-cd peak-linux-driver-8.6.0
-make PCI=NO PCIEC=NO PCC=NO DNG=NO PAR=NO ISA=NO NET=NETDEV_SUPPORT
-sudo make install
-sudo modprobe pcan
- # check pcan devices
-cat /proc/pcan
-ifconfig -a
+    sudo apt-get install linux-headers-$(uname -r) libpopt-dev
+    wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.6.0.tar.gz
+    tar xvzf peak-linux-driver-8.6.0.tar.gz
+    cd peak-linux-driver-8.6.0
+    make PCI=NO PCIEC=NO PCC=NO DNG=NO PAR=NO ISA=NO NET=NETDEV_SUPPORT
+    sudo make install
+    sudo modprobe pcan
+    # check pcan devices
+    cat /proc/pcan
+    ifconfig -a
 
 More in the forum:
 
@@ -87,14 +87,14 @@ or use *pip* to install it
 %% TODO: Verify python example
 
 {lang="python"}
-import can
-from can import Message
-bus = can.interface.Bus(bustype="socketcan", channel="can0", bitrate=500000)
-test=Message(arbitration_id=int("BEEF",16), data=[0x40, 0x00])
-bus.send(test)
-for msg in bus:
-    if msg.data == bytearray(b'@\x00\x00\x01\x00\x00'):
-        pass    # Do something
+    import can
+    from can import Message
+    bus = can.interface.Bus(bustype="socketcan", channel="can0", bitrate=500000)
+    test=Message(arbitration_id=int("BEEF",16), data=[0x40, 0x00])
+    bus.send(test)
+    for msg in bus:
+        if msg.data == bytearray(b'@\x00\x00\x01\x00\x00'):
+            pass    # Do something
 
 W> Be aware of the mixed data types in this example. The id is an int,
 W> data is an array of int values. Result is a bytearray. Depending on your use case,

@@ -10,16 +10,16 @@ without an OS.
 An option here is to at least test the part of the code that are not hardware
 depended on Linux.
 
-|              |requires code modification  |requires linux compilation|requires execution on Linux|
-|--------------|----------------------------|--------------------------|---------------------------|
-|Flawfinder    |                            |                          |                           |
-|Assert        | **Yes, for debug build**   |                          |                           |
-|Fuzzing       |                            | **Yes. Would be better** | **Yes, Would be better**  |
-|Unit tests    | **Yes, for special build** | **Linux or Windows**     | **Linux or Windows**      |
-|CppCheck      |                            | **Special build**        |                           |
-|Clang, static |                            | **Special build**        |                           |
-|Valgrind      |                            | **Yes**                  | **Yes**                   |
-|Clang, dynamic|                            | **Yes**                  | **Yes**                   |
+|                                     |requires code modification  |requires linux compilation|requires execution on Linux|
+|-------------------------------------|----------------------------|--------------------------|---------------------------|
+|[Flawfinder](#chapter-flawfinder)    |                            |                          |                           |
+|Assert                               | **Yes, for debug build**   |                          |                           |
+|[Fuzzing](#chapter-fuzzing)          |                            | **Yes. Would be better** | **Yes, Would be better**  |
+|Unit tests                           | **Yes, for special build** | **Linux or Windows**     | **Linux or Windows**      |
+|[CppCheck](#chapter-cppcheck)        |                            | **Special build**        |                           |
+|Clang, static                        |                            | **Special build**        |                           |
+|Valgrind                             |                            | **Yes**                  | **Yes**                   |
+|Clang, dynamic                       |                            | **Yes**                  | **Yes**                   |
 
 ## Some background
 
