@@ -1,0 +1,149 @@
+# Content {#chapter-content}
+
+## Basics
+
+### Know your enemies
+
+Describes the types of adversaries your project can face. And their high-level
+goals, resources, technologies and tactics.
+
+### Attacker's goals
+
+An in depth list of goals and sub-goals the attackers have - things you will
+want to prevent happening.
+
+### Principles
+
+High level principles you can use to design a secure system. These principles
+are abstract - and you will be able to combine several of them in designing
+your project.
+
+## Coding
+
+### Code analysis tools table
+
+There are several tools that will assist you during the coding process. This
+table will help you to pick the proper ones.
+
+### Defensive programming
+
+Some coding techniques will harden your code against attackers. Positive side
+effects like making your code simpler to debug and more robust and stable are
+take aways that balance the extra effort invested.
+
+### Compiling
+
+Modern compilers have lots of less known features to find vulernerabilities
+during compile or run time. Or even mitigate - making vulnerabilities harder
+to abuse by the attacker. Covered in this chapter.
+
+### Testing compiling
+
+To verify that the compiler properly hardened your executable the way you
+wanted you (or your testers) will want to use some tools. This is described here.
+
+### Flawfinder
+
+In addition to your compiler the tool Flawfinder gets you more verification of
+your code. With zero effort.
+
+### CppCheck
+
+CppCheck is Flawfinder enhanced. With the small drawback that you will have to
+invest some time in configuration. This chapter will help you there.
+
+### Fuzzing
+
+Fuzzing is a technology to find unexpected bugs - most of them potential
+vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you.
+How to get started is described here.
+
+## Special situations
+
+Specific situations and features call for specific solutions. Described in
+these chapters.
+
+### UX
+
+How to create a user interface in a secure way - preventing the user from
+becoming the weakest link.
+
+### Updates
+
+As soon as a software reaches a certain complexity you need updates to ship
+patches. This chapter guides you through the challenge of shipping updates in
+a secure way.
+
+### Passwords
+
+Passwords are the main way the user authenticates himself. HAndling that in a
+secure fashion can turn out to be quite complex - but at the same time there
+is enough experience around.
+
+### Browser
+
+The browser is the main software running on most computers. And the interface
+for a lot of other technologies. As browsers are complex they are vulnerable.
+Some things can be done to improve browser security - or the security of
+connected web admin platforms (router config page).
+
+### IoT
+
+Things are getting more smart. Embedded Microcontrollers are cheap. Security
+is very often not existing. This chapter hopes to improve that.
+
+### CAN
+
+The CAN bus connects microcontrollers in many embedded systems - especially in
+vehicles. Securing it is a challenge - as it was not designed for security.
+This chapter will give you some tools - and basics for fuzzing CAN.
+
+### Bluetooth LE
+
+Low Energy Bluetooth can be integrated in many systems. But security is hard
+to implement. But possible. This chapter will give you the tools and basics to
+improve security.
+
+### TLS
+
+TLS is a basic technology to secure data in transit. Some may know it as SSL
+or HTTPS. And many projects use it.
+
+### Cryptoalgorithms
+
+Which algorithm to use ? In which mode ? Best key length ? This book is basic,
+so this chapter will be more of a cheat sheet for those essential things. For
+the curious people there are resources to dig much deeper.
+
+## Bolt-on security
+
+Bolt-on security is what is done of someone missed to do security-by-design.
+Especially myths make it hard to find the right way to use it. These chapters
+will bust some myths.
+
+### Antivirus tests
+
+How to properly read antivirus tests. As antivirus is neither a silver bullet
+nor useless a proper estimation of it's power should be done first.
+
+### Antivirus integration
+
+Antivirus can only scan files it gets access to. Many projects could benefit
+from an interface between the project and an already installed antivirus. And
+Microsoft is offering one.
+
+### Antivirus sharing samples
+
+There are several reasons to contact an antivirus vendor
+
+* They have a False Positive on your software
+* You found undetected malware (files or urls)
+
+This chapter will help you getting started and give you some internals - the
+people at an antivirus lab are on your side and will love to cooperate.
+
+### Antivirus: Virustotal
+
+Virustotal is the go-to way of quick scanning potential malware and
+false positives. But has an own tricky personality. Knowing that will prevent
+you from coming to the wrong conclusions.

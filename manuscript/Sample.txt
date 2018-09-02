@@ -1,5 +1,6 @@
 thisbook.txt
 structure.txt
+content.txt
 principles.txt
 flawfinder.txt
 updates.txt

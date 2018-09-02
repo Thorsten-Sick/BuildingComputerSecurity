@@ -1,5 +1,6 @@
 thisbook.txt
 structure.txt
+content.txt
 knowyourenemies.txt
 attackers_goals.txt
 principles.txt
@@ -17,12 +18,12 @@ browser.txt
 iot.txt
 can.txt
 bluetooth_le.txt
+tls.txt
+cryptoalgorithms.txt
 antivirus_tests.txt
 antivirus_integration.txt
 antivirus_sharing_samples.txt
 antivirus_virustotal.txt
-tls.txt
-cryptoalgorithms.txt
 externalreferences.txt
 theauthor.txt
 authors.txt
