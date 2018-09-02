@@ -24,7 +24,7 @@ Developers and Testers
 On Linux, a tool to verify the hardening settings is *hardening-check* which can
 be found here:
 
-https://github.com/ProhtMeyhet/hardening-check
+[Hardening-check](https://github.com/ProhtMeyhet/hardening-check)
 
 It will check for:
 
@@ -68,7 +68,7 @@ Checking for **forgotten debug symbols** in a secure program:
 If you see anything else (especially a list of symbols) you forgot them in
 the binary. Remove them by calling the command line tool *strip*.
 
-%% Also relevant for "elf_format.wip": https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
+%% Also relevant for "elf_format.wip": [ELF format](https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/)
 
 %% Todo: ldd and lddtree
 
@@ -78,7 +78,7 @@ the binary. Remove them by calling the command line tool *strip*.
 
 Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
-https://github.com/NetSPI/PESecurity
+[PESecurity](https://github.com/NetSPI/PESecurity)
 
 *I had no time so far to test this tool. I will update this paragraph as soon as I did. I am still leaving it here because it is very valuable even as unverified information*
 

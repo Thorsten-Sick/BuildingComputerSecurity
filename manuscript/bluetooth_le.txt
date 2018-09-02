@@ -98,7 +98,7 @@ that should help
 ### MITM on BTLE
 
 
-* https://github.com/DigitalSecurity/btlejuice
+* [btlejuice](https://github.com/DigitalSecurity/btlejuice)
 
 %% .. TODO: Test
 

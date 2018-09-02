@@ -90,7 +90,7 @@ targeted Ads.
 There are projects to monitor pages for privacy features. Or you can just
 check with your Privacy Extension how many trackers just got blocked.
 
-https://privacyscore.org/
+[privacyscore](https://privacyscore.org/)
 
 To protect yourself and do your own tracker-tracking use
 
@@ -114,7 +114,7 @@ the user can use the button as normal.
 
 Several Extensions offer this. Privacy Badger is amongst them.
 
-https://threatpost.com/privacy-badger-extension-blocks-tracking-through-social-icons/107348/
+[tracking through Social icons](https://threatpost.com/privacy-badger-extension-blocks-tracking-through-social-icons/107348/)
 
 ## Exploit Kits
 
@@ -139,11 +139,11 @@ For a defender the take-aways are:
 
 %% TODO: Write Info source
 
-https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+[Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
 
-https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/
+[Exploitkits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
 
-https://malware.dontneedcoffee.com/blog/
+[Dontneedcoffee](https://malware.dontneedcoffee.com/blog/)
 
 ## Cookies
 
@@ -175,7 +175,7 @@ browser plugins ...
 
 To test your own setup visit:
 
-https://panopticlick.eff.org/
+[Panopticlicks](https://panopticlick.eff.org/)
 
 
 ## TLS/SSL/HTTPS

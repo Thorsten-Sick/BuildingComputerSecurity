@@ -1,5 +1,5 @@
 # License {#chapter-license}
 
-This book is licensensed under [CC-BY-SA 4.0] (https://creativecommons.org/licenses/by-sa/4.0/)
+This book is licensensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-The source of this book can be found here: https://github.com/Thorsten-Sick/BuildingComputerSecurity
+[The source of this book](https://github.com/Thorsten-Sick/BuildingComputerSecurity)

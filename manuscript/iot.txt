@@ -77,16 +77,16 @@ kind of approach is the right size of paranoia.
 Thorsten Sick
 
 %% encrypted MQTT
-%% https://teserakt.io/
+%% [teserakt](https://teserakt.io/)
 
 
 %% ## Incidents
 
-%% http://www.ehackingnews.com/2018/05/medical-devices-now-vulnerable-to-cyber.html
+%% [Medical device hacking](http://www.ehackingnews.com/2018/05/medical-devices-now-vulnerable-to-cyber.html)
 
 %% ## Secure MQTT
 
-%% https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04-quickstart?utm_medium=social&utm_source=twitter&utm_campaign=mosquito_quickstart_tut&utm_content=no_image
+%% [Install and secure Mosquitto](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04-quickstart?utm_medium=social&utm_source=twitter&utm_campaign=mosquito_quickstart_tut&utm_content=no_image)
 
 
-%% https://media.ccc.de/v/32c3-7496-hardsploit_a_metasploit-like_tool_for_hardware_hacking
+%% [Hardsploit: Metasploit for hardware](https://media.ccc.de/v/32c3-7496-hardsploit_a_metasploit-like_tool_for_hardware_hacking)

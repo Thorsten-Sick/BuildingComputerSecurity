@@ -206,4 +206,4 @@ over several versions.
 
 
 %% Certificates
-%% Stolen Certificates: https://thehackernews.com/2018/07/digital-certificate-malware.html
+%% [Stolen Certificates](https://thehackernews.com/2018/07/digital-certificate-malware.html)

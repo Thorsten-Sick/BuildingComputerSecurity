@@ -12,11 +12,11 @@ features Cppcheck offers.
 
 You can find Cppcheck here:
 
-http://cppcheck.sourceforge.net/
+[CppCheck](http://cppcheck.sourceforge.net/)
 
 And a detailed documentation here:
 
-http://cppcheck.sourceforge.net/manual.pdf
+[CppCheck Manual](http://cppcheck.sourceforge.net/manual.pdf)
 
 On Ubuntu just install it with
 
