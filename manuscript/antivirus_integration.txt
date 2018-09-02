@@ -54,7 +54,7 @@ I would love the AMSI 2.0 to also offer:
 But that is missing.
 To make it simple
 
-https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx
+[AMSI documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587%28v=vs.85%29.aspx)
 
 %% TODO: Split URL
 
@@ -76,7 +76,7 @@ Maybe you had bad luck and the one on your development PC is just not connected.
 ## Google Safe Browsing
 
 Google offers a service to verify if a URL is malicious. The service can be
-found here: https://developers.google.com/safe-browsing/
+found here: [GSB - Google Safe Browsing](https://developers.google.com/safe-browsing/)
 
 It offers two ways to access the data. One is simple, the other one privacy
 respecting.
@@ -89,8 +89,6 @@ A common attack would be an interactive text document with a script that
 contains the URL to a malware server. This would be a so called *downloader* -
 one of the stages of a malware attack between *exploit* and *infection*.
 
-To test your implementation, you can use this test URL:
+To test your implementation, you can use this [test URL](http://malware.testing.google.test/testing/malware/)
 
-http://malware.testing.google.test/testing/malware/
-
-A reference implementation of GSB can be found here: https://github.com/google/safebrowsing
+A [reference implementation of GSB](https://github.com/google/safebrowsing) is available. 

@@ -27,9 +27,9 @@ detection and protection and add their own usability and speed tests on top.
 
 External experts are
 
-* https://www.av-test.org/de/antivirus/
-* https://www.av-comparatives.org/
-* https://www.virusbulletin.com/testing/
+* [av-test](https://www.av-test.org/de/antivirus/)
+* [av-comparatives](https://www.av-comparatives.org/)
+* [virus bulletin](https://www.virusbulletin.com/testing/)
     * Which is a AV industry internal organisation
 
 Also check out who is **not** participating in those tests....this could be a red flag.
@@ -92,7 +92,7 @@ Exactly for these kind of tests there is the EICAR test file. Every AV should
 detect it. And it is easy to detect. It was created for testing exact this kind of
 situations mentioned above.
 
-The file can be found here: http://www.eicar.org/86-0-Intended-use.html
+[EICAR test file](http://www.eicar.org/86-0-Intended-use.html)
 
 It is just a few bytes long and you can copy & paste it.
 

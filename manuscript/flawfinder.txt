@@ -1,6 +1,6 @@
 # Flawfinder {#chapter-flawfinder}
 
-https://www.dwheeler.com/flawfinder/
+[Flawfinder](https://www.dwheeler.com/flawfinder/)
 
 Flawfinder is a simple static code analysis tool. One of the "grep on speed"
 kind. It is simple - so it should be one of the first tools to use to verify
@@ -72,8 +72,7 @@ Running flawfinder on [Fuzzgoat](#reference-fuzzgoat) results in this kind of lo
     Minimum risk level = 1
     Not every hit is necessarily a security vulnerability.
     There may be other security vulnerabilities; review your code!
-    See 'Secure Programming for Linux and Unix HOWTO'
-    (http://www.dwheeler.com/secure-programs) for more information.
+    See ([http://www.dwheeler.com/secure-programs](http://www.dwheeler.com/secure-programs)) for more information.
 
 
 ## Finding inputs
@@ -112,4 +111,4 @@ Use that tool and spend some time writing code to verify the input data.
     Not every hit is necessarily a security vulnerability.
     There may be other security vulnerabilities; review your code!
     See 'Secure Programming for Linux and Unix HOWTO'
-    (http://www.dwheeler.com/secure-programs) for more information.
+    ([http://www.dwheeler.com/secure-programs](http://www.dwheeler.com/secure-programs)) for more information.

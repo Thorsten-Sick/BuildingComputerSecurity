@@ -187,7 +187,7 @@ There are several ways to enable HTTPS. Most of them depend on the admin or web 
 to set the right config.
 
 One way to get some more encrypted connections out of the web to have your browser request them.
-This can be done by the HTTPS-everywhere https://www.eff.org/https-everywhere plugin.
+This can be done by the [HTTPS-everywhere](https://www.eff.org/https-everywhere) plugin.
 Just install it.
 
 There are more advanced use cases for TLS with the acronyms HSTS and HPKP where
@@ -208,7 +208,7 @@ Firefox:
 It is either available through the history and right-clicking on an entry selecting "forget about this site"
 or through fiddling with your profile.
 
-For both browsers see more on: https://www.thesslstore.com/blog/clear-hsts-settings-chrome-firefox/
+For both browsers see more on [TheSSLStore](https://www.thesslstore.com/blog/clear-hsts-settings-chrome-firefox/)
 
 
 %% TODO: Write CA trouble
@@ -220,7 +220,7 @@ For both browsers see more on: https://www.thesslstore.com/blog/clear-hsts-setti
 
 ## Facebook
 
-https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing
+[EFF howto change facebook settings](https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing)
 
 ## BeEF
 
@@ -282,9 +282,9 @@ internal data (submitted by aware users) to your blacklist is also smart. So if
 several of your customers are targeted in parallel and the first one reports a
 URL you protect the others by adding it to a blacklist.
 
-%% TODO: https://github.com/MalwareReverseBrasil/phishreport
+%% TODO: [Phish report](https://github.com/MalwareReverseBrasil/phishreport)
 
-https://www.phishtank.com
+[Phishtank](https://www.phishtank.com)
 
 ## Pseudonymity
 
@@ -313,10 +313,10 @@ Thorsten Sick
 
 %% OTHER THINGS
 
-%% TODO: Malwarebytes browser extension https://news.hitb.org/content/introducing-malwarebytes-browser-extension
+%% TODO: Malwarebytes browser extension [Malwarebytes](https://news.hitb.org/content/introducing-malwarebytes-browser-extension)
 
-%% TODO: Banking malware vs. browsers: https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/
+%% TODO: Banking malware vs. browsers: [Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
 
-%%  TODO: Metasploit vs. browsers: https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/
+%%  TODO: [Metasploit vs. browsers](https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/)
 
-%% TODO: Selenium with Python: https://selenium-python.readthedocs.io/installation.html
+%% TODO: [Selenium with Python](https://selenium-python.readthedocs.io/installation.html)

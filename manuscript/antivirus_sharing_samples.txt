@@ -88,7 +88,7 @@ machines. And how to avoid it.
 ## Where to submit to AV companies
 
 I just googled "avast submit sample" and got directly sent to their page for
-submission: https://www.avast.com/report-malicious-file.php. You should submit
+submission: [Avast submission page](https://www.avast.com/report-malicious-file.php). You should submit
 to the AV you are using and maybe to 3 more (for good measure).
 
 I'll just drop some names here and you can start searching yourself:
@@ -110,7 +110,7 @@ Do not ask for detail. Renaming a *.exe into a *.vir protects you.
 ## Security without borders
 
 One of the NGOs handling potential cyber attacks on endangered people is
-"Security Without Borders" https://www.securitywithoutborders.org/
+[Security Without Borders](https://www.securitywithoutborders.org/)
 
 If you are in special danger contact them as well.
 
@@ -119,7 +119,7 @@ If you are in special danger contact them as well.
 Also relevant for high profile attacks on NGOs is the Citizen Lab. They did
 some interesting and relevant research the last few years.
 
-https://citizenlab.ca/
+[Citizenlab](https://citizenlab.ca/)
 
 If you are in special danger contact them as well.
 
@@ -129,7 +129,7 @@ The German hackers - organized in the CCC club - already got some fame for
 finding and analysing the German Government-Trojan. If you have a sample of a
 malware that is state sponsored it may be worth the effort to contact them.
 
-https://www.ccc.de/
+[CCC](https://www.ccc.de/)
 
 ## Sucker punch
 
@@ -143,8 +143,8 @@ Russian state malware and you do not trust Kaspersky), you could do the followin
 
 * Send the malware to all AV vendors with details why you think it is state sponsored
 * Also send the same samples and description to the big testers
-    * https://www.av-test.org/
-    * https://www.av-comparatives.org/
+    * [AV-Test](https://www.av-test.org/)
+    * [AV-Comparatives](https://www.av-comparatives.org/)
 
 They could include it in the next test. And pressure the AV companies to act.
 AFAIK this has never been done before and I do not know it it will work.

@@ -8,7 +8,7 @@
 
 Built for short and small data bursts. Info packages sent to well defined "ports".
 
-Getting started: https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction
+Getting started: [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
 %% .. TODO: More !
 
@@ -36,8 +36,8 @@ It is possible to go without encryption. Key exchange happens during the bonding
 
 ### Bluepy for bluetooth LE
 
-https://github.com/IanHarvey/bluepy
-https://ianharvey.github.io/bluepy-doc/
+[Bluepy on Github](https://github.com/IanHarvey/bluepy)
+[Bluepy doc](https://ianharvey.github.io/bluepy-doc/)
 
 %% .. TODO: Test Bluetooth LE
 
@@ -69,9 +69,9 @@ Bluetooth LE tool for Android
 
 
 Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0
-https://www.adafruit.com/product/2269
+[Adafruit BLE sniffer](https://www.adafruit.com/product/2269)
 
-https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-sniffer
+[Adafruit BLE sniffer documentation](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-sniffer)
 
 Call it with::
 
@@ -87,11 +87,11 @@ Preferences->Protocols->DLT_USER, set ID as "btle"
 %% .. TODO: Research: Monitor connection when sending commands.
 
 %% Wireshark does not recognize DLT_USER
-%% https://github.com/greatscottgadgets/ubertooth/issues/61
+%% [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issues/61)
 %% go to Preferences->Protocols->DLT_USER and enter "btle" as protocol
 that should help
 
-%% Convert PCAP: https://github.com/mikeryan/crackle/issues/26
+%% [Convert PCAP](https://github.com/mikeryan/crackle/issues/26)
 
 %% .. TODO: Fill tools
 
@@ -106,8 +106,8 @@ that should help
 ### Crack BTLE keys
 
 Crackle brute force temp key
-https://lacklustre.net/projects/crackle/
-https://github.com/mikeryan/crackle/
+[Crackle](https://lacklustre.net/projects/crackle/)
+[Crackle on Github](https://github.com/mikeryan/crackle/)
 
 Input file must contain the complete pairing conversation.
 
@@ -165,11 +165,11 @@ to connect to a found device
 
 ### Blue Hydra
 
- https://github.com/pwnieexpress/blue_hydra
+[Blue Hydra](https://github.com/pwnieexpress/blue_hydra)
 
 ### Ubertooth Utils
 
-https://github.com/greatscottgadgets/ubertooth
+[Ubertooth](https://github.com/greatscottgadgets/ubertooth)
 
 ### Bleah
 
@@ -196,14 +196,14 @@ Entry do not provide any passive eavesdropping protection”
 
 Gattacker is a node.js based MITM tool for BTLE.
 
-http://gattack.io/
+[Gattack](http://gattack.io/)
 
-https://github.com/securing/gattacker
-https://github.com/securing/docs/raw/master/slides.pdf
+[Gattacker on Github](https://github.com/securing/gattacker)
+[Presentation](https://github.com/securing/docs/raw/master/slides.pdf)
 
 The Gattacker Whitepaper has  a good overview covering BTLE
 technology and the possible attacks:
-https://github.com/securing/docs/raw/master/whitepaper.pdf
+[Gattacker Whitepaper](https://github.com/securing/docs/raw/master/whitepaper.pdf)
 
 Gattack offers those attacks:
 
@@ -217,7 +217,7 @@ Gattack offers those attacks:
 
 %% .. TODO: Check in tool of those are there
 
-%% TODO: https://blog.attify.com/hacking-bluetooth-low-energy/
+%% TODO: [Hacking BLE](https://blog.attify.com/hacking-bluetooth-low-energy/)
 
 %% TO Add: BTLEJUICE
 
@@ -225,7 +225,7 @@ Gattack offers those attacks:
 
 Is a new attack on BLE
 
-https://github.com/virtualabs/btlejack
+[BtleJack on Github](https://github.com/virtualabs/btlejack)
 
 * Sniffing existing connections
 * Sniffing new BLE connections
@@ -248,7 +248,7 @@ No matter where you start, it is very likely that you will also need some
 %% TODO: Write
 
 Apple: iBeacon
-Google: Eddystone/Physical Web http://google.github.io/physical-web/
+Google: [Eddystone/Physical Web](http://google.github.io/physical-web/)
 
 
 ## Glossary
@@ -261,22 +261,22 @@ Profile: Profiles combine several services. They standardize specific device cla
 L2CAP: Encapsulating data into packets
 
 
-%% TODO: https://media.blackhat.com/us-13/us-13-Ryan-Bluetooth-Smart-The-Good-The-Bad-The-Ugly-and-The-Fix.pdf
+%% TODO: [Blackhat](https://media.blackhat.com/us-13/us-13-Ryan-Bluetooth-Smart-The-Good-The-Bad-The-Ugly-and-The-Fix.pdf)
 
 
 %% TODO hcidump -x -t hci0
 
-%% TODO: https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en
+%% TODO: [BLE security](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en)
 
-%% TODO: https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security
+%% TODO: [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
 
 %% TODO: REFERENCE: #reference-presentation-btle-sniffing
 
 
-%% BTLE Capture the Flag: https://github.com/hackgnar/ble_ctf
+%% [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf)
 
-%% TODO: ESP IDF: https://esp-idf.readthedocs.io/en/latest/get-started/#
-%% Also: https://github.com/espressif/esp-idf
+%% TODO: [ESP IDF](https://esp-idf.readthedocs.io/en/latest/get-started/#)
+%% [ESP IDF 2](https://github.com/espressif/esp-idf)
 
 
 %% TODO: Write to ble value: gatttool -b 30:ae:a4:1c:0c:26 --char-write-req -a 0x0039 -n $(echo -n "200"|xxd -ps)

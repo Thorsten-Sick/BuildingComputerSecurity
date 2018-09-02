@@ -60,16 +60,16 @@ These are the reasons why you should **Encrypt everything**
 
 Tools for that kind of attacks are:
 
-* MITMPROXY https://mitmproxy.org/
-* WiFi Pineapple https://www.wifipineapple.com/
-* Fiddler https://www.telerik.com/fiddler
+* [MITMPROXY](https://mitmproxy.org/)
+* [WiFi Pineapple](https://www.wifipineapple.com/)
+* [Fiddler](https://www.telerik.com/fiddler)
 
 ## Mozilla server side TLS config guide
 
 TLS is a toolbox for encryption which is mainly used in the browser to server
 configuration. For this reason Mozilla offers a simple guide how to best set up your server.
 
-https://wiki.mozilla.org/Security/Server_Side_TLS
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
 
 ## Certificates
 
@@ -103,7 +103,7 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 %% TODO Add Let's Encrypt chapter
 
-%% https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579
+%% [Let's Encrypt wildcard](https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579)
 
 %% TODO Verify certificate (host name !)
 
@@ -150,7 +150,7 @@ it is directly tested while you still remember what you did and everything is sm
 ## Testing TLS
 
 SSLLabs offers a testing service that checks the TLS settings of your web page.
-(https://www.ssllabs.com/). They also offer lots of guides and documentation.
+[SSLLabs](https://www.ssllabs.com/). They also offer lots of guides and documentation.
 Monitor the configuration of your servers regularly
 (there might be a new attack available to the bad guys).
 
@@ -172,7 +172,7 @@ register and get their HSTS setting hard coded into the browsers.
 
 %% TODO Link to the list
 
-%% TODO: https://linux-audit.com/configure-hsts-http-strict-transport-security-apache-nginx/
+%% TODO: [Configure HSTS](https://linux-audit.com/configure-hsts-http-strict-transport-security-apache-nginx/)
 
 ## HPKP - HTTP Public Key Pinning
 
@@ -191,7 +191,7 @@ If you do not feel comfortable: Do not use it.
 
 [^foot_hpkp]: If you are smart you also offer a second id of a backup key
 
-%% TODO; https://textslashplain.com/tag/security/ for quotes and details
+%% TODO; [quotes](https://textslashplain.com/tag/security/) for quotes and details
 
 ## Certificate Transparency
 
@@ -214,10 +214,10 @@ The issues that happened the last years have been found on several layers:
 * Issues with the TLS protocol
 * Problem with the implementation (libraries)
 * Rogue CAs
-  * DigiNotar https://en.wikipedia.org/wiki/DigiNotar
-  * Symantec (VeriSign) https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html
+  * [DigiNotar](https://en.wikipedia.org/wiki/DigiNotar)
+  * [Symantec (VeriSign)](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html)
 
-%% TODO: Check out NoGotoFail: https://github.com/google/nogotofail
+%% TODO: Check out [NoGotoFail](https://github.com/google/nogotofail)
 
 ## Author
 
@@ -225,6 +225,6 @@ Thorsten Sick
 
 
 %% TODO:
-%% https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/
-%% https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/
-%% https://www.wst.space/ssl-part-3-certificate-authority/
+%% [ciphersuite](https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/)
+%% [DH key exchange](https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/)
+%% [CA](https://www.wst.space/ssl-part-3-certificate-authority/)
