@@ -46,7 +46,7 @@ on new victims.
 
 %% TODO: Add link to pony description
 
-There is also the component Mimikatz (https://github.com/gentilkiwi/mimikatz).
+There is also the component [Mimikatz](https://github.com/gentilkiwi/mimikatz).
 It is able to extract the credentials from memory.
 
 Technologies to reduce the impact of those attacks would be:

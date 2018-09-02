@@ -2,7 +2,7 @@
 
 %% State: 70 % Principles
 
-%% TODO: Create visualisation for dependencies using https://python-graph-gallery.com/ or https://www.r-graph-gallery.com/
+%% TODO: Create visualisation for dependencies using [python graph](https://python-graph-gallery.com/) or [r graph gallery](https://www.r-graph-gallery.com/)
 
 There is a list of the most basic principles you can build security on.
 These principles are very abstract, but are the basics for building more specific tools.

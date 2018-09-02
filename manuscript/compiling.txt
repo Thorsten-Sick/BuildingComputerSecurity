@@ -83,11 +83,11 @@ one if you build on Windows or your build machines are Window based.
 Small print: running Windows in a Vagrant instance could force you to pay for an
 extra license. Linux is not a problem here.
 
-https://www.vagrantup.com/
+[Vagrant](https://www.vagrantup.com/)
 
 A system doing just that can be experienced here:
 
-https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
+[ESP8266 Firmware build process](https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware)
 
 Your benefits:
 
@@ -113,15 +113,8 @@ You want to be able to compile at least parts of your system on Linux
 So you can use these tools to test your code.
 
 This is why Tavis Ormandy ported Windows Defender to Linux: to test it for
-vulnerabilities:
-
-https://twitter.com/taviso/status/867134496935563264
-
-and
-
-https://github.com/taviso/loadlibrary
-
-
+vulnerabilities: [Tavis on Twitter](https://twitter.com/taviso/status/867134496935563264)
+and [Tavis Ormandy loadlibrary](https://github.com/taviso/loadlibrary)
 
 ## Reproducible builds
 
@@ -137,11 +130,9 @@ co-workers can verify your build.
 
 This is how Debian is doing it:
 
-https://wiki.debian.org/ReproducibleBuilds
+[Debian reproducible builds](https://wiki.debian.org/ReproducibleBuilds)
 
-And this is the big project:
-
-https://reproducible-builds.org/
+And this is the big [reproducible builds](https://reproducible-builds.org/) project
 
 ## Compiler warnings/static code analysis
 
@@ -159,7 +150,7 @@ during development of anything strange in your code.
 * use *-Wall*. This will switch on many warnings, but not everything.
 * use *-Wextra* for even more tests than by -Wall
 * printf format checks: *gcc -Wformat -Wformat-security -Werror=format-security*
-* gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time (https://access.redhat.com/blogs/766093/posts/1976213)
+* gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time [Fortify Source](https://access.redhat.com/blogs/766093/posts/1976213)
 * Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
 
@@ -172,8 +163,7 @@ cherry pick some MISRA requirements to check your code for - and you'll have
 some enhancement for warnings in this compiler. Even if MISRA is not a
 requirement at your workplace.
 
-https://en.wikipedia.org/wiki/MISRA_C
-
+[Wikipedia on Misra](https://en.wikipedia.org/wiki/MISRA_C)
 
 ### Special tool: Splint
 
@@ -194,17 +184,11 @@ in those files you describe your library interfaces and the parameters they acce
 CPPCheck then can validate all calls to those functions.
 If you plan more serious validation, go for this tool.
 
-Page:
+Page for [CppCheck](http://cppcheck.sourceforge.net/)
 
-http://cppcheck.sourceforge.net/
+[CppCheck Manual](http://cppcheck.sourceforge.net/manual.pdf)
 
-Manual:
-
-http://cppcheck.sourceforge.net/manual.pdf
-
-Code:
-
-https://github.com/danmar/cppcheck
+[Code on Github](https://github.com/danmar/cppcheck)
 
 On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui).
 Also: There seems to be a bug. Packages do not properly install the config files.
@@ -231,7 +215,7 @@ switch - you should do it anyway. Just do not get false sense of security.
 #### GCC
 
 
-See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.debian.org/Hardening
+See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) and [Debian hardening](https://wiki.debian.org/Hardening)
 
 * stack protector: *-fstack-protector-all* (=all functions protected)
 * stack protector (since gcc 4.9, replaces the old one): *-fstack-protector-strong* (adds local array definitions)
@@ -251,7 +235,7 @@ See more GCC: https://wiki.ubuntu.com/ToolChain/CompilerFlags and https://wiki.d
 %% .. TODO: Visual Studio /RTCs flag research and add add proper place
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
 
-%% TODO: https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables
+%% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
 
 ## Authors
 

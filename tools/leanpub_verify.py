@@ -7,13 +7,18 @@ import os
 import re
 
 class Link():
-    def __init__(self, title, link):
+    def __init__(self, title, link, infile=None):
         """An outgoing link
+
+        @infile: Name of the file the link is in
         """
         self.title = title
         self.link = link.strip() if link else None
         self.local = True if link.startswith("#") else False
-
+        if infile:
+            self.infile = str(infile)
+        else:
+            self.infile = None
 
 class Chapter():
     def __init__(self, title, link, level = 1, infile=None):
@@ -42,9 +47,11 @@ class LeanpubVerify():
         self.chapterfiles = []
         self.chapters = []
         self.outgoingLinks = []
+        self.webLinks = []
         self.getBookFiles()
         self.getChapters()
         self.getOutgoingLinks()
+        self.getWebLinks()
 
     def getBookFiles(self):
         """find all txt files in manuscriptdir"""
@@ -106,6 +113,19 @@ class LeanpubVerify():
                 if not good:
                     print("Error: Local link has no chapter: {}".format(l.link))
 
+    def checkWebLinks(self):
+        """Check web link
+
+        All web links need a description
+        """
+
+        # TODO: web links must be reachable
+
+        for l in self.webLinks:
+            if not l.local:
+                if not l.title:
+                    print("Error: Web link has no description: {} ({})".format(l.link, l.infile))
+
     def getOutgoingLinks(self):
         """ Collect all link to somewhere
         """
@@ -119,10 +139,37 @@ class LeanpubVerify():
                         print("{}->{}".format(a[0],a[1]))
                         self.outgoingLinks.append(Link(a[0], a[1]))
 
+    def getWebLinks(self):
+        """ Collect all web links
+        """
+
+        print("Searching links")
+        linkpattern = re.compile("(\[.*?\]\()?(?P<url>https?://[^\s]+)")
+        for afile in self.chapterfiles:
+            with open(os.path.join(self.basedir, afile)) as fh:
+                for line in fh:
+                    matches = linkpattern.findall(line)
+                    for a in matches:
+                        desc = None
+                        lnk = a[1]
+                        if a[0]:
+                            desc = a[0][1:][:-2]
+                            if lnk.endswith("),"):
+                                lnk = lnk[:-2]
+                            if lnk.endswith(")"):
+                                lnk = lnk[:-1]
+
+                        print("{}->{}".format(desc,lnk))
+                        self.webLinks.append(Link(desc, lnk, infile=afile))
+
+
+
+
 if __name__ == "__main__":
     lpbase="../manuscript/Book.txt"
     lpv = LeanpubVerify(lpbase)
     print(lpv.chapterfiles)
     lpv.checkChapters()
     lpv.checkLinksLocal()
+    lpv.checkWebLinks()
     # TODO: Check external links exist
