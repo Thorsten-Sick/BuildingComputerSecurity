@@ -1,4 +1,4 @@
-# CAN Bus
+# CAN Bus {#chapter-canbus}
 
 C> Thorsten Sick
 
@@ -62,7 +62,7 @@ cd peak-linux-driver-8.6.0
 make PCI=NO PCIEC=NO PCC=NO DNG=NO PAR=NO ISA=NO NET=NETDEV_SUPPORT
 sudo make install
 sudo modprobe pcan
-# check pcan devices
+ # check pcan devices
 cat /proc/pcan
 ifconfig -a
 

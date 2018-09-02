@@ -1,4 +1,4 @@
-# Cppcheck
+# Cppcheck {#chapter-cppcheck}
 
 Cppcheck is a more advanced static code analysis tool than flawfinder.
 The drawback: It is more complicated.

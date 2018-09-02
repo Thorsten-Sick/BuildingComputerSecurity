@@ -9,6 +9,6 @@ has a well tested and established structure. I would hate to force external
 authors to re-write their chapter several times just because the structures is
 still developing....
 
-# Credits
+# Credits {#chapter-credits}
 
 Credits are for all the contributors.

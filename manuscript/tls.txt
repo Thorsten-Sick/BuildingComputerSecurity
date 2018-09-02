@@ -1,4 +1,4 @@
-# TLS aka SSL aka HTTPS
+# TLS aka SSL aka HTTPS {#chapter-tls}
 
 TLS is the name of the newer versions of the SSL protocol. HTTPS is HTTP over TLS, a common use case.
 But TLS can be used to secure all kinds of connections.
@@ -228,5 +228,3 @@ Thorsten Sick
 %% https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/
 %% https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/
 %% https://www.wst.space/ssl-part-3-certificate-authority/
-
-%% Tool to get TLS certificate info: https://github.com/genkiroid/cert

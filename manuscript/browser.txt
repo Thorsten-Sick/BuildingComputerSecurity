@@ -1,4 +1,4 @@
-# Browser security
+# Browser security {#chapter-browsersecurity}
 
 %%  State: 80 % Browser
 
@@ -192,7 +192,7 @@ Just install it.
 
 There are more advanced use cases for TLS with the acronyms HSTS and HPKP where
 the server promises to always use a certain encryption standard.
-This is described in the [TLS chapter](#chapter-TLS). On the browser side you
+This is described in the [TLS chapter](#chapter-tls). On the browser side you
 can access the HPKP and HSTS settings:
 
 Chrome:

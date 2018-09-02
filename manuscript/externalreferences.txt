@@ -1,4 +1,4 @@
-# External references and resources
+# External references and resources {#chapter-references}
 
 ### Hacking Tamagotchis {#reference-tamagotchi}
 
