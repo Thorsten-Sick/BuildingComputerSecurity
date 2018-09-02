@@ -96,7 +96,7 @@ for msg in bus:
     if msg.data == bytearray(b'@\x00\x00\x01\x00\x00'):
         pass    # Do something
 
-W> Be aware of the mixed data formats in this example. The id is an int,
+W> Be aware of the mixed data types in this example. The id is an int,
 W> data is an array of int values. Result is a bytearray. Depending on your use case,
 W> this could first cause some irritation.
 

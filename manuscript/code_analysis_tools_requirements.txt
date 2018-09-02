@@ -1,0 +1,36 @@
+# Requirements for code analysis tools
+
+There is a long list of tools supporting you during the development cycle.
+Some have specific requirements. So some will not be useable in your situation.
+
+Some of my projects are ambedded projects. So the requirement
+"compiles on Linux" is quite hard when the release target is a microcontroller
+without an OS.
+
+An option here is to at least test the part of the code that are not hardware
+depended on Linux.
+
+|              |requires code modification  |requires linux compilation|requires execution on Linux|
+|--------------|----------------------------|--------------------------|---------------------------|
+|Flawfinder    |                            |                          |                           |
+|Assert        | **Yes, for debug build**   |                          |                           |
+|Fuzzing       |                            | **Yes. Would be better** | **Yes, Would be better**  |
+|Unit tests    | **Yes, for special build** | **Linux or Windows**     | **Linux or Windows**      |
+|CppCheck      |                            | **Special build**        |                           |
+|Clang, static |                            | **Special build**        |                           |
+|Valgrind      |                            | **Yes**                  | **Yes**                   |
+|Clang, dynamic|                            | **Yes**                  | **Yes**                   |
+
+## Some background
+
+There is a large number of fuzzing and dynamic code analysis tools for Linux.
+Being able to compile at least core parts of the code and execute them on Linux
+will make your life much simpler.
+
+The two things that require code modification only modify special debug code.
+So you will not mess up your release build.
+
+Unit tests can be run on Linux or Windows. They will even run on embedded systems.
+But there you will have to handle memory space issues (the binary will be huge)
+and redirect the report to UART. I would define that as a bonus goal after
+the unit tests run on Linux or Windows.

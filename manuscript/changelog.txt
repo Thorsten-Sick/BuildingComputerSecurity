@@ -10,6 +10,7 @@ changelog to make it simpler for you to find the new sections.
 
 * CAN bus hacking
 * Bluetooth LE (BLE)
+* Added code analysis tools requirements table for an overview
 
 ## August 2018
 
