@@ -114,8 +114,11 @@ So you can use these tools to test your code.
 
 This is why Tavis Ormandy ported Windows Defender to Linux: to test it for
 vulnerabilities:
+
 https://twitter.com/taviso/status/867134496935563264
+
 and
+
 https://github.com/taviso/loadlibrary
 
 
@@ -132,8 +135,13 @@ You ship source code and build config. Reproducible builds will generate
 the exact same files (hash wise) on any build system. Your customers and
 co-workers can verify your build.
 
-This is how Debian is doing it: https://wiki.debian.org/ReproducibleBuilds
-And this is the big project: https://reproducible-builds.org/
+This is how Debian is doing it:
+
+https://wiki.debian.org/ReproducibleBuilds
+
+And this is the big project:
+
+https://reproducible-builds.org/
 
 ## Compiler warnings/static code analysis
 
@@ -186,9 +194,17 @@ in those files you describe your library interfaces and the parameters they acce
 CPPCheck then can validate all calls to those functions.
 If you plan more serious validation, go for this tool.
 
-Page: http://cppcheck.sourceforge.net/
-Manual: http://cppcheck.sourceforge.net/manual.pdf
-Code: https://github.com/danmar/cppcheck
+Page:
+
+http://cppcheck.sourceforge.net/
+
+Manual:
+
+http://cppcheck.sourceforge.net/manual.pdf
+
+Code:
+
+https://github.com/danmar/cppcheck
 
 On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui).
 Also: There seems to be a bug. Packages do not properly install the config files.

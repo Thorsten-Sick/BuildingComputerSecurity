@@ -1,4 +1,4 @@
-# Spreading malware samples {#chapter-sharing-samples}
+# Sharing malware samples {#chapter-sharing-samples}
 
 This chapter is about contacting AV vendors and sending them malware you found.
 Also about fixing false positives with the help of those vendors.
@@ -47,7 +47,7 @@ You do not have to submit all those info, the list is more an inspiration.
 * Did you have FPs before on your software ?
 * Where did you get this software ?
 
-** IOC **
+**IOC**
 
 No matter if reporting false positives or malware, having the IOCs (Indicators Of Compromise)
 in your report will help the AV labs to scan their databse for info:
@@ -74,7 +74,7 @@ install base and something "sneaky" could be an indicator for a targeted malware
 
 **Automatic debuggers**: Stepping through your software and trying to find strange behaviour.
 
-** Artificial Intelligence**: Grouping similar samples. And checking if the new
+**Artificial Intelligence**: Grouping similar samples. And checking if the new
 sample is closer to a "cleanstuff" or the "malware" group.
 
 **Humans**: Analysing unknown software that is in the dark grey area.

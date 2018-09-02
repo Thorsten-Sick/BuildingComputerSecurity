@@ -80,7 +80,7 @@ provoke crashes on invalid states.
 
 Fuzzers can be simple, see the next example:
 
-Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/master/doc/README.md)
+Simple [DNS fuzzer](https://github.com/sgayou/medfusion-4000-research/blob/master/doc/README.md)
 
 {lang="python"}
     import socket
@@ -100,7 +100,7 @@ Simple DNS fuzzer (from: https://github.com/sgayou/medfusion-4000-research/blob/
 
 ## Radamsa
 
-https://gitlab.com/akihe/radamsa
+[Radamsa](https://gitlab.com/akihe/radamsa)
 
 Radamsa is a smart data permutation engine. Sending this permutated data into
 the program to fuzz and handling crashes is your responsibility. The Radamsa
@@ -144,10 +144,9 @@ After compiling you call it with *afl-fuzz*.
 A good example is the *fuzzgoat* project which has a vulnerable program and a
 Makefile to show how AFL is compiled into it and then executed.
 
-The home page of AFL: http://lcamtuf.coredump.cx/afl/
+The home page of [AFL](http://lcamtuf.coredump.cx/afl/)
 
-Some technical overview:
-https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/
+Some [technical overview](https://tunnelshade.in/blog/2018/01/afl-internals-compile-time-instrumentation/)
 
 The best resource so far is the README:
 
@@ -163,7 +162,7 @@ Clang is available for Ubuntu 18.4
 You may notice: Ubuntu 17.10 does not have this Clang installed yet. So you will
 want to install a Clang 6.0 from a PPA.
 
-https://llvm.org/docs/LibFuzzer.html
+[LibFuzzer](https://llvm.org/docs/LibFuzzer.html)
 
 LibFuzzer supports a Corpus for Input and Output samples to test with. This improves speed a lot.
 
@@ -172,7 +171,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 ## More fuzzing tricks
 
 * Parallelize fuzzing
-    * Google's ClusterFuzz is an example: https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md
+    * Google's [ClusterFuzz](https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md) is an example
 * Do it on Linux. It has more powerful monitoring tools for dynamic code analysis
 * Fix found bugs ASAP, so your fuzzer can dig deeper
     * There are smart fuzzers that can cluster the crashes by the bugs they very likely belong to

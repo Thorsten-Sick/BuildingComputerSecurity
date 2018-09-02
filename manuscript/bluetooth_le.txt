@@ -126,24 +126,26 @@ Decrypting the pcap::
 
 %% .. TODO: BAsic tools as well
 
-hciconfig hci0 up
+{lang="bash"}
+    hciconfig hci0 up
 
-scan for le devices::
+scan for le devices:
 
 {lang="bash"}
     hcitool lescan
 
-create a le connection::
+create a le connection:
 
 {lang="bash"}
     hcitool lecc <address>
 
-delete a le connection::
+delete a le connection:
 
 {lang="bash"}
     hcitool ledc <handle>
 
-hcitool leinfo <handle> => get some info like manufacturer
+{lang="bash"}
+    hcitool leinfo <handle> => get some info like manufacturer
 
 
 
