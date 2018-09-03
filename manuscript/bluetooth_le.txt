@@ -6,7 +6,7 @@
 ## Basics
 
 
-Built for short and small data bursts. Info packages sent to well defined "ports".
+Built for short and small data bursts. Info packages sent to well defined Services and Characteristics.
 
 Getting started: [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
@@ -31,7 +31,15 @@ It is possible to go without encryption. Key exchange happens during the bonding
 
 %% .. TODO: Check and verify
 
+%% TODO Experiment: Can we exchange keys using bluetoothctl ?
+%% [](https://github.com/IanHarvey/bluepy/issues/227)
+
+%% Maybe bluepy gets a OOB feature: https://github.com/IanHarvey/bluepy/issues/300   (not existing yet !)
+
 ## Python programming
+
+%% GATT [](https://github.com/peplin/pygatt)
+%% Fallback [](https://github.com/getsenic/gatt-python)
 
 
 ### Bluepy for bluetooth LE
@@ -40,6 +48,11 @@ It is possible to go without encryption. Key exchange happens during the bonding
 [Bluepy doc](https://ianharvey.github.io/bluepy-doc/)
 
 %% .. TODO: Test Bluetooth LE
+
+
+### BlueZ
+
+BlueZ is the kernel part (and user space tools) for Bluetooth. Bluepy sits on top of BlueZ
 
 ## Potential attacks
 
@@ -175,10 +188,32 @@ to connect to a found device
 
   (BLE smart device hacking)
 
+Enumerate services and characteristics on a specific device
 
+{lang="bash"}
+    bleah -i 1 -e -b 30:30:30:aa:aa:aa
 
+* -i interface id. 1 is hci1
+* -e enumerate
+* -b <MAC> mac address of target 
 
+Set a specific value
 
+{lang="bash"}
+    bleah -i 1 -b 30:30:30:aa:aa:aa -n 0x39 -d "100"
+
+* -i interface id. 1 is hci1
+* -n handle of characteristics
+* -d value to set
+* -b <MAC> mac address of target
+
+LogiLink BT USB adapter BT0037 works quite well on Kali - built in BT failed on my Laptop.
+
+Uses Bluepy
+
+By Evilsocket: https://www.evilsocket.net/
+
+%% evilsocket@gmail.com
 
 ### Gattack.io
 
