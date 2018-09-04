@@ -191,7 +191,7 @@ to connect to a found device
 Enumerate services and characteristics on a specific device
 
 {lang="bash"}
-    bleah -i 1 -e -b 30:30:30:aa:aa:aa
+    sudo bleah -i 1 -e -b 30:30:30:aa:aa:aa
 
 * -i interface id. 1 is hci1
 * -e enumerate
@@ -200,7 +200,7 @@ Enumerate services and characteristics on a specific device
 Set a specific value
 
 {lang="bash"}
-    bleah -i 1 -b 30:30:30:aa:aa:aa -n 0x39 -d "100"
+    sudo bleah -i 1 -b 30:30:30:aa:aa:aa -n 0x39 -d "100"
 
 * -i interface id. 1 is hci1
 * -n handle of characteristics
