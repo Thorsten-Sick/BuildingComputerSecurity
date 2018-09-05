@@ -226,3 +226,9 @@ The issues that happened the last years have been found on several layers:
 %% [ciphersuite](https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/)
 %% [DH key exchange](https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/)
 %% [CA](https://www.wst.space/ssl-part-3-certificate-authority/)
+%% TLS 1.3: https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/
+
+%% https://blog.talosintelligence.com/2018/08/playback-tls-story.html?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=Feed%3A+feedburner%2FTalos+%28Talos%E2%84%A2+Blog%29
+
+
+%% https://code.fb.com/networking-traffic/deploying-tls-1-3-at-scale-with-fizz-a-performant-open-source-tls-library/

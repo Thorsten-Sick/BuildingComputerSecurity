@@ -4,3 +4,6 @@ Burp suite checks web pages for vulnerabilities.
 
 
 https://portswigger.net/burp/
+
+
+%% TODO: Auto repeater: https://github.com/nccgroup/autorepeater

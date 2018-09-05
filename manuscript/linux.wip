@@ -59,6 +59,12 @@ https://linux-audit.com/security-integration-configuration-management-and-auditi
 
 https://linux-audit.com/linux-audit-framework-101-basic-rules-for-configuration/
 
+IPv6: https://linux-audit.com/linux-security-guide-for-hardening-ipv6/
+
+https://linux-audit.com/linux-aslr-and-kernelrandomize_va_space-setting/
+
+https://linux-audit.com/kernel-hardening-disable-and-blacklist-linux-modules/
+
 ## Debugging
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/

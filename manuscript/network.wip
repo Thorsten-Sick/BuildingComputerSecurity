@@ -36,3 +36,11 @@ https://mitmproxy.org/
 ## ARP
 
 Netdiscover ARP scanner: https://sourceforge.net/projects/netdiscover/
+
+
+## IPTables
+
+https://github.com/trimstray/iptables-essentials
+
+
+%% Polymorph: Network packet manipulation framework: https://github.com/shramos/polymorph

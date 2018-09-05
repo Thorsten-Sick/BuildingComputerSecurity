@@ -195,7 +195,7 @@ Enumerate services and characteristics on a specific device
 
 * -i interface id. 1 is hci1
 * -e enumerate
-* -b <MAC> mac address of target 
+* -b <MAC> mac address of target
 
 Set a specific value
 
@@ -267,6 +267,8 @@ Is a new attack on BLE
 * Jamming BLE connections
 * Hijacking connections
 * Can export sniffed packets as PCAP
+
+%% https://www.heise.de/security/meldung/Btlejack-Neues-Gratis-Tool-zum-Belauschen-von-Bluetooth-Verbindungen-4134142.html
 
 ## Books
 

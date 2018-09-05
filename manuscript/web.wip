@@ -73,6 +73,8 @@ https://www.heise.de/security/meldung/Malvertising-Kriminelle-nutzen-Tausende-Wo
 
 ## CSP
 
+%% https://uselesscsp.com/
+
 ## Corb
 
 ## IFrame isolation
@@ -86,3 +88,20 @@ attacker who bought the domain after you quit.
 
 * Typo squatting
 * Certificates
+
+%% TODO: Subdomain enumeration: https://github.com/cakinney/domained
+
+
+%% ReDoS attacks: https://www.bleepingcomputer.com/news/security/javascript-web-apps-and-servers-vulnerable-to-redos-attacks/
+
+%% Site security analysis: https://scotthelme.co.uk/sites-that-used-to-have-ev/
+
+%% EKFiddler: Fiddler Web debugger: https://www.kitploit.com/2018/08/ekfiddle-framework-based-on-fiddler-web.html
+%% And: https://github.com/malwareinfosec/EKFiddle
+
+%% https://github.com/jseidl/GoldenEye
+
+%% https://linux-audit.com/web-changes-with-http2-performance-and-security/
+
+
+%% Why https: https://www.troyhunt.com/heres-why-your-static-website-needs-https/

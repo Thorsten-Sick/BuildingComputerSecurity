@@ -265,6 +265,8 @@ Update your router, do not go for the cheap ones. Log out after configuration.
 Maybe use a different browser profile or browser for Administration tasks  -
 and not the one you use for browsing for cat videos.
 
+%% TODO: Routers: https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+nakedsecurity+(Naked+Security+-+Sophos)
+
 ## Phishing
 
 Phishing - social engineering users to get their credentials - will continue as
@@ -286,6 +288,8 @@ URL you protect the others by adding it to a blacklist.
 
 %% TODO: [Phish report](https://github.com/MalwareReverseBrasil/phishreport)
 
+%% TODO: https://securityaffairs.co/wordpress/75033/hacking/industrial-sector-spear-phishing.html
+
 [Phishtank](https://www.phishtank.com)
 
 ## Pseudonymity
@@ -300,6 +304,13 @@ This and the fact that Facebook want your account to be linked to your real
 name should be good reasons to have one or more pseudonyms.
 
 %% ## Spying Extensions
+
+%% https://www.techrepublic.com/article/firefox-users-beware-this-popular-add-on-could-steal-your-browsing-history/#ftag=RSS56d97e7
+
+%% https://www.bleepingcomputer.com/news/security/mozilla-removes-23-firefox-add-ons-that-snooped-on-users/
+
+%% https://hackercombat.com/why-mozilla-banned-23-firefox-add-ons-for-mining-user-data/
+
 
 %% Add CCC talk
 
@@ -318,3 +329,16 @@ name should be good reasons to have one or more pseudonyms.
 %%  TODO: [Metasploit vs. browsers](https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/)
 
 %% TODO: [Selenium with Python](https://selenium-python.readthedocs.io/installation.html)
+
+%% TODO: Web assembly: https://googleprojectzero.blogspot.com/2018/08/the-problems-and-promise-of-webassembly.html
+
+
+%% TODO: Web Sockets: https://www.blackhillsinfosec.com/how-to-hack-websockets-and-socket-io/
+
+
+%% https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html
+
+%% https://medium.com/@aslushnikov/automating-clicks-in-chromium-a50e7f01d3fb
+
+
+%% Progressive web apps: https://medium.com/@kennethrohde/progressive-web-apps-coming-to-all-chrome-platforms-80e31272e2a8
