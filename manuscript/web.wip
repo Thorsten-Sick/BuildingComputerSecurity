@@ -90,7 +90,8 @@ attacker who bought the domain after you quit.
 * Certificates
 
 %% TODO: Subdomain enumeration: https://github.com/cakinney/domained
-
+%% http://michenriksen.com/blog/aquatone-tool-for-domain-flyovers/
+%% https://github.com/michenriksen/aquatone/
 
 %% ReDoS attacks: https://www.bleepingcomputer.com/news/security/javascript-web-apps-and-servers-vulnerable-to-redos-attacks/
 

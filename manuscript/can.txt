@@ -114,3 +114,6 @@ can currently not be reached. I wish you luck.
 %% [Vehicle hacking blog post](https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/)
 
 %% [Cheap CAN Adapter](https://shop.8devices.com/usb2can?product_id=54)
+
+%% TODO: http://savvycan.com/
+%% TODO: https://github.com/collin80/M2RET

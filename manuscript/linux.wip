@@ -65,6 +65,8 @@ https://linux-audit.com/linux-aslr-and-kernelrandomize_va_space-setting/
 
 https://linux-audit.com/kernel-hardening-disable-and-blacklist-linux-modules/
 
+https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/
+
 ## Debugging
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/

@@ -88,7 +88,18 @@ kind of approach is the right size of paranoia.
 
 
 %% [Hardsploit: Metasploit for hardware](https://media.ccc.de/v/32c3-7496-hardsploit_a_metasploit-like_tool_for_hardware_hacking)
+%% Routersploit: https://github.com/threat9/routersploit
 
 
+%% %%%%%%%%%%%%%%% Automotive
 %% OTA Tesla hacking
- https://i.blackhat.com/us-18/Thu-August-9/us-18-Liu-Over-The-Air-How-We-Remotely-Compromised-The-Gateway-Bcm-And-Autopilot-Ecus-Of-Tesla-Cars.pdf
+%%  https://i.blackhat.com/us-18/Thu-August-9/us-18-Liu-Over-The-Air-How-We-Remotely-Compromised-The-Gateway-Bcm-And-Autopilot-Ecus-Of-Tesla-Cars.pdf
+%% https://thehackernews.com/2018/05/bmw-smart-car-hacking.html
+%% https://keenlab.tencent.com/en/Experimental_Security_Assessment_of_BMW_Cars_by_KeenLab.pdf
+%% https://www.scmagazine.com/luxury-hackers-crack-bimmers-and-benzes-a-tale-of-bmws-bugs-and-mercedes-benz-thugs/article/768267/
+%% https://www.bleepingcomputer.com/news/security/volkswagen-and-audi-cars-vulnerable-to-remote-hacking/
+
+%% %%%%%%%%%%%%%%%%% Routers
+%% https://thehackernews.com/2018/05/hacking-gpon-routers.html
+%% https://thehackernews.com/2018/05/vpnfilter-botnet-malware.html
+%% https://www.kaspersky.com/blog/roaming-mantis-malware/22427/
