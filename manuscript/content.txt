@@ -24,18 +24,18 @@ your project.
 ### Code analysis tools table
 
 There are several tools that will assist you during the coding process. This
-[table](#chapter-code-anaysis-tools-table) will help you to pick the proper ones.
+[table](#chapter-code-analysis-tools-table) will help you to pick the proper ones.
 
 ### Defensive programming
 
 Some coding techniques will harden your code against attackers. Positive side
 effects like making your code simpler to debug and more robust and stable are
-take aways that balance the extra effort invested. If you do not yet practice
-[defensive programming](#chapter-defensive-programming) you shpuld consider starting it.
+take always that balance the extra effort invested. If you do not yet practice
+[defensive programming](#chapter-defensive-programming) you should consider starting it.
 
 ### Compiling
 
-Modern compilers have lots of less known features to find vulernerabilities
+Modern compilers have lots of less known features to find vulnerabilities
 during compile or run time. Or even mitigate - making vulnerabilities harder
 to abuse by the attacker. Covered in [this chapter](#chapter-compiling).
 
@@ -49,9 +49,9 @@ wanted you (or your testers) will want to use some tools. [This is described her
 In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you more verification of
 your code. With zero effort.
 
-### CppCheck
+### CPPCheck
 
-[CppCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
+[CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
 invest some time in configuration. This chapter will help you there.
 
 ### Fuzzing
@@ -86,19 +86,19 @@ is enough experience around](#chapter-passwords).
 
 The browser is the main software running on most computers. And the interface
 for a lot of other technologies. As browsers are complex they are vulnerable.
-Some things can be done to [improve browser security](#chapter-browsersecurity)
+Some things can be done to [improve browser security](#chapter-browser security)
 - or the security of connected web admin platforms (router config page).
 
 ### IoT
 
-Things are getting more smart. Embedded Microcontrollers are cheap. Security
+Things are getting more smart. Embedded Micro-controllers are cheap. Security
 is very often not existing. [This chapter](#chapter-iot) helps to improve that.
 
 ### CAN
 
-The CAN bus connects microcontrollers in many embedded systems - especially in
+The CAN bus connects micro-controllers in many embedded systems - especially in
 vehicles. Securing it is a challenge - as it was not designed for security.
-This chapter will [give you some tools](#chapter-canbus) - and basics for fuzzing CAN.
+This chapter will [give you some tools](#chapter-can bus) - and basics for fuzzing CAN.
 
 ### Bluetooth LE
 
@@ -111,7 +111,7 @@ improve security.
 [TLS is a basic technology to secure data in transit](#chapter-tls). Some may know it as SSL
 or HTTPS. And many projects use it.
 
-%% ### Cryptoalgorithms
+%% ### Crypto algorithms
 
 %% Which algorithm to use ? In which mode ? Best key length ? This book is basic,
 %% so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
@@ -140,13 +140,13 @@ Microsoft is offering one.
 There are several reasons to contact an antivirus vendor
 
 * They have a False Positive on your software
-* You found undetected malware (files or urls)
+* You found undetected malware (files or URLs)
 
 [This chapter will help you getting started](#chapter-sharing-samples) and give you some internals - the
 people working in an antivirus lab are on your side and will love to cooperate.
 
-### Antivirus: Virustotal
+### Antivirus: VirusTotal
 
-Virustotal is the go-to way of quick scanning potential malware and
+VirusTotal is the go-to way of quick scanning potential malware and
 false positives. But has an own tricky personality. Knowing that will [prevent
 you from coming to the wrong conclusions](#chapter-virustotal).
