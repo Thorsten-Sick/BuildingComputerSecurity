@@ -1,6 +1,6 @@
 # Bluetooth LE {#chapter-btle}
 
-C> Thosten Sick
+C> Thorsten Sick
 
 ## Basics
 
@@ -23,6 +23,11 @@ a ble device. The "Heart Rate monitor" profile for example allows any heart
 rate monitor device to be compatible with a range of apps.
 
 A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
+
+I am using Kali linux for many of my tests/attacks on my devices. Sometimes it
+can be hard to find a bluetooth device that is working correctly
+(my built-in bluetooth adapter of my laptop fails). So search your drawers for
+a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 
 ## BLE Security
 
@@ -51,50 +56,124 @@ Try to be compatible with this version or better !
 
 %% Maybe bluepy gets a OOB feature: https://github.com/IanHarvey/bluepy/issues/300   (not existing yet !)
 
-## Python programming
+## Nordic Semiconductor: nRF Connect
 
-%% GATT [](https://github.com/peplin/pygatt)
-%% Fallback [](https://github.com/getsenic/gatt-python)
+The simplest tool to support you in testing a ble device you are developing is
+an Android tool by Nordic Semiconductor. As you can not see radio frequencies
+you have to fall back to this. Just install **nRF Connect** and scan for
+devices. Connect to them, list their Services and Characteristics.
+
+For automatic testing you will later want some other things. Just continue
+reading.
+
+## Basic OS tools
+
+Linux has many command line tools to interact with bluetooth and bluetooth le.
+
+Basically treat a ble device like any network device.
+
+Activate a ble device:
+
+{lang="bash"}
+    hciconfig hci0 up
+
+Scan for le devices:
+
+{lang="bash"}
+    hcitool lescan
+
+Create a le connection:
+
+{lang="bash"}
+    hcitool lecc <address>
+
+Delete a le connection:
+
+{lang="bash"}
+    hcitool ledc <handle>
+
+Get some info like manufacturer:
+
+{lang="bash"}
+    hcitool leinfo <handle>
 
 
-### Bluepy for bluetooth LE
+**gatttool** for Bluetooth LE::
 
-[Bluepy on Github](https://github.com/IanHarvey/bluepy)
-[Bluepy doc](https://ianharvey.github.io/bluepy-doc/)
+%% {lang="bash"}
+%%     gatttool -i <interface> -b <device address> -I
+%%    > connect
 
-%% .. TODO: Test Bluetooth LE
+%% TODO: Experiment with it !
 
-
-### BlueZ
-
-BlueZ is the kernel part (and user space tools) for Bluetooth. Bluepy sits on top of BlueZ
-
-## Potential attacks
-
-List of potential attacks for threat modelling:
-
-* Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
-* Inpersonating (cloning) of a device
-* Passive sniffing (if there is no link layer encryption)
-* For encrypted layer: Sniff with ubertooth, sniff the pairing, use crackle to crack it
-* DOS a device
-* Footprinting (stalking)
-* MITM attacks (BTLE)
-* Social engineer users into pairing
-* MITM by cloning device. If encryption was established before, the connection will not work. The user will very liekly delete/re-pair and end up paired with the attacking device
-* to break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
-
-%% .. TODO: Verify list of attacks
+%% to connect to a found device
 
 
-## (Attack) Tools
+## Bleah - Bluetooth LE hacking
 
-### Nordic Semiconductor: nRF Connect
+A tool for bluetooth le hacking - and testing - is [bleah](https://github.com/evilsocket/bleah).
+It can enumerate devices, list their services, list the characteristics and
+write to them. This is very handy when developing Bluetooth LE enabled devices.
 
-Bluetooth LE tool for Android
+By [Evilsocket](https://www.evilsocket.net/)
 
-### Adafruit Bluetooth LE sniffer
+Some examples for the command line of bleah:
 
+Enumerate services and characteristics on a specific device
+
+{lang="bash"}
+    sudo bleah -i 1 -e -b 30:30:30:aa:aa:aa
+
+* -i interface id. 1 is hci1
+* -e enumerate
+* -b <MAC> mac address of target
+
+Set a specific value
+
+{lang="bash"}
+    sudo bleah -i 1 -b 30:30:30:aa:aa:aa -n 0x39 -d "100"
+
+* -i interface id. 1 is hci1
+* -n handle of characteristics
+* -d value to set
+* -b <MAC> mac address of target
+
+Always going through bleah can be a bit slow (especially when doing fuzzing).
+Gatttool can be an alternative for writing:
+
+{lang="bash"}
+    gatttool -b 30:ae:a4:1c:0c:26 --char-write-req -a 0x0039 -n $(echo -n "200"|xxd -ps)
+
+Or reading:
+
+{lang="bash"}
+    gatttool -b 30:ae:a4:1c:0c:26 --char-read -a 0x0039
+
+Gatttool handles values as hex, not string. Here bleah is more convenient.
+
+Bleah is based on bluepy.
+
+## Bluepy - python library for Bluetooth le
+
+[Bluepy](https://github.com/IanHarvey/bluepy) is the library to use for
+Bluetooth LE programming.
+
+Thanks to a good [documentation](https://ianharvey.github.io/bluepy-doc/) it
+is simple to write short python scripts to interact with your device.
+
+## BlueZ
+
+BlueZ is the linux kernel part (and user space tools) for Bluetooth.
+Bluepy sits on top of BlueZ
+
+## Adafruit Bluetooth LE sniffer
+
+So far we have been checking the higher OSI layers. If you want to go down to
+single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer"
+and the "Ubertooth".
+
+Experimenting with the Adafruit I got challenged by some glitches
+(maybe my fault, maybe the tools are better tested with the Ubertooth).
 
 Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0
 [Adafruit BLE sniffer](https://www.adafruit.com/product/2269)
@@ -123,6 +202,41 @@ that should help
 
 %% .. TODO: Fill tools
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+## Python programming
+
+%% GATT [](https://github.com/peplin/pygatt)
+%% Fallback [](https://github.com/getsenic/gatt-python)
+
+
+## Potential attacks
+
+List of potential attacks for threat modelling:
+
+* Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
+* Inpersonating (cloning) of a device
+* Passive sniffing (if there is no link layer encryption)
+* For encrypted layer: Sniff with ubertooth, sniff the pairing, use crackle to crack it
+* DOS a device
+* Footprinting (stalking)
+* MITM attacks (BTLE)
+* Social engineer users into pairing
+* MITM by cloning device. If encryption was established before, the connection will not work. The user will very liekly delete/re-pair and end up paired with the attacking device
+* to break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
+
+%% .. TODO: Verify list of attacks
+
+
+## (Attack) Tools
+
+
+
 ### MITM on BTLE
 
 
@@ -149,43 +263,6 @@ Decrypting the pcap::
 {lang="bash"}
      crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
 
-### Basic OS tools
-
-
-%% .. TODO: BAsic tools as well
-
-{lang="bash"}
-    hciconfig hci0 up
-
-scan for le devices:
-
-{lang="bash"}
-    hcitool lescan
-
-create a le connection:
-
-{lang="bash"}
-    hcitool lecc <address>
-
-delete a le connection:
-
-{lang="bash"}
-    hcitool ledc <handle>
-
-{lang="bash"}
-    hcitool leinfo <handle> => get some info like manufacturer
-
-
-
-**gatttool** for Bluetooth LE::
-
-{lang="bash"}
-    gatttool -i <interface> -b <device address> -I
-    > connect
-
-%% TODO: Experiment with it !
-
-to connect to a found device
 
 ### Pinging BTLE
 
@@ -199,36 +276,6 @@ to connect to a found device
 
 [Ubertooth](https://github.com/greatscottgadgets/ubertooth)
 
-### Bleah
-
-  (BLE smart device hacking)
-
-Enumerate services and characteristics on a specific device
-
-{lang="bash"}
-    sudo bleah -i 1 -e -b 30:30:30:aa:aa:aa
-
-* -i interface id. 1 is hci1
-* -e enumerate
-* -b <MAC> mac address of target
-
-Set a specific value
-
-{lang="bash"}
-    sudo bleah -i 1 -b 30:30:30:aa:aa:aa -n 0x39 -d "100"
-
-* -i interface id. 1 is hci1
-* -n handle of characteristics
-* -d value to set
-* -b <MAC> mac address of target
-
-LogiLink BT USB adapter BT0037 works quite well on Kali - built in BT failed on my Laptop.
-
-Uses Bluepy
-
-By Evilsocket: https://www.evilsocket.net/
-
-%% evilsocket@gmail.com
 
 ### Gattack.io
 
@@ -329,11 +376,3 @@ L2CAP: Encapsulating data into packets
 
 %% TODO: [ESP IDF](https://esp-idf.readthedocs.io/en/latest/get-started/#)
 %% [ESP IDF 2](https://github.com/espressif/esp-idf)
-
-
-%% TODO: Write to ble value: gatttool -b 30:ae:a4:1c:0c:26 --char-write-req -a 0x0039 -n $(echo -n "200"|xxd -ps)
-%% TODO: Write to ble value: bleah -b 30:ae:a4:1c:0c:26 -n 0x0039 -d 200
-
-
-%% TODO: gatttool read value: gatttool -b 30:ae:a4:1c:0c:26 --char-read -a 0x0039
-%% (value returned as hex, not string !)
