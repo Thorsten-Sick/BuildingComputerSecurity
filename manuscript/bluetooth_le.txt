@@ -278,3 +278,94 @@ just drop some links for this as well.
 
 * [ESP IDF Documentation](https://esp-idf.readthedocs.io/en/latest/get-started/#)
 * [ESP IDF Code](https://github.com/espressif/esp-idf)
+
+
+## Further reading
+
+There is a list of books, talks and tools.
+
+BTLE is a complex topic and depending on your learning style you should
+either start at the *hands-on* side or at the *theoretical* side.
+
+No matter where you start, it is very likely that you will also need some
+(cheap) btle tools and products.
+
+### Book: Make: Bluetooth {#reference-book-make-bluetooth}
+
+Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan
+
+A Bluetooth LE book. For people who prefer to learn with their hands.
+Lots of Arduino and NodeJS based projects.
+
+It is not mentioning security. But a good way to get you started.
+
+### Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
+
+IoT Projects with Bluetooth Low Energy by Madhur Bhargava. Still a hands-on
+book. But the *Make: Bluetooth* is simpler. This one has more theory.
+It also covers BTLE 5.0
+
+
+%% TODO: Add this
+%% ### Book: Building Bluetooth Low Energy Systems {#reference-book-building-btle-systems}
+
+%% Building Bluetooth Low Energy Systems, by Muhammad Usama bin Aftab
+
+%% TODO: More content
+
+%% ### Book: Getting Started with Bluetooth Low Energy {#reference-book-getting-started-with-btle}
+
+%% Getting Started with Bluetooth Low Energy by Robert Davidson, Akiba,
+%% Carles Cufí, Kevin Townsend
+
+%% TODO: Fix name encoding
+
+%% From protocol basics and background to different hardware platforms and tools. A solid road to implement the first BTLE projects.
+
+%% Also contains tools and iOS/Android howtos.
+
+### Woot13 presentation on BTLE hacking (especially sniffing) {#reference-presentation-btle-sniffing}
+
+by Mike Ryan
+
+https://www.usenix.org/conference/woot13/workshop-program/presentation/Ryan
+
+Topics and tags:
+
+* Ubertooth
+* wireshark
+* pcap
+* sniffing
+* BTLE key exchange protocol
+* crackle
+
+### SHA2017 presentation on BTLE hacking "hack-a-ble" {#reference-presentation-hack-a-ble}
+
+Very dense talk on Bluetooth LE security.
+
+https://media.ccc.de/v/SHA2017-230-hack-a-ble
+
+### Lock-picking in the IoT {#reference-presentation-lockpicking-in-the-iot}
+
+https://media.ccc.de/v/33c3-8019-lockpicking_in_the_iot
+
+Very specific for BLE locks. Some mentioning of mitmproxy and ble sniffers.
+Relevant if you want to create IoT locks.
+
+### With low energy comes low security {#reference-presentation-with-low-energy-comes-low-security}
+
+https://www.usenix.org/conference/woot13/workshop-program/presentation/ryan
+
+* Lots about the lower physical layers
+* Tools
+  * Ubertooth
+  * Wireshark
+  * PCAP
+
+Take aways:
+
+* BLE key exchange protocol weak
+  * but AES-CCM is good
+* Attackers can enforce re-pairing to get a new key exchange
+* *crackle* needs less than a second to break the encryption
+  * But needs pairing sniffed to crack
