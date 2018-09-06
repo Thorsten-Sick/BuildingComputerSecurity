@@ -1,0 +1,116 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+## Python programming
+
+%% GATT [](https://github.com/peplin/pygatt)
+%% Fallback [](https://github.com/getsenic/gatt-python)
+
+
+
+
+### MITM on BTLE
+
+
+* [btlejuice](https://github.com/DigitalSecurity/btlejuice)
+
+%% .. TODO: Test
+
+
+
+### Pinging BTLE
+
+.. TODO: Document, including DOS
+
+### Blue Hydra
+
+[Blue Hydra](https://github.com/pwnieexpress/blue_hydra)
+
+### Ubertooth Utils
+
+[Ubertooth](https://github.com/greatscottgadgets/ubertooth)
+
+
+### Gattack.io
+
+GATT: The "application" layer. While the lower layers very often do not
+do encryption (pre-shared keys would be possible, but default is more likely
+"none" or something weak), GATT layer could have some DIY encryption.
+
+For the other BTLE encryption methods:
+
+* Unencrypted: Can be broken
+* "Just works": The device talks to the MITM encrypted. The MITM to the central unencrypted....broken.
+* "Passkey entry" BTLE specification: “Just Works and Passkey
+Entry do not provide any passive eavesdropping protection”
+* Sometimes the pairing has to be broken first (also for crackle to work)
+
+Gattacker is a node.js based MITM tool for BTLE.
+
+[Gattack](http://gattack.io/)
+
+[Gattacker on Github](https://github.com/securing/gattacker)
+[Presentation](https://github.com/securing/docs/raw/master/slides.pdf)
+
+The Gattacker Whitepaper has  a good overview covering BTLE
+technology and the possible attacks:
+[Gattacker Whitepaper](https://github.com/securing/docs/raw/master/whitepaper.pdf)
+
+Gattack offers those attacks:
+
+* DOS the broadcasting phase (before pairing)
+* Cloning and spoofing a device
+* passive interception of unencrypted transmissions
+* active interception (MITM)
+* module interface - attack open GATT services
+* password brute forcing
+* GATT value fuzzing
+
+%% .. TODO: Check in tool of those are there
+
+%% TODO: [Hacking BLE](https://blog.attify.com/hacking-bluetooth-low-energy/)
+
+%% TO Add: BTLEJUICE
+
+
+## Books
+
+There is a [list of books](#reference-collection-btle) and tools.
+
+BTLE is a complex topic and depending on your learning style you should
+either start at the *hands-on* side or at the *theoretical* side.
+
+No matter where you start, it is very likely that you will also need some
+(cheap) btle tools and products.
+
+## Beacons
+
+%% TODO: Write
+
+Apple: iBeacon
+Google: [Eddystone/Physical Web](http://google.github.io/physical-web/)
+
+
+## Glossary
+
+GAP: Advertisements, connection handling, defining device roles in communication
+GATT: Organizes the data offered by the device
+Characteristic: Value + Descriptor
+Service: Several Characteristics combined create a service. A default service for BTLE would contain device information
+Profile: Profiles combine several services. They standardize specific device classes
+L2CAP: Encapsulating data into packets
+
+
+%% TODO: [Blackhat](https://media.blackhat.com/us-13/us-13-Ryan-Bluetooth-Smart-The-Good-The-Bad-The-Ugly-and-The-Fix.pdf)
+
+
+%% TODO hcidump -x -t hci0
+
+%% TODO: [BLE security](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en)
+
+%% TODO: [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
+
+%% TODO: REFERENCE: #reference-presentation-btle-sniffing
