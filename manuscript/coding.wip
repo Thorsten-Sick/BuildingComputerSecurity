@@ -1,18 +1,21 @@
-Coding
-######
+# Coding {#chapter-coding}
 
-.. State: 80 % Coding
+%% State: 80 % Coding
 
-Tactics
-*******
+Good code quality results in less bugs, more robust code and less security
+vulnerabilities. It is an essential foundation for a secure program.
+
+## Tactics
 
 During coding there are several tactics to improve code quality manually
 and by tools.
 The tools are getting better and smarter every month - so it is worth
 re-visiting the documentation every few months.
 
-Not wasting money
-=================
+But first we need a way to convince oeple to invest into code quality.
+Investment is mostly time.
+
+## Not wasting money
 
 The earlier a bug is found the cheaper it is to fix it. Best would be before
 commit. Worst: After release and shipping. So put effort into finding them
@@ -21,11 +24,9 @@ early and automatic.
 Also: Watch out for design errors. A broken design could force you to
 re-write tons of code.
 
-Coding practice
-***************
+## Coding practice
 
-Pair programming/Code reviews
-=============================
+### Pair programming/Code reviews
 
 Have an experienced engineer (at least one) code review a beginner's code.
 Be a good teacher and help your padawan. Focus on security issues first.
@@ -42,8 +43,7 @@ personalities, find alternatives for reviews.
 You can also automate the system of reviews by enforcing them before merge.
 If your tool supports it: Do so.
 
-Code reviews
-============
+### Code reviews
 
 A good source for a code review checklist is http://cwe.mitre.org/ (Common weakness enumeration).
 
@@ -59,18 +59,15 @@ https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards
 Also the book "Secure coding in C and C++"
 
 
-Tools for code reviews
-----------------------
+## Tools for code reviews
 
 Use tools for code reviews (details in "compiling"). Static and Dynamic code
 analysis can improve your code a lot. But do not trust them blindly. They will
 not find everything.
 
-General
-=======
+## General
 
-Reduce Complexity
------------------
+### Reduce Complexity
 
 Complexity kills. Make the code as simple as possible.
 To achieve that, maybe you should ponder:
@@ -81,12 +78,11 @@ To achieve that, maybe you should ponder:
 * Simplify used data and file formats
 * Remove old features
 
-.. TODO: More
+%% TODO: More
 
-.. TODO: Secure coding standards
+%% TODO: Secure coding standards
 
-Keep third party libraries up to date
--------------------------------------
+### Keep third party libraries up to date
 
 If you use third party libraries they are an essential part of your code base.
 Monitor them for bugfixes. Keep them up to date. Maybe even fuzz them and
@@ -111,33 +107,29 @@ Stil more benefits: You can streamline the behaviour of different versions of
 the wrapped library. Just in case they broke/improved the interface while also
 shipping essential security fixes.
 
-Segmentation
-------------
+### Segmentation
 
 Segmenting programs on a system protects the system from being hacked.
 
-Seccomp
-~~~~~~~
+#### Seccomp
 
-.. TODO: write more
+%% TODO: write more
 
 The linux way of dropping privileges. At program start the program can drop
 privileges it does not need. This does not interfere. But if ever shellcode is
 injected, this shellcode is restricted to the permissions in this contract.
 
 
-AppArmor
-~~~~~~~~
+#### AppArmor
 
 Exernal restrictions on program permissions set by the administrator
 (or maintainer). This prevents hacked programs from mis-behaving.
 
 It is very strong on Ubuntu.
 
-.. TODO: AppArmor write more
+%% TODO: AppArmor write more
 
-Reduce power of network tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Reduce power of network tools
 
 If you have pre-installed network tools (wget, ftp, telnet) on your system
 and a hacker gets in, he can use those for lateral movement and to get his

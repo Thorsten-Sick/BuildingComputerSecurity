@@ -4,11 +4,11 @@ C> Thorsten Sick
 
 ## Basics
 
-Bluetooth LE (low energy) is a special mode of modern bluetooth devices. It
-behaves very differently fro normal bluetooth behaviour with the benefit of
+Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It
+behaves very differently fro normal Bluetooth behaviour with the benefit of
 significantly lower power consumption.
 
-It does not maintain a longer connection (like used by classical bluetooth
+It does not maintain a longer connection (like used by classical Bluetooth
 and streaming audio) but uses small data bursts to exchange data snippets.
 
 Those data snippets are basically key-value pairs.
@@ -24,9 +24,9 @@ rate monitor device to be compatible with a range of apps.
 
 A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
-I am using Kali linux for many of my tests/attacks on my devices. Sometimes it
-can be hard to find a bluetooth device that is working correctly
-(my built-in bluetooth adapter of my laptop fails). So search your drawers for
+I am using Kali Linux for many of my tests/attacks on my devices. Sometimes it
+can be hard to find a Bluetooth device that is working correctly
+(my built-in Bluetooth adapter of my laptop fails). So search your drawers for
 a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 
 ## Potential attacks
@@ -34,9 +34,9 @@ a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 List of potential attacks for threat modelling:
 
 * Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
-* Inpersonating (cloning) of a device
+* Impersonating (cloning) of a device
 * Passive sniffing (if there is no link layer encryption)
-* For encrypted layer: Sniff with ubertooth, sniff the pairing, use crackle to crack it
+* For encrypted layer: Sniff with Ubertooth, sniff the pairing, use crackle to crack it
 * DOS a device
 * Footprinting (stalking)
 * MITM attacks (BTLE)
@@ -51,7 +51,7 @@ attack surface.
 
 ## BLE Security
 
-BLE securit is weaker than the Bluetooth classic security. Limiting factor is
+BLE security is weaker than the Bluetooth classic security. Limiting factor is
 the pairing of devices. It requires a pin number to be entered - but with small
 and cheap devices without no human interaction (keypad, display) this is hard
 to achieve.
@@ -66,7 +66,7 @@ or short keys (all the others). The thing to go for is OOB: The pairing is
 done over an other channel - not over the air. This can be NFC or QR codes or
 an attached wire. Secure but not an option for many device classes.
 
-The [bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) has more details.
+The [Bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) has more details.
 
 Also: With Bluetooth 4.2 Elliptic Curve Diffie Hellman (ECDH) is introduced.
 Try to be compatible with this version or better !
@@ -88,7 +88,7 @@ reading.
 
 ## Basic OS tools
 
-Linux has many command line tools to interact with bluetooth and bluetooth le.
+Linux has many command line tools to interact with Bluetooth and Bluetooth le.
 
 Basically treat a ble device like any network device.
 
@@ -131,7 +131,7 @@ Get some info like manufacturer:
 
 ## Bleah - Bluetooth LE hacking
 
-A tool for bluetooth le hacking - and testing - is [bleah](https://github.com/evilsocket/bleah).
+A tool for Bluetooth le hacking - and testing - is [bleah](https://github.com/evilsocket/bleah).
 It can enumerate devices, list their services, list the characteristics and
 write to them. This is very handy when developing Bluetooth LE enabled devices.
 
@@ -183,7 +183,7 @@ is simple to write short python scripts to interact with your device.
 
 ## BlueZ
 
-BlueZ is the linux kernel part (and user space tools) for Bluetooth.
+BlueZ is the Linux kernel part (and user space tools) for Bluetooth.
 Bluepy sits on top of BlueZ
 
 ## Adafruit Bluetooth LE sniffer
@@ -236,8 +236,8 @@ Is a new attack on BLE
 
 ### Crackle: BTLE key cracking
 
-For some attacks it is relevant that the bluetooth le key is cracked first.
-With crackle it is possible - but requires a dump of the bluetooth packets
+For some attacks it is relevant that the Bluetooth le key is cracked first.
+With crackle it is possible - but requires a dump of the Bluetooth packets
 during the pairing process. This is the tricky part. The Adafruit sniffer or
 Ubertooth can do that.
 
@@ -246,7 +246,7 @@ Ubertooth can do that.
 
 Input file must contain the **complete** pairing conversation or it will not
 work. The *tests* folder of the crackle packet has some pcaps to start
-experimenting with it. Better to start with them than wasting time debuging
+experimenting with it. Better to start with them than wasting time debugging
 your tools - just because the pcap you dumped is incomplete.
 
 Getting the LTK key::

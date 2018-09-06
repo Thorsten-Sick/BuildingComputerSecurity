@@ -3,7 +3,7 @@
 C> Thorsten Sick
 
 The CAN bus is central in many vehicles and other more complex embedded things.
-It connects different microcontrollers and systems in the vehicle. CAN is
+It connects different micro controllers and systems in the vehicle. CAN is
 simple and cheap - but not the most simple and not the cheapest connection in a system.
 
 It is designed to be reliable - safety - but not for security.
@@ -14,7 +14,7 @@ or *receiver* in the CAN philosophy.
 The message identifiers do identify **what** is sent. And every chip listens and
 reacts to the messages relevant to it.
 
-On the physical layer: Lower message ids beat higher ones if a collission happens.
+On the physical layer: Lower message ids beat higher ones if a collision happens.
 
 There are adapters to connect a PC to a CAN bus (PEAK, for example).
 
@@ -23,7 +23,7 @@ see it as a network interface like "can0".
 
 ## can-utils
 
-On linux the can-utils offer the basic command line bash interaction functionality.
+On Linux the can-utils offer the basic command line bash interaction functionality.
 As stated before, a can bus is just another network interface for Linux.
 
 {lang="bash"}
@@ -72,7 +72,7 @@ More in the forum:
 
 ## Python
 
-There is a python api to interact with can. For complex automation and tests I
+There is a python API to interact with can. For complex automation and tests I
 would prefer that to the command line interface.
 
 Automation includes stress testing and fuzzing.
