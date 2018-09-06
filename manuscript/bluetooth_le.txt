@@ -1,35 +1,50 @@
 # Bluetooth LE {#chapter-btle}
 
-
-%% .. State: 40 % BluetoothLE
+C> Thosten Sick
 
 ## Basics
 
+Bluetooth LE (low energy) is a special mode of modern bluetooth devices. It
+behaves very differently fro normal bluetooth behaviour with the benefit of
+significantly lower power consumption.
 
-Built for short and small data bursts. Info packages sent to well defined Services and Characteristics.
+It does not maintain a longer connection (like used by classical bluetooth
+and streaming audio) but uses small data bursts to exchange data snippets.
 
-Getting started: [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
+Those data snippets are basically key-value pairs.
 
-%% .. TODO: More !
+A key is called a "characteristic". Several characteristics can be combined
+into a service. A device can have several services. For example one handling
+all the device specific data (brand, model, version) while another is sharing
+measurements (temperature, air pressure, ...)
 
-### Encryption
+There are also "profiles" which are standardized services/characteristics for
+a ble device. The "Heart Rate monitor" profile for example allows any heart
+rate monitor device to be compatible with a range of apps.
 
+A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
-Security Keys:
+## BLE Security
 
-All keys are asymmetrical
+BLE securit is weaker than the Bluetooth classic security. Limiting factor is
+the pairing of devices. It requires a pin number to be entered - but with small
+and cheap devices without no human interaction (keypad, display) this is hard
+to achieve.
 
-* TK Temporary Key: Input to derivation of STK
-* STK (Short Term Key): Used for key material distribution. Based on TK and random values
-* Long Term Key aka LTK: 128 bit encryption key shared
-    * Also: Master Identification (EDIV + Rand) as identifier for this connection
-* IRK aka Identity Resolving Key: For privacy, hides addresses
-    * Identity Address Information: Address Type + Bluetooth Device Address
-* CSRK aka Connection Signature Resolving Key: Digitally sign unencrypted data at ATT layer
+* Just Works
+* Numeric Comparison (Only for LE Secure Connections)
+* Passkey Entry
+* Out of Band (OOB)
 
-It is possible to go without encryption. Key exchange happens during the bonding procedure.
+Where the first three options have drawbacks: either an all 0 key (just works)
+or short keys (all the others). The thing to go for is OOB: The pairing is
+done over an other channel - not over the air. This can be NFC or QR codes or
+an attached wire. Secure but not an option for many device classes.
 
-%% .. TODO: Check and verify
+The [bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) has more details.
+
+Also: With Bluetooth 4.2 Elliptic Curve Diffie Hellman (ECDH) is introduced.
+Try to be compatible with this version or better !
 
 %% TODO Experiment: Can we exchange keys using bluetoothctl ?
 %% [](https://github.com/IanHarvey/bluepy/issues/227)
