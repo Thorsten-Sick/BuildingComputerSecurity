@@ -35,15 +35,52 @@ Now you should see a list of can messages scrolling through.
 
 ### candump
 
-### cangen
+Candump dumps the can bus data onto stdout or into a log file. It is quite
+simple to use and does not suffer from feature creep. Some switches to change
+the log format exist. Just use the *man page* for details.
 
-### cansniffer
+An example (data modified to prevent leakage):
 
-### canplayer
+{lang="bash"}
+    (1535701844.518066) can0 1#DEADBEEF0FED
+    (1535701844.531162) can0 2#C0FFEEBABE
+    (1535701844.531164) can0 3#BEEF
+    (1535701844.531164) can0 1#DEADBEEF0FDE
 
-### cansend
+It contains
 
-## wireshark
+* timestamp
+* interface being logged
+* id#data
+
+### Other tools in can-utils
+
+The other tools in can-utils get a short mention. As I want to be flexible and
+the python framework is powerful, I normally write small python scripts
+instead of them. But if you as a bash nerd, they will be your choice.
+
+Check the man page for details and start hacking.
+
+**cangen**
+
+A small can fuzzer. I missed the feedback loop and wrote my own script.
+
+**cansniffer**
+
+cansniffer is an enhanced logger.
+
+**canplayer**
+
+Replays a can logfile onto the bus. It also offers to use stdin. And as you
+can modify the log file with a text editor before sending it is a simple way to
+simulate specific scenarios and run them from command line.
+
+**cansend**
+
+cansend sends one or more can frames. It is a bit simpler than the canplayer
+and a good tool for simple bash test scenarios.
+
+%% TODO ## wireshark
 
 ### Raspberry Pi specific
 
@@ -100,6 +137,42 @@ W> Be aware of the mixed data types in this example. The id is an int,
 W> data is an array of int values. Result is a bytearray. Depending on your use case,
 W> this could first cause some irritation.
 
+One additional python module will be very handy to manipulate the binary data
+payloads. Meet *python struct*. [Documentation](https://docs.python.org/3.7/library/struct.html) can be found online.
+
+Short: It is a part of the python standard lib. It can *unpack* bytes into
+several variables based on a defined format. Or it can *pack* several variables
+into a binary representation based on a given format. One line will handle all
+your data processing problems.
+
+## Fuzzing the CAN bus with python
+
+When I fuzz a device I will first find ways to detect if the device is behaving
+normal: Read the firmware version by CAN bus and comparing the results to the
+expected value. For example.
+
+Better to use several simple tests and combine them.
+
+Using a candump log I will estimate the expected data pattern and create a
+python function that creates random data almost matching this data.
+
+Add some additional bitflips.
+
+Push this data into the CAN bus and check if it still responds and how.
+
+If it breaks: Log away the last packet sent.
+
+Rince and repeat.
+
+For additional benefits:
+
+* Reboot the device by power cycling it automatically after some packets
+* Log more than one packet in case it breaks. Maybe the combination of those packets caused the failure
+
+With the **candump** command and the python modules described in this chapter
+you should now bre prepared to tackle this task.
+
+Have fun.
 
 ## Further reading
 
