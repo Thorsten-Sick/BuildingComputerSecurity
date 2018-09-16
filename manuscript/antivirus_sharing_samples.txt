@@ -4,7 +4,7 @@ This chapter is about contacting AV vendors and sending them malware you found.
 Also about fixing false positives with the help of those vendors.
 
 Some software companies seem to have bad karma and the software they release
-has a hight likelyhood of being flagged as malware  - despite being harmless.
+has a high likely hood of being flagged as malware  - despite being harmless.
 This can be caused by uncommon build tools and post-build processing of the
 software. For those unlucky software teams: Get into close contact with the
 AV companies and fix this problem together. More about that in this chapter.
@@ -13,7 +13,7 @@ AV companies and fix this problem together. More about that in this chapter.
 
 By reporting found FPs you help yourself and them.
 
-They are also interested in the newset malware. Are you running a server that
+They are also interested in the newest malware. Are you running a server that
 turned out to be a malware magnet ? Contact your AV vendor.
 
 The basic data the vendors need is the files. But they will also love to have
@@ -29,6 +29,21 @@ In addition to the file, there is more information that will help the virus
 labs to process the data.
 
 You do not have to submit all those info, the list is more an inspiration.
+
+**Storing first**
+
+If you have a suspicious file you want to share you should store it properly
+ on your computer first.
+
+Some things to know:
+* Stored files are no problem. Executed are
+* You AV will have a so called *Quarantine*. This is an encrypted file storing the found malware
+    * One of the less known reasons it encrypts the found malware: That way it will not be detected a second time by another scanner and cause confusion
+* Most malware is multi-staged. So several files, URLs and registry entries are involved. Gotta catch them all
+* There is file-less malware that only exists in memory or registry keys. It is hard to extract that from your system
+* Rename your malware files from .exe to .vir. It is a tradition that protects you from accidentally starting it.
+    * Better use a zip file with the password *infected*
+    * One step better (to avoid accidents) is to use a crypto container like [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/)
 
 **Info for malware**
 
@@ -50,7 +65,7 @@ You do not have to submit all those info, the list is more an inspiration.
 **IOC**
 
 No matter if reporting false positives or malware, having the IOCs (Indicators Of Compromise)
-in your report will help the AV labs to scan their databse for info:
+in your report will help the AV labs to scan their database for info:
 
 * The file
 * A hash of your file (md5, sha1) - which one to use depends on the database of the AV vendor
