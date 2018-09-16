@@ -2,6 +2,7 @@ thisbook.txt
 structure.txt
 content.txt
 principles.txt
+code_analysis_tools_requirements.txt
 flawfinder.txt
 updates.txt
 passwords.txt

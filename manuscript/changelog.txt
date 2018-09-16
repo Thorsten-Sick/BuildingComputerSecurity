@@ -14,6 +14,7 @@ changelog to make it simpler for you to find the new sections.
 * URLs now in footnotes
 * Content chapter added
 * Chapter Antivirus Behaviour classification added
+* added code_analysis_tools_requirements.txt to Sample
 
 ## August 2018
 
