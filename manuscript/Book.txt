@@ -24,6 +24,7 @@ antivirus_tests.txt
 antivirus_integration.txt
 antivirus_sharing_samples.txt
 antivirus_virustotal.txt
+antivirus_classification_behaviour_based.txt
 externalreferences.txt
 theauthor.txt
 authors.txt

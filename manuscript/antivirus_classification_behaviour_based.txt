@@ -1,0 +1,96 @@
+# Behaviour based classification {#chapter-antivirus-behaviour-based-classification}
+
+C> Thorsten Sick
+
+Classification is the process from "here I have a file and do not know what it is"
+to "this file is malware".
+
+There are several ways to classify files. And one of them is behaviour based.
+This is: observing the behaviour of the file and judging based on that
+
+**Advantages**
+
+* Current Malware is server side generated. The files are very different - but the behaviour stays the same
+    * Behaviour signatures work for months - hashes for minutes
+* Behaviour on the system is quite simple to judge
+
+**Disadvantages**
+
+* Malware that only does malicious things on Mondays, or on Italian windows 7 will be hard to classify
+* Malware *could* escape the analysis sandbox (bad configuration, unpatched vulnerabilities)
+* Malware *could* detect it is running in a virtual machine and stop doing malicious things
+* Especially Trojans could do the things advertised for minutes - and after that do malicious stuff
+* It is slow. Even when running 30 VMs in parallel on a dedicated machine for 3 minutes each you will not have a good throughput
+    * please do the maths for your malware situation
+    * having worked for a AV vendor: We got 4 samples per second
+
+## Container, Virtual Machines or Bare Metal
+
+Behaviour analysis of malware can either happen on virtual machines or Bare
+ Metal. Both systems must be reset after each malware run. So a virtual
+ machine is much faster.
+
+Container technology is cool for deployment but it is not a security feature
+and does not properly isolate the guest from the host.
+Also: You can not simulate a totally different system in the container than on
+the host.
+
+So it is either a Virtual Machine or a (slow) Bare Metal system with hardware
+support for the reset.
+
+If you use virtual machines: Run them on a dedicated analysis server and not
+on office environment.
+
+## Pafish
+
+Virtual machines have a big disadvantage: They can be detected. Several
+characteristics are so typical for Virtual Machines that malware could detect
+them and just play nice.
+
+There is a tool named [pafish](https://github.com/a0rtega/pafish) that detects sandboxes the way malware does.
+Remove all traces and you should be able to run malware without it detecting
+the machine.
+
+Also: Never ever depend on one way to classify only ! Always use additional
+classifiers in parallel.
+
+## Networking
+
+Malware is trying to connect to the C&C server. It needs either a real
+connection to the internet or a simulated server landscape.
+
+You want to separate the analysis machine from the company network. First to
+avoid the malware to escape into the office net. Second to avoid your IP to be
+blacklisted by ISPs as malware source.
+
+The analysis sandbox should be able to monitor network connections - so you do
+not have to do that centrally.
+
+## VMCloak
+
+[VMCloak](http://vmcloak.org/) is a tool similar to
+[Vagrant](https://www.vagrantup.com) - it creates virtual machines. But the
+main goal is to hide them from malware detection.
+
+## Cuckoo Sandbox
+
+%% TODO URL
+[Cuckoo Sandbox]() is an analysis environment. After setup you push files in and
+get behaviour reports and verdicts out.
+
+As you will want to set it up on a special machine and getting your own
+configuration will take hours or days it deserves an own chapter.
+
+With a bit of luck the online service version of Cuckoo Sandbox
+[malwr.com](https://malwr.com) is up and you can use that for non-private analysis.
+
+## Small print
+
+I contributed to Pafish, VMCloak and Cuckoo Sandbox - so I may be biased. On the
+other hand: There are either no real alternatives or people keep telling me
+those tools are good.
+
+For Cuckoo Sandbox there are alternatives. Just check if they are re-branded
+Cuckoos or something unique.
+
+%% TODO Further reading
