@@ -1,4 +1,4 @@
-# CAN Bus {#chapter-canbus}
+# CAN Bus {#chapter-can-bus}
 
 C> Thorsten Sick
 

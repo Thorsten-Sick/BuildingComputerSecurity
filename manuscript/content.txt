@@ -86,7 +86,7 @@ is enough experience around](#chapter-passwords).
 
 The browser is the main software running on most computers. And the interface
 for a lot of other technologies. As browsers are complex they are vulnerable.
-Some things can be done to [improve browser security](#chapter-browser security)
+Some things can be done to [improve browser security](#chapter-browser-security)
 - or the security of connected web admin platforms (router config page).
 
 ### IoT
@@ -98,7 +98,7 @@ is very often not existing. [This chapter](#chapter-iot) helps to improve that.
 
 The CAN bus connects micro-controllers in many embedded systems - especially in
 vehicles. Securing it is a challenge - as it was not designed for security.
-This chapter will [give you some tools](#chapter-can bus) - and basics for fuzzing CAN.
+This chapter will [give you some tools](#chapter-can-bus) - and basics for fuzzing CAN.
 
 ### Bluetooth LE
 

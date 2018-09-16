@@ -1,4 +1,4 @@
-# Browser security {#chapter-browsersecurity}
+# Browser security {#chapter-browser-security}
 
 C> Thorsten Sick
 
