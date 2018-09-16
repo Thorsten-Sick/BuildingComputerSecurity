@@ -150,3 +150,11 @@ people working in an antivirus lab are on your side and will love to cooperate.
 VirusTotal is the go-to way of quick scanning potential malware and
 false positives. But has an own tricky personality. Knowing that will [prevent
 you from coming to the wrong conclusions](#chapter-virustotal).
+
+
+## Antivirus: Behaviour based classification
+
+Unknown samples must be classified before detection can be created. A quite
+reliable way to achieve that is behaviour based classification. Especially it
+is quite simple to interpret the resulting log for malicious behaviour. [The
+basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
