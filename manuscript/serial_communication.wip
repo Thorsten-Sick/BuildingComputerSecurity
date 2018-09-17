@@ -34,7 +34,26 @@ sudo apt install i2c-tools python-smbus libi2c-dev
 
 Sparkfun Pi Wedge(https://www.sparkfun.com/products/13717) plus Raspberry Pi plus I2C IO Expander MCP23017 (http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf) 
 
-%% TODO Wiring
+The wiring of the experiment.
+
+|Raspberry|MCP23017     |Bus Pirate|+/-|
+|---------|-------------|----------|---|
+| SCL     | (12) SCL    | CLK      |   |
+| SDA     | (13) SDA    | MOSI     |   |
+|         | (10) VSS    |          | - |
+|         | (9) VDD     |          | + |
+| 3,3V    |             |          | + |
+| GND     |             |          | - |
+|         | (15) A0     |          | - |
+|         | (16) A1     |          | + |
+|         | (17) A2     |          | - |
+|         | (18) Reset  |          | + |
+|         | (21) GPA0   |          |   |
+
+A0-A2 define the address of the MCP.
+
+Pin 21 is connected to: A resistor, then LED (+), then ground
+
 %% Bus Pirate cable: http://dangerousprototypes.com/docs/Common_Bus_Pirate_cable_pinouts
 
 
