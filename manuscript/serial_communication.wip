@@ -56,6 +56,8 @@ Pin 21 is connected to: A resistor, then LED (+), then ground
 
 %% Bus Pirate cable: http://dangerousprototypes.com/docs/Common_Bus_Pirate_cable_pinouts
 
+The chip has two Banks (A and B). All the pins in tehre can be configured as input or output.
+See the data sheet.
 
 Example set:
 
