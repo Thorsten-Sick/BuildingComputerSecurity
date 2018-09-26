@@ -82,12 +82,12 @@ and a good tool for simple bash test scenarios.
 
 %% TODO ## wireshark
 
-### Raspberry Pi specific
+### PEAK CAN controller specific
 
 While the PC Kali OS has drivers for the PEAK can controllers pre-installed,
-they are missing for the Raspberry Pi (Kali and Raspbian have been tested).
+they are missing for the Raspberry Pi (Kali and Raspbian have been tested) or Ubuntu.
 
-But the company offered the source code and it is simple to compile them yourself.
+But the company offered the source code and it is simple to compile it yourself.
 
 You can find the driver source here: [PEAK driver source](https://www.peak-system.com/fileadmin/media/linux/index.htm)
 
