@@ -2,11 +2,15 @@
 
 C> Thorsten Sick
 
-Classification is the process from "here I have a file and do not know what it is"
+Classification is the process that gets you from "I have a file and do not know what it is"
 to "this file is malware".
 
+Bonus points for the type of malware (trojans, infectors, ...) or the exact family name.
+
+Even more bonus points for a detailed analysis.
+
 There are several ways to classify files. And one of them is behaviour based.
-This is: observing the behaviour of the file and judging based on that
+This is: observing the behaviour of the file and judging based on that.
 
 **Advantages**
 
@@ -22,7 +26,7 @@ This is: observing the behaviour of the file and judging based on that
 * Especially Trojans could do the things advertised for minutes - and after that do malicious stuff
 * It is slow. Even when running 30 VMs in parallel on a dedicated machine for 3 minutes each you will not have a good throughput
     * please do the maths for your malware situation
-    * having worked for a AV vendor: We got 4 samples per second
+    * having worked for an AV vendor: We got 4 unique and new samples per second
 
 ## Container, Virtual Machines or Bare Metal
 
@@ -30,8 +34,8 @@ Behaviour analysis of malware can either happen on virtual machines or Bare
  Metal. Both systems must be reset after each malware run. So a virtual
  machine is much faster.
 
-Container technology is cool for deployment but it is not a security feature
-and does not properly isolate the guest from the host.
+Container technology is cool for deployment but it is **not** a security feature
+and does **not** properly isolate the guest from the host.
 Also: You can not simulate a totally different system in the container than on
 the host.
 
@@ -40,19 +44,6 @@ support for the reset.
 
 If you use virtual machines: Run them on a dedicated analysis server and not
 on office environment.
-
-## Pafish
-
-Virtual machines have a big disadvantage: They can be detected. Several
-characteristics are so typical for Virtual Machines that malware could detect
-them and just play nice.
-
-There is a tool named [pafish](https://github.com/a0rtega/pafish) that detects sandboxes the way malware does.
-Remove all traces and you should be able to run malware without it detecting
-the machine.
-
-Also: Never ever depend on one way to classify only ! Always use additional
-classifiers in parallel.
 
 ## Networking
 
@@ -64,7 +55,32 @@ avoid the malware to escape into the office net. Second to avoid your IP to be
 blacklisted by ISPs as malware source.
 
 The analysis sandbox should be able to monitor network connections - so you do
-not have to do that centrally.
+not have to do that centrally at a firewall. If your sandbox does not offer 
+sufficient network monitoring you can log the connections at a firewall.
+
+But be aware that many connections will be hidden (tunneled through a non-suspicious protocol like DNS) or encrypted.
+
+## Pafish
+
+Virtual machines have a big disadvantage: They can be detected. Several
+characteristics are so typical for Virtual Machines that malware could detect
+them and just play nice.
+
+There is a tool named [pafish](https://github.com/a0rtega/pafish) that detects sandboxes the way malware does.
+
+This is based on:
+
+* Number of cpu cores
+* Hard disk names
+* Installed guest tools
+* Registry keys
+* Default settings for virtual machines
+
+Remove all those traces and you should be able to run malware without it detecting
+the machine.
+
+Also: Never ever depend on one way to classify only ! Always use additional
+classifiers in parallel.
 
 ## VMCloak
 
@@ -72,10 +88,14 @@ not have to do that centrally.
 [Vagrant](https://www.vagrantup.com) - it creates virtual machines. But the
 main goal is to hide them from malware detection.
 
+Use VMCloak to create a virtual machine and test with Pafish if it can be detected.
+
+Those VMs can be controlled by tools like Cuckoo to do the analysis.
+
 ## Cuckoo Sandbox
 
 [Cuckoo Sandbox](https://cuckoosandbox.org/) is an analysis environment. After setup you push files in and
-get behaviour reports and verdicts out.
+get behaviour reports, dropped files and verdicts out.
 
 As you will want to set it up on a special machine and getting your own
 configuration will take hours or days it deserves an own chapter.
