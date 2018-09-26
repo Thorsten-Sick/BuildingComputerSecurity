@@ -57,7 +57,7 @@ It contains
 
 The other tools in can-utils get a short mention. As I want to be flexible and
 the python framework is powerful, I normally write small python scripts
-instead of them. But if you as a bash nerd, they will be your choice.
+instead of using them. But if you as a bash nerd, they will be your choice.
 
 Check the man page for details and start hacking.
 
@@ -67,7 +67,7 @@ A small can fuzzer. I missed the feedback loop and wrote my own script.
 
 **cansniffer**
 
-cansniffer is an enhanced logger.
+Cansniffer is an enhanced logger.
 
 **canplayer**
 
@@ -77,8 +77,10 @@ simulate specific scenarios and run them from command line.
 
 **cansend**
 
-cansend sends one or more can frames. It is a bit simpler than the canplayer
+Cansend sends one or more can frames. It is a bit simpler than the canplayer
 and a good tool for simple bash test scenarios.
+
+If you use *candump* to listen to your can bus and the bus needs some timed motivation to send specific data packets, *cansend* is the lowtech tool to use in your scripts.
 
 %% TODO ## wireshark
 
@@ -168,6 +170,7 @@ For additional benefits:
 
 * Reboot the device by power cycling it automatically after some packets
 * Log more than one packet in case it breaks. Maybe the combination of those packets caused the failure
+* Detect packet storms in the bus system. Especially interesting if more than one controlled is attached while fuzzing
 
 With the **candump** command and the python modules described in this chapter
 you should now bre prepared to tackle this task.
@@ -183,6 +186,9 @@ Have fun.
 A very good book covering hacking of cars. With a big focus on CAN bus hacking.
 There is a free version for it available on *opengarages.org* but this page
 can currently not be reached. I wish you luck.
+
+%% TODO: https://nostarch.com/carhacking
+%% TODO: http://opengarages.org/handbook/
 
 %% [Vehicle hacking blog post](https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/)
 
