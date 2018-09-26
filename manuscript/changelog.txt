@@ -8,13 +8,13 @@ changelog to make it simpler for you to find the new sections.
 
 ## September 2018
 
-* CAN bus hacking
-* Bluetooth LE (BLE)
-* Added code analysis tools requirements table for an overview
+* *CAN bus hacking*
+* *Bluetooth LE (BLE)*
+* Added *code analysis tools requirements* table for an overview
 * URLs now in footnotes
 * Content chapter added
-* Chapter Antivirus Behaviour classification added
-* added code_analysis_tools_requirements.txt to Sample
+* Chapter *Antivirus Behaviour classification* added
+* added *code analysis tools requirements* to Sample
 
 ## August 2018
 

@@ -5,7 +5,7 @@ C> Thorsten Sick
 ## Basics
 
 Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It
-behaves very differently fro normal Bluetooth behaviour with the benefit of
+behaves very differently from normal Bluetooth behaviour with the benefit of
 significantly lower power consumption.
 
 It does not maintain a longer connection (like used by classical Bluetooth
@@ -53,8 +53,10 @@ attack surface.
 
 BLE security is weaker than the Bluetooth classic security. Limiting factor is
 the pairing of devices. It requires a pin number to be entered - but with small
-and cheap devices without no human interaction (keypad, display) this is hard
+and cheap devices without human interaction (keypad, display) this is hard
 to achieve.
+
+The options for pairing are:
 
 * Just Works
 * Numeric Comparison (Only for LE Secure Connections)
@@ -80,7 +82,7 @@ Try to be compatible with this version or better !
 
 The simplest tool to support you in testing a ble device you are developing is
 an Android tool by Nordic Semiconductor. As you can not see radio frequencies
-you have to fall back to this. Just install **nRF Connect** and scan for
+you have to fall back to this. Just install **nRF Connect App** and scan for
 devices. Connect to them, list their Services and Characteristics.
 
 For automatic testing you will later want some other things. Just continue
@@ -118,7 +120,7 @@ Get some info like manufacturer:
     hcitool leinfo <handle>
 
 
-**gatttool** for Bluetooth LE::
+%% **gatttool** for Bluetooth LE:
 
 %% {lang="bash"}
 %%     gatttool -i <interface> -b <device address> -I
@@ -135,7 +137,7 @@ A tool for Bluetooth le hacking - and testing - is [bleah](https://github.com/ev
 It can enumerate devices, list their services, list the characteristics and
 write to them. This is very handy when developing Bluetooth LE enabled devices.
 
-By [Evilsocket](https://www.evilsocket.net/)
+It was developed by [Evilsocket](https://www.evilsocket.net/).
 
 Some examples for the command line of bleah:
 
@@ -158,8 +160,8 @@ Set a specific value
 * -d value to set
 * -b <MAC> mac address of target
 
-Always going through bleah can be a bit slow (especially when doing fuzzing).
-Gatttool can be an alternative for writing:
+Bleah can be a bit slow (especially when doing fuzzing).
+Gatttool can be an alternative for writing to characteristics:
 
 {lang="bash"}
     gatttool -b 30:ae:a4:1c:0c:26 --char-write-req -a 0x0039 -n $(echo -n "200"|xxd -ps)
@@ -171,7 +173,7 @@ Or reading:
 
 Gatttool handles values as hex, not string. Here bleah is more convenient.
 
-Bleah is based on bluepy.
+Bleah is based on bluepy - which you can use directly by writing a python tool.
 
 ## Bluepy - python library for Bluetooth le
 
@@ -180,6 +182,8 @@ Bluetooth LE programming.
 
 Thanks to a good [documentation](https://ianharvey.github.io/bluepy-doc/) it
 is simple to write short python scripts to interact with your device.
+
+%% TODO Add examples
 
 ## BlueZ
 
@@ -193,14 +197,13 @@ single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer"
 and the "Ubertooth".
 
 Experimenting with the Adafruit I got challenged by some glitches
-(maybe my fault, maybe the tools are better tested with the Ubertooth).
+(maybe my fault -or the tools are better tested with the Ubertooth).
 
-Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0
-[Adafruit BLE sniffer](https://www.adafruit.com/product/2269)
+[Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0](https://www.adafruit.com/product/2269)
 
 [Adafruit BLE sniffer documentation](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-sniffer)
 
-Call it with::
+Call it with:
 
 {lang="bash"}
   python sniffer.py  /dev/ttyUSB0
@@ -208,31 +211,35 @@ Call it with::
 After selecting a device it will log the BTLE messages for this device
 connection into a pcap file.
 
-To view it properly with wireshark, define the DLT_USER id to be "btle":
-Preferences->Protocols->DLT_USER, set ID as "btle"
+To view it properly with wireshark, define the **DLT_USER id** to be "btle":
+Preferences->Protocols->DLT_USER, set ID as "btle".
+
+See the [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issues/61)
 
 %% .. TODO: Research: Monitor connection when sending commands.
 
 %% Wireshark does not recognize DLT_USER
-%% [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issues/61)
+%% 
 %% go to Preferences->Protocols->DLT_USER and enter "btle" as protocol
-that should help
+%% that should help
 
 %% .. TODO: Fill tools
 
-## BtleJack
 
-Is a new attack on BLE
+%% TODO: Test with board
+%% ## BtleJack
+%% Is a new attack on BLE
+%% [BtleJack on Github](https://github.com/virtualabs/btlejack)
 
-[BtleJack on Github](https://github.com/virtualabs/btlejack)
-
-* Sniffing existing connections
-* Sniffing new BLE connections
-* Jamming BLE connections
-* Hijacking connections
-* Can export sniffed packets as PCAP
-
+%% * Sniffing existing connections
+%% * Sniffing new BLE connections
+%% * Jamming BLE connections
+%% * Hijacking connections
+%% * Can export sniffed packets as PCAP
 %% https://www.heise.de/security/meldung/Btlejack-Neues-Gratis-Tool-zum-Belauschen-von-Bluetooth-Verbindungen-4134142.html
+
+%% END TODO Test
+
 
 ### Crackle: BTLE key cracking
 
@@ -249,12 +256,12 @@ work. The *tests* folder of the crackle packet has some pcaps to start
 experimenting with it. Better to start with them than wasting time debugging
 your tools - just because the pcap you dumped is incomplete.
 
-Getting the LTK key::
+Getting the LTK key:
 
 {lang="bash"}
    crackle -v -i logs/c2.pcap
 
-Decrypting the pcap::
+Decrypting the pcap:
 
 {lang="bash"}
      crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
@@ -270,7 +277,7 @@ There is a software for cheap ESP32 controllers to test you hacking skills
 a [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf). Just install it
 as described and start testing your tools.
 
-Hint: You will need several of the tools listed here. And maybe some simple bash
+Hint: You will need several of the tools listed in this book. And maybe some simple bash
 scripting or python programming.
 
 As the ESP32 is a good eval board (with an own SDK or the Android SDK) I'll
@@ -326,9 +333,9 @@ It also covers BTLE 5.0
 
 ### Woot13 presentation on BTLE hacking (especially sniffing) {#reference-presentation-btle-sniffing}
 
-by Mike Ryan
+With low energy comes low security by Mike Ryan
 
-https://www.usenix.org/conference/woot13/workshop-program/presentation/Ryan
+[Woot13](https://www.usenix.org/conference/woot13/workshop-program/presentation/Ryan)
 
 Topics and tags:
 
@@ -339,29 +346,6 @@ Topics and tags:
 * BTLE key exchange protocol
 * crackle
 
-### SHA2017 presentation on BTLE hacking "hack-a-ble" {#reference-presentation-hack-a-ble}
-
-Very dense talk on Bluetooth LE security.
-
-https://media.ccc.de/v/SHA2017-230-hack-a-ble
-
-### Lock-picking in the IoT {#reference-presentation-lockpicking-in-the-iot}
-
-https://media.ccc.de/v/33c3-8019-lockpicking_in_the_iot
-
-Very specific for BLE locks. Some mentioning of mitmproxy and ble sniffers.
-Relevant if you want to create IoT locks.
-
-### With low energy comes low security {#reference-presentation-with-low-energy-comes-low-security}
-
-https://www.usenix.org/conference/woot13/workshop-program/presentation/ryan
-
-* Lots about the lower physical layers
-* Tools
-  * Ubertooth
-  * Wireshark
-  * PCAP
-
 Take aways:
 
 * BLE key exchange protocol weak
@@ -369,3 +353,18 @@ Take aways:
 * Attackers can enforce re-pairing to get a new key exchange
 * *crackle* needs less than a second to break the encryption
   * But needs pairing sniffed to crack
+
+### SHA2017 presentation on BTLE hacking "hack-a-ble" {#reference-presentation-hack-a-ble}
+
+Very dense talk on Bluetooth LE security.
+
+[Hack-a-ble](https://media.ccc.de/v/SHA2017-230-hack-a-ble)
+
+### Lockpicking in the IoT {#reference-presentation-lockpicking-in-the-iot}
+
+[Lockpicking in the IoT](https://media.ccc.de/v/33c3-8019-lockpicking_in_the_iot)
+
+Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*.
+Relevant if you want to create IoT locks.
+
+
