@@ -22,6 +22,7 @@ Con
 * Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
 * If file processing is not sandboxed: Not good
 * If file processing is done in kernel: Double plus not good
+* "Clean" is not "Clean". It is "did not find anything"
 
 Tips
 ----
