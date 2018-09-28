@@ -21,6 +21,9 @@ depended on Linux.
 |Valgrind                             |                            | **Yes**                  | **Yes**                   |
 |Clang, dynamic                       |                            | **Yes**                  | **Yes**                   |
 
+
+%% TODO add library monitoring
+
 ## Some background
 
 There is a large number of fuzzing and dynamic code analysis tools for Linux.

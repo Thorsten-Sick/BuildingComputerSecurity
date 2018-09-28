@@ -1,1 +1,13 @@
 %% An intensive Introducition to cryptography https://intensecrypto.org/public/lnotes_book.pdf
+
+
+%% RC4 bad
+
+%% MD5, SHA1 bad
+
+%% Salsa20 good
+%% AES good
+
+%% DES bad
+
+%% 3DES bad

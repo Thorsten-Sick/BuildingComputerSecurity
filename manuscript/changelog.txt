@@ -6,6 +6,17 @@ changelog to make it simpler for you to find the new sections.
 %% Cryptoalgorithms
 %% Extend defensive programming / compiling
 
+## October 2018
+
+%% Plan: Assert (+ Python, + JS)
+%% Plan: Diagram for TLS
+%% Plan: Unit tests
+%% Plan: Clang static analysis extra
+%% Plan: Valgrind extra
+%% Plan: Clang dynamic extra
+%% Plan: Verify external libs
+%% Plan: Monitor exploits
+
 ## September 2018
 
 * *CAN bus hacking*
