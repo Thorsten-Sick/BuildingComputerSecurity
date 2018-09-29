@@ -1,13 +1,183 @@
+# Crypto algorithms {#chapter-crypto-algorithms}
+
+C> Thorsten Sick
+
+Crypto Algorithms are the basic building block for encryption. Above them are
+protocols ("how do we glue algorithms together to achieve our goal ?").
+And above the protocol are libraries offering an easy programming interface to
+select use protocol.
+
+In many cases the user of the library still has to pick the algorithm to slot
+into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
+
+I will skip the mathematics and try to build simple "Good vs Bad" tables. If
+you want to dig deeper, please read the books in the links.
+
+A good crypto algorithm is created and tested in challenges. It will get a good
+peer review by other crypto experts.
+When mathematics inproves (and computers get faster as well) the
+*estimated time to crack it* will shrink.
+Moore's law predicts a increase of processing power by factor 2 every 18 months.
+GPUs, ASICs and Clouds (lots of cheap computers from Amazon Cloud, for example) can
+also bring down the attack time.
+
+Normally experts will warn months or even years before a realistic attack on
+an algorithm is possible. Thats the time to move on to use a better algorithm.
+
+**Be prepared to swap the algorithm used in your protocol and files**
+
+If you rely on a crypto book on your desk, check out the date it was published.
+During the last years new attacks have been invented and some algorithms and
+protocols did not age well. If your decissions still are based on ta book
+from 1995 they will be wrong - even if the book was great at that time.
+
+## Hash functions
+
+Hash functions are one way functions that generate a value of a fixed size
+from any length of input. One input always generates the same Hash. On the
+other hand: One Hash can be the same for different inputs.
+
+For security reasons it must be impossible:
+
+* To revert the process and calculate tha input from the Hash
+* To generate two inputs with the same Hash
+
+|Name   |Output Length (Byte)|Quality|
+|-------|--------------------|-------|
+|CRC    | *                  |Broken |
+|MD5    |16                  |Broken |
+|SHA-1  |20                  |Broken |
+|SHA256 |32                  |Good   |
+|SHA512 |64                  |Good   |
+|SHA-3  |variable            |Good   |
+|BLAKE2 |variable            |Good   |
+
+A CRC is not a Crypto Hash function. It is good for validating bit flips in
+data. But not to prevent or detect human attacks. Still some people use it
+that way...
+
+[shattered.io on breaking SHA-1](https://shattered.io/)
+
+SHA256 and SHA512 are SHA-2 hashes. Where the number indicates the bitlength.
+
+SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But
+if something should happen to it, there is SHA-3 with is based on a totally
+different internal principle.
+
+[BLAKE2](https://blake2.net/) was in the SHA-3 contest. It's main feature is
+speed. There are different variants optimized for different architectures.
+The core ones are:
+
+BLAKE2b: for 64 bit platforms
+BLAKE2s: For 8 to 32 bit platforms
+
+If you need speed, give it a chance.
+
+
+%% TODO https://en.wikipedia.org/wiki/Hash_function_security_summary
+%% TODO: https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions
+
+
+## Password hash functions
+
+While other hash functions are efficient, for password hashes we want
+inefficient hash functions. On a normal server it does not matter that much if
+1 or 500 milliseconds are wasted on calculating the Hash.
+But thet attacker wanting to break a database dumb with hundreds of thousands
+Hashes gets into lots of trouble thanks to the in-efficient hash.
+
+
+|Name    |Output Length (Byte)|Quality|Comments                                   |
+|--------|--------------------|-------|-------------------------------------------|
+|Argon2d |                    |       |GPU attack resistance                      |
+|Argon2i |                    |       |side channel attack resistance             |
+|bcrypt  |                    |       |Vulnerable to FPGA, ASIC attacks           |
+|scrypt  |                    |       |Vulnerable to GPU attacks                  |
+|PBKDF2  |                    |       |Vulnerable to FPGS, ASIC and GPU attacks   |
+
+Links:
+* [Argon](https://www.argon2.com/)
+* [BCrypt](https://de.wikipedia.org/wiki/Bcrypt)
+* [PBKDF2](https://de.wikipedia.org/wiki/PBKDF2)
+
+%% .. TODO: Verify and dig deeper
+
+%% TODO: https://www.usenix.org/conference/woot16/workshop-program/presentation/ruddick
+
+## Stream Ciphers
+
+Stream ciphers are used especially in telecommunication to encrypt a data
+stream (mobile phone voice channel).
+
+|Name    |Quality|Comments                                   |
+|--------|-------|-------------------------------------------|
+|A5/1    |Broken |                                           |
+|A5/2    |Broken |                                           |
+|RC4     |Broken |                                           |
+|Salsa20 |Good   |                                           |
+
+## Block Ciphers
+
+Block Ciphers are the work horse to encrypt large data. Besides selecting
+the Algorithm and the key length it is also important to use it in the
+proper mode. There will be an own table for that.
+
+### Algorithms
+
+|Name    |Quality  |Comments                                   |
+|--------|---------|-------------------------------------------|
+|DES     |Broken   |                                           |
+|3DES    |Mediocre |                                           |
+|AES     |Good     |                                           |
+
+3DES is reted mediocre because AES offers a better key-length
+to protection ratio. You should be using that.
+
+
+### Modes
+
+Block ciphers are encrypting the data block-by-block. The **mode** defines
+*if* and *how* the encryption of one block influences the encryption of the
+other blocks.
+
+|Name                        |Quality|
+|Electronic Codebook (ECB)   |Broken |
+|Cipher Block Chaining (CBC) |Ok     |
+|Counter Mode (CTR)          |Good   |
+
+If possible use CTR. Some of those modes need not only the password but also
+a number named *IV* (initialisation vector) or *nonce* (number used only once).
+This number can be public. But it has an important requirement: Do not
+recycle it ! This number must be used once only. For the
+next data you encrypt use a different one. With that requirement:
+A **counter** would be do the job.
+
+## Asymetric Ciphers
+
+
+%% TODO: More algorithms: Public key and aes and similar
+
+
+
+
+
+
+
+%% https://leanpub.com/crypto
+
+
+## Further reading
+
+* Serious Cryptography
+
+
+%% https://www.keylength.com/en/compare/
+
+
+
 %% An intensive Introducition to cryptography https://intensecrypto.org/public/lnotes_book.pdf
 
 
-%% RC4 bad
+%% TODO: BetterCrypto.org
 
-%% MD5, SHA1 bad
-
-%% Salsa20 good
-%% AES good
-
-%% DES bad
-
-%% 3DES bad
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
