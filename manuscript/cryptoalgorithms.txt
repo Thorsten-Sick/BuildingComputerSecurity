@@ -31,6 +31,9 @@ During the last years new attacks have been invented and some algorithms and
 protocols did not age well. If your decissions still are based on ta book
 from 1995 they will be wrong - even if the book was great at that time.
 
+Be aware: This chapter is an extreme simplification. If crypto security is an
+essential part of your project dig deeper and use the *further reading* section.
+
 ## Hash functions
 
 Hash functions are one way functions that generate a value of a fixed size

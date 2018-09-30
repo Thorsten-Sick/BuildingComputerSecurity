@@ -8,6 +8,10 @@ changelog to make it simpler for you to find the new sections.
 
 ## October 2018
 
+* Added *cryptoalgotihms*
+* Re-worked *Asserts*
+    * It got an own chapter
+    * Python added
 %% Plan: Assert (+ Python, + JS)
 %% Plan: Diagram for TLS
 %% Plan: Unit tests

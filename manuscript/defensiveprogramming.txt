@@ -11,7 +11,7 @@ It needs some getting used to, but in the end debugging defensive code is much
 simpler than debugging normal code. This positive side effect is caused by
 stricter error handling.
 Errors will cause instant program termination and stack traces (thanks to
-asserts and better error handling in unlikely error conditions).
+[asserts](#chapter-asserts) and better error handling in unlikely error conditions).
 
 ## Audience
 
@@ -20,7 +20,7 @@ Developers
 ## TODO
 
 * Focus on vulnerable code first
-* Use asserts
+* Use [asserts](#chapter-asserts)
 * Memory writing mess
 * Use external libraries
 * malloc/free best practice
@@ -54,80 +54,6 @@ libs, from the other team's code, ...)
 You should expect every input to be at least *accidentally* wrong. In a malware
 attack situation you can even expect the input to be handcrafted to cause as
 much damage as possible (*remote code execution* would be one possible goal of an attacker).
-
-
-### Use asserts
-
-Asserts are debugging tools.
-
-A simple way of doing module tests (as in "unit tests") is to use an assert.
-Asserts are used during the development and debug phase and will be switched off
-in release (by define NDEBUG for C). Asserts make sure a certain condition is
-true. If not, the program aborts and you can start debugging it.
-By using asserts you can trigger this easy to debug abort close to the issue
-where an invalid state has been generated. Without an assert it could happen
-that your program limps on and crashes in some very unrelated function.
-Debugging that is much harder.
-
-Good places for asserts are at the beginning and the end of functions and after
-complex calculations internally.
-
-With a bit of healthy paranoia you could also check the value a function it
-computed - right before it returns it to the caller.
-
-You should never check any state with asserts that could theoretically happen
-in your program. For that there are normal checks like:
-
-#### Asserts in C
-
-{lang="c"}
-    a = malloc(10);
-    if (a == NULL)
-    {
-        return ERROR;
-    }
-
-Good things to check are pointers in parameters where the contract
-defines that they must point to a structure:
-
-{lang="c"}
-    #include <assert.h>
-    // ...
-    // function starts, mypointer is a parameter
-    assert(mypointer != NULL);
-
-or indexes / counters (here check for min/max value):
-
-{lang="c"}
-    assert(size > 0);
-    assert(size < MAXSTRING);
-
-As said before:
-
-* Do this at the beginning of your functions for all parameters
-  * If you verify the parameters at runtime: assert afterwards to check your verification code
-* Do this at the exit of your function with all return values
-* Maybe: Do this in complex calculations in the function core
-* Before calling 3rd party functions check you honour their contract
-* After calling 3rd party functions: To verify they did not change their contract
-
-For release compile you will switch it off with NDEBUG. So there will be no
-runtime penalty for extreme validation. Overachieve !
-
-%% TODO: Assert for Python
-
-%% TODO: Assert for C# Debug.Assert()
-
-%% TODO: Asserts in Javascript
-
-#### Positive side effects of asserts
-
-Asserts have positive side effects besides helping you finding bugs much faster.
-
-* They guarantee that the contract of your functions is respected if someone else is using them
-* Asserts improve [fuzzing](#chapter-fuzzing)
-* Asserts help to document your contracts
-* Asserts are a good first step if you want to dissect your program into pieces to introduce unit testing
 
 ### Memory writing mess
 
