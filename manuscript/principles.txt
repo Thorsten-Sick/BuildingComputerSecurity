@@ -94,6 +94,16 @@ Maybe they can be one-way (data-diodes). Possible segments can be:
 
 Dropping privileges is a part of that.
 
+## Principle of "Least privilege"
+
+[Reducing available privileges](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
+reduces the impact of a hacked process or account. This reduction can be done
+on account level (special web server accounts, for example) or on process
+level (where the process drops privileges during startup - as soon as it does
+not require them anymore).
+
+Dropping proess privileges is possible on Linux. Not on Windows.
+
 %% TODO: Write several chapters, depending on type of isolation
 
 ## Updates
