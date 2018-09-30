@@ -1,5 +1,8 @@
 # Asserts {#chapter-asserts}
 
+C> Thorsten Sick
+
+
 Asserts are debugging tools.
 
 They are a building block to guarantee **robust** code. And robust code is
@@ -86,6 +89,8 @@ de-activated by the python command line switches *-O* or *-OO*
 The disadvantage is that can not been toggled. It is active in *release*
 and *debug* version. Which makes agressive usage of asserts risky. IMHO this
 difference in usage is so hughe that I would dare to call it "assert in name only".
+
+[Assert at MDN](https://developer.mozilla.org/en-US/docs/Web/API/console/assert)
 
 %% TODO: Assert for C# Debug.Assert()
 
