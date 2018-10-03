@@ -79,6 +79,13 @@ Assertions in python trigger *AssertionError* exceptions. They can be
 de-activated by the python command line switches *-O* or *-OO*
 (basic and extended optimization).
 
+To have the full benefit of assertions (terminating programs) you should
+stick to best practice for error handling and never create "catch all"
+exception handlers but handle specific exceptions.
+
+That way **AssertionError** will not be handled by your code and cause
+program termination.
+
 ## Javascript
 
 {lang="javascript"}

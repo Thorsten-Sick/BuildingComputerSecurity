@@ -41,7 +41,18 @@ Architects and developers
 
 A simplified handshake for browsers to web servers looks like
 
-![Simplified TLS handsghake](images/tls_simple.png)
+![Simplified TLS handshake](images/tls_simple.png)
+
+The relevant part is where browser and server negotiate TLS version and Cipher suite.
+The browser offers all variants it can manage. The server selects the most
+secure one that matches it's own configured options.
+
+To also support older browsers servers can have a set of weak and broken
+cipher suites in the option list.
+
+For a more secure web site (banking) it could be wise to monitor the version
+of browsers connecting and weed out less secure fallback ciphers from the
+server config on a regular basis.
 
 ## What to encrypt (for web pages)
 

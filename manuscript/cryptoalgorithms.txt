@@ -87,7 +87,7 @@ MAC allowse *Integrity* and *Authentication*. Simplified: It is a Hash with a sh
 authenticate the origin.
 
 |Name        |Quality          |
-+------------+-----------------+
+|------------|-----------------|
 |Poly1305    |Good             |
 |SipHash     |Good             |
 
@@ -111,6 +111,7 @@ Hashes gets into lots of trouble thanks to the in-efficient hash.
 |PBKDF2  |                    |       |Vulnerable to FPGS, ASIC and GPU attacks   |
 
 Links:
+
 * [Argon](https://www.argon2.com/)
 * [BCrypt](https://de.wikipedia.org/wiki/Bcrypt)
 * [PBKDF2](https://de.wikipedia.org/wiki/PBKDF2)
@@ -176,7 +177,7 @@ The most common AE technology is *AES Galois Counter Mode (AES-GCM)*
 One important differentiation is if to do MAC first or encryption. It seems during the years - as experience grew - the shift was towards "Encrypt-then-MAC" as best practice.
 
 |Name              |Quality            |
-|------------------+-------------------|
+|------------------|-------------------|
 |Encrypt-and-MAC   |Bad                |
 |MAC-then-encrypt  |Better             |
 |Encrypt-then-MAC  |Best               |
@@ -191,6 +192,8 @@ Or use libraries implementing this technology ready-to-use (which I would do).
 
 ## Asymetric Ciphers
 
+%% TODO: nicer
+
 RSA: you should use 2048-4096 bit key length (security levels of 90 to 128 bits)
 
 Encryption: Ciphertext should be padded. RSA-OAEP does this (Optimal Asymmetric Encryption Padding)
@@ -203,7 +206,7 @@ To do a key agreement/key exchange the state of the art is DH: Diffie-Hellman pr
 It can be used in different flavours.
 
 |Name                         |Quality         |
-|-----------------------------+----------------|
+|-----------------------------|----------------|
 |Anonymous Diffie–Hellman     |Broken          |
 |Authenticated Diffie–Hellman |Weak            |
 |Menezes–Qu–Vanstone (MQV)    |Best but complex|
@@ -224,7 +227,7 @@ But sane best-practice key lengths are:
 * Elliptic Curve: >= 256 bit
 * Symmetric: >= 128 bit
 
-A source for a more specific evaluation of your required [keylength is here](https://www.keylength.com/). 
+A source for a more specific evaluation of your required [keylength is here](https://www.keylength.com/).
 
 ## Further reading
 
