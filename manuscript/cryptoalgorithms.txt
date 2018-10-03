@@ -81,6 +81,18 @@ If you need speed, give it a chance.
 %% TODO: https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions
 
 
+## HMAC or MAC
+
+MAC allowse *Integrity* and *Authentication*. Simplified: It is a Hash with a shared key involved. That way the parties can
+authenticate the origin.
+
+|Name        |Quality          |
++------------+-----------------+
+|Poly1305    |Good             |
+|SipHash     |Good             |
+
+%% HMAC-SHA-256
+
 ## Password hash functions
 
 While other hash functions are efficient, for password hashes we want
@@ -155,32 +167,89 @@ recycle it ! This number must be used once only. For the
 next data you encrypt use a different one. With that requirement:
 A **counter** would be do the job.
 
+## Authenticated Encryption
+
+Combining a MAC and an encryption results in *Authenticated Encryption*.
+
+The most common AE technology is *AES Galois Counter Mode (AES-GCM)*
+
+One important differentiation is if to do MAC first or encryption. It seems during the years - as experience grew - the shift was towards "Encrypt-then-MAC" as best practice.
+
+|Name              |Quality            |
+|------------------+-------------------|
+|Encrypt-and-MAC   |Bad                |
+|MAC-then-encrypt  |Better             |
+|Encrypt-then-MAC  |Best               |
+
+MAC and cipher must use distinct keys.
+But there are foot guns and alternatives to this whole AE complex.
+
+If you go down that road, please check out further reading and at least 2 more books. Implementing this is lots of work (months-for experts).
+Invest your time into smartening up first.
+
+Or use libraries implementing this technology ready-to-use (which I would do).
+
 ## Asymetric Ciphers
 
+RSA: 2048-4096 bit length (security levels of 90 to 128 bits)
+
+Encryption: Ciphertext should be padded. RSA-OAEP does this (Optimal Asymmetric Encryption Padding)
+
+For signatures with RSA use RSA-PSS(Probabilistic Signature Scheme)
 
 %% TODO: More algorithms: Public key and aes and similar
 
+## Key exchange
+
+To do a key agreement/key exchange the state of the art is DH: Diffie-Hellman protocol.
+It can be used in different flavours.
+
+|Name                         |Quality         |
+|-----------------------------+----------------|
+|Anonymous Diffie–Hellman     |Broken          |
+|Authenticated Diffie–Hellman |Weak            |
+|Menezes–Qu–Vanstone (MQV)    |Best but complex|
+
+* Anonymous DH is breakable by man-in-the-middle attacks
+* Authenticated Diffie–Hellman: breakable by *replay* attacks 
+* MQV is best but complex
+
+Most often used is *Authenticated DH*
 
 
+# Key length
+
+%%Forasymmetricpublic-keycryptographyweconsideranykeylengthbelow3248bitstobe
+%%deprecatedatthetimeofthiswriting(forlongtermprotection).
+%%•
+%Forellipticcurvecryptographyweconsiderkeylengthsbelow256bitstobeinadequatefor
+%%longtermprotection.
+%%•
+%%Forsymmetricalgorithmsweconsideranythingbelow128bitstobeinadequateforlong
+%%termprotection.
 
 
+## Further reading
+
+### Serious Cryptography by Jean-Philippe Aumasson
+
+Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.  
+
+### The Mozilla TLS guide
+
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
+A good cheat sheet ranking the current quality of algortihms in a pragmatic ("don't break the web") envoironment.
+
+### BetterCrypto.org
+
+[BetterCrypto](https://bettercrypto.org/) is a project aimed at helping admins. They offera free manual with lots of specific crypto settings for different applications. It also contains basic algorithm overviews.
+
+%% https://www.keylength.com/en/compare/
 
 
 %% https://leanpub.com/crypto
 
 
-## Further reading
-
-* Serious Cryptography
-
-
-%% https://www.keylength.com/en/compare/
-
-
-
 %% An intensive Introducition to cryptography https://intensecrypto.org/public/lnotes_book.pdf
 
 
-%% TODO: BetterCrypto.org
-
-[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
