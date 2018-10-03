@@ -209,7 +209,7 @@ It can be used in different flavours.
 |Menezes–Qu–Vanstone (MQV)    |Best but complex|
 
 * Anonymous DH is breakable by man-in-the-middle attacks
-* Authenticated Diffie–Hellman: breakable by *replay* attacks 
+* Authenticated Diffie–Hellman: breakable by *replay* attacks
 * MQV is best but complex
 
 Most often used is *Authenticated DH*
@@ -224,12 +224,13 @@ But sane best-practice key lengths are:
 * Elliptic Curve: >= 256 bit
 * Symmetric: >= 128 bit
 
+A source for a more specific evaluation of your required [keylength is here](https://www.keylength.com/). 
 
 ## Further reading
 
 ### Serious Cryptography by Jean-Philippe Aumasson
 
-Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.  
+Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.
 
 ### The Mozilla TLS guide
 
@@ -247,5 +248,3 @@ A good cheat sheet ranking the current quality of algortihms in a pragmatic ("do
 
 
 %% An intensive Introducition to cryptography https://intensecrypto.org/public/lnotes_book.pdf
-
-
