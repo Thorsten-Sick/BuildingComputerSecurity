@@ -37,6 +37,12 @@ Older versions have vulnerabilities.
 
 Architects and developers
 
+## TLS handshake
+
+A simplified handshake for browsers to web servers looks like
+
+![Simplified TLS handsghake](images/tls_simple.png)
+
 ## What to encrypt (for web pages)
 
 It is possible to encrypt only selected parts of a page (login form, for example).

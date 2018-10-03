@@ -5,4 +5,4 @@
 #
 #
 
- mscgen -T svg -o ../manuscript/images/tls_simple.svg ../manuscript/images/tls_simple.msc
+ mscgen -T png -o ../manuscript/images/tls_simple.png ../manuscript/images/tls_simple.msc
