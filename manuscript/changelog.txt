@@ -14,14 +14,17 @@ changelog to make it simpler for you to find the new sections.
     * Python added
     * JavaScript added
 * Extended principles
+* Added *testing* chapter. Especially for unit testing and bug bounties (basics)
 
 %% Plan: Diagram for TLS
-%% Plan: Unit tests
 %% Plan: Clang static analysis extra
 %% Plan: Valgrind extra
 %% Plan: Clang dynamic extra
 %% Plan: Verify external libs
 %% Plan: Monitor exploits
+
+%% Plan: More on Unit tests
+
 
 ## September 2018
 

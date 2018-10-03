@@ -11,6 +11,7 @@ compiling.txt
 testing_compiling.txt
 flawfinder.txt
 cppcheck.txt
+testing.txt
 fuzzing.txt
 ux.txt
 updates.txt
