@@ -191,13 +191,11 @@ Or use libraries implementing this technology ready-to-use (which I would do).
 
 ## Asymetric Ciphers
 
-RSA: 2048-4096 bit length (security levels of 90 to 128 bits)
+RSA: you should use 2048-4096 bit key length (security levels of 90 to 128 bits)
 
 Encryption: Ciphertext should be padded. RSA-OAEP does this (Optimal Asymmetric Encryption Padding)
 
 For signatures with RSA use RSA-PSS(Probabilistic Signature Scheme)
-
-%% TODO: More algorithms: Public key and aes and similar
 
 ## Key exchange
 
@@ -219,14 +217,12 @@ Most often used is *Authenticated DH*
 
 # Key length
 
-%%Forasymmetricpublic-keycryptographyweconsideranykeylengthbelow3248bitstobe
-%%deprecatedatthetimeofthiswriting(forlongtermprotection).
-%%•
-%Forellipticcurvecryptographyweconsiderkeylengthsbelow256bitstobeinadequatefor
-%%longtermprotection.
-%%•
-%%Forsymmetricalgorithmsweconsideranythingbelow128bitstobeinadequateforlong
-%%termprotection.
+Depending on your computing power, lifetime of your product and adversary this may vary.
+But sane best-practice key lengths are:
+
+* Asymmetric: >= 3248 bit
+* Elliptic Curve: >= 256 bit
+* Symmetric: >= 128 bit
 
 
 ## Further reading
