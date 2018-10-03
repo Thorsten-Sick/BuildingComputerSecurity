@@ -32,3 +32,10 @@ Sources
 Font: https://www.freejapanesefont.com/zin-hena-bokuryu-calligraphy-font-download/
 https://www.freejapanesefont.com/nagayama-kai-calligraphy-font-download/
 
+
+Requirements
+------------
+
+sudo apt install mscgen
+
+(http://www.mcternan.me.uk/mscgen/)

@@ -1,0 +1,19 @@
+msc {
+
+  arcgradient=8;
+
+  b[label="Browser"],s[label="Server"];
+
+  b=>s [label = "Supported Ciper suites and TLS version"];
+  s=>b [label="Chosen cipher and TLS. Certificate and public key"];
+  b box b [label="Verifies certificate"];
+  b box b [label="Encrypt pre-master key with public-key"];
+  b => s [label="Send encrypted pre-master key"];
+  s box s [label="server decrypts pre-master key"];
+  s box s [label="generate shared secret from pre-master key"];
+  b box b [label="generate shared secret from pre-master key"];
+  b => s [label="sends encrypted test using TLS, cipher suite, key"];
+  s box s [label="verifies test message and configuration"];
+  s => b [label="sends encrypted test using TLS, cipher suite, key"];
+  b box b [label="verifies test message and configuration"];
+}
