@@ -8,6 +8,7 @@ code_analysis_tools_requirements.txt
 defensiveprogramming.txt
 assert.txt
 compiling.txt
+clang.txt
 testing_compiling.txt
 flawfinder.txt
 cppcheck.txt

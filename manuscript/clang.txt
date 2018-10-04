@@ -1,7 +1,19 @@
-# CLANG
+# CLANG {#chapter-clang}
 
-Clang is a compiler in the same league as GCC. It has some different features.
-As you will either use one or the other in your project it gets an own chapter.
+C> Thorsten Sick
+
+A compiler can assist you in creating secure software. There are several major
+features you can expect from it:
+
+* Warnings
+* More in-depth static code analysis (while compiling)
+* Dynamic code analysis (create a specific runtime that does analyse the code)
+* Code coverage: Which parts of the code are run and tested ?
+* Fuzzing
+
+[Clang](https://clang.llvm.org/) is a compiler in the same league as GCC. It is the C-frontend for LLVM.
+Basic command lines are very similar, but it has some different features -
+especially for code verification.
 
 https://clang-analyzer.llvm.org/
 
@@ -17,11 +29,10 @@ Available directly in the compiler:
 
 https://clang-analyzer.llvm.org/
 
-sudo apt install clang clang-tools
-
-sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
-
-scan-build <C-Compiler and it's settings>
+{lang="bash"}
+    sudo apt install clang clang-tools
+    sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
+    scan-build <C-Compiler and it's settings>
 
 ## Dynamic analysis
 
@@ -105,3 +116,7 @@ See: https://clang.llvm.org/docs/ThreadSanitizer.html
 https://clang.llvm.org/docs/SourceBasedCodeCoverage.html
 https://clang.llvm.org/docs/SanitizerCoverage.html
 gcov - A GCC-compatible coverage implementation which operates on DebugInfo. This is enabled by -ftest-coverage or --coverage.
+
+## Fuzzing
+
+Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more details read the [fuzzing chapter](#chapter-fuzzing).

@@ -1,14 +1,4 @@
 
-## Dynamic code analysis
-
-Important: You can run programs compiled with tools like ASAN compiled in. But you
-should not ship them that way. ASAN and similar are for finding bugs. They will not
-harden your code and can introduce new vulnerbilities.
-
-Best use case: If you have a fully automated and large test set run that
-against your ASAN compiled program.
-Be aware that many of those dynamic code analysis tools will come with a
-slowdown like 2x-15x....and factor 2 to 10 increased memory usage.
 
 %% .. TODO: valgrind
 %% .. TODO: kcachegrind
@@ -21,42 +11,6 @@ https://gist.github.com/kwk/4171e37f4bcdf7705329
 
 %% .. TODO: Write and check the example
 
-## CLANG
-
-%% .. TODO: Experiment with it
-
-%% https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
-
-## ASAN (Address Sanitizer)
-
-Detects memory errors (out-of-bounds access, user-after-free, ...)
-
-https://clang.llvm.org/docs/AddressSanitizer.html
-
-Compile with -fsanitize=address . Some more options to that are available (see homepage).
-
-## LSAN (Leak Sanitizer)
-
-Included in ASAN. Detects memory leaks with minor overhead.
-See: https://clang.llvm.org/docs/LeakSanitizer.html
-
-## UBSan (Undefined Behaviour Sanitizer)
-
-Detects bugs like using NULL pointers, signed integer overflows, ...
-
-See: https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
-
-## Memory Sanitizer
-
-Detects uninitialized reads.
-
-See: https://clang.llvm.org/docs/MemorySanitizer.html
-
-## Thread Sanitizer
-
-Detects data races.
-
-See: https://clang.llvm.org/docs/ThreadSanitizer.html
 
 ## C#
 

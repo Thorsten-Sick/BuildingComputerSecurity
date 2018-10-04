@@ -8,18 +8,18 @@ changelog to make it simpler for you to find the new sections.
 
 ## October 2018
 
-* Added *cryptoalgotihms*
+* Added *cryptoalgorithms*
 * Re-worked *Asserts*
     * It got an own chapter
     * Python added
     * JavaScript added
 * Extended principles
 * Added *testing* chapter. Especially for unit testing and bug bounties (basics)
+* TLS got a diagram
+* *Clang* chapter added
 
-%% Plan: Diagram for TLS
 %% Plan: Clang static analysis extra
 %% Plan: Valgrind extra
-%% Plan: Clang dynamic extra
 %% Plan: Verify external libs
 %% Plan: Monitor exploits
 

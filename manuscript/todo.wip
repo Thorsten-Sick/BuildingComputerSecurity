@@ -46,9 +46,7 @@ https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebi
 
 # Diagramme
 
-- MSCGen http://www.mcternan.me.uk/mscgen/
 - Dot
-- SVG
 
 # CAN: http://www.volkspage.net/technik/ssp/ssp/SSP_238.pdf
 
@@ -61,6 +59,8 @@ https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebi
 # Safestring lib: https://github.com/intel/safestringlib
 
 # Dependency check: https://github.com/jeremylong/DependencyCheck
+# Currently, Java and .NET are supported; additional experimental support has been added for Ruby, Node.js, Python, and limited support for C/C++ build systems (autoconf and cmake).
+
 
 https://github.com/google/nogotofail
 
