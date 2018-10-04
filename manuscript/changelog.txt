@@ -3,7 +3,7 @@
 I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
-%% Cryptoalgorithms
+
 %% Extend defensive programming / compiling
 
 ## October 2018
@@ -18,7 +18,7 @@ changelog to make it simpler for you to find the new sections.
 * TLS got a diagram
 * *Clang* chapter added
 
-%% Plan: Clang static analysis extra
+
 %% Plan: Valgrind extra
 %% Plan: Verify external libs
 %% Plan: Monitor exploits

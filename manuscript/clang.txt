@@ -1,4 +1,4 @@
-# CLANG {#chapter-clang}
+# Clang {#chapter-clang}
 
 C> Thorsten Sick
 
@@ -133,9 +133,7 @@ To get the GCC stle coverage, compile with *-ftest-coverage* and run with
 
 Your goal is to design the tests in a way that results in 100% coverage.
 
-
 %% TODO: Experiment with it
-
 
 
 ## Fuzzing
