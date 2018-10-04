@@ -15,108 +15,130 @@ features you can expect from it:
 Basic command lines are very similar, but it has some different features -
 especially for code verification.
 
-https://clang-analyzer.llvm.org/
+## Warnings and hardening
 
-It is a separate Clang Project and has a command line tool described here: https://clang-analyzer.llvm.org/scan-build.html
+There are several levels of warnings you can activate during the compile phase.
+Best practice is to take some hours to fix all warnings. After that warnings
+will help you find issues in the new code you just wrote. And reduce time
+needed to track down bugs.
 
-It will use the project's Makefile to build the project and analyse it.
+* Security warnings: *-Wformat -Wformat-security -Werror=format-security*
+* Fortify source: *-D_FORTIFY_SOURCE=2*
+* ASLR for binaries: *-fPIE -pie*
+* ASLR for libraries: *-fPIC*
+* Stack protector:
+    * Basic: *-fstack-protector*
+    * With more functions: *-fstack-protector-strong*
+    * With all functions: *-fstack-protector-all*
+* add a second stack for return addresses and other valuable data: *-fsanitize=safe-stack*
+* Control flow integrity checks: *-fsanitize=cfi -fuse-ld=gold -flto* [More](http://clang.llvm.org/docs/ControlFlowIntegrity.html)
+* Read only memory sections in ELF: *-Wl,-z,relro*
+* Resolve all dynamic symbols during program load: *-Wl,-z,now*
 
-Available directly in the compiler:
+See more [Clang cheat sheet](https://blog.quarkslab.com/clang-hardening-cheat-sheet.html)
 
-* Security warnings: -Wformat -Wformat-security -Werror=format-security
+Clang command line is very similar to GCC command line. So you should pick
+some generic tips from the [compiling](#chapter-compiling) chapter.
 
 ## Static analysis
 
-https://clang-analyzer.llvm.org/
+The [Clang analyzer](https://clang-analyzer.llvm.org/) is a separate Clang
+project and has a [command line tool](https://clang-analyzer.llvm.org/scan-build.html).
+
+It will use the project's Makefile to build the project and analyse it afterwards.
 
 {lang="bash"}
     sudo apt install clang clang-tools
     sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
     scan-build <C-Compiler and it's settings>
 
-## Dynamic analysis
-
-https://clang.llvm.org/docs/AddressSanitizer.html
-https://clang.llvm.org/docs/MemorySanitizer.html
-https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
-https://clang.llvm.org/docs/LeakSanitizer.html
-https://clang.llvm.org/docs/SanitizerCoverage.html
-
-#### CLANG
-
-* -D_FORTIFY_SOURCE=2 (as with GCC)
-* ASLR for binaries: -fPIE -pie
-* ASLR for libraries: -fPIC
-* Stack protector:
-    * -fstack-protector is basic
-    * -fstack-protector-strong adds more functions
-    * -fstack-protector-all adds all functions and is more expensive
-* -fsanitize=safe-stack adds a second stack for re turn addresses and other valuable data
-* Control flow integrity checks: -fsanitize=cfi -fuse-ld=gold -flto (http://clang.llvm.org/docs/ControlFlowIntegrity.html )
-* Read only memory sections in ELF: -Wl,-z,relro
-* Resolve all dynamic symbols during program load:  -Wl,-z,now
-
-
-See more Clang: https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
-s
-
-
 ## Dynamic code analysis
 
-Important: You can run programs compiled with tools like ASAN compiled in. But you
-should not ship them that way. ASAN and similar are for finding bugs. They will not
-harden your code and can introduce new vulnerbilities.
+With Clang you can add some compile switches to activate several Dynamic Code
+analysis technologies. This will add special features into the resulting binary.
+Those features are meant to test the binary while it is running.
 
-Best use case: If you have a fully automated and large test set run that
-against your ASAN compiled program.
+Those special binaries are meant to be run on your test servers, by your
+developers, maybe by close friends...maybe even by you testers outside of the company.
+
+But those special binaries are slow. And crash.
+
+So you should not ship them to your customers that way.
+
+One of the most valuable ways to use these special binaries is to run them to
+your large, automated test set.
+
 Be aware that many of those dynamic code analysis tools will come with a
 slowdown like 2x-15x....and factor 2 to 10 increased memory usage.
 
+If you tests monitor for excessive memory usage and timing... those will fail.
 
-## CLANG
-
-%% .. TODO: Experiment with it
-
-%% https://blog.quarkslab.com/clang-hardening-cheat-sheet.html
+One more thing: Some of those tests will only run properly on Linux. Some will
+also work on Windows - but not as reliable as on Linux. As this is currently
+a work-in-progress: check the Clang homepage for the Windows support of your
+Clang version before hunting phantom-bugs.
 
 ## ASAN (Address Sanitizer)
 
-Detects memory errors (out-of-bounds access, user-after-free, ...)
+Detects memory errors (out-of-bounds access, user-after-free, ...).
+Those errors are very common in current programs and this test is very valuable.
 
-https://clang.llvm.org/docs/AddressSanitizer.html
-
-Compile with -fsanitize=address . Some more options to that are available (see homepage).
+Compile with *-fsanitize=address* . [Some more options to that are available](https://clang.llvm.org/docs/AddressSanitizer.html)
 
 ## LSAN (Leak Sanitizer)
 
 Included in ASAN. Detects memory leaks with minor overhead.
-See: https://clang.llvm.org/docs/LeakSanitizer.html
+Memory leaks are sneaky and need a program running for a long time and
+through a lot of states. Check if your automated tests have a good coverage.
+
+It is part of ASAN. To use it standalong, compile with *-fsanitize=leak*.
+
+[More here](https://clang.llvm.org/docs/LeakSanitizer.html)
 
 ## UBSan (Undefined Behaviour Sanitizer)
 
 Detects bugs like using NULL pointers, signed integer overflows, ...
 
-See: https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
+The compile flag for UBSan is *-fsanitize=undefined*. It has many [more flags](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html).
 
 ## Memory Sanitizer
 
-Detects uninitialized reads.
+Detects uninitialized memory reads.
 
-See: https://clang.llvm.org/docs/MemorySanitizer.html
+The compile flag is *-fsanitize=memory*. Like the other checks it has many more
+settings and flags. Please [check the documentation](https://clang.llvm.org/docs/MemorySanitizer.html)
 
 ## Thread Sanitizer
 
-Detects data races.
+Detects data races between threads. If your program does not use threading, you
+do not have to test it. Obviously.
 
-See: https://clang.llvm.org/docs/ThreadSanitizer.html
+Compile flag is *-fsanitize=thread*
+
+[See for details](https://clang.llvm.org/docs/ThreadSanitizer.html)
 
 ## Code coverage
-(Clang)
 
-https://clang.llvm.org/docs/SourceBasedCodeCoverage.html
-https://clang.llvm.org/docs/SanitizerCoverage.html
-gcov - A GCC-compatible coverage implementation which operates on DebugInfo. This is enabled by -ftest-coverage or --coverage.
+There are three ways to get code coverage in Clang:
+
+
+* [Source based](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)
+* [Sanitizer Coverage](https://clang.llvm.org/docs/SanitizerCoverage.html)
+* GCC-compatible
+
+When using Sanitizers "Sanitizer Coverage" is the tool developed for this situation.
+
+To get the GCC stle coverage, compile with *-ftest-coverage* and run with
+*gcov - A*
+
+Your goal is to design the tests in a way that results in 100% coverage.
+
+
+%% TODO: Experiment with it
+
+
 
 ## Fuzzing
 
-Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more details read the [fuzzing chapter](#chapter-fuzzing).
+Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more
+details read the [fuzzing chapter](#chapter-fuzzing).
