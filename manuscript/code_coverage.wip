@@ -1,5 +1,0 @@
-(Clang)
-
-https://clang.llvm.org/docs/SourceBasedCodeCoverage.html
-https://clang.llvm.org/docs/SanitizerCoverage.html
-gcov - A GCC-compatible coverage implementation which operates on DebugInfo. This is enabled by -ftest-coverage or --coverage.
