@@ -58,6 +58,8 @@ For a more secure web site (banking) it could be wise to monitor the version
 of browsers connecting and weed out less secure fallback ciphers from the
 server config on a regular basis.
 
+If you want to dig much deeper into the TLS 1.2 protocol, see the ["The Illustrated TLS Connection](https://tls.ulfheim.net/).
+
 ## What to encrypt (for web pages)
 
 It is possible to encrypt only selected parts of a page (login form, for example).
