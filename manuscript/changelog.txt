@@ -15,7 +15,7 @@ changelog to make it simpler for you to find the new sections.
     * JavaScript added
 * Extended principles
 * Added *testing* chapter. Especially for unit testing and bug bounties (basics)
-* TLS got a diagram
+* TLS got a diagram and minor improvements
 * *Clang* chapter added
 
 

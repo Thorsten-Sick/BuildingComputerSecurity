@@ -23,6 +23,10 @@ quantum computers.
 If you are planning ahead 5 or more years it could be relevant for oyur choice
 of algorithm to also take quantum computers into consideration.
 
+%% Asymetric algorithms will be destroyed by Quantum computers
+%% Symertric algorithms just needs a doubling of the key length
+
+
 %% TODO: Research Google Quantum computer
 
 %% TODO: https://www.computing.co.uk/ctg/interview/3033976/interview-cyber-wars-veteran-phil-zimmermann-talks-quantum-proof-encryption-backdoors

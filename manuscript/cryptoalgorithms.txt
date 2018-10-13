@@ -102,13 +102,13 @@ But thet attacker wanting to break a database dumb with hundreds of thousands
 Hashes gets into lots of trouble thanks to the in-efficient hash.
 
 
-|Name    |Output Length (Byte)|Quality|Comments                                   |
-|--------|--------------------|-------|-------------------------------------------|
-|Argon2d |                    |       |GPU attack resistance                      |
-|Argon2i |                    |       |side channel attack resistance             |
-|bcrypt  |                    |       |Vulnerable to FPGA, ASIC attacks           |
-|scrypt  |                    |       |Vulnerable to GPU attacks                  |
-|PBKDF2  |                    |       |Vulnerable to FPGS, ASIC and GPU attacks   |
+|Name    |Comments                                   |
+|--------|-------------------------------------------|
+|Argon2d |GPU attack resistance                      |
+|Argon2i |side channel attack resistance             |
+|bcrypt  |Vulnerable to FPGA, ASIC attacks           |
+|scrypt  |Vulnerable to GPU attacks                  |
+|PBKDF2  |Vulnerable to FPGS, ASIC and GPU attacks   |
 
 Links:
 
@@ -116,7 +116,7 @@ Links:
 * [BCrypt](https://de.wikipedia.org/wiki/Bcrypt)
 * [PBKDF2](https://de.wikipedia.org/wiki/PBKDF2)
 
-%% .. TODO: Verify and dig deeper
+%% .. TODO: Verify and dig deeper: length of hash and quality
 
 %% TODO: https://www.usenix.org/conference/woot16/workshop-program/presentation/ruddick
 
@@ -217,14 +217,29 @@ It can be used in different flavours.
 
 Most often used is *Authenticated DH*
 
+## Elliptic Curve Cryptography (ECC)
 
-# Key length
+Elliptic curve based cryptography is an upgrade on many crypto protocols.
+It offers more security for less key length. And thanks to the smaller keys it
+is often faster.
+
+If possible replace your RSA and DH with ECC.
+
+EC crypto depends on one special parameter: the curve it runs on.
+The curve has to be special. So you can not make up your own. Instead use one
+of the standard curves:
+
+* NIST curves
+* Curve25519 (which is very common)
+
+
+## Key length
 
 Depending on your computing power, lifetime of your product and adversary this may vary.
 But sane best-practice key lengths are:
 
 * Asymmetric: >= 3248 bit
-* Elliptic Curve: >= 256 bit
+* Elliptic Curve to replace classical asymetric crypto: >= 256 bit
 * Symmetric: >= 128 bit
 
 A source for a more specific evaluation of your required [keylength is here](https://www.keylength.com/).

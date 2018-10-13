@@ -29,6 +29,10 @@ Current version of TLS is 1.3, just being rolled out.
 
 As between version steps there are several years a step in a minor version
 number means lots of improvements.
+TLS 1.3 is a re-work that removes many of the security issues the old versions had.
+Especially risky features and parameters that could be used in TLS < 1.3.
+If possible (alle clients and servers support it) - use TLS 1.3.
+
 You will want to monitor the versions used to connect to your servers
 and de-activate old versions you do not see anymore.
 Older versions have vulnerabilities.
@@ -225,6 +229,10 @@ This is already used in Chrome and turned up some nasty certificates being used.
 
 %% TODO Different TLS libraries
 
+## UDP: DTLS
+
+Datagram Transport Layer Security is the UDP version of TLS.
+
 ## Weaknesses and catastrophes
 
 The issues that happened the last years have been found on several layers:
@@ -235,6 +243,19 @@ The issues that happened the last years have been found on several layers:
 * Rogue CAs
   * [DigiNotar](https://en.wikipedia.org/wiki/DigiNotar)
   * [Symantec (VeriSign)](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html)
+
+## Further reading
+
+### Serious Cryptography by Jean-Philippe Aumasson
+
+Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.
+
+### The Mozilla TLS guide
+
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
+A good cheat sheet ranking the current quality of algortihms in a pragmatic ("don't break the web") envoironment.
+
+
 
 %% TODO: Check out [NoGotoFail](https://github.com/google/nogotofail)
 
