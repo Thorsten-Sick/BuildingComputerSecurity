@@ -6,6 +6,7 @@ code_analysis_tools_requirements.txt
 flawfinder.txt
 updates.txt
 passwords.txt
+cryptoalgorithms.txt
 externalreferences.txt
 theauthor.txt
 authors.txt

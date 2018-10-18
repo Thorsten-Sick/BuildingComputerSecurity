@@ -15,20 +15,20 @@ you want to dig deeper, please read the books in the links.
 
 A good crypto algorithm is created and tested in challenges. It will get a good
 peer review by other crypto experts.
-When mathematics inproves (and computers get faster as well) the
+When mathematics improves (and computers get faster as well) the
 *estimated time to crack it* will shrink.
 Moore's law predicts a increase of processing power by factor 2 every 18 months.
 GPUs, ASICs and Clouds (lots of cheap computers from Amazon Cloud, for example) can
 also bring down the attack time.
 
 Normally experts will warn months or even years before a realistic attack on
-an algorithm is possible. Thats the time to move on to use a better algorithm.
+an algorithm is possible. That's the time to move on to use a better algorithm.
 
 **Be prepared to swap the algorithm used in your protocol and files**
 
 If you rely on a crypto book on your desk, check out the date it was published.
 During the last years new attacks have been invented and some algorithms and
-protocols did not age well. If your decissions still are based on ta book
+protocols did not age well. If your decisions still are based on ta book
 from 1995 they will be wrong - even if the book was great at that time.
 
 Be aware: This chapter is an extreme simplification. If crypto security is an
@@ -42,7 +42,7 @@ other hand: One Hash can be the same for different inputs.
 
 For security reasons it must be impossible:
 
-* To revert the process and calculate tha input from the Hash
+* To revert the process and calculate the input from the Hash
 * To generate two inputs with the same Hash
 
 |Name   |Output Length (Byte)|Quality|
@@ -61,7 +61,7 @@ that way...
 
 [shattered.io on breaking SHA-1](https://shattered.io/)
 
-SHA256 and SHA512 are SHA-2 hashes. Where the number indicates the bitlength.
+SHA256 and SHA512 are SHA-2 hashes. Where the number indicates the bit length.
 
 SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But
 if something should happen to it, there is SHA-3 with is based on a totally
@@ -77,13 +77,13 @@ BLAKE2s: For 8 to 32 bit platforms
 If you need speed, give it a chance.
 
 
-%% TODO https://en.wikipedia.org/wiki/Hash_function_security_summary
-%% TODO: https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions
+%% TODO [Hash function security summary](https://en.wikipedia.org/wiki/Hash_function_security_summary)
+%% TODO: [Comparison of crypto graphic hash functions](https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions)
 
 
 ## HMAC or MAC
 
-MAC allowse *Integrity* and *Authentication*. Simplified: It is a Hash with a shared key involved. That way the parties can
+MAC allows *Integrity* and *Authentication*. Simplified: It is a Hash with a shared key involved. That way the parties can
 authenticate the origin.
 
 |Name        |Quality          |
@@ -98,7 +98,7 @@ authenticate the origin.
 While other hash functions are efficient, for password hashes we want
 inefficient hash functions. On a normal server it does not matter that much if
 1 or 500 milliseconds are wasted on calculating the Hash.
-But thet attacker wanting to break a database dumb with hundreds of thousands
+But the attacker wanting to break a database dumb with hundreds of thousands
 Hashes gets into lots of trouble thanks to the in-efficient hash.
 
 
@@ -108,7 +108,7 @@ Hashes gets into lots of trouble thanks to the in-efficient hash.
 |Argon2i |side channel attack resistance             |
 |bcrypt  |Vulnerable to FPGA, ASIC attacks           |
 |scrypt  |Vulnerable to GPU attacks                  |
-|PBKDF2  |Vulnerable to FPGS, ASIC and GPU attacks   |
+|PBKDF2  |Vulnerable to FPGA, ASIC and GPU attacks   |
 
 Links:
 
@@ -118,7 +118,7 @@ Links:
 
 %% .. TODO: Verify and dig deeper: length of hash and quality
 
-%% TODO: https://www.usenix.org/conference/woot16/workshop-program/presentation/ruddick
+%% TODO: [woot 16 ruddick](https://www.usenix.org/conference/woot16/workshop-program/presentation/ruddick)
 
 ## Stream Ciphers
 
@@ -146,7 +146,7 @@ proper mode. There will be an own table for that.
 |3DES    |Mediocre |                                           |
 |AES     |Good     |                                           |
 
-3DES is reted mediocre because AES offers a better key-length
+3DES is rated mediocre because AES offers a better key-length
 to protection ratio. You should be using that.
 
 
@@ -158,7 +158,7 @@ other blocks.
 
 |Name                        |Quality|
 |Electronic Codebook (ECB)   |Broken |
-|Cipher Block Chaining (CBC) |Ok     |
+|Cipher Block Chaining (CBC) |OK     |
 |Counter Mode (CTR)          |Good   |
 
 If possible use CTR. Some of those modes need not only the password but also
@@ -190,13 +190,13 @@ Invest your time into smartening up first.
 
 Or use libraries implementing this technology ready-to-use (which I would do).
 
-## Asymetric Ciphers
+## Asymmetric Ciphers
 
 %% TODO: nicer
 
 RSA: you should use 2048-4096 bit key length (security levels of 90 to 128 bits)
 
-Encryption: Ciphertext should be padded. RSA-OAEP does this (Optimal Asymmetric Encryption Padding)
+Encryption: Cipher text should be padded. RSA-OAEP does this (Optimal Asymmetric Encryption Padding)
 
 For signatures with RSA use RSA-PSS(Probabilistic Signature Scheme)
 
@@ -239,10 +239,10 @@ Depending on your computing power, lifetime of your product and adversary this m
 But sane best-practice key lengths are:
 
 * Asymmetric: >= 3248 bit
-* Elliptic Curve to replace classical asymetric crypto: >= 256 bit
+* Elliptic Curve to replace classical asymmetric crypto: >= 256 bit
 * Symmetric: >= 128 bit
 
-A source for a more specific evaluation of your required [keylength is here](https://www.keylength.com/).
+A source for a more specific evaluation of your required [key length is here](https://www.keylength.com/).
 
 ## Further reading
 
@@ -253,16 +253,14 @@ Mathematics paired with some hands-on. It contains lots of common mistakes being
 ### The Mozilla TLS guide
 
 [Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
-A good cheat sheet ranking the current quality of algortihms in a pragmatic ("don't break the web") envoironment.
+A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
 
 ### BetterCrypto.org
 
-[BetterCrypto](https://bettercrypto.org/) is a project aimed at helping admins. They offera free manual with lots of specific crypto settings for different applications. It also contains basic algorithm overviews.
-
-%% https://www.keylength.com/en/compare/
+[BetterCrypto](https://bettercrypto.org/) is a project aimed at helping admins. They offer a free manual with lots of specific crypto settings for different applications. It also contains basic algorithm overviews.
 
 
-%% https://leanpub.com/crypto
+%% [Crypto book](https://leanpub.com/crypto)
 
 
-%% An intensive Introducition to cryptography https://intensecrypto.org/public/lnotes_book.pdf
+%% [An intensive Introduction to cryptography](https://intensecrypto.org/public/lnotes_book.pdf)

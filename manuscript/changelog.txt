@@ -17,6 +17,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *testing* chapter. Especially for unit testing and bug bounties (basics)
 * TLS got a diagram and minor improvements
 * *Clang* chapter added
+* Added *cryptoalgorithms* to Sample
 
 
 %% Plan: Valgrind extra
