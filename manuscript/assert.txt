@@ -86,7 +86,7 @@ exception handlers but handle specific exceptions.
 That way **AssertionError** will not be handled by your code and cause
 program termination.
 
-## Javascript
+## JavaScript
 
 {lang="javascript"}
     > console.assert(false,"testmessage")
@@ -94,8 +94,8 @@ program termination.
             at Console.assert (console.js:194:23)
 
 The disadvantage is that can not been toggled. It is active in *release*
-and *debug* version. Which makes agressive usage of asserts risky. IMHO this
-difference in usage is so hughe that I would dare to call it "assert in name only".
+and *debug* version. Which makes aggressive usage of asserts risky. IMHO this
+difference in usage is so huge that I would dare to call it "assert in name only".
 
 [Assert at MDN](https://developer.mozilla.org/en-US/docs/Web/API/console/assert)
 
