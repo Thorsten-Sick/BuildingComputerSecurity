@@ -119,7 +119,7 @@ Automation includes stress testing and fuzzing.
 [Python-can documentation](https://python-can.readthedocs.io/en/2.1.0/)
 
 {lang="bash"}
-apt install python3-can
+    sudo apt install python3-can
 
 or use *pip* to install it
 
