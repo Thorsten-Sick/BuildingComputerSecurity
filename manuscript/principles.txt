@@ -102,7 +102,7 @@ on account level (special web server accounts, for example) or on process
 level (where the process drops privileges during startup - as soon as it does
 not require them anymore).
 
-Dropping proess privileges is possible on Linux. Not on Windows.
+Dropping process privileges is possible on Linux. Not on Windows.
 
 %% TODO: Write several chapters, depending on type of isolation
 
@@ -221,7 +221,7 @@ offers 100 % protection.
 Thanks to efforts by the EFF, Google and many more the connections between client
 and server are now end-to-end encrypted. Which is an incredible security improvement.
 Many bolt-on security solutions offer a feature to scan the content of those
-connections with MITM proxys. This is only possible if you sabotage the alert
+connections with MITM proxies. This is only possible if you sabotage the alert
 system at the endpoints. Because they detect the attack.
 Having a sabotaged alert system they will have trouble detecting malicious attacks.
 Scanning as MITM is a very bad idea.
@@ -241,7 +241,7 @@ start receiving mails, you know the db has been compromised.
 The same for fake "password.txt" files in your system. They get accessed ? You got
 hacked.
 
-Tripwires are usless if you do not have a monitoring system and a plan how to
+Tripwires are useless if you do not have a monitoring system and a plan how to
 react.
 
 ## Slow down the attacker
