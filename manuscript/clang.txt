@@ -11,7 +11,7 @@ features you can expect from it:
 * Code coverage: Which parts of the code are run and tested ?
 * Fuzzing
 
-[Clang](https://clang.llvm.org/) is a compiler in the same league as GCC. It is the C-frontend for LLVM.
+[Clang](https://clang.llvm.org/) is a compiler in the same league as GCC. It is the C-front end for LLVM.
 Basic command lines are very similar, but it has some different features -
 especially for code verification.
 
@@ -91,7 +91,7 @@ Included in ASAN. Detects memory leaks with minor overhead.
 Memory leaks are sneaky and need a program running for a long time and
 through a lot of states. Check if your automated tests have a good coverage.
 
-It is part of ASAN. To use it standalong, compile with *-fsanitize=leak*.
+It is part of ASAN. To use it standalone, compile with *-fsanitize=leak*.
 
 [More here](https://clang.llvm.org/docs/LeakSanitizer.html)
 
@@ -128,7 +128,7 @@ There are three ways to get code coverage in Clang:
 
 When using Sanitizers "Sanitizer Coverage" is the tool developed for this situation.
 
-To get the GCC stle coverage, compile with *-ftest-coverage* and run with
+To get the GCC style coverage, compile with *-ftest-coverage* and run with
 *gcov - A*
 
 Your goal is to design the tests in a way that results in 100% coverage.
