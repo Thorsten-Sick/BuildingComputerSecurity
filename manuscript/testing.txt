@@ -24,7 +24,7 @@ numbers of testers.
 
 While the number of broken code also scales - by number of developers...
 
-Many teams are using the coders to also test. But they subconciously avoid tricky
+Many teams are using the coders to also test. But they subconsciously avoid tricky
 situations and will not find the issues.
 
 ## What to test
@@ -33,9 +33,9 @@ Just a few ideas what you can test
 
 * The application you developed
 * The infrastructure it depends on (databases, certificates, web servers)
-    * The uptime of this infrastructure
+    * The up time of this infrastructure
     * If the certificates are still valid
-    * If the certificates are accepted by reelvant browsers
+    * If the certificates are accepted by relevant browsers
 * The update status of the operating system on your infrastructure
 * If third party tools got critical updates you did not deploy yet
     * Libraries
@@ -47,17 +47,17 @@ Just a few ideas what you can test
 
 %% Compliance tests automation
 
-%% https://www.inspec.io/
+%% [Inspec](https://www.inspec.io/)
 
-%% (https://github.com/chef/inspec)
+%% [Inspec on Github](https://github.com/chef/inspec)
 
 %% TODO: Test it
 
-%% Also: CIS for Ubuntu: https://www.cisecurity.org/benchmark/ubuntu_linux/
+%% Also: [CIS for Ubuntu](https://www.cisecurity.org/benchmark/ubuntu_linux/)
 
 %% TODO: Lynis security auditing for Linux
-%% https://linuxsecurity.expert/tools/lynis/
-%% https://linuxsecurity.expert/tools/lunar/
+%% [Lynis](https://linuxsecurity.expert/tools/lynis/)
+%% [Lunar](https://linuxsecurity.expert/tools/lunar/)
 
 ## Unit tests
 
@@ -66,12 +66,12 @@ certain behaviour of interfaces.
 
 This prevents re-factoring from breaking other code.
 Second use of unit tests: Write tests to verify external libs behave the same
-api after updates. This reduces risk from updating external libraries - and makes
+API after updates. This reduces risk from updating external libraries - and makes
 it easier to do that after vulnerabilities are found there.
 
 ## Verification tests
 
-Verfication tests are scripts that remote control the application and check
+Verification tests are scripts that remote control the application and check
 if all promised features work as expected.
 
 These tests should check the application and the environment (servers).
@@ -129,13 +129,13 @@ There are a lot of caveats.
 
 * You need an internal process for external input
 * You need testers to verify the external reports
-* You should have picked the low haning fruit bugs already
+* You should have picked the low hanging fruit bugs already
     * Or you will get reports for things you already know
 * It does not replace internal testers
 * It does not replace external reviews by experts
 * You can not guarantee a good coverage
     * Maybe no one inspects your bugs because you are not paying enough
-    * Maybe all those uncoordinated voluteers just focus on one part of your program
+    * Maybe all those uncoordinated volunteers just focus on one part of your program
 
 On the pro side are:
 
