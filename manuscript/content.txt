@@ -33,11 +33,24 @@ effects like making your code simpler to debug and more robust and stable are
 take always that balance the extra effort invested. If you do not yet practice
 [defensive programming](#chapter-defensive-programming) you should consider starting it.
 
+### Assert
+
+A very powerful tool for debugging and preventing bugs are *asserts*. They are
+even more powerful when combined with *fuzzing*.
+When coding, you should start using [asserts](#chapter-asserts) right now.
+
 ### Compiling
 
 Modern compilers have lots of less known features to find vulnerabilities
 during compile or run time. Or even mitigate - making vulnerabilities harder
 to abuse by the attacker. Covered in [this chapter](#chapter-compiling).
+
+### Clang LLVM
+
+Clang is a compiler in the GCC league. It adds some more features for static
+and dynamic testing of your code. Those features are cool enough that you
+should consider compiling at least the test version using [Clang and those
+settings](#chapter-clang).
 
 ### Testing compiling
 
@@ -53,6 +66,12 @@ your code. With zero effort.
 
 [CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
 invest some time in configuration. This chapter will help you there.
+
+### Testing
+Is it still testing or already hacking our own product ?
+There are many tricks to make software testing more aggressive and which will
+shine some light on vulnerabilities in [this chapter](#chapter-testing).
+
 
 ### Fuzzing
 
@@ -111,11 +130,11 @@ improve security.
 [TLS is a basic technology to secure data in transit](#chapter-tls). Some may know it as SSL
 or HTTPS. And many projects use it.
 
-%% ### Crypto algorithms
+### Crypto algorithms
 
-%% Which algorithm to use ? In which mode ? Best key length ? This book is basic,
-%% so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
-%% For the curious people there are resources to dig much deeper.
+Which algorithm to use ? In which mode ? Best key length ? This book is basic,
+so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
+For the curious people: there are resources to dig much deeper.
 
 ## Bolt-on security
 
