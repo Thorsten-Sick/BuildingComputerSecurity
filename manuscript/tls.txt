@@ -31,7 +31,7 @@ As between version steps there are several years a step in a minor version
 number means lots of improvements.
 TLS 1.3 is a re-work that removes many of the security issues the old versions had.
 Especially risky features and parameters that could be used in TLS < 1.3.
-If possible (alle clients and servers support it) - use TLS 1.3.
+If possible (all clients and servers support it) - use TLS 1.3.
 
 You will want to monitor the versions used to connect to your servers
 and de-activate old versions you do not see anymore.
@@ -255,7 +255,7 @@ Mathematics paired with some hands-on. It contains lots of common mistakes being
 ### The Mozilla TLS guide
 
 [Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
-A good cheat sheet ranking the current quality of algortihms in a pragmatic ("don't break the web") envoironment.
+A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
 
 
 
@@ -266,9 +266,9 @@ A good cheat sheet ranking the current quality of algortihms in a pragmatic ("do
 %% [ciphersuite](https://www.wst.space/ssl-part1-ciphersuite-hashing-encryption/)
 %% [DH key exchange](https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/)
 %% [CA](https://www.wst.space/ssl-part-3-certificate-authority/)
-%% TLS 1.3: https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/
+%% [TLS 1.3](https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/)
 
-%% https://blog.talosintelligence.com/2018/08/playback-tls-story.html?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=Feed%3A+feedburner%2FTalos+%28Talos%E2%84%A2+Blog%29
+%% [Playback TLS](https://blog.talosintelligence.com/2018/08/playback-tls-story.html?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=Feed%3A+feedburner%2FTalos+%28Talos%E2%84%A2+Blog%29)
 
 
-%% https://code.fb.com/networking-traffic/deploying-tls-1-3-at-scale-with-fizz-a-performant-open-source-tls-library/
+%% [Deploying TLS 1.3](https://code.fb.com/networking-traffic/deploying-tls-1-3-at-scale-with-fizz-a-performant-open-source-tls-library/)
