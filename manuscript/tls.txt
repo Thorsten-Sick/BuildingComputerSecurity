@@ -272,3 +272,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 
 %% [Deploying TLS 1.3](https://code.fb.com/networking-traffic/deploying-tls-1-3-at-scale-with-fizz-a-performant-open-source-tls-library/)
+
+%% http/https connection debugging, response headers and mixed content usin nmap, mozilla observatory and ssl labs [htrace](https://github.com/trimstray/htrace.sh)
