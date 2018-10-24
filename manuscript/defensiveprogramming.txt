@@ -55,6 +55,52 @@ You should expect every input to be at least *accidentally* wrong. In a malware
 attack situation you can even expect the input to be handcrafted to cause as
 much damage as possible (*remote code execution* would be one possible goal of an attacker).
 
+%% TODO: Check value range of variables
+
+%% TODO: check variables for plausibility
+
+%% TODO functions must check parameters for type, dimension and value range (maybe by assert)
+
+%% TODO: Use read-only parameters (const keyword in C)
+
+%% TODO: All parameters sent to functions should be read-only (not always possible, but at least reduce the rw parameters and document them)
+
+%% TODO: Expect errors. Handle them properly (Error tolerance)
+
+%% TODO: Expect intermediate values to be faulty (check in code or by assertion). Especially after calling 3rd party functions
+
+%% TODO: Self check (permanent, or after updates)
+
+%% TODO: Select the proper language ! in Coding Standards
+
+%% TODO: Select feature set of language to be used. Reduce ! Complexity kills (in Coding Standards)
+
+%% TODO: Write how to: Potential errors and how to handle them in Coding Standards
+
+%% TODO: How-to: Avoid errors in Coding Standards
+
+%% TODO: Is portability needed ? To which kind of systems ?
+
+%% TODO: Is simulation needed for better test coverage ? 
+
+%% TODO: MISRA standard and CppCheck activation ?
+
+%% TODO: CppCheck function database ?
+
+%% TODO: initialize variables on declaration (set to 0 or NULL)
+
+%% TODO: Maybe use Yoda conditions: https://en.wikipedia.org/wiki/Yoda_conditions
+
+%% TODO: Reduce complexity by isolated modules (functions, ...)
+%% * Must be simple. One task only
+%% * Reduce inter-connections between components
+%% * One entry, one exit
+%% * Create collection of modules
+%% * Reduce global variables
+%% * Documentation matters !
+%% * Reduce parameters to functions !
+
+
 ### Memory writing mess
 
 memcpy/strcpy/gets/...

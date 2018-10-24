@@ -342,3 +342,5 @@ name should be good reasons to have one or more pseudonyms.
 
 
 %% Progressive web apps: https://medium.com/@kennethrohde/progressive-web-apps-coming-to-all-chrome-platforms-80e31272e2a8
+
+%% TODO: CanOnion header idea - so pages can re-direct: https://twitter.com/AlecMuffett/status/1054789626156720134
