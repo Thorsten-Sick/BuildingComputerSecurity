@@ -1,1 +1,12 @@
 %% mass ssh https://github.com/trimstray/massh-enum
+
+%% TODO: scp
+
+%% TODO: execute commands
+
+%% TODO ~/.ssh/config: https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/
+
+%% TODO tunnel
+
+%% TODO: Generate and distribute keys
+

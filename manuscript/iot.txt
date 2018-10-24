@@ -90,6 +90,7 @@ kind of approach is the right size of paranoia.
 %% [Hardsploit: Metasploit for hardware](https://media.ccc.de/v/32c3-7496-hardsploit_a_metasploit-like_tool_for_hardware_hacking)
 %% Routersploit: https://github.com/threat9/routersploit
 
+%% TODO: https://medium.com/read-write-participate/university-of-dundee-and-mozilla-announce-doctoral-program-for-healthier-iot-d1cc3f568e53
 
 %% %%%%%%%%%%%%%%% Automotive
 %% OTA Tesla hacking
