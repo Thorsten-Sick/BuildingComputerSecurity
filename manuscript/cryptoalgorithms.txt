@@ -157,9 +157,12 @@ Block ciphers are encrypting the data block-by-block. The **mode** defines
 other blocks.
 
 |Name                        |Quality|
+|----------------------------|-------|
 |Electronic Codebook (ECB)   |Broken |
 |Cipher Block Chaining (CBC) |OK     |
 |Counter Mode (CTR)          |Good   |
+
+%% TODO: Add CCM
 
 If possible use CTR. Some of those modes need not only the password but also
 a number named *IV* (initialisation vector) or *nonce* (number used only once).

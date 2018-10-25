@@ -147,9 +147,11 @@ You could do the blocking by modifying the code of those tools or by AppArmor
 Also: Maybe you could want to uninstall some of those tools....
 
 
-%% TODO: Intel/safestringlib on github
+%% TODO: [Intel/safestringlib](https://github.com/intel/safestringlib)
 
+%% TODO: Add https://www.safaribooksonline.com/library/view/secure-programming-cookbook/0596003943/
 
+%% TODO: Add https://www.safaribooksonline.com/library/view/building-secure-software/9780672334092/
 
 %% Secure C++ Coding: https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637
 %% https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)

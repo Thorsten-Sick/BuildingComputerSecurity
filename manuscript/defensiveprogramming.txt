@@ -1,6 +1,7 @@
 # Defensive programming {#chapter-defensive-programming}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+C> For: Developers
 
 %% TODO: [CII best practice](https://linux-audit.com/secure-software-development-cii-best-practices/)
 
@@ -12,10 +13,6 @@ simpler than debugging normal code. This positive side effect is caused by
 stricter error handling.
 Errors will cause instant program termination and stack traces (thanks to
 [asserts](#chapter-asserts) and better error handling in unlikely error conditions).
-
-## Audience
-
-Developers
 
 ## TODO
 
@@ -192,6 +189,12 @@ by the default exception handler.
 
 TODO: Create focus chapters for different programming languages.
 
-## External sources
+%% TODO: Expect modifications in the future. Put all knives into the drawer...
+
+%% TODO: Add example C program
+
+## Further reading
 
 [Wikipedia on Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming)
+
+%% TODO: Viega and others
