@@ -5,6 +5,11 @@ changelog to make it simpler for you to find the new sections.
 
 
 %% Extend defensive programming / compiling
+%% Plan: Valgrind extra
+%% Plan: Verify external libs
+%% Plan: Monitor exploits
+%% Plan: More on Unit tests
+%% Plan: Cryptoalgorithm tables need fixing
 
 ## October 2018
 
@@ -20,11 +25,6 @@ changelog to make it simpler for you to find the new sections.
 * Added *cryptoalgorithms* to Sample
 
 
-%% Plan: Valgrind extra
-%% Plan: Verify external libs
-%% Plan: Monitor exploits
-
-%% Plan: More on Unit tests
 
 
 ## September 2018

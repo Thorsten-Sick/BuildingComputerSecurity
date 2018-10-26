@@ -17,6 +17,7 @@ Errors will cause instant program termination and stack traces (thanks to
 ## TODO
 
 * Focus on vulnerable code first
+* Reduce complexity
 * Use [asserts](#chapter-asserts)
 * Memory writing mess
 * Use external libraries
@@ -52,6 +53,44 @@ You should expect every input to be at least *accidentally* wrong. In a malware
 attack situation you can even expect the input to be handcrafted to cause as
 much damage as possible (*remote code execution* would be one possible goal of an attacker).
 
+### Reduce complexity
+
+Complexity is cfreated by bad design or bad code. And complexity causes all kinds of trouble:
+
+* vulnerabilities
+* Expensive maintenance
+* Development slows down after a certain program size
+* It even make certain sizes of projects impossible to achieve
+
+Ways to manage complexity is *object oriented* design and code. This breaks
+big tasks down into discrete objects.
+So object orientation is a tool to achieve *software components*. If you can
+achieve splitting the project into components by other ways: Great.
+
+They must:
+
+* Be simple. One task only
+* Reduce inter-connections between components
+* Have one entry, one exit
+* Be well documented
+* Have reduced parameters
+* Not have side effects like "...and also writes into a file and sets a registry key..."
+* Reduce global variables
+* Reduce parameters to functions !
+
+Best practice is to create a collection of modules and components to be used
+without modification in several projects.
+
+That way you will get a good ROI and proof that the components are generic and well designed.
+
+Other ways to reduce complexity:
+
+* Do not use all the possible fancy language features available. Especially those making the code harder to read
+* Reduce dependencies on libraries (especially on Javascript)
+* Refactor for simplicity
+* Simplify used data and file formats
+* Remove old features
+
 %% TODO: Check value range of variables
 
 %% TODO: check variables for plausibility
@@ -78,7 +117,7 @@ much damage as possible (*remote code execution* would be one possible goal of a
 
 %% TODO: Is portability needed ? To which kind of systems ?
 
-%% TODO: Is simulation needed for better test coverage ? 
+%% TODO: Is simulation needed for better test coverage ?
 
 %% TODO: MISRA standard and CppCheck activation ?
 
@@ -88,14 +127,7 @@ much damage as possible (*remote code execution* would be one possible goal of a
 
 %% TODO: Maybe use Yoda conditions: https://en.wikipedia.org/wiki/Yoda_conditions
 
-%% TODO: Reduce complexity by isolated modules (functions, ...)
-%% * Must be simple. One task only
-%% * Reduce inter-connections between components
-%% * One entry, one exit
-%% * Create collection of modules
-%% * Reduce global variables
-%% * Documentation matters !
-%% * Reduce parameters to functions !
+
 
 
 ### Memory writing mess
@@ -118,7 +150,7 @@ as proper size handling). If available, use that.
 If you (or your company) solves the same problem in lots of projects, either
 use existing libraries or create your own ones. The behaviour of them should be
 verified and stress tested. That is a very efficient way of getting a
-problem solved with good quality code.
+problem solved with good code quality .
 
 If you are using external libraries:
 
@@ -126,14 +158,36 @@ If you are using external libraries:
 * Spend some time and money to test those libraries (fuzzing)
 * Get in touch with the developers and push some patches / issues to establish a channel
     * Monitor their responsiveness
-* Wrap the external libraries in you own code: If the library has a bug that
-is not fixed you can filter the data to the lib on your own as a workaround.
+    * Contribute if it Open Source. That way you can do the emergency fix
+* Wrap the external libraries in you own code.
 * Be ready to update a library in all your projects as soon as a bug is found
 
 If you create your own libraries, maybe release them as open source. To get more
 users to "test" your libraries.
 
 This or establish this library in your company to get more valuable feedback.
+
+Benefits of wrappers:
+A wrapper also reduces complexity your application developer will have to face.
+Only offer the required core functionality to them. All the fancy bonus
+feature the library will have to handle special cases will be hidden from the
+application programmers.
+
+You can also work around broken stuff in the library
+without the developers noticing.
+The more extreme variant of this is to streamline the behaviour of different versions of
+the wrapped library. Just in case upstream did brake/improved the interface while also
+shipping essential security fixes.
+
+If the library has a bug that is not fixed you can filter the data to the lib on your side as a workaround.
+
+And last - not least:
+
+As an exit strategy you could even replace the external library and use a
+similar one - and your abstraction layer hides that from the application code.
+
+%% TODO: Expect modifications in the future. Put all knives into the drawer...
+
 
 %% TODO: Merge with documentation above (we have this one twice)
 
@@ -185,16 +239,29 @@ return values). Unhandled exceptions will trickle down and be at least handled
 by the default exception handler.
 
 
+%% TODO: Add example C program
+
+
 ## Similar chapters
 
-TODO: Create focus chapters for different programming languages.
+%% TODO: Create focus chapters for different programming languages.
 
-%% TODO: Expect modifications in the future. Put all knives into the drawer...
-
-%% TODO: Add example C program
 
 ## Further reading
 
 [Wikipedia on Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming)
 
-%% TODO: Viega and others
+The [Secure Programming Cookbook](https://www.safaribooksonline.com/library/view/secure-programming-cookbook/0596003943/)
+has lots of receipts for common secure programming problems. It is more focussed ont the Operating System level (Windows, Linux).
+
+While the book [Building Secure Software](https://www.safaribooksonline.com/library/view/building-secure-software/9780672334092/) is
+more focussed on typical C issues. It is thinner, a bit older but a very good start. Put this one on your desk. And read it.
+
+[How to Write Unmaintainable Code](https://www.se.rit.edu/~tabeec/RIT_441/Resources_files/How%20To%20Write%20Unmaintainable%20Code.pdf)
+is a funny document describing the hell of bad code - and how to create it. If you just let it circulate amongst your peers it could be more powerful than Coding Guidelines.
+
+The big gun is [Secure coding in C and C++](https://www.safaribooksonline.com/library/view/secure-coding-in/9780132981989/). Draw this one last, if the other books are read.
+Or if you have sufficient time.
+
+
+%% https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards

@@ -54,9 +54,6 @@ After that they should be added to the Coding Style document of the team.
 
 Other secure coding standards can be found here:
 
-https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards
-
-Also the book "Secure coding in C and C++"
 
 
 ## Tools for code reviews
@@ -67,45 +64,14 @@ not find everything.
 
 ## General
 
-### Reduce Complexity
+%% TODO: Coding Guidelines
 
-Complexity kills. Make the code as simple as possible.
-To achieve that, maybe you should ponder:
-
-* Do not use all the possible fancy language features available. Especially those making the code harder to read
-* Reduce dependencies to libraries (especially on Javascript)
-* Refactor for simplicity
-* Simplify used data and file formats
-* Remove old features
 
 %% TODO: More
 
 %% TODO: Secure coding standards
 
-### Keep third party libraries up to date
 
-If you use third party libraries they are an essential part of your code base.
-Monitor them for bugfixes. Keep them up to date. Maybe even fuzz them and
-report bugs.
-
-Also create a thin wrapping layer around them. This way you can later on add
-quick fixes or verification (minimum version number used, ...) that will spread
-to all your projects where you use this library in. That way you reduce
-dependency on the library developer. If the worst case happens you could even
-replace this library and use a similar one - and your abstraction layer
-hides that from the application code.
-
-A wrapper also reduces complexity the application developer will have to face.
-Just only offer the required core functionality to them. All the fancy bonus
-feature the library will have to handle special cases will be hidden from the
-application programmers.
-
-Another benefit of wrappers: You can work around broken stuff in the library
-without the developers noticing.
-
-Stil more benefits: You can streamline the behaviour of different versions of
-the wrapped library. Just in case they broke/improved the interface while also
-shipping essential security fixes.
 
 ### Segmentation
 
@@ -148,10 +114,6 @@ Also: Maybe you could want to uninstall some of those tools....
 
 
 %% TODO: [Intel/safestringlib](https://github.com/intel/safestringlib)
-
-%% TODO: Add https://www.safaribooksonline.com/library/view/secure-programming-cookbook/0596003943/
-
-%% TODO: Add https://www.safaribooksonline.com/library/view/building-secure-software/9780672334092/
 
 %% Secure C++ Coding: https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637
 %% https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
