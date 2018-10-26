@@ -57,4 +57,20 @@ bug reports to your team.
 
 %% TODO ## Feature: MISRA
 
+%% TODO ## Feature platform
+
 %% TODO: ## Feature: Dumping data for Python aka addons
+cppcheck --dump --enable=all --std=c99 c_file.c
+result: c_file.c.dump
+python naming.py --var='[a-z]*\Z' --function='[A-Z].*' /media/sf_work/feolib_trunk/pal/tests/sio.c.dump
+# Remember: \Z is end of string !
+# When running cppcheck on multiple files it generated broken dump files for me.
+
+
+
+
+
+
+%% TODO: Source is at https://github.com/danmar/cppcheck
+
+%% TODO: Web page: http://cppcheck.sourceforge.net/

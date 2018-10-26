@@ -335,11 +335,14 @@ name should be good reasons to have one or more pseudonyms.
 
 %% TODO: Web Sockets: https://www.blackhillsinfosec.com/how-to-hack-websockets-and-socket-io/
 
+%% TODO: https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/
+
 
 %% https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html
 
 %% https://medium.com/@aslushnikov/automating-clicks-in-chromium-a50e7f01d3fb
 
+%% MAgenta Shops: https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html
 
 %% Progressive web apps: https://medium.com/@kennethrohde/progressive-web-apps-coming-to-all-chrome-platforms-80e31272e2a8
 
