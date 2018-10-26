@@ -265,5 +265,6 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 %% [Crypto book](https://leanpub.com/crypto)
 
+%% Add Feedback from Michael S.
 
 %% [An intensive Introduction to cryptography](https://intensecrypto.org/public/lnotes_book.pdf)

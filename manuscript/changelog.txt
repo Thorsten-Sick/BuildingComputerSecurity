@@ -10,6 +10,7 @@ changelog to make it simpler for you to find the new sections.
 %% Plan: Monitor exploits
 %% Plan: More on Unit tests
 %% Plan: Cryptoalgorithm tables need fixing
+%% Plan design
 
 ## October 2018
 

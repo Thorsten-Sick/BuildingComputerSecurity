@@ -1,17 +1,20 @@
-Important things during the design phase
-########################################
+# Software Design or Architecture {#chapter-design}
 
-.. State: 80 % Design
+C> By Thorsten Sick
+C> For Designers, Managers, Architects and Developers
+
+Architecture and design already starts long before starting to code.
+As it can also include preparing the environment, tools and getting the
+requirement it has a blurred line to management tasks.
 
 
+## Preparation
 
-Preparation
-***********
+### Infrastructure
 
-Infrastructure
-==============
-
-* Have an email address to report vulnerabilities to (and a security.txt. See: https://securitytxt.org/)
+* Have an email address to report vulnerabilities to like security@domainname.com
+* Add a PGP key for this address. And train everyone to use it properly
+* Prepare a security.txt. See: https://securitytxt.org/
 * Put it onto your homepage
 * Prepare bugtrackers
 * Have processes for handling vulnerabilities into the bugtracker
