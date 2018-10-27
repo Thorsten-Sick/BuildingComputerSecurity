@@ -145,3 +145,18 @@ well known parts of the system** for traces of the malware.
 * registry keys
 
 %% TODO Ask Stefan for typical persistence tricks. Maybe write a chapter.
+
+## A trick: Living off the land
+
+More an attacker's trick is "Living off the land". The attacker infects one
+system. And starts using existing tools to create a beachhead or start lateral movement.
+
+To make their life a lot harder (and cause them to risk triggering more alarms),
+remove useless files and simplify the systems before the invasion.
+
+Things to weed out:
+
+* System binaries
+* Compilers
+* Network tools (wget, ftp, nc, nmap, ....)
+* libaries (especially network libs like pcap)

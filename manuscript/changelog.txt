@@ -12,6 +12,13 @@ changelog to make it simpler for you to find the new sections.
 %% Plan: Cryptoalgorithm tables need fixing
 %% Plan design
 
+## November 2018
+
+* Enhanced *defensive programming*
+* Added *design*
+* Enhanced "attacker's goals"
+* Enhanced *passwords*
+
 ## October 2018
 
 * Added *cryptoalgorithms*

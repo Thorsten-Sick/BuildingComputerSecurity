@@ -1,0 +1,64 @@
+
+Initial shipping of you product
+*******************************
+
+.. TODO : write (hashes on homepages, signed files, ....)
+
+API design
+**********
+
+.. TODO: Read and compress
+
+https://github.com/shieldfy/API-Security-Checklist
+
+
+
+
+Resilience
+**********
+
+.. TODO: Write
+
+Mitigation
+**********
+
+.. TODO: Write
+
+Bolt-on security
+****************
+
+.. TODO: Write
+
+Supply chain attack
+*******************
+
+
+CCleaner breach
+===============
+
+https://thehackernews.com/2018/04/ccleaner-malware-attack.html
+https://www.wired.com/story/inside-the-unnerving-supply-chain-attack-that-corrupted-ccleaner
+https://twitter.com/infosecxual/status/986536172754219008?s=09
+
+* Dev team re-used creds
+* attacker installed malware on developer device
+* Pivoted using RDP protocol
+* dropped second stage malware
+* installed Shadowpad (trojanized linux admin software: https://www.heise.de/security/meldung/ShadowPad-Spionage-Hintertuer-in-Admintools-fuer-Unix-und-Linux-Server-aufgedeckt-3803225.html)
+* Pivot to build server
+* Keylogger and RDP for network infiltration
+* backdooring CCleaner
+* 3 stage payload in there - 2.3 million users affected by stage 1
+
+Also:
+
+* Network infected for 5 months
+* Major companies were targeted
+
+
+Bittorrent client
+=================
+
+https://thehackernews.com/2018/03/windows-malware-hacking.html
+
+Infected 400 000 PCs.

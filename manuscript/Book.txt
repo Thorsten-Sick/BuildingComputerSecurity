@@ -4,6 +4,7 @@ content.txt
 knowyourenemies.txt
 attackers_goals.txt
 principles.txt
+design.txt
 code_analysis_tools_requirements.txt
 defensiveprogramming.txt
 assert.txt

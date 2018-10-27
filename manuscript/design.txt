@@ -21,27 +21,28 @@ requirement it has a blurred line to management tasks.
 * Have an internal wiki to share experience and knowledge
 * Collect "lessons learned" into this wiki
 
-Hardening Open Source Development
----------------------------------
+## Hardening Open Source Development
 
-https://media.ccc.de/v/34c3-9249-hardening_open_source_development
+[34C3: HArdening Open source development](https://media.ccc.de/v/34c3-9249-hardening_open_source_development)
 
 * Tools have their own package managers - maybe sandbox dev environment ?
-* VCS can have shell code attached (git hooks)
-* Build environment could leak keys....
+* VCS can have shell code attached (git hooks) - use them
+* Build environment could leak keys and credentials....verify that by tools
 * Go for reproducible builds
-* Trusting external lib repos (npm, ...)
-* Tooling for development
-* Bus-factor
+* Trusting external lib repos (npm, ...) is tricky. Reduce dependencies
+* Choose proper tooling for development
+* Bus-factor: How many developers may be hit by a bus before the project fails ? Make it > 3
 * Dependency tracking (vulnerabilities for different versions of dependency)
 * Compartmentalize Github projects
 * Create incident response process
 
-Basics
-******
+%% TODO: Githooks in detail
+%% TODO: Tools to check for checked in credentials in detail
+%% TODO: Reproducible builds in detail
 
-Fixing Bugs
-===========
+## Basics
+
+### Fixing Bugs
 
 The development phases are
 
@@ -50,6 +51,7 @@ The development phases are
 * Internal testing
 * External testing (Beta)
 * Release
+* Maintenance
 
 Fixing bugs in the early phases is quite cheap. While fixing a Design
 bug (called "flaw") after Release can be horribly expensive - you have to
@@ -57,15 +59,13 @@ process the change through all the phases in between Design and Release.
 
 TL;DR: Fix bugs early. Verify your Design.
 
-Data files
-==========
+### Data files
 
 * Data files you use should contain a version number for the structure. This frees you to push new versions of the software which can open the old variant as well
 
 
 
-Complexity
-**********
+## Complexity
 
 Complexity kills. The more features you add, the more complexity will be added to the system. Complexity makes it harder to maintain the system and to secure it.
 Be aware of your complexity budget and all your plans (see "updates") depend on that.
@@ -103,84 +103,9 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 |Kernel drivers     |High              |                         |
 +-------------------+------------------+-------------------------+
 
-System architecture
-*******************
+## System architecture
 
 * Isolate mission critical system from systems that can be DOS-ed. This will relax a ransom situation.
 * Plan for recovery
+* Plan for post incident analysis
 * Avoid vendor lock in
-
-Living of the land
-==================
-
-As soon as attackers infect a machine of a larger system, they will use this for lateral movement.
-To make their life a lot harder (and cause them to risk triggering more alarms), remove useless files:
-
-* System binaries
-* Compilers
-* Network tools (wget, ftp, nc, nmap, ....)
-* libaries (especially network libs like pcap)
-
-Initial shipping of you product
-*******************************
-
-.. TODO : write (hashes on homepages, signed files, ....)
-
-API design
-**********
-
-.. TODO: Read and compress
-
-https://github.com/shieldfy/API-Security-Checklist
-
-
-
-
-Resilience
-**********
-
-.. TODO: Write
-
-Mitigation
-**********
-
-.. TODO: Write
-
-Bolt-on security
-****************
-
-.. TODO: Write
-
-Supply chain attack
-*******************
-
-
-CCleaner breach
-===============
-
-https://thehackernews.com/2018/04/ccleaner-malware-attack.html
-https://www.wired.com/story/inside-the-unnerving-supply-chain-attack-that-corrupted-ccleaner
-https://twitter.com/infosecxual/status/986536172754219008?s=09
-
-* Dev team re-used creds
-* attacker installed malware on developer device
-* Pivoted using RDP protocol
-* dropped second stage malware
-* installed Shadowpad (trojanized linux admin software: https://www.heise.de/security/meldung/ShadowPad-Spionage-Hintertuer-in-Admintools-fuer-Unix-und-Linux-Server-aufgedeckt-3803225.html)
-* Pivot to build server
-* Keylogger and RDP for network infiltration
-* backdooring CCleaner
-* 3 stage payload in there - 2.3 million users affected by stage 1
-
-Also:
-
-* Network infected for 5 months
-* Major companies were targeted
-
-
-Bittorrent client
-=================
-
-https://thehackernews.com/2018/03/windows-malware-hacking.html
-
-Infected 400 000 PCs.
