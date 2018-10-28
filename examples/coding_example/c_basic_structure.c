@@ -17,7 +17,6 @@ int bar(int a)
     int ret = OK;
     if (a < 0)
     {   // Always add parantheses, google "goto fail"
-        // https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/
         ret = ERR_EXAMPLE;
     }
 
@@ -38,6 +37,9 @@ int foo(int a)
         ret = ERR_MEM;
         goto cleanupthemess;
     }
+    memset(buff, 0, BUFFLENGTH);
+
+    // use the memory
 
     ret = bar(a);
     if (ret != OK)
@@ -46,7 +48,7 @@ int foo(int a)
         goto cleanupthemess;
     }
 
-    printf("Never reached\n");
+    printf("Never reached thanks to parameter in main\n");
 
 cleanupthemess:
 

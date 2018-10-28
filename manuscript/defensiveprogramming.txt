@@ -207,8 +207,6 @@ right anyway.
     * Always call the label you jump to the same. I like "cleanupthemess"
 * If the memory contained valuable data, memset it before freeing it. Freed memory is available but still contains the old data !
 
-%% TODO: malloc / free example for C
-
 ### Input validation
 
 Do not start to blacklist characters or combinations of characters. Instead:
@@ -239,10 +237,115 @@ return values). Unhandled exceptions will trickle down and be at least handled
 by the default exception handler.
 
 
-%% TODO: Add example C program
+## Basic pattern for C coding
+
+There are many tricks to write secure C code. I tried to collect the most
+basic ones in a sample C program.
+
+You will also see the only valid reason to use a *goto* in a C program.
+
+{title="Basic pattern for handling standard C errors", lang=C}
+
+    #include <assert.h>
+    #include <stdlib.h>
+    #include <string.h>
+    #include <stdio.h>
+
+    // This is best in a project central header file
+    #define OK 0
+    #define ERR_MEM -1  // Memory error
+    #define ERR_EXAMPLE -2  // An example error
+    // End header file
 
 
-## Similar chapters
+    #define BUFFLENGTH 100
+
+    int bar(int a)
+    {
+        int ret = OK;
+        if (a < 0)
+        {   // Always add parantheses, google "goto fail"
+            ret = ERR_EXAMPLE;
+        }
+
+        return ret;
+    }
+
+    int foo(int a)
+    {
+        void * buff = NULL;
+        int ret = OK;
+
+        assert(a > -10);
+        assert(a < 100);
+
+        buff = malloc(BUFFLENGTH);
+        if (buff == NULL)
+        {
+            ret = ERR_MEM;
+            goto cleanupthemess;
+        }
+        memset(buff, 0, BUFFLENGTH);
+
+        // use the memory
+
+        ret = bar(a);
+        if (ret != OK)
+        {
+            printf("error now\n");
+            goto cleanupthemess;
+        }
+
+        printf("Never reached thanks to parameter in main\n");
+
+    cleanupthemess:
+
+        if (buff)
+        {
+            memset(buff, 0, BUFFLENGTH); // For sensitive content like passwords
+            free(buff);
+            buff = NULL;  // Prevents double frees
+        }
+        return ret;
+
+    }
+
+
+    int main()
+    {
+        exit(foo(-1));  // 0 indicates ok, everything else is an error
+    }
+
+
+[Goto fail](https://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/)
+
+Tricks used:
+
+* asserts protect agains things that "can never happen"
+* variables are intialized when declared
+* success of allocating memory is checked
+* Return values are centrally declared and used through the project
+    * Like written in the code: They would belong into a central header file
+* OK is 0, error values are < 0. You can use anything > 0 as normal return values !
+* *goto cleanupthemess* is used to jump to a central cleanup handler
+    * This frees everything allocated
+    * Without an error it would also run
+    * There is only one *return* in the function. Returning the error
+* memory is initialized to 0
+* before calling free, we check if memory pointer is already NULL
+* memory is set to 0 before freeing
+    * freeing just "disconnects" the pointer
+    * memory is still there - and it's content
+    * without memset: next time someone requests memory, it can be pre-initialized with the old content
+        * and this could be credentials and passwords
+    * After calling *free* the pointer is set to NULL to prevent double-free issues
+
+Improvements:
+
+* This program lacks Doxygen comments. I left them out to keep it simple.
+    * When writing this program for real you will want them !
+
+%% ## Similar chapters
 
 %% TODO: Create focus chapters for different programming languages.
 
