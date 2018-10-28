@@ -18,6 +18,8 @@ changelog to make it simpler for you to find the new sections.
 * Added *design*
 * Enhanced "attacker's goals"
 * Enhanced *passwords*
+* Cleaning up the book, adding parts
+    * Chapters got moved around
 
 ## October 2018
 
