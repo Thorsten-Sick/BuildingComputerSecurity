@@ -93,6 +93,8 @@ authenticate the origin.
 
 %% HMAC-SHA-256
 
+%% TODO: Example. Description was not enough !
+
 ## Password hash functions
 
 While other hash functions are efficient, for password hashes we want
@@ -124,6 +126,9 @@ Links:
 
 Stream ciphers are used especially in telecommunication to encrypt a data
 stream (mobile phone voice channel).
+
+%% TODO: Add something about "Funktionsweise"
+%% TODO: How to key exchange with public key crypto and fallback to symmetric crypto
 
 |Name    |Quality|Comments                                   |
 |--------|-------|-------------------------------------------|
@@ -192,6 +197,10 @@ If you go down that road, please check out further reading and at least 2 more b
 Invest your time into smartening up first.
 
 Or use libraries implementing this technology ready-to-use (which I would do).
+
+%% TODO: Example
+
+
 
 ## Asymmetric Ciphers
 
@@ -268,3 +277,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% Add Feedback from Michael S.
 
 %% [An intensive Introduction to cryptography](https://intensecrypto.org/public/lnotes_book.pdf)
+
+%% TODO: Add graphics and example to make it more readable
