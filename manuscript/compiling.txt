@@ -41,10 +41,6 @@ Please test for these effects !
 
 %% TODO: Fix markup
 
-## Audience
-
-Developers and testers
-
 ## Build system
 
 If you want to be able to build old versions with new bug fixes, link to newer

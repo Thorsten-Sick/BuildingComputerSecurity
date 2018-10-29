@@ -40,10 +40,6 @@ You will want to monitor the versions used to connect to your servers
 and de-activate old versions you do not see anymore.
 Older versions have vulnerabilities.
 
-## Audience
-
-Architects and developers
-
 ## TLS handshake
 
 A simplified handshake for browsers to web servers looks like

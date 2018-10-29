@@ -19,10 +19,6 @@ You want to automatically test:
 Having prepared a set of tools for manual verification plus a automatic test
 at least before the binaries are shipped is very smart.
 
-## Audience
-
-Developers and Testers
-
 ## Linux
 
 On Linux, a tool to verify the hardening settings is *hardening-check* which can

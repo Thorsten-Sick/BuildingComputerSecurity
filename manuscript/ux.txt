@@ -1,6 +1,9 @@
 # User interfaces {#chapter-user-interface}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, UX specialists
+
 
 %% TODO: "Human Error" by James Reason lesen
 
@@ -18,10 +21,6 @@ Quite often the human mind is the weakest link. Hacking humans is named
 * Resilient user interfaces
 
 This is about the user interfaces.
-
-## Audience
-
-Architects and UX specialists
 
 ## Todo
 
