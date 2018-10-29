@@ -279,3 +279,7 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% [An intensive Introduction to cryptography](https://intensecrypto.org/public/lnotes_book.pdf)
 
 %% TODO: Add graphics and example to make it more readable
+
+%% [Crypto knacken für Anfänger](https://media.ccc.de/v/c4.openchaos.2018.10.krypto-knacken-fuer-anfaenger)
+
+%% [Cryptopals - crypto challenges](https://cryptopals.com/)
