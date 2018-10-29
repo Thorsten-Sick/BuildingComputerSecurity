@@ -305,6 +305,16 @@ identity.
 This and the fact that Facebook want your account to be linked to your real
 name should be good reasons to have one or more pseudonyms.
 
+## Further reading
+
+### The Browser Hacker's Handbook
+
+[The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://www.safaribooksonline.com/search/?query=The%20Browser%20Hacker%27s%20Handbook)
+covers many attacks on web browsers. It's focus is on the BeEF framework.
+
+
+
+
 %% ## Spying Extensions
 
 %% https://www.techrepublic.com/article/firefox-users-beware-this-popular-add-on-could-steal-your-browsing-history/#ftag=RSS56d97e7

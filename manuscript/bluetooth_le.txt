@@ -301,7 +301,7 @@ No matter where you start, it is very likely that you will also need some
 
 ### Book: Make: Bluetooth {#reference-book-make-bluetooth}
 
-Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan
+[Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan](https://www.safaribooksonline.com/library/view/make-bluetooth/9781680451108/)
 
 A Bluetooth LE book. For people who prefer to learn with their hands.
 Lots of Arduino and NodeJS based projects.
@@ -310,7 +310,7 @@ It is not mentioning security. But a good way to get you started.
 
 ### Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
 
-IoT Projects with Bluetooth Low Energy by Madhur Bhargava. Still a hands-on
+[IoT Projects with Bluetooth Low Energy by Madhur Bhargava](https://www.safaribooksonline.com/library/view/iot-projects-with/9781788399449/). Still a hands-on
 book. But the *Make: Bluetooth* is simpler. This one has more theory.
 It also covers BTLE 5.0
 
