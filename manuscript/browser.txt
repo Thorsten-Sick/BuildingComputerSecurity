@@ -1,6 +1,8 @@
 # Browser security {#chapter-browser-security}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, Developers
 
 %%  State: 80 % Browser
 

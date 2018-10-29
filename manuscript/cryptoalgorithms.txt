@@ -1,6 +1,8 @@
 # Crypto algorithms {#chapter-crypto-algorithms}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, Developers
 
 Crypto Algorithms are the basic building block for encryption. Above them are
 protocols ("how do we glue algorithms together to achieve our goal ?").

@@ -1,5 +1,9 @@
 # Flawfinder {#chapter-flawfinder}
 
+C> By: Thorsten Sick
+
+C> For: Developers, Testers
+
 [Flawfinder](https://www.dwheeler.com/flawfinder/)
 
 Flawfinder is a simple static code analysis tool. One of the "grep on speed"

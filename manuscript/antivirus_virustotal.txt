@@ -1,5 +1,9 @@
 # VirusTotal  {#chapter-virustotal}
 
+C> By: Thorsten Sick
+
+C> For: Architects, Developers
+
 VirusTotal is an online service that scans uploaded files with
 multiple AV solutions. Currently it is owned by Google.
 

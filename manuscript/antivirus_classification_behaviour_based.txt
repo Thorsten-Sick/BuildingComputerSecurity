@@ -1,6 +1,8 @@
 # Behaviour based classification {#chapter-antivirus-behaviour-based-classification}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects
 
 Classification is the process that gets you from "I have a file and do not know what it is"
 to "this file is malware".
@@ -55,7 +57,7 @@ avoid the malware to escape into the office net. Second to avoid your IP to be
 blacklisted by ISPs as malware source.
 
 The analysis sandbox should be able to monitor network connections - so you do
-not have to do that centrally at a firewall. If your sandbox does not offer 
+not have to do that centrally at a firewall. If your sandbox does not offer
 sufficient network monitoring you can log the connections at a firewall.
 
 But be aware that many connections will be hidden (tunneled through a non-suspicious protocol like DNS) or encrypted.

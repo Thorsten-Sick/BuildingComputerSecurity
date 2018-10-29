@@ -1,6 +1,8 @@
 # IoT security {#chapter-iot}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester
 
 IoT is cheap embedded devices with (optional) network connectivity.
 They have their own security challenge plus many things from the network chapter.

@@ -1,5 +1,9 @@
 # Updates {#chapter-updates}
 
+C> By: Thorsten Sick
+
+C> For: Manager, Architects, Developers
+
 As soon as your system reaches a certain level of complexity, you will require
 updates.
 

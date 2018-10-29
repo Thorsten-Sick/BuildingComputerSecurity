@@ -1,6 +1,7 @@
 # Defensive programming {#chapter-defensive-programming}
 
 C> By: Thorsten Sick
+
 C> For: Developers
 
 %% TODO: [CII best practice](https://linux-audit.com/secure-software-development-cii-best-practices/)

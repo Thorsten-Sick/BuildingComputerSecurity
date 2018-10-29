@@ -1,5 +1,9 @@
 # Basics: Know your enemies {#chapter-attackers}
 
+C> By: Thorsten Sick
+
+C> For: Manager, Architects
+
 Attackers come in several flavours and can be enemies or friendly.
 I'll do what most of the security books do: Call the attacker
 the *adversary*.

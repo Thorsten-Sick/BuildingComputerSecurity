@@ -1,5 +1,9 @@
 # Cppcheck {#chapter-cppcheck}
 
+C> By: Thorsten Sick
+
+C> For: Developers, Tester
+
 Cppcheck is a more advanced static code analysis tool than flawfinder.
 The drawback: It is more complicated.
 
@@ -22,10 +26,6 @@ On Ubuntu just install it with
 
 {lang="bash"}
     sudo apt install cppcheck cppcheck-gui
-
-## Audience
-
-Developers and Testers
 
 ## The Makefile
 

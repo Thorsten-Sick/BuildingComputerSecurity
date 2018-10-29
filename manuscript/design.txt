@@ -1,6 +1,7 @@
 # Software Design or Architecture {#chapter-design}
 
 C> By Thorsten Sick
+
 C> For Designers, Managers, Architects and Developers
 
 Architecture and design already starts long before starting to code.

@@ -1,5 +1,9 @@
 # Testing compiling features {#chapter-testing-compiling}
 
+C> By: Thorsten Sick
+
+C> For: Developers, Tester
+
 As many mitigation features are kind of invisible you will needs tools
 to test the compiled binary before you release it.
 

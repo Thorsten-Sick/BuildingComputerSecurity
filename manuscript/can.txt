@@ -1,6 +1,8 @@
 # CAN Bus {#chapter-can-bus}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester
 
 The CAN bus is central in many vehicles and other more complex embedded things.
 It connects different micro controllers and systems in the vehicle. CAN is

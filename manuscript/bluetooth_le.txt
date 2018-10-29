@@ -1,6 +1,8 @@
 # Bluetooth LE {#chapter-btle}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester
 
 ## Basics
 
@@ -219,7 +221,7 @@ See the [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issue
 %% .. TODO: Research: Monitor connection when sending commands.
 
 %% Wireshark does not recognize DLT_USER
-%% 
+%%
 %% go to Preferences->Protocols->DLT_USER and enter "btle" as protocol
 %% that should help
 
@@ -366,5 +368,3 @@ Very dense talk on Bluetooth LE security.
 
 Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*.
 Relevant if you want to create IoT locks.
-
-

@@ -1,6 +1,8 @@
 # Testing practice {#chapter-testing}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Tester
 
 Testing is an engineering practice. Almost all current projects are at a size
 that "one person and a checklist" are **NOT** an option for testing.

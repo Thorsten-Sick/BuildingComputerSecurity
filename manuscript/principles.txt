@@ -1,5 +1,10 @@
 # Principles {#chapter-principles}
 
+C> By: Thorsten Sick
+
+C> For: Manager, Architects
+
+
 %% State: 70 % Principles
 
 %% TODO: Create visualisation for dependencies using [python graph](https://python-graph-gallery.com/) or [r graph gallery](https://www.r-graph-gallery.com/)

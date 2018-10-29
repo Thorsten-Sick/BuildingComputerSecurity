@@ -1,14 +1,15 @@
 # Antivirus Integration {#chapter-antivirus-integration}
 
+C> By: Thorsten Sick
+
+C> For: Architects, Developers
+
 Anti Virus technology can be integrated into your program without adding much
 extra code.
 
 If your program handles scripts and files from external sources it may be worth
 the effort.
 
-## Audience
-
-Architects, developer
 
 ## What to scan
 
@@ -91,4 +92,4 @@ one of the stages of a malware attack between *exploit* and *infection*.
 
 To test your implementation, you can use this [test URL](http://malware.testing.google.test/testing/malware/)
 
-A [reference implementation of GSB](https://github.com/google/safebrowsing) is available. 
+A [reference implementation of GSB](https://github.com/google/safebrowsing) is available.

@@ -1,6 +1,8 @@
 # Compiling {#chapter-compiling}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Developers, Tester
 
 There are several ways to improve security at the compiling step. This ranges from
 static code analysis, dynamic code analysis to mitigation.

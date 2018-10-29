@@ -1,6 +1,8 @@
 # Clang {#chapter-clang}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
+
+C> For: Developers, Tester
 
 A compiler can assist you in creating secure software. There are several major
 features you can expect from it:

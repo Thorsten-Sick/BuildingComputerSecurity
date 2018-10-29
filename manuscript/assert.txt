@@ -1,7 +1,8 @@
 # Asserts {#chapter-asserts}
 
-C> Thorsten Sick
+C> By: Thorsten Sick
 
+C> For: Developers
 
 Asserts are debugging tools.
 

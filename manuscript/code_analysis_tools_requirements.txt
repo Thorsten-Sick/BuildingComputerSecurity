@@ -1,5 +1,9 @@
 # Requirements for code analysis tools {#chapter-code-analysis-tools-table}
 
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester
+
 There is a long list of tools supporting you during the development cycle.
 Some have specific requirements. So some will not be useable in your situation.
 
