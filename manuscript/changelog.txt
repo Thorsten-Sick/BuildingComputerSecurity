@@ -25,8 +25,9 @@ changelog to make it simpler for you to find the new sections.
 * Enhanced *The author*
 * Enhanced *structure*
 * Clean up crypto algorithm tables
+* Enhanced *antivirus testing*
+* Added *antivirus testing* to the sample
 %% Code analysis tools: Find a solution for the table
-%% Add some bolt-on for sample
 %% move external reference section into book
 
 ## October 2018

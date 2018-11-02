@@ -12,6 +12,7 @@ code_analysis_tools_requirements.txt
 part_testing.txt
 flawfinder.txt
 part_bolt_on.txt
+antivirus_tests.txt
 externalreferences.txt
 theauthor.txt
 authors.txt

@@ -9,6 +9,7 @@ C> For: Architects, Manager
 
 Modern anti-virus tools are a combination of hash databases,
 pattern matching, behaviour blocking, cloud technology and sandboxes.
+At least.
 
 Testing them is tricky.
 
@@ -18,10 +19,11 @@ Malware has a short life span. New malware is generated every few minutes
 Testing malware is tricky as well.
 
 A testing lab needs access to large heaps of current malware, lots of virtual
-machines, verification tools to identify if the malware is a dud or dangerous, ...
+machines, verification tools to identify if the malware is a dud or dangerous,
+verified clean samples, ...
 
-This it requires teams, racks of computers, terabytes of malware and
-cleanstuff (for FP tests) and years of experience.
+This is the reason it requires teams, racks of computers,
+terabytes of malware and cleanstuff (for FP tests) and years of experience.
 
 Computer magazines normally let external experts test the AV software for
 detection and protection and add their own usability and speed tests on top.
@@ -33,7 +35,12 @@ External experts are
 * [virus bulletin](https://www.virusbulletin.com/testing/)
     * Which is a AV industry internal organisation
 
-Also check out who is **not** participating in those tests....this could be a red flag.
+You can get some (not very detailed) raw data from those pages directly.
+Observe how the different tools develop over time, how they currently achieve,
+how their detection relates to their False Positives.
+
+Also check out who is **not** participating in those tests....
+this could be a red flag.
 
 ## Methods
 
@@ -41,12 +48,16 @@ Basically there are two kinds of tests.
 
 ### Classic scan
 
-A large folder containing historic and current malware is scanned. The results
-will be biased because the focus is on historic malware. The
+A large folder containing historic and current malware is scanned. The
+percentage of detected malware and maybe the speed of the scan are the output.
+
+The results will be biased because the focus is on historic malware. The
 dangerous - current - malware is under-represented.
 
 The tested AV products can not use some of their protection tools like
 URL blacklists, behaviour detection, cloud technology, ...
+
+This is not used that often anymore.
 
 For that reason this kind of tests is replaced by:
 
@@ -70,16 +81,16 @@ This kind of tests is the future.
 
 Some people do malware tests (by modifying malware, finding some stuff on the
 internet, ...) and do their own testing. Especially patching malware samples
-is a critical thing. Please do not do that. Patching the
-malware sample could have broken it: it is not running properly and
-is causing no harm. **Not** detecting them is the right thing.
+to test with "new and unique" samples is a critical thing. Please do not do
+that. Patching the malware sample could have broken it: it is not running
+properly and is causing no harm. **Not** detecting them is the right thing.
 
 Be careful when you see DIY malware tests and always verify with other sources.
 
 ## Eicar {#chapter-eicar}
 
-What you can and should tests is if you antivirus is properly attached to your
-system.
+What you *can* and *should* tests is if you antivirus is properly attached
+to your system.
 
 Basic questions should be:
 
@@ -100,6 +111,8 @@ It is just a few bytes long and you can copy & paste it.
 Move it around your system and test which entry points are not protected by
 your antivirus scanner.
 
+%% TODO: Test URLs
+
 ## Windows Defender
 
 Windows Defender - pre-installed on Windows - is a kind of fallback if no other
@@ -107,3 +120,9 @@ AV is installed. It improved it's detection rate over the last years and already
 offers a decent baseline. There are still good reasons to install 3rd party
 scanner. But from an engineering perspective you can expect:
 **A current Windows with Defender has a decent scanner already installed**
+
+There are many drawbacks of having only the Defender as protection: Malware
+could start to hide from Defender as priority number one. As it is becoming the
+most common AV product. And this in turn can weaken the real protection
+Defender is offering. A typical monoculture effect.
+It is better not to build a monoculture on your systems.
