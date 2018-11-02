@@ -18,8 +18,16 @@ changelog to make it simpler for you to find the new sections.
 * Added *design*
 * Enhanced "attacker's goals"
 * Enhanced *passwords*
+* Enhanced *clang*
 * Cleaning up the book, adding parts
     * Chapters got moved around
+* Enhanced *This book*
+* Enhanced *The author*
+* Enhanced *structure*
+* Clean up crypto algorithm tables
+%% Code analysis tools: Find a solution for the table
+%% Add some bolt-on for sample
+%% move external reference section into book
 
 ## October 2018
 

@@ -1,9 +1,9 @@
 # The author {#chapter-the-author}
 
 Trouble shooter and one-man-team somehow happened to be my role quite often.
-I am a software developer and engineer who also took the role of architect/project manager in many
-security related projects. Which gave me a good and wide perspective on things
-in the IT world.
+I am a software developer and engineer who also took the role of
+architect/project manager in many security related projects. Which gave me a
+good and wide perspective on things in the IT world.
 
 I have to tell you my origin story. Because you should know where we are going
 if you join me by reading this book. I hope it is not boring as no radioactive
@@ -31,5 +31,7 @@ Now I am moving towards the embedded and IoT world with my new job.
 And doing so I started to sort my knowledge and experience. Resulting in this book.
 
 %% TODO: Add links to the achievements above
+
+These are the bricks of experience and knowledge this book is built out of.
 
 **Thorsten Sick**

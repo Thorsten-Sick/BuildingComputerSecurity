@@ -17,6 +17,9 @@ features you can expect from it:
 Basic command lines are very similar, but it has some different features -
 especially for code verification.
 
+A good make target for those tests would be *make check*. Keep in mind when
+writing your make file.
+
 ## Warnings and hardening
 
 There are several levels of warnings you can activate during the compile phase.

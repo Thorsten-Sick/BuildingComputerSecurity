@@ -132,12 +132,12 @@ stream (mobile phone voice channel).
 %% TODO: Add something about "Funktionsweise"
 %% TODO: How to key exchange with public key crypto and fallback to symmetric crypto
 
-|Name    |Quality|Comments                                   |
-|--------|-------|-------------------------------------------|
-|A5/1    |Broken |                                           |
-|A5/2    |Broken |                                           |
-|RC4     |Broken |                                           |
-|Salsa20 |Good   |                                           |
+|Name    |Quality|
+|--------|-------|
+|A5/1    |Broken |
+|A5/2    |Broken |
+|RC4     |Broken |
+|Salsa20 |Good   |
 
 ## Block Ciphers
 
@@ -147,11 +147,11 @@ proper mode. There will be an own table for that.
 
 ### Algorithms
 
-|Name    |Quality  |Comments                                   |
-|--------|---------|-------------------------------------------|
-|DES     |Broken   |                                           |
-|3DES    |Mediocre |                                           |
-|AES     |Good     |                                           |
+|Name    |Quality  |
+|--------|---------|
+|DES     |Broken   |
+|3DES    |Mediocre |
+|AES     |Good     |
 
 3DES is rated mediocre because AES offers a better key-length
 to protection ratio. You should be using that.

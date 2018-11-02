@@ -2,19 +2,24 @@
 
 ## Goals
 
-As an experienced engineer, software developer and security guy I want to help you
-getting started with security in your projects.
+Your next project will be **more secure** than your last project.
+And this will be almost hassle-free. This is the mission of this book.
+
+This is why I wrote it.
+
+[As an experienced engineer, software developer and security guy](#chapter-the-author) I want
+to help you getting started with security features in your projects.
 
 My observation is that there are many specific books for security topics. But
-it is hard to get started.
+almost no "getting started" books.
 
-This is the itch I want to scratch.
+This is the itch this book wants to scratch.
 
 ## The origin: External brain
 
 This book was already written once. As my external brain. Just for me.
 I collect my knowledge in "external brains". My own wikis or similar.
-My security knowledge brain just grew to a stage where I thought
+My security knowledge external-brain just grew to a stage where I thought
 "well, you just wrote a book". And after finding the leanpub options that
 could fit my style of tackling projects I decided I could transfer my external
 brain (written for me) into a book (written for tech people world wide).
@@ -35,12 +40,12 @@ A simplified version is:
 2. Get *practical* experience
 3. *Explain* it to others
 
-This is also a goal when writing this book.
+These stages are also a goal when writing this book.
 
 ## Release early, release often
 
-One of the reasons I dare to write a book is leanpub's feature to release *early* and *often*.
-That way I can see progress and get feedback.
+One of the reasons I dare to write a book is leanpub's feature to release
+*early* and *often*. That way I can see progress and get feedback.
 
 Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
 help me improve the book.
@@ -75,3 +80,13 @@ With every iteration of the book I will tune the optics, improve the layout and
 maybe add images.
 
 But adding new chapters is more important.
+
+## Random encounters
+
+These are the reasons for the things you will encounter in this book. Context
+matters.
+
+## All this said...
+
+Adding security features to a project can be fun and quite rewarding.
+Cherry-pick ideas from this book and get started.

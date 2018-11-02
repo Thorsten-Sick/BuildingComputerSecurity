@@ -10,15 +10,16 @@ solve specific problems.
 Chapters contain:
 
 1. Short abstract of the topic
-2. Audience
-3. TODO list (low hanging fruit)
-4. Not-todo list (typical mistakes)
-5. In detailed description of the technology
-6. Details on how this technology can be attacked
-7. Detailed Todo list and Not-todo list
-8. References to similar chapters
-9. References to external sources like books
-10. Authors of this chapter
+2. Authors of this chapter
+3. Target audience
+4. TODO list (low hanging fruit)
+5. Not-todo list (typical mistakes)
+6. In detailed description of the technology
+7. Details on how this technology can be attacked
+8. Detailed Todo list and Not-todo list
+9. References to similar chapters
+10. Further reading - important as I will only scratch the surface
+
 
 I will try to stick to this structure. But the main goal is a usable toolbox -
 if necessary I will break the rules.
