@@ -55,10 +55,18 @@ Build your processes from support call to all-your-users update accordingly.
 
 One more thing: As soon as the first client gets an update, the bad guys
 could get it as well. Normally they do a binary diff
-(using tools like [IDA](#reference-disassembler-tools)).
+(using disassembly tools]).
 From that diff they can learn which vulnerability you just patched.
 The race is on between the bad guys creating a reliable exploit and you
 getting the update to your last customer.
+
+These *disassembler* tools may sound arcane, but are quite simple to find
+and sophisticated.
+
+* [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
+* [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
+* [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
+
 
 ## Details todo list
 

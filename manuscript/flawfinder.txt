@@ -23,7 +23,10 @@ Flawfinder has two important modes:
 
 ## Finding issues
 
-Running flawfinder on [Fuzzgoat](#reference-fuzzgoat) results in this kind of log:
+[Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program
+to test your fuzzer.
+
+Running flawfinder on Fuzzgoat results in this kind of log:
 
 {lang="bash"}
     flawfinder .

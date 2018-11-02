@@ -1,0 +1,5 @@
+### Disassembler tools {#reference-disassembler-tools}
+
+* [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
+* [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
+* [Radare2](http://radare.org/r/), Mac/Windows/Linux/...

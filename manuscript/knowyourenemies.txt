@@ -37,7 +37,12 @@ Don't: Respond with a law suite. This will harm you on the long run. You will ne
 
 An example:
 
-[Natalie Silvanovich](#reference-tamagotchi): Who presented the hacking of Tamagotchis at a hacker conference. Twice.
+Natalie Silvanovich presented the hacking of Tamagotchis at a hacker conference. Twice.
+
+[Many Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/29c3-5088-en-many_tamagotchis_were_harmed_in_the_making_of_this_presentation_h264)
+
+[Even More Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)
+
 
 ## University researchers
 

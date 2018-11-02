@@ -1,18 +1,6 @@
 # External references and resources {#chapter-references}
 
-### Hacking Tamagotchis {#reference-tamagotchi}
 
-Natalie Silvanovich on hacking Tamagotchis. Videos from CCC conferences
-
-[Many Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/29c3-5088-en-many_tamagotchis_were_harmed_in_the_making_of_this_presentation_h264)
-
-[Even More Tamagotchis Were Harmed in the Making of this Presentation](https://media.ccc.de/v/30C3_-_5279_-_en_-_saal_1_-_201312291715_-_even_more_tamagotchis_were_harmed_in_the_making_of_this_presentation_-_natalie_silvanovich)
-
-### Disassembler tools {#reference-disassembler-tools}
-
-* [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
-* [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
-* [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
 
 ### Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
 
@@ -115,9 +103,6 @@ understand those patterns and learn how to eliminate them.
 
 ## Testing projects
 
-### Fuzzgoat {#reference-fuzzgoat}
-
-Fuzzgoat is a vulnerable C program: https://github.com/fuzzstati0n/fuzzgoat
 
 ## Getting used to security
 

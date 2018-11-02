@@ -259,14 +259,21 @@ and response.
 
 ## Security by Obscurity
 
-A bad idea. There are [disassembler tools](#reference-disassembler-tools)
-that help to reverse engineer executables. If any security depends on secrecy
+A bad idea. There are disassembler tools that help to reverse engineer
+executables. If any security depends on secrecy
 it will break as soon as an experienced person attacks it. You are an
 experienced engineer but not an experienced attacker. The guys you
 face have the skill set switched: experienced attacker, OK-ish engineer.
 This is why they became attackers.
 
 [^note2]: Depends on your users
+
+And just in case you think these disassembler tools are out of some fairy tales:
+
+* [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
+* [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
+* [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
+
 
 ## Security Theater
 
@@ -287,8 +294,31 @@ the discussion towards those Hollywood threats. Explain to everyone this concept
 Have some real-world hacker stories ready and try to steer the discussion
 towards a productive region. Even if it is less exciting.
 
-Books to read:
+## Further reading
 
-* [Ghost in The Wires](#reference-book-ghost-in-the-wires)
-* [Beyond Fear](#reference-book-beyond-fear)
-* [Future Crimes](#reference-book-future-crimes)
+### Ghost in The Wires
+
+Ghost in The Wires by Kevin Mitnick. Life story from Kevin Mitnick. Famous
+hacker and pen tester. Many described exploits are on the social engineering
+level. Simple to read. Most of the technology described here does not exist
+anymore.
+
+%% TODO add safari link
+
+### Beyond Fear
+
+Beyond Fear by Bruce Schneier is a book where a computer security guy analyses
+common physical world security practices like airport security. Teaches thinking
+and critical thinking about security and security promises. Can be read by
+non-technical people.
+
+%% TODO add safari link
+
+### Future Crimes
+
+Future Crimes by Marc Goodman is a book covering the experience of a cyber crime
+police officer. Every chapter is a noteworthy and often entertaining example of
+a real crime. Entertaining and does not require technical knowledge. Good for
+training critical thinking and security thinking.
+
+%% TODO add safari link

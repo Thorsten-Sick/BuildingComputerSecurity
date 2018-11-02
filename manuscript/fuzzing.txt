@@ -42,7 +42,9 @@ And while patching the bugs you find, you can improve the fuzzer.
 
 ## Training project
 
-There is a practice target for fuzzing: [Fuzzgoat](#reference-fuzzgoat).
+There is a practice target for fuzzing: [Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program
+to test your fuzzer.
+
 As there are many kinds of fuzzers and you maybe want to experiment with them
 before getting started with your project.
 
