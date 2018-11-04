@@ -109,26 +109,6 @@ understand those patterns and learn how to eliminate them.
 A list of easy to read books (even for non-tech people) that can be used to
 introduce people into the shady world of security
 
-### Ghost in The Wires {#reference-book-ghost-in-the-wires}
-
-Ghost in The Wires by Kevin Mitnick. Life story from Kevin Mitnick. Famous
-hacker and pen tester. Many described exploits are on the social engineering
-level. Simple to read. Most of the technology described here does not exist
-anymore.
-
-### Beyond Fear {#reference-book-beyond-fear}
-
-Beyond Fear by Bruce Schneier is a book where a computer security guy analyses
-common physical world security practices like airport security. Teaches thinking
-and critical thinking about security and security promises. Can be read by
-non-technical people.
-
-### Future Crimes {#reference-book-future-crimes}
-
-Future Crimes by Marc Goodman is a book covering the experience of a cyber crime
-police officer. Every chapter is a noteworthy and often entertaining example of
-a real crime. Entertaining and does not require technical knowledge. Good for
-training critical thinking and security thinking.
 
 %% TODO: http://opensecuritytraining.info/Training.html
 

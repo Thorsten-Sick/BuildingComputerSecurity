@@ -14,26 +14,48 @@ without an OS.
 An option here is to at least test the part of the code that are not hardware
 depended on Linux.
 
-|                                     |requires code modification  |requires linux compilation|requires execution on Linux|
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|[Flawfinder](#chapter-flawfinder)    |                            |                          |                           |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|[Assert](#chapter-asserts)           | **Yes, for debug build**   |                          |                           |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|[Fuzzing](#chapter-fuzzing)          |                            | **Yes. Would be better** | **Yes, Would be better**  |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|Unit tests                           | **Yes, for special build** | **Linux or Windows**     | **Linux or Windows**      |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|[CppCheck](#chapter-cppcheck)        |                            | **Special build**        |                           |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|Clang, static                        |                            | **Special build**        |                           |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|Valgrind                             |                            | **Yes**                  | **Yes**                   |
-|-------------------------------------|----------------------------|--------------------------|---------------------------|
-|Clang, dynamic                       |                            | **Yes**                  | **Yes**                   |
-
+* [Flawfinder](#chapter-flawfinder) static code analysis
+    * Pro: No code modification required
+    * Pro: No Linux compilation required
+    * Pro: No execution on Linux required
+    * Con: No detailed analysis
+* [Assert](#chapter-asserts) debugging tool
+    * Pro: No Linux compilation required
+    * Pro: No execution on Linux required
+    * Pro: Force multiplier for other technologies
+    * Con: Code modification required - debug build only
+* [Fuzzing](#chapter-fuzzing) Finding unexpected bugs
+    * Pro: No code modification required
+    * Con: Linux compilation strongly suggested
+    * Con: Linux execution strongly suggested
+* Unit tests
+    * Pro: Linux or Windows for execution
+    * Pro: Compilation for Linux and Windows
+    * Con: Code modification required (modularisation of code plus writing of unit tests)
+* [CppCheck](#chapter-cppcheck) static code analysis
+    * Pro: No code modification required
+    * Pro: No execution required
+    * Pro: More detailed analysis than flawfinder
+    * Con: Special build target required
+* [Clang, static](#chapter-clang) static code analysis using Clang
+    * Pro: Does not require code modification
+    * Pro: Does not require execution on Linux
+    * Con: Requires special build
+    * Pro: Very detailed static code analysis using compiler internal features
+* Valgrind dynamic code analysis (memory as a speciality)
+    * Pro: Does not require code modification
+    * Pro: Does not require re-compilation
+    * Con: Linux execution only
+    * Con: Focus is on memory issues
+    * Pro: Can run the release binary !
+* [Clang, dynamic](#chapter-clang) dynamic code analysis using Clang
+    * Pro: Does not require code modification
+    * Con: Requires re-compilation
+    * Con: Linux execution only
+    * Pro: Very powerful dynamic code analysis
 
 %% TODO add library monitoring
+%% TODO Link Valgrind, UNit tests
 
 ## Some background
 

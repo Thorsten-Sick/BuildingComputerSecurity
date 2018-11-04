@@ -11,6 +11,7 @@ changelog to make it simpler for you to find the new sections.
 %% Plan: More on Unit tests
 %% Plan: Cryptoalgorithm tables need fixing
 %% Plan design
+%% grep for "todo" and "safari". Fix this. Also add amazon alternative
 
 ## November 2018
 
@@ -29,8 +30,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *antivirus testing* to the sample
 * unhooked external references
 
-%% Code analysis tools: Find a solution for the table
-%% move external reference section into book
+%% re-sort chapter overview
 
 ## October 2018
 
