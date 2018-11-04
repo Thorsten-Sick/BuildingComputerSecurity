@@ -124,5 +124,5 @@ scanner. But from an engineering perspective you can expect:
 There are many drawbacks of having only the Defender as protection: Malware
 could start to hide from Defender as priority number one. As it is becoming the
 most common AV product. And this in turn can weaken the real protection
-Defender is offering. A typical monoculture effect.
-It is better not to build a monoculture on your systems.
+Defender is offering. A typical mono culture effect.
+It is better not to build a mono culture on your systems.

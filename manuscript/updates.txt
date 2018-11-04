@@ -81,7 +81,7 @@ This will reduce your stress when doing emergency updates.
 Cryptographically sign your binaries (**public key cryptography** is the keyword).
 
 One way of signing your binaries is to create at least a sha256 hash of your binaries
-(md5, crc and sha1 are broken). Create a update config file containing all your
+(md5, CRC and sha1 are broken). Create a update config file containing all your
 files, their versions and their hashes. This update config file should also
 have a unique version number that is incremented only.
 

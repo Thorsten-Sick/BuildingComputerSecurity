@@ -29,8 +29,7 @@ changelog to make it simpler for you to find the new sections.
 * Enhanced *antivirus testing*
 * Added *antivirus testing* to the sample
 * unhooked external references
-
-%% re-sort chapter overview
+* Kehrwoche: ASpell for all text parts in "sample"
 
 ## October 2018
 
