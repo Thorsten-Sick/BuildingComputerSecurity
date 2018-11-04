@@ -1,4 +1,4 @@
-# Testing compiling features {#chapter-testing-compiling}
+# Testing compiled binaries {#chapter-testing-compiling}
 
 C> By: Thorsten Sick
 

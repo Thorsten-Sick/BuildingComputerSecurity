@@ -1,6 +1,6 @@
 # Content {#chapter-content}
 
-## Basics
+## Background
 
 ### Know your enemies
 
@@ -19,70 +19,15 @@ High level [principles](#chapter-principles) you can use to design a secure syst
 are abstract - and you will be able to combine several of them in designing
 your project.
 
-## Coding
+## Planning
 
-### Code analysis tools table
+### Software Design
 
-There are several tools that will assist you during the coding process. This
-[table](#chapter-code-analysis-tools-table) will help you to pick the proper ones.
-
-### Defensive programming
-
-Some coding techniques will harden your code against attackers. Positive side
-effects like making your code simpler to debug and more robust and stable are
-take always that balance the extra effort invested. If you do not yet practice
-[defensive programming](#chapter-defensive-programming) you should consider starting it.
-
-### Assert
-
-A very powerful tool for debugging and preventing bugs are *asserts*. They are
-even more powerful when combined with *fuzzing*.
-When coding, you should start using [asserts](#chapter-asserts) right now.
-
-### Compiling
-
-Modern compilers have lots of less known features to find vulnerabilities
-during compile or run time. Or even mitigate - making vulnerabilities harder
-to abuse by the attacker. Covered in [this chapter](#chapter-compiling).
-
-### Clang LLVM
-
-Clang is a compiler in the GCC league. It adds some more features for static
-and dynamic testing of your code. Those features are cool enough that you
-should consider compiling at least the test version using [Clang and those
-settings](#chapter-clang).
-
-### Testing compiling
-
-To verify that the compiler properly hardened your executable the way you
-wanted you (or your testers) will want to use some tools. [This is described here](#chapter-testing-compiling).
-
-### Flawfinder
-
-In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you more verification of
-your code. With zero effort.
-
-### CPPCheck
-
-[CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
-invest some time in configuration. This chapter will help you there.
-
-### Testing
-Is it still testing or already hacking our own product ?
-There are many tricks to make software testing more aggressive and which will
-shine some light on vulnerabilities in [this chapter](#chapter-testing).
-
-
-### Fuzzing
-
-[Fuzzing](#chapter-fuzzing) is a technology to find unexpected bugs - most of them potential
-vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you.
-How to get started is described here.
-
-## Special situations
-
-Specific situations and features call for specific solutions. Described in
-these chapters.
+[Software design](#chapter-design) - also known as architecture - is the bigger picture of the
+technological part of the project.
+A good design can speed up development, simplify testing, and increase security.
+This chapter covers the security basics of software design. Followed by specific
+topics in other chapters.
 
 ### UX
 
@@ -135,6 +80,68 @@ or HTTPS. And many projects use it.
 Which algorithm to use ? In which mode ? Best key length ? This book is basic,
 so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
 For the curious people: there are resources to dig much deeper.
+
+## Programming
+
+### Code analysis tools table
+
+There are several tools that will assist you during the coding process. This
+[table](#chapter-code-analysis-tools-table) will help you to pick the proper ones.
+
+### Defensive programming
+
+Some coding techniques will harden your code against attackers. Positive side
+effects like making your code simpler to debug and more robust and stable are
+take always that balance the extra effort invested. If you do not yet practice
+[defensive programming](#chapter-defensive-programming) you should consider starting it.
+
+### Assert
+
+A very powerful tool for debugging and preventing bugs are *asserts*. They are
+even more powerful when combined with *fuzzing*.
+When coding, you should start using [asserts](#chapter-asserts) right now.
+
+### Compiling
+
+Modern compilers have lots of less known features to find vulnerabilities
+during compile or run time. Or even mitigate - making vulnerabilities harder
+to abuse by the attacker. Covered in [this chapter](#chapter-compiling).
+
+### Clang LLVM
+
+Clang is a compiler in the GCC league. It adds some more features for static
+and dynamic testing of your code. Those features are cool enough that you
+should consider compiling at least the test version using [Clang and those
+settings](#chapter-clang).
+
+## Testing
+
+### Testing compiled binaries
+
+To verify that the compiler properly hardened your executable the way you
+wanted you (or your testers) will want to use some tools. [This is described here](#chapter-testing-compiling).
+
+### Flawfinder
+
+In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you more verification of
+your code. With zero effort.
+
+### CPPCheck
+
+[CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
+invest some time in configuration. This chapter will help you there.
+
+### Testing
+Is it still testing or already hacking our own product ?
+There are many tricks to make software testing more aggressive and which will
+shine some light on vulnerabilities in [this chapter](#chapter-testing).
+
+
+### Fuzzing
+
+[Fuzzing](#chapter-fuzzing) is a technology to find unexpected bugs - most of them potential
+vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you.
+How to get started is described here.
 
 ## Bolt-on security
 
