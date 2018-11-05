@@ -359,3 +359,15 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% Progressive web apps: https://medium.com/@kennethrohde/progressive-web-apps-coming-to-all-chrome-platforms-80e31272e2a8
 
 %% TODO: CanOnion header idea - so pages can re-direct: https://twitter.com/AlecMuffett/status/1054789626156720134
+
+%% TODO BFuzz: Browser fuzzing: https://twitter.com/binitamshah/status/1058669688719376384?s=09
+
+%% TODO: HTTPLab (interactive web server): https://github.com/gchaincl/httplab
+
+%% TODO: deprecating SPDY: https://blog.cloudflare.com/deprecating-spdy/
+
+
+%% TODO: Web Assembly: https://hacks.mozilla.org/2018/10/webassemblys-post-mvp-future/
+
+
+%% Debugger extension API: https://bugs.chromium.org/p/project-zero/issues/detail?id=1621
