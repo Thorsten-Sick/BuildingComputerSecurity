@@ -333,6 +333,8 @@ It also covers BTLE 5.0
 
 %% Also contains tools and iOS/Android howtos.
 
+%% TODO: Add BleedingBit attack: https://armis.com/bleedingbit/
+
 ### Woot13 presentation on BTLE hacking (especially sniffing) {#reference-presentation-btle-sniffing}
 
 With low energy comes low security by Mike Ryan
