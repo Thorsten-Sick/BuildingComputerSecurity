@@ -50,6 +50,7 @@ effects and weaknesses.
     * Weakness: Leaks by support engineers still possible
 * Burn Micro controller fuse to break UART and JTAG right before shipping
     * Side effect: No field debugging possible anymore
+    * Burnt fuses can be overridden...with lots of effort, but it is possible
 * Public key challenge response to access debugging functionality
     * Side effect: Complex
     * Side effect: Needs computational power
