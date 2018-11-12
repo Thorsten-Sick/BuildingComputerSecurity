@@ -353,19 +353,35 @@ Improvements:
 
 ## Further reading
 
+### CERT coding standards for C and C++ 
+
+The best checklist I found so far is this:
+
+[CERT coding standards for C and C++](https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards)
+
+### Wikipedia
+
 [Wikipedia on Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming)
+
+
+### Secure programming Cookbook
 
 The [Secure Programming Cookbook](https://www.safaribooksonline.com/library/view/secure-programming-cookbook/0596003943/)
 has lots of receipts for common secure programming problems. It is more focussed ont the Operating System level (Windows, Linux).
 
+### Building secure software
+
 While the book [Building Secure Software](https://www.safaribooksonline.com/library/view/building-secure-software/9780672334092/) is
 more focussed on typical C issues. It is thinner, a bit older but a very good start. Put this one on your desk. And read it.
 
+### Writing unmaintainable code
+
 [How to Write Unmaintainable Code](https://www.se.rit.edu/~tabeec/RIT_441/Resources_files/How%20To%20Write%20Unmaintainable%20Code.pdf)
 is a funny document describing the hell of bad code - and how to create it. If you just let it circulate amongst your peers it could be more powerful than Coding Guidelines.
+
+### Secure coding in C and C++
 
 The big gun is [Secure coding in C and C++](https://www.safaribooksonline.com/library/view/secure-coding-in/9780132981989/). Draw this one last, if the other books are read.
 Or if you have sufficient time.
 
 
-%% https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards
