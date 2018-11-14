@@ -13,6 +13,13 @@ changelog to make it simpler for you to find the new sections.
 %% Plan design
 %% grep for "todo" and "safari". Fix this. Also add amazon alternative
 
+
+## December 2018
+
+* Enhanced book list of defensive programming
+%% CppCheck !!!
+
+
 ## November 2018
 
 * Enhanced *defensive programming*
