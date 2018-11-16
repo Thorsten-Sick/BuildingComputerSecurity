@@ -68,7 +68,7 @@ python naming.py --var='[a-z]*\Z' --function='[A-Z].*' /media/sf_work/feolib_tru
 
 
 
-
+%% TODO: Plugins, VCS hooks, Continuous delivery hooks and how-to-use-them
 
 
 %% TODO: Source is at https://github.com/danmar/cppcheck
