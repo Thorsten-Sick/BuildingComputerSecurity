@@ -369,5 +369,6 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO: Web Assembly: https://hacks.mozilla.org/2018/10/webassemblys-post-mvp-future/
 
+%% TODO: sandbox https://www.blackhoodie.re/assets/archive/Chromium_Sandbox_on_Linux_blackhoodie.pdf
 
 %% Debugger extension API: https://bugs.chromium.org/p/project-zero/issues/detail?id=1621
