@@ -18,11 +18,14 @@ Convert::
 
 	arm-none-eabi-objcopy -O binary  blinky_test.elf blinky_test.bin
 
+
+To transfer to an TO Stellaris Launchpad ICDO interface
+
 Transfer::
 
 	sudo lm4flash -s 0F800A4E  -v   blinky_test_blinkt.bin
 
-0F800A4E is the ID of the board. lmm4flash will extract it.
+0F800A4E is the ID of the board. lm4flash will extract it.
 
 Debugging
 ---------
@@ -47,6 +50,8 @@ Config can look like:
 source [find interface/ti-icdi.cfg]
 source [find board/ek-tm4c1294xl.cfg]
 """
+
+scripts are found here: */usr/share/openocd/scripts/*
 
 Basic dance::
 
