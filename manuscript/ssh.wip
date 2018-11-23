@@ -114,18 +114,55 @@ comments in here.
 
 [The official keygen page](https://www.ssh.com/ssh/keygen/) has much more about key generation.
 
-%% Show keys,
+As you do not want to enter the passphrase several times a day, you should
+request that *ssh-agent* manages your key.
 
-%% Show fingerprints
+{lang="bash"}
+    ssh-add ~/.ssh/id_rsa
 
-%% TODO: Generate and distribute keys
-%% ssh-copy-id -i ~/.ssh/tatu-key-ecdsa user@host
+Will add the key in the file *id_rsa* to the agent's list of managed keys.
 
+## Show (managed) keys
 
-%% TODO: SSH-agent, ssh-add
+To show all keys managed by the ssh-agent, use
 
+{lang="bash"}
+    ssh-add -l
 
-## Distribution, registering
+It will print:
+
+* the length in bits
+* the hash of the key
+* the file name
+
+To extract the same information from a key file, use
+
+{lang="bash"}
+    ssh-keygen -lf ~/.ssh/id_rsa
+
+## Deploying keys
+
+The file *~/.ssh/authorized_keys* on a server contains all the (public)
+keys that can log into this server.
+
+One simple way to install your key on the server is to call
+
+{lang="bash"}
+    ssh-copy-id -i ~/.ssh/keyname user@host
+
+You will have to enter your server password and log in to install the key.
+What I did not tell you: You can configure your SSH server to accept
+passwords (not key files) as well.
+
+Passwords only are not as secure as keys. This is why I did not tell you.
+But you could activate the password feature on the server until your keys
+are deployed.
+
+As the file  *~/.ssh/authorized_keys* is "just" a text file containing
+the authorized public keys, you could also just cat it together:
+
+{lang="bash"}
+    cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
 
 
