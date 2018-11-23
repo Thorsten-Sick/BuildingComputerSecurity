@@ -1,13 +1,164 @@
-%% mass ssh https://github.com/trimstray/massh-enum
+# SSH {#chapter-ssh}
 
-%% TODO: scp
+C> By: Thorsten Sick
+
+C> For: Developers, Tester, Architects
+
+## Reasons for SSH
+
+SSH is one of the basic tools providing a long list of security features
+and replacing lots of risky technologies (ftp, telnet, ...).
+
+It is quite likely that while developing you will never use it directly - but
+some of your tools depend on it. You already used it without knowing.
+
+For a developer or tester it is one more tool to simplify their daily work -
+with a security benefit.
+
+For an architect it could be a building block designing a whole (Linux) system
+(maybe an embedded system or similar).
+
+It is able to several things:
+
+* Secure shell access to a system
+* Remote execution of programs
+* Forwarding of Linux UIs
+* Securing GIT connections
+* File transfer
+* Offering a VPN service
+
+That's a lot. And everything is much simpler to understand as soon as oyu know
+the basics.
+
+## Background
+
+SSH is based on Public Key Cryptography. Long story short: There are two
+matching keys:
+
+* A secret key
+* A public key
+
+Both belong together. And you also want to have a key pair per server you
+connect to.
+
+The public key does not need top be protected. You can copy it around, put it
+on untrusted systems, share it or even print it in the newspaper. The file
+containing it has the *.pub* extension.
+
+The secret key is Top Secret. It should be protected by a *passphrase*. So
+someone getting the file will still not be able to unlock it as the passphrase
+is missing.
+
+The passphrase is optional. But you should use it. There are tools that store
+it as long as ou do not reboot your computer - so you just have to enter it
+once after you log in.
+
+On a server without keyboard that has no tech person to manage it after a
+reboot a passphrase could cause trouble....
+
+There are many (GUI) tools that integrate SSH and do some of the steps I
+describe here without you noticing.
+
+There are also SSH GUI tools that will do those steps. Visible but simplified.
+
+But here I will describe the basic command line functions for Linux. Because
+that way it is much simpler to peak behind the curtain.
+
+### Client configuration
+
+There is also the SSH configuration.The one for the SSH client is in your personal
+folder: *~/.ssh/config*
+
+This folder also contains your key files.
+
+The configuration can store some connecrtion details for all the servers you
+normally connect to. Read about the features of this configuration and
+simplify your life !
+
+Especially important is to define which key belongs to which server. SSH will
+start to try all our keys until one matches. But even with a low number of
+keys this is not practical anymore.
+
+There are many resources online about the [config file format](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/).
+
+### known_hosts
+
+SSH tracks the servers it connected to and stores their *key fingerprints*.
+This way it identifies the servers. If the fingerprint of a server should
+ever change (by update or attack) you will be notified.
+
+First time you connect to a server you will see a warning asking you to verify
+the fingerprint and confirm it. by pressing *yes* you accept it and it is stored.
+
+If you want to be prepared, you can also just extract the fingerprints from a
+SSH server and add them to your know_hosts file by calling:
+
+{lang="bash"}
+    ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
+
+%% TODO: authorized_keys file
+
+## Key generation
+
+You will generate a key - which consists of two files. One secret and one public.
+
+{lang="bash"}
+    ssh-keygen -t rsa -b 4096 -C "your_email@somewhere.com"
+
+* -t is the crypto type
+* -b is the bit length of the key
+* -C is a comment. If you use it for Github, it should be your mail address
+
+As you will generate many more keys it is smart to start putting good
+comments in here.
+
+[The official keygen page](https://www.ssh.com/ssh/keygen/) has much more about key generation.
+
+%% Show keys,
+
+%% Show fingerprints
+
+%% TODO: Generate and distribute keys
+%% ssh-copy-id -i ~/.ssh/tatu-key-ecdsa user@host
+
+
+%% TODO: SSH-agent, ssh-add
+
+
+## Distribution, registering
+
+
+
+
+## Get a shell
+
+## Execute commands
 
 %% TODO: execute commands
 
-%% TODO ~/.ssh/config: https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/
+
+## File transfer
+
+%% TODO: scp
+
+%% TODO SSHFS https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+
+## GIT
+
+https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+## VPN
 
 %% TODO tunnel
 
-%% TODO: Generate and distribute keys
 
-%% TODO: create SSH keys: https://www.ssh.com/ssh/keygen/
+## Mass SSH
+
+%% mass ssh https://github.com/trimstray/massh-enum
+
+
+
+
+
+
+## Further reading
