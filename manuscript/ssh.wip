@@ -164,38 +164,97 @@ the authorized public keys, you could also just cat it together:
 {lang="bash"}
     cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
-
-
-
 ## Get a shell
+
+It is at least as simple as using
+
+{lang="bash"}
+    ssh user@server
+
+It can be much simpler if you use your ssh config file to define the
+default **user** for this server. In that case you can also skip the user.
+
+By doing this you will get logged into a bash shell on the remote server.
 
 ## Execute commands
 
-%% TODO: execute commands
+To remotely execute just one command call it with
 
+{lang="bash"}
+    ssh user@server command
 
-## File transfer
+You will not get a shell but the command will be executed remotely.
+That way you can use ssh and remote control in a very simple way in your
+normal scripts.
 
-%% TODO: scp
+## File transfer (scp)
 
-%% TODO SSHFS https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+Copying a file over a network just works as when you copy a file locally -
+if you did add your password to the ssh-agent and configured your
+ssh-configuration properly.
+
+{lang="bash"}
+    scp anime.txt server:/home/boss/incoming/
+
+Which will copy the text file to the server.
+Of course: it is also possible to switch the order of the folders and copy it back.
+
+## SSHFS
+
+SSHFS allows you to just mount a file systems over the network. There are
+alternative technologies (nfs, samba). SSH offers you encryption (not like
+nfs which some people say is the acronym for "No File Security"). And samba
+can be a bit tricky in the non windows world with lots of different versions
+and a not-very-granular control.
+
+If you already have your SSH connection running, mounting a remote file system
+automatically on bootup is just 2 more commands.
+
+No reason to stick to FTP.
+
+The simple tutorial is on [digitalocean](https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh)
 
 ## GIT
 
-https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+Git is using SSH as basic technology to protect the connection. Using github
+you are asked to submit your public key.
+
+This is all the magic involved.
+
+As you can manage several keys I advice you to generate one for each computer
+you use. That way you can delete it from the online account as soon as you
+send your computer to any kind of recycling (ebay, relatives) as files can
+be restored from a deleted hard disk....
+
+Also a good way to handle things: GIT can handle several remote sources. By
+smart configuration and several ssh accounts you can have several end points
+you can push to:
+
+* origin
+* myrepo
+* testing
+* deployment
+
+Use it wisely.
+
+For the basics: [Github has a good explanation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ## VPN
 
 %% TODO tunnel
 
 
-## Mass SSH
+%% ## Mass SSH
 
 %% mass ssh https://github.com/trimstray/massh-enum
 
 
 
 
+%% TODO: Setting up server
 
+%% TODO: locking down ssh
+
+%% PYthon and SSH ?
 
 ## Further reading
