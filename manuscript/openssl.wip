@@ -1,0 +1,6 @@
+
+View vert file:
+openssl x509 -in mycertfile.pem -noout -text
+
+Download web site cert file: 
+openssl s_client --showcerts website.de:443 </dev/null 2>/dev/null |openssl x509 --outform PEM >mycertfile.pem
