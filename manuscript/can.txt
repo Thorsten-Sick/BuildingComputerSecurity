@@ -201,3 +201,7 @@ can currently not be reached. I wish you luck.
 
 %% TODO: CAN-Bus Fahren https://media.ccc.de/v/8C8XTC
 %% Macchina M2 Board zum Car hacken
+
+%% https://news.hitb.org/content/backdooring-connected-cars-bicho
+
+%% https://www.theregister.co.uk/2017/12/22/nissan_canada_hacked/

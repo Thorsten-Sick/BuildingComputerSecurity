@@ -186,3 +186,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 
 %% https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp
+
+%% https://github.com/k0retux/fuddly
+
+%% TODO read: http://s3.eurecom.fr/docs/ndss18_muench.pdf

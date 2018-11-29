@@ -236,3 +236,5 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
 
 %% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
+
+%% TODO: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=kspp/gcc/mitigate-rop&id=5576f5fa57ff2fcdf041156bebf190a8f6b4dd9e
