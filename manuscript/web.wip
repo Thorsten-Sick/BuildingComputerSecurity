@@ -47,6 +47,8 @@ https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-
 * private keys
 * coredumps
 
+%% Hanno: "Noticed some PHP behavior recently and had an idea: PHP will throw a warning if you try to use sessions and the session cookie has special chars in it. What does that mean? If the site is configured with display_errors=On and uses sessions you can force it to throw PHP warnings and show paths. Try something like "curl -s --cookie PHPSESSID=äöü [host]" and grep for "Warning"."
+
 ## CTFR
 
 
@@ -108,3 +110,9 @@ attacker who bought the domain after you quit.
 %% Why https: https://www.troyhunt.com/heres-why-your-static-website-needs-https/
 
 %% TODO: File upload: https://github.com/almandin/fuxploider
+
+%% Top 10 Web hacking 2017: https://portswigger.net/blog/top-10-web-hacking-techniques-of-2017
+
+%% Web market shares 2018: https://sparktoro.com/blog/2018-search-market-share-myths-vs-realities-of-google-bing-amazon-facebook-duckduckgo-more/
+
+%% https://portswigger.net/blog/bypassing-web-cache-poisoning-countermeasures

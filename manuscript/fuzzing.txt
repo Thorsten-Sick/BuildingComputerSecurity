@@ -181,3 +181,8 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 
 %% TODO run under Valgrind or strace or gdb
+
+%% Naughty strings: https://github.com/minimaxir/big-list-of-naughty-strings
+
+
+%% https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp

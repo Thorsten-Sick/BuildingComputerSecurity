@@ -285,3 +285,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% [Crypto knacken für Anfänger](https://media.ccc.de/v/c4.openchaos.2018.10.krypto-knacken-fuer-anfaenger)
 
 %% [Cryptopals - crypto challenges](https://cryptopals.com/)
+
+%% TODO: Review Book Practical Cryptography for Developers: https://cryptobook.nakov.com/

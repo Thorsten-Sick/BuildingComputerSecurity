@@ -107,3 +107,5 @@ kind of approach is the right size of paranoia.
 %% https://thehackernews.com/2018/05/hacking-gpon-routers.html
 %% https://thehackernews.com/2018/05/vpnfilter-botnet-malware.html
 %% https://www.kaspersky.com/blog/roaming-mantis-malware/22427/
+
+%% Pentest hardware book (review): https://github.com/unprovable/PentestHardware

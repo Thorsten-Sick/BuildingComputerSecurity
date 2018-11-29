@@ -114,3 +114,12 @@ https://speakerdeck.com/ange/an-introduction-to-inkscape
 # https://twitter.com/TinkerSec/status/1053732641374199809?s=09
 "There is “Deterrence” and there is “Protection”. Deterrence seeks to stop Opportunistic Attacks by altering the *perceived* hardness of a target. Protection seeks to stop Targetted Attacks by offering actual hardness. This may stop opportunistic attacks, but not targetted.
 "
+
+Red teaming:
+Post exploitation: https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp
+Guide to pivoting: https://artkond.com/2017/03/23/pivoting-guide/
+Toolkit: https://silentbreaksecurity.com/introducing-the-red-team-toolkit/
+
+
+For Fun:
+NES CSS: https://bcrikko.github.io/NES.css/

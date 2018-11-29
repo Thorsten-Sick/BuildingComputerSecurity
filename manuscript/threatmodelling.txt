@@ -18,3 +18,6 @@ https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx
 ## OWASP Embedded Application Security Project
 
 https://www.owasp.org/index.php/OWASP_Embedded_Application_Security
+
+
+https://michenriksen.com/blog/drawio-for-threat-modeling/

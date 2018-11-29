@@ -356,6 +356,8 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% MAgenta Shops: https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html
 
+%% Magecart: https://sensorstechforum.com/sites-magecart-malware-reinfected/
+
 %% Progressive web apps: https://medium.com/@kennethrohde/progressive-web-apps-coming-to-all-chrome-platforms-80e31272e2a8
 
 %% TODO: CanOnion header idea - so pages can re-direct: https://twitter.com/AlecMuffett/status/1054789626156720134
@@ -372,3 +374,16 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% TODO: sandbox https://www.blackhoodie.re/assets/archive/Chromium_Sandbox_on_Linux_blackhoodie.pdf
 
 %% Debugger extension API: https://bugs.chromium.org/p/project-zero/issues/detail?id=1621
+
+
+%% Headless Chrome: https://www.imperva.com/blog/headless-chrome-devops-love-it-so-do-hackers-heres-why/
+%% https://github.com/GoogleChrome/puppeteer/releases/tag/v1.9.0
+
+
+%% How browsers work: https://developers.google.com/web/updates/2018/09/inside-browser-part1
+
+%% Wayback machine: https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak?hl=en-US
+
+%% Encypte SNIs in Firefox: https://blog.mozilla.org/security/2018/10/18/encrypted-sni-comes-to-firefox-nightly/
+
+%% Firefox breach detection: https://blog.mozilla.org/blog/2018/11/14/firefox-monitor-launches-in-26-languages-and-adds-new-desktop-browser-feature/?utm_content=buffer1c277&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
