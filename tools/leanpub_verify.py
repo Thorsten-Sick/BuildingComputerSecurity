@@ -5,6 +5,7 @@
 
 import os
 import re
+import requests
 
 class Link():
     def __init__(self, title, link, infile=None):
@@ -19,6 +20,18 @@ class Link():
             self.infile = str(infile)
         else:
             self.infile = None
+
+    def is_reachable(self):
+        try:
+            res = requests.get(self.link)
+        except UnicodeError:
+            print("Error with link parsing {}".format(self.link))
+        else:
+            if res.status_code == requests.codes.ok:
+                return True
+            else:
+                return False
+
 
 class Chapter():
     def __init__(self, title, link, level = 1, infile=None):
@@ -125,6 +138,8 @@ class LeanpubVerify():
             if not l.local:
                 if not l.title:
                     print("Error: Web link has no description: {} ({})".format(l.link, l.infile))
+            if not l.is_reachable():
+                print("Error: Web link not reachable: {} ({})".format(l.link, l.infile))
 
     def getOutgoingLinks(self):
         """ Collect all link to somewhere
@@ -156,10 +171,12 @@ class LeanpubVerify():
                             desc = a[0][1:][:-2]
                             if lnk.endswith("),"):
                                 lnk = lnk[:-2]
+                            if lnk.endswith(")."):
+                                lnk = lnk[:-2]
                             if lnk.endswith(")"):
                                 lnk = lnk[:-1]
 
-                        print("{}->{}".format(desc,lnk))
+                        print("{}->{}".format(desc, lnk))
                         self.webLinks.append(Link(desc, lnk, infile=afile))
 
 
