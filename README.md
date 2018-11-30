@@ -39,3 +39,10 @@ Requirements
 sudo apt install mscgen
 
 (http://www.mcternan.me.uk/mscgen/)
+
+
+For Future Use
+--------------
+
+Diagrams:
+Zenuml.com
