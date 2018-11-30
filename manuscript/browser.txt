@@ -267,7 +267,7 @@ Update your router, do not go for the cheap ones. Log out after configuration.
 Maybe use a different browser profile or browser for Administration tasks  -
 and not the one you use for browsing for cat videos.
 
-%% TODO: Routers: https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+nakedsecurity+(Naked+Security+-+Sophos)
+%% TODO: [cryptojacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
 
 ## Phishing
 
