@@ -243,13 +243,14 @@ For the basics: [Github has a good explanation](https://help.github.com/articles
 
 %% TODO tunnel
 http://www.netzmafia.de/skripten/internet/ssh-tunnel.html
+%% https://www.ssh.com/ssh/tunneling/exampleq
 
 %% ## Mass SSH
 
 %% mass ssh https://github.com/trimstray/massh-enum
 
 
-
+%% X Forwarding
 
 %% TODO: Setting up server
 
@@ -258,3 +259,13 @@ http://www.netzmafia.de/skripten/internet/ssh-tunnel.html
 %% PYthon and SSH ?
 
 ## Further reading
+
+### SSH, The Secure Shell: The Definitive Guide, 2nd Edition
+
+A book from 2005. Does not cover all features and some tips might not be
+compatible with the current ssh version. But it covers a wide
+range of SSH features. And I also do not think the SSH project is one of those
+that love to break compatibility and add lots of incompatible features with
+each release ...
+
+[SSH, The Secure Shell: The Definitive Guide, 2nd Edition](https://www.safaribooksonline.com/library/view/ssh-the-secure/0596008953/)

@@ -15,7 +15,7 @@ requirement it has a blurred line to management tasks.
 
 * Have an email address to report vulnerabilities to like security@domainname.com
 * Add a PGP key for this address. And train everyone to use it properly
-* Prepare a security.txt. See: https://securitytxt.org/
+* Prepare a [security.txt](https://securitytxt.org/)
 * Put it onto your homepage
 * Prepare bugtrackers
 * Have processes for handling vulnerabilities into the bugtracker
