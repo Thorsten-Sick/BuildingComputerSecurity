@@ -1,0 +1,11 @@
+# Coverage
+
+
+## GCC
+gcc --coverage -fprofile-abs-path
+-- execute program --
+gcov *.gcda
+
+
+Results in overview and gcov files.
+Lines start with number of executions. Not-executed lines with lots #####.
