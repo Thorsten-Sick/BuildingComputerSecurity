@@ -239,7 +239,7 @@ Use it wisely.
 
 For the basics: [Github has a good explanation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-## VPN
+%% ## VPN
 
 %% TODO tunnel
 http://www.netzmafia.de/skripten/internet/ssh-tunnel.html
@@ -257,6 +257,12 @@ http://www.netzmafia.de/skripten/internet/ssh-tunnel.html
 %% TODO: locking down ssh
 
 %% PYthon and SSH ?
+
+## Telnet
+
+Telnet is deprecated. Use SSH. Everywhere. Just now (end of 2018) there
+were several  a major incidents with telnet on IoT products. One example is
+[Siglent Technologies SDS 1202X-E Digital Oscilloscope](https://seclists.org/fulldisclosure/2018/Nov/68).
 
 ## Further reading
 

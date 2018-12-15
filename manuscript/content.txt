@@ -143,6 +143,33 @@ shine some light on vulnerabilities in [this chapter](#chapter-testing).
 vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you.
 How to get started is described here.
 
+## Tools
+
+Several tools are essential to build secure software. This covers version
+control systems, SSH and many others that "just" support you in getting
+your tasks done. Those are covered in this part of the book.
+
+### SSH
+
+A very powerful tool that goes way beyond just replacing Telnet. Know it and
+simplify your work while being more secure. Or - if you build embedded
+systems - integrate it in there.
+
+%% TODO Openssl
+
+%% TODO Git
+
+%% TODO Snort, Yara
+
+## Offense
+
+Even if you are playing Defense - it is very important to know the tools,
+tricks and tactics of Offense. The basics are covered here.
+
+%% TODO Metasploit
+
+%% TODO Beef, Burp, Armitage, NMAP,
+
 ## Bolt-on security
 
 Bolt-on security is what is done of someone missed to do security-by-design.
