@@ -244,6 +244,20 @@ For the basics: [Github has a good explanation](https://help.github.com/articles
 %% TODO tunnel
 http://www.netzmafia.de/skripten/internet/ssh-tunnel.html
 %% https://www.ssh.com/ssh/tunneling/exampleq
+%% https://www.ssh.com/ssh/#sec-Running-amp-configuring-SSH
+%% https://collaboradev.com/2011/08/03/browsing-the-web-through-an-ssh-tunnel-putty-firefox/
+
+{lang="bash"}
+    ssh -N -C -D 2080 mytunnelserver
+
+* -N disables commands (only tunneling)
+* -C compresses
+* -D Dynamic proxy: socks4 and socks5 supported, alle ports
+    * Followed by local port to listen to
+
+After that, set up your web browser to use a proxy. Or your whole OS.
+
+
 
 %% ## Mass SSH
 
