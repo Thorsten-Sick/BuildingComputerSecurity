@@ -84,6 +84,7 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
 %% .. TODO: Test
 
+%% TODO [CheckSec](https://github.com/slimm609/checksec.sh)
 
 ## Attached info
 
