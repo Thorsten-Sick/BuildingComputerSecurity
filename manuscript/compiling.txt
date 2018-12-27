@@ -101,9 +101,42 @@ Your benefits:
     * New compiler flags
     * Updated libraries
 
-%% TODO: A list of vagrant examples.
+Vagrant can be used for several tasks in your project.
+The two most common ones would be
 
-%% TODO: Vagrant code verification toolbox
+### Vagrant for build system
+
+Your project needs a reliable and verified build system. Your developers are
+invested in more than one project and have different IDEs and libraries with
+different versions installed. Using one of those PCs is not the way to go.
+
+A virtual machine with the verified offical build tools and libraries solves
+the problem. And in addition you can check the Vagrant configuration into
+your VCS.
+
+The programmers have less restrictions when choosing their development tools
+and the whole team has a central build system with reliable builds. And finally
+you can answer the question "Can you also observe the bug in the offical build ?".
+
+Even if you have no Continous Integration system running you can get some of
+the benefits by creating a Vagrant box to be run on the developers PCs.
+
+### Vagrant for testing system
+
+Similar to a build system you can create a testing environment. All the tests
+described in this book can be run on a VM.
+
+* Code coverage
+* Unit tests
+* Static code analysis
+* Dynamic code analysis
+* Fuzzing
+
+If you have no CI system running, at least build your own Vagrant testing
+toolbox. Check that into your VCS and everyone will be able to run it on the
+development PCs to have common metrics.
+
+%% TODO: A list of vagrant examples.
 
 ## Compile for Linux
 
