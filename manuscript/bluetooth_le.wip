@@ -1,39 +1,4 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-## Python programming
-
-%% GATT [](https://github.com/peplin/pygatt)
-%% Fallback [](https://github.com/getsenic/gatt-python)
-
-
-
-
-### MITM on BTLE
-
-
-* [btlejuice](https://github.com/DigitalSecurity/btlejuice)
-
-%% .. TODO: Test
-
-
-
-### Pinging BTLE
-
-.. TODO: Document, including DOS
-
-### Blue Hydra
-
-[Blue Hydra](https://github.com/pwnieexpress/blue_hydra)
-
-### Ubertooth Utils
-
-[Ubertooth](https://github.com/greatscottgadgets/ubertooth)
-
-
 ### Gattack.io
 
 GATT: The "application" layer. While the lower layers very often do not
@@ -69,11 +34,7 @@ Gattack offers those attacks:
 * password brute forcing
 * GATT value fuzzing
 
-%% .. TODO: Check in tool of those are there
-
-%% TODO: [Hacking BLE](https://blog.attify.com/hacking-bluetooth-low-energy/)
-
-%% TO Add: BTLEJUICE
+%% TODO: Check in tool if those are there
 
 
 
@@ -85,31 +46,13 @@ Gattack offers those attacks:
 
 
 
-## Beacons
-
-%% TODO: Write
-
-Apple: iBeacon
-Google: [Eddystone/Physical Web](http://google.github.io/physical-web/)
 
 
-## Glossary
-
-GAP: Advertisements, connection handling, defining device roles in communication
-GATT: Organizes the data offered by the device
-Characteristic: Value + Descriptor
-Service: Several Characteristics combined create a service. A default service for BTLE would contain device information
-Profile: Profiles combine several services. They standardize specific device classes
-L2CAP: Encapsulating data into packets
 
 
 %% TODO: [Blackhat](https://media.blackhat.com/us-13/us-13-Ryan-Bluetooth-Smart-The-Good-The-Bad-The-Ugly-and-The-Fix.pdf)
 
 
 %% TODO hcidump -x -t hci0
-
-%% TODO: [BLE security](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en)
-
-%% TODO: [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
 
 %% TODO: REFERENCE: #reference-presentation-btle-sniffing

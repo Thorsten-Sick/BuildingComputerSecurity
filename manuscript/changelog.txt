@@ -17,7 +17,7 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add Part_tools (ssh, openssl, git, nmap, )
 %% TODO: extend attacks goals
 %% TODO: extend know your enemies
-
+%% TODO: BLE, including Gattack.io
 
 
 ## December 2018
