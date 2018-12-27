@@ -19,9 +19,11 @@ changelog to make it simpler for you to find the new sections.
 ## December 2018
 
 * Enhanced book list of defensive programming
-* SSH chapter added
+* **SSH** chapter added
+* Added **Code Coverage** chapter
+* Improved *Fuzzing* chapter
 %% CppCheck !!!
-%% Coverage
+
 
 
 ## November 2018
