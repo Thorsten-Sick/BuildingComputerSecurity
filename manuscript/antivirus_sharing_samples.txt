@@ -41,7 +41,7 @@ If you have a suspicious file you want to share you should store it properly
 
 Some things to know:
 * Stored files are no problem. Executed are
-* You AV will have a so called *Quarantine*. This is an encrypted file storing the found malware
+* Your AV will have a so called *Quarantine*. This is an encrypted file storing the found malware
     * One of the less known reasons it encrypts the found malware: That way it will not be detected a second time by another scanner and cause confusion
 * Most malware is multi-staged. So several files, URLs and registry entries are involved. Gotta catch them all
 * There is file-less malware that only exists in memory or registry keys. It is hard to extract that from your system
