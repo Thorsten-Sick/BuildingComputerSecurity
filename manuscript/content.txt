@@ -170,6 +170,9 @@ tricks and tactics of Offense. The basics are covered here.
 
 %% TODO Beef, Burp, Armitage, NMAP,
 
+%% TODO: sslstrip
+
+
 ## Bolt-on security
 
 Bolt-on security is what is done of someone missed to do security-by-design.

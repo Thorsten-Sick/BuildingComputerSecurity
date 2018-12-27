@@ -164,3 +164,9 @@ Things to weed out:
 * Compilers
 * Network tools (wget, ftp, nc, nmap, ....)
 * libaries (especially network libs like pcap)
+
+%% TODO: Find a place for: attackers chain vulnerabilities
+
+%% TODO: Attackers need connection to a C&C server
+
+%% TODO: Opportunistic vs. targeted victim selection

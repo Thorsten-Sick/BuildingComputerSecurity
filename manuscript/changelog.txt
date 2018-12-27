@@ -15,6 +15,10 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add part_attacks
 %% TODO: Add Part_tools (ssh, openssl, git, nmap, )
+%% TODO: extend attacks goals
+%% TODO: extend know your enemies
+
+
 
 ## December 2018
 
@@ -23,7 +27,9 @@ changelog to make it simpler for you to find the new sections.
 * Added **Code Coverage** chapter
 * Improved *Fuzzing* chapter
 %% CppCheck !!!
-
+* Small things in:
+    * *Antivirus sharing samples*
+    * *clang*
 
 
 ## November 2018

@@ -101,4 +101,6 @@ the number of potential valuable file son disk.
 
 %% TODO: In house attackers "Innentäter"
 
+%% TODO: Add Hacktivist
+
 [^note1]: With a flexible definition of free.

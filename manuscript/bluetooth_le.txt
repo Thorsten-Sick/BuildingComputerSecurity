@@ -36,7 +36,7 @@ a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 List of potential attacks for threat modelling:
 
 * Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
-* Impersonating (cloning) of a device
+* Impersonating (cloning) of a device (aka Spoofing)
 * Passive sniffing (if there is no link layer encryption)
 * For encrypted layer: Sniff with Ubertooth, sniff the pairing, use crackle to crack it
 * DOS a device
@@ -44,7 +44,7 @@ List of potential attacks for threat modelling:
 * MITM attacks (BTLE)
 * Social engineer users into pairing
 * MITM by cloning device. If encryption was established before, the connection will not work. The user will very likely delete/re-pair and end up paired with the attacking device
-* To break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
+* Unpairing: Force devices to unpair. When re-pairing happens, sniff and use *Crackle* to break encryption 
 
 Not all of those potential attacks will be relevant for your use case. But
 consider all of them in your scenario. Bluetooth is a cool technology. But
