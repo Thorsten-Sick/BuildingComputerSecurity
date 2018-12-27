@@ -44,3 +44,8 @@ fit your need much better than the default output.
 
 Next step is to go looking for none executed lines and start testing them to
 improve your score.
+
+
+%% TODO: CLANG https://clang.llvm.org/docs/SourceBasedCodeCoverage.html
+
+%% TODO: Documentation https://gcc.gnu.org/onlinedocs/gcc/Gcov.html
