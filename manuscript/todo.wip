@@ -32,9 +32,6 @@ https://www.heise.de/newsticker/meldung/Crowd-Plattformen-fuer-Suche-nach-Softwa
 https://lwn.net/Articles/718888/
 
 
-## Code coverage und Kontrollfluss
-https://de.wikipedia.org/wiki/Kontrollflussorientierte_Testverfahren
-Tool Tessy
 
 
 ## Browser/pwds
@@ -44,9 +41,6 @@ https://www.golem.de/news/mozilla-firefox-monitor-informiert-ueber-gehackte-pass
 ## Cyber Lagebild
 https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebilder/Cybercrime/cybercrimeBundeslagebild2017.html?nn=28110
 
-# Diagramme
-
-- Dot
 
 # CAN: http://www.volkspage.net/technik/ssp/ssp/SSP_238.pdf
 
@@ -100,11 +94,6 @@ https://github.com/facebookincubator/python-nubia/
 https://github.com/fox-it/dissect.cstruct
 
 
-# Inkscape by Ange
-https://speakerdeck.com/ange/an-introduction-to-inkscape
-
-
-# Windows Defender (Anti Virus) Sandbox: https://blog.trailofbits.com/2017/08/02/microsoft-didnt-sandbox-windows-defender-so-i-did/
 
 
 # Defcon 26 Videos https://www.youtube.com/user/DEFCONConference/videos
@@ -127,6 +116,11 @@ NES CSS: https://bcrikko.github.io/NES.css/
 ---------------------
 Diagrams:
 Zenuml.com
+
+# Inkscape by Ange
+https://speakerdeck.com/ange/an-introduction-to-inkscape
+
+- Dot
 
 
 -----------------

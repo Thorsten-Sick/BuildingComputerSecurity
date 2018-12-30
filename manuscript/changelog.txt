@@ -26,6 +26,7 @@ changelog to make it simpler for you to find the new sections.
 * **SSH** chapter added
 * Added **Code Coverage** chapter
 * Improved *Fuzzing* chapter
+* Added Vagrant to *compiling* chapter
 %% CppCheck !!!
 * Small things in:
     * *Antivirus sharing samples*
