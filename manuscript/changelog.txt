@@ -27,7 +27,7 @@ changelog to make it simpler for you to find the new sections.
 * Added **Code Coverage** chapter
 * Improved *Fuzzing* chapter
 * Added Vagrant to *compiling* chapter
-%% CppCheck !!!
+* Extended *CppCheck*
 * Small things in:
     * *Antivirus sharing samples*
     * *clang*
