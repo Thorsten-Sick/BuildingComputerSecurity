@@ -387,3 +387,21 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% Encypte SNIs in Firefox: https://blog.mozilla.org/security/2018/10/18/encrypted-sni-comes-to-firefox-nightly/
 
 %% Firefox breach detection: https://blog.mozilla.org/blog/2018/11/14/firefox-monitor-launches-in-26-languages-and-adds-new-desktop-browser-feature/?utm_content=buffer1c277&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+
+%% TODO: Amnesty phishing attacks: https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/
+
+%% TODO: @icommitfelonies If a user on a compromised host is using Chrome, it's worth checking out their custom dictionary. C:\Users\targetUser\AppData\Local\Google\Chrome\User Data\Default\Custom Dictionary.txt
+
+
+%% TODO: Browser hijacker: https://sensorstechforum.com/remove-searchesresult-browser-hijacker/
+
+%% TODO: BEEF XSS site cloning: https://hackingvision.com/2018/12/15/cloning-sites-for-beef-xss/
+
+%% TODO Data breaches and hacks: https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/
+
+%% TODO: Censored pages in UK: https://www.blocked.org.uk/
+
+%% TODO: Novidade Exploit Kits vs. Routers: https://blog.trendmicro.com/trendlabs-security-intelligence/new-exploit-kit-novidade-found-targeting-home-and-soho-routers/
+
+%% TODO: Security changes in Chrome 71: https://www.helpnetsecurity.com/2018/12/05/chrome-71-security-changes/

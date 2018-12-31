@@ -86,6 +86,8 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
 %% TODO [CheckSec](https://github.com/slimm609/checksec.sh)
 
+%% TODO: https://googleprojectzero.blogspot.com/2018/12/searching-statically-linked-vulnerable.html
+
 ## Attached info
 
 It is possible to attach an info blob (like xml) to a PE and ELF file.
