@@ -206,7 +206,8 @@ right anyway.
     * Call this when errors happen internally
     * For this short jump I will allow gotos. This is the only exception
     * Always call the label you jump to the same. I like "cleanupthemess"
-* If the memory contained valuable data, memset it before freeing it. Freed memory is available but still contains the old data !
+* If the memory contained valuable data (keys, passwords), memset it before freeing it. Freed memory is available but still contains the old data !
+    * Read section ["memsad rabbit hole"](#memsad)
 
 ### Input validation
 
@@ -303,7 +304,7 @@ You will also see the only valid reason to use a *goto* in a C program.
 
         if (buff)
         {
-            memset(buff, 0, BUFFLENGTH); // For sensitive content like passwords
+            memset(buff, 0, BUFFLENGTH); // For sensitive content like passwords. MUST READ Secition "Memsad" !
             free(buff);
             buff = NULL;  // Prevents double frees
         }
@@ -350,10 +351,34 @@ Improvements:
 
 %% TODO: Create focus chapters for different programming languages.
 
+## Memsad rabbit hole{#memsad}
+
+Compiler optimisations can remove the call you used to clean the passwords
+from stored memory (where you memset the memory with "0").
+
+There is a very cool [talk at 35C3 called "Memsad"](https://media.ccc.de/v/35c3-9788-memsad)
+covering this topic. You should **now watch** this talk. The rest of this
+section in the book will be just references for looking it up later.
+
+To experiment with compiler optimisation this talk points to the cool
+[Compiler Explorer](https://godbolt.org/) page.
+
+* explicit_bzero (glibc)
+* SecureZeroMemory(Windows)
+* memset_s (C11, optional)
+* Check your crypto library
+    * OPENSSL_cleanse
+    * gnutls_memset
+    * sodium_memzero
+
+Compiler: *-fno-builtin-memset* (GCC, newer version of CLANG)
+
+The talk has lots of other options, but there are more specific and will only
+work in specific situations. Watch it.
 
 ## Further reading
 
-### CERT coding standards for C and C++ 
+### CERT coding standards for C and C++
 
 The best checklist I found so far is this:
 
@@ -383,5 +408,3 @@ is a funny document describing the hell of bad code - and how to create it. If y
 
 The big gun is [Secure coding in C and C++](https://www.safaribooksonline.com/library/view/secure-coding-in/9780132981989/). Draw this one last, if the other books are read.
 Or if you have sufficient time.
-
-

@@ -27,6 +27,7 @@ testing_compiling.txt
 flawfinder.txt
 cppcheck.txt
 testing.txt
+coverage.txt
 fuzzing.txt
 part_tools.txt
 ssh.txt

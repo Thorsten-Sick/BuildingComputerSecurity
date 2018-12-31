@@ -15,13 +15,22 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add part_attacks
 %% TODO: Add Part_tools (ssh, openssl, git, nmap, )
+%% TODO: extend attacks goals
+%% TODO: extend know your enemies
+%% TODO: BLE, including Gattack.io
+
 
 ## December 2018
 
 * Enhanced book list of defensive programming
-* SSH chapter added
-%% CppCheck !!!
-%% Coverage
+* **SSH** chapter added
+* Added **Code Coverage** chapter
+* Improved *Fuzzing* chapter
+* Added Vagrant to *compiling* chapter
+* Extended *CppCheck*
+* Small things in:
+    * *Antivirus sharing samples*
+    * *clang*
 
 
 ## November 2018

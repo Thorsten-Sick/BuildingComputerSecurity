@@ -5,7 +5,8 @@ C> By: Thorsten Sick
 C> For: Developers, Tester
 
 Fuzzing is inserting random data into the system with the goal to cause invalid
-states. This can be crashing, memory leaks, endless loops, ...
+states. This can be crashing, memory leaks, unresponsiveness, endless loops,
+log storms ...
 
 After you did set up fuzzing tools it runs full-auto for nights and collects
 crash logs and especially the data that caused the crashes.
@@ -27,6 +28,9 @@ This generated data can be send to any kind of input:
 
 If you ship software that includes 3rd party libraries or programs, you should
 fuzz those as well. You ship it to customers with your tools - you are responsible.
+
+If the project you ship involves 3rd party tools (dhcp client, dns server, ...)
+they are also valid fuzzing goals.
 
 An important step in fuzzing is to keep the relevant input data for the
 debugging session later. This can be done by keeping the files. Some fuzzers
@@ -126,7 +130,8 @@ Taking an example from Radamsa (check out the link, there are more examples).
 
 AFL is a very sophisticated fuzzer.
 It uses compile-time instrumentation and a genetic algorithm to discover new
-test cases.
+test cases. For that it does a *Code Coverage* on the victim binary and tries to
+create data in a way that every existing code path is used.
 
 Pro:
     * It is fast
@@ -193,6 +198,10 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 
 %% TODO: Fuzzing https://arxiv.org/pdf/1812.00140.pdf
+
+%% TODO: Angora fuzzing (no code released yet): https://arxiv.org/abs/1803.01307
+
+%% TODO: https://github.com/evilsocket/wax
 
 %% TODO: Dirbursting https://github.com/Bo0oM/fuzz.txt
 %% And: https://bo0om.ru/en/

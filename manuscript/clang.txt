@@ -139,7 +139,7 @@ To get the GCC style coverage, compile with *-ftest-coverage* and run with
 Your goal is to design the tests in a way that results in 100% coverage.
 
 %% TODO: Experiment with it
-
+%% TODO Move to code coverage chapter
 
 ## Fuzzing
 

@@ -27,9 +27,11 @@ On Ubuntu just install it with
 {lang="bash"}
     sudo apt install cppcheck cppcheck-gui
 
+There is a MSI installer for Windows as well.
+
 ## The Makefile
 
-As you basically call Cppcheck like any compiler you can integrate it into your
+As you basically call CppCheck like any compiler you can integrate it into your
 default Makefile as a specific target.
 
 A
@@ -37,18 +39,18 @@ A
 {lang="bash"}
     make cppcheck
 
-would then run CPPCheck.
+would then run CppCheck.
 
 ## Feature: Library verification
 
-Cppcheck checks if library functions are used as intended. It knows about the
+CppCheck checks if library functions are used as intended. It knows about the
 standard libraries. If you use less common ones you should add your own
-configuration for those. The Cppcheck manual has more about that.
+configuration for those. The CppCheck manual has more about that.
 
-To edit the configuration file for the library use the Cppcheck GUI.
+To edit the configuration file for the library use the CppCheck GUI.
 
 If the library is a common and public one, you may think about contributing the
-configuration to the Cppcheck project.
+configuration to the CppCheck project.
 
 Now for the extra trick: If your team produces in-house libraries you should
 generate one of those config files and ship it with the library. This enables
@@ -59,18 +61,20 @@ bug reports to your team.
 
 %% TODO ## Feature platform
 
-%% TODO: ## Feature: Dumping data for Python aka addons
-cppcheck --dump --enable=all --std=c99 c_file.c
-result: c_file.c.dump
-python naming.py --var='[a-z]*\Z' --function='[A-Z].*' /media/sf_work/feolib_trunk/pal/tests/sio.c.dump
-# Remember: \Z is end of string !
-# When running cppcheck on multiple files it generated broken dump files for me.
+A feature that can assist you customizing the checks to cover your needs is
+dumping the data and processing it with Python.
 
+Existing python tools are in the *addons* folder of CppCheck.
 
+{lang="bash"}
+    cppcheck --dump --enable=all --std=c99 c_file.c
+    # result: c_file.c.dump
+    python naming.py --var='[a-z]*\Z' --function='[A-Z].*' /media/sf_work/feolib_trunk/pal/tests/sio.c.dump
+    # Remember: \Z is end of string !
+
+## Further reading
+
+* [CppCheck Source](https://github.com/danmar/cppcheck)
+* [Web Page](http://cppcheck.sourceforge.net/)
 
 %% TODO: Plugins, VCS hooks, Continuous delivery hooks and how-to-use-them
-
-
-%% TODO: Source is at https://github.com/danmar/cppcheck
-
-%% TODO: Web page: http://cppcheck.sourceforge.net/

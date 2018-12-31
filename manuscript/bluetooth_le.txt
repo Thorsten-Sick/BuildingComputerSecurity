@@ -36,7 +36,7 @@ a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 List of potential attacks for threat modelling:
 
 * Jamming (smart by blocking channels or sending crafted packets, stupid by noise)
-* Impersonating (cloning) of a device
+* Impersonating (cloning) of a device (aka Spoofing)
 * Passive sniffing (if there is no link layer encryption)
 * For encrypted layer: Sniff with Ubertooth, sniff the pairing, use crackle to crack it
 * DOS a device
@@ -44,7 +44,7 @@ List of potential attacks for threat modelling:
 * MITM attacks (BTLE)
 * Social engineer users into pairing
 * MITM by cloning device. If encryption was established before, the connection will not work. The user will very likely delete/re-pair and end up paired with the attacking device
-* To break pairing: Clone device (with MAC). Now the (encrypted) connection will not work anymore. Wait for user to re-pair and sniff that. Crackle to finish
+* Unpairing: Force devices to unpair. When re-pairing happens, sniff and use *Crackle* to break encryption
 
 Not all of those potential attacks will be relevant for your use case. But
 consider all of them in your scenario. Bluetooth is a cool technology. But
@@ -74,6 +74,9 @@ The [Bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) ha
 
 Also: With Bluetooth 4.2 Elliptic Curve Diffie Hellman (ECDH) is introduced.
 Try to be compatible with this version or better !
+
+More on BLE security in the [official BLE security standard](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en)
+or the basics in [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
 
 %% TODO Experiment: Can we exchange keys using bluetoothctl ?
 %% [](https://github.com/IanHarvey/bluepy/issues/227)
@@ -187,6 +190,12 @@ is simple to write short python scripts to interact with your device.
 
 %% TODO Add examples
 
+%% ## Python Gatt programming
+%% TODO: Test
+%% GATT [](https://github.com/peplin/pygatt)
+%% Fallback [](https://github.com/getsenic/gatt-python)
+
+
 ## BlueZ
 
 BlueZ is the Linux kernel part (and user space tools) for Bluetooth.
@@ -288,6 +297,12 @@ just drop some links for this as well.
 * [ESP IDF Documentation](https://esp-idf.readthedocs.io/en/latest/get-started/#)
 * [ESP IDF Code](https://github.com/espressif/esp-idf)
 
+%% TODO ## Beacons
+%% TODO: Write
+%% Apple: iBeacon
+%% Google: [Eddystone/Physical Web](http://google.github.io/physical-web/)
+
+
 
 ## Further reading
 
@@ -373,3 +388,20 @@ Relevant if you want to create IoT locks.
 
 
 %% TODO: Review https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/
+
+%% ### MITM on BTLE
+%% * [btlejuice](https://github.com/DigitalSecurity/btlejuice)
+%% TODO: Test
+
+
+%% ### Pinging BTLE
+%% TODO: Document, including DOS
+
+### Blue Hydra
+
+[Blue Hydra](https://github.com/pwnieexpress/blue_hydra)
+
+%% ### Ubertooth Utils
+%% [Ubertooth](https://github.com/greatscottgadgets/ubertooth)
+
+%% TODO: [Hacking BLE](https://blog.attify.com/hacking-bluetooth-low-energy/)

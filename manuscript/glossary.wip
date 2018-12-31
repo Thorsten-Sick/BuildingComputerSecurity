@@ -1,3 +1,11 @@
+GAP: Advertisements, connection handling, defining device roles in communication
+GATT: Organizes the data offered by the device
+Characteristic: Value + Descriptor
+Service: Several Characteristics combined create a service. A default service for BTLE would contain device information
+Profile: Profiles combine several services. They standardize specific device classes
+L2CAP: Encapsulating data into packets
+
+
 Botnet
 
 C&C
