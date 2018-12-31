@@ -190,3 +190,9 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 %% https://github.com/k0retux/fuddly
 
 %% TODO read: http://s3.eurecom.fr/docs/ndss18_muench.pdf
+
+
+%% TODO: Fuzzing https://arxiv.org/pdf/1812.00140.pdf
+
+%% TODO: Dirbursting https://github.com/Bo0oM/fuzz.txt
+%% And: https://bo0om.ru/en/

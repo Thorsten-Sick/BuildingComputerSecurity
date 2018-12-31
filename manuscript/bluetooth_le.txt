@@ -370,3 +370,6 @@ Very dense talk on Bluetooth LE security.
 
 Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*.
 Relevant if you want to create IoT locks.
+
+
+%% TODO: Review https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/
