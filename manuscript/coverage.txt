@@ -4,14 +4,14 @@ C> By: Thorsten Sick
 
 C> For: Tester
 
-Unit testing and Code Coverage are symbiontic. Code coverage gives you
+Unit testing and Code Coverage are symbiotic. Code coverage gives you
 metrics which amount of the program code was called by the tests. And which
 code lines need more testing. It will also give you nice numbers to wave in
 front of management and explain the achievements of the last week spent
 writing tests (Pro tip: Create before and after numbers).
 
 If you have existing code and you want to add unit tests on top it is wise
-to first build your code coverage environment. Which is not as hards as it
+to first build your code coverage environment. Which is not as hard as it
 sounds because it is just compile switches and a tool to post process the
 raw data.
 
@@ -33,7 +33,7 @@ You combine those files into a report by calling
 {language="bash"}
     gcov *.gcda
 
-Which results in an overview and *gcov* files. The gcov files are annontated
+Which results in an overview and *gcov* files. The gcov files are annotated
 source files.
 The lines start with number of executions. Not-executed lines with lots '#####'.
 Next number is the line number followed by the source code.

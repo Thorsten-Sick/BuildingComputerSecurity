@@ -110,15 +110,15 @@ Your project needs a reliable and verified build system. Your developers are
 invested in more than one project and have different IDEs and libraries with
 different versions installed. Using one of those PCs is not the way to go.
 
-A virtual machine with the verified offical build tools and libraries solves
+A virtual machine with the verified official build tools and libraries solves
 the problem. And in addition you can check the Vagrant configuration into
 your VCS.
 
 The programmers have less restrictions when choosing their development tools
 and the whole team has a central build system with reliable builds. And finally
-you can answer the question "Can you also observe the bug in the offical build ?".
+you can answer the question "Can you also observe the bug in the official build ?".
 
-Even if you have no Continous Integration system running you can get some of
+Even if you have no Continuous Integration system running you can get some of
 the benefits by creating a Vagrant box to be run on the developers PCs.
 
 ### Vagrant for testing system
@@ -272,7 +272,7 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 
 %% TODO: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=kspp/gcc/mitigate-rop&id=5576f5fa57ff2fcdf041156bebf190a8f6b4dd9e
 
-%% TODO: valgrind
+%% TODO: Valgrind
 %% TODO: kcachegrind
 
 

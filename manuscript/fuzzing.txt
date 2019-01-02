@@ -29,7 +29,7 @@ This generated data can be send to any kind of input:
 If you ship software that includes 3rd party libraries or programs, you should
 fuzz those as well. You ship it to customers with your tools - you are responsible.
 
-If the project you ship involves 3rd party tools (dhcp client, dns server, ...)
+If the project you ship involves 3rd party tools (dhcp client, DNS server, ...)
 they are also valid fuzzing goals.
 
 An important step in fuzzing is to keep the relevant input data for the

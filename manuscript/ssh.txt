@@ -27,7 +27,7 @@ It is able to several things:
 * File transfer
 * Offering a VPN service
 
-That's a lot. And everything is much simpler to understand as soon as oyu know
+That's a lot. And everything is much simpler to understand as soon as you know
 the basics.
 
 ## Background
@@ -50,7 +50,7 @@ someone getting the file will still not be able to unlock it as the passphrase
 is missing.
 
 The passphrase is optional. But you should use it. There are tools that store
-it as long as ou do not reboot your computer - so you just have to enter it
+it as long as you do not reboot your computer - so you just have to enter it
 once after you log in.
 
 On a server without keyboard that has no tech person to manage it after a
@@ -71,7 +71,7 @@ folder: *~/.ssh/config*
 
 This folder also contains your key files.
 
-The configuration can store some connecrtion details for all the servers you
+The configuration can store some connection details for all the servers you
 normally connect to. Read about the features of this configuration and
 simplify your life !
 
@@ -107,7 +107,7 @@ You will generate a key - which consists of two files. One secret and one public
 
 * -t is the crypto type
 * -b is the bit length of the key
-* -C is a comment. If you use it for Github, it should be your mail address
+* -C is a comment. If you use it for GitHub, it should be your mail address
 
 As you will generate many more keys it is smart to start putting good
 comments in here.
@@ -208,7 +208,7 @@ can be a bit tricky in the non windows world with lots of different versions
 and a not-very-granular control.
 
 If you already have your SSH connection running, mounting a remote file system
-automatically on bootup is just 2 more commands.
+automatically on boot up is just 2 more commands.
 
 No reason to stick to FTP.
 
@@ -216,14 +216,14 @@ The simple tutorial is on [digitalocean](https://www.digitalocean.com/community/
 
 ## GIT
 
-Git is using SSH as basic technology to protect the connection. Using github
+Git is using SSH as basic technology to protect the connection. Using GitHub
 you are asked to submit your public key.
 
 This is all the magic involved.
 
 As you can manage several keys I advice you to generate one for each computer
 you use. That way you can delete it from the online account as soon as you
-send your computer to any kind of recycling (ebay, relatives) as files can
+send your computer to any kind of recycling (eBay, relatives) as files can
 be restored from a deleted hard disk....
 
 Also a good way to handle things: GIT can handle several remote sources. By
@@ -237,7 +237,7 @@ you can push to:
 
 Use it wisely.
 
-For the basics: [Github has a good explanation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+For the basics: [GitHub has a good explanation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ## SSH Tunneling
 
@@ -251,7 +251,7 @@ For the basics: [Github has a good explanation](https://help.github.com/articles
 
 * -N disables commands (only tunneling)
 * -C compresses
-* -D Dynamic proxy: socks4 and socks5 supported, alle ports
+* -D Dynamic proxy: socks4 and socks5 supported, all ports
     * Followed by local port to listen to
 
 After that, set up your web browser to use a proxy. Or your whole OS.
@@ -269,7 +269,7 @@ After that, set up your web browser to use a proxy. Or your whole OS.
 
 %% TODO: locking down ssh
 
-%% TODO: PYthon and SSH ?
+%% TODO: Python and SSH ?
 
 ## Telnet
 
