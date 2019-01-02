@@ -6,6 +6,9 @@
 import os
 import re
 import requests
+from collections import defaultdict
+from pprint import pprint
+import argparse
 
 class Link():
     def __init__(self, title, link, infile=None):
@@ -26,12 +29,16 @@ class Link():
             res = requests.get(self.link)
         except UnicodeError:
             print("Error with link parsing {}".format(self.link))
+        except requests.exceptions.SSLError:
+            print("Error SSL Error in {}".format(self.link))
+        except:
+            print("Error Unkown connection error {}".format(self.link))
         else:
             if res.status_code == requests.codes.ok:
                 return True
             else:
                 return False
-
+        return False
 
 class Chapter():
     def __init__(self, title, link, level = 1, infile=None):
@@ -61,6 +68,8 @@ class LeanpubVerify():
         self.chapters = []
         self.outgoingLinks = []
         self.webLinks = []
+        self.wordstatistics = defaultdict(int)
+        self.totalwords = 0
         self.getBookFiles()
         self.getChapters()
         self.getOutgoingLinks()
@@ -154,6 +163,25 @@ class LeanpubVerify():
                         print("{}->{}".format(a[0],a[1]))
                         self.outgoingLinks.append(Link(a[0], a[1]))
 
+    def wordstats(self):
+        """ Create word statistics """
+
+        self.wordstatistics = defaultdict(int)
+        self.totalwords = 0
+        print("Creating word statistics")
+        for afile in self.chapterfiles:
+            with open(os.path.join(self.basedir, afile)) as fh:
+                for line in fh:
+                    parts = re.split("\s|(?<!\d)[,.](?!\d)", line)
+                    self.totalwords += len(parts)
+                    for p in parts:
+                        self.wordstatistics[p] += 1
+        pprint(self.wordstatistics)
+        sorted_by_value = sorted(self.wordstatistics.items(), key=lambda kv: kv[1])
+        pprint(sorted_by_value)
+        print("Total words: %s".format(self.totalwords))
+
+
     def getWebLinks(self):
         """ Collect all web links
         """
@@ -183,10 +211,18 @@ class LeanpubVerify():
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Checking the book-code for errors')
+    parser.add_argument('--statistics', default=False, action="store_true", help="Create statistics")
+
+    args = parser.parse_args()
+
     lpbase="../manuscript/Book.txt"
     lpv = LeanpubVerify(lpbase)
     print(lpv.chapterfiles)
     lpv.checkChapters()
     lpv.checkLinksLocal()
     lpv.checkWebLinks()
+    if args.statistics:
+        lpv.wordstats()
     # TODO: Check external links exist
