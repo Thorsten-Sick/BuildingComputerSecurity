@@ -126,7 +126,7 @@ Other ways to reduce complexity:
 
 %% TODO: initialize variables on declaration (set to 0 or NULL)
 
-%% TODO: Maybe use Yoda conditions: https://en.wikipedia.org/wiki/Yoda_conditions
+%% TODO: Maybe use [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions)
 
 
 

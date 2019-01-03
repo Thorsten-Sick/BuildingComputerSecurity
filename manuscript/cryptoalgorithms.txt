@@ -289,4 +289,4 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% TODO: Review Book Practical Cryptography for Developers: https://cryptobook.nakov.com/
 
 
-%% TODO: Anges MD5 Attack: https://github.com/corkami/pocs/blob/master/collisions/README.md
+%% TODO: Ange's [MD5 Attack](https://github.com/corkami/pocs/blob/master/collisions/README.md)

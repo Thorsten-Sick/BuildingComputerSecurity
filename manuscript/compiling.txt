@@ -270,20 +270,20 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 
 %% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
 
-%% TODO: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=kspp/gcc/mitigate-rop&id=5576f5fa57ff2fcdf041156bebf190a8f6b4dd9e
+%% TODO: [-mmitigate-rop](https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=kspp/gcc/mitigate-rop&id=5576f5fa57ff2fcdf041156bebf190a8f6b4dd9e)
 
 %% TODO: Valgrind
 %% TODO: kcachegrind
 
 
-%% https://gist.github.com/kwk/4171e37f4bcdf7705329
+%% [ASAN Makefile example](https://gist.github.com/kwk/4171e37f4bcdf7705329)
 %% TODO: Write and check the example
 
 %% ## C#
-%% Thread Sanitizer: http://www.mono-project.com/docs/debug+profile/clang/threadsanitizer/
-%% ASAN: http://www.mono-project.com/docs/debug+profile/clang/addresssanitizer/
-%% Profiling: http://www.mono-project.com/docs/debug+profile/profile/
+%% [C# Thread Sanitizer](http://www.mono-project.com/docs/debug+profile/clang/threadsanitizer/)
+%% [C# ASAN](http://www.mono-project.com/docs/debug+profile/clang/addresssanitizer/)
+%% [C# Profiling](http://www.mono-project.com/docs/debug+profile/profile/)
 
 
 
-%% Sanitizer: https://arxiv.org/pdf/1806.04355.pdf
+%% [Systematic sanitizer overview](https://arxiv.org/pdf/1806.04355.pdf)
