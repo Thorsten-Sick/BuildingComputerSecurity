@@ -169,6 +169,10 @@ class LeanpubVerify():
     def wordstats(self):
         """ Create word statistics """
 
+        # TODO: Skip common words
+        # TODO: Create nice word clouds
+        # TODO: Statistics by chapter and in total !
+
         self.wordstatistics = defaultdict(int)
         self.totalwords = 0
         if self.verbose:
@@ -237,4 +241,3 @@ if __name__ == "__main__":
         lpv.checkWebLinks()
     if args.statistics:
         lpv.wordstats()
-    # TODO: Check external links exist
