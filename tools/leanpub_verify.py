@@ -220,15 +220,15 @@ if __name__ == "__main__":
     parser.add_argument('--statistics', default=False, action="store_true", help="Create statistics")
     parser.add_argument('--alltests', default=False, action="store_true", help="Run all tests")
     parser.add_argument('--chaptertests', default=False, action="store_true", help="Chapter tests - tests consistency")
-    parser.add_argument('--linktests', default=False, action="store_true", help="Check consistent structure of links")
-    parser.add_argument('--connectivitytests', default=False, action="store_true", help="Check if web pages are reachable")
+    parser.add_argument('--linktests', default=False, action="store_true", help="Check consistent structure of internal links")
+    parser.add_argument('--weblinktests', default=False, action="store_true", help="Check if web pages are reachable")
     parser.add_argument('--verbose', default=False, action="store_true", help="Verbose output")
 
 
     args = parser.parse_args()
 
     lpbase="../manuscript/Book.txt"
-    lpv = LeanpubVerify(lpbase, verbose=args.verbose)    
+    lpv = LeanpubVerify(lpbase, verbose=args.verbose)
     if args.alltests or args.chaptertests:
         lpv.checkChapters()
     if args.alltests or args.linktests:
