@@ -79,9 +79,9 @@ More on BLE security in the [official BLE security standard](https://www.bluetoo
 or the basics in [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
 
 %% TODO Experiment: Can we exchange keys using bluetoothctl ?
-%% [](https://github.com/IanHarvey/bluepy/issues/227)
+%% [Pairing key](https://github.com/IanHarvey/bluepy/issues/227)
 
-%% Maybe bluepy gets a OOB feature: https://github.com/IanHarvey/bluepy/issues/300   (not existing yet !)
+%% Maybe bluepy gets [OOB for bluepy](https://github.com/IanHarvey/bluepy/issues/300)   (not existing yet !)
 
 ## Nordic Semiconductor: nRF Connect
 
@@ -192,8 +192,8 @@ is simple to write short python scripts to interact with your device.
 
 %% ## Python Gatt programming
 %% TODO: Test
-%% GATT [](https://github.com/peplin/pygatt)
-%% Fallback [](https://github.com/getsenic/gatt-python)
+%% [PyGatt](https://github.com/peplin/pygatt)
+%% [Gatt-Python](https://github.com/getsenic/gatt-python)
 
 
 ## BlueZ
@@ -247,7 +247,7 @@ See the [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issue
 %% * Jamming BLE connections
 %% * Hijacking connections
 %% * Can export sniffed packets as PCAP
-%% https://www.heise.de/security/meldung/Btlejack-Neues-Gratis-Tool-zum-Belauschen-von-Bluetooth-Verbindungen-4134142.html
+%% [BTLEJack German](https://www.heise.de/security/meldung/Btlejack-Neues-Gratis-Tool-zum-Belauschen-von-Bluetooth-Verbindungen-4134142.html)
 
 %% END TODO Test
 
@@ -348,7 +348,7 @@ It also covers BTLE 5.0
 
 %% Also contains tools and iOS/Android howtos.
 
-%% TODO: Add BleedingBit attack: https://armis.com/bleedingbit/
+%% TODO: Add [BleedingBit attack](https://armis.com/bleedingbit/)
 
 ### Woot13 presentation on BTLE hacking (especially sniffing) {#reference-presentation-btle-sniffing}
 
@@ -387,7 +387,7 @@ Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*.
 Relevant if you want to create IoT locks.
 
 
-%% TODO: Review https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/
+%% TODO: Review [Practical guide to BLE](https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/)
 
 %% ### MITM on BTLE
 %% * [btlejuice](https://github.com/DigitalSecurity/btlejuice)

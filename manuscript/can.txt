@@ -189,19 +189,19 @@ A very good book covering hacking of cars. With a big focus on CAN bus hacking.
 There is a free version for it available on *opengarages.org* but this page
 can currently not be reached. I wish you luck.
 
-%% TODO: https://nostarch.com/carhacking
-%% TODO: http://opengarages.org/handbook/
+%% TODO: [Car Hacker's Handbook paid](https://nostarch.com/carhacking)
+%% TODO: [Car Hacker's Handbook free](http://opengarages.org/handbook/)
 
 %% [Vehicle hacking blog post](https://fabiobaltieri.com/2013/07/23/hacking-into-a-vehicle-can-bus-toyothack-and-socketcan/)
 
 %% [Cheap CAN Adapter](https://shop.8devices.com/usb2can?product_id=54)
 
-%% TODO: http://savvycan.com/
-%% TODO: https://github.com/collin80/M2RET
+%% TODO: [SavvyCAN](http://savvycan.com/)
+%% TODO: [GVRET fork to Macchina M2 board](https://github.com/collin80/M2RET)
 
-%% TODO: CAN-Bus Fahren https://media.ccc.de/v/8C8XTC
+%% TODO: [CAN-Bus Fahren](https://media.ccc.de/v/8C8XTC)
 %% Macchina M2 Board zum Car hacken
 
-%% https://news.hitb.org/content/backdooring-connected-cars-bicho
+%% [The Bicho](https://news.hitb.org/content/backdooring-connected-cars-bicho)
 
-%% https://www.theregister.co.uk/2017/12/22/nissan_canada_hacked/
+%% [Nissan hacked](https://www.theregister.co.uk/2017/12/22/nissan_canada_hacked/)

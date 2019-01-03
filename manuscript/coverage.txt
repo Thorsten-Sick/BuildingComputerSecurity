@@ -46,6 +46,6 @@ Next step is to go looking for none executed lines and start testing them to
 improve your score.
 
 
-%% TODO: CLANG https://clang.llvm.org/docs/SourceBasedCodeCoverage.html
+%% TODO: [CLANG Source BAsed Coverage](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)
 
-%% TODO: Documentation https://gcc.gnu.org/onlinedocs/gcc/Gcov.html
+%% TODO: [Gcov Documentation](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)

@@ -241,10 +241,10 @@ For the basics: [GitHub has a good explanation](https://help.github.com/articles
 
 ## SSH Tunneling
 
-%% [http://www.netzmafia.de/skripten/internet/ssh-tunnel.html] (Tunnel Deutsch)
-%% https://www.ssh.com/ssh/tunneling/exampleq
-%% https://www.ssh.com/ssh/#sec-Running-amp-configuring-SSH
-%% https://collaboradev.com/2011/08/03/browsing-the-web-through-an-ssh-tunnel-putty-firefox/
+%% [Tunnel Deutsch](http://www.netzmafia.de/skripten/internet/ssh-tunnel.html)
+%% [Tunnel](https://www.ssh.com/ssh/tunneling/exampleq)
+%% [Tunnel](https://www.ssh.com/ssh/#sec-Running-amp-configuring-SSH)
+%% [Putty and Tunnel](https://collaboradev.com/2011/08/03/browsing-the-web-through-an-ssh-tunnel-putty-firefox/)
 
 {lang="bash"}
     ssh -N -C -D 2080 mytunnelserver
@@ -260,7 +260,7 @@ After that, set up your web browser to use a proxy. Or your whole OS.
 
 %% ## Mass SSH
 
-%% mass ssh https://github.com/trimstray/massh-enum
+%% [mass ssh](https://github.com/trimstray/massh-enum)
 
 
 %% X Forwarding
