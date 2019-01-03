@@ -1,4 +1,4 @@
-# Code Coverage
+# Code Coverage {#chapter-code-coverage}
 
 C> By: Thorsten Sick
 
