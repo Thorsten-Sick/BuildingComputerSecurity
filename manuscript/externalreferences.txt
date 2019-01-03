@@ -109,45 +109,50 @@ understand those patterns and learn how to eliminate them.
 A list of easy to read books (even for non-tech people) that can be used to
 introduce people into the shady world of security
 
+## Workshops
 
-%% TODO: http://opensecuritytraining.info/Training.html
-
-%% TODO: CTF: https://apsdehal.in/awesome-ctf/
-
-%% https://google-gruyere.appspot.com/
-
-%% Vulnerable Web Applications:  https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project.
+%% TODO: [Open Security Training](http://opensecuritytraining.info/Training.html)
+%% [Reverse Engineering for Beginners](https://www.begin.re/)
 
 
-%% Hardsploit: https://hardsploit.io/
+## CTF
+%% TODO: [Awesome CTF](https://apsdehal.in/awesome-ctf/)
 
-%% Phishtank https://www.phishtank.com/
-%% stopbadware.org
+%% TODO [Gruyere CTF](https://google-gruyere.appspot.com/)
 
-%% https://www.safaribooksonline.com/library/view/beginning-software-engineering/9781118969175/
+%% [Vulnerable Web Applications](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
+%% [More CTF](https://twitter.com/realgam3/status/1009805751894896640?s=09)
 
-%% https://www.safaribooksonline.com/library/view/managing-the-unmanageable/9780132981187/
-
-%% https://www.safaribooksonline.com/library/view/agile-estimating-and/9780137126347/
-
-%% Re Workshop: https://www.begin.re/
-
-%% Time for attackers and defenders : https://www.recordedfuture.com/cyber-operations-time/
-
-%% More CTF: https://twitter.com/realgam3/status/1009805751894896640?s=09
-
-%% https://github.com/VulnHub/ctf-writeups/tree/master/2017/alexctf
-
-%% https://exploit-exercises.com/
-
-%% Security resource list: https://github.com/sbilly/awesome-security
-
-%% https://www.iamthecavalry.org/
+%% [CTF writeups](https://github.com/VulnHub/ctf-writeups/tree/master/2017/alexctf)
+%% [CTF by Samsung](https://research.samsung.com/sctf)
 
 
-%% https://github.com/sindresorhus/awesome
+## Economics
 
-%% Malware economics: https://www.techrepublic.com/article/starting-at-40-hackers-can-attack-your-business-with-services-bought-on-the-dark-web/#ftag=RSS56d97e7
+%% [Time for attackers and defenders](https://www.recordedfuture.com/cyber-operations-time/)
+%% [Malware economics](https://www.techrepublic.com/article/starting-at-40-hackers-can-attack-your-business-with-services-bought-on-the-dark-web/#ftag=RSS56d97e7)
 
 
-%% CTF by Samsung: https://research.samsung.com/sctf
+
+
+
+%% IoT [Hardsploit](https://hardsploit.io/)
+
+%% [Phishtank](https://www.phishtank.com/)
+%% [stopbadware.org](https://www.stopbadware.org/)
+
+%% [Beginning Software Engineering](https://www.safaribooksonline.com/library/view/beginning-software-engineering/9781118969175/)
+
+%% [Managing the Unmanageable](https://www.safaribooksonline.com/library/view/managing-the-unmanageable/9780132981187/)
+
+%% [Agile Estimating and Planning](https://www.safaribooksonline.com/library/view/agile-estimating-and/9780137126347/)
+
+
+
+
+%% [Security resource list](https://github.com/sbilly/awesome-security)
+
+%% IOT [I Am the Cavalry](https://www.iamthecavalry.org/)
+
+
+%% [General Awesome List](https://github.com/sindresorhus/awesome)
