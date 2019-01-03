@@ -187,21 +187,24 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 %% TODO run under Valgrind or strace or gdb
 
-%% Naughty strings: https://github.com/minimaxir/big-list-of-naughty-strings
+%% [Naughty strings](https://github.com/minimaxir/big-list-of-naughty-strings)
 
 
-%% https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp
+%% TODO: Good example on how to handle bugs found by fuzzer: [Fuzzing Counter-Strike: Global Offensive maps files with AFL](https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp)
 
-%% https://github.com/k0retux/fuddly
-
-%% TODO read: http://s3.eurecom.fr/docs/ndss18_muench.pdf
+%% [Fuddly Framework](https://github.com/k0retux/fuddly)
 
 
-%% TODO: Fuzzing https://arxiv.org/pdf/1812.00140.pdf
+%% PAPER:
 
-%% TODO: Angora fuzzing (no code released yet): https://arxiv.org/abs/1803.01307
+%% TODO: [Fuzzing: Art, Science, and Engineering](https://arxiv.org/pdf/1812.00140.pdf)
+%% TODO: [Angora: Efficient Fuzzing by Principled Search](https://arxiv.org/abs/1803.01307)
+%% TODO read: [What You Corrupt Is Not What You Crash:
+Challenges in Fuzzing Embedded Devices](http://s3.eurecom.fr/docs/ndss18_muench.pdf)
 
-%% TODO: https://github.com/evilsocket/wax
 
-%% TODO: Dirbursting https://github.com/Bo0oM/fuzz.txt
-%% And: https://bo0om.ru/en/
+
+%% TODO: [Wax fuzzing](https://github.com/evilsocket/wax)
+
+%% TODO: [Dirbursting](https://github.com/Bo0oM/fuzz.txt)
+%% And: [DNS XSS](https://bo0om.ru/en/)
