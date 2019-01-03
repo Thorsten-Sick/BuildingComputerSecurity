@@ -276,4 +276,4 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 %% http/https connection debugging, response headers and mixed content usin nmap, mozilla observatory and ssl labs [htrace](https://github.com/trimstray/htrace.sh)
 
-%% TODO: Read: https://datatracker.ietf.org/meeting/103/materials/slides-103-irtfopen-johanna-amann-anrp-talk-mission-accomplished-https-after-diginotar-02
+%% TODO: Read: [Mission Accomplished? HTTPS Security after DigiNotar](https://datatracker.ietf.org/meeting/103/materials/slides-103-irtfopen-johanna-amann-anrp-talk-mission-accomplished-https-after-diginotar-02)

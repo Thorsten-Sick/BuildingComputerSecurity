@@ -200,7 +200,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 %% TODO: [Fuzzing: Art, Science, and Engineering](https://arxiv.org/pdf/1812.00140.pdf)
 %% TODO: [Angora: Efficient Fuzzing by Principled Search](https://arxiv.org/abs/1803.01307)
 %% TODO read: [What You Corrupt Is Not What You Crash:
-Challenges in Fuzzing Embedded Devices](http://s3.eurecom.fr/docs/ndss18_muench.pdf)
+%% [Challenges in Fuzzing Embedded Devices](http://s3.eurecom.fr/docs/ndss18_muench.pdf)
 
 
 

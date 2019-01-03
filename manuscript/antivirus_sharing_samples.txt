@@ -170,4 +170,4 @@ AFAIK this has never been done before and I do not know it it will work.
 But as we live in desperate times...I hate peer pressure. But it gets the job done
 
 
-%% TODO: FP reduction: https://www.techrepublic.com/article/microsoft-5-tips-for-developers-to-reduce-malware-false-positives/#ftag=RSS56d97e7
+%% TODO: [FP reduction](https://www.techrepublic.com/article/microsoft-5-tips-for-developers-to-reduce-malware-false-positives/#ftag=RSS56d97e7)

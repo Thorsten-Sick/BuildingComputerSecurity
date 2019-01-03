@@ -391,9 +391,9 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO: [Miner](https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/)
 
-%% https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html
+%% [Google Cloud Ultramem machines](https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html)
 
-%% TODO: CanOnion header idea - so pages can re-direct: https://twitter.com/AlecMuffett/status/1054789626156720134
+%% TODO: [CanOnion header idea - so pages can re-direct](https://twitter.com/AlecMuffett/status/1054789626156720134)
 
 %% TODO: [HTTPLab (interactive web server)](https://github.com/gchaincl/httplab)
 

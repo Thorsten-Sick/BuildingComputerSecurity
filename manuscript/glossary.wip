@@ -5,6 +5,7 @@ Service: Several Characteristics combined create a service. A default service fo
 Profile: Profiles combine several services. They standardize specific device classes
 L2CAP: Encapsulating data into packets
 
+FP:
 
 Botnet
 

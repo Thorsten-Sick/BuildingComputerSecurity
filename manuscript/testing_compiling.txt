@@ -86,7 +86,7 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
 %% TODO [CheckSec](https://github.com/slimm609/checksec.sh)
 
-%% TODO: https://googleprojectzero.blogspot.com/2018/12/searching-statically-linked-vulnerable.html
+%% TODO: [Searching statically-linked vulnerable library functions in executable code](https://googleprojectzero.blogspot.com/2018/12/searching-statically-linked-vulnerable.html)
 
 ## Attached info
 
