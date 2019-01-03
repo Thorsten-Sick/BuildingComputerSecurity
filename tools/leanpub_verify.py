@@ -61,7 +61,7 @@ class Chapter():
 
 class LeanpubVerify():
 
-    def __init__(self, basefile, basedir="../manuscript"):
+    def __init__(self, basefile, basedir="../manuscript", verbose=False):
         self.basefile = basefile
         self.basedir = basedir
         self.chapterfiles = []
@@ -70,6 +70,7 @@ class LeanpubVerify():
         self.webLinks = []
         self.wordstatistics = defaultdict(int)
         self.totalwords = 0
+        self.verbose=verbose
         self.getBookFiles()
         self.getChapters()
         self.getOutgoingLinks()
@@ -110,7 +111,8 @@ class LeanpubVerify():
                             title = line[level+1:]
                         title = title.strip()
                         self.chapters.append(Chapter(title, link, level, afile))
-                        print("{}:{}".format(title, link))
+                        if self.verbose:
+                            print("{}:{}".format(title, link))
 
     def checkChapters(self, up_to_level=1):
         """
@@ -160,7 +162,8 @@ class LeanpubVerify():
                 for line in fh:
                     matches = linkpattern.findall(line)
                     for a in matches:
-                        print("{}->{}".format(a[0],a[1]))
+                        if self.verbose:
+                            print("{}->{}".format(a[0],a[1]))
                         self.outgoingLinks.append(Link(a[0], a[1]))
 
     def wordstats(self):
@@ -168,7 +171,8 @@ class LeanpubVerify():
 
         self.wordstatistics = defaultdict(int)
         self.totalwords = 0
-        print("Creating word statistics")
+        if self.verbose:
+            print("Creating word statistics")
         for afile in self.chapterfiles:
             with open(os.path.join(self.basedir, afile)) as fh:
                 for line in fh:
@@ -176,7 +180,6 @@ class LeanpubVerify():
                     self.totalwords += len(parts)
                     for p in parts:
                         self.wordstatistics[p] += 1
-        pprint(self.wordstatistics)
         sorted_by_value = sorted(self.wordstatistics.items(), key=lambda kv: kv[1])
         pprint(sorted_by_value)
         print("Total words: %s".format(self.totalwords))
@@ -186,7 +189,8 @@ class LeanpubVerify():
         """ Collect all web links
         """
 
-        print("Searching links")
+        if self.verbose:
+            print("Searching links")
         linkpattern = re.compile("(\[.*?\]\()?(?P<url>https?://[^\s]+)")
         for afile in self.chapterfiles:
             with open(os.path.join(self.basedir, afile)) as fh:
@@ -203,8 +207,8 @@ class LeanpubVerify():
                                 lnk = lnk[:-2]
                             if lnk.endswith(")"):
                                 lnk = lnk[:-1]
-
-                        print("{}->{}".format(desc, lnk))
+                        if self.verbose:
+                            print("{}->{}".format(desc, lnk))
                         self.webLinks.append(Link(desc, lnk, infile=afile))
 
 
@@ -214,15 +218,23 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Checking the book-code for errors')
     parser.add_argument('--statistics', default=False, action="store_true", help="Create statistics")
+    parser.add_argument('--alltests', default=False, action="store_true", help="Run all tests")
+    parser.add_argument('--chaptertests', default=False, action="store_true", help="Chapter tests - tests consistency")
+    parser.add_argument('--linktests', default=False, action="store_true", help="Check consistent structure of links")
+    parser.add_argument('--connectivitytests', default=False, action="store_true", help="Check if web pages are reachable")
+    parser.add_argument('--verbose', default=False, action="store_true", help="Verbose output")
+
 
     args = parser.parse_args()
 
     lpbase="../manuscript/Book.txt"
-    lpv = LeanpubVerify(lpbase)
-    print(lpv.chapterfiles)
-    lpv.checkChapters()
-    lpv.checkLinksLocal()
-    lpv.checkWebLinks()
+    lpv = LeanpubVerify(lpbase, verbose=args.verbose)    
+    if args.alltests or args.chaptertests:
+        lpv.checkChapters()
+    if args.alltests or args.linktests:
+        lpv.checkLinksLocal()
+    if args.alltests or args.connectivitytests:
+        lpv.checkWebLinks()
     if args.statistics:
         lpv.wordstats()
     # TODO: Check external links exist
