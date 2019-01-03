@@ -233,7 +233,7 @@ if __name__ == "__main__":
         lpv.checkChapters()
     if args.alltests or args.linktests:
         lpv.checkLinksLocal()
-    if args.alltests or args.connectivitytests:
+    if args.alltests or args.weblinktests:
         lpv.checkWebLinks()
     if args.statistics:
         lpv.wordstats()
