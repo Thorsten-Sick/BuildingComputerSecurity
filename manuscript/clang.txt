@@ -57,6 +57,8 @@ It will use the project's Makefile to build the project and analyse it afterward
     sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
     scan-build <C-Compiler and it's settings>
 
+%% TODO: https://clang-analyzer.llvm.org/available_checks.html
+
 ## Dynamic code analysis
 
 With Clang you can add some compile switches to activate several Dynamic Code
