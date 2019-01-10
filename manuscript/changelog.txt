@@ -19,6 +19,9 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: extend know your enemies
 %% TODO: BLE, including Gattack.io
 
+## January 2019
+
+* Added **Software design checklist**
 
 ## December 2018
 

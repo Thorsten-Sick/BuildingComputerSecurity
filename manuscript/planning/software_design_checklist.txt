@@ -1,0 +1,65 @@
+# Software Design Checklist {#chapter-design-checklist}
+
+C> By Thorsten Sick
+
+C> For Designers, Managers, Architects and Developers
+
+## My secret source
+
+Software design is a big time investment. In your lifetime you will not be
+able to make all possible design mistakes and learn from them.
+
+So you have to learn from other peoples mistakes.
+
+Hacker talks where they tell you how they broke software and hardware of
+other vendors is a very good source. I just add some generalisation to the
+flaws uncovered there and add it to this list.
+
+And my own, secret list....as this book tries to be as generic as possible I
+will just leave very specific issues out.
+
+So you will have to take this generic list and add your own specific
+experience to it.
+
+## Checklist
+
+* Session Ids can be brute forced. Make them really long
+    * Detect brute forcing attacks and  slow down the speed for that connection
+    * Keep in mind: Do not add a DDOS vulmerability that way
+* Decide how long a session is valid. Find a reasonable timeout
+* If you use webviews: Can HTML code be injected by the attacker ? Would scripts be executed ?
+* If you use Tokens: Make them really long
+* Can security relevant data (private key, ...) be read or written ?
+    * If the attacker can set a chosen key it is sometimes as good as writing it
+* Is SQL injection possible ?
+* When is your data unencrypted ?
+    * Check data in transit
+    * Check data on storage
+* Are passwords stored securely (unsalted SHA1 are bad)
+* If you use a Web browser as client: All data in forms or in the URL can be modified by an attacker
+    * Do not trust user supplied user ids, user names, ... when modifying user setting (like passwords)
+    * Only use tokens to identify the user after login
+    * tokens must be long and link to the user's data in your backend DB
+* Check **all** entry points to your service
+* Does an attacker have all the data to enable him to do *offline* password cracking ?
+        * processing power is cheap
+        * if a verification that a guessed password is correct can be done offline, brute force is possible
+
+
+## Further reading
+
+T> ## International
+T>
+T> The CCC is a German hacker group and runs events. Talks are often in
+T> German or English.
+T>
+T> But many CCC talks are translated or have subtitles. Please check the setting
+T> of the video.
+
+### Specific
+
+* [35C3 All your Gesundheitsakten are belong to us](https://media.ccc.de/v/35c3-9992-all_your_gesundheitsakten_are_belong_to_us)
+
+### Sources for talks
+
+* [Media.CCC.de](https://media.ccc.de/)

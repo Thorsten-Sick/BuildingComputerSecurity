@@ -7,6 +7,7 @@ attackers_goals.txt
 principles.txt
 planning/part_planning.txt
 design.txt
+planning/software_design_checklist.txt
 ux.txt
 updates.txt
 passwords.txt
