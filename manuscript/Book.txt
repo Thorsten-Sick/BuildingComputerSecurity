@@ -31,7 +31,7 @@ coverage.txt
 fuzzing.txt
 part_tools.txt
 ssh.txt
-part_offense.txt
+offense/part_offense.txt
 part_bolt_on.txt
 antivirus_tests.txt
 antivirus_integration.txt
