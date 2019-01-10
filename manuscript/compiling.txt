@@ -261,6 +261,8 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 * Do not leave debug symbols in the released binary. **DO NOT ADD** *-g*
     * Call the *strip* command on your binary to remove the debug symbols
 
+%% TODO: GCC GCC's -fstack-clash-protection
+
 %% .. TODO: * heap protector:
 %% .. TODO: * libc pointer encryption:
 
