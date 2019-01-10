@@ -62,4 +62,4 @@ T> of the video.
 
 ### Sources for talks
 
-* [Media.CCC.de](https://media.ccc.de/)
+* [media.ccc.de](https://media.ccc.de/)
