@@ -1,0 +1,57 @@
+# Google Dork {#chapter-google-dork}
+
+
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester, Pen Tester
+
+## Basics
+
+Google Dorks are a simple and passive way to enumerate vulnerable systems
+on the internet. All web pages and web apps are a potential target.
+
+By using advanced google searches the attacker searches for indicator for
+known vulnerabilities.
+
+This can be a specific part of the url path using the google *inurl* search.
+
+
+%% TODO Examples
+
+## SEO expertise
+
+This is basically the Search Engine Optimization knowldege field (SEO).
+As you are using  more advanced search engine features. If you want to go
+for Google Dorks SEO knowledge is your friend.
+
+|Action            |Google command  |DuckDuckGo command  |
+|------------------|----------------|--------------------|
+|Find on site      |site:example.com|site:example.com    |
+|Find by filetype  |filetype:txt    |filetype:txt        |
+|Find parts of url |inurl:bar       |inurl:bar[^broken]  |
+|Find in title     |intitle:foo     |intitle:foo         |
+
+[^broken]: This feature seems to be broken at the moment
+
+[Google SEO blog post](https://www.searchenginejournal.com/google-search-operators-commands/215331/)
+[DuckDuckGo advanced search](https://duck.co/help/results/syntax)
+
+## Vulnerability indicators
+
+Many web sites use existing web frameworks and applications
+(blogs, forums, shops) and only change configuration and style. Which is fine.
+No one has to re-invent the wheel. But this software is complex. Complex
+software contains bugs. And if it not patched after a vulnerability gets
+published the service or one of the plugins can be attacked.
+
+Finding these vulnerable sites is much easier with an exploit database like
+[exploit-db.com](https://www.exploit-db.com/google-hacking-database/).
+
+## Further reading
+
+[Mastering Kali Linux for Advanced Penetration Testing - Second Edition](https://learning.oreilly.com/library/view/mastering-kali-linux/9781787120235)
+
+%% TODO Review [Google Hacking for Penetration Testers 3rd edition](https://learning.oreilly.com/library/view/google-hacking-for/9780128029824/)
+
+
+%% TODO Review [Practical Web Penetration Testing](https://learning.oreilly.com/library/view/practical-web-penetration/9781788624039/)

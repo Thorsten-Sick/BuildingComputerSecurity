@@ -21,7 +21,8 @@ changelog to make it simpler for you to find the new sections.
 
 ## January 2019
 
-* Added **Software design checklist**
+* Added **Software design checklist** (initial version)
+* Added **Google Dorks**
 
 ## December 2018
 
