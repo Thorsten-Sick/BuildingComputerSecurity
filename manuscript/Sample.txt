@@ -14,6 +14,7 @@ testing/flawfinder.txt
 part_bolt_on.txt
 bolt_on/antivirus_tests.txt
 externalreferences.txt
+glossary.txt
 theauthor.txt
 authors.txt
 changelog.txt

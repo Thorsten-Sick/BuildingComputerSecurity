@@ -1,6 +1,5 @@
 Adware: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 APT: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
-
 BLE: Bluetooth Low Energy
 BLE GAP: Advertisements, connection handling, defining device roles in communication
 BLE GATT: Organizes the data offered by the device
@@ -10,46 +9,23 @@ BLE L2CAP: Encapsulating data into packets
 BLE Profile: Profiles combine several services. They standardize specific device classes
 Botnet: Infected machines cdentrally controlled by the attacker using a C&C
 Bug: Error made in the programming phase. Not all bugs are vulnerabilities
-
-
-
 C&C: Command and Control server. Central control over a botnet
-
-DOS:
-DDOS:
+DOS: Denial Of Service - Attack that exhausts resources of the target (cpu, memory, network, storage)
+DDOS: Distributes DOS - Attack is done by many systems in parallel
 Exploit: Attack on a vulnerability
 Flaw: Error made in the design phase. Not all flaws are vulnerabilities
-
 FP: False Positive. A harmless URL or file is detected as malicious
-
-
-Deep Packet Inspection:
-
-EFF:
-
+%% Deep Packet Inspection:
+%% EFF:
 IOC: Indicator of Compromise. A file-hash, url, registry key or similar feature left by the malware when a system is infected.
-
-MITM: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
-
-
 Malware: Malicious software
-
-
-
-MISRA
-
-Static Code analysis
-
-PE
-
-ELF
-
-CSRF
-
-XSS
-
-Class break
-
-Weaponizing: Making an exploit easy and reliable to use.
-
+MITM: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
+%% MISRA
+%% Static Code analysis
+%% PE
+%% ELF
+%% CSRF
+%% XSS
+%% Class break
 Vulnerability: A bug or a flaw that has security implications
+Weaponizing: Making an exploit easy and reliable to use.
