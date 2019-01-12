@@ -49,9 +49,8 @@ Finding these vulnerable sites is much easier with an exploit database like
 
 ## Further reading
 
-[Mastering Kali Linux for Advanced Penetration Testing - Second Edition](https://learning.oreilly.com/library/view/mastering-kali-linux/9781787120235)
-
 %% TODO Review [Google Hacking for Penetration Testers 3rd edition](https://learning.oreilly.com/library/view/google-hacking-for/9780128029824/)
 
+[Mastering Kali Linux for Advanced Penetration Testing - Second Edition](https://learning.oreilly.com/library/view/mastering-kali-linux/9781787120235)
 
 %% TODO Review [Practical Web Penetration Testing](https://learning.oreilly.com/library/view/practical-web-penetration/9781788624039/)
