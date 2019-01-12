@@ -23,6 +23,8 @@ changelog to make it simpler for you to find the new sections.
 
 * Added **Software design checklist** (initial version)
 * Added **Google Dorks**
+%% TODO: Add Takeaways to all the offensive stuff.
+
 
 ## December 2018
 
