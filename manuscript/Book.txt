@@ -40,9 +40,10 @@ bolt_on/antivirus_integration.txt
 bolt_on/antivirus_sharing_samples.txt
 bolt_on/antivirus_virustotal.txt
 bolt_on/antivirus_classification_behaviour_based.txt
-externalreferences.txt
-glossary.txt
-theauthor.txt
-authors.txt
-changelog.txt
-license.txt
+appendix/part_appendix.txt
+appendix/externalreferences.txt
+appendix/glossary.txt
+appendix/theauthor.txt
+appendix/authors.txt
+appendix/changelog.txt
+appendix/license.txt
