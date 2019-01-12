@@ -44,6 +44,13 @@ experience to it.
 * Does an attacker have all the data to enable him to do *offline* password cracking ?
         * processing power is cheap
         * if a verification that a guessed password is correct can be done offline, brute force is possible
+* Using esoteric or uncommon components (CPU, libraries) will not protect you
+* De-activate debugging features before shipping
+* Expect your software/firmware to be on the internet somewhere (FTP server)
+    * Security-by-obscruity is no protection your plans should depend on !
+* Attackers will be able to read your code even if they have only the compiled binary (firmware / .exe / ...) using disassemblers
+    * Security-by-obscruity is no protection your plans should depend on !
+* If you use a non-existing URL for testing internet connectivity - register it before someone else does.
 
 
 ## Further reading
@@ -58,7 +65,11 @@ T> of the video.
 
 ### Specific
 
+Some hacking talks that worked well as source for information. There are many
+more, those are just some examples.
+
 * [35C3 All your Gesundheitsakten are belong to us](https://media.ccc.de/v/35c3-9992-all_your_gesundheitsakten_are_belong_to_us)
+* [35C3 What the Fax?!](https://media.ccc.de/v/35c3-9462-what_the_fax)
 
 ### Sources for talks
 
