@@ -24,7 +24,10 @@ changelog to make it simpler for you to find the new sections.
 * Added **Software design checklist** (initial version)
 * Added **Google Dorks**
 %% TODO: Add Takeaways to all the offensive stuff.
-
+%% TODO: Add defense to all the offensive stuff
+%% TODO: Add "intro" to all the parts
+%% TODO: Link new stuff to book structure chapter
+* Added **Glossary**
 
 ## December 2018
 
