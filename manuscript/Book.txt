@@ -36,6 +36,7 @@ offense/part_offense.txt
 offense/intro.txt
 offense/google_dork.txt
 offense/beef.txt
+offense/burp.txt
 bolt_on/part_bolt_on.txt
 bolt_on/antivirus_tests.txt
 bolt_on/antivirus_integration.txt

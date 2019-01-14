@@ -1,0 +1,148 @@
+# Changelog {#chapter-changelog}
+
+I want to "release early - release often". For this reason I will add a
+changelog to make it simpler for you to find the new sections.
+
+
+%% Extend defensive programming / compiling
+%% Plan: Valgrind extra
+%% Plan: Verify external libs
+%% Plan: Monitor exploits
+%% Plan: More on Unit tests
+%% Plan: Cryptoalgorithm tables need fixing
+%% Plan design
+%% grep for "todo" and "safari". Fix this. Also add amazon alternative
+
+%% TODO: Add part_attacks
+%% TODO: Add Part_tools (openssl, git, nmap, )
+%% TODO: extend attacks goals
+%% TODO: extend know your enemies
+%% TODO: BLE, including Gattack.io
+
+## January 2019
+
+* Added **Software design checklist** (initial version)
+* Added **Google Dorks**
+%% TODO: Add Takeaways to all the offensive stuff.
+%% TODO: Add defense to all the offensive stuff
+%% TODO: Add "intro" to all the parts
+%% TODO: Link new stuff to book structure chapter
+* Added **Glossary**
+* Added part **Appendix**
+* Added basic **beef** chapter
+* Added basic **burp suite** chapter
+
+
+## December 2018
+
+* Enhanced book list of defensive programming
+* **SSH** chapter added
+* Added **Code Coverage** chapter
+* Improved *Fuzzing* chapter
+* Added Vagrant to *compiling* chapter
+* Extended *CppCheck*
+* Small things in:
+    * *Antivirus sharing samples*
+    * *clang*
+
+
+## November 2018
+
+* Enhanced *defensive programming*
+* Added *design*
+* Enhanced "attacker's goals"
+* Enhanced *passwords*
+* Enhanced *clang*
+* Cleaning up the book, adding parts
+    * Chapters got moved around
+* Enhanced *This book*
+* Enhanced *The author*
+* Enhanced *structure*
+* Clean up crypto algorithm tables
+* Enhanced *antivirus testing*
+* Added *antivirus testing* to the sample
+* unhooked external references
+* Kehrwoche: ASpell for all text parts in "sample"
+
+## October 2018
+
+* Added *cryptoalgorithms*
+* Re-worked *Asserts*
+    * It got an own chapter
+    * Python added
+    * JavaScript added
+* Extended principles
+* Added *testing* chapter. Especially for unit testing and bug bounties (basics)
+* TLS got a diagram and minor improvements
+* *Clang* chapter added
+* Added *cryptoalgorithms* to Sample
+
+
+
+
+## September 2018
+
+* *CAN bus hacking*
+* *Bluetooth LE (BLE)*
+* Added *code analysis tools requirements* table for an overview
+* URLs now in footnotes
+* Content chapter added
+* Chapter *Antivirus Behaviour classification* added
+* added *code analysis tools requirements* to Sample
+
+## August 2018
+
+This is the holiday release: Focus is on improving text quality
+of existing chapters.
+
+* Extended "Principles"
+* Added new chapter "browser security" (not finished yet)
+* Added new chapter "IoT security" (not finished yet)
+* Quality improvements in
+    * defensive programming
+    * know your enemies
+    * principles
+    * structure
+    * this book
+
+
+
+## July 2018
+
+* Added *attacker's goals*
+* Added *antivirus-tests*
+* Added *antivirus-integration*  %% TODO: Split URL
+* Changed PDF format to A5 for a typical book-size PDF
+* Added basic *fuzzing* chapter
+* Extended "Defensive programming"
+* Extended "principles"
+* Extended "TLS chapter"
+* Extended "External references"
+* Added *antivirus-sharing-samples*
+* Added *antivirus virustotal*
+* Added *Cppcheck chapter*
+* Added *Testing compiling* chapter
+
+## June 2018
+
+* Added *TLS chapter*
+* Extended *principles*
+* Added *passwords*
+* Added basic *compiling*
+* Improved *external references*
+* Extended *update*
+* Added flawfinder chapter
+
+%% TODO GCC features more details
+
+## May 2018, initial release
+
+* Added *principles* chapter
+* Added *updates* chapter
+* Added *Know your enemies* chapter
+* Added *UX* chapter
+* Added *structure* chapter
+* Added *external references* chapter
+* Added "The Author" chapter
+* Added "This book" chapter
+* Added "Defensive programming chapter" for default defensive programming
