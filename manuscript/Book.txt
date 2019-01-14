@@ -33,6 +33,7 @@ testing/fuzzing.txt
 tools/part_tools.txt
 tools/ssh.txt
 offense/part_offense.txt
+offense/intro.txt
 offense/google_dork.txt
 bolt_on/part_bolt_on.txt
 bolt_on/antivirus_tests.txt

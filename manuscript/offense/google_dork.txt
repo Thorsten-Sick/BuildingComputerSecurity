@@ -47,6 +47,13 @@ published the service or one of the plugins can be attacked.
 Finding these vulnerable sites is much easier with an exploit database like
 [exploit-db.com](https://www.exploit-db.com/google-hacking-database/).
 
+## Defense
+
+This technology will help the attacker assess potential vulnerabilities
+(SQL injection, old software).
+A good defense is to keep your frameworks, web apps and plugins up to date.
+Maybe sometimes use Google dorks yourself on your own pages to identify vulnerabilities.
+
 ## Further reading
 
 %% TODO Review [Google Hacking for Penetration Testers 3rd edition](https://learning.oreilly.com/library/view/google-hacking-for/9780128029824/)

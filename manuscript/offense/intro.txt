@@ -1,0 +1,18 @@
+# Intro {#chapter-offense-intro}
+
+I have been struggling if to add this chapter. I totally despise scare tactics.
+IMHO they are unethical and they can backfire. People get to scared to act.
+
+But as a normal engineer you normally do not have the perspective and the
+tools of the attacker. And as long as you do not have at least a bit of
+understanding for the atackers capabilities you assume your technology is
+secure - while it is not.
+
+For that reason I add the *Offense* part to the book.
+But:
+
+* It is at the end of the book - after all the defense tricks you can use to defend your systems
+* I will point you to at least a few introduced technologies ot protect yourself. There are more. Some are even in this book
+* Most of the tools in here can be used to test you systems
+* I will not go into depth but focus on introducing concepts and risks
+* There will be sources for *further reading* linked
