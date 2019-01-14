@@ -43,6 +43,7 @@ bolt_on/antivirus_integration.txt
 bolt_on/antivirus_sharing_samples.txt
 bolt_on/antivirus_virustotal.txt
 bolt_on/antivirus_classification_behaviour_based.txt
+bolt_on/sources.txt
 appendix/part_appendix.txt
 appendix/externalreferences.txt
 appendix/glossary.txt

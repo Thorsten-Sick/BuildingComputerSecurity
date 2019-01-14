@@ -1,0 +1,43 @@
+# Malware Sources  {#chapter-malware-sources}
+
+C> By: Thorsten Sick
+
+C> For: Architects, Developers
+
+## Sources for IOCs
+
+There are many resources online for malware, malicious URLs, other IOCs.
+Some of them have a verification system - which results in good quality
+with low FPs.
+
+Some are real-time. Some others only contain old software.
+
+Depending on what you use it for they can be the solution or just cause trouble.
+
+Move slowly. Test and verify before enabling the source and over-block.
+
+## Exploit kits
+
+
+[Dontneedcoffee](https://malware.dontneedcoffee.com/blog/)
+
+
+## C&C
+
+https://feodotracker.abuse.ch/
+
+## Malware
+
+https://malware.dontneedcoffee.com/blog/
+
+## Malicious URLs
+
+https://urlhaus.abuse.ch/
+
+## Phishing
+
+https://www.phishtank.com/
+
+## Data breaches
+
+https://haveibeenpwned.com/

@@ -31,6 +31,8 @@ changelog to make it simpler for you to find the new sections.
 * Added part **Appendix**
 * Added basic **beef** chapter
 * Added basic **burp suite** chapter
+* Added **IOC sources** chapter
+* Extended **TLS**
 
 
 ## December 2018
