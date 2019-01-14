@@ -13,14 +13,14 @@ on the internet. All web pages and web apps are a potential target.
 By using advanced google searches the attacker searches for indicator for
 known vulnerabilities.
 
-This can be a specific part of the url path using the google *inurl* search.
+This can be a specific part of the URL path using the google *inurl* search.
 
 
 %% TODO Examples
 
 ## SEO expertise
 
-This is basically the Search Engine Optimization knowldege field (SEO).
+This is basically the Search Engine Optimization knowledge field (SEO).
 As you are using  more advanced search engine features. If you want to go
 for Google Dorks SEO knowledge is your friend.
 
@@ -28,7 +28,7 @@ for Google Dorks SEO knowledge is your friend.
 |------------------|----------------|--------------------|
 |Find on site      |site:example.com|site:example.com    |
 |Find by filetype  |filetype:txt    |filetype:txt        |
-|Find parts of url |inurl:bar       |inurl:bar[^broken]  |
+|Find parts of URL |inurl:bar       |inurl:bar[^broken]  |
 |Find in title     |intitle:foo     |intitle:foo         |
 
 [^broken]: This feature seems to be broken at the moment

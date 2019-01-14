@@ -25,7 +25,7 @@ experience to it.
 
 * Session Ids can be brute forced. Make them really long
     * Detect brute forcing attacks and  slow down the speed for that connection
-    * Keep in mind: Do not add a DDOS vulmerability that way
+    * Keep in mind: Do not add a DDOS vulnerability that way
 * Decide how long a session is valid. Find a reasonable timeout
 * If you use webviews: Can HTML code be injected by the attacker ? Would scripts be executed ?
 * If you use Tokens: Make them really long
@@ -47,9 +47,9 @@ experience to it.
 * Using esoteric or uncommon components (CPU, libraries) will not protect you
 * De-activate debugging features before shipping
 * Expect your software/firmware to be on the internet somewhere (FTP server)
-    * Security-by-obscruity is no protection your plans should depend on !
+    * Security-by-obscurity is no protection your plans should depend on !
 * Attackers will be able to read your code even if they have only the compiled binary (firmware / .exe / ...) using disassemblers
-    * Security-by-obscruity is no protection your plans should depend on !
+    * Security-by-obscurity is no protection your plans should depend on !
 * If you use a non-existing URL for testing internet connectivity - register it before someone else does.
 
 

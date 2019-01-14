@@ -18,13 +18,13 @@ BLE L2CAP: Encapsulating data into packets
 
 BLE Profile: Profiles combine several services. They standardize specific device classes
 
-Botnet: Infected machines cdentrally controlled by the attacker using a C&C
+Botnet: Infected machines centrally controlled by the attacker using a C&C
 
 Bug: Error made in the programming phase. Not all bugs are vulnerabilities
 
 C&C: Command and Control server. Central control over a botnet
 
-DOS: Denial Of Service - Attack that exhausts resources of the target (cpu, memory, network, storage)
+DOS: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
 DDOS: Distributes DOS - Attack is done by many systems in parallel
 
@@ -40,7 +40,7 @@ FP: False Positive. A harmless URL or file is detected as malicious
 
 %% EFF:
 
-IOC: Indicator of Compromise. A file-hash, url, registry key or similar feature left by the malware when a system is infected.
+IOC: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
 Malware: Malicious software
 

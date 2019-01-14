@@ -14,7 +14,7 @@ That can be done by setting up these pages, infecting existing ones or doing
 a MITM attack onto a web connection.
 
 Many of these attacks are also integrated into Exploit Kits and spread
-typical malware or help phising.
+typical malware or help phishing.
 
 Beef is relevant for you if you:
 
@@ -27,7 +27,7 @@ Beef is relevant for you if you:
 Beef has a web interface and will list all hooked browsers. As soon as a
 browser is hooked you can attack it in many different ways.
 
-* Display Facebook login page popup (phising)
+* Display Facebook login page popup (phishing)
 * Scan the local network of the browser (ping, ports)
 * Attack routers/access points from the hooked browser
 * Tunnel connections through the hooked browser

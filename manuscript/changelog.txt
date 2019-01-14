@@ -13,7 +13,7 @@ changelog to make it simpler for you to find the new sections.
 %% Plan design
 %% grep for "todo" and "safari". Fix this. Also add amazon alternative
 
-%% TODO: Add part_attacks
+
 %% TODO: Add Part_tools (openssl, git, nmap, )
 %% TODO: extend attacks goals
 %% TODO: extend know your enemies
