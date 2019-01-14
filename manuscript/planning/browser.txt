@@ -147,8 +147,6 @@ For a defender the take-aways are:
 
 [Exploitkits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
 
-[Dontneedcoffee](https://malware.dontneedcoffee.com/blog/)
-
 ## Cookies
 
 Cookies are essential for many homepages to work properly. The reason is that
@@ -237,7 +235,6 @@ As BeEF is a very specific tool and not many people will require it it gets a
 specific chapter - feel free to either read or skip it.
 
 [See BeEF chapter](#chapter-beef)
-%% TODO: [BEEF XSS site cloning](https://hackingvision.com/2018/12/15/cloning-sites-for-beef-xss/)
 
 
 ## Burp Suite
@@ -411,3 +408,6 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% TODO: [Browser hijacker](https://sensorstechforum.com/remove-searchesresult-browser-hijacker/)
 %% TODO [Data breaches and hacks](https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 %% TODO: [Security changes in Chrome 71](https://www.helpnetsecurity.com/2018/12/05/chrome-71-security-changes/)
+
+
+%% TODO; Chrome security override: Enter "thisisunsafe"

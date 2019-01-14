@@ -247,6 +247,11 @@ The issues that happened the last years have been found on several layers:
   * [DigiNotar](https://en.wikipedia.org/wiki/DigiNotar)
   * [Symantec (VeriSign)](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html)
 
+## Testing SSL
+
+[badssl](https://badssl.com/) offers several sub-domains with different
+TLS/SSL configuration to test your endpoint.
+
 ## Further reading
 
 ### Serious Cryptography by Jean-Philippe Aumasson
