@@ -49,3 +49,6 @@ And this is the common thing your users will experience.
 ## Further reading
 
 The book covering Beef and the attacks it is capable of is [The browser hacker's handbook](https://learning.oreilly.com/library/view/the-browser-hackers/9781118662090/)
+
+
+%% TODO: [BEEF XSS site cloning](https://hackingvision.com/2018/12/15/cloning-sites-for-beef-xss/)
