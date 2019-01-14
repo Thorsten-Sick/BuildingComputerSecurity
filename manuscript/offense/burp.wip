@@ -1,9 +1,27 @@
 # Burp suite {#chapter-burp}
 
-Burp suite checks web pages for vulnerabilities.
+C> By: Thorsten Sick
 
+C> For: Architects, Developers, Tester, Pen Tester
 
-https://portswigger.net/burp/
+## Basics
 
+Burp suite is a web vulnerabilityy scanner - it checks web pages
+for vulnerabilities.
+
+[Burp suite](https://portswigger.net/burp/)
+
+## Defense
+
+* Use a check list like [OWASP top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) to review your page
+* Hire a pen tester to test your web sites
+    * Burp is expensive and needs experience to interpret results
+* Have a pen tester in the team (large projects)
+* Basically: Apply best practice in design and development when writing your web page
+* Update your web frameworks, applications and plugins regularly
+
+## Further reading
+
+[The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws, 2nd Edition](https://learning.oreilly.com/library/view/the-web-application/9781118026472/)
 
 %% TODO: Auto repeater: https://github.com/nccgroup/autorepeater
