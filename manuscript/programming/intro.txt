@@ -1,0 +1,12 @@
+# Intro {#chapter-programming-intro}
+
+Programming bugs turned into vulnerabilities since...it feels like forever.
+With the hacker paper [Smashing The Stack For Fun And Profit](https://insecure.org/stf/smashstack.html)
+ - which was release somewhere in the 90s - game got more tricky.
+
+As C and C++ are very close to hardware and can mess with memory by design
+the issue has never been solved properly. And those languages are still
+around (for good reasons).
+
+The good news: This kind of bugs and similar ones can be avoided, detected,
+prevented and mitigated. There are tools for that. This chapter covers them.

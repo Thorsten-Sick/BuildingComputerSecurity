@@ -35,10 +35,10 @@ changelog to make it simpler for you to find the new sections.
 * Updated **content**
 * Intro for background added
 * Intro for planning added
+* Intro to programming added
 %% TODO: Add defense to all the offensive stuff
 %% TODO: Add "intro" to all the parts
-%% Planning
-%% programming
+
 %% testing
 %% bolt on
 %% appendix

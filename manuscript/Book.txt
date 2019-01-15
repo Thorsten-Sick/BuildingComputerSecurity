@@ -20,6 +20,7 @@ planning/bluetooth_le.txt
 planning/tls.txt
 planning/cryptoalgorithms.txt
 programming/part_programming.txt
+programming/intro.txt
 programming/code_analysis_tools_requirements.txt
 programming/defensiveprogramming.txt
 programming/assert.txt
