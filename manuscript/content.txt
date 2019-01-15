@@ -29,6 +29,12 @@ A good design can speed up development, simplify testing, and increase security.
 This chapter covers the security basics of software design. Followed by specific
 topics in other chapters.
 
+### Software Design Checklist
+
+The [Software Design Checklist](#chapter-design-checklist) introduces you to
+a source to learn about typical software design flaws. It also starts to
+create an (incomplete) list of typical flaws encountered it real world failed projects.
+
 ### UX
 
 How to create a [user interface in a secure way](#chapter-user-interface) - preventing the user from
@@ -161,18 +167,6 @@ systems - integrate it in there.
 
 %% TODO Snort, Yara
 
-## Offense
-
-Even if you are playing Defense - it is very important to know the tools,
-tricks and tactics of Offense. The basics are covered here.
-
-%% TODO Metasploit
-
-%% TODO Beef, Burp, Armitage, NMAP,
-
-%% TODO: sslstrip
-
-
 ## Bolt-on security
 
 Bolt-on security is what is done of someone missed to do security-by-design.
@@ -208,9 +202,80 @@ false positives. But has an own tricky personality. Knowing that will [prevent
 you from coming to the wrong conclusions](#chapter-virustotal).
 
 
-## Antivirus: Behaviour based classification
+### Antivirus: Behaviour based classification
 
 Unknown samples must be classified before detection can be created. A quite
 reliable way to achieve that is behaviour based classification. Especially it
 is quite simple to interpret the resulting log for malicious behaviour. [The
 basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
+
+### IOC sources
+
+[IOC sources](#chapter-malware-sources) is a collection of lists of so
+called Indicator Of Compromise Sources. Those are Malware executables, hashes,
+URLs, registry key, ...
+
+The lists can be used for training, learning or (if they are curated)
+event directly blacklisting.
+
+
+## Offense
+
+Even if you are playing Defense - it is very important to know the tools,
+tricks and tactics of Offense. The basics are covered here.
+
+### Google Dorks
+
+[Google Dorks](#chapter-google-dork) are simple reconaissance tricks
+abusing Google. Using them it is possible to learn about vulnerabilities in
+web pages without event connecting to them once.
+
+### BeEF
+
+[BeEF - Browser exploitation Framework](#chapter-beef) helps you exploiting
+browsers. And those are very often the most central application in a person's life.
+
+### Burp Suite
+
+[Burp suite](#chapter-burp) is attacking the other way: Connecting to a web
+page and while crawling it enumerating the vulnerabilities.
+
+%% TODO Metasploit
+
+%% TODO Armitage, NMAP,
+
+%% TODO: sslstrip
+
+## Appendix
+
+The appendix contains handy things that will make the reading of the book more enjoyable.
+Especially:
+
+### External References
+
+A list of external references (books, talks and homepages).
+
+### Glossary
+
+There are so many new acronyms in the security field. And even there they are
+territorial - Web security being totally different from Assembler hacking.
+Have a glossary ready. Here it is.
+
+### The author
+
+Who wrote this book and: Why ?
+
+### Authors
+
+As the security field is so large I want to have other authors contribute to
+their field of expertise. This chapter is ready to introduce them. Even if I
+just slowly started to invite people.
+
+### Changelog
+
+Read this first after you got an updated book
+
+### License
+
+If you want to do anything else with this book besides reading it -
+this chapter is for you.
