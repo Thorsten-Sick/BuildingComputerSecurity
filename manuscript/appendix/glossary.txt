@@ -1,50 +1,50 @@
 # Glossary {#chapter-glossary}
 
-Adware: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
+**Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 
-APT: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
+**APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
 
-BLE: Bluetooth Low Energy
+**BLE**: Bluetooth Low Energy
 
-BLE GAP: Advertisements, connection handling, defining device roles in communication
+**BLE Characteristic**: Value + Descriptor
 
-BLE GATT: Organizes the data offered by the device
+**BLE GAP**: Advertisements, connection handling, defining device roles in communication
 
-BLE Characteristic: Value + Descriptor
+**BLE GATT**: Organizes the data offered by the device
 
-BLE Service: Several Characteristics combined create a service. A default service for BTLE would contain device information
+**BLE L2CAP**: Encapsulating data into packets
 
-BLE L2CAP: Encapsulating data into packets
+**BLE Service**: Several Characteristics combined create a service. A default service for BTLE would contain device information
 
-BLE Profile: Profiles combine several services. They standardize specific device classes
+**BLE Profile**: Profiles combine several services. They standardize specific device classes
 
-Botnet: Infected machines centrally controlled by the attacker using a C&C
+**Botnet**: Infected machines centrally controlled by the attacker using a C&C
 
-Bug: Error made in the programming phase. Not all bugs are vulnerabilities
+**Bug**: Error made in the programming phase. Not all bugs are vulnerabilities
 
-C&C: Command and Control server. Central control over a botnet
+**C&C**: Command and Control server. Central control over a botnet
 
-DOS: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
+**DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
-DDOS: Distributes DOS - Attack is done by many systems in parallel
+**DDOS**: Distributes DOS - Attack is done by many systems in parallel
 
-Exploit: Attack on a vulnerability
+**Exploit**: Attack on a vulnerability
 
-Exploit Kit: A ready to run malware spreading tool. Normally uses infected web pages to spread the exploit.
+**Exploit Kit**: A ready to run malware spreading tool. Normally uses infected web pages to spread the exploit.
 
-Flaw: Error made in the design phase. Not all flaws are vulnerabilities
+**Flaw**: Error made in the design phase. Not all flaws are vulnerabilities
 
-FP: False Positive. A harmless URL or file is detected as malicious
+**FP**: False Positive. A harmless URL or file is detected as malicious
 
 %% Deep Packet Inspection:
 
 %% EFF:
 
-IOC: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
+**IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
-Malware: Malicious software
+**Malware**: Malicious software
 
-MITM: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
+**MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
 %% MISRA
 
@@ -60,6 +60,6 @@ MITM: Man/Monster in the Middle. Network connections are broken up in the middle
 
 %% Class break
 
-Vulnerability: A bug or a flaw that has security implications
+**Vulnerability**: A bug or a flaw that has security implications
 
-Weaponizing: Making an exploit easy and reliable to use.
+**Weaponizing**: Making an exploit easy and reliable to use.

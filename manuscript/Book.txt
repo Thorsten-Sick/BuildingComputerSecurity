@@ -32,11 +32,6 @@ testing/coverage.txt
 testing/fuzzing.txt
 tools/part_tools.txt
 tools/ssh.txt
-offense/part_offense.txt
-offense/intro.txt
-offense/google_dork.txt
-offense/beef.txt
-offense/burp.txt
 bolt_on/part_bolt_on.txt
 bolt_on/antivirus_tests.txt
 bolt_on/antivirus_integration.txt
@@ -44,6 +39,11 @@ bolt_on/antivirus_sharing_samples.txt
 bolt_on/antivirus_virustotal.txt
 bolt_on/antivirus_classification_behaviour_based.txt
 bolt_on/sources.txt
+offense/part_offense.txt
+offense/intro.txt
+offense/google_dork.txt
+offense/beef.txt
+offense/burp.txt
 appendix/part_appendix.txt
 appendix/externalreferences.txt
 appendix/glossary.txt
