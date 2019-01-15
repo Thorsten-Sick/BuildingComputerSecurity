@@ -4,6 +4,8 @@ I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
 
+%% Maybe add a teaching part: Docker, presentations, psychology
+
 %% Extend defensive programming / compiling
 %% Plan: Valgrind extra
 %% Plan: Verify external libs
@@ -23,9 +25,6 @@ changelog to make it simpler for you to find the new sections.
 
 * Added **Software design checklist** (initial version)
 * Added **Google Dorks**
-%% TODO: Add defense to all the offensive stuff
-%% TODO: Add "intro" to all the parts
-%% TODO: Link new stuff to book structure chapter
 * Added **Glossary**
 * Added part **Appendix**
 * Added basic **beef** chapter
@@ -34,6 +33,15 @@ changelog to make it simpler for you to find the new sections.
 * Extended **TLS**
 
 * Updated **content**
+* Intro for background added
+* Intro for planning added
+%% TODO: Add defense to all the offensive stuff
+%% TODO: Add "intro" to all the parts
+%% Planning
+%% programming
+%% testing
+%% bolt on
+%% appendix
 
 ## December 2018
 

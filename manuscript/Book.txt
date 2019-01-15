@@ -2,10 +2,12 @@ thisbook.txt
 structure.txt
 content.txt
 background/part_background.txt
+background/intro.txt
 background/knowyourenemies.txt
 background/attackers_goals.txt
 background/principles.txt
 planning/part_planning.txt
+planning/intro.txt
 planning/design.txt
 planning/software_design_checklist.txt
 planning/ux.txt
