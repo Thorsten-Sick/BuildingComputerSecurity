@@ -37,6 +37,7 @@ testing/fuzzing.txt
 tools/part_tools.txt
 tools/ssh.txt
 bolt_on/part_bolt_on.txt
+bolt_on/intro.txt
 bolt_on/antivirus_tests.txt
 bolt_on/antivirus_integration.txt
 bolt_on/antivirus_sharing_samples.txt

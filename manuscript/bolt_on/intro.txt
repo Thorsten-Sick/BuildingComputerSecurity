@@ -1,0 +1,17 @@
+# Intro {#chapter-bolt-on-intro}
+
+There is a rift between security engineer. Those who can plan and build a
+system despise what they call "snalḱe oil". It adds complexity (which is bad)
+and has no perfect guarantee for security
+(protection is statistics with a detection rate of 99.89%).
+
+Some security engineers are not so fortunate and have to deal with a system
+that is flawed and buggy and they can not change. For technical or political reasons
+(manager want to use an outdated internal web based tool that is not supported
+anymore and only works with and IE from last century). Their only hope
+is *bolt-on* security tools to manage a deprecated system which is already
+way to complex.
+
+This chapter deals with the bolt-on side - which commonly uses detection of attacks.
+
+As security can be a stressfull job, this intro closes with "Be excellent to each other"

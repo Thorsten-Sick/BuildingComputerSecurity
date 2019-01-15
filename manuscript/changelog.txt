@@ -40,9 +40,7 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add defense to all the offensive stuff
 %% TODO: Add "intro" to all the parts
 
-%% testing
 %% bolt on
-%% appendix
 
 ## December 2018
 
