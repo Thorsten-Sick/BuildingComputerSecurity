@@ -27,6 +27,7 @@ programming/assert.txt
 programming/compiling.txt
 programming/clang.txt
 testing/part_testing.txt
+testing/intro.txt
 testing/testing_compiling.txt
 testing/flawfinder.txt
 testing/cppcheck.txt
