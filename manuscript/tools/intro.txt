@@ -1,0 +1,14 @@
+# Intro {#chapter-tools-intro}
+
+Using tools is one of the things that is typical for the human species [^wrong].
+Tools make us doe more things. In a more reliable way. Have "old" stuff
+automated away and open us to do new things. They reduce human error.
+
+Many tools did not fit in other chapters. But they are part of our daily work
+ with compouters. And they contribute to the daily workflow of building software.
+
+ Those tools are covered in this part of the book.
+
+[^wrong:] This is wrong. Even birds can do remarkable things and even build
+their own tools...just follow the bilogical and cognitive science there.
+This does not invalidate my point. Be smarter than the chicken wings on your plate.

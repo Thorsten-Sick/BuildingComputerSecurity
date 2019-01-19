@@ -37,10 +37,13 @@ changelog to make it simpler for you to find the new sections.
 * Intro for planning added
 * Intro to programming added
 * Intro to testing added
-%% TODO: Add defense to all the offensive stuff
-%% TODO: Add "intro" to all the parts
+* Updated samples
+* Intro for tools
+* Reworking first chapters: re-write, remove or move to the end of parts. Reason: I want to get people to encounter the core book faster.
 
-%% bolt on
+
+%% TODO: Tools needs intro/shortr abstract
+%% TODO: Add defense to all the offensive stuff
 
 ## December 2018
 

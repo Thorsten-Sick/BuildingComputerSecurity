@@ -35,6 +35,7 @@ testing/testing.txt
 testing/coverage.txt
 testing/fuzzing.txt
 tools/part_tools.txt
+tools/intro.txt
 tools/ssh.txt
 bolt_on/part_bolt_on.txt
 bolt_on/intro.txt
