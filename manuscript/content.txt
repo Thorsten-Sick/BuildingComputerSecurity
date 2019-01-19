@@ -226,7 +226,7 @@ tricks and tactics of Offense. The basics are covered here.
 
 ### Google Dorks
 
-[Google Dorks](#chapter-google-dork) are simple reconaissance tricks
+[Google Dorks](#chapter-google-dork) are simple reconnaissance tricks
 abusing Google. Using them it is possible to learn about vulnerabilities in
 web pages without event connecting to them once.
 

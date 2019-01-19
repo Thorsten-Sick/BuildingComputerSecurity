@@ -11,7 +11,7 @@ changelog to make it simpler for you to find the new sections.
 %% Plan: Verify external libs
 %% Plan: Monitor exploits
 %% Plan: More on Unit tests
-%% Plan: Cryptoalgorithm tables need fixing
+%% Plan: Crypto algorithm tables need fixing
 %% Plan design
 %% grep for "todo" and "safari". Fix this. Also add amazon alternative
 
@@ -21,6 +21,8 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: extend know your enemies
 %% TODO: BLE, including Gattack.io
 %% Add Psychology toolbox
+%% TODO: Add defense to all the offensive stuff
+
 
 ## January 2019
 
@@ -41,13 +43,11 @@ changelog to make it simpler for you to find the new sections.
 * Updated samples
 * Intro for tools
 * Reworking first chapters: re-write, remove or move to the end of parts. Reason: I want to get people to encounter the core book faster.
-   * Structure: removed unneccessary things
+   * Structure: removed unnecessary things
    * The origin (moved to the author)
    * stages of learning moved to part "psychology toolbox" (which is not active yet)
    * random encounter removed
 
-
-%% TODO: Add defense to all the offensive stuff
 
 ## December 2018
 
@@ -78,11 +78,11 @@ changelog to make it simpler for you to find the new sections.
 * Enhanced *antivirus testing*
 * Added *antivirus testing* to the sample
 * unhooked external references
-* Kehrwoche: ASpell for all text parts in "sample"
+* Kehrwoche: Aspell for all text parts in "sample"
 
 ## October 2018
 
-* Added *cryptoalgorithms*
+* Added *crypto algorithms*
 * Re-worked *Asserts*
     * It got an own chapter
     * Python added
@@ -91,7 +91,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *testing* chapter. Especially for unit testing and bug bounties (basics)
 * TLS got a diagram and minor improvements
 * *Clang* chapter added
-* Added *cryptoalgorithms* to Sample
+* Added *crypto algorithms* to Sample
 
 
 
