@@ -7,22 +7,8 @@ For this reason the book is split. The first few chapters offer an introduction
 to the security landscape. The second part contains chapters helping to
 solve specific problems.
 
-Chapters contain:
-
-1. Short abstract of the topic
-2. Authors of this chapter
-3. Target audience
-4. TODO list (low hanging fruit)
-5. Not-todo list (typical mistakes)
-6. In detailed description of the technology
-7. Details on how this technology can be attacked
-8. Detailed Todo list and Not-todo list
-9. References to similar chapters
-10. Further reading - important as I will only scratch the surface
-
-
-I will try to stick to this structure. But the main goal is a usable toolbox -
-if necessary I will break the rules.
+Do not feel bad if you directly skip to something interesting. Or to a chapter
+that is currently relevant for your project.
 
 ## Project phases and audience
 
