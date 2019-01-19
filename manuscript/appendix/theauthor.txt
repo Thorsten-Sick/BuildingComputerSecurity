@@ -35,3 +35,19 @@ And doing so I started to sort my knowledge and experience. Resulting in this bo
 These are the bricks of experience and knowledge this book is built out of.
 
 **Thorsten Sick**
+
+
+## The origin story: External brain
+
+This book was already written once. As my external brain. Just for me.
+I collect my knowledge in "external brains". My own wikis or similar.
+My security knowledge external-brain just grew to a stage where I thought
+"well, you just wrote a book". And after finding the leanpub options that
+could fit my style of tackling projects I decided I could transfer my external
+brain (written for me) into a book (written for tech people world wide).
+
+And this is currently happening.
+
+The quarry of my external brain currently contains 80 chaotic pages. I expect
+they translate into at least the same amount of book pages. And I will be adding
+more knowledge later.

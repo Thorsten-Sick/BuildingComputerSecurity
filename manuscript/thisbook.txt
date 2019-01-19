@@ -15,36 +15,6 @@ almost no "getting started" books.
 
 This is the itch this book wants to scratch.
 
-## The origin: External brain
-
-This book was already written once. As my external brain. Just for me.
-I collect my knowledge in "external brains". My own wikis or similar.
-My security knowledge external-brain just grew to a stage where I thought
-"well, you just wrote a book". And after finding the leanpub options that
-could fit my style of tackling projects I decided I could transfer my external
-brain (written for me) into a book (written for tech people world wide).
-
-And this is currently happening.
-
-The quarry of my external brain currently contains 80 chaotic pages. I expect
-they translate into at least the same amount of book pages. And I will be adding
-more knowledge later.
-
-## Stages of learning
-
-There are several smart ways to learn. They are described in the book
-*Pragmatic Thinking and Learning* by Andy Hunt.
-
-%% TODO add safari link
-
-A simplified version is:
-
-1. Learn the *theory*
-2. Get *practical* experience
-3. *Explain* it to others
-
-These stages are also a goal when writing this book.
-
 ## Release early, release often
 
 One of the reasons I dare to write a book is leanpub's feature to release
@@ -83,11 +53,6 @@ With every iteration of the book I will tune the optics, improve the layout and
 maybe add images.
 
 But adding new chapters is more important.
-
-## Random encounters
-
-These are the reasons for the things you will encounter in this book. Context
-matters.
 
 ## All this said...
 

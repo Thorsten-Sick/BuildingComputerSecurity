@@ -1,0 +1,14 @@
+## Stages of learning
+
+There are several smart ways to learn. They are described in the book
+*Pragmatic Thinking and Learning* by Andy Hunt.
+
+%% TODO add safari link
+
+A simplified version is:
+
+1. Learn the *theory*
+2. Get *practical* experience
+3. *Explain* it to others
+
+These stages are also a goal when writing this book.

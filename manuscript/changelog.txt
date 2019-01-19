@@ -20,6 +20,7 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: extend attacks goals
 %% TODO: extend know your enemies
 %% TODO: BLE, including Gattack.io
+%% Add Psychology toolbox
 
 ## January 2019
 
@@ -40,9 +41,13 @@ changelog to make it simpler for you to find the new sections.
 * Updated samples
 * Intro for tools
 * Reworking first chapters: re-write, remove or move to the end of parts. Reason: I want to get people to encounter the core book faster.
+%%   * Structure
+%%   * Project phases
+   * The origin (moved to the author)
+   * stages of learning moved to part "psychology toolbox" (which is not active yet)
+   * random encounter removed
 
 
-%% TODO: Tools needs intro/shortr abstract
 %% TODO: Add defense to all the offensive stuff
 
 ## December 2018
