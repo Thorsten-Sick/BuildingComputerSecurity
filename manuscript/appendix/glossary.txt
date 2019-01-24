@@ -32,6 +32,8 @@
 
 **Exploit Kit**: A ready to run malware spreading tool. Normally uses infected web pages to spread the exploit.
 
+**Fast Flux**: %% TODO
+
 **Flaw**: Error made in the design phase. Not all flaws are vulnerabilities
 
 **FP**: False Positive. A harmless URL or file is detected as malicious
