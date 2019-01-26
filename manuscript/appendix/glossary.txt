@@ -28,6 +28,8 @@
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
 
+**ELF**: Linux executable file format
+
 **Exploit**: Attack on a vulnerability
 
 **Exploit Kit**: A ready to run malware spreading tool. Normally uses infected web pages to spread the exploit.
@@ -38,13 +40,17 @@
 
 **FP**: False Positive. A harmless URL or file is detected as malicious
 
-%% Dark Web
+**Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
 
 %% Deep Packet Inspection:
 
-%% Deep Web
+**Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
+
+%% Domain Flux: Way to hide C&C servers. A domain name generator creates changing domain names
 
 %% EFF:
+
+%% RBN
 
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
@@ -56,9 +62,9 @@
 
 %% Static Code analysis
 
-%% PE
+**PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
-%% ELF
+**TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
 %% CSRF
 
