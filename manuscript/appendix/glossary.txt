@@ -34,7 +34,7 @@
 
 **Exploit Kit**: A ready to run malware spreading tool. Normally uses infected web pages to spread the exploit.
 
-%% **Fast Flux**: %% TODO
+**Fast Flux**: Using Round-Robin DNS to hide a C&C server. One URL gets multiple IPs that way.
 
 **Flaw**: Error made in the design phase. Not all flaws are vulnerabilities
 
@@ -46,11 +46,15 @@
 
 **Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
 
-%% Domain Flux: Way to hide C&C servers. A domain name generator creates changing domain names
+**Domain Flux**: Way to hide C&C servers. A domain name generator creates changing domain names
+
+**DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce takedowns and still get connecting bots.
 
 %% EFF:
 
-%% RBN
+**RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (takedowns by police not easy)
+
+**Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
 
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
