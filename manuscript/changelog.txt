@@ -34,7 +34,6 @@ changelog to make it simpler for you to find the new sections.
 * Added basic **burp suite** chapter
 * Added **IOC sources** chapter
 * Extended **TLS**
-
 * Updated **content**
 * Intro for background added
 * Intro for planning added
@@ -47,7 +46,7 @@ changelog to make it simpler for you to find the new sections.
    * The origin (moved to the author)
    * stages of learning moved to part "psychology toolbox" (which is not active yet)
    * random encounter removed
-
+* More glossary entries
 
 ## December 2018
 

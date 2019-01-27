@@ -24,6 +24,8 @@
 
 **C&C**: Command and Control server. Central control over a botnet
 
+**Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
+
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
@@ -48,11 +50,11 @@
 
 **Domain Flux**: Way to hide C&C servers. A domain name generator creates changing domain names
 
-**DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce takedowns and still get connecting bots.
+**DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
 
 %% EFF:
 
-**RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (takedowns by police not easy)
+**RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
 
@@ -60,9 +62,9 @@
 
 **Malware**: Malicious software
 
-**MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
+**MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
 
-%% MISRA
+**MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
 %% Static Code analysis
 
@@ -73,8 +75,6 @@
 %% CSRF
 
 %% XSS
-
-%% Class break
 
 **Vulnerability**: A bug or a flaw that has security implications
 
