@@ -14,7 +14,13 @@ changelog to make it simpler for you to find the new sections.
 %% Plan: Crypto algorithm tables need fixing
 %% Plan design
 %% grep for "todo" and "safari". Fix this. Also add amazon alternative
+%% All books need safari/amazon links
 
+%% Verify safari links, add amazon link
+%% statistics on todos and size
+%% Review part-by-part
+%% Conferences to appendix
+%% CTFs to appendix
 
 %% TODO: Add Part_tools (openssl, git, nmap, )
 %% TODO: extend attacks goals
@@ -22,6 +28,7 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: BLE, including Gattack.io
 %% Add Psychology toolbox
 %% TODO: Add defense to all the offensive stuff
+%% Create prefix part
 
 
 ## January 2019

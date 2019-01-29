@@ -9,6 +9,7 @@ import requests
 from collections import defaultdict
 from pprint import pprint
 import argparse
+import json
 
 class Link():
     def __init__(self, title, link, infile=None):
@@ -57,9 +58,17 @@ class Chapter():
         self.level = level
         self.infile = infile
         self.part = part
+        self.todos = 0
 
     def __str__(self):
         return "{}: {} {}".format(self.part,self.title, self.link)
+
+    def setTodos(self, todos):
+        """ Set todos in chapter """
+        self.todos = todos
+
+    def getTodos(self):
+        return self.todos
 
 class LeanpubVerify():
 
@@ -97,6 +106,8 @@ class LeanpubVerify():
         for afile in self.chapterfiles:
             if "/part_" in afile:
                 part = afile.split("/")[1]
+            todos = 0
+            newchapter=None
             with open(os.path.join(self.basedir, afile)) as fh:
                 for line in fh:
                     link = None
@@ -120,6 +131,9 @@ class LeanpubVerify():
                         self.chapters.append(newchapter)
                         if self.verbose:
                             print(newchapter)
+                    todos += line.lower().count("todo:")
+                    if newchapter:
+                        newchapter.setTodos(todos)
 
     def checkChapters(self, up_to_level=1):
         """
@@ -173,7 +187,7 @@ class LeanpubVerify():
                             print("{}->{}".format(a[0],a[1]))
                         self.outgoingLinks.append(Link(a[0], a[1]))
 
-    def wordstats(self):
+    def wordstats(self, filename = "wordstats.json"):
         """ Create word statistics """
 
         # TODO: Create nice word clouds
@@ -198,6 +212,19 @@ class LeanpubVerify():
         sorted_by_value = sorted(self.wordstatistics.items(), key=lambda kv: kv[1])
         pprint(sorted_by_value)
         print("Total words: %s".format(self.totalwords))
+        data = {"total": self.totalwords,
+                "distribution": self.wordstatistics}
+        with open(filename, "wt") as fh:
+            json.dump(data, fh, indent = 4)
+
+    def todostats(self, filename = "todostats.json"):
+        """ Print todos per chapter """
+
+        data = defaultdict(defaultdict)
+        for c in self.chapters:
+            data[c.infile][c.title] = c.getTodos()
+        with open(filename, "wt") as fh:
+            json.dump(data, fh, indent = 4)
 
 
     def getWebLinks(self):
@@ -252,3 +279,4 @@ if __name__ == "__main__":
         lpv.checkWebLinks()
     if args.statistics:
         lpv.wordstats()
+        lpv.todostats()
