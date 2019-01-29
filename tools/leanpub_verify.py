@@ -41,7 +41,7 @@ class Link():
         return False
 
 class Chapter():
-    def __init__(self, title, link, level = 1, infile=None):
+    def __init__(self, title, link, level = 1, infile=None, part=None):
         """
         A major chapter in the book (one #).
         Later: With the level we can also handle other chapters.
@@ -50,14 +50,16 @@ class Chapter():
         @link: a link to the chapter
         @level: The level of the chapter
         @infile: file of the chapter
+        @part: part of the book the chapter iss in. As filename
         """
         self.title = title
         self.link = link.strip() if link else None
         self.level = level
         self.infile = infile
+        self.part = part
 
     def __str__(self):
-        return "{} {}".format(self.title, self.link)
+        return "{}: {} {}".format(self.part,self.title, self.link)
 
 class LeanpubVerify():
 
@@ -90,7 +92,11 @@ class LeanpubVerify():
         Go through all the books and extract the main chapters.
         """
 
+        part = ""
+
         for afile in self.chapterfiles:
+            if "/part_" in afile:
+                part = afile.split("/")[1]
             with open(os.path.join(self.basedir, afile)) as fh:
                 for line in fh:
                     link = None
@@ -110,9 +116,10 @@ class LeanpubVerify():
                         else:
                             title = line[level+1:]
                         title = title.strip()
-                        self.chapters.append(Chapter(title, link, level, afile))
+                        newchapter = Chapter(title, link, level, afile, part)
+                        self.chapters.append(newchapter)
                         if self.verbose:
-                            print("{}:{}".format(title, link))
+                            print(newchapter)
 
     def checkChapters(self, up_to_level=1):
         """
@@ -169,9 +176,12 @@ class LeanpubVerify():
     def wordstats(self):
         """ Create word statistics """
 
-        # TODO: Skip common words
         # TODO: Create nice word clouds
         # TODO: Statistics by chapter and in total !
+
+        common = ["","the","to","*","a","is","and","of","you","for","it",
+                  "your","in","are","can","be","not", "that","with","this",
+                  "on","will","if","have","there","do","more","they","but"]
 
         self.wordstatistics = defaultdict(int)
         self.totalwords = 0
@@ -183,7 +193,8 @@ class LeanpubVerify():
                     parts = re.split("\s|(?<!\d)[,.](?!\d)", line)
                     self.totalwords += len(parts)
                     for p in parts:
-                        self.wordstatistics[p] += 1
+                        if not p.lower() in common:
+                            self.wordstatistics[p.lower()] += 1
         sorted_by_value = sorted(self.wordstatistics.items(), key=lambda kv: kv[1])
         pprint(sorted_by_value)
         print("Total words: %s".format(self.totalwords))
