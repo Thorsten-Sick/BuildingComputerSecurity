@@ -4,30 +4,60 @@ I want to "release early - release often". For this reason I will add a
 changelog to make it simpler for you to find the new sections.
 
 
+%% Maybe add a teaching part: Docker, presentations, psychology
+
 %% Extend defensive programming / compiling
 %% Plan: Valgrind extra
 %% Plan: Verify external libs
 %% Plan: Monitor exploits
 %% Plan: More on Unit tests
-%% Plan: Cryptoalgorithm tables need fixing
+%% Plan: Crypto algorithm tables need fixing
 %% Plan design
 %% grep for "todo" and "safari". Fix this. Also add amazon alternative
+%% All books need safari/amazon links
 
-%% TODO: Add part_attacks
+%% Verify safari links, add amazon link
+%% statistics on todos and size
+%% Review part-by-part
+%% Conferences to appendix
+%% CTFs to appendix
+
 %% TODO: Add Part_tools (openssl, git, nmap, )
 %% TODO: extend attacks goals
 %% TODO: extend know your enemies
 %% TODO: BLE, including Gattack.io
+%% Add Psychology toolbox
+%% TODO: Add defense to all the offensive stuff
+%% Create prefix part
+%% TODO: Add Takeaways to all the offensive stuff.
+%% TODO: Add defense to all the offensive stuff
+%% TODO: Add "intro" to all the parts
+%% TODO: Link new stuff to book structure chapter
+
 
 ## January 2019
 
 * Added **Software design checklist** (initial version)
 * Added **Google Dorks**
-%% TODO: Add Takeaways to all the offensive stuff.
-%% TODO: Add defense to all the offensive stuff
-%% TODO: Add "intro" to all the parts
-%% TODO: Link new stuff to book structure chapter
 * Added **Glossary**
+* Added part **Appendix**
+* Added basic **beef** chapter
+* Added basic **burp suite** chapter
+* Added **IOC sources** chapter
+* Extended **TLS**
+* Updated **content**
+* Intro for background added
+* Intro for planning added
+* Intro to programming added
+* Intro to testing added
+* Updated samples
+* Intro for tools
+* Reworking first chapters: re-write, remove or move to the end of parts. Reason: I want to get people to encounter the core book faster.
+   * Structure: removed unnecessary things
+   * The origin (moved to the author)
+   * stages of learning moved to part "psychology toolbox" (which is not active yet)
+   * random encounter removed
+* More glossary entries
 
 ## December 2018
 
