@@ -20,3 +20,9 @@
 https://www.golem.de/news/ietf-mozilla-entwickler-beschreibt-vorteile-von-dns-ueber-https-1805-134699.html
 
 %% TODO: DNS over https://blog.technitium.com/2018/12/configuring-dns-over-tls-and-dns-over.html
+
+%% TODO: Google DNS over TLS https://thehackernews.com/2019/01/google-dns-over-tls-security.html
+
+%% TODO: DNS attacks https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture17.pdf
+
+%% TODO: More attacks https://www.fireeye.com/blog/threat-research/2019/01/global-dns-hijacking-campaign-dns-record-manipulation-at-scale.html

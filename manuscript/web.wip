@@ -121,3 +121,10 @@ attacker who bought the domain after you quit.
 %% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-1-29d034c27978
 %% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-2-a085ec4332c0
 %% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-3-b0f5997e3739
+
+
+%% TODO: Strict CSP: https://security.googleblog.com/2016/09/reshaping-web-defenses-with-strict.html
+
+%% TODO: XSRFProbe https://www.kitploit.com/2019/01/xsrfprobe-prime-cross-site-request.html?utm_source=dlvr.it&utm_medium=twitter
+
+%% TODO: Data correlation https://github.com/woj-ciech/Danger-zone
