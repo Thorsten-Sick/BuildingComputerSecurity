@@ -1,3 +1,4 @@
+preface/part_preface.txt
 preface/thisbook.txt
 preface/structure.txt
 preface/content.txt
