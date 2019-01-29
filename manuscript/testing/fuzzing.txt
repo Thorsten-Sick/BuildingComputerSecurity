@@ -208,3 +208,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 %% TODO: [Dirbursting](https://github.com/Bo0oM/fuzz.txt)
 %% And: [DNS XSS](https://bo0om.ru/en/)
+
+%% TODO: WinAFL https://github.com/googleprojectzero/winafl/blob/master/readme_pt.md
+
+%% TODO: Deep State API Fuzzing: https://blog.trailofbits.com/2019/01/22/fuzzing-an-api-with-deepstate-part-1/

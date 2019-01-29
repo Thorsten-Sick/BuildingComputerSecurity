@@ -79,3 +79,5 @@ But this is a very special case.
 %% TODO: [0day leaked](https://thehackernews.com/2018/07/windows-adobe-zero-exploit.html)
 
 %% TODO: [FP monitor](http://blog.virustotal.com/2018/06/vtmonitor-to-mitigate-false-positives.html)
+
+%% TODO: Malice https://github.com/maliceio/malice

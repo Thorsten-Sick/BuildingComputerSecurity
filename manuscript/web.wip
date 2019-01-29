@@ -116,3 +116,8 @@ attacker who bought the domain after you quit.
 %% Web market shares 2018: https://sparktoro.com/blog/2018-search-market-share-myths-vs-realities-of-google-bing-amazon-facebook-duckduckgo-more/
 
 %% https://portswigger.net/blog/bypassing-web-cache-poisoning-countermeasures
+
+%% TODO: Server side Request Forgery:
+%% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-1-29d034c27978
+%% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-2-a085ec4332c0
+%% https://medium.com/@madrobot/ssrf-server-side-request-forgery-types-and-ways-to-exploit-it-part-3-b0f5997e3739

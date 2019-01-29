@@ -75,6 +75,8 @@ in your report will help the AV labs to scan their database for info:
 * A hash of your file (md5, sha1) - which one to use depends on the database of the AV vendor
 * URLs
 
+%% TODO: IOC search tool
+
 ## The reason why your software is detected as a false positive (all the time)
 
 In the AV company's virus lab unknown software is classified. Basically into

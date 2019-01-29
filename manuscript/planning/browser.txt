@@ -411,3 +411,12 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 
 %% TODO; Chrome security override: Enter "thisisunsafe"
+
+%% TODO: Google Chrome Drive-by-download protection: https://www.zdnet.com/article/google-chrome-to-add-drive-by-download-protection/
+
+%% TODO: Infected chrome extensions: https://www.zdnet.com/article/razy-infects-legitimate-browser-extensions-to-steal-cryptocurrency/
+%% https://threatpost.com/razy-browser-extensions-theft/141181/
+
+%% TODO: Chrome university: https://www.youtube.com/playlist?list=PL9ioqAuyl6UIFAdsM5KU6P-hRJdh-BPmm
+
+%% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html

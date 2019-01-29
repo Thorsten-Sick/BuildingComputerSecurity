@@ -70,6 +70,8 @@
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
+%% TODO: Phishing and Spear Phishing, Waterhole attacks
+
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
 %% CSRF
