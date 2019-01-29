@@ -1,6 +1,6 @@
-thisbook.txt
-structure.txt
-content.txt
+preface/thisbook.txt
+preface/structure.txt
+preface/content.txt
 background/part_background.txt
 background/intro.txt
 background/knowyourenemies.txt
