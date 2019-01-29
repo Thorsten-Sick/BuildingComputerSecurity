@@ -352,6 +352,10 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO [Magenta Shops](https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html)
 %% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
+%% https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline
+%% https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/
+
+
 
 %% ## Futuristic Technologies
 
@@ -420,3 +424,9 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% TODO: Chrome university: https://www.youtube.com/playlist?list=PL9ioqAuyl6UIFAdsM5KU6P-hRJdh-BPmm
 
 %% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html
+%% https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout
+
+%% TODO: CSP bypass: https://blog.mazinahmed.net/2019/01/backchannel-leaks-on-strict-csp-policy.html
+
+
+%% TODO: Extensions can steal data: https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/
