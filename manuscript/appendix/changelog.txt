@@ -34,6 +34,9 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add "intro" to all the parts
 %% TODO: Link new stuff to book structure chapter
 
+## February 2019
+
+* Cleaning up the author page. Adding Mastodon and Twitter
 
 ## January 2019
 
