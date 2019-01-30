@@ -26,6 +26,8 @@
 
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
 
+%% TODO: **CSRF & Cross site request forgery**
+
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
@@ -44,7 +46,7 @@
 
 **Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
 
-%% Deep Packet Inspection:
+%% TODO: **Deep Packet Inspection**:
 
 **Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
 
@@ -52,7 +54,7 @@
 
 **DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
 
-%% EFF:
+%% TODO: **EFF**:
 
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
@@ -66,17 +68,17 @@
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
-%% Static Code analysis
+%% TODO: **Static Code analysis**
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
 %% TODO: Phishing and Spear Phishing, Waterhole attacks
 
+%% TODO: **SQLI / SQL Injection**:
+
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
-%% CSRF
-
-%% XSS
+%% TODO: **XSS / Cross Site Scripting**:
 
 **Vulnerability**: A bug or a flaw that has security implications
 

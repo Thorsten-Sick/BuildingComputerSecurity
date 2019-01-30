@@ -1,13 +1,13 @@
 # The author {#chapter-the-author}
 
+I have to tell you my origin story. Because you should know where we are going
+if you join me by reading this book. I hope it is not boring as no radioactive
+spiders are involved....
+
 Trouble shooter and one-man-team somehow happened to be my role quite often.
 I am a software developer and engineer who also took the role of
 architect/project manager in many security related projects. Which gave me a
 good and wide perspective on things in the IT world.
-
-I have to tell you my origin story. Because you should know where we are going
-if you join me by reading this book. I hope it is not boring as no radioactive
-spiders are involved....
 
 After studying Computer Science (Dipl. Ing FH at University Ravensburg
 Weingarten, a German title) I went to Avira. An Anti-Virus/Endpoint
@@ -25,14 +25,19 @@ architect role or the developer role. Amongst the things I did is:
     * Scan into these virtual machines without installing anything (Volatility)
     * Classify malware based on behaviour ([Cuckoo Sandbox](https://cuckoosandbox.org/))
 * Create the architecture of a security/privacy focused Chromium based browser
+* Went to the Embedded and IoT world
 
-Now I am moving towards the embedded and IoT world with my new job.
-
-And doing so I started to sort my knowledge and experience. Resulting in this book.
+Right in the middle of doing all those things I started to sort my knowledge
+and experience. Resulting in this book.
 
 %% TODO: Add links to the achievements above
 
 These are the bricks of experience and knowledge this book is built out of.
+
+You can reach me
+
+* On Twitter: @ThorstenSick
+* On Mastodon: @thorsi@chaos.social
 
 **Thorsten Sick**
 
@@ -42,12 +47,8 @@ These are the bricks of experience and knowledge this book is built out of.
 This book was already written once. As my external brain. Just for me.
 I collect my knowledge in "external brains". My own wikis or similar.
 My security knowledge external-brain just grew to a stage where I thought
-"well, you just wrote a book". And after finding the leanpub options that
-could fit my style of tackling projects I decided I could transfer my external
+"well, you just wrote a book". And after finding *leanpub* which fits my
+style of tackling projects I decided I could transfer my external
 brain (written for me) into a book (written for tech people world wide).
 
 And this is currently happening.
-
-The quarry of my external brain currently contains 80 chaotic pages. I expect
-they translate into at least the same amount of book pages. And I will be adding
-more knowledge later.
