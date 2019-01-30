@@ -165,8 +165,39 @@ Things to weed out:
 * Network tools (wget, ftp, nc, nmap, ....)
 * libaries (especially network libs like pcap)
 
+## A common requirement: C&C server
+
+Some malware is automnomous. But the more flexible one will be remote
+controlled as a *botnet*. To achieve that the attacker has a remote control
+software with a nice GUI. From that the attacker can select a list of infected
+machines (maybe by country, available bandwidth) and make them do things
+(malware updates, DDOS, looking for paydata).
+*The good news is*: The network connection to the C&C server could be detected.
+Authorities could take the server down, admins can block the connection.
+*The bad news is*: Attackers learned how to hide the traffic in other
+protocols. And how to run fallback servers to be able to continue their "business".
+
+## Selecting victims
+
+There are two basic attack patterns
+
+### Targeted attacks
+
+Attackers tend to invest lots of time into one specific victim or a group of victims.
+Using online research and social engineering techniques the attacker tries to
+improve the chances of the attack. Especially by writing a very targeted
+and convincing phishing mail and attaching a link to the malware or the
+malware itself (doc with macro, pdf).
+The attackers know about the system of the victim and build the malware
+specifically for the weaknesses of the system.
+
+### Opportunistic attacks
+
+The attackers have a malware and tools to attack systems with a specific
+weakness ("everyone running an 5 year old Acrobat reader"). They do a
+fire-and forget tactics trying to get as many potential victims into contact
+with this attack. The success rate will be very small. But as many potential
+victims get attacked in parallel some will be infected.
+The attacker will find out later if any valuables got caught in the net.
+
 %% TODO: Find a place for: attackers chain vulnerabilities
-
-%% TODO: Attackers need connection to a C&C server
-
-%% TODO: Opportunistic vs. targeted victim selection

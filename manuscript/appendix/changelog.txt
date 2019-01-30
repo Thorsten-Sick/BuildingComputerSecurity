@@ -37,6 +37,8 @@ changelog to make it simpler for you to find the new sections.
 ## February 2019
 
 * Cleaning up the author page. Adding Mastodon and Twitter
+* Extended **Attacks's goals**
+* Extended **know your enemies**
 
 ## January 2019
 

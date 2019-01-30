@@ -97,9 +97,39 @@ the number of potential valuable file son disk.
 * If it finds high processing power and not much user generated content: it runs a crypto miner
 * If it finds lots of user generated content and low processing power it runs as ransomware
 
-%% TODO: Nation states: NSA and angry birds
+## Nation state actors (NSA)
 
-%% TODO: In house attackers "Innentäter"
+Nation states have been investing lots of money into keeping the internet
+and computer security low. They even hacked innocent companies to later
+bounce to their original target. This is why the [NSA hacked angry birds](https://www.theguardian.com/world/2014/jan/27/nsa-gchq-smartphone-app-angry-birds-personal-data).
+If a nation state really targets your software or system you need much more
+than just reading this book.
+But on the other hand: Angry birds was a low hanging fruit. With some
+cyber hygiene someone else would have taken their place.
+
+Basic things to do:
+
+* Do not trust the network
+    * Encrypt everything
+* If you do not need the data, do not collect it
+* Separate private accounts of your staff from work accounts
+
+This will not protect you from a targeted attack by a nation state. But you
+will not be the softest (and tastiest) target out there at least.
+
+## In house attackers
+
+According to some statistics (and your special mileage may vary) in house
+attackers are amongst the more common.
+
+Split responsibilities, compartmentalize, have backups. Make sure people can
+not be bribed. Do code reviews.
+
+I prefer to trust people I work with. But this also lifts responsibility
+off the shoulders of people if done right. Makes them sleep better. Do this
+wise and you and your colleagues will benefit even when there is no one
+planning mischief.
+
 
 %% TODO: Add Hacktivist
 
