@@ -40,7 +40,9 @@ Two tactics with bolt-on-security:
 
 The next principles are part of the security-by-design philosophy
 
-%% TODO Write Bolt-on-security and link to it
+A whole part of this book covers [bolt-on security](#part-bolt-on).
+
+%% TODO Extend and fix this chapter
 
 ## Threat modelling
 
@@ -136,12 +138,16 @@ especially in Design and Coding. It kind of sounds obvious and boring.
 But there are ways to engineer fault-reduction with tools and processes.
 
 %% TODO: Secure coding chapter linked to here
+%% !! [Coding](#chapter-coding)
 
 %% TODO: Compiler mitigation chapter linked to here
+%% [Compiling](#chapter-compiling)
 
 %% TODO: Testing chapter linked to here
+%% [Testing](#part-testing)
 
 %% TODO: Fuzzing chapter linked to here
+%% [Fuzzing](#chapter-fuzzing)
 
 ## De-centralisation
 
