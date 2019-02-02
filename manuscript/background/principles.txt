@@ -38,11 +38,12 @@ Two tactics with bolt-on-security:
 "internet noise" of attacks. This will reduce your important monitor-log reports.
 * Add it to the innermost perimeter to detect attacks that bypassed your protection.
 
-The next principles are part of the security-by-design philosophy
-
 A whole part of this book covers [bolt-on security](#part-bolt-on).
+If your are stuck with a given design bolt-on will be a good way to go.
 
 %% TODO Extend and fix this chapter
+
+The next principles are part of the security-by-design philosophy
 
 ## Threat modelling
 
@@ -81,8 +82,10 @@ Attack surface is everything that can be reached from the outside.
 These are servers, interfaces, network connections. You can reduce this surface by
 asking yourself some simple questions:
 
-* What do you really need ?
-* How to put steel plates on the other technologies ?
+* Which features do you really need ?
+    * Remove unneccessary programs and features
+* How to put steel plates on the technologies I have to keep ?
+    * Reduce features, reduce privileges, ....
 * How to reduce the potential impact ?
 * Who do you (have to) trust ?
 
@@ -98,6 +101,8 @@ Maybe they can be one-way (data-diodes). Possible segments can be:
 * Multiple isolated network segments
 * Sandbox the processes
 * Isolated servers
+* Split a big application into smaller compartments
+    * Example: Browsers have separate proceesses for tabs, extensions, ...
 
 Dropping privileges is a part of that.
 
@@ -137,17 +142,12 @@ to do something unexpected. Plan for flexibility.
 especially in Design and Coding. It kind of sounds obvious and boring.
 But there are ways to engineer fault-reduction with tools and processes.
 
-%% TODO: Secure coding chapter linked to here
-%% !! [Coding](#chapter-coding)
+Those are for example:
 
-%% TODO: Compiler mitigation chapter linked to here
-%% [Compiling](#chapter-compiling)
-
-%% TODO: Testing chapter linked to here
-%% [Testing](#part-testing)
-
-%% TODO: Fuzzing chapter linked to here
-%% [Fuzzing](#chapter-fuzzing)
+* [Secure coding](#chapter-coding)
+* [Compiler mitigation](#chapter-compiling)
+* [Testing](#part-testing)
+* [Fuzzing](#chapter-fuzzing)
 
 ## De-centralisation
 

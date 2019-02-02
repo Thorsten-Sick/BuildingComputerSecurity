@@ -39,7 +39,9 @@ changelog to make it simpler for you to find the new sections.
 * Cleaning up the author page. Adding Mastodon and Twitter
 * Extended **Attacks's goals**
 * Extended **know your enemies**
+* Small extensions to **principles**
 %% TODO: Secure coding !!!
+%% TODO: Browser
 
 ## January 2019
 
