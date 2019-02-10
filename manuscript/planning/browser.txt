@@ -22,6 +22,18 @@ A scary combination.
 Even if you do not develop your own browser (I guess you do not...) there are
 some things you should do to improve security of the browser you installed.
 
+## Choosing the right browser
+
+* Firefox is more privacy respecting
+* Chrome more secure
+
+Both are ok. There are other, more specialised browsers out there. But they
+are built on the same foundations as Firefox or Chrome.
+
+%% TODO: Check out more esoteric browsers. Tor browser, Brave
+
+## Harden your browser
+
 * Keep your browser up to date (your browser should do that)
 * Keep the installed extensions up to date (your browser should take care)
 * Install an Ad-blocker: UBlock Origin
@@ -36,6 +48,8 @@ A more basic checklist is that you ensure three things are secured:
 * The client side: Browser and Extensions
 
 %% TODO: Check this and add links
+
+%% TODO: pick the right extensions
 
 ## Basic browser security philosophy
 
@@ -146,6 +160,10 @@ For a defender the take-aways are:
 [Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
 
 [Exploitkits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
+
+%% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html
+%% https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout
+
 
 ## Cookies
 
@@ -337,6 +355,9 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% [Mozilla removes spying extensions](https://www.bleepingcomputer.com/news/security/mozilla-removes-23-firefox-add-ons-that-snooped-on-users/)
 %% [More extensions removed](https://hackercombat.com/why-mozilla-banned-23-firefox-add-ons-for-mining-user-data/)
 %% TODO: Add CCC talk
+%% TODO: Extensions can steal data: https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/
+
+%% TODO: Spying chrome extensions https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab
 
 
 
@@ -354,6 +375,25 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
 %% https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline
 %% https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/
+
+%% ## Crypto mining
+
+%% TODO: [Miner](https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/)
+
+
+%% ## Pony / Fareit
+
+
+%% ## Browser godmodes
+
+%% TODO: hotkeys CTRL+Shift+j => dev console
+
+%% TODO: cmdline params
+
+%% TODO: chrome://conflicts
+
+
+
 
 
 
@@ -390,7 +430,6 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %%  TODO: [Metasploit vs. browsers](https://blog.rapid7.com/2015/07/15/the-new-metasploit-browser-autopwn-strikes-faster-and-smarter-part-1/)
 
 
-%% TODO: [Miner](https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/)
 
 %% [Google Cloud Ultramem machines](https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html)
 
@@ -423,17 +462,10 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO: Chrome university: https://www.youtube.com/playlist?list=PL9ioqAuyl6UIFAdsM5KU6P-hRJdh-BPmm
 
-%% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html
-%% https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout
 
 %% TODO: CSP bypass: https://blog.mazinahmed.net/2019/01/backchannel-leaks-on-strict-csp-policy.html
 
 %% TODO: Browser architecture: https://developers.google.com/web/updates/2018/09/inside-browser-part1
-
-%% TODO: Extensions can steal data: https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/
-
-
-%% TODO: Spying chrome extensions https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab
 
 %% TODO: URL Display guidelines https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md
 

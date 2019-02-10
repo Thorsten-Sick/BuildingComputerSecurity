@@ -76,6 +76,8 @@
 
 %% TODO: **SQLI / SQL Injection**:
 
+%% TODO: Supercookies
+
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
 %% TODO: **XSS / Cross Site Scripting**:
