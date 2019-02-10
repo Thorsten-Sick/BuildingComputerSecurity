@@ -376,13 +376,38 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline
 %% https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/
 
-%% ## Crypto mining
+## Crypto mining
+
+Crypto mining became a new common attack in 2018. Miners can be written in
+Javascript and run in the victims browser. Sandboxing and isolation will not
+work because the miner is not accessing any outside resources. Just CPU and
+network connectivity.
+The damage for the user is monetary - the user has to pay the electricity bill.
+The gain for the attacker is the bitcoins being mined. Side effect is a slow PC.
+
+Miners can either be intentionally inserted in pages - with the user
+willingliy paying for the page's content by mining.
+
+Or hacked pages can contain miners. A third option is network infratructure
+is inserting them (hacked routers) into unencrypted pages.
 
 %% TODO: [Miner](https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/)
 
 
-%% ## Pony / Fareit
+## Pony / Fareit
 
+Pony, aka Fareit is a malware module. It is spread with other malware.
+It's main tasks is to collect passwords on a computer. It especially targets
+the internal password stores of browsers and FTP clients.
+
+Those passwords are sent to the attacker.
+
+For browsers this is relevant in several ways:
+
+* The stores are secured against copying away from the computer. But they are not secured against attackers running software on that computer.
+    * If hit by malware, change all the passwords stored in your local storage
+* The stolen passwords are later used to infect innocent sites with malware
+    * This is why they are targeting FTP clients
 
 %% ## Browser godmodes
 
