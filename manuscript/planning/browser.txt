@@ -112,7 +112,7 @@ check with your Privacy Extension how many trackers just got blocked.
 
 To protect yourself and do your own tracker-tracking use
 
-Privacy Badger
+[Privacy Badger](https://www.eff.org/privacybadger)
 
 ### Social Icons: Facebook and Twitter trackers
 
@@ -495,3 +495,5 @@ For browsers this is relevant in several ways:
 %% TODO: URL Display guidelines https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md
 
 %% TODO: XSS https://github.com/dxa4481/XSSOauthPersistence
+
+%% TODO: List of test URLs

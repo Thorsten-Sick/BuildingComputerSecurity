@@ -8,6 +8,9 @@ Architecture and design already starts long before starting to code.
 As it can also include preparing the environment, tools and getting the
 requirement it has a blurred line to management tasks.
 
+%% TODO: Kind of mention "Supply chain attacks" in infrastructure
+
+%% TODO: Maybe split "processes in company" out of infrastructure (bug reporting, ...)
 
 ## Preparation
 

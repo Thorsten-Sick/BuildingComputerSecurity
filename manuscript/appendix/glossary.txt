@@ -1,5 +1,7 @@
 # Glossary {#chapter-glossary}
 
+%% TODO: ASLR DEP SafeSEH StrongNaming Authenticode
+
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
