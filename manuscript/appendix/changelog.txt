@@ -40,6 +40,8 @@ changelog to make it simpler for you to find the new sections.
 * Extended **Attacks's goals**
 * Extended **know your enemies**
 * Small extensions to **principles**
+* Extending *TLS*
+* Extending *browser*
 %% TODO: Secure coding !!!
 %% TODO: Browser
 

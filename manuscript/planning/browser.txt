@@ -316,6 +316,8 @@ URL you protect the others by adding it to a blacklist.
 
 [Phishtank](https://www.phishtank.com)
 
+%% TODO [Certstream phishing catcher](https://github.com/x0rz/phishing_catcher)
+
 ## Pseudonymity
 
 A good way to protect yourself online is to create pseudonyms for our identity.#
@@ -409,7 +411,7 @@ For browsers this is relevant in several ways:
 * The stolen passwords are later used to infect innocent sites with malware
     * This is why they are targeting FTP clients
 
-%% ## Browser godmodes
+## Browser godmodes
 
 %% TODO: hotkeys CTRL+Shift+j => dev console
 
@@ -417,10 +419,63 @@ For browsers this is relevant in several ways:
 
 %% TODO: chrome://conflicts
 
+### Special chrome URLs
 
+I focus on the urls relevant for security or general purpose. There are many more.
 
-
-
+* chrome://about List of all special URLs
+* chrome://apps Installed Web Apps
+* chrome://bluetooth-internals Your browser supports bluetooth
+* chrome://chrome Version info
+* chrome://components Plugins and similar browser components
+* chrome://conflicts 3rd party components loaded into the browser process
+* chrome://crashes Crash reports
+* chrome://device-log Logging device interaction
+* chrome://devices Add new devices (printer, Google cloud print...)
+%% chrome://discards
+* chrome://download-internals debugging downloads
+* chrome://extensions Fancy extension dialog
+* chrome://flags Toggle chrome experiments
+* chrome://flash Installed flash player
+* chrome://system Build information
+%% chrome://gcm-internals
+%% chrome://histograms
+* chrome://history Access to the browser history
+%% chrome://indexeddb-internals
+* chrome://inspect Dev tools. Analyse pages, extensions, ...
+* chrome://interstitials Access to all the warning pages (good for preparing presentations)
+%% chrome://interventions-internals
+%% chrome://invalidations
+%% chrome://local-state browser state as json
+%% chrome://media-internals For media debugging ?
+* chrome://net-export Create NetLog dump of network traffic on disk
+* chrome://net-internals network diagnostics. Also access to Certificate, HSTS and HPKP settings
+* chrome://nbetwork-errors A list of network error pages (good for preparing presentations)
+%% chrome://ntp-tiles-internals
+%% chrome://omnibox Omnibox debug page
+%% chrome://password-manager-internals
+%% chrome://policy
+%% chrome://predictors
+%% chrome://print print dialog
+%% chrome://quota-internals
+* chrome://safe-browsing Safe browsing settings and statistics
+%% * chrome://serviceworker-internals
+%% chrome://settings Settings dialog
+* chrome://signin-internals Account signin data. Maybe relevant for forensics
+%% chrome://site-engagement
+%% chrome://suggestions
+%% chrome://supervised-user-internals Child protection
+%% chrome://sync-internals
+%% chrome://system System information
+%% chrome://taskscheduler-internals
+%% chrome://thumbnails
+%% chrome://tracing
+%% chrome://translate-internals
+%% chrome://usb-internals
+%% chrome://user-actions
+* chrome://version Detailed version information. Good for support
+%% chrome://webrtc-internals Audio debugging
+%% chrome://webrtc-logs Audio debugging
 
 %% ## Futuristic Technologies
 

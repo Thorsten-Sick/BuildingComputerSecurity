@@ -133,6 +133,13 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 %% TODO Verify certificate (host name !)
 
+## Certificate content and structure
+
+Certificates can be stored in different container formats. Conversion can be required.
+
+Common is PEM (base64 encoded x509 ASN.1). X509 is a standard.There is also
+DER (with filenames like .cer, .crt, .der) basing on the X.690 standard.
+
 ## Revocation (OCSP = Online Certificate Status Protocol)
 
 If control over a certificate gets lost
@@ -286,3 +293,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% TODO: Code certificate chain attacks: https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec
 
 %% TODO: Building certificate chain: https://github.com/trimstray/sslmerge
+
+%% TODO: certstream.calidog.io
