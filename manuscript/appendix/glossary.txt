@@ -1,10 +1,12 @@
 # Glossary {#chapter-glossary}
 
-%% TODO: ASLR DEP SafeSEH StrongNaming Authenticode
+%% TODO: StrongNaming Authenticode
 
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
+
+**ASLR**: Mitigation strategy to load code into **random** areas of the memory. Makes writing of exploits harder
 
 **BLE**: Bluetooth Low Energy
 
@@ -29,6 +31,8 @@
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
 
 %% TODO: **CSRF & Cross site request forgery**
+
+**DEP**: Data execution prevention. Parts of the memory are marked as non-eecute (=NX)
 
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
@@ -58,6 +62,10 @@
 
 %% TODO: **EFF**:
 
+**Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
+
+**NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO oPeration codes to the beginning.
+
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
@@ -77,6 +85,8 @@
 %% TODO: Phishing and Spear Phishing, Waterhole attacks
 
 %% TODO: **SQLI / SQL Injection**:
+
+**SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
 
 %% TODO: Supercookies
 
