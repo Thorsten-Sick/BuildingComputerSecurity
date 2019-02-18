@@ -196,6 +196,7 @@ browser plugins ...
 To test your own setup visit:
 
 [Panopticlicks](https://panopticlick.eff.org/)
+[Browserleaks](https://browserleaks.com)
 
 
 ## TLS/SSL/HTTPS
@@ -370,6 +371,8 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO: [Wayback machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak?hl=en-US)
 
+%% TODO: [Oooni](https://ooni.torproject.org/)
+%% TODO: [Netblocks](https://netblocks.org)
 
 %% ## Hacked Shops
 

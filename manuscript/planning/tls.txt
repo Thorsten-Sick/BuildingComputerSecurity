@@ -270,7 +270,9 @@ TLS/SSL configuration to test your endpoint.
 [Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
 A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
 
+### Statistics
 
+[Google HTTPS transparency report](https://transparencyreport.google.com/https/overview)
 
 %% TODO: Check out [NoGotoFail](https://github.com/google/nogotofail)
 

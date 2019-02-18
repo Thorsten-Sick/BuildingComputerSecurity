@@ -84,7 +84,7 @@
 
 %% TODO: Phishing and Spear Phishing, Waterhole attacks
 
-%% TODO: **SQLI / SQL Injection**:
+**SQLI / SQL Injection**: Sql *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
 
 **SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
 
