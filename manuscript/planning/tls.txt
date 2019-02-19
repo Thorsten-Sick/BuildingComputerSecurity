@@ -274,6 +274,10 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 [Google HTTPS transparency report](https://transparencyreport.google.com/https/overview)
 
+### Talks
+
+* [35C3 The rocky road to TLS 1.3 ...](https://media.ccc.de/v/35c3-9607-the_rocky_road_to_tls_1_3_and_better_internet_encryption)
+
 %% TODO: Check out [NoGotoFail](https://github.com/google/nogotofail)
 
 

@@ -416,9 +416,59 @@ For browsers this is relevant in several ways:
 
 ## Browser godmodes
 
-%% TODO: hotkeys CTRL+Shift+j => dev console
+### Chrome keyboard shortcuts
 
-%% TODO: cmdline params
+hotkeys CTRL+Shift+j => dev console
+CTRL + L > Focus on url bar
+
+%% TODO https://support.google.com/chrome/answer/157179
+
+### Chrome command line parameters
+
+%% TODO: cmdline params: Test and verify
+%% https://www.ghacks.net/2013/10/06/list-useful-google-chrome-command-line-switches/
+%% https://peter.sh/experiments/chromium-command-line-switches/
+
+* disable-plugins de-activate plugins
+* incognito start in incognito mode
+* no-referrers do no send referrers
+* purge-memory-button add button to purge memory
+* ssl-version-min minimum ssl version
+* allow-insecure-localhost ignore tls errors on localhost
+* allow-no-sandbox-job lowers sandbox security
+* allow-outdated-plugins do not block outdated plugins
+* allow-running-insecure-content http js in https pages allowed
+* allow-sandbox-debugging
+* disable-extenions
+* ignore-certificate-errors
+* ignore-urlfetcher-cert-requests
+* load-extension load extension <id> at startup
+* net-log-capture-mode Set events being captured in network log
+* no-sandbox disable sandbox for all process types
+* noerrdialogs disable error dialogs
+* reduce-security-for-testing
+* safebrowsing-disable-download-protection
+* safebrowsing-disable-extension-blacklist
+
+* ssl-key-log-file log ssl key material to the given file
+
+* unsafely-treat--insecure-origin-as-secure special insecure treatment of urls in list
+
+* proxy-server proxy server configuration
+* proxy-pac-url pac script to configure proxy server
+
+
+* disable-web-security (same origin policy)
+* disable-xss-auditor (reflective XSS)
+* enable-crx-hash-check
+* enable-strict-mix-content-checking strict mixed content check (http in https)
+
+* disable-setuid-sandbox
+* enable-sandbox enable sandbox for the process
+* enable-sandbox-logging mac os logging
+
+* whitelisted-extension-id add to all the permission whitelists
+* show-component-extension-options show pre-installed extensions
 
 %% TODO: chrome://conflicts
 
