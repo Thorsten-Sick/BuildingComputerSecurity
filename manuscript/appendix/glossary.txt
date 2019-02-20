@@ -97,3 +97,13 @@
 **Vulnerability**: A bug or a flaw that has security implications
 
 **Weaponizing**: Making an exploit easy and reliable to use.
+
+%% XSS, reflective
+
+%% mixed content
+
+%% nacl
+
+%% forward secrecy
+
+%% Perfect forward secrecy
