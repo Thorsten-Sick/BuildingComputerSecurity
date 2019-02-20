@@ -425,50 +425,79 @@ CTRL + L > Focus on url bar
 
 ### Chrome command line parameters
 
-%% TODO: cmdline params: Test and verify
-%% https://www.ghacks.net/2013/10/06/list-useful-google-chrome-command-line-switches/
-%% https://peter.sh/experiments/chromium-command-line-switches/
-%%
-%% * disable-plugins de-activate plugins
-%% * incognito start in incognito mode
-%% * no-referrers do no send referrers
-%% * purge-memory-button add button to purge memory
-%% * ssl-version-min minimum ssl version
-%% * allow-insecure-localhost ignore tls errors on localhost
-%% * allow-no-sandbox-job lowers sandbox security
-%% * allow-outdated-plugins do not block outdated plugins
-%% * allow-running-insecure-content http js in https pages allowed
-%% * allow-sandbox-debugging
-%% * disable-extenions
-%% * ignore-certificate-errors
-%% * ignore-urlfetcher-cert-requests
-%% * net-log-capture-mode Set events being captured in network log
-%% * load-extension load extension <id> at startup
-%% * no-sandbox disable sandbox for all process types
-%% * reduce-security-for-testing
-%% * noerrdialogs disable error dialogs
-%% * safebrowsing-disable-download-protection
-%% * safebrowsing-disable-extension-blacklist
+Chrome has lots of command line parameters. Many are to assist development.
+But as Chrome is a large project this also involves:
 
-%% * ssl-key-log-file log ssl key material to the given file
+* Extension development
+* Web server hardening
+* Web page hardening
 
-%% * unsafely-treat--insecure-origin-as-secure special insecure treatment of urls in list
+With so many moving parts (think: enabling additional security in the HTTP
+header the server sends) things break. To sort out "what broke why" it is
+possible to de-activate security features in the browser.
 
-%% * proxy-server proxy server configuration
-%% * proxy-pac-url pac script to configure proxy server
+This can be essential to roll out new security.
+
+This can be devastating when abused.
+
+(some malware scripts start a browser with reduced security and point the
+user to start banking).
+
+As the command lines switches are constantly updated, this list will contain bugs.
+
+#### Network Security
+
+* no-referrers do no send referrers
+* disable-web-security (same origin policy)
+* safebrowsing-disable-download-protection
+* safebrowsing-disable-extension-blacklist
+* proxy-server proxy server configuration
+* proxy-pac-url pac script to configure proxy server
+* net-log-capture-mode Set events being captured in network log
+* unsafely-treat--insecure-origin-as-secure special insecure treatment of urls in list
+* disable-xss-auditor (reflective XSS)
 
 
-%% * disable-web-security (same origin policy)
-%% * disable-xss-auditor (reflective XSS)
-%% * enable-crx-hash-check
-%% * enable-strict-mix-content-checking strict mixed content check (http in https)
+#### Crypto security
 
-%% * disable-setuid-sandbox
-%% * enable-sandbox-logging mac os logging
-%% * enable-sandbox enable sandbox for the process
+* ssl-version-min minimum ssl version
+* allow-insecure-localhost ignore tls errors on localhost
+* allow-running-insecure-content http js in https pages allowed
+* ignore-certificate-errors
+* ignore-urlfetcher-cert-requests
+* ssl-key-log-file log ssl key material to the given file
+* enable-strict-mix-content-checking strict mixed content check (http in https)
 
-%% * whitelisted-extension-id add to all the permission whitelists
-%% * show-component-extension-options show pre-installed extensions
+
+#### Sandbox
+
+* enable-sandbox enable sandbox for the process
+* no-sandbox disable sandbox for all process types
+* allow-no-sandbox-job lowers sandbox security
+* allow-sandbox-debugging
+* disable-setuid-sandbox
+* enable-sandbox-logging mac os logging
+
+
+#### Plugins/Extensions
+
+* show-component-extension-options show pre-installed extensions
+* disable-plugins de-activate plugins
+* disable-extenions
+* load-extension load extension <id> at startup
+* allow-outdated-plugins do not block outdated plugins
+* whitelisted-extension-id add to all the permission whitelists
+* enable-crx-hash-check
+
+
+#### Everything else
+
+* reduce-security-for-testing
+* incognito start in incognito mode
+* purge-memory-button add button to purge memory
+* noerrdialogs disable error dialogs
+
+[Generated list of command line switches](https://peter.sh/experiments/chromium-command-line-switches/)
 
 %% TODO: chrome://conflicts
 
