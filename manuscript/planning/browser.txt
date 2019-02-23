@@ -414,6 +414,19 @@ For browsers this is relevant in several ways:
 * The stolen passwords are later used to infect innocent sites with malware
     * This is why they are targeting FTP clients
 
+## URL blacklists
+
+GSB (Google Safe Browsing) is a URL blacklist that is sued to protect against
+malicious URLs. There are others and Firefox also has an own system.
+
+To QA the usage of blacklist (and check o0ut the warning dialogs) there is a list
+of
+
+* Firefox Malware http://itisatrap.org/firefox/its-an-attack.html
+* Firefox Phishing http://itisatrap.org/firefox/its-a-trap.tml
+* Firefox PUA http://itisatrap.org/firefox/unwanted.html
+* GSB collection https://testsafebrowsing.appspot.com/
+
 ## Browser godmodes
 
 ### Chrome keyboard shortcuts
