@@ -1,0 +1,40 @@
+# Security process {#chapter-security-process}
+
+C> By: Thorsten Sick
+
+C> For: Manager, Architects
+
+## Basics
+
+A company needs internal processes to handle security incidents.
+Incidents will happen. And if everyone knows how to handle those emergencies
+and had enough fire-drills, handling the indicents will be much smoother than without.
+
+As every company is different (size, structure, goals) it is hard to write a
+one-size-fits-all manual. I will still try to collect the essential pieces.
+But finding an expert to assist you in this endeavour would be smart.
+
+
+## Example: Mozilla
+
+https://www.mozilla.org/en-US/security/
+
+* security@mozilla.com address
+* PGP key for this address in homepage
+* bug bounty linked
+* security policy linked
+    * bug tracker with special "security" flag: restricted access
+    * especially for open source projects
+    * publish the bug after full roll-out of patches
+* Keep it secret until fixed, patched and rolled out
+* After fix: blog post, hall of fame for reporter, ...
+    * give credits
+* Be ready to publish work-arounds should it be abused while still working on fix
+*
+
+%% Internal pen tests
+%% Bug bounties
+%% internal code reviews
+%% security@mozilla and PGP key
+%% security.txt
+%% Communication / PR

@@ -33,6 +33,8 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add defense to all the offensive stuff
 %% TODO: Add "intro" to all the parts
 %% TODO: Link new stuff to book structure chapter
+%% TODO: Secure coding !!!
+%% TODO: Browser
 
 ## February 2019
 
@@ -42,8 +44,9 @@ changelog to make it simpler for you to find the new sections.
 * Small extensions to **principles**
 * Extending *TLS*
 * Extending *browser*
-%% TODO: Secure coding !!!
-%% TODO: Browser
+* Starting *vulnerabilities*
+* Starting *security process*
+
 
 ## January 2019
 

@@ -7,8 +7,8 @@ C> For: Managers, Developers, Testers
 Vulnerabilities want to be managed. And fixed. To get the terms right:
 
 * **Bugs** are mistakes in **code**
-* **Flaws** are mistakes in the **design**
-* **bugs** and **flaws** *can* be s**vulnerabilities
+* **Flaws** are mistakes in the **design** of the software
+* **bugs** and **flaws** *can* be **vulnerabilities
 * *some* vulnerabilities can be **exploited**
 * *some* **exploits** can be **weaponized** - made simple to use and reliable
 * **vulnerabilities** can also be patched.....
@@ -18,7 +18,8 @@ So it is a race between the attackers - wanting to get to the stage of
 exploit or weaponized exploit and the defenders - wanting the patches rolled
 out to all of their customers.
 
-The tricky part is not to miss the start of the race.
+The tricky part is not to miss the start of the race. And be well organised to
+push towards the goal.
 
 For the defenders it starts as soon as they learn about the bug/flaw.
 For the attacker it also starts at that stage of finding a bug/flaw. Worst
@@ -54,33 +55,35 @@ A system/program can get bugs and flaws from different sources:
 
 ## CVSS Score
 
+
+
 [CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
 
 %% TODO: Add to test cases to avoid regression
 
-## Searche engines
+%% ## Searche engines
 
-https://sploitus.com/
-https://cve.mitre.org
-https://nvd.nist.gov/vuln/
-# https://www.exploit-db.com/google-hacking-database/
+%% https://sploitus.com/
+%% https://cve.mitre.org
+%% https://nvd.nist.gov/vuln/
+%% # https://www.exploit-db.com/google-hacking-database/
 
-https://www.rapid7.com/db/vulnerabilities
-https://vuldb.com
+%% https://www.rapid7.com/db/vulnerabilities
+%% https://vuldb.com
 
-https://www.exploit-db.com
+%% https://www.exploit-db.com
 
 # snyk.io
 
-# Measuring impact of vulnerability (Common vulnerability scoring system)
-# Vulnerability database: https://nvd.nist.gov/vuln-metrics/cvss
+%% # Measuring impact of vulnerability (Common vulnerability scoring system)
+%% # Vulnerability database: https://nvd.nist.gov/vuln-metrics/cvss
 
-# Exploitation
+%% # Exploitation
 
-## Post exploitation
+%% ## Post exploitation
 
-https://guif.re/linuxeop
+%% https://guif.re/linuxeop
 
 
 %% TODO: Privilege escalation by AV software: https://hackercombat.com/new-trend-antivirus-software-exploited-to-launch-privilege-escalation-attack/
@@ -91,6 +94,6 @@ https://guif.re/linuxeop
 
 %% TODO: DLL hijacking https://gaissecurity.com/yazi/discovery-of-dll-hijack-on-trend-micro-antivirusplus-cve-2018-18333
 
-Vulnerability management App: https://thehackernews.com/2018/12/whitesource-bolt-github-security.html
+%% Vulnerability anagement App: https://thehackernews.com/2018/12/whitesource-bolt-github-security.html
 
 %% TODO: Metasploit, Armitage
