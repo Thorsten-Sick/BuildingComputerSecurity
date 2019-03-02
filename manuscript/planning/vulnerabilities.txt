@@ -55,10 +55,25 @@ A system/program can get bugs and flaws from different sources:
 
 ## CVSS Score
 
+In many cases it is harder to triage if a reported bug if it is also a
+vulnerability than to just fix it. In this case: I would just fix it.
+
+For the harder cases you can do:
+
+* Get a POC exploit and have your testers reproduce it
+* Calculate the CVSS score - which indicated how serious this bug is
+    * [CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
+* Prioritize the bug into your backlog
 
 
-[CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
+## Security process
+
+Managers can build [internal processes](#chapter-security-process) to manage vulnerabilities and to avoid them.
+Developers and testers can avoid them during the development phase or detect
+them while testing.
+
+There are chapters in this book covering this - because it is the essence of security.
 
 %% TODO: Add to test cases to avoid regression
 
