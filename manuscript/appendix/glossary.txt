@@ -107,3 +107,6 @@
 %% forward secrecy
 
 %% Perfect forward secrecy
+
+
+%% TODO: Responsible/full disclosure

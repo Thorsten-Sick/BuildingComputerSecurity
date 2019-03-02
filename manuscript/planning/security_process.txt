@@ -14,8 +14,95 @@ As every company is different (size, structure, goals) it is hard to write a
 one-size-fits-all manual. I will still try to collect the essential pieces.
 But finding an expert to assist you in this endeavour would be smart.
 
+A *window of vulnerability* is the time span between
+"first use of the vulnerable software" and "user patched". Of course you
+want this to be zero or as small as possible.
+
+## Good and bad ways to find vulnerabilities
+
+This list is from good to really bad.
+
+|Phase                                  |Window of vulnerability |Monetary cost|Damage caused      |PR cost  |
+|---------------------------------------|------------------------|-------------|-------------------|---------|
+|During development                     |0                       |Low          |0                  |0        |
+|During QA                              |0                       |Low          |0                  |0        |
+|After release - responsible disclosure |weeks/months/years      |Low          |0                  |Low      |
+|After release - bug bounty             |weeks/months/years      |Low + Bounty |0                  |0-Low    |
+|After release - full disclosure        |weeks/months/years      |High         |Unknown            |High     |
+|Abused by cyber criminals              |weeks/months/years      |High         |Monetary           |Very high|
+|Abused by repressive governments       |weeks/months/years      |High         |Torture and death  |Extreme  |
+
+Monetary cost: Cost you pay for fixing
+Damaged caused: What your users pay for using your vulnerable software (worst case)
+PR cost: Blog posts and similar to fix post-incident PR
+
+As you can see: You want to fix your vulnerabilities as early in the process as possible.
+
+Another thing to keep in mind: programming bugs are simpler to fix than design flaws.
+Because if design has to be re-done, lots of code changes will follow.
+
+With responsible disclosure the reporter reports the vulnerability by mail
+and defines 90 days of non-disclosure. Assisting the company to fix it and
+push the release. 90 days are a reasonable time for most companies to
+reproduce the bug, fix it, test it and release it.
+After the release the company writes a warning for the users to update - a blog
+post also thanking the researcher. These credits are the "payment" the
+researcher receives for a job that could also have gotten him thousands of
+dollars doing it a "Pen test".
+Why 90 days ?
+As the experience of security people is: Many companies are lazy - they would
+wish to fix the bug in the next version the sell.
+In the end: no one will get a fix. People are vulnerable and the vulnerability
+is abused. So 90 days. Then disclosure. This is fair and puts a (low) pressure
+on the company to step our of their development schedule and get things done.
+
+This time frame can be shortened if malicious actors find it in parallel
+and abuse it ! Not the fault of the original security researcher. That
+happened multiple times already. A hint:
+If you can over-achieve from day one and release in 45 days: Do it !
+
+Another thing: Some people think it smart do sue the reporter and never fix
+the vulnerability. These companies will never again receive responsible
+disclosures from anyone.
+From this time on they will find their vulnerabilities leaked on pastebin. In a
+non-responsible way. Press pressure and the police will then make them fix
+their vulnerabilities as fast as possible.
+
+## The three steps
+
+There are three steps to roll out this kind of processes. The last one
+(asking for vulnerabilities) is optional.
+
+1. Introduce internal communication channels
+    * Support to triage
+    * triage to development
+    * triage to qa
+    * triage to management
+    * management to PR
+    * internal pen tests
+    * internal education
+    * internal code reviews
+2. Stablish external input channel for reports
+    * security@company.com address
+    * PGP key
+    * web site
+    * security.txt
+3. Ask for vulnerabilities
+    * Bug Bounties
+    * Hired pen testers
+
+It is important to finish one step before starting the next one.
+Asking for vulnerabilities - and receiving thousands of them - without having
+internal processes will result in disaster.
+
 
 ## Example: Mozilla
+
+Mozilla is the Open Source organisation behind Firefox and other projects.
+They have additional challenges: Their bug tracker is open. And they have
+lots of external coders (Open Source and ones working for other companies by
+contributing to Mozilla source). This is the reason why they had to achieve
+some things that you will very likely not have to manage.
 
 https://www.mozilla.org/en-US/security/
 
@@ -30,7 +117,7 @@ https://www.mozilla.org/en-US/security/
 * After fix: blog post, hall of fame for reporter, ...
     * give credits
 * Be ready to publish work-arounds should it be abused while still working on fix
-*
+* Bug reporter can decide when to publish
 
 %% Internal pen tests
 %% Bug bounties

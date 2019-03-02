@@ -427,6 +427,8 @@ of
 * Firefox PUA http://itisatrap.org/firefox/unwanted.html
 * GSB collection https://testsafebrowsing.appspot.com/
 
+
+
 ## Browser godmodes
 
 ### Chrome keyboard shortcuts
