@@ -83,7 +83,7 @@ These are servers, interfaces, network connections. You can reduce this surface 
 asking yourself some simple questions:
 
 * Which features do you really need ?
-    * Remove unneccessary programs and features
+    * Remove unnecessary programs and features
 * How to put steel plates on the technologies I have to keep ?
     * Reduce features, reduce privileges, ....
 * How to reduce the potential impact ?
@@ -102,7 +102,7 @@ Maybe they can be one-way (data-diodes). Possible segments can be:
 * Sandbox the processes
 * Isolated servers
 * Split a big application into smaller compartments
-    * Example: Browsers have separate proceesses for tabs, extensions, ...
+    * Example: Browsers have separate processes for tabs, extensions, ...
 
 Dropping privileges is a part of that.
 

@@ -8,7 +8,7 @@ C> For: Manager, Architects
 
 A company needs internal processes to handle security incidents.
 Incidents will happen. And if everyone knows how to handle those emergencies
-and had enough fire-drills, handling the indicents will be much smoother than without.
+and had enough fire-drills, handling the incidents will be much smoother than without.
 
 As every company is different (size, structure, goals) it is hard to write a
 one-size-fits-all manual. I will still try to collect the essential pieces.
@@ -76,13 +76,13 @@ There are three steps to roll out this kind of processes. The last one
 1. Introduce internal communication channels
     * Support to triage
     * triage to development
-    * triage to qa
+    * triage to QA
     * triage to management
     * management to PR
     * internal pen tests
     * internal education
     * internal code reviews
-2. Stablish external input channel for reports
+2. Establish external input channel for reports
     * security@company.com address
     * PGP key
     * web site

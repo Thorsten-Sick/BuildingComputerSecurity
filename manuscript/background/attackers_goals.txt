@@ -163,11 +163,11 @@ Things to weed out:
 * System binaries
 * Compilers
 * Network tools (wget, ftp, nc, nmap, ....)
-* libaries (especially network libs like pcap)
+* libraries (especially network libs like pcap)
 
 ## A common requirement: C&C server
 
-Some malware is automnomous. But the more flexible one will be remote
+Some malware is autonomous. But the more flexible one will be remote
 controlled as a *botnet*. To achieve that the attacker has a remote control
 software with a nice GUI. From that the attacker can select a list of infected
 machines (maybe by country, available bandwidth) and make them do things
@@ -187,7 +187,7 @@ Attackers tend to invest lots of time into one specific victim or a group of vic
 Using online research and social engineering techniques the attacker tries to
 improve the chances of the attack. Especially by writing a very targeted
 and convincing phishing mail and attaching a link to the malware or the
-malware itself (doc with macro, pdf).
+malware itself (doc with macro, PDF).
 The attackers know about the system of the victim and build the malware
 specifically for the weaknesses of the system.
 

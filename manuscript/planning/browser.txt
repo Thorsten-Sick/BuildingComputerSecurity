@@ -27,7 +27,7 @@ some things you should do to improve security of the browser you installed.
 * Firefox is more privacy respecting
 * Chrome more secure
 
-Both are ok. There are other, more specialised browsers out there. But they
+Both are OK. There are other, more specialised browsers out there. But they
 are built on the same foundations as Firefox or Chrome.
 
 %% TODO: Check out more esoteric browsers. Tor browser, Brave
@@ -159,7 +159,7 @@ For a defender the take-aways are:
 
 [Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
 
-[Exploitkits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
+[Exploit kits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
 
 %% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html
 %% https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout
@@ -241,7 +241,7 @@ For both browsers see more on [TheSSLStore](https://www.thesslstore.com/blog/cle
 
 ## Facebook
 
-[EFF howto change facebook settings](https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing)
+[EFF HOWTO change Facebook settings](https://www.eff.org/deeplinks/2018/03/how-change-your-facebook-settings-opt-out-platform-api-sharing)
 
 ## BeEF
 
@@ -287,7 +287,7 @@ and not the one you use for browsing for cat videos.
 
 
 %% TODO: [Novidade Exploit Kits vs. Routers](https://blog.trendmicro.com/trendlabs-security-intelligence/new-exploit-kit-novidade-found-targeting-home-and-soho-routers/)
-%% TODO: [cryptojacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
+%% TODO: [crypto jacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
 %% TODO: https://www.zdnet.com/article/hacking-attacks-on-your-router-why-the-worst-is-yet-to-come/
 
 ## Phishing
@@ -384,16 +384,16 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 ## Crypto mining
 
 Crypto mining became a new common attack in 2018. Miners can be written in
-Javascript and run in the victims browser. Sandboxing and isolation will not
+JavaScript and run in the victims browser. Sandboxing and isolation will not
 work because the miner is not accessing any outside resources. Just CPU and
 network connectivity.
 The damage for the user is monetary - the user has to pay the electricity bill.
 The gain for the attacker is the bitcoins being mined. Side effect is a slow PC.
 
 Miners can either be intentionally inserted in pages - with the user
-willingliy paying for the page's content by mining.
+willingly paying for the page's content by mining.
 
-Or hacked pages can contain miners. A third option is network infratructure
+Or hacked pages can contain miners. A third option is network infrastructure
 is inserting them (hacked routers) into unencrypted pages.
 
 %% TODO: [Miner](https://www.virusbulletin.com/blog/2018/10/vb2018-paper-drive-download-drive-mining-understanding-new-paradigm/)
@@ -419,7 +419,7 @@ For browsers this is relevant in several ways:
 GSB (Google Safe Browsing) is a URL blacklist that is sued to protect against
 malicious URLs. There are others and Firefox also has an own system.
 
-To QA the usage of blacklist (and check o0ut the warning dialogs) there is a list
+To QA the usage of blacklist (and check the warning dialogues) there is a list
 of
 
 * Firefox Malware http://itisatrap.org/firefox/its-an-attack.html
@@ -429,12 +429,12 @@ of
 
 
 
-## Browser godmodes
+## Browser god modes
 
 ### Chrome keyboard shortcuts
 
 * hotkeys CTRL+Shift+j => dev console
-* CTRL + L > Focus on url bar
+* CTRL + L > Focus on URL bar
 
 %% TODO https://support.google.com/chrome/answer/157179
 
@@ -477,11 +477,11 @@ As the command lines switches are constantly updated, this list will contain bug
 
 * *ssl-version-min* minimum ssl version
 * *allow-insecure-localhost* ignore tls errors on localhost
-* *allow-running-insecure-content* http js in https pages allowed
+* *allow-running-insecure-content* HTTP js in HTTPS pages allowed
 * *ignore-certificate-errors*
 * *ignore-urlfetcher-cert-requests*
-* *ssl-key-log-file* log ssl key material to the given file
-* *enable-strict-mix-content-checking* strict mixed content check (http in https)
+* *ssl-key-log-file* log SSL key material to the given file
+* *enable-strict-mix-content-checking* strict mixed content check (HTTP in HTTPS)
 
 
 #### Sandbox
@@ -491,7 +491,7 @@ As the command lines switches are constantly updated, this list will contain bug
 * *allow-no-sandbox-job* lowers sandbox security
 * *allow-sandbox-debugging*
 * *disable-setuid-sandbox*
-* *enable-sandbox-logging* mac os logging
+* *enable-sandbox-logging* mac OS logging
 
 
 #### Plugins/Extensions
@@ -510,7 +510,7 @@ As the command lines switches are constantly updated, this list will contain bug
 * *reduce-security-for-testing*
 * *incognito* start in incognito mode
 * *purge-memory-button* add button to purge memory
-* *noerrdialogs* disable error dialogs
+* *noerrdialogs* disable error dialogues
 
 [Generated list of command line switches](https://peter.sh/experiments/chromium-command-line-switches/)
 
@@ -522,7 +522,7 @@ I focus on the urls relevant for security or general purpose. There are many mor
 
 * *chrome://about* List of all special URLs
 * *chrome://apps* Installed Web Apps
-* *chrome://bluetooth-internals* Your browser supports bluetooth
+* *chrome://bluetooth-internals* Your browser supports Bluetooth
 * *chrome://chrome* Version info
 * *chrome://components* Plugins and similar browser components
 * *chrome://conflicts* 3rd party components loaded into the browser process
@@ -541,7 +541,7 @@ I focus on the urls relevant for security or general purpose. There are many mor
 * *chrome://net-internals* network diagnostics. Also access to Certificate, HSTS and HPKP settings
 * *chrome://nbetwork-errors* A list of network error pages (good for preparing presentations)
 * *chrome://safe-browsing* Safe browsing settings and statistics
-* *chrome://signin-internals* Account signin data. Maybe relevant for forensics
+* *chrome://signin-internals* Account sign in data. Maybe relevant for forensics
 * *chrome://version* Detailed version information. Good for support
 
 %% chrome://gcm-internals
