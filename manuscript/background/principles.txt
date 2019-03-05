@@ -243,6 +243,8 @@ written to the endpoint system, ...
 The user (or the admin - for larger installations) should also have full control
 about what is filtered.
 
+%% TODO Perimeter defense vs client defense (Avocado/Coconut?)
+
 ## Tripwires
 
 Add tripwires to your design. One example is to fill your database with some

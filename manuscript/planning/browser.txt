@@ -433,8 +433,8 @@ of
 
 ### Chrome keyboard shortcuts
 
-hotkeys CTRL+Shift+j => dev console
-CTRL + L > Focus on url bar
+* hotkeys CTRL+Shift+j => dev console
+* CTRL + L > Focus on url bar
 
 %% TODO https://support.google.com/chrome/answer/157179
 
@@ -462,55 +462,55 @@ As the command lines switches are constantly updated, this list will contain bug
 
 #### Network Security
 
-* no-referrers do no send referrers
-* disable-web-security (same origin policy)
-* safebrowsing-disable-download-protection
-* safebrowsing-disable-extension-blacklist
-* proxy-server proxy server configuration
-* proxy-pac-url pac script to configure proxy server
-* net-log-capture-mode Set events being captured in network log
-* unsafely-treat--insecure-origin-as-secure special insecure treatment of urls in list
-* disable-xss-auditor (reflective XSS)
+* *no-referrers* do no send referrers
+* *disable-web-security* (same origin policy)
+* *safebrowsing-disable-download-protection*
+* *safebrowsing-disable-extension-blacklist*
+* *proxy-server proxy server configuration*
+* *proxy-pac-url* pac script to configure proxy server
+* *net-log-capture-mode* Set events being captured in network log
+* *unsafely-treat--insecure-origin-as-secure* special insecure treatment of urls in list
+* *disable-xss-auditor* (reflective XSS)
 
 
 #### Crypto security
 
-* ssl-version-min minimum ssl version
-* allow-insecure-localhost ignore tls errors on localhost
-* allow-running-insecure-content http js in https pages allowed
-* ignore-certificate-errors
-* ignore-urlfetcher-cert-requests
-* ssl-key-log-file log ssl key material to the given file
-* enable-strict-mix-content-checking strict mixed content check (http in https)
+* *ssl-version-min* minimum ssl version
+* *allow-insecure-localhost* ignore tls errors on localhost
+* *allow-running-insecure-content* http js in https pages allowed
+* *ignore-certificate-errors*
+* *ignore-urlfetcher-cert-requests*
+* *ssl-key-log-file* log ssl key material to the given file
+* *enable-strict-mix-content-checking* strict mixed content check (http in https)
 
 
 #### Sandbox
 
-* enable-sandbox enable sandbox for the process
-* no-sandbox disable sandbox for all process types
-* allow-no-sandbox-job lowers sandbox security
-* allow-sandbox-debugging
-* disable-setuid-sandbox
-* enable-sandbox-logging mac os logging
+* *enable-sandbox* enable sandbox for the process
+* *no-sandbox* disable sandbox for all process types
+* *allow-no-sandbox-job* lowers sandbox security
+* *allow-sandbox-debugging*
+* *disable-setuid-sandbox*
+* *enable-sandbox-logging* mac os logging
 
 
 #### Plugins/Extensions
 
-* show-component-extension-options show pre-installed extensions
-* disable-plugins de-activate plugins
-* disable-extenions
-* load-extension load extension <id> at startup
-* allow-outdated-plugins do not block outdated plugins
-* whitelisted-extension-id add to all the permission whitelists
-* enable-crx-hash-check
+* *show-component-extension-options* show pre-installed extensions
+* *disable-plugins* de-activate plugins
+* *disable-extensions*
+* *load-extension* load extension <id> at startup
+* *allow-outdated-plugins* do not block outdated plugins
+* *whitelisted-extension-id* add to all the permission whitelists
+* *enable-crx-hash-check*
 
 
 #### Everything else
 
-* reduce-security-for-testing
-* incognito start in incognito mode
-* purge-memory-button add button to purge memory
-* noerrdialogs disable error dialogs
+* *reduce-security-for-testing*
+* *incognito* start in incognito mode
+* *purge-memory-button* add button to purge memory
+* *noerrdialogs* disable error dialogs
 
 [Generated list of command line switches](https://peter.sh/experiments/chromium-command-line-switches/)
 
@@ -520,34 +520,37 @@ As the command lines switches are constantly updated, this list will contain bug
 
 I focus on the urls relevant for security or general purpose. There are many more.
 
-* chrome://about List of all special URLs
-* chrome://apps Installed Web Apps
-* chrome://bluetooth-internals Your browser supports bluetooth
-* chrome://chrome Version info
-* chrome://components Plugins and similar browser components
-* chrome://conflicts 3rd party components loaded into the browser process
-* chrome://crashes Crash reports
-* chrome://device-log Logging device interaction
-* chrome://devices Add new devices (printer, Google cloud print...)
-%% chrome://discards
-* chrome://download-internals debugging downloads
-* chrome://extensions Fancy extension dialog
-* chrome://flags Toggle chrome experiments
-* chrome://flash Installed flash player
-* chrome://system Build information
+* *chrome://about* List of all special URLs
+* *chrome://apps* Installed Web Apps
+* *chrome://bluetooth-internals* Your browser supports bluetooth
+* *chrome://chrome* Version info
+* *chrome://components* Plugins and similar browser components
+* *chrome://conflicts* 3rd party components loaded into the browser process
+* *chrome://crashes* Crash reports
+* *chrome://device-log* Logging device interaction
+* *chrome://devices* Add new devices (printer, Google cloud print...)
+* *chrome://download-internals* debugging downloads
+* *chrome://extensions* Fancy extension dialog
+* *chrome://flags* Toggle chrome experiments
+* *chrome://flash* Installed flash player
+* *chrome://system* Build information
+* *chrome://history* Access to the browser history
+* *chrome://inspect* Dev tools. Analyse pages, extensions, ...
+* *chrome://interstitials* Access to all the warning pages (good for preparing presentations)
+* *chrome://net-export* Create NetLog dump of network traffic on disk
+* *chrome://net-internals* network diagnostics. Also access to Certificate, HSTS and HPKP settings
+* *chrome://nbetwork-errors* A list of network error pages (good for preparing presentations)
+* *chrome://safe-browsing* Safe browsing settings and statistics
+* *chrome://signin-internals* Account signin data. Maybe relevant for forensics
+* *chrome://version* Detailed version information. Good for support
+
 %% chrome://gcm-internals
 %% chrome://histograms
-* chrome://history Access to the browser history
 %% chrome://indexeddb-internals
-* chrome://inspect Dev tools. Analyse pages, extensions, ...
-* chrome://interstitials Access to all the warning pages (good for preparing presentations)
 %% chrome://interventions-internals
 %% chrome://invalidations
 %% chrome://local-state browser state as json
 %% chrome://media-internals For media debugging ?
-* chrome://net-export Create NetLog dump of network traffic on disk
-* chrome://net-internals network diagnostics. Also access to Certificate, HSTS and HPKP settings
-* chrome://nbetwork-errors A list of network error pages (good for preparing presentations)
 %% chrome://ntp-tiles-internals
 %% chrome://omnibox Omnibox debug page
 %% chrome://password-manager-internals
@@ -555,10 +558,9 @@ I focus on the urls relevant for security or general purpose. There are many mor
 %% chrome://predictors
 %% chrome://print print dialog
 %% chrome://quota-internals
-* chrome://safe-browsing Safe browsing settings and statistics
-%% * chrome://serviceworker-internals
-%% chrome://settings Settings dialog
-* chrome://signin-internals Account signin data. Maybe relevant for forensics
+%% chrome://webrtc-internals Audio debugging
+%% chrome://webrtc-logs Audio debugging
+%% chrome://discards
 %% chrome://site-engagement
 %% chrome://suggestions
 %% chrome://supervised-user-internals Child protection
@@ -570,9 +572,8 @@ I focus on the urls relevant for security or general purpose. There are many mor
 %% chrome://translate-internals
 %% chrome://usb-internals
 %% chrome://user-actions
-* chrome://version Detailed version information. Good for support
-%% chrome://webrtc-internals Audio debugging
-%% chrome://webrtc-logs Audio debugging
+%% * chrome://serviceworker-internals
+%% chrome://settings Settings dialog
 
 %% ## Futuristic Technologies
 
