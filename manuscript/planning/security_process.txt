@@ -22,16 +22,17 @@ want this to be zero or as small as possible.
 
 This list is from good to really bad.
 
-|Phase                                  |Window of vulnerability |Monetary cost|Damage caused      |PR cost  |
-|---------------------------------------|------------------------|-------------|-------------------|---------|
-|During development                     |0                       |Low          |0                  |0        |
-|During QA                              |0                       |Low          |0                  |0        |
-|After release - responsible disclosure |weeks/months/years      |Low          |0                  |Low      |
-|After release - bug bounty             |weeks/months/years      |Low + Bounty |0                  |0-Low    |
-|After release - full disclosure        |weeks/months/years      |High         |Unknown            |High     |
-|Abused by cyber criminals              |weeks/months/years      |High         |Monetary           |Very high|
-|Abused by repressive governments       |weeks/months/years      |High         |Torture and death  |Extreme  |
+|Phase                                 |WoV        |Monetary cost|Damage caused    |PR cost  |
+|--------------------------------------|-----------|-------------|-----------------|---------|
+|During development                    |0          |Low          |0                |0        |
+|During QA                             |0          |Low          |0                |0        |
+|After release - responsible disclosure|weeks-years|Low          |0                |Low      |
+|After release - bug bounty            |weeks-years|Low + Bounty |0                |0-Low    |
+|After release - full disclosure       |weeks-years|High         |Unknown          |High     |
+|Abused by cyber criminals             |weeks-years|High         |Monetary         |Very high|
+|Abused by repressive governments      |weeks-years|High         |Torture and death|Extreme  |
 
+WoV: Windows of vulnerability
 Monetary cost: Cost you pay for fixing
 Damaged caused: What your users pay for using your vulnerable software (worst case)
 PR cost: Blog posts and similar to fix post-incident PR

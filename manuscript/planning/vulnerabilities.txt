@@ -89,7 +89,7 @@ There are chapters in this book covering this - because it is the essence of sec
 
 %% https://www.exploit-db.com
 
-# snyk.io
+%% # snyk.io
 
 %% # Measuring impact of vulnerability (Common vulnerability scoring system)
 %% # Vulnerability database: https://nvd.nist.gov/vuln-metrics/cvss
