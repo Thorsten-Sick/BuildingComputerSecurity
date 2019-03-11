@@ -77,7 +77,7 @@ in your report will help the AV labs to scan their database for info:
 
 %% TODO: IOC search tool
 
-%% TODO: MISP: https://github.com/MISP/MISP
+%% TODO: [MISP](https://github.com/MISP/MISP)
 
 ## The reason why your software is detected as a false positive (all the time)
 
