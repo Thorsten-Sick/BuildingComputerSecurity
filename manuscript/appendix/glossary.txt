@@ -110,3 +110,14 @@
 
 
 %% TODO: Responsible/full disclosure
+
+%% 0-day
+%% win32k - windows syscall containong lots of vulnerable GUI functionality - process can disable it's usage (research how) starting win8
+%% NULL pointer dereference: in kernel process can access memory at NULL page (mitigation from win8+)
+
+%% SMEP Supervisory Mode Execution Prevention
+%% SMAP Supervisory Mode Access Prevention
+%% both prevent memory access from high-priv processes to low-priv processes
+%% Result: Exploited kernel can not access pointers and shellcode in user space processes
+
+%% shellcode

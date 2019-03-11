@@ -29,7 +29,7 @@ This list is from good to really bad.
 |After release - responsible disclosure|weeks-years|Low          |0                |Low      |
 |After release - bug bounty            |weeks-years|Low + Bounty |0                |0-Low    |
 |After release - full disclosure       |weeks-years|High         |Unknown          |High     |
-|Abused by cyber criminals             |weeks-years|High         |Monetary         |Very high|
+|Abused by cyber criminals (0-day)     |weeks-years|High         |Monetary         |Very high|
 |Abused by repressive governments      |weeks-years|High         |Torture and death|Extreme  |
 
 WoV: Windows of vulnerability
