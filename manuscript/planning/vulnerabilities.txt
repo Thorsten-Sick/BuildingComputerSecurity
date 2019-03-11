@@ -1,4 +1,4 @@
-# Vulnerabilities
+# Vulnerabilities {#chapter-vulnerabilities}
 
 C> By: Thorsten Sick
 
@@ -79,36 +79,36 @@ There are chapters in this book covering this - because it is the essence of sec
 
 %% ## Search engines
 
-%% https://sploitus.com/
-%% https://cve.mitre.org
-%% https://nvd.nist.gov/vuln/
-%% # https://www.exploit-db.com/google-hacking-database/
+%% [Sploitus](https://sploitus.com/)
+%% [CVS](https://cve.mitre.org)
+%% [NVD](https://nvd.nist.gov/vuln/)
+%% [Google hacking](https://www.exploit-db.com/google-hacking-database/)
 
-%% https://www.rapid7.com/db/vulnerabilities
-%% https://vuldb.com
+%% [Rapid 7 vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
+%% [Vuldb](https://vuldb.com)
 
-%% https://www.exploit-db.com
+%% [Explit-db](https://www.exploit-db.com)
 
 %% # snyk.io
 
 %% # Measuring impact of vulnerability (Common vulnerability scoring system)
-%% # Vulnerability database: https://nvd.nist.gov/vuln-metrics/cvss
+%% # [CVSS](https://nvd.nist.gov/vuln-metrics/cvss)
 
 %% # Exploitation
 
 %% ## Post exploitation
 
-%% https://guif.re/linuxeop
+%% [Linux post exploitation](https://guif.re/linuxeop)
 
 
-%% TODO: Privilege escalation by AV software: https://hackercombat.com/new-trend-antivirus-software-exploited-to-launch-privilege-escalation-attack/
+%% TODO:  [Privilege escalation by AV software](https://hackercombat.com/new-trend-antivirus-software-exploited-to-launch-privilege-escalation-attack/)
 
-%% TODO: Beebug: https://github.com/invictus1306/beebug
+%% TODO: [Beebug](https://github.com/invictus1306/beebug)
 
-%% TODO: Funtrace https://github.com/invictus1306/functrace
+%% TODO: [Funtrace](https://github.com/invictus1306/functrace)
 
-%% TODO: DLL hijacking https://gaissecurity.com/yazi/discovery-of-dll-hijack-on-trend-micro-antivirusplus-cve-2018-18333
+%% TODO: [DLL hijacking](https://gaissecurity.com/yazi/discovery-of-dll-hijack-on-trend-micro-antivirusplus-cve-2018-18333)
 
-%% Vulnerability management App: https://thehackernews.com/2018/12/whitesource-bolt-github-security.html
+%% [Vulnerability management App](https://thehackernews.com/2018/12/whitesource-bolt-github-security.html)
 
 %% TODO: Metasploit, Armitage

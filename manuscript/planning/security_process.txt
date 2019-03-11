@@ -108,7 +108,7 @@ lots of external coders (Open Source and ones working for other companies by
 contributing to Mozilla source). This is the reason why they had to achieve
 some things that you will very likely not have to manage.
 
-https://www.mozilla.org/en-US/security/
+[https://www.mozilla.org/en-US/security/](https://www.mozilla.org/en-US/security/)
 
 * security@mozilla.com address
 * PGP key for this address in homepage

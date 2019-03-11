@@ -422,10 +422,10 @@ malicious URLs. There are others and Firefox also has an own system.
 To QA the usage of blacklist (and check the warning dialogues) there is a list
 of
 
-* Firefox Malware http://itisatrap.org/firefox/its-an-attack.html
-* Firefox Phishing http://itisatrap.org/firefox/its-a-trap.tml
-* Firefox PUA http://itisatrap.org/firefox/unwanted.html
-* GSB collection https://testsafebrowsing.appspot.com/
+* Firefox Malware [http://itisatrap.org/firefox/its-an-attack.html](http://itisatrap.org/firefox/its-an-attack.html)
+* Firefox Phishing [http://itisatrap.org/firefox/its-a-trap.tml](http://itisatrap.org/firefox/its-a-trap.tml)
+* Firefox PUA [http://itisatrap.org/firefox/unwanted.html](http://itisatrap.org/firefox/unwanted.html)
+* GSB collection [https://testsafebrowsing.appspot.com/](https://testsafebrowsing.appspot.com/)
 
 
 
@@ -436,7 +436,7 @@ of
 * hotkeys CTRL+Shift+j => dev console
 * CTRL + L > Focus on URL bar
 
-%% TODO https://support.google.com/chrome/answer/157179
+%% TODO [support](https://support.google.com/chrome/answer/157179)
 
 ### Chrome command line parameters
 
@@ -633,20 +633,20 @@ I focus on the urls relevant for security or general purpose. There are many mor
 
 %% TODO; Chrome security override: Enter "thisisunsafe"
 
-%% TODO: Google Chrome Drive-by-download protection: https://www.zdnet.com/article/google-chrome-to-add-drive-by-download-protection/
+%% TODO: [Google Chrome Drive-by-download protection](https://www.zdnet.com/article/google-chrome-to-add-drive-by-download-protection/)
 
-%% TODO: Infected chrome extensions: https://www.zdnet.com/article/razy-infects-legitimate-browser-extensions-to-steal-cryptocurrency/
-%% https://threatpost.com/razy-browser-extensions-theft/141181/
+%% TODO: [Infected chrome extensions](https://www.zdnet.com/article/razy-infects-legitimate-browser-extensions-to-steal-cryptocurrency/)
+%% [razy](https://threatpost.com/razy-browser-extensions-theft/141181/)
 
-%% TODO: Chrome university: https://www.youtube.com/playlist?list=PL9ioqAuyl6UIFAdsM5KU6P-hRJdh-BPmm
+%% TODO: [Chrome university](https://www.youtube.com/playlist?list=PL9ioqAuyl6UIFAdsM5KU6P-hRJdh-BPmm)
 
 
-%% TODO: CSP bypass: https://blog.mazinahmed.net/2019/01/backchannel-leaks-on-strict-csp-policy.html
+%% TODO: [CSP bypass](https://blog.mazinahmed.net/2019/01/backchannel-leaks-on-strict-csp-policy.html)
 
-%% TODO: Browser architecture: https://developers.google.com/web/updates/2018/09/inside-browser-part1
+%% TODO: [Browser architecture](https://developers.google.com/web/updates/2018/09/inside-browser-part1)
 
-%% TODO: URL Display guidelines https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md
+%% TODO: [URL Display guidelines](https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md)
 
-%% TODO: XSS https://github.com/dxa4481/XSSOauthPersistence
+%% TODO: [XSS](https://github.com/dxa4481/XSSOauthPersistence)
 
 %% TODO: List of test URLs

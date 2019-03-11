@@ -24,20 +24,20 @@ Move slowly. Test and verify before enabling the source and over-block.
 
 ## C&C
 
-https://feodotracker.abuse.ch/
+[Feodotracker](https://feodotracker.abuse.ch/)
 
 ## Malware
 
-https://malware.dontneedcoffee.com/blog/
+[Don't need coffee](https://malware.dontneedcoffee.com/blog/)
 
 ## Malicious URLs
 
-https://urlhaus.abuse.ch/
+[Urlhaus](https://urlhaus.abuse.ch/)
 
 ## Phishing
 
-https://www.phishtank.com/
+[Phishtank](https://www.phishtank.com/)
 
 ## Data breaches
 
-https://haveibeenpwned.com/
+[Have I been pwned](https://haveibeenpwned.com/)

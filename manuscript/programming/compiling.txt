@@ -286,6 +286,6 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 %% [C# ASAN](http://www.mono-project.com/docs/debug+profile/clang/addresssanitizer/)
 %% [C# Profiling](http://www.mono-project.com/docs/debug+profile/profile/)
 
-%% TODO: GCC warnings https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
+%% TODO: [GCC warnings](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 
 %% [Systematic sanitizer overview](https://arxiv.org/pdf/1806.04355.pdf)

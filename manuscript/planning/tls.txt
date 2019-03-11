@@ -296,8 +296,8 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 %% TODO: Read: [Mission Accomplished? HTTPS Security after DigiNotar](https://datatracker.ietf.org/meeting/103/materials/slides-103-irtfopen-johanna-amann-anrp-talk-mission-accomplished-https-after-diginotar-02)
 
-%% TODO: Code certificate chain attacks: https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec
+%% TODO: [Code certificate chain attacks](https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec)
 
-%% TODO: Building certificate chain: https://github.com/trimstray/sslmerge
+%% TODO: Building certificate chain [sslmerge](https://github.com/trimstray/sslmerge)
 
 %% TODO: certstream.calidog.io
