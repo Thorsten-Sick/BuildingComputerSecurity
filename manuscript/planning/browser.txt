@@ -161,8 +161,8 @@ For a defender the take-aways are:
 
 [Exploit kits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
 
-%% TODO: Fallout Exploit kit https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html
-%% https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout
+%% TODO: [Fallout Exploit kit](https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html)
+%% [Fallout 2](https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout)
 
 
 ## Cookies
@@ -288,7 +288,7 @@ and not the one you use for browsing for cat videos.
 
 %% TODO: [Novidade Exploit Kits vs. Routers](https://blog.trendmicro.com/trendlabs-security-intelligence/new-exploit-kit-novidade-found-targeting-home-and-soho-routers/)
 %% TODO: [crypto jacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
-%% TODO: https://www.zdnet.com/article/hacking-attacks-on-your-router-why-the-worst-is-yet-to-come/
+%% TODO: [Router hacking](https://www.zdnet.com/article/hacking-attacks-on-your-router-why-the-worst-is-yet-to-come/)
 
 ## Phishing
 
@@ -358,9 +358,9 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 %% [Mozilla removes spying extensions](https://www.bleepingcomputer.com/news/security/mozilla-removes-23-firefox-add-ons-that-snooped-on-users/)
 %% [More extensions removed](https://hackercombat.com/why-mozilla-banned-23-firefox-add-ons-for-mining-user-data/)
 %% TODO: Add CCC talk
-%% TODO: Extensions can steal data: https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/
+%% TODO: [Extensions can steal data](https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/)
 
-%% TODO: Spying chrome extensions https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab
+%% TODO: [Spying chrome extensions](https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab)
 
 
 
@@ -378,8 +378,8 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 %% TODO [Magenta Shops](https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html)
 %% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
-%% https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline
-%% https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/
+%% [Riskiq Magecart](https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline)
+%% [TrendMicro Magecart](https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/)
 
 ## Crypto mining
 
