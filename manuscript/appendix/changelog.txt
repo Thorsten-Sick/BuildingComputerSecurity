@@ -36,6 +36,12 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Secure coding !!!
 %% TODO: Browser
 
+## March 2019
+
+* Extending **testing compiled binaries**
+%% TODO: Make table there
+
+
 ## February 2019
 
 * Cleaning up the author page. Adding Mastodon and Twitter

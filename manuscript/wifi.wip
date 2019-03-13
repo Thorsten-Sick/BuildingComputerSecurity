@@ -9,6 +9,26 @@
 
 %% https://github.com/BastilleResearch/scapy-radio
 
+## Createing a rogue AP
+
+%% https://wiki.ubuntuusers.de/WLAN_Router/
+
+sudo apt install hostapd dnsmasq
+
+Config in:
+/etc/hostapd.conf (maybe you will have to create it)
+
+# Network manager network off
+nmcli radio wifi off
+
+# Enable device
+rfkill unblock wlan
+
+# Configure wlan1
+ifconfig wlan0 10.15.0.1/24 up
+
+
+
 
 ## WPA2
 

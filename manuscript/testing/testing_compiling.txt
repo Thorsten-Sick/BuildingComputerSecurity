@@ -80,6 +80,36 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
 
 [PESecurity](https://github.com/NetSPI/PESecurity)
 
+%% TODO: Make table
+%%[Gunstone example for python](https://richardgunstone.net/2018/08/02/analysing-pe-executables-and-their-aslr-dep-seg-and-cfg-security-flags/)
+%% PEFILE:
+%% IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA 0x0020  use 64 bit space for ASLR LINKER/EDITBIN: /HIGHENTROPYVA
+%% IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE 0x0040 Use ASLR          LINKER/EDITBIN: /DYNAMICBASE
+%% IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY 0x0080 Signature check on startup LINKER/EDITBIN: /INTEGRITYCHECK
+%% IMAGE_DLLCHARACTERISTICS_NX_COMPAT 0x0100 Executable is compatible with DEP LINKER/EDITBIN: /NXCOMPAT
+%% IMAGE_DLLCHARACTERISTICS_NO_ISOLATION 0x0200 If set will not look for manifest file LINKER/EDITBIN: /ALLOWISOLATION:NO
+%% IMAGE_DLLCHARACTERISTICS_NO_SEH 0x0400 Create a table of safe exeception handlers in the binary LINKER /SAFESEH:NO
+%% IMAGE_DLLCHARACTERISTICS_NO_BIND 0x0800 Signed files should not be bound, invalidates signature. LINKER/EDITBIN: /ALLOWBIND:NO
+%% IMAGE_DLLCHARACTERISTICS_APPCONTAINER 0x1000 Run only in process isolation LINKER/EDITBIN: /APPCONTAINER
+%% IMAGE_DLLCHARACTERISTICS_GUARD_CF 0x4000 (Control Flow Guard) Check call targets during runtime. COMPILER/LINKER: /GUARD
+
+%% python
+{lang="python"}
+    import pefile
+    pe = pefile.PE("test.exe")
+    features = [('IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA', 0x0020),
+                ('IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE', 0x0040),
+                ('IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY', 0x0080),
+                ('IMAGE_DLLCHARACTERISTICS_NX_COMPAT', 0x0100),
+                ('IMAGE_DLLCHARACTERISTICS_NO_ISOLATION', 0x0200),
+                ('IMAGE_DLLCHARACTERISTICS_NO_SEH', 0x0400),
+                ('IMAGE_DLLCHARACTERISTICS_NO_BIND', 0x0800),
+                ('IMAGE_DLLCHARACTERISTICS_APPCONTAINER', 0x1000),
+                ('IMAGE_DLLCHARACTERISTICS_GUARD_CF', 0x4000),
+                ]
+    for s, h in features:
+        print("{}: {}".format(s, bool(pe.OPTIONAL_HEADER.DllCharacteristics & h)))
+
 *I had no time so far to test this tool. I will update this paragraph as soon as I did. I am still leaving it here because it is very valuable even as unverified information*
 
 %% .. TODO: Test
