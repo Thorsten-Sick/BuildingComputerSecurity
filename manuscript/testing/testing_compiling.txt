@@ -76,24 +76,14 @@ the binary. Remove them by calling the command line tool *strip*.
 
 ## Windows
 
-Check for ASLR, DEP, SafeSEH, ... in Windows binaries
+Check for ASLR, DEP, SafeSEH, ... in Windows binaries. There is a powershell tool on github:
 
 [PESecurity](https://github.com/NetSPI/PESecurity)
 
-%% TODO: Make table
-%%[Gunstone example for python](https://richardgunstone.net/2018/08/02/analysing-pe-executables-and-their-aslr-dep-seg-and-cfg-security-flags/)
-%% PEFILE:
-%% IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA 0x0020  use 64 bit space for ASLR LINKER/EDITBIN: /HIGHENTROPYVA
-%% IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE 0x0040 Use ASLR          LINKER/EDITBIN: /DYNAMICBASE
-%% IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY 0x0080 Signature check on startup LINKER/EDITBIN: /INTEGRITYCHECK
-%% IMAGE_DLLCHARACTERISTICS_NX_COMPAT 0x0100 Executable is compatible with DEP LINKER/EDITBIN: /NXCOMPAT
-%% IMAGE_DLLCHARACTERISTICS_NO_ISOLATION 0x0200 If set will not look for manifest file LINKER/EDITBIN: /ALLOWISOLATION:NO
-%% IMAGE_DLLCHARACTERISTICS_NO_SEH 0x0400 Create a table of safe exeception handlers in the binary LINKER /SAFESEH:NO
-%% IMAGE_DLLCHARACTERISTICS_NO_BIND 0x0800 Signed files should not be bound, invalidates signature. LINKER/EDITBIN: /ALLOWBIND:NO
-%% IMAGE_DLLCHARACTERISTICS_APPCONTAINER 0x1000 Run only in process isolation LINKER/EDITBIN: /APPCONTAINER
-%% IMAGE_DLLCHARACTERISTICS_GUARD_CF 0x4000 (Control Flow Guard) Check call targets during runtime. COMPILER/LINKER: /GUARD
+But I prefer to create my own python tools. They are simpler to integrate into my other tools.
 
-%% python
+And using *pefile* it is quite simple to write.
+
 {lang="python"}
     import pefile
     pe = pefile.PE("test.exe")
@@ -110,9 +100,33 @@ Check for ASLR, DEP, SafeSEH, ... in Windows binaries
     for s, h in features:
         print("{}: {}".format(s, bool(pe.OPTIONAL_HEADER.DllCharacteristics & h)))
 
-*I had no time so far to test this tool. I will update this paragraph as soon as I did. I am still leaving it here because it is very valuable even as unverified information*
+Those PE features can be set by th compiler/linker or the tool editbin.
+[Microsoft has a good documentation](https://docs.microsoft.com/en-us/cpp/build/reference/linker-options?view=vs-2017)
 
-%% .. TODO: Test
+One of the first things you should do is to compile for 64 bit. It enables more seurity features:
+
+* IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA
+* The SEH is secured automatically
+
+### Description of the fields
+
+* IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA: Use 64 bit space for ASLR. True is good
+* IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE: Use ASLR. True is good
+* IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY: Signature check on startup. True is good
+* IMAGE_DLLCHARACTERISTICS_NX_COMPAT: Executable is compatible with DEP. True is good
+* IMAGE_DLLCHARACTERISTICS_NO_ISOLATION: If set will not look for manifest file. False is good
+* IMAGE_DLLCHARACTERISTICS_NO_SEH: Does not contain exception handlers. True is good. But see below
+* IMAGE_DLLCHARACTERISTICS_NO_BIND: Signed files should not be bound, invalidates signature. True is good
+* IMAGE_DLLCHARACTERISTICS_APPCONTAINER: Run only in process isolation. True is good
+* IMAGE_DLLCHARACTERISTICS_GUARD_CF: Control Flow Guard - Check assembler call targets during runtime. True is good
+
+SEH: Structured Exception Handlers can be abused by exploit code. Having them is dangerous. Except:
+
+* Safe SEH is used (can be vreified in PE, but is tricky)
+* PE is 64 bit compiled - then the SEHs are secured automatically
+* Or SEH is deactivated
+
+Best way is to go for 64 bit.
 
 %% TODO [CheckSec](https://github.com/slimm609/checksec.sh)
 

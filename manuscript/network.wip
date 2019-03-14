@@ -47,8 +47,18 @@ https://github.com/trimstray/iptables-essentials
 
 
 %% Polymorph: Network packet manipulation framework: https://github.com/shramos/polymorph
-
+%% https://scapy.net
+%% https://www.karlrupp.net/de/computer/nat_tutorial
 
 ## NTap
 
 https://github.com/botherder/ntap
+https://serverfault.com/questions/152363/bridging-wlan0-to-eth0
+
+brctl (deprecated) or better: iproute2 package "bridge"
+
+{lang="bash"}
+    brctl addbr br0
+    brctl addif br0 eth0 eth1
+
+It is not possible to bridge to wlan !
