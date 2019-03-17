@@ -138,6 +138,12 @@ Get some info like manufacturer:
 
 ## Bleah - Bluetooth LE hacking
 
+W> ## Deprecation
+W>
+W> Bleah is deprecated and will be replaced with Bettercap.
+W> Same author, different tool, different UI. More awesome.
+W> This part of the book will soon be updated.
+
 A tool for Bluetooth le hacking - and testing - is [bleah](https://github.com/evilsocket/bleah).
 It can enumerate devices, list their services, list the characteristics and
 write to them. This is very handy when developing Bluetooth LE enabled devices.

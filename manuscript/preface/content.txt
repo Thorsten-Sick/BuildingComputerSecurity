@@ -29,6 +29,19 @@ A good design can speed up development, simplify testing, and increase security.
 This chapter covers the security basics of software design. Followed by specific
 topics in other chapters.
 
+### Vulnerabilities
+
+Your software - and maybe even your hardware will have bugs that turn into
+vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities)
+will cover the essence and taxonomy of vulnerabilities. Understanding that will
+make decissions based on vulnerabilities simpler.
+
+### Security process
+
+Internal set up of a project will decide if a external vulnerability report
+is a disaster for the project release cycle or can be handled in a relaxed
+and simple way. Being prepared for the inevitable is central in  [this chapter](#chapter-security-process).
+
 ### Software Design Checklist
 
 The [Software Design Checklist](#chapter-design-checklist) introduces you to

@@ -39,8 +39,13 @@ changelog to make it simpler for you to find the new sections.
 ## March 2019
 
 * Extending **testing compiled binaries**
-%% TODO: Make table there
-
+* Most readers read PDF => Focus on PDF layout now.
+* Old PDF setting: A5 (14.8cm x 21.0cm ) to get a book style size
+* New PDF setting: A4 (21.0cm x 29.7cm) for more table space and better screen readability
+* Tables set from default to wide
+* extended **content**
+%% TODO automatic check that content is complete
+%% Todo extend security process with more ideas
 
 ## February 2019
 
