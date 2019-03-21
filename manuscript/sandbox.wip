@@ -4,8 +4,20 @@
 
 # Windows Defender (Anti Virus) Sandbox: https://blog.trailofbits.com/2017/08/02/microsoft-didnt-sandbox-windows-defender-so-i-did/
 
-%% TODO Chrome Sandbox
 
 %% TODO Flatpack/Bubblewrap
 
 %% TODO AppArmor
+
+
+
+%% TODO Chrome Sandbox
+
+%% Chromium Windows Sandbox
+%% https://chromium.googlesource.com/chromium/src/+/master/docs/design/sandbox.md
+%% Mac: https://dev.chromium.org/developers/design-documents/sandbox/osx-sandboxing-design
+%% Linux: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_sandboxing.md
+
+%% Chromium Linux Sandbox 2 (Open Source, for Libraries)
+%% https://security.googleblog.com/2019/03/open-sourcing-sandboxed-api.html
+%% https://github.com/google/sandboxed-api

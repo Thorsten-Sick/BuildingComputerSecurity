@@ -18,6 +18,12 @@ sudo apt install hostapd dnsmasq
 Config in:
 /etc/hostapd.conf (maybe you will have to create it)
 
+Alternative:
+https://www.kalitutorials.net/2014/07/evil-twin-tutorial.html
+
+airbase-ng -a <BSSID> --essid <essid> -c <channel> <interface name>
+
+
 # Network manager network off
 nmcli radio wifi off
 

@@ -212,3 +212,5 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 %% TODO: [WinAFL](https://github.com/googleprojectzero/winafl/blob/master/readme_pt.md)
 
 %% TODO: [Deep State API Fuzzing](https://blog.trailofbits.com/2019/01/22/fuzzing-an-api-with-deepstate-part-1/)
+
+%% TODO: [JS Engine fuzzing](https://github.com/googleprojectzero/fuzzilli)

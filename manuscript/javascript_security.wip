@@ -1,9 +1,39 @@
 # Javascript
 
-%% TODO RetireJS (npm install -g retire)
+
+
+## Retire.js
+
+[Retire.js](https://retirejs.github.io/retire.js/) Scans for used 3rd party libraries with vulnerabilities.
+
+* Command line scanner
+* Grunt plugin
+* Gulp task
+* Chrome/Firefox extension
+* Burp and OWASP Zap plugin
+
+%% (npm install -g retire)
 
 %% TODO: Node Security Platform (npm -g install -g nsp)
 
 %% Both from Chapter 8 IoT Penetration Testing Cookbook
 
 %% TODO: https://www.techrepublic.com/article/heres-how-npm-plans-to-improve-security-and-reliability-in-2019/#ftag=RSS56d97e7
+
+## Use a linter
+
+The closest you can get to compiler warnings in JS is a linter.
+Use it and respect it's warnings.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The JS eco system
+
+%% NodeJS: JavaScript runtime, built on Chrome's V8.
+
+%% npm: NodeJS package manager
+
+%% Grunt: JS task runner (automation), based on NodeJS: can be used ffor builds and similar
+
+%% Bower: Package manager
+
+%% Gulp: JS task automation, build system

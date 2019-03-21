@@ -99,6 +99,7 @@ It is important to finish one step before starting the next one.
 Asking for vulnerabilities - and receiving thousands of them - without having
 internal processes will result in disaster.
 
+%% TODO: Diagram
 
 ## Example: Mozilla
 
@@ -123,9 +124,9 @@ some things that you will very likely not have to manage.
 * Be ready to publish work-arounds should it be abused while still working on fix
 * Bug reporter can decide when to publish
 
-%% Internal pen tests
-%% Bug bounties
-%% internal code reviews
-%% security@mozilla and PGP key
-%% security.txt
-%% Communication / PR
+%% TODO: Internal pen tests
+%% TODO: Bug bounties
+%% TODO: internal code reviews
+%% TODO: security@mozilla and PGP key
+%% TODO: security.txt
+%% TODO: Communication / PR

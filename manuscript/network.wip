@@ -55,10 +55,28 @@ https://github.com/trimstray/iptables-essentials
 https://github.com/botherder/ntap
 https://serverfault.com/questions/152363/bridging-wlan0-to-eth0
 
-brctl (deprecated) or better: iproute2 package "bridge"
+**brctl** (deprecated) or better: iproute2 package "bridge"
 
 {lang="bash"}
     brctl addbr br0
     brctl addif br0 eth0 eth1
 
+    brctl delbr br0   # Delete bridge
+
 It is not possible to bridge to wlan !
+
+**iproute2**
+
+{lang="bash"}
+    ip link add name br0 type bridge
+    ip link set br0 up
+    ip link set eth0 master br0   # Add eth0 to bridge
+    ip link set eth0 up
+    ip link set eth1 up
+
+    bridge link # Show existing bridges
+    ip link delete br0 type bridge # Delete bridge
+
+maybe: dhclient br0  # to get network back
+
+https://wiki.archlinux.org/index.php/Network_bridge

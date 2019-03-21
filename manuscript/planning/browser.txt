@@ -539,7 +539,7 @@ I focus on the urls relevant for security or general purpose. There are many mor
 * *chrome://interstitials* Access to all the warning pages (good for preparing presentations)
 * *chrome://net-export* Create NetLog dump of network traffic on disk
 * *chrome://net-internals* network diagnostics. Also access to Certificate, HSTS and HPKP settings
-* *chrome://nbetwork-errors* A list of network error pages (good for preparing presentations)
+* *chrome://network-errors* A list of network error pages (good for preparing presentations)
 * *chrome://safe-browsing* Safe browsing settings and statistics
 * *chrome://signin-internals* Account sign in data. Maybe relevant for forensics
 * *chrome://version* Detailed version information. Good for support

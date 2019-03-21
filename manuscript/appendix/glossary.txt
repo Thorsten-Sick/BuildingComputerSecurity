@@ -2,7 +2,11 @@
 
 %% TODO: StrongNaming Authenticode
 
+**0-day**: An exploit used by the attackers before the vulnerability is known to the defender. They are expensive on the black market. Typical malware does not need 0-days. As many users do not patch their systems.
+
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
+
+**Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emmitting more data than they receive are vulnerable. Also quite often uses stateless protocols like UDP because the initiator is different from the victim.
 
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
 
@@ -52,7 +56,7 @@
 
 **Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
 
-%% TODO: **Deep Packet Inspection**:
+**Deep Packet Inspection**: A filter looks into the deeper layers of packets. Complex, and causes issues with encrypted data. Better don't do it.
 
 **Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
 
@@ -78,7 +82,9 @@
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
-%% TODO: **Static Code analysis**
+**Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
+
+**Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
@@ -111,7 +117,7 @@
 
 %% TODO: Responsible/full disclosure
 
-%% 0-day
+
 %% win32k - windows syscall containong lots of vulnerable GUI functionality - process can disable it's usage (research how) starting win8
 %% NULL pointer dereference: in kernel process can access memory at NULL page (mitigation from win8+)
 
@@ -119,5 +125,3 @@
 %% SMAP Supervisory Mode Access Prevention
 %% both prevent memory access from high-priv processes to low-priv processes
 %% Result: Exploited kernel can not access pointers and shellcode in user space processes
-
-%% shellcode
