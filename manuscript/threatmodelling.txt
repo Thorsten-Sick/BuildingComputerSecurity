@@ -1,13 +1,61 @@
 # Threat Modelling {#chapter-threat-modelling}
 
-%% TODO: Write
+Threat modeling is a way to get an honest overview of the security state of a project.
+It should be done quite early (design phase) and continued during the
+project - especially when requirements change..
 
-%% Comparison: https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html
+There are several methods for threat modelling.
 
+The big goal of all of then is to achieve better knowledge of all the bad
+things that could happen.
 
-## Microsoft SDL
+To achieve the big goal there are lots of sub-goals you could want to achieve.
+The priority of those depends on circumstances like the company goals,
+the project state, ...
 
-https://www.microsoft.com/en-us/sdl
+* System overview
+* Systematic check for attack vectors
+* Prioritizing of threats
+* Guiding non-security people through the process
+* Understanding attackers
+* Security awareness training
+* Documents the security state (and there are software tools for that !)
+* Probabilities of the attack to happen
+
+Probabilities of the attack to happen is a bit tricky. As compared to
+safety analysis.
+
+A> Ransomware was a factor for the rising bitcoin price. And the rising bitcoin
+A> price dragged other crypto currencies up as well. A company created a simple
+A> API to mine Monero crypto coins in a web page - as replacement for Ads. And
+A> this got abused by crypto miner malware that emerged after the Ransomware.
+A>
+A> Who could have predicted this 2-3 years cycle ?
+
+The method you pick depends on your exact sub-goals, the people
+participating and your personality. Also on external circumstances like
+"available time" and "available meeting space".
+
+There is a cool list of [12 methodologies](https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html).
+Please read that and other sources to find your set of methods.
+
+Some of those methods I'll explain here. But:
+I'll limit the list to special ones, but not necessarily the best:
+
+* STRIDE
+* Attack tree
+* Persona non Grata (PnG)
+* Security cards
+* CVSS
+
+Before I forget: You can combine them
+
+## Security cards
+
+Brainstorming method http://securitycards.cs.washington.edu/index.html
+
+%% ## Microsoft SDL
+%% [SDL](https://www.microsoft.com/en-us/sdl)
 
 ## STRIDE
 
@@ -17,9 +65,30 @@ https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx
 
 .. TODO: Add details
 
-## OWASP Embedded Application Security Project
+## Attack tree
 
-https://www.owasp.org/index.php/OWASP_Embedded_Application_Security
+## Persona non Grata
 
+## Security cards
 
-https://michenriksen.com/blog/drawio-for-threat-modeling/
+## CVSS
+
+## Thorsten Style
+
+I am more a person who loves to enable others. I observed myself to quite
+often get into "coffee-machine chats" where I trigger the evil neurons of
+people to make them think about the bad things that could happen to their
+projects. A 1:1 brainstorming with technical background lessons in 10
+minutes with a relaxed athmosphere.
+
+This will not result in a perfect Threat modelled project. But it raises
+awareness and will reduce things in the long term.
+
+I would be happy to be able to brag about intentionally inventing it. But this
+"just happened" and I observed this pattern around me.
+
+This is not a replacement for a propperly prepared security assessment.
+
+%% ## OWASP Embedded Application Security Project
+%% https://www.owasp.org/index.php/OWASP_Embedded_Application_Security
+%% https://michenriksen.com/blog/drawio-for-threat-modeling/

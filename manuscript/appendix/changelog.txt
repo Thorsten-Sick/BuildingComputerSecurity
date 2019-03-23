@@ -44,6 +44,10 @@ changelog to make it simpler for you to find the new sections.
 * New PDF setting: A4 (21.0cm x 29.7cm) for more table space and better screen readability
 * Tables set from default to wide
 * extended **content**
+* extended **glossary**
+* extended **browser**
+* extended **security_process**
+
 %% TODO automatic check that content is complete
 %% Todo extend security process with more ideas
 

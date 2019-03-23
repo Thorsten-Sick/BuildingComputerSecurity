@@ -1,0 +1,13 @@
+# Authenticode {#chapter-authenticode}
+
+%% https://pypi.org/project/signify   Does not work.
+
+Ubuntu package:
+osslsigncode
+
+Calling it:
+{lang="bash"}
+    osslsigncode verify <filename>
+
+A file can be signed based on multiple hashes. Keep in mind: SHA1 is broken !
+There should be a SHA256 as well !
