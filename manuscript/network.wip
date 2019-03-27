@@ -24,13 +24,6 @@ https://linux-audit.com/linux-security-guide-for-hardening-ipv6/
 
 https://linux-audit.com/bpfilter-next-generation-linux-firewall/
 
-## Bettercap
-
-https://www.bettercap.org/
-
-https://github.com/bettercap/bettercap/wiki
-
-%% TODO: Check NG
 
 ## Mitmproxy
 
@@ -43,27 +36,22 @@ Netdiscover ARP scanner: https://sourceforge.net/projects/netdiscover/
 
 ## IPTables
 
-https://github.com/trimstray/iptables-essentials
+[IPTables essentials](https://github.com/trimstray/iptables-essentials)
 
+    **Deprecated: Is being replaced by NFTables**
+
+[Nftables](https://wiki.archlinux.org/index.php/Nftables)
 
 %% Polymorph: Network packet manipulation framework: https://github.com/shramos/polymorph
-%% https://scapy.net
+%% [PAcket crafting in python](https://scapy.net)
 %% https://www.karlrupp.net/de/computer/nat_tutorial
 
 ## NTap
 
-https://github.com/botherder/ntap
-https://serverfault.com/questions/152363/bridging-wlan0-to-eth0
+[NTap](https://github.com/botherder/ntap)
+[Bridging WLan](https://serverfault.com/questions/152363/bridging-wlan0-to-eth0)
 
-**brctl** (deprecated) or better: iproute2 package "bridge"
-
-{lang="bash"}
-    brctl addbr br0
-    brctl addif br0 eth0 eth1
-
-    brctl delbr br0   # Delete bridge
-
-It is not possible to bridge to wlan !
+**brctl**: (deprecated)
 
 **iproute2**
 
@@ -71,12 +59,38 @@ It is not possible to bridge to wlan !
     ip link add name br0 type bridge
     ip link set br0 up
     ip link set eth0 master br0   # Add eth0 to bridge
+    ip link set eth1 master br0   # Add eth1 to bridge
     ip link set eth0 up
     ip link set eth1 up
+    dhclient br0  # to get network settings back
 
     bridge link # Show existing bridges
     ip link delete br0 type bridge # Delete bridge
 
-maybe: dhclient br0  # to get network back
+[Bridging](https://wiki.archlinux.org/index.php/Network_bridge)
 
-https://wiki.archlinux.org/index.php/Network_bridge
+
+## Sniffing
+
+* driftnet: Find images in network stream
+* urlsnarf: Find visited urls in HTTP stream
+
+## Gaining control of the network settings
+
+{lang="bash"}
+    root@kali:/# nmcli networking off
+    root@kali:/# ip link show wlan0
+        2: wlan0: <...>
+    root@kali:/# iw wlan0 link
+        Not connected.
+    root@kali:/# iw wlan0 scan
+        <lots of nets>
+    root@kali:/# wpa_passphrase <ssid> ~/wpa_supplicant.conf
+        <password>
+    root@kali:/# wpa_supplicant -i wlan0 -c ~/wpa_supplicant.conf
+    root@kali:/# dhclient wlan0
+
+Deleting the old ip address settings for a device:
+
+{lang="bash"}
+    ip addr del 127.0.0.1 dev eth1

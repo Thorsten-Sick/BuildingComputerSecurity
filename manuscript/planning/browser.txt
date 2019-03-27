@@ -433,10 +433,11 @@ of
 
 ### Chrome keyboard shortcuts
 
-* hotkeys CTRL+Shift+j => dev console
-* CTRL + L > Focus on URL bar
+* CTRL+Shift+j or F12: dev console
+* CTRL + L: Focus on URL bar
+* Shift + Esc: Open task bar
 
-%% TODO [support](https://support.google.com/chrome/answer/157179)
+[Full list of chrome hotkeys](https://support.google.com/chrome/answer/157179)
 
 ### Chrome command line parameters
 
