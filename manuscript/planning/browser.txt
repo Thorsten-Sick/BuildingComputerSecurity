@@ -364,22 +364,13 @@ covers many attacks on web browsers. It's focus is on the BeEF framework.
 
 
 
-%% ## Censorship
-
-
-%% TODO: [Censored pages in UK](https://www.blocked.org.uk/)
-
-%% TODO: [Wayback machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak?hl=en-US)
-
-%% TODO: [Oooni](https://ooni.torproject.org/)
-%% TODO: [Netblocks](https://netblocks.org)
 
 %% ## Hacked Shops
 
 %% TODO [Magenta Shops](https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html)
 %% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
 %% [Riskiq Magecart](https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline)
-%% [TrendMicro Magecart](https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/)
+%% [Trend Micro Magecart](https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/)
 
 ## Crypto mining
 

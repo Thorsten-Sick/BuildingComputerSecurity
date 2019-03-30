@@ -21,7 +21,10 @@ One of the reasons I dare to write a book is leanpub's feature to release
 *early* and *often*. That way I can see progress and get feedback.
 
 Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
-help me improve the book.
+help me improve the book. Or contact me:
+
+* On Twitter: @ThorstenSick
+* On Mastodon: @thorsi@chaos.social
 
 As I have been spending lots of time with security focused engineers, the most
 important things I want to learn first from you:
