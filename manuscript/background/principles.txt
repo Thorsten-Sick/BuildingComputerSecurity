@@ -25,7 +25,7 @@ cases you are not free to do it the perfect way - for example a manager needs an
 Internet Explorer to use am esoteric web based application installed on his PC.
 In this case **bolt-on-security** (filtering files and URLs) is a valid approach.
 
-Disadvantages of Bolt-on-security is: It adds complexity (file parsing, for example)
+Disadvantages of Bolt-on-security is: It adds complexity (file parsing, for example).
 
 This can turn the bolt-on-security into a new infection vector.
 
@@ -88,6 +88,7 @@ asking yourself some simple questions:
     * Reduce features, reduce privileges, ....
 * How to reduce the potential impact ?
 * Who do you (have to) trust ?
+    * Best case: You do not have to trust anyone
 
 %% TODO: Write chapter on attack surface
 
@@ -133,7 +134,7 @@ Whatever you do: Be flexible. You did threat modelling during the design phase,
 you fixed all vulnerabilities you found. But there will be a hack.
 
 Expect the attacker to find a trick against your tools in the following weeks.
-Have a plan ready to handle that situation ready. Expect the attacker
+Have a plan ready to handle that situation. Expect the attacker
 to do something unexpected. Plan for flexibility.
 
 ## Do not make mistakes
@@ -166,7 +167,7 @@ the consequences. How can these failures be triggered and by whom ?
 ## Monitor / Incident Response
 
 Expect a hack to happen. But many hacked companies do not notice the breach -
-or do, hundreds of days later by accident (server misbehaves or similar).
+or do, hundreds of days later and by accident (server misbehaves or similar).
 
 You do not want to be one of those. You could monitor the devices you own or
 the devices you sold to customers (IoT, for example) for security incidents.
@@ -221,6 +222,8 @@ So attackers have to be:
 * Climbers
 * Lucky
 
+To reach their goal alive.
+
 This will narrow down the number of successful survivors/attackers quite well.
 
 The same is true for your computer system. Combine different technologies to
@@ -230,11 +233,12 @@ offers 100 % protection.
 ## Filter at the endpoint
 
 Thanks to efforts by the EFF, Google and many more the connections between client
-and server are now end-to-end encrypted. Which is an incredible security improvement.
+and server are now end-to-end encrypted (HTTPS). Which is an incredible
+security improvement.
 Many bolt-on security solutions offer a feature to scan the content of those
 connections with MITM proxies. This is only possible if you sabotage the alert
-system at the endpoints. Because they detect the attack.
-Having a sabotaged alert system they will have trouble detecting malicious attacks.
+system at the endpoints. Because they detect the *attack* a MITM is.
+Systems having a sabotaged alert have trouble detecting malicious attacks.
 Scanning as MITM is a very bad idea.
 
 The solution is: Filter at the endpoints. In the browser, When files are
@@ -249,7 +253,7 @@ about what is filtered.
 
 Add tripwires to your design. One example is to fill your database with some
 fake customers with made up mail addresses. As soon as those mail addresses
-start receiving mails, you know the db has been compromised.
+start receiving mails (SPAM), you know the db has been compromised.
 
 The same for fake "password.txt" files in your system. They get accessed ? You got
 hacked.
@@ -273,6 +277,9 @@ it will break as soon as an experienced person attacks it. You are an
 experienced engineer but not an experienced attacker. The guys you
 face have the skill set switched: experienced attacker, OK-ish engineer.
 This is why they became attackers.
+
+Long story short: if your defense depends on "as long as the attacker does not know X"
+it already failed.
 
 [^note2]: Depends on your users
 

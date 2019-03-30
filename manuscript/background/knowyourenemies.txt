@@ -20,7 +20,7 @@ be open minded and enjoy the taxonomy of hackers.
 
 The friendly Hackers will notify you as soon as they found a vulnerability in your code.
 Get in touch and they will help you to close it. Be aware: You will get a
-very expensive service (pen testing) for free[^note1]!
+very expensive service (pen testing) for free!
 
 Goal: Curiosity. And fame. And creating a more secure world
 
@@ -53,7 +53,7 @@ and push the boundaries a lot more.
 
 Do: Enjoy their ideas
 
-Don't: Be distracted. Most attacks used by malicious attackers are several years old.
+Don't: Be distracted. Most attacks used by real malicious attackers are several years old. Not the fancy things the academia came up with.
 
 ## Script kiddies
 
@@ -76,7 +76,7 @@ It is organised crime because they have specialists for all those tasks needed t
 * Cash in (money mules)
 
 Their major goal is to make money. As there are lots of ways to do that it is
-hard to predict what the next way will be. We currently have:
+hard to predict what they will do. We currently have:
 
 * Stealing accounts
 * Using bandwidth for DDOS
@@ -92,7 +92,7 @@ The Command and Control interfaces of the malware are shipped with a statistics 
 attackers can decide what kind of module will currently have the best ROI.
 
 There is malware that first measures the processing power of the machine and
-the number of potential valuable file son disk.
+the number of potential valuable files on disk.
 
 * If it finds high processing power and not much user generated content: it runs a crypto miner
 * If it finds lots of user generated content and low processing power it runs as ransomware
@@ -122,6 +122,8 @@ will not be the softest (and tastiest) target out there at least.
 According to some statistics (and your special mileage may vary) in house
 attackers are amongst the more common.
 
+Disgruntled employees that want to cause trouble before leaving the company.
+
 Split responsibilities, compartmentalize, have backups. Make sure people can
 not be bribed. Do code reviews.
 
@@ -130,7 +132,4 @@ off the shoulders of people if done right. Makes them sleep better. Do this
 wise and you and your colleagues will benefit even when there is no one
 planning mischief.
 
-
 %% TODO: Add Hacktivist
-
-[^note1]: With a flexible definition of free.
