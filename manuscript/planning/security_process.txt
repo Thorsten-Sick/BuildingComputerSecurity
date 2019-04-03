@@ -32,13 +32,13 @@ This list is from good to really bad.
 |Abused by cyber criminals (0-day)     |weeks-years|High         |Monetary         |Very high|
 |Abused by repressive governments      |weeks-years|High         |Torture and death|Extreme  |
 
-WoV: Windows of vulnerability
+**WoV**: Windows of vulnerability
 
-Monetary cost: Cost you pay for fixing
+**Monetary cost**: Cost you pay for fixing
 
-Damaged caused: What your users pay for using your vulnerable software (worst case)
+**Damaged caused**: What your users pay for using your vulnerable software (worst case)
 
-PR cost: Blog posts and similar to fix post-incident PR
+**PR cost**: Blog posts and similar to fix post-incident PR
 
 As you can see: You want to fix your vulnerabilities as early in the process as possible.
 

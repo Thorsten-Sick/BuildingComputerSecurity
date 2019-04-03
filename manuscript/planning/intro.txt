@@ -7,7 +7,7 @@ A software or hardware design well done can simplify programming and
 strongly improve security.
 
 Many specific technologies require domain knowledge to be used in a
-secure fashion. And this is available but hidden under heaps of
+secure fashion. Ver often this is available - but hidden under heaps of
 interesting features those technologies offer.
 
 This chapter will extend principles from the background chapter into

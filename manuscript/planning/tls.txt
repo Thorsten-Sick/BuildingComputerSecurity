@@ -222,6 +222,10 @@ for a group of users you will want to have fallback plans/keys, ...
 or maybe use other technologies. If you can use HPKP in a reliable way: Great.
 If you do not feel comfortable: Do not use it.
 
+Update: Acceptance of HPKP was low. As it is a tricky technology to use.
+Chrome 72 deprecated it. This technology is described here for historical
+reasons and maybe you can learn something from it.
+
 [^foot_hpkp]: If you are smart you also offer a second id of a backup key
 
 %% TODO; [quotes](https://textslashplain.com/tag/security/) for quotes and details

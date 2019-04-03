@@ -40,7 +40,7 @@ requirement it has a blurred line to management tasks.
 * Compartmentalize Github projects
 * Create incident response process
 
-%% TODO: Githooks in detail
+
 %% TODO: Tools to check for checked in credentials in detail
 %% TODO: Reproducible builds in detail
 

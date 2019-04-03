@@ -56,6 +56,9 @@ Netdiscover ARP scanner: https://sourceforge.net/projects/netdiscover/
 **iproute2**
 
 {lang="bash"}
+    sysctl net.ipv6.conf.all.forwarding=1
+    sysctl net.ipv4.conf.all.forwarding=1
+
     ip link add name br0 type bridge
     ip link set br0 up
     ip link set eth0 master br0   # Add eth0 to bridge
@@ -92,5 +95,22 @@ Netdiscover ARP scanner: https://sourceforge.net/projects/netdiscover/
 
 Deleting the old ip address settings for a device:
 
+If the connection only works partially (DHCP is dropped, ...) check
+the bridge settings in /proc/sys/net/bridge. If in doubt: Try setting those values to 0.
+
+Show them with
+
+{lang="bash"}
+    sysctl net/bridge
+
+
 {lang="bash"}
     ip addr del 127.0.0.1 dev eth1
+
+
+
+%% IPOsint: https://github.com/j3ssie/IPOsint
+%% OSint : https://github.com/kpcyrd/sn0int
+%% https://github.com/FortyNorthSecurity/Just-Metadata
+
+%% TODO: The future internet: https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20181218/Documents/Geoff_Huston_Presentation.pdf

@@ -17,3 +17,5 @@ https://github.com/awslabs/git-secrets
 %% TODO: Dependency check: https://github.com/jgamblin/DepCheck-Action
 
 %% Search for Tokens https://github.com/dxa4481/truffleHog
+
+%% TODO: Githooks in detail

@@ -214,3 +214,7 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 %% TODO: [Deep State API Fuzzing](https://blog.trailofbits.com/2019/01/22/fuzzing-an-api-with-deepstate-part-1/)
 
 %% TODO: [JS Engine fuzzing](https://github.com/googleprojectzero/fuzzilli)
+
+
+%% TODO: Fuzzing basics: https://labs.mwrinfosecurity.com/blog/what-the-fuzz
+%% Network protocol fuzzing: https://blog.own.sh/introduction-to-network-protocol-fuzzing-buffer-overflow-exploitation/

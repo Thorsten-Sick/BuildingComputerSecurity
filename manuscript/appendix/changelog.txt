@@ -22,19 +22,26 @@ changelog to make it simpler for you to find the new sections.
 %% Conferences to appendix
 %% CTFs to appendix
 
-%% TODO: Add Part_tools (openssl, git, nmap, )
+
 %% TODO: extend attacks goals
 %% TODO: extend know your enemies
-%% TODO: BLE, including Gattack.io
+%% TODO: BLE, including bettercap
 %% Add Psychology toolbox
 %% TODO: Add defense to all the offensive stuff
-%% Create prefix part
+
 %% TODO: Add Takeaways to all the offensive stuff.
 %% TODO: Add defense to all the offensive stuff
-%% TODO: Add "intro" to all the parts
+
 %% TODO: Link new stuff to book structure chapter
 %% TODO: Secure coding !!!
-%% TODO: Browser
+
+
+%% April 2019
+
+%% TODO: Full quality check "planning section"
+%% TODO automatic check that content is complete
+%% Todo extend security process with more ideas
+
 
 ## March 2019
 
@@ -47,9 +54,8 @@ changelog to make it simpler for you to find the new sections.
 * extended **glossary**
 * extended **browser**
 * extended **security_process**
+* Full quality check for "background" section
 
-%% TODO automatic check that content is complete
-%% Todo extend security process with more ideas
 
 ## February 2019
 
