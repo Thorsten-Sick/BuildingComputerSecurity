@@ -74,10 +74,12 @@ Some things can be done to [improve browser security](#chapter-browser-security)
 
 ### Censorship
 
-This chapter should be named *Resilience*. But *Censorship* attracts more attention.
-Our systems are very complex. And many do not have enough redundancy to
-recover from a single failure (accidental or intentional). But they can be built that way. This chapter
-currently focuses on personal redundancy.
+[This chapter](#chapter-censorship) should be named *Resilience*. But *Censorship* attracts more attention.
+Our computer systems are very complex. And many do not have enough redundancy to
+recover from a single failure (accidental or intentional). But they can be
+built that way. This is covered in this chapter. It currently focuses on
+personal redundancy. Later it will be extended to also cover how to build
+resilient systems.
 
 ### IoT
 
