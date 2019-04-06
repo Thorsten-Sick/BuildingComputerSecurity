@@ -165,6 +165,11 @@ the generated URL to your communication partner.
 As long as the server is running the partner can download it by simply using
 the Tor browser.
 
+%% ## Resilience
+%% TODO: Resilience
+%% Some tips on how to build resilient programs
+%% Handle errors as close to the cause as possible (do not reboot the whole system if small things happen)
+
 ## Further reading
 
 A large collection of alternative to centralised and surveilled services can
