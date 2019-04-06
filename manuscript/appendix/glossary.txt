@@ -12,6 +12,8 @@
 
 **ASLR**: Mitigation strategy to load code into **random** areas of the memory. Makes writing of exploits harder
 
+**Backdoor**: A constructed way for an attacker to connect to a vulnerable system and execute code
+
 **BLE**: Bluetooth Low Energy
 
 **BLE Characteristic**: Value + Descriptor
@@ -81,6 +83,8 @@
 **MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
+
+**RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
 
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 

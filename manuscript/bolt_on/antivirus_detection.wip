@@ -172,3 +172,7 @@ you normally do _before_ you do detection.
 
 .. TODO Cuckoo / malwr.com
 .. TODO virustotal
+
+%% TODO: Pareto principle
+%% TODO: Statistics anomaly when combining different techs
+%% TODO: Specialized and hidden detection - attacker does not get feedback

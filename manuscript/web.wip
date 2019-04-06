@@ -130,3 +130,5 @@ attacker who bought the domain after you quit.
 %% TODO: XSRFProbe https://www.kitploit.com/2019/01/xsrfprobe-prime-cross-site-request.html?utm_source=dlvr.it&utm_medium=twitter
 
 %% TODO: Data correlation https://github.com/woj-ciech/Danger-zone
+
+%% TODO: Mozilla Observatory https://observatory.mozilla.org/

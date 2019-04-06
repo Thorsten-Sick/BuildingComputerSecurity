@@ -305,3 +305,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 %% TODO: Building certificate chain [sslmerge](https://github.com/trimstray/sslmerge)
 
 %% TODO: certstream.calidog.io
+
+%% TODO: http://neverssl.com/

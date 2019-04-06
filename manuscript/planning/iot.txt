@@ -111,3 +111,5 @@ kind of approach is the right size of paranoia.
 
 
 %% [IOT Botnets](https://krebsonsecurity.com/2018/01/expert-iot-botnets-the-work-of-a-vast-minority/)
+
+%% TODO: Shodan

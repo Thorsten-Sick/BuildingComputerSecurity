@@ -42,6 +42,9 @@ changelog to make it simpler for you to find the new sections.
 %% TODO automatic check that content is complete
 %% Todo extend security process with more ideas
 
+## April 2019
+%% Add network
+%% Full quality review Planning
 
 ## March 2019
 

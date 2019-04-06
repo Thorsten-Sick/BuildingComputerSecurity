@@ -290,3 +290,5 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 
 %% TODO: Ange's [MD5 Attack](https://github.com/corkami/pocs/blob/master/collisions/README.md)
+
+%% TODO: KErckhoff's principle: https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle

@@ -201,3 +201,7 @@ victims get attacked in parallel some will be infected.
 The attacker will find out later if any valuables got caught in the net.
 
 %% TODO: Find a place for: attackers chain vulnerabilities
+
+%% TODO: types of attacks: RCE, downgrade, backdoors
+
+%% TODO: Infection chain, droppers and co

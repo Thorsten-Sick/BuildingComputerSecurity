@@ -110,3 +110,6 @@ Asserts have positive side effects besides helping you finding bugs much faster.
 * Asserts improve [fuzzing](#chapter-fuzzing)
 * Asserts help to document your contracts
 * Asserts are a good first step if you want to dissect your program into pieces to introduce unit testing
+
+
+%% TODO: static assert

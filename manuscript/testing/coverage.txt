@@ -49,3 +49,5 @@ improve your score.
 %% TODO: [CLANG Source BAsed Coverage](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)
 
 %% TODO: [Gcov Documentation](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)
+
+%% TODO: LCOV
