@@ -34,7 +34,7 @@ topics in other chapters.
 Your software - and maybe even your hardware will have bugs that turn into
 vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities)
 will cover the essence and taxonomy of vulnerabilities. Understanding that will
-make decissions based on vulnerabilities simpler.
+make decisions based on vulnerabilities simpler.
 
 ### Security process
 
@@ -71,6 +71,13 @@ The browser is the main software running on most computers. And the interface
 for a lot of other technologies. As browsers are complex they are vulnerable.
 Some things can be done to [improve browser security](#chapter-browser-security)
 - or the security of connected web admin platforms (router config page).
+
+### Censorship
+
+This chapter should be named *Resilience*. But *Censorship* attracts more attention.
+Our systems are very complex. And many do not have enough redundancy to
+recover from a single failure (accidental or intentional). But they can be built that way. This chapter
+currently focuses on personal redundancy.
 
 ### IoT
 

@@ -6,7 +6,7 @@ The original internet was planned with lots of resilience. Even if parts of
 the internet have failures, the rest will route around it.
 
 Centralisation has added dependencies on a few companies.
-This results in accidential outages or planned censorship.
+This results in accidental outages or planned censorship.
 
 Both are totally contrary to the spirit of the internet.
 
@@ -24,7 +24,7 @@ those additional programs installed as well.
 ### OONI by the Tor project
 
 [Oooni](https://ooni.torproject.org/) has globally distributed sensors
-measuring the reachability of services. Data can be accessed on a map, by a
+measuring the reach-ability of services. Data can be accessed on a map, by a
 list of "best of censorship" events and by an API.
 
 The project is Open Source and there is a description how to set up a sensor
@@ -40,7 +40,7 @@ Focus is more on written reports based on special internet outage events.
 ### Blocked.org.uk
 
 [Censored pages in UK](https://www.blocked.org.uk/). UK has a voluntary
-filter for <18 content. This is overblocking.
+filter for <18 content. This is over-blocking.
 
 This site tests and monitors specific sites.
 
@@ -55,7 +55,7 @@ Jabber (aka XMPP) is like E-Mail: You can have an address at any
 [Jabber server](https://list.jabber.at), use any kind of Jabber client
 to access it and contact everyone with a Jabber account.
 
-OMEMO is the encryption technology for Jabber. Just acticvate it in your
+OMEMO is the encryption technology for Jabber. Just activate it in your
 client and done.
 
 There a different Jabber clients for example:
@@ -87,7 +87,7 @@ in person and confirm their identity by scanning a QR code. Intuitive and secure
 
 #### Telegram
 
-I am not using Telegram. It has several security issues. But ont he other
+I am not using Telegram. It has several security issues. But on t he other
 hand: Many people are already using it and it "survived" several censorship
 attempts already.
 
@@ -103,7 +103,7 @@ messengers listed here. But the widespread adoption has it's own benefits.
 
 The Tor browser is hiding your tracks on the internet. Just install it.
 It will look like a Firefox browser with a few extra options. You can ignore
-them - the defaults are ok.
+them - the defaults are OK.
 
 The Tor trick: Your data is sent encrypted over three "Tor nodes" to hide you
 from the internet.
@@ -120,14 +120,14 @@ So it is is not as big a thing as you may think.
 
 Install the Tor browser and give it a try. You may not need it now. But maybe later.
 
-%% TODO: ### Youtube replacement
+%% TODO: ### YouTube replacement
 %% Peer Tube
 
-### Network infratructure
+### Network infrastructure
 
 In some regions the web coverage is under-developed. For some political
 reasons that is quite common in Germany. The [Freifunk](https://freifunk.net/)
-project is offering free Wifi under the SSID "Freifunk". Just connect and use
+project is offering free WiFi under the SSID "Freifunk". Just connect and use
 the internet.
 
 This project is a good alternative for company owned infrastructure and
@@ -161,7 +161,7 @@ Blocking on DNS level happened at the "Censorship in Turkey" event.
 
 Using [OnionShare](https://onionshare.org/) it is possible to share files.
 Just drag some files into the box, click the "start sharing" button and send
-the generated URL to your commujnication partner.
+the generated URL to your communication partner.
 As long as the server is running the partner can download it by simply using
 the Tor browser.
 

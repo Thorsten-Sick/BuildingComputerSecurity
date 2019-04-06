@@ -9,6 +9,7 @@ planning/part_planning.txt
 planning/intro.txt
 planning/updates.txt
 planning/passwords.txt
+planning/censorship.txt
 planning/cryptoalgorithms.txt
 programming/part_programming.txt
 programming/intro.txt

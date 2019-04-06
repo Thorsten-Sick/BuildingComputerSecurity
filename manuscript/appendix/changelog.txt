@@ -55,7 +55,7 @@ changelog to make it simpler for you to find the new sections.
 * extended **browser**
 * extended **security_process**
 * Full quality check for "background" section
-
+* Added **Censorship**
 
 ## February 2019
 

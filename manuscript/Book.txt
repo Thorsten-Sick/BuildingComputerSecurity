@@ -17,6 +17,7 @@ planning/ux.txt
 planning/updates.txt
 planning/passwords.txt
 planning/browser.txt
+planning/censorship.txt
 planning/iot.txt
 planning/can.txt
 planning/bluetooth_le.txt
