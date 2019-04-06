@@ -1,3 +1,0 @@
-# Resilience
-
-%% Handle errors as close to the cause as possible (do not reboot the whole system if small things happen)
