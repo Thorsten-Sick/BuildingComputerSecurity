@@ -38,13 +38,22 @@ changelog to make it simpler for you to find the new sections.
 
 %% April 2019
 
+
+## April 2019
+
+* Add "Threat modelling"
+
+%% Extend attackers goals
 %% TODO: Full quality check "planning section"
 %% TODO automatic check that content is complete
 %% Todo extend security process with more ideas
 
-## April 2019
-%% Add network
-%% Full quality review Planning
+%% Add network ?
+
+%% Add coding (move stuff around)
+%% Extend password with wip, create training package for hp
+
+* Extended Glossary
 
 ## March 2019
 
