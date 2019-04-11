@@ -20,10 +20,72 @@
 
 %% TODO: https://www.techrepublic.com/article/heres-how-npm-plans-to-improve-security-and-reliability-in-2019/#ftag=RSS56d97e7
 
-## Use a linter
+## Use a linter: ESLint
 
 The closest you can get to compiler warnings in JS is a linter.
 Use it and respect it's warnings.
+
+Most important: Besides using those things in your IDE, also add them to the
+build system or VCS. That way everyone automatically uses the same style and
+warnings will be throw even if someone makes a quick-fix using notepad.
+
+ESLint has a very flexible system of config files. Where everything from a
+"project global" configfile to "source-code-line" granular setting is possible.
+
+Configuration does not have to be complex. As long as the config file contains
+the directive
+
+{lang="javascript"}
+    "extends":"eslint:recommended"
+
+(which is: default settings) everything is fine. This then can be extended.
+Rules cherry picked, configured and set to any level between *off*, *warning*
+and *error*.
+
+Make sure you have the sane defaults when starting. Later invest some time
+into tuning the rules.
+
+There are three levels of integration for any linter into your development process:
+
+* IDE
+* Build system ("make test" or similar)
+* Git precommit hook
+
+All of them are reasonable.
+
+**IDE integration** will simplify the development process and reduce bugs right there where they happen
+
+**Build system integration** has the benefit of being able to run a quick check before doing a release
+
+**Git precommit hook** guarantees no one messes up the common code by accident.
+
+All those together manage to reduce the stress level of cooperative development. And less bugs is less vulnerabilities.
+
+[ESLint](https://eslint.org) is just one of the linters existing. If you are
+not happy with it, pick another one.
+
+Before anyone complains: Yes, this is kind of boring rock-solid software
+engineering. But more often than not in the early "let's get started" phases
+of a project it is forgotten. And later on there are so many bugs to fix no
+one has enough time to roll out a system that detects and prevents bugs.
+
+### Bonus level
+
+Bugs love company. If you find a bug of a certain type in your code the
+chances are high to find similar bugs in this or other projects.
+
+So if you should manually find a bug that ESLint missed it is worth the
+investment to write a detection for that as a *rule* or *plugin* for ESLint.
+And run this on your whole codebase to find similar bugs.
+
+The ESLint page has documentation on how to write rules.
+
+And remember: *Sharing is caring* If you have an awesome rule, create a
+pull request and get it into the ESLint distribution. That way others can
+**use it**, **review it** and **improve it**.
+
+This kind of thing happened to my contributions several times (last time I
+remember was a CPPCheck plugin, but this is a similar situation).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The JS eco system

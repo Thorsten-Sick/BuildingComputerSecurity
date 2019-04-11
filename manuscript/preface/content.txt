@@ -21,6 +21,18 @@ your project.
 
 ## Planning
 
+### Threat modelling
+
+A mixed group of people (engineers, architects, managers) meets for a
+*threat modelling* session. Understanding the strengths and weaknesses of the
+product and the planned new features. "What would an attacker want ?",
+"How would he get that ?". Identifying that is the first step to protect the
+valuable assets.
+It can sound intimidating. But there are so many different approaches to make
+it simple and even fun. I collected a range of "best of" approaches in
+[this chapter](#chapter-threat-modelling).
+
+
 ### Software Design
 
 [Software design](#chapter-design) - also known as architecture - is the bigger picture of the
