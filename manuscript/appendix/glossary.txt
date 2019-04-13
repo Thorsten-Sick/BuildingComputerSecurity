@@ -44,6 +44,8 @@
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
 
+%% Dynamite phishing
+
 **ELF**: Linux executable file format
 
 **Exploit**: Attack on a vulnerability
