@@ -16,3 +16,7 @@ Malware sources: https://maxkersten.nl/binary-analysis-course/obtaining-samples/
 Virus Total CLI
 
 https://github.com/VirusTotal/vt-cli
+
+--------------- CSRF cheat sheet
+
+https://trustfoundry.net/cross-site-request-forgery-cheat-sheet/
