@@ -26,3 +26,15 @@ https://www.golem.de/news/ietf-mozilla-entwickler-beschreibt-vorteile-von-dns-ue
 %% TODO: DNS attacks https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture17.pdf
 
 %% TODO: More attacks https://www.fireeye.com/blog/threat-research/2019/01/global-dns-hijacking-campaign-dns-record-manipulation-at-scale.html
+
+
+%% TODO: tool dnsrecon seems cool
+
+%% TODO: Subdomain Takeover research.
+%% Short and wrong:
+%% A Domain has sub-domains. Those are running on a different hoster.
+%% Original domain now has a CNAME that re-directs to the DNS of the 2nd hoster
+%% Everything looks like it is on one system.
+%% Discontinuing the services on the 2nd hoster but keeping the CNAME intact allows
+%% Anyone on the 2nd hoster to take the subdomain and host the own stuff.
+%% Can result in cookie theft (depends on cookie config) and impersonating.
