@@ -1,6 +1,6 @@
-# Javascript
+# JavaScript
 
-Javascript is not a simple language (lots of cfreative special cases) but it
+JavaScript is not a simple language (lots of creative special cases) but it
 is the glue that keeps the web together. It is quite likely that you have to
 mix some JS into your project just to get a fancy web interface or GUI.
 
@@ -11,7 +11,7 @@ Three reasons to treat this language like Nitroglycerin when using it.
 
 ## Retire.js
 
-Writing large JS applications is very dependend on framweorks. Which extend
+Writing large JS applications is very dependent on frameworks. Which extend
 the language feature set. Those frameworks also have dependencies. And some
 are not very well maintained.
 
@@ -47,7 +47,7 @@ same style and warnings will be throw even if someone makes a quick-fix
 using notepad.
 
 ESLint has a very flexible system of config files. Where everything from a
-"project global" configfile to "source-code-line" granular setting is possible.
+"project global" config file to "source-code-line" granular setting is possible.
 
 Configuration does not have to be complex. As long as the config file contains
 the directive
@@ -55,7 +55,7 @@ the directive
 {lang="javascript"}
     "extends":"eslint:recommended"
 
-(which is: default settings) everything is alread on the right track. This
+(which is: default settings) everything is already on the right track. This
 directive can be extended later on.
 
 Make sure you have the sane defaults when starting. Later invest some time
@@ -68,7 +68,7 @@ ESLint can be added at different stages in your development process.
 
 * IDE
 * Build system ("make test" or similar)
-* Git precommit hook
+* Git pre commit hook
 
 All of them are reasonable.
 
@@ -76,7 +76,7 @@ All of them are reasonable.
 
 **Build system integration** has the benefit of being able to run a quick check before doing a release
 
-**Git precommit hook** guarantees no one in your team messes up the common code by accident.
+**Git pre commit hook** guarantees no one in your team messes up the common code by accident.
 
 All those together manage to reduce the stress level of cooperative development. And less bugs is less vulnerabilities.
 
@@ -95,7 +95,7 @@ chances are high to find similar bugs in this or other projects.
 
 So if you should manually find a bug that ESLint missed, it is worth the
 investment to write a detection for that as a *rule* or *plugin* for ESLint.
-And run this on your whole codebase to find similar bugs.
+And run this on your whole code base to find similar bugs.
 
 The ESLint page has documentation on how to write rules.
 
@@ -123,7 +123,7 @@ The key word string
 
 *"use strict";*
 
-in a Javascript code promises the interpreter that the author is an
+in a JavaScript code promises the interpreter that the author is an
 experienced developer and shady situations should be handled as errors instead
 of "guess what the author could have meant by that".
 
@@ -143,6 +143,6 @@ I'll just list the moving parts for reference.
 
 * NodeJS: JavaScript runtime, built on Chrome's V8.
 * npm: NodeJS package manager
-* Grunt: JS task runner (automation), based on NodeJS: can be used ffor builds and similar
+* Grunt: JS task runner (automation), based on NodeJS: can be used for builds and similar
 * Bower: Package manager
 * Gulp: JS task automation, build system
