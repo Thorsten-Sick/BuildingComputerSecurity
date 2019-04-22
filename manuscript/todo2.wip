@@ -1,0 +1,18 @@
+(1/2) EXTRACT & CRACK WINDOWS BITLOCKER: 
+STEP 1: Use dd to extract image of your BitLocker encrypted device: sudo dd if=/dev/disk2 of=/path/to/bitlockerimage conv=noerror,sync 
+STEP 2: Extract the hash using bitlocker2john: bitlocker2john –i /path/to/bitlockerimage > hash.txt
+2/2) EXTRACT & CRACK WINDOWS BITLOCKER: 
+STEP 4: Use JTR to crack the bitlocker hash: john --format=bitlocker-opencl --wordlist=dict.txt hash.txt
+
+https://openwall.info/wiki/john/OpenCL-BitLocker
+
+https://www.amazon.com/dp/1793458618
+
+------------------------------------------------------
+
+Malware sources: https://maxkersten.nl/binary-analysis-course/obtaining-samples/searching-samples/
+
+-----------------------
+Virus Total CLI
+
+https://github.com/VirusTotal/vt-cli
