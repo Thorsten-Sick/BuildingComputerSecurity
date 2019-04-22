@@ -1,12 +1,13 @@
 # GIT hardening
 
-Git allows to write *hooks* on certain events. This could be *pre-commit*,
-*post-checkout* or similar.
+Git allows to write *hooks* on certain events.
 
 Hooks are simple scripts in a special folder that are executed when this event
 occurs.
 
-In addition To the differentiation by event that triggers it there are two
+These can be *pre-commit*, *post-checkout* or similar.
+
+In addition to the differentiation by event that triggers it there are two
 style of hooks:
 
 **Local hooks** are client side and the developer maintains them to simplify
@@ -19,10 +20,23 @@ When setting up a team process it is smart to search the web for "git-hooks"
 and use it wisely to improve everyone's workflow (local hooks) and centrally
 enforce policy (server-side hooks).
 
-This is especially security relevant things
+This way especially security relevant things can be cared for
 ("does it compile without warnings ?" would be the simplest one).
 
-But there are also VCS specific security issues:
+Other ideas would be:
+
+* Coding style
+* Good (long) commit messages with links to issues
+* Code changes only if unit tests are added as well
+
+This has big benefits on:
+
+* code quality
+* enforces best practice even in dire situations
+    * gives the developers an explanation towards management ("This will take one more hour, gotta do this right or it will not be checked in")
+* lift team spirit, because **THE MACHINE** enforces the coding style, not the other developer who is a grumpy guy and does not allow anything creative
+
+Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets"
 
 ## Do not commit credentials and secrets
 
@@ -32,14 +46,20 @@ a private one. Sooner or later you will invite other people to contribute. And
 then those credentials are either forgotten and there as-files or in the git
 history.
 
-%% Repo scanner: https://github.com/UKHomeOffice/repo-security-scanner
+To prevent committing credentials there are special scanners. They look for
+file names or patterns in the source code that look like a private ssh key or
+something similar.
+
+[Repo security scanner](https://github.com/UKHomeOffice/repo-security-scanner) scans for
+
 * Different private keys
 * Different command histories
 * Configuration files
 * Password files
 * PCAPs and other dumps
 
-Using:
+It is using:
+
 * Filename
 * Path
 * File extension

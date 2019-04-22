@@ -36,12 +36,12 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Secure coding !!!
 
 
-%% April 2019
-
 
 ## April 2019
 
-* Add "Threat modelling"
+* Added "Threat modelling"
+* Extended Glossary
+
 %% Review and add "git"
 
 %% Extend attackers goals
@@ -54,7 +54,6 @@ changelog to make it simpler for you to find the new sections.
 %% Add coding (move stuff around)
 %% Extend password with wip, create training package for hp
 
-* Extended Glossary
 
 ## March 2019
 
