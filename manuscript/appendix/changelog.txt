@@ -41,8 +41,7 @@ changelog to make it simpler for you to find the new sections.
 
 * Added "Threat modelling"
 * Extended Glossary
-
-%% Review and add "git"
+* Added "git hardening"
 
 %% Extend attackers goals
 %% TODO: Full quality check "planning section"
