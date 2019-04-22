@@ -1,4 +1,4 @@
-# GIT hardening
+# GIT hardening {#chapter-git}
 
 Git allows to write *hooks* on certain events.
 

@@ -154,6 +154,13 @@ and dynamic testing of your code. Those features are cool enough that you
 should consider compiling at least the test version using [Clang and those
 settings](#chapter-clang).
 
+### JavaScript security
+
+I am a big fan of automated security tests. And JavaScript has it's own pitfalls.
+But those can be fixed by tools you can integrate seamlessly into your workflow.
+The [JavaScript security](#chapter-javascript-security) will show you the low
+hanging fruit.
+
 ## Testing
 
 ### Testing compiled binaries
@@ -194,6 +201,13 @@ your tasks done. Those are covered in this part of the book.
 A very powerful tool that goes way beyond just replacing Telnet. Know it and
 simplify your work while being more secure. Or - if you build embedded
 systems - integrate it in there.
+
+### Git
+
+Git as a version control system is the core of your development workflow. So
+it is also a perfect spot to add automated code quality tools. You learned
+about those tools in the other chapters. And this chapter gives you some hints
+where to get started integrating them into [Git](#chapter-git).
 
 %% TODO Openssl
 

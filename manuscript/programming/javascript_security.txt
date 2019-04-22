@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript {#chapter-javascript-security}
 
 JavaScript is not a simple language (lots of creative special cases) but it
 is the glue that keeps the web together. It is quite likely that you have to

@@ -34,18 +34,6 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Link new stuff to book structure chapter
 %% TODO: Secure coding !!!
-
-
-
-## April 2019
-
-* Added "Threat modelling"
-* Extended Glossary
-* Added "git hardening"
-* Added "javascript security"
-
-%% TODO: Add all those to content
-
 %% Extend attackers goals
 %% TODO: Full quality check "planning section"
 %% TODO automatic check that content is complete
@@ -56,6 +44,14 @@ changelog to make it simpler for you to find the new sections.
 %% Add coding (move stuff around)
 %% Extend password with wip, create training package for hp
 
+
+
+## April 2019
+
+* Added "Threat modelling"
+* Extended Glossary
+* Added "git hardening"
+* Added "javascript security"
 
 ## March 2019
 
