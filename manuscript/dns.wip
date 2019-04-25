@@ -28,6 +28,14 @@ https://www.golem.de/news/ietf-mozilla-entwickler-beschreibt-vorteile-von-dns-ue
 %% TODO: More attacks https://www.fireeye.com/blog/threat-research/2019/01/global-dns-hijacking-campaign-dns-record-manipulation-at-scale.html
 
 
+## mDNS
+
+Local network discovery.
+
+https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
+
+%%%%%%%%%
+
 %% TODO: tool dnsrecon seems cool
 
 %% TODO: Subdomain Takeover research.

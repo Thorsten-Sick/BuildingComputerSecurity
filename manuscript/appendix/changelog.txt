@@ -30,11 +30,9 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add defense to all the offensive stuff
 
 %% TODO: Add Takeaways to all the offensive stuff.
-%% TODO: Add defense to all the offensive stuff
 
 %% TODO: Link new stuff to book structure chapter
 %% TODO: Secure coding !!!
-%% Extend attackers goals
 %% TODO: Full quality check "planning section"
 %% TODO automatic check that content is complete
 %% Todo extend security process with more ideas
