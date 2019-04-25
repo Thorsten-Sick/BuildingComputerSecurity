@@ -10,6 +10,7 @@ from collections import defaultdict
 from pprint import pprint
 import argparse
 import json
+import csv
 
 class Link():
     def __init__(self, title, link, infile=None):
@@ -59,6 +60,7 @@ class Chapter():
         self.infile = infile
         self.part = part
         self.todos = 0
+        self.words = 0
 
     def __str__(self):
         return "{}: {} {}".format(self.part,self.title, self.link)
@@ -67,10 +69,21 @@ class Chapter():
         """ Set todos in chapter """
         self.todos = todos
 
+    def setWords(self, words):
+        """
+        @words: Number of words
+        """
+        self.words = words
+
     def getTodos(self):
         return self.todos
 
 class LeanpubVerify():
+
+    # common words
+    common = ["","the","to","*","a","is","and","of","you","for","it",
+              "your","in","are","can","be","not", "that","with","this",
+              "on","will","if","have","there","do","more","they","but"]
 
     def __init__(self, basefile, basedir="../manuscript", verbose=False):
         self.basefile = basefile
@@ -102,17 +115,22 @@ class LeanpubVerify():
         """
 
         part = ""
+        self.wordstatistics = defaultdict(int)
+        self.totalwords = 0
 
         for afile in self.chapterfiles:
             if "/part_" in afile:
                 part = afile.split("/")[1]
+                part = part.replace("part_","").replace(".txt","")
             todos = 0
+            chapterwords = 0
             newchapter=None
             with open(os.path.join(self.basedir, afile)) as fh:
                 for line in fh:
                     link = None
                     if line.startswith("#"):
                         level = 1
+                        todos = 0
                         if line.startswith("# "):
                             level = 1
                         if line.startswith("## "):
@@ -132,8 +150,18 @@ class LeanpubVerify():
                         if self.verbose:
                             print(newchapter)
                     todos += line.lower().count("todo:")
+                    # wordstats
+                    parts = re.split("\s|(?<!\d)[,.](?!\d)", line)
+                    self.totalwords += len(parts)
+                    chapterwords += len(parts)
+                    for p in parts:
+                        if not p.lower() in self.common:
+                            self.wordstatistics[p.lower()] += 1
+
                     if newchapter:
                         newchapter.setTodos(todos)
+                        newchapter.setWords(chapterwords)
+
 
     def checkChapters(self, up_to_level=1):
         """
@@ -193,10 +221,6 @@ class LeanpubVerify():
         # TODO: Create nice word clouds
         # TODO: Statistics by chapter and in total !
 
-        common = ["","the","to","*","a","is","and","of","you","for","it",
-                  "your","in","are","can","be","not", "that","with","this",
-                  "on","will","if","have","there","do","more","they","but"]
-
         self.wordstatistics = defaultdict(int)
         self.totalwords = 0
         if self.verbose:
@@ -207,7 +231,7 @@ class LeanpubVerify():
                     parts = re.split("\s|(?<!\d)[,.](?!\d)", line)
                     self.totalwords += len(parts)
                     for p in parts:
-                        if not p.lower() in common:
+                        if not p.lower() in self.common:
                             self.wordstatistics[p.lower()] += 1
         sorted_by_value = sorted(self.wordstatistics.items(), key=lambda kv: kv[1])
         pprint(sorted_by_value)
@@ -226,6 +250,17 @@ class LeanpubVerify():
         with open(filename, "wt") as fh:
             json.dump(data, fh, indent = 4)
 
+    def totalstats(self, filename="totalstats.csv"):
+        """ Generate full statistics CSV file
+        """
+        for c in self.chapters:
+            print ("{} {} {} {} {} {}".format(c.part, c.title, c.level, c.todos, c.words, c.link))
+
+        with open(filename, 'w', newline='') as csvfile:
+            spamwriter = csv.writer(csvfile, delimiter=';', quotechar = '|', quoting = csv.QUOTE_MINIMAL)
+            spamwriter.writerow(["part", "title", "level","todos", "words", "link"])
+            for c in self.chapters:
+                spamwriter.writerow([c.part, c.title, c.level, c.todos, c.words, c.link])
 
     def getWebLinks(self):
         """ Collect all web links
@@ -280,3 +315,4 @@ if __name__ == "__main__":
     if args.statistics:
         lpv.wordstats()
         lpv.todostats()
+        lpv.totalstats()
