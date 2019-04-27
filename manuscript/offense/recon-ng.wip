@@ -1,0 +1,90 @@
+https://bitbucket.org/LaNMaSteR53/recon-ng
+
+
+
+usage:
+
+Show help
+
+{lang="bash"}
+    help
+
+Every command has a detailed help
+
+{lang="bash"}
+    [recon-ng][default][brute_hosts] > help show
+    Shows various framework items
+
+    Usage: show [companies|contacts|credentials|dashboard|domains|globals|hosts|info|inputs|keys|leaks|locations|modules|netblocks|options|ports|profiles|pushpins|repositories|schema|source|vulnerabilities]
+
+To load a module and show it's info, call
+
+{lang="bash"}
+    [recon-ng][default] > use recon/domains-hosts/brute_hosts
+
+    [recon-ng][default][brute_hosts] > show info
+
+          Name: DNS Hostname Brute Forcer
+          Path: modules/recon/domains-hosts/brute_hosts.py
+        Author: Tim Tomes (@LaNMaSteR53)
+
+    Description:
+      Brute forces host names using DNS. Updates the 'hosts' table with the results.
+
+    Options:
+      Name      Current Value                           Required  Description
+      --------  -------------                           --------  -----------
+      SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
+      WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to hostname wordlist
+
+    Source Options:
+      default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
+      <string>       string representing a single input
+      <path>         path to a file containing a list of inputs
+      query <sql>    database query returning one column of inputs
+
+To show the options of a module, call
+
+{lang="bash"}
+  [recon-ng][default] > use recon/domains-hosts/brute_hosts
+  [recon-ng][default][brute_hosts] > show options
+
+    Name      Current Value                           Required  Description
+    --------  -------------                           --------  -----------
+    SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
+    WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to hostname wordlist
+
+
+
+
+To execute a module, load it, set the configuration and execute it.
+
+{lang="bash"}
+    [recon-ng][default] > use recon/domains-hosts/brute_hosts
+    [recon-ng][default][brute_hosts] > set SOURCE domain.com
+    SOURCE => domain.com
+    [recon-ng][default][brute_hosts] > run
+
+
+
+
+Show installed modules
+
+{lang="bash"}
+    [recon-ng][default][brute_hosts] > show modules
+
+      Discovery
+      ---------
+        discovery/info_disclosure/cache_snoop
+        discovery/info_disclosure/interesting_files
+
+      Exploitation
+      ------------
+        exploitation/injection/command_injector
+        exploitation/injection/xpath_bruter
+
+
+
+Some cool modules:
+
+Find hosts in a domain: recon/domains-hosts/certificate_transparency
