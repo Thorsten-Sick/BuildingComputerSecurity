@@ -67,7 +67,7 @@ The Microsoft checklist for Threat Modelling:
 
 [STRIDE](https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx)
 
-.. TODO: Add details
+%% TODO: Add details
 
 ## Attack tree
 
