@@ -306,4 +306,4 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 %% TODO: certstream.calidog.io
 
-%% TODO: http://neverssl.com/
+%% TODO: [neverssl.com](http://neverssl.com/)

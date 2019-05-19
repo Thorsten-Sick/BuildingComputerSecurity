@@ -175,3 +175,5 @@ But as we live in desperate times...I hate peer pressure. But it gets the job do
 
 
 %% TODO: [FP reduction](https://www.techrepublic.com/article/microsoft-5-tips-for-developers-to-reduce-malware-false-positives/#ftag=RSS56d97e7)
+
+%% TODO [Malware sources](https://maxkersten.nl/binary-analysis-course/obtaining-samples/searching-samples/)

@@ -81,3 +81,6 @@ But this is a very special case.
 %% TODO: [FP monitor](http://blog.virustotal.com/2018/06/vtmonitor-to-mitigate-false-positives.html)
 
 %% TODO: [Malice](https://github.com/maliceio/malice)
+
+
+%% TODO [Virus Total CLI](https://github.com/VirusTotal/vt-cli)

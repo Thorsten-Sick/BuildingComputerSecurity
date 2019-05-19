@@ -64,15 +64,6 @@ https://github.com/google/nogotofail
 
 
 
-# Privacy combination
-Brave browser
-ProtonVPN
-Tresorit
-Threema
-ProtonMail
-DuckDuckGo
-https://twitter.com/DuckDuckGo/status/1058717181716951042?s=09
-
 
 # Paste jacker (Clipboard)
 https://github.com/D4Vinci/PasteJacker
@@ -121,7 +112,7 @@ https://speakerdeck.com/ange/an-introduction-to-inkscape
 https://github.com/bbc/bbplot
 https://bbc.github.io/rcookbook/
 
-Python seaborn uses matplotlib for diagrams
+Python seaborn uses matplotlib for statistics
 
 -----------------
 Print on demand:
@@ -153,3 +144,20 @@ http://pwnwiki.io/#!index.md
 Suricata Threat intelligence tool Open source
 
 pwndb: Stolen Credentials. https://github.com/davidtavarez/pwndb
+
+
+-------
+(1/2) EXTRACT & CRACK WINDOWS BITLOCKER:
+STEP 1: Use dd to extract image of your BitLocker encrypted device: sudo dd if=/dev/disk2 of=/path/to/bitlockerimage conv=noerror,sync
+STEP 2: Extract the hash using bitlocker2john: bitlocker2john –i /path/to/bitlockerimage > hash.txt
+2/2) EXTRACT & CRACK WINDOWS BITLOCKER:
+STEP 4: Use JTR to crack the bitlocker hash: john --format=bitlocker-opencl --wordlist=dict.txt hash.txt
+
+https://openwall.info/wiki/john/OpenCL-BitLocker
+
+https://www.amazon.com/dp/1793458618
+
+
+--------------- CSRF cheat sheet
+
+https://trustfoundry.net/cross-site-request-forgery-cheat-sheet/

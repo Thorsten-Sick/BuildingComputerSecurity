@@ -42,7 +42,7 @@ changelog to make it simpler for you to find the new sections.
 %% Add coding (move stuff around)
 %% Extend password with wip, create training package for hp
 
-
+## May 2019
 
 ## April 2019
 

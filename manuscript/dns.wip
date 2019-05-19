@@ -1,6 +1,12 @@
 %% DNS hijacking: https://thehackernews.com/2018/04/android-dns-hijack-malware.html
 %% Research DANE/DNSSEC
 
+## DNSSEC
+
+https://www.ghacks.net/2019/04/29/check-if-your-browser-uses-secure-dns-dnssec-tls-1-3-and-encrypted-sni/
+
+https://www.cloudflare.com/ssl/encrypted-sni/
+
 ## DNS over HTTPS
 
 %% DNS over HTTPS: https://blog.nightly.mozilla.org/2018/06/01/improving-dns-privacy-in-firefox/

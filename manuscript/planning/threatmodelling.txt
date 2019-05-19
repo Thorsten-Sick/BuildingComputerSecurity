@@ -124,5 +124,5 @@ I would be happy to be able to brag about intentionally inventing it. But this
 This is not a replacement for a properly prepared security assessment.
 
 %% ## OWASP Embedded Application Security Project
-%% https://www.owasp.org/index.php/OWASP_Embedded_Application_Security
-%% https://michenriksen.com/blog/drawio-for-threat-modeling/
+%% [OWASP embedded application security][https://www.owasp.org/index.php/OWASP_Embedded_Application_Security]
+%% [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)
