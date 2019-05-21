@@ -59,4 +59,18 @@ DB updates.
 
 ### Bandit, static code analysis
 
-%% Todo: Tool "Bandit" https://github.com/openstack/bandit
+%% Todo: Tool [Bandit](https://github.com/PyCQA/bandit)
+
+
+%% TODO: Other tools, available on github as a service
+%% [Code quality for python](https://landscape.io)
+%% [Code coverage](https://codecov.io)
+%% [Code review](https://www.codefactor.io)
+%% [Travis build system](https://travis-ci.org/)
+
+
+%% TODO Tools, for Github or standalone
+%% [Tox - generate python environments](https://tox.readthedocs.io/en/latest/)
+%% [Pytest](https://docs.pytest.org/en/latest/)
+%% [Coverage](https://coverage.readthedocs.io/en/v4.5.x/)
+%% PEP8 and similar checks

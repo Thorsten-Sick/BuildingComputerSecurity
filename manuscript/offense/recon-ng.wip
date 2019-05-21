@@ -1,10 +1,34 @@
-https://bitbucket.org/LaNMaSteR53/recon-ng
+# Rcon-NG {#chapter-recon-ng}
 
+Recon-NG is a Web Reconnaissance framework. It can be used to investigate
+web pages, people, companies and their connections with each other.
 
+One strength is that it is using 3rd party info and does not necessarily
+directly connect to the target.
+
+That way the target will not know "what is coming".
+
+If you are a potential target, it is smart to test this tool and try to find
+all the traces your employees and you left online.
+
+PGP keys, mail addresses and LinkedIn profiles for example are good resources
+for targeted phishing.
+
+[recon-ng](https://bitbucket.org/LaNMaSteR53/recon-ng)
+
+It is written in python and create an own shell where you can execute it's
+modules to dig deeper and deeper into available data.
 
 usage:
 
-Show help
+Start it with
+
+{lang="bash"}
+    recon-ng
+
+After that you will have a special shell for reconnaissance.
+
+Show help:
 
 {lang="bash"}
     help
@@ -83,8 +107,21 @@ Show installed modules
         exploitation/injection/command_injector
         exploitation/injection/xpath_bruter
 
+There is a smart naming structure for the modules.
 
+*recon/profiles-repositories/github_repos*
+
+For example uses *profiles* that have already been collected to find *repositories*.
 
 Some cool modules:
 
 Find hosts in a domain: recon/domains-hosts/certificate_transparency
+
+
+
+The last command you will need is
+
+{lang="bash"}
+    exit
+
+To exit the special shell.

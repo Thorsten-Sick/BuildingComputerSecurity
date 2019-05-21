@@ -44,6 +44,9 @@ changelog to make it simpler for you to find the new sections.
 
 ## May 2019
 
+* Some cleanup
+* Extended "security process"
+
 ## April 2019
 
 * Added "Threat modelling"

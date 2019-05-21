@@ -101,7 +101,81 @@ internal processes will result in disaster.
 
 %% TODO: Diagram
 
-## Example: Mozilla
+### Report mail address
+
+Traditional you will need a *security@yourcompany.com* mail address. This is
+published on your homepage (and somewhere in your application) together with
+directions how to send vulnerability reports.
+
+There should always be someone monitoring the mail account and forwarding the
+mails to the proper product manager.
+The whole process from *receiving a mail* to *having a properly prioritised bug report*
+should be as fast as possible. Following the responsible disclosure standard you
+have 90 days to the point where you release a patch to all your customers.
+Losing days to holidays and no good internal communication causes trouble
+that could have been avoided.
+
+You will get bonus points for publishing a PGP key for that mail address on your homepage.
+So a reporter can send you a confidential mail.
+Of course: while PGP is not rocket science, many people will be unexperienced using it.
+This requires pgp-fire drills with your support people.
+
+### security.txt
+
+[security.txt](https://securitytxt.org) is a proposed standard how to define
+security policies.
+It is a defines a document helping security researches to get into contact to
+the person responsible to handle incidents.
+Basically it just collects all the information like mail-address, pgp key and
+urls into a well defined format.
+
+Nothing magic. But practical.
+
+### Code reviews
+
+Establish a culture of code reviews on check-ins and on other
+important way-points. Like releases or after finding bugs.
+
+Bugs cluster. So it is very likely that a type of bug can be found on similar
+places in the code.
+Other good metrics how to find code that needs to be reviewed can be found
+in the book "Software Design X-rays".
+# TODO: Add link to book
+
+This is a question of culture and habit. It can be hard to get the team to
+start using code reviews. Especially getting them done in a respectful way.
+But they are worth the investment. Especially when they are used as a was to
+learn and teach.
+
+### Communication/PR
+
+Establish a good relationship with your PR department. There will be an
+incident. And int that case you will want a short route to someone who can
+communicate the situation to the public, what the workaround is, how large
+the impact is, how you want to fix it, ...
+In case of an incident, the vulnerability was abused by an attacker. But it
+is important to move on and show skills in disaster management. This will get
+you some of the respect points back that you just lost.
+And for that you need to stay in close contact with your users.
+
+### Internal pen tests/code reviews
+
+After you have your processes for bug priorisation and vulnerability handling
+in place and all the hot areas of your code are bug-free you can hire external *pen testers*.
+This companies are specialists for finding vulnerabilities and bugs.
+If you did not fix well known issues before hiring them, you are wasting money.
+If you do not have processes for dealing with issues - you are wasting money.
+So please get your team and processes in perfect shape first.
+
+You hire this company. Define a scope (the most risky parts of your project)
+and they will review it. Bugs will be created and prioritised.
+
+Then you can start fixing them.
+
+%% TODO ### Bug bounties
+
+
+### Example: Mozilla
 
 Mozilla is the Open Source organisation behind Firefox and other projects.
 They have additional challenges: Their bug tracker is open. And they have
@@ -123,10 +197,3 @@ some things that you will very likely not have to manage.
     * give credits
 * Be ready to publish work-arounds should it be abused while still working on fix
 * Bug reporter can decide when to publish
-
-%% TODO: Internal pen tests
-%% TODO: Bug bounties
-%% TODO: internal code reviews
-%% TODO: security@mozilla and PGP key
-%% TODO: security.txt
-%% TODO: Communication / PR
