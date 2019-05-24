@@ -46,6 +46,7 @@ changelog to make it simpler for you to find the new sections.
 
 * Some cleanup
 * Extended "security process"
+* Added *python security*
 
 ## April 2019
 

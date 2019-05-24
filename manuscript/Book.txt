@@ -32,6 +32,7 @@ programming/assert.txt
 programming/compiling.txt
 programming/clang.txt
 programming/javascript_security.txt
+programming/python.txt
 testing/part_testing.txt
 testing/intro.txt
 testing/testing_compiling.txt
