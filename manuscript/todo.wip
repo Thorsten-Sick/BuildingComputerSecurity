@@ -161,3 +161,10 @@ https://www.amazon.com/dp/1793458618
 --------------- CSRF cheat sheet
 
 https://trustfoundry.net/cross-site-request-forgery-cheat-sheet/
+
+
+----------------
+Dynamic analysis of running processes:
+
+github.com/hasherezade/pe-sieve
+github.com/hasherezade/hollows_hunter

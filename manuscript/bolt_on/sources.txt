@@ -34,6 +34,10 @@ Move slowly. Test and verify before enabling the source and over-block.
 
 [Urlhaus](https://urlhaus.abuse.ch/)
 
+## Malicious SSL Certificates
+
+[SSL Blacklist](https://sslbl.abuse.ch)
+
 ## Phishing
 
 [Phishtank](https://www.phishtank.com/)
