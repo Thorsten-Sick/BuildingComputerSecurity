@@ -1,0 +1,13 @@
+# Cuckoo Sandbox
+
+%% TODO: Sort out with "antivirus-detection-behaviour-based"
+
+%% TODO https://github.com/David-Reguera-Garcia-Dreg/anticuckoo
+
+%% TODO: Pafish
+
+%% TODO: Simulate network using honeypots (printer, desktops, server)
+
+%% TODO: Polyswarm to get malware for detection improvements
+
+%% TODO: https://0x00sec.org/t/defeating-userland-hooks-ft-bitdefender/12496

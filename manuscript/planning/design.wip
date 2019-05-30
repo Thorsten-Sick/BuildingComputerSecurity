@@ -38,9 +38,15 @@ CCleaner breach
 
 https://thehackernews.com/2018/04/ccleaner-malware-attack.html
 https://www.wired.com/story/inside-the-unnerving-supply-chain-attack-that-corrupted-ccleaner
-https://twitter.com/infosecxual/status/986536172754219008?s=09
+https://thehackernews.com/2017/09/ccleaner-malware-hacking.html
 
-* Dev team re-used creds
+* company server compromised > 1 month
+* backdoored CCleaner
+* Piriform got hacked, Avast bought it
+
+* Attackers used TeamViewer to access developer PC
+* Developer's credentials lost in previous breach. They used them to access the PC
+
 * attacker installed malware on developer device
 * Pivoted using RDP protocol
 * dropped second stage malware
@@ -48,12 +54,14 @@ https://twitter.com/infosecxual/status/986536172754219008?s=09
 * Pivot to build server
 * Keylogger and RDP for network infiltration
 * backdooring CCleaner
+    * Distributed for more than a month
+    * Cisco Talos found it
+
 * 3 stage payload in there - 2.3 million users affected by stage 1
+    * second stage was targeted at 40 computers (MS, Google, Intel, Cisco, Akamai VMWare...)
+    * Very likely industrial espionage
 
-Also:
-
-* Network infected for 5 months
-* Major companies were targeted
+* Fix for those infected: re-image whole system
 
 
 Bittorrent client
