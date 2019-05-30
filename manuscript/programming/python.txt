@@ -1,5 +1,9 @@
 # Secure python programming {#chapter-python-security}
 
+C> By: Thorsten Sick
+
+C> For: Developers, Tester
+
 Python does not deal with pointers to memory
 (a constant source of issues in C-Languages) or is flexible/crazy like JavaScript.
 But even a simple and deterministic language without complex memory handling
@@ -46,11 +50,11 @@ Which has negative side effects:
 * Higher entry level for contributors
 * Maybe even new security issues
 
-Especially if your project is small and simple. The complexity of the tools
-should not exceed the complexity of the project itself.
+This complexity is expensive especially if your project is small and
+simple. The complexity of the tools should not exceed the complexity
+of the project itself.
 
 Choose wisely which combination of tools you want to use.
-
 
 %% Book: "The Hitchhiker's Guide to Python" for modern python processes
 
@@ -68,9 +72,6 @@ classic "dll hell" of Windows.
 You can use Virtualenv directly. Or use one of the simplification wrappers.
 *pipenv* is one of those.
 
-Modern ways to handle bigger python projects is to use a Virtualenv. And a
-simplification wrapper around both *pip* and *Virtualenv* is *pipenv*
-
 {lang="bash"}
     pipenv --three install requests
 
@@ -80,8 +81,8 @@ You can then export all installed requirements into a requirements file for
 your project using:
 
 {lang="bash"}
-    pip freeze > requirements.txt
-    pip install -r requirements.txt  # To install those later
+    pipenv install flask
+    pip freeze > requirements.txt  # Export your installed requirements to a file
 
 Switching to it is done by
 
@@ -121,7 +122,7 @@ environment and run:
 
 This will generate a code coverage of your unit tests.
 
-### Packaging
+### Packaging with setup.py
 
 Tox will require proper packaging. And setup.py is the traditional way to
 do packages.
@@ -133,8 +134,8 @@ For all the [details visit](https://setuptools.readthedocs.io/en/latest/).
 
 ### Tox
 
-We currently have the situation of python 2 to python 3 migration. Even in
-the future without python 2 there will be (smaller) differences between
+We currently (year 2019) have the situation of python 2 to python 3 migration.
+Even in the future without python 2 there will be (smaller) differences between
 python versions.
 
 Unit tests **must** run on all python versions supported by your software. *Tox*
@@ -146,7 +147,7 @@ Tox can be bootstrapped by running
     tox-quickstart
 
 It requires a *setup.py* file. See previous chapter. The result is a
-Tox.ini file describing all the potential combinations of tests, python
+*tox.ini* file describing all the potential combinations of tests, python
 versions and modules.
 
 Run it by calling
@@ -154,7 +155,8 @@ Run it by calling
 {language="bash"}
     tox
 
-And it will create Virtualenvs and test your project.
+And it will create Virtualenvs for all potential system combinations and
+test your project.
 
 ### Flake8 coding style verification
 
@@ -175,7 +177,8 @@ reviews on learning and real issues, not on coding style.
 
 The [safety](https://pyup.io/safety) tool is a dependency checker. It checks
 your project for vulnerable modules. This is essential for secure and robust
-code. Does not spark glamour.
+code. It just does not spark glamour - but gets the job done (which is more
+important).
 
 {lang="bash"}
     pipenv install safety
