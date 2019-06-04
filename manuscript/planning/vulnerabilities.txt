@@ -41,7 +41,7 @@ There are several pools where knowledge about vulnerabilities can be found:
 * Public knowledge, weaponized exploits: [Metasploit](https://www.metasploit.com)
 * Vendor internal - found internally or thanks to bug bounties [Google Chrome example](https://www.google.com/about/appsecurity/chrome-rewards/)
 * Public knowledge [CVE](https://cve.mitre.org), [Rapid7](https://www.rapid7.com/db/vulnerabilities), [VulDB](https://vuldb.com) or [NVD](https://nvd.nist.gov/vuln/)
-* The darker markets for exploits [Zerodium](https://zerodium.com) - they are not interested in patching vulnerabilities
+* The darker markets for exploits [Zerodium](https://zerodium.com/program.html) - they are not interested in patching vulnerabilities
 
 ## Building bugs and flaws
 
