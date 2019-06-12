@@ -44,6 +44,10 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 
 %% TODO: tool dnsrecon seems cool
 
+%% TODO: tool DNSDIAG: dnsdiag.org
+%% Contains: dnsping.py, dnstracereoute.py, dnseval.py
+%% Also checks ASNs
+
 %% TODO: Subdomain Takeover research.
 %% Short and wrong:
 %% A Domain has sub-domains. Those are running on a different hoster.
