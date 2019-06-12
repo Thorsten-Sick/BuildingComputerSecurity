@@ -8,19 +8,19 @@ Documentation: https://thug-honeyclient.readthedocs.io/en/latest/
 
 Thug uses lots of complicated 3rd party libraries. Some not properly maintained.
 PyV8. I am looking at you.
-PyV8 is a way to connect the V8 Javascript engine to Python. PyV8 is not
+PyV8 is a way to connect the V8 JavaScript engine to Python. PyV8 is not
 properly maintained at the moment, while all the other libraries change a lot.
-If you use a modern Linux as base, it will ne tricky to compile.
+If you use a modern Linux as base, it will be tricky to compile.
 
 The docker container fixes these dependency issues for now. It is based on
 an old Linux.
 
-Important: It depends on PYv8, which is a python wrapper around the V8 engine.
+Important: It depends on PyV8, which is a python wrapper around the V8 engine.
 It will compile properly on Ubuntu 16.04. But fails with a linker error
 (-lv8_snapshot not found) on Ubuntu 18.04 LTS and newer. The docker image is
 based on Ubuntu 16.04.
 
-Build it in the docker dir:
+Build it in the docker directory:
 
 {lang="bash"}
     docker build --tag=thug .
@@ -45,8 +45,8 @@ Now you are in the container and can run thug.
 
 Basic Thug commands:
 
-* -l for local analyis
-* -u <personality> switchre browser personality
+* -l for local analysis
+* -u <personality> switch browser personality
 * -A <Acrobat PDF reader version> simulates a vulnerable reader
 * -S <Shockwave Flash version> Simulate Shockwave Flash
 
