@@ -247,6 +247,7 @@ switch - you should do it anyway. Just do not get false sense of security.
 
 #### GCC
 
+%% TODO: More details here. Can bareley understand what -fstack-protector does
 
 See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) and [Debian hardening](https://wiki.debian.org/Hardening)
 
