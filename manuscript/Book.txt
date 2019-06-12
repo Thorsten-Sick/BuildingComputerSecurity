@@ -45,6 +45,7 @@ tools/part_tools.txt
 tools/intro.txt
 tools/ssh.txt
 tools/git_hardening.txt
+tools/thug.txt
 bolt_on/part_bolt_on.txt
 bolt_on/intro.txt
 bolt_on/antivirus_tests.txt

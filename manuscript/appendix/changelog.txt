@@ -42,6 +42,11 @@ changelog to make it simpler for you to find the new sections.
 %% Add coding (move stuff around)
 %% Extend password with wip, create training package for hp
 
+## June 2019
+
+* Chapter for thug added - a honey client to investigate malicious web pages
+
+
 ## May 2019
 
 * Some cleanup
