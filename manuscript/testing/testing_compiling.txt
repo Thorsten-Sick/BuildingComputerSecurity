@@ -122,7 +122,7 @@ One of the first things you should do is to compile for 64 bit. It enables more 
 
 SEH: Structured Exception Handlers can be abused by exploit code. Having them is dangerous. Except:
 
-* Safe SEH is used (can be vreified in PE, but is tricky)
+* Safe SEH is used (can be verified in PE, but is tricky)
 * PE is 64 bit compiled - then the SEHs are secured automatically
 * Or SEH is deactivated
 
