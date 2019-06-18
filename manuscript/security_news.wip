@@ -1,0 +1,33 @@
+# Security news sources
+
+## RSS readers
+
+%% TODO: Test, also check for good RSS sources
+%% Take only max. 3
+
+* Canto (Command line)
+* Akregator  (KDE)
+* Feed Reader (apt install feedreader)
+* Lifera
+* Quiet RSS
+* Makagiga
+
+
+## RSS Feeds
+
+%% Check if there are good sources and RSS is an option
+
+The hacker news: https://feeds.feedburner.com/TheHackersNews?format=xml
+
+
+## Other sources (blogs)
+
+%% TODO: Verify
+
+* CNET
+* ESET
+* Bitdefender
+* citizenlab.ca
+* bleepingcomputer.com
+* thehackernews.com
+* arstechnica.com

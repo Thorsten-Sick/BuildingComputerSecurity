@@ -124,3 +124,6 @@ https://www.darkreading.com/attacks-breaches/mirai-evolves-from-iot-devices-to-l
 
 
 %% TODO: Linux hardening guide https://github.com/trimstray/the-practical-linux-hardening-guide
+
+
+%% AVML (Aquire volatile memory for linux: https://github.com/microsoft/avml)

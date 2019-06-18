@@ -47,6 +47,11 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 %% TODO: tool DNSDIAG: dnsdiag.org
 %% Contains: dnsping.py, dnstracereoute.py, dnseval.py
 %% Also checks ASNs
+%% sudo dnsping.py -v -s <ip-of-dns> <target-url>  # check dns server
+%% sudo dnseval.py -f list.txt -c 5 <target-url>  # compare dns-es
+%% sudo dnstraceroute.px --expert --asn -C -s <dns-ip> <target-url>
+
+
 
 %% TODO: Subdomain Takeover research.
 %% Short and wrong:

@@ -1,3 +1,56 @@
 # Mitmproxy
 
-https://mitmproxy.org/
+[mitmproxy](https://mitmproxy.org/)
+
+## Local usage
+
+Set the proxy of the browser to the local host (where mitmproxy is running).
+
+{lang="bash"}
+    chromium-browser --proxy-server="localhost:8080"
+
+Or use the user interface.
+
+%% TODO: Check if local proxy settings only cover the web browser content or the updater as well
+
+## Usage with a forwarding PC
+
+To filter the full communication route it through a PC and run the mitmproxy there.
+
+%% TODO: Write https://docs.mitmproxy.org/stable/concepts-howmitmproxyworks/
+
+
+## Certificates
+
+Some applications use their own certificate store, some the OS store.
+
+The special domain contains the mitmproxy certificate: mitm.it
+
+%% TODO: Convert and install certificate on ubuntu
+
+{lang="bash"}
+    cd ~/.mitmproxy
+    openssl x509 -in mitmproxy-ca.pem -inform PEM -out mitmproxy-ca.rt
+    sudo mkdir /usr/share/ca-certificates/mitm
+    sudo cp mitmproxy-ca.crt /usr/share/ca-certificates/mitm
+    sudo dpkg-reconfigure ca-certificates
+
+%% TODO: Test this script
+
+## Scripting
+
+{lang="bash"}
+    mitmproxy --mode regular -s scriptname.py
+
+%% TODO: check what :console.view.eventlog does as command in running script. It is a "command" and can be viewed by pressing "c"
+
+
+%% TODO: Check bdfproxy binary backdooring feature
+
+## Further reading
+
+[Learning Python Web Penetration Testing](https://learning.oreilly.com/library/view/learning-python-web/9781789533972/)
+
+Has a bigger chapter covering mitmproxy. Including coding of plugins.
+
+[mitmproxy documentation](https://docs.mitmproxy.org/stable/)
