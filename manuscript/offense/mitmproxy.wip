@@ -72,10 +72,52 @@ directly to the router to get DHCP setup and loop the monitoring device in later
 
 Just to give you some workarounds.
 
+## Intercepting
+
+Press *i* to enter an interception filter. This can be a url-component.
+Wildcards are also accepted.
+
+Intercepted flows can be edited by pressing the *e* key in the detail view.
+You can then select which item to edit. The *Tab* key lets you switch.
+
+*a* will accept the selected flow - which makes it continue.
+*A* will accept all intercepted flows
+
+## Scripting
+
+{lang="bash"}
+    mitmproxy --mode regular -s scriptname.py
+
+* --mode sets the operation mode. The most intersting ones are *regular*, *transparent* and *socks5*
+* -s executes this script. You can use -s several times to run more than one script
+
+
+There are many examples to help you getting started writing scripts.
+The main API you will use is defined in *mitmproxy/mitmproxy/net/http*.
+Especially the files *request.py* and *response.py* are relevant.
+
+
+%% mitmproxy/mitmproxy/net/http
+%% flow.request.headers
+%% flow.request.pretty_host
+%% flow.request.scheme
+%% flow.request.port
+%% flow.request.host
+%% flow.request.url
+
+
+%% flow.response.headers
+%% flow.response.content
+%% flow.response.get_text()
+
+
 ## Certificates
 
-One way of solving the certificate issue is to sslstrip the encryption away.
-To do this use the sslstrip.py script:
+Many connections are TLS encrypted (=HTTPS). Finally. But if not done right
+one simple way of sniffing and manipulation is: The attacker just removes
+the encryption and hopes no one will notice the UI indicators in the browser.
+
+This can be done by using the sslstrip script:
 
 {lang="bash"}
     mitmproxy -s examples/complex/sslstrip.py
@@ -109,24 +151,6 @@ For Ubuntu you will have to install it OS-wide:
 It will still depend on the application if to use an own certificate or
 trust the OS store. Especially for browsers that can differ.
 
-## Intercepting
-
-Press *i* to enter an interception filter. This can be a url-component.
-Wildcards are also accepted.
-
-Intercepted flows can be edited by pressing the *e* key in the detail view.
-You can then select which item to edit. The *Tab* key lets you switch.
-
-*a* will accept the selected flow - which makes it continue.
-*A* will accept all intercepted flows
-
-## Scripting
-
-{lang="bash"}
-    mitmproxy --mode regular -s scriptname.py
-
-* --mode sets the operation mode. The most intersting ones are *regular*, *transparent* and *socks5*
-* -s executes this script
 
 
 %% TODO: Check bdfproxy binary backdooring feature
