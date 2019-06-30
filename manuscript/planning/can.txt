@@ -149,6 +149,8 @@ several variables based on a defined format. Or it can *pack* several variables
 into a binary representation based on a given format. One line will handle all
 your data processing problems.
 
+%% TODO: Also good for binary processing is https://kaitai.io/
+
 ## Fuzzing the CAN bus with python
 
 When I fuzz a device I will first find ways to detect if the device is behaving

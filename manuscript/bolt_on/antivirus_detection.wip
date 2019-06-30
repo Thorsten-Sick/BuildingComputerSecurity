@@ -5,7 +5,6 @@ Detection
 
 Detection and filtering are bolt-on-security. It can be added to any existing system.
 
-
 Pro
 ---
 
@@ -154,6 +153,8 @@ The tool to create your own file detection is Yara. A tutorial can be found here
 https://www.real0day.com/hacking-tutorials/yara
 
 Yara combines logic and (regex) patterns into a quite simple config language.
+
+%% TODO: Also good for binary processing is https://kaitai.io/
 
 
 SNORT
