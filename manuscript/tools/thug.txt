@@ -1,10 +1,14 @@
 # Thug {#chapter-thug}
 
-A active low-interactive honey client to check web pages for exploits.
+C> By: Thorsten Sick
 
-https://github.com/buffer/thug
+C> For: Malware Analysts
 
-Documentation: https://thug-honeyclient.readthedocs.io/en/latest/
+## Basics
+
+[Thug](https://github.com/buffer/thug) is a active low-interactive honey client to check web pages for exploits.
+
+You can find it's [Documentation online](https://thug-honeyclient.readthedocs.io/en/latest/)
 
 Thug uses lots of complicated 3rd party libraries. Some not properly maintained.
 PyV8. I am looking at you.
@@ -51,4 +55,4 @@ Basic Thug commands:
 * -S <Shockwave Flash version> Simulate Shockwave Flash
 
 
-%% TODO: hooking
+%% TODO: JS hooking
