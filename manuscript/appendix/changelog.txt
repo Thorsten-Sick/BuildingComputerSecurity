@@ -51,6 +51,10 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add viruslab.wip
 
 * Extended Glossary
+* Updated Thug
+* Extended Browser
+* Extended security process
+* Added mitmproxy
 
 ## June 2019
 

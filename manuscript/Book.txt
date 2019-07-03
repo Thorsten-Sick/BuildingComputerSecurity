@@ -59,6 +59,7 @@ offense/intro.txt
 offense/google_dork.txt
 offense/beef.txt
 offense/burp.txt
+offense/mitmproxy.txt
 appendix/part_appendix.txt
 appendix/externalreferences.txt
 appendix/glossary.txt

@@ -288,6 +288,12 @@ browsers. And those are very often the most central application in a person's li
 [Burp suite](#chapter-burp) is attacking the other way: Connecting to a web
 page and while crawling it enumerating the vulnerabilities.
 
+### Mitmproxy
+
+[Mitmproxy](#chapter-mitmproxy) is a python proxy to intercept especially
+http communication. Valuable for development of network communication, testing
+and pen testing.
+
 %% TODO Metasploit
 
 %% TODO Armitage, NMAP,
