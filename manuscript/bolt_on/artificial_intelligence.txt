@@ -1,0 +1,51 @@
+# Artificial intelligence {#chapter-artificial-intelligence}
+
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Analysts
+
+
+Artificial Intelligence became a hot topic in malware protection.
+It is the main selling point of "Next Generation" AV. But to some extend it is
+part of classical AV for more than 10 years now - I wrote some. I know.
+They are just not as good at selling it.
+
+Before we all jump onto the hype train together, let's be honest about
+requirements, strengths and weaknesses of AV with AI.
+
+## Requirements
+
+%% TODO: Write it
+* Data set
+    * > 10 000 samples (malicious and clean)
+    * Properly sorted
+    * Several samples of each family
+* Feature extractor: thousands of features if possible
+    * Unpacker
+    * Extracting generic features
+    * Extracting runtime behaviour (emulation or sandbox)
+
+
+
+## Strengths
+
+%% TODO: Write it
+
+* Very good with common malware
+
+## Weaknesses
+
+%% TODO: Write it
+
+* Not good with infected software (large parts of the software are a normal program)
+* Not good with targeted attacks
+* Not good with drastical changes in malware
+* Expect to re-train daily or weekly (depending on your tactics)
+
+## Further reading
+
+"Malware data science"
+
+
+%% TODO: Add [Keras Deep learning](https://keras.io)
+%% TODO: Add [scikit-learn](https://scikit-learn.org)

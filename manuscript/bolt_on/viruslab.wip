@@ -1,0 +1,33 @@
+# Viruslab
+
+The structure of a Viruslab
+
+## Source for IOCs
+
+* MISP
+
+## Source for Malware
+
+* Polyswarm ?
+
+## Central management
+
+* The Hive
+* Viper (viper.li)
+
+## Automating classification
+
+* Cortex
+
+## Multi Scanner
+
+* VirusTotal
+
+## Behaviour Analysis
+
+* Cuckoo Sandbox
+
+## Exporting Knowledge
+
+* MISP
+* Phishtank and similar
