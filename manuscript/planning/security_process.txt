@@ -46,7 +46,7 @@ Another thing to keep in mind: programming bugs are simpler to fix than design f
 Because if design has to be re-done, lots of code changes will follow.
 
 With responsible disclosure the reporter reports the vulnerability by mail
-and defines 90 days of non-disclosure. Assisting the company to fix it and
+and defines 90 days of non-disclosure[^90days]. Assisting the company to fix it and
 push the release. 90 days are a reasonable time for most companies to
 reproduce the bug, fix it, test it and release it.
 After the release the company writes a warning for the users to update - a blog
@@ -59,6 +59,9 @@ wish to fix the bug in the next version the sell.
 In the end: no one will get a fix. People are vulnerable and the vulnerability
 is abused. So 90 days. Then disclosure. This is fair and puts a (low) pressure
 on the company to step our of their development schedule and get things done.
+
+[^90days]: 90 days is the most friendly default variant. It can be less (30 days) or much less (0 days).
+Do not take this for granted. You could also just find vulnerability reports for your product at places like [Seclists](https://seclists.org/bugtraq/)
 
 This time frame can be shortened if malicious actors find it in parallel
 and abuse it ! Not the fault of the original security researcher. That
