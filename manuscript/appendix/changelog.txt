@@ -46,6 +46,11 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Thug better
 %% TODO: Full quality check "planning section"
+%% TODO: MITMproxy
+%% TODO: Add and finish "artificial_intelligence"
+%% TODO: Add viruslab.wip
+
+* Extended Glossary
 
 ## June 2019
 

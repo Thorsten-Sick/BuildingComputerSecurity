@@ -80,6 +80,8 @@
 
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
+**Kill chain**: Phases of an attack
+
 **Malware**: Malicious software
 
 **MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
@@ -103,6 +105,8 @@
 **SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
 
 %% TODO: Supercookies
+
+**Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reportrs on attacks and threat actors. Focus is on Advanced attacks
 
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
