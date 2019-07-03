@@ -1,6 +1,20 @@
-# Mitmproxy
+# Mitmproxy {#chapter-mitmproxy}
 
-[mitmproxy](https://mitmproxy.org/)
+C> By: Thorsten Sick
+
+C> For: Developers, Tester, Pen Tester
+
+## Basics
+
+[Mitmproxy](https://mitmproxy.org/) is a python command line tool to intercept
+http network traffic.
+It is even able to handle encrypted (TLS) situations by either doing a
+TLS-MITM (creating an own certificate) or using sslstrip.
+
+Depending on your control over the client and the verification by the
+client application one of those will fit our need.
+
+A very interesting feature is that you can write plugins in Python.
 
 ## Local usage
 
@@ -26,16 +40,10 @@ For example ":console.view.eventlog" shows the mitmproxy event log
 
 A list of commands can be shown by pressing *C*.
 
-%% TODO: Check if local proxy settings only cover the web browser content or the updater as well
-
 ## Usage with a forwarding PC (transparent proxy)
 
 To filter the full communication route it through a PC and run the mitmproxy there.
 
-%% TODO: Write https://docs.mitmproxy.org/stable/concepts-howmitmproxyworks/
-
-
-%% TODO: Get this script to work
 {lang="bash"}
     # Victim is on eth0
     # internet on eth1
@@ -157,8 +165,5 @@ trust the OS store. Especially for browsers that can differ.
 
 ## Further reading
 
-[Learning Python Web Penetration Testing](https://learning.oreilly.com/library/view/learning-python-web/9781789533972/)
-
-Has a bigger chapter covering mitmproxy. Including coding of plugins.
-
-[mitmproxy documentation](https://docs.mitmproxy.org/stable/)
+* [Learning Python Web Penetration Testing](https://learning.oreilly.com/library/view/learning-python-web/9781789533972/) It has a bigger chapter covering mitmproxy. Including coding of plugins.
+* [mitmproxy documentation](https://docs.mitmproxy.org/stable/)
