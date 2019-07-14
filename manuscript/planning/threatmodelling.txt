@@ -123,6 +123,17 @@ I would be happy to be able to brag about intentionally inventing it. But this
 
 This is not a replacement for a properly prepared security assessment.
 
+## MITRE attack checklist
+
+[MITRE](https://attack.mitre.org/) has a very good attack checklist. You can
+use it in combination with any of the methods above.
+
+The table there contains potential attacks (and links to details).
+The columns from left to right are stages of an attack.
+
+Put this table on a whiteboard and mark those boxes that are relevant for your project.
+
+
 %% ## OWASP Embedded Application Security Project
 %% [OWASP embedded application security][https://www.owasp.org/index.php/OWASP_Embedded_Application_Security]
 %% [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)
