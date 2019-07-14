@@ -1,6 +1,6 @@
 # Glossary {#chapter-glossary}
 
-%% TODO: StrongNaming Authenticode
+**StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 
 **0-day**: An exploit used by the attackers before the vulnerability is known to the defender. They are expensive on the black market. Typical malware does not need 0-days. As many users do not patch their systems.
 
@@ -36,6 +36,8 @@
 
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
 
+**CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the http header
+
 %% TODO: **CSRF & Cross site request forgery**
 
 **DEP**: Data execution prevention. Parts of the memory are marked as non-eecute (=NX)
@@ -44,7 +46,7 @@
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
 
-%% Dynamite phishing
+**Dynamite phishing**: Automated spear phishing. The malware silently collects mail communication to later fake new phishing mails for new victims
 
 **ELF**: Linux executable file format
 
@@ -70,6 +72,8 @@
 
 %% TODO: **EFF**:
 
+**Evercookies**: Are snippets stored in the browser like cookies. Storage is Javascript Localstorage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
+
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO oPeration codes to the beginning.
@@ -81,6 +85,8 @@
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
 **Kill chain**: Phases of an attack
+
+**Living off the land**: A tactics where the attacker uses pre-installed software for the attack. This reduces detectable malware on the system
 
 **Malware**: Malicious software
 
@@ -98,13 +104,15 @@
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
-%% TODO: Phishing and Spear Phishing, Waterhole attacks
+**Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
+
+**SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
+
+**Spear Phishing**: Targeted phishing. LEarn about the target first to create better social engineering attack
 
 **SQLI / SQL Injection**: Sql *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
 
 **SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
-
-%% TODO: Supercookies
 
 **Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reportrs on attacks and threat actors. Focus is on Advanced attacks
 
@@ -113,6 +121,8 @@
 %% TODO: **XSS / Cross Site Scripting**:
 
 **Vulnerability**: A bug or a flaw that has security implications
+
+**Waterhole attack**: Targeted phishing attack using a hacked/manufactored homepage the victim is known to visit and trust
 
 **Weaponizing**: Making an exploit easy and reliable to use.
 
