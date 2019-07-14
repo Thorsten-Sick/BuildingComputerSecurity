@@ -5,3 +5,12 @@
 * [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
 
 Code coverage: https://github.com/gaasedelen/lighthouse
+
+
+## Python capstone
+
+Capstone engine supports several languages. But I saw it used in
+many python security projects.
+
+
+https://www.capstone-engine.org
