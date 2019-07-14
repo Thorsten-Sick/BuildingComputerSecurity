@@ -24,7 +24,9 @@ requirements, strengths and weaknesses of AV with AI.
     * Unpacker
     * Extracting generic features
     * Extracting runtime behaviour (emulation or sandbox)
-
+* Training: Malware is changing fast and trying to avoid detection. Expect daily/weekly training to compensate
+* Very large training sets and weekly training's will require lots of processing power
+* Also: Efficient databases will be required. SQLite is not enough
 
 
 ## Strengths
@@ -32,6 +34,8 @@ requirements, strengths and weaknesses of AV with AI.
 %% TODO: Write it
 
 * Very good with common malware
+* Can support the people writing generic detection
+
 
 ## Weaknesses
 
@@ -39,13 +43,37 @@ requirements, strengths and weaknesses of AV with AI.
 
 * Not good with infected software (large parts of the software are a normal program)
 * Not good with targeted attacks
-* Not good with drastical changes in malware
+* Not good with drastic changes in malware
 * Expect to re-train daily or weekly (depending on your tactics)
+* Training data must be re-generated if the feature extractor changes (update in sandbox, ...)
+* Resulting database can be very big: Maybe you can not deploy that to clients
+
+
+## Sorting the training data
+
+It is very important to have a well sorted training set. To get there it could
+be smart to first clean it. You can use outlier detection (k-means algorithm)
+to identify the samples where the nearest neighbours are of a different class.
+
+Analysts then have to verify the classification.
+
+## Smart reduction of training data
+
+To improve training performance you should experiment with:
+
+* Training only the detection of single families vs. clean samples to reduce the AI database.
+    * The generate different specialised AIs for that
+* Only train the malware of the last year. Not older
+
+If these ideas are reasonable depends on your use case. But that can help you
+to handle your problem. Because a proper AI will needs large training sets.
+And being able to manage that complexity is one of the main challenges.
 
 ## Further reading
 
-"Malware data science"
+The book "Malware data science" is the perfect book to dive deeper into AI
+for defensive security.
 
-
-%% TODO: Add [Keras Deep learning](https://keras.io)
-%% TODO: Add [scikit-learn](https://scikit-learn.org)
+The two basic projects are [scikit-learn](https://scikit-learn.org) for generic
+AI and data science (together with *pandas* and some more libraries). And for
+Deep Learning [Keras](https://keras.io).

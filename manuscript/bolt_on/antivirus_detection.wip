@@ -1,30 +1,39 @@
-Detection
-#########
+# Detection
 
-.. State: 30 % Detection
+C> By: Thorsten Sick
+
+C> For: Architects, Manager, Malware Analysts
+
+%% State: 30 % Detection
 
 Detection and filtering are bolt-on-security. It can be added to any existing system.
 
-Pro
----
+To avoid confusion, I will use three terms in this book and define them here:
 
-* Simple to add on top
+**Detection** is using an existing database, matching that against network packets, files or behaviour on the client system and preventing
+detected items from causing harm.
+
+**Classification** is used to create such a database: Unknown objects are classified either manually or by some tools into at least the categories good/bad. Maybe we can also identify the families or the type of malware (trojan, worm).
+
+**Analysis** Is an in depth analysis of a malware to learn about the used technology, trick and origin. An analysis is important to improve classification technology. It also produces interesting blog posts. Quite often an analysis will eat days and weeks of a specialist's time.
+
+## Pro
+
+* Simple to add on top of an existing system
 * With bought signatures: Can filter the outer perimeter for common attacks
 * Own signatures in the innermost layer identify when other security features did break
-* Fast response (within minutes) - can cover the gap untill a patch is rolled out
+* Fast response (within minutes) - can cover the gap until a patch is rolled out
 
-Con
----
+## Con
 
 * Fast Flux beats IP filtering
 * It is a statistics game. Do not expect perfect security
 * Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
 * If file processing is not sandboxed: Not good
 * If file processing is done in kernel: Double plus not good
-* "Clean" is not "Clean". It is "did not find anything"
+* "Clean" detection should not be read as "Clean". It is "did not find anything"
 
-Tips
-----
+## Tips
 
 * Double Tap: Use two different technologies to detect one malware
 * Malware behaviour does not change often. Behaviour detection can stay stable for months
@@ -46,8 +55,7 @@ Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second sca
 1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technolgies. Or the same samples
 not detected by number one will also not be detected by number 2....
 
-Choosing technology
--------------------
+## Choosing technology
 
 You can pick any AV of the top 5 in the tests. Basically you will pick the one that has
 
@@ -63,8 +71,7 @@ It could also be important to check for privacy commitment. F-Secure has some de
 
 https://www.f-secure.com/en/web/legal/principles
 
-Numbers
-~~~~~~~
+### Numbers
 
 In tests yous should aim for a detection rating north of 95 %, a False Positive Rating south of 0.05 %.
 For False Positives (detection on innocent files): If you have a well maintained
@@ -72,28 +79,23 @@ system with only basic and boring files a higher FP rating will also work for yo
 If you have a heterogenious landscape, many computers, fancy extraordinard tools:
 Aim for a lower FP rating.
 
-Test institutions
-~~~~~~~~~~~~~~~~~
+### Test institutions
 
 Those insitutions are the source for magazine articles.
 
-Virus Bulletin:
-https://www.virusbulletin.com/testing/vb100/
+[Virus Bulletin](https://www.virusbulletin.com/testing/vb100/)
 
 Main challenge is stability and low FP rate here.
 
-Av-test:
-https://www.av-test.org/de/antivirus/
+[Av-test](https://www.av-test.org/de/antivirus/)
 
 Also includes usability and speed
 
-Av-comparatives:
-https://www.av-comparatives.org/dynamic-tests/
+[Av-comparatives](https://www.av-comparatives.org/dynamic-tests/)
 
 Has monthly real-world detection tests
 
-Test methods
-~~~~~~~~~~~~
+### Test methods
 
 There are two major ways of testing security products:
 
@@ -121,16 +123,16 @@ As for which test to trust: Go for Real-world tests. As soon as you have the
 product test your specific entry points for malware with Eicar test file or
 simulated malicious URLs. If the products properly cover those.
 
-DIY detection
--------------
+## DIY detection
 
 There are different tools to detect malware. Normally you do have some internal
 knowledge covering which apps are malicious and which benign. For more on
 that see the "DIY classification" chapter. Detection is how you get this knowledge
 from your lab to the computer you want to protect.
 
-Hashes
-~~~~~~
+%% TODO: write DIY classification chapter
+
+### Hashes
 
 The simplest and most reliable way is file hashes. The good thing: If your
 classification is correct they will not add FPs on their own. The bad news:
@@ -145,8 +147,7 @@ Use Sha256 instead. If you feel fancy look at SSDeep
     even possible to have accidential MD5 collissions. Result will be two totally
     different files with the same MD5. And this will fuck up your DB if it is MD5 based.
 
-Yara
-~~~~
+### Yara
 
 The tool to create your own file detection is Yara. A tutorial can be found here:
 
@@ -157,22 +158,32 @@ Yara combines logic and (regex) patterns into a quite simple config language.
 %% TODO: Also good for binary processing is https://kaitai.io/
 
 
-SNORT
-~~~~~
+### SNORT
 
-To detect network packages
-
-https://www.snort.org/
+[SNORT](https://www.snort.org/) is a tool detect network packages
 
 
-DIY classification
-------------------
+
+
+## DIY classification
 
 You have an unknown sample and want to learn if it is malicious. This is the step
-you normally do _before_ you do detection.
+you normally do *before* you do detection.
 
-.. TODO Cuckoo / malwr.com
-.. TODO virustotal
+**VirusTotal**: One way to do classification is to run it through a multiscanner like [VirusTotal](https://www.virustotal.com).
+You will benefit from the classification work of several virus labs. Negative side effects:
+
+* Your sample will be public
+* You can never ever be the first to detect a new sample
+
+**Cuckoo Sandbox**: An analysis sandbox. Hard to set up on your own system. But with some luck [malwr.com](https://malwr.com) is up and running. Negative side effects are:
+
+* You will share your sample
+* Sandboxes are slow (some minute per sample)
+* Some malware types can not be handled by Sandboxes
+
+
+
 
 %% TODO: Pareto principle
 %% TODO: Statistics anomaly when combining different techs

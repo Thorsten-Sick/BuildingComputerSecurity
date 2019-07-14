@@ -18,9 +18,7 @@ Move slowly. Test and verify before enabling the source and over-block.
 
 ## Exploit kits
 
-
 [Dontneedcoffee](https://malware.dontneedcoffee.com/blog/)
-
 
 ## C&C
 
