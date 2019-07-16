@@ -1,0 +1,105 @@
+# Kill chain
+
+## Basics
+
+A kill chain is the single steps of an attack. Some of those steps are optional, specific for a tpe of target, ...
+But quite often you can see those steps in a real attack.
+
+One more difference is caused by the type of the attack.
+**Opportunistic attacks** just target anyone with a specific vulnerability. This affects the first phase: Intelligence. Which is not required.
+The "looting" phase is also affected: A bunch of innocents is infected. Now the attacker needs a convenient way to enumerate the possible loot (from CPU power to ransomware targets) and make money as efficient as possible.
+
+**Targeted attacks** Do have an Intelligence phase before the attack. Also: As soon as the attacker invaded the systems they are more likely to want to get persistence and target specific vulnerable files/servers/... they knew of beforehand.
+
+[MITRE ATT&CK](https://attack.mitre.org) lists those attack chain steps plus the common techniques used there.
+
+The important takeaway: As a defender you can break this attack chain at any stage.
+
+* The sooner the better
+* Also block alternative ways the attacker could have to achieve his goals
+
+The rough overview looks like:
+
+## OSINT (Open Source Intelligence)
+
+Mail addresses, internal company structure, typical server names, hobbies...
+Knowing these things can improve the chance that a phishing link is clicked by the victim.
+
+This is used for targeted attacks. There are tools to collect this data from the internet.
+They correlate accounts and names on
+
+* Code sharing platforms
+* Facebook
+* Linked in
+...
+
+There is a malware named EMOTET that currently is somewhere in between a
+targeted and an opportunistic attack.
+Silently infecting systems and collecting data for the next OSINT supported targted attack.
+
+## Initial access
+
+0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
+Many systems still have fixed vulnerabilities in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain.
+This is where phishing, social engineering and OSINT are relevant.
+
+## Persistence
+
+Most malware wants to survive a reboot of the system. So adding the own file to *autostart* or similar services is an important step.
+
+Persistence leaves traces and is kind of obvious if the defender knows where to look for it.
+
+So some malware can deal without persistence:
+
+* Hit and run: Steal the data and do not care about re-infecting the system afterwards
+* Re-infect: Internet connected systems that have a vulnerability could just be re-infected after reboot
+
+## Privilege Escalation
+
+After the first attack, many attackers only have the user's privileges.
+Not Admin/Root/System. So another exploit is used to escalate privileges.
+The other exploit does not have to be in the same application that has been
+the infection vector.
+
+So even if the application you wrote did not offer the initial access, it can
+still be a part of the kill chain.
+
+When coding: Drop privileges and wrap your program into a restricting sandbox to
+protect it from being a part of the kill chain.
+
+
+## Defense Evasion
+
+There are different defensive technologies. Logging, Anti Virus, Behaviour analysis...
+The attacker will want to not trigger any alarms. So the attacker uses tricks to hide tools, actions and traffic from any observer.
+
+## Lateral Movement
+
+Lateral movement is using the system infected initially to move to another system with more interesting data.
+A smart defensive strategy is to split the whole system into components with different permissions, data and outward facing attack vectors.
+
+For example you have one PC where the HR person opens PDFs from unknown 3rd parties (their job !) and another system with the backup of all the not-yet patented inventions.
+Separating those systems is the task of the defender. The attacker will want to move laterally from the office PC ot the backup systems.
+
+## Collection
+
+Malware will collect data, system information and similar. Especially the *Pony* component of common malware will target browser password databases and the passwords stored by FTP clients.
+That way the malware author can later on infect the web servers and new victims visiting those infected web sites.
+
+## Command and Control
+
+Especially malware attacks that are opportunistic need a remote control. This is an external server that allows a botnet overview and the potential to remote control all bots, groups of bots or single bots.
+New malware components can be downloaded to the victims, data exfiltrated, ransomware encryption started, or cryptominers executed.
+
+These C&C servers need to be connected from the clients. Which results in:
+
+* New IOC for network monitors
+* Vulnerable central points in the network that can be taken down by authorities
+    * Or blocked by network admins
+
+## Exfiltration
+
+After collecting data it needs to be exfiltrated to a server the attacker controls.
+Data can be a few bytes (passwords extracted from browser dbs) or gigabytes.
+No matter which one: There is a connection to a strange server. This can be detected or blocked.
+Of course the attackers can tunnel this data to innocent protocols. And they already do that.
