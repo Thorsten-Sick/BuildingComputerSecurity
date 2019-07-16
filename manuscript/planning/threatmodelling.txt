@@ -133,6 +133,9 @@ The columns from left to right are stages of an attack.
 
 Put this table on a whiteboard and mark those boxes that are relevant for your project.
 
+%% TODO: Programming interface to it: https://swimlane.com/blog/swimlane-research-team-open-sources-pyattack/
+%% And: https://github.com/swimlane/pyattck
+%% And: https://pyattck.readthedocs.io/en/latest/
 
 %% ## OWASP Embedded Application Security Project
 %% [OWASP embedded application security][https://www.owasp.org/index.php/OWASP_Embedded_Application_Security]
