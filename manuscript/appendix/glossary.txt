@@ -28,6 +28,8 @@
 
 **BLE Profile**: Profiles combine several services. They standardize specific device classes
 
+**Bot**: An infected machine that can be remote controlled by the attacker
+
 **Botnet**: Infected machines centrally controlled by the attacker using a C&C
 
 **Bug**: Error made in the programming phase. Not all bugs are vulnerabilities
@@ -95,6 +97,8 @@
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
 **RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
+
+**Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controlls.
 
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 

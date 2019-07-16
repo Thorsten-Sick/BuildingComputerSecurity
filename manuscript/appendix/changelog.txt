@@ -53,6 +53,10 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add viruslab.wip
 %% TODO: Add antivirus_detection.wip
 
+%% TODO: Delete king-phisher, conferences,
+
+%% TODO: Add kill chain to offense as chapter.
+
 * Extended Glossary
 * Updated Thug
 * Extended Browser
