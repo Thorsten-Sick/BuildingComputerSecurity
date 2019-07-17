@@ -11,7 +11,7 @@ That way the target will not know "what is coming".
 If you are a potential target, it is smart to test this tool and try to find
 all the traces your employees and you left online.
 
-PGP keys, mail addresses and LinkedIn profiles for example are good resources
+PGP keys, mail addresses and Linked In profiles for example are good resources
 for targeted phishing.
 
 [recon-ng](https://bitbucket.org/LaNMaSteR53/recon-ng)
@@ -48,7 +48,7 @@ To load a module and show it's info, call
 
     [recon-ng][default][brute_hosts] > show info
 
-          Name: DNS Hostname Brute Forcer
+          Name: DNS Host name Brute Forcer
           Path: modules/recon/domains-hosts/brute_hosts.py
         Author: Tim Tomes (@LaNMaSteR53)
 
@@ -59,7 +59,7 @@ To load a module and show it's info, call
       Name      Current Value                           Required  Description
       --------  -------------                           --------  -----------
       SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
-      WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to hostname wordlist
+      WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to host name word list
 
     Source Options:
       default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
@@ -76,7 +76,7 @@ To show the options of a module, call
     Name      Current Value                           Required  Description
     --------  -------------                           --------  -----------
     SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
-    WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to hostname wordlist
+    WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to host name word list
 
 
 

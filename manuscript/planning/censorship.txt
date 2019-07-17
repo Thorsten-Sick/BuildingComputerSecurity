@@ -185,7 +185,16 @@ A large collection of alternative to centralised and surveilled services can
 be found on [prism-break.org](https://prism-break.org/en/)
 
 %% Demos organisieren
+
+
 %% GnuNet
+%% # Check out: GNUnet https://media.ccc.de/v/DS2018-9337-state_of_the_gnunet#t=18
+
+
+%% Zeronet
+%% https://zeronet.io/
+
+%% https://media.ccc.de/v/cosin-20-zeronet_io_das_p2p-web
 
 
 %% TODO: [Wayback machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak?hl=en-US)

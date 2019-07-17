@@ -7,7 +7,7 @@ C> For: Developers, Tester, Pen Tester
 ## Basics
 
 [Mitmproxy](https://mitmproxy.org/) is a python command line tool to intercept
-http network traffic.
+HTTP network traffic.
 It is even able to handle encrypted (TLS) situations by either doing a
 TLS-MITM (creating an own certificate) or using sslstrip.
 
@@ -31,7 +31,7 @@ Set the proxy of the browser to the local host (where mitmproxy is running).
 
 Or use the user interface of the browser to set the proxy.
 
-The mitmproxy will now display the http connections without blocking
+The mitmproxy will now display the HTTP connections without blocking
 or modifying them.
 
 There is a command line interface that can be started by entering ":".
@@ -73,7 +73,7 @@ To filter the full communication route it through a PC and run the mitmproxy the
 
     mitmproxy --mode transparent --showhost -s examples/complex/sslstrip.py
 
-* mitmproxy is using sslstrip here. It is optional but many connections are ssl encrypted.
+* mitmproxy is using sslstrip here. It is optional but many connections are SSL encrypted.
 
 This script is not perfect. For example I had to connect the victim PC first
 directly to the router to get DHCP setup and loop the monitoring device in later.
@@ -130,7 +130,7 @@ This can be done by using the sslstrip script:
 {lang="bash"}
     mitmproxy -s examples/complex/sslstrip.py
 
-Keep in mind: Some sites are hardcoded *hsts* in the browsers. This is
+Keep in mind: Some sites are hard coded *HSTS* in the browsers. This is
 especially true for google sites.
 
 You can get some improvement by sabotaging the security of the browser with

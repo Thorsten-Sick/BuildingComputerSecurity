@@ -20,7 +20,7 @@ https://www.cs.vu.nl/~herbertb/download/papers/throwhammer_atc18.pdf
 %% TODO: exec and eval are evil
 
 
-## Bug crowd plattformen
+## Bug crowd platforms
 
 https://www.heise.de/newsticker/meldung/Crowd-Plattformen-fuer-Suche-nach-Software-Luecken-wollen-mehr-Rechtssicherheit-4165084.html
 
@@ -55,7 +55,6 @@ https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebi
 https://github.com/google/nogotofail
 
 
-# Check out: GNUNet https://media.ccc.de/v/DS2018-9337-state_of_the_gnunet#t=18
 
 
 
@@ -84,7 +83,7 @@ https://github.com/fox-it/dissect.cstruct
 
 
 # https://twitter.com/TinkerSec/status/1053732641374199809?s=09
-"There is “Deterrence” and there is “Protection”. Deterrence seeks to stop Opportunistic Attacks by altering the *perceived* hardness of a target. Protection seeks to stop Targetted Attacks by offering actual hardness. This may stop opportunistic attacks, but not targetted.
+"There is “Deterrence” and there is “Protection”. Deterrence seeks to stop Opportunistic Attacks by altering the *perceived* hardness of a target. Protection seeks to stop Targetted Attacks by offering actual hardness. This may stop opportunistic attacks, but not targeted.
 "
 
 Red teaming:
@@ -108,6 +107,12 @@ https://github.com/bbc/bbplot
 https://bbc.github.io/rcookbook/
 
 Python seaborn uses matplotlib for statistics
+
+Mermaidjs.github.io  https://mermaidjs.github.io/
+http://plantuml.com/
+https://casual-effects.com/markdeep/
+Railroad diagrams: https://bottlecaps.de/rr/ui
+
 
 -----------------
 Print on demand:

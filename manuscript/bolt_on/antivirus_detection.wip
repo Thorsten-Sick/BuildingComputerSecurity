@@ -38,21 +38,21 @@ detected items from causing harm.
 * Double Tap: Use two different technologies to detect one malware
 * Malware behaviour does not change often. Behaviour detection can stay stable for months
 * Malware hash chances constantly. Only do this if fully automated
-* Detection patterns will be ok for minutes or hours
-* Structural generics will be ok for hours
-* Bad guys have their own "VirusTotal" malware scanner to create their malware FUD (FullyUnDetected)
-** Malware authors even offer support contracts for updates should the malwar be detected
+* Detection patterns will be OK for minutes or hours
+* Structural generics will be OK for hours
+* Bad guys have their own "VirusTotal" malware scanner to create their malware FUD (Fully Un Detected)
+** Malware authors even offer support contracts for updates should the malware be detected
 ** This update-test-release cycle is at least semi automatic
 ** Detection technology that is not accessible for the bad guys lasts a lot longer (smaller "AVs" benefit - create you own in house AV ?)
 * Do not send feedback to the attack ("Your mail has been blocked"). Maybe postpone feedback for one day. That way the attacker can not tune the attack to your defense
 
 There is a statistics trick how to boost the combination of different detection technologies.
-To get a good combination combine several _different_ technolgies together.
+To get a good combination combine several _different_ technologies together.
 
 I will be using simple numbers to make a point now:
 Lets assume we have three different scanners each having 90% detection (a bad detection quality).
 Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second scanner.
-1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technolgies. Or the same samples
+1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technologies. Or the same samples
 not detected by number one will also not be detected by number 2....
 
 ## Choosing technology
@@ -63,7 +63,7 @@ You can pick any AV of the top 5 in the tests. Basically you will pick the one t
 * Stability
 * Good self protection (security)
 * Simple UI
-* Maybe remote managability (for companies)
+* Maybe remote manageability (for companies)
 * Supports your mail system, web proxy, ....
 * Check for False Positives as well in those tests
 
@@ -76,12 +76,12 @@ https://www.f-secure.com/en/web/legal/principles
 In tests yous should aim for a detection rating north of 95 %, a False Positive Rating south of 0.05 %.
 For False Positives (detection on innocent files): If you have a well maintained
 system with only basic and boring files a higher FP rating will also work for you.
-If you have a heterogenious landscape, many computers, fancy extraordinard tools:
+If you have a heterogeneous landscape, many computers, fancy extraordinary tools:
 Aim for a lower FP rating.
 
 ### Test institutions
 
-Those insitutions are the source for magazine articles.
+Those institutions are the source for magazine articles.
 
 [Virus Bulletin](https://www.virusbulletin.com/testing/vb100/)
 
@@ -144,7 +144,7 @@ Important: CRC32, MD5 and SHA1 are dead.
 Use Sha256 instead. If you feel fancy look at SSDeep
 
     Optional background: With the large number of files currently released it is
-    even possible to have accidential MD5 collissions. Result will be two totally
+    even possible to have accidental MD5 collisions. Result will be two totally
     different files with the same MD5. And this will fuck up your DB if it is MD5 based.
 
 ### Yara
@@ -170,7 +170,7 @@ Yara combines logic and (regex) patterns into a quite simple config language.
 You have an unknown sample and want to learn if it is malicious. This is the step
 you normally do *before* you do detection.
 
-**VirusTotal**: One way to do classification is to run it through a multiscanner like [VirusTotal](https://www.virustotal.com).
+**VirusTotal**: One way to do classification is to run it through a multi scanner like [VirusTotal](https://www.virustotal.com).
 You will benefit from the classification work of several virus labs. Negative side effects:
 
 * Your sample will be public

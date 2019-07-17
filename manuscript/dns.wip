@@ -61,3 +61,6 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 %% Discontinuing the services on the 2nd hoster but keeping the CNAME intact allows
 %% Anyone on the 2nd hoster to take the subdomain and host the own stuff.
 %% Can result in cookie theft (depends on cookie config) and impersonating.
+
+
+%% http://dnsviz.net/

@@ -2,7 +2,7 @@
 
 ## Basics
 
-A kill chain is the single steps of an attack. Some of those steps are optional, specific for a tpe of target, ...
+A kill chain is the single steps of an attack. Some of those steps are optional, specific for a type of target, ...
 But quite often you can see those steps in a real attack.
 
 One more difference is caused by the type of the attack.
@@ -35,7 +35,7 @@ They correlate accounts and names on
 
 There is a malware named EMOTET that currently is somewhere in between a
 targeted and an opportunistic attack.
-Silently infecting systems and collecting data for the next OSINT supported targted attack.
+Silently infecting systems and collecting data for the next OSINT supported targeted attack.
 
 ## Initial access
 
@@ -67,6 +67,16 @@ still be a part of the kill chain.
 When coding: Drop privileges and wrap your program into a restricting sandbox to
 protect it from being a part of the kill chain.
 
+## Sandbox Escape
+
+Sandboxes are compartments on a system with restricted permissions and restricted access to the "outside" world.
+sandboxes can be virtual machines, container, compartments in an application like Chrome (where tabs, extensions, ... are own boxes) or even
+things built as sandboxes like AppArmor.
+
+In this list, only the in-app-compartments and intentional sandboxes are built with a security goal. For container and virtual machines additional security is more a side effect.
+
+If the attacker gained control over a part of the system that is inside one of those sandboxes the next goal is to influence the system outside of it.
+And this is the so called "sandbox escape".
 
 ## Defense Evasion
 
@@ -79,7 +89,7 @@ Lateral movement is using the system infected initially to move to another syste
 A smart defensive strategy is to split the whole system into components with different permissions, data and outward facing attack vectors.
 
 For example you have one PC where the HR person opens PDFs from unknown 3rd parties (their job !) and another system with the backup of all the not-yet patented inventions.
-Separating those systems is the task of the defender. The attacker will want to move laterally from the office PC ot the backup systems.
+Separating those systems is the task of the defender. The attacker will want to move laterally from the office PC to the backup systems.
 
 ## Collection
 
@@ -100,6 +110,6 @@ These C&C servers need to be connected from the clients. Which results in:
 ## Exfiltration
 
 After collecting data it needs to be exfiltrated to a server the attacker controls.
-Data can be a few bytes (passwords extracted from browser dbs) or gigabytes.
+Data can be a few bytes (passwords extracted from browser databases) or gigabytes.
 No matter which one: There is a connection to a strange server. This can be detected or blocked.
 Of course the attackers can tunnel this data to innocent protocols. And they already do that.

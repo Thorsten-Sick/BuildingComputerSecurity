@@ -80,7 +80,7 @@ changelog to make it simpler for you to find the new sections.
 * Added "Threat modelling"
 * Extended Glossary
 * Added "git hardening"
-* Added "javascript security"
+* Added "JavaScript security"
 
 ## March 2019
 
@@ -99,7 +99,7 @@ changelog to make it simpler for you to find the new sections.
 ## February 2019
 
 * Cleaning up the author page. Adding Mastodon and Twitter
-* Extended **Attacks's goals**
+* Extended **Attacker's goals**
 * Extended **know your enemies**
 * Small extensions to **principles**
 * Extending *TLS*
@@ -161,11 +161,11 @@ changelog to make it simpler for you to find the new sections.
 * Enhanced *antivirus testing*
 * Added *antivirus testing* to the sample
 * unhooked external references
-* Kehrwoche: ASpell for all text parts in "sample"
+* Kehrwoche: Aspell for all text parts in "sample"
 
 ## October 2018
 
-* Added *cryptoalgorithms*
+* Added *crypto algorithms*
 * Re-worked *Asserts*
     * It got an own chapter
     * Python added
@@ -174,7 +174,7 @@ changelog to make it simpler for you to find the new sections.
 * Added *testing* chapter. Especially for unit testing and bug bounties (basics)
 * TLS got a diagram and minor improvements
 * *Clang* chapter added
-* Added *cryptoalgorithms* to Sample
+* Added *crypto algorithms* to Sample
 
 
 

@@ -120,8 +120,8 @@ that could have been avoided.
 
 You will get bonus points for publishing a PGP key for that mail address on your homepage.
 So a reporter can send you a confidential mail.
-Of course: while PGP is not rocket science, many people will be unexperienced using it.
-This requires pgp-fire drills with your support people.
+Of course: while PGP is not rocket science, many people will be inexperienced using it.
+This requires PGP-fire drills with your support people.
 
 ### security.txt
 
@@ -129,7 +129,7 @@ This requires pgp-fire drills with your support people.
 security policies.
 It is a defines a document helping security researches to get into contact to
 the person responsible to handle incidents.
-Basically it just collects all the information like mail-address, pgp key and
+Basically it just collects all the information like mail-address, PGP key and
 urls into a well defined format.
 
 Nothing magic. But practical.
@@ -163,7 +163,7 @@ And for that you need to stay in close contact with your users.
 
 ### Internal pen tests/code reviews
 
-After you have your processes for bug priorisation and vulnerability handling
+After you have your processes for bug prioritisation and vulnerability handling
 in place and all the hot areas of your code are bug-free you can hire external *pen testers*.
 This companies are specialists for finding vulnerabilities and bugs.
 If you did not fix well known issues before hiring them, you are wasting money.

@@ -73,7 +73,7 @@ Cansniffer is an enhanced logger.
 
 **canplayer**
 
-Replays a can logfile onto the bus. It also offers to use stdin. And as you
+Replays a can log file onto the bus. It also offers to use stdin. And as you
 can modify the log file with a text editor before sending it is a simple way to
 simulate specific scenarios and run them from command line.
 
@@ -82,7 +82,7 @@ simulate specific scenarios and run them from command line.
 Cansend sends one or more can frames. It is a bit simpler than the canplayer
 and a good tool for simple bash test scenarios.
 
-If you use *candump* to listen to your can bus and the bus needs some timed motivation to send specific data packets, *cansend* is the lowtech tool to use in your scripts.
+If you use *candump* to listen to your can bus and the bus needs some timed motivation to send specific data packets, *cansend* is the low tech tool to use in your scripts.
 
 %% TODO ## wireshark
 
@@ -138,7 +138,7 @@ or use *pip* to install it
             pass    # Do something
 
 W> Be aware of the mixed data types in this example. The id is an int,
-W> data is an array of int values. Result is a bytearray. Depending on your use case,
+W> data is an array of int values. Result is a byte array. Depending on your use case,
 W> this could first cause some irritation.
 
 One additional python module will be very handy to manipulate the binary data
@@ -162,13 +162,13 @@ Better to use several simple tests and combine them.
 Using a candump log I will estimate the expected data pattern and create a
 python function that creates random data almost matching this data.
 
-Add some additional bitflips.
+Add some additional bit flips.
 
 Push this data into the CAN bus and check if it still responds and how.
 
 If it breaks: Log away the last packet sent.
 
-Rince and repeat.
+Rinse and repeat.
 
 For additional benefits:
 

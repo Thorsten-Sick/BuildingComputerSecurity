@@ -6,7 +6,7 @@
 
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 
-**Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emmitting more data than they receive are vulnerable. Also quite often uses stateless protocols like UDP because the initiator is different from the victim.
+**Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emitting more data than they receive are vulnerable. Also quite often uses stateless protocols like UDP because the initiator is different from the victim.
 
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
 
@@ -38,11 +38,11 @@
 
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
 
-**CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the http header
+**CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the HTTP header
 
 %% TODO: **CSRF & Cross site request forgery**
 
-**DEP**: Data execution prevention. Parts of the memory are marked as non-eecute (=NX)
+**DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
 
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
@@ -74,11 +74,11 @@
 
 %% TODO: **EFF**:
 
-**Evercookies**: Are snippets stored in the browser like cookies. Storage is Javascript Localstorage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
+**Evercookies**: Are snippets stored in the browser like cookies. Storage is JavaScript Local storage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
 
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
 
-**NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO oPeration codes to the beginning.
+**NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
@@ -98,7 +98,7 @@
 
 **RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
 
-**Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controlls.
+**Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controls.
 
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 
@@ -112,13 +112,13 @@
 
 **SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
 
-**Spear Phishing**: Targeted phishing. LEarn about the target first to create better social engineering attack
+**Spear Phishing**: Targeted phishing. Learn about the target first to create better social engineering attack
 
-**SQLI / SQL Injection**: Sql *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
+**SQLI / SQL Injection**: SQL *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
 
 **SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
 
-**Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reportrs on attacks and threat actors. Focus is on Advanced attacks
+**Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reporters on attacks and threat actors. Focus is on Advanced attacks
 
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
@@ -126,7 +126,7 @@
 
 **Vulnerability**: A bug or a flaw that has security implications
 
-**Waterhole attack**: Targeted phishing attack using a hacked/manufactored homepage the victim is known to visit and trust
+**Waterhole attack**: Targeted phishing attack using a hacked/manufactured homepage the victim is known to visit and trust
 
 **Weaponizing**: Making an exploit easy and reliable to use.
 
@@ -144,8 +144,8 @@
 %% TODO: Responsible/full disclosure
 
 
-%% win32k - windows syscall containong lots of vulnerable GUI functionality - process can disable it's usage (research how) starting win8
-%% NULL pointer dereference: in kernel process can access memory at NULL page (mitigation from win8+)
+%% win32k - windows syscall containing lots of vulnerable GUI functionality - process can disable it's usage (research how) starting win8
+%% NULL pointer de reference: in kernel process can access memory at NULL page (mitigation from win8+)
 
 %% SMEP Supervisory Mode Execution Prevention
 %% SMAP Supervisory Mode Access Prevention
