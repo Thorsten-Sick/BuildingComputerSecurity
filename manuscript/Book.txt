@@ -56,6 +56,7 @@ bolt_on/antivirus_classification_behaviour_based.txt
 bolt_on/sources.txt
 offense/part_offense.txt
 offense/intro.txt
+offense/kill_chain.txt
 offense/google_dork.txt
 offense/beef.txt
 offense/burp.txt

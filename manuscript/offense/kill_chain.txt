@@ -1,4 +1,8 @@
-# Kill chain
+# Kill chain {#chapter-kill-chain}
+
+C> By: Thorsten Sick
+
+C> For: Architects, Developers, Tester, Pen Tester
 
 ## Basics
 
@@ -25,8 +29,7 @@ The rough overview looks like:
 Mail addresses, internal company structure, typical server names, hobbies...
 Knowing these things can improve the chance that a phishing link is clicked by the victim.
 
-This is used for targeted attacks. There are tools to collect this data from the internet.
-They correlate accounts and names on
+This is used for targeted attacks. There are tools to collect this data from the internet. They correlate accounts and names on
 
 * Code sharing platforms
 * Facebook
@@ -40,8 +43,7 @@ Silently infecting systems and collecting data for the next OSINT supported targ
 ## Initial access
 
 0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
-Many systems still have fixed vulnerabilities in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain.
-This is where phishing, social engineering and OSINT are relevant.
+Many systems still have fixed vulnerabilities in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain. This is where phishing, social engineering and OSINT are relevant.
 
 ## Persistence
 
@@ -61,16 +63,14 @@ Not Admin/Root/System. So another exploit is used to escalate privileges.
 The other exploit does not have to be in the same application that has been
 the infection vector.
 
-So even if the application you wrote did not offer the initial access, it can
-still be a part of the kill chain.
+So even if the application you wrote did not offer the initial access, it can still be a part of the kill chain.
 
-When coding: Drop privileges and wrap your program into a restricting sandbox to
-protect it from being a part of the kill chain.
+When coding: Drop privileges and wrap your program into a restricting sandbox to protect it from being a part of the kill chain.
 
 ## Sandbox Escape
 
 Sandboxes are compartments on a system with restricted permissions and restricted access to the "outside" world.
-sandboxes can be virtual machines, container, compartments in an application like Chrome (where tabs, extensions, ... are own boxes) or even
+Sandboxes can be virtual machines, container, compartments in an application like Chrome (where tabs, extensions, ... are own boxes) or even
 things built as sandboxes like AppArmor.
 
 In this list, only the in-app-compartments and intentional sandboxes are built with a security goal. For container and virtual machines additional security is more a side effect.
@@ -109,7 +109,5 @@ These C&C servers need to be connected from the clients. Which results in:
 
 ## Exfiltration
 
-After collecting data it needs to be exfiltrated to a server the attacker controls.
-Data can be a few bytes (passwords extracted from browser databases) or gigabytes.
-No matter which one: There is a connection to a strange server. This can be detected or blocked.
-Of course the attackers can tunnel this data to innocent protocols. And they already do that.
+After collecting data it needs to be exfiltrated to a server the attacker controls. Data can be a few bytes (passwords extracted from browser databases) or gigabytes.
+No matter which one: There is a connection to a strange server. This can be detected or blocked. Of course the attackers can tunnel this data to innocent protocols. And they already do that.
