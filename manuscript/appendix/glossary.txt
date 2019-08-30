@@ -34,6 +34,8 @@
 
 **Bug**: Error made in the programming phase. Not all bugs are vulnerabilities
 
+%% TODO: Campaign
+
 **C&C**: Command and Control server. Central control over a botnet
 
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks

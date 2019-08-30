@@ -4,8 +4,7 @@
 
 ### Know your enemies
 
-Describes the types of adversaries your project can face. And their high-level
-goals, resources, technologies and tactics. You should [know your enemies](#chapter-attackers)
+Describes the types of adversaries your project can face. And their high-level goals, resources, technologies and tactics. You should [know your enemies](#chapter-attackers)
 
 ### Attacker's goals
 
@@ -15,38 +14,29 @@ protect your system.
 
 ### Principles
 
-High level [principles](#chapter-principles) you can use to design a secure system. These principles
-are abstract - and you will be able to combine several of them in designing
-your project.
+High level [principles](#chapter-principles) you can use to design a secure system. These principles are abstract - and you will be able to combine several of them in designing your project.
 
 ## Planning
 
 ### Threat modelling
 
 A mixed group of people (engineers, architects, managers) meets for a
-*threat modelling* session. Understanding the strengths and weaknesses of the
-product and the planned new features. "What would an attacker want ?",
+*threat modelling* session. Understanding the strengths and weaknesses of the product and the planned new features. "What would an attacker want ?",
 "How would he get that ?". Identifying that is the first step to protect the
 valuable assets.
-It can sound intimidating. But there are so many different approaches to make
-it simple and even fun. I collected a range of "best of" approaches in
+It can sound intimidating. But there are so many different approaches to make it simple and even fun. I collected a range of "best of" approaches in
 [this chapter](#chapter-threat-modelling).
 
 
 ### Software Design
 
-[Software design](#chapter-design) - also known as architecture - is the bigger picture of the
-technological part of the project.
-A good design can speed up development, simplify testing, and increase security.
-This chapter covers the security basics of software design. Followed by specific
-topics in other chapters.
+[Software design](#chapter-design) - also known as architecture - is the bigger picture of the technological part of the project.
+A good design can speed up development, simplify testing, and increase security. This chapter covers the security basics of software design. Followed by specific topics in other chapters.
 
 ### Vulnerabilities
 
 Your software - and maybe even your hardware will have bugs that turn into
-vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities)
-will cover the essence and taxonomy of vulnerabilities. Understanding that will
-make decisions based on vulnerabilities simpler.
+vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities) will cover the essence and taxonomy of vulnerabilities. Understanding that will make decisions based on vulnerabilities simpler.
 
 ### Security process
 
@@ -62,63 +52,46 @@ create an (incomplete) list of typical flaws encountered it real world failed pr
 
 ### UX
 
-How to create a [user interface in a secure way](#chapter-user-interface) - preventing the user from
-becoming the weakest link.
+How to create a [user interface in a secure way](#chapter-user-interface) - preventing the user from becoming the weakest link.
 
 ### Updates
 
 As soon as a software reaches a certain complexity you need updates to ship
-patches. This chapter guides you through the challenge of [shipping updates in
-a secure way](#chapter-updates).
+patches. This chapter guides you through the challenge of [shipping updates in a secure way](#chapter-updates).
 
 ### Passwords
 
-Passwords are the main way the user authenticates himself. Handling that in a
-secure fashion can turn out to be quite complex - but at the same time [there
-is enough experience around](#chapter-passwords).
+Passwords are the main way the user authenticates himself. Handling that in a secure fashion can turn out to be quite complex - but at the same time [there is enough experience around](#chapter-passwords).
 
 ### Browser
 
-The browser is the main software running on most computers. And the interface
-for a lot of other technologies. As browsers are complex they are vulnerable.
-Some things can be done to [improve browser security](#chapter-browser-security)
-- or the security of connected web admin platforms (router config page).
+The browser is the main software running on most computers. And the interface for a lot of other technologies. As browsers are complex they are vulnerable.
+Some things can be done to [improve browser security](#chapter-browser-security) - or the security of connected web admin platforms (router config page).
 
 ### Censorship
 
-[This chapter](#chapter-censorship) should be named *Resilience*. But *Censorship* attracts more attention.
-Our computer systems are very complex. And many do not have enough redundancy to
-recover from a single failure (accidental or intentional). But they can be
-built that way. This is covered in this chapter. It currently focuses on
-personal redundancy. Later it will be extended to also cover how to build
-resilient systems.
+[This chapter](#chapter-censorship) should be named *Resilience*. But *Censorship* attracts more attention. Our computer systems are very complex. And many do not have enough redundancy to recover from a single failure (accidental or intentional). But they can be built that way. This is covered in this chapter. It currently focuses on personal redundancy. Later it will be extended to also cover how to build resilient systems.
 
 ### IoT
 
-Things are getting more smart. Embedded Micro-controllers are cheap. Security
-is very often not existing. [This chapter](#chapter-iot) helps to improve that.
+Things are getting more smart. Embedded Micro-controllers are cheap. Security is very often not existing. [This chapter](#chapter-iot) helps to improve that.
 
 ### CAN
 
-The CAN bus connects micro-controllers in many embedded systems - especially in
-vehicles. Securing it is a challenge - as it was not designed for security.
-This chapter will [give you some tools](#chapter-can-bus) - and basics for fuzzing CAN.
+The CAN bus connects micro-controllers in many embedded systems - especially in vehicles. Securing it is a challenge - as it was not designed for security. This chapter will [give you some tools](#chapter-can-bus) - and basics for fuzzing CAN.
 
 ### Bluetooth LE
 
 Low Energy Bluetooth can be integrated in many systems. Security is hard
-to implement. But possible. [This chapter](#chapter-btle) will give you the tools and basics to
-improve security.
+to implement. But possible. [This chapter](#chapter-btle) will give you the tools and basics to improve security.
 
 ### TLS
 
-[TLS is a basic technology to secure data in transit](#chapter-tls). Some may know it as SSL
-or HTTPS. And many projects use it.
+[TLS is a basic technology to secure data in transit](#chapter-tls). Some may know it as SSL or HTTPS. And many projects use it.
 
 ### Crypto algorithms
 
-Which algorithm to use ? In which mode ? Best key length ? This book is basic,
-so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
+Which algorithm to use ? In which mode ? Best key length ? This book is basic, so this chapter will be more of a [cheat sheet for those essential things](#chapter-crypto-algorithms).
 For the curious people: there are resources to dig much deeper.
 
 ## Programming
@@ -130,16 +103,11 @@ There are several tools that will assist you during the coding process. This
 
 ### Defensive programming
 
-Some coding techniques will harden your code against attackers. Positive side
-effects like making your code simpler to debug and more robust and stable are
-take always that balance the extra effort invested. If you do not yet practice
-[defensive programming](#chapter-defensive-programming) you should consider starting it.
+Some coding techniques will harden your code against attackers. Positive side effects like making your code simpler to debug and more robust and stable are take always that balance the extra effort invested. If you do not yet practice [defensive programming](#chapter-defensive-programming) you should consider starting it.
 
 ### Assert
 
-A very powerful tool for debugging and preventing bugs are *asserts*. They are
-even more powerful when combined with *fuzzing*.
-When coding, you should start using [asserts](#chapter-asserts) right now.
+A very powerful tool for debugging and preventing bugs are *asserts*. They are even more powerful when combined with *fuzzing*. When coding, you should start using [asserts](#chapter-asserts) right now.
 
 ### Compiling
 
@@ -157,9 +125,7 @@ settings](#chapter-clang).
 ### JavaScript security
 
 I am a big fan of automated security tests. And JavaScript has it's own pitfalls.
-But those can be fixed by tools you can integrate seamlessly into your workflow.
-The [JavaScript security](#chapter-javascript-security) will show you the low
-hanging fruit.
+But those can be fixed by tools you can integrate seamlessly into your workflow. The [JavaScript security](#chapter-javascript-security) will show you the low hanging fruit.
 
 ## Testing
 
@@ -170,25 +136,20 @@ wanted you (or your testers) will want to use some tools. [This is described her
 
 ### Flawfinder
 
-In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you more verification of
-your code. With zero effort.
+In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you more verification of your code. With zero effort.
 
 ### CPPCheck
 
-[CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to
-invest some time in configuration. This chapter will help you there.
+[CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to invest some time in configuration. This chapter will help you there.
 
 ### Testing
 Is it still testing or already hacking our own product ?
-There are many tricks to make software testing more aggressive and which will
-shine some light on vulnerabilities in [this chapter](#chapter-testing).
+There are many tricks to make software testing more aggressive and which will shine some light on vulnerabilities in [this chapter](#chapter-testing).
 
 
 ### Fuzzing
 
-[Fuzzing](#chapter-fuzzing) is a technology to find unexpected bugs - most of them potential
-vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you.
-How to get started is described here.
+[Fuzzing](#chapter-fuzzing) is a technology to find unexpected bugs - most of them potential vulnerabilities. Pre-existing tools and DIY scripts can do the fuzzing for you. How to get started is described here.
 
 ## Tools
 
@@ -206,8 +167,7 @@ systems - integrate it in there.
 
 Git as a version control system is the core of your development workflow. So
 it is also a perfect spot to add automated code quality tools. You learned
-about those tools in the other chapters. And this chapter gives you some hints
-where to get started integrating them into [Git](#chapter-git).
+about those tools in the other chapters. And this chapter gives you some hints where to get started integrating them into [Git](#chapter-git).
 
 %% TODO Openssl
 
@@ -218,20 +178,16 @@ where to get started integrating them into [Git](#chapter-git).
 ## Bolt-on security
 
 Bolt-on security is what is done of someone missed to do security-by-design.
-Especially myths make it hard to find the right way to use it. These chapters
-will bust some myths.
+Especially myths make it hard to find the right way to use it. These chapters will bust some myths.
 
 ### Antivirus tests
 
-How to properly read antivirus tests. As antivirus is neither a silver bullet
-nor useless a [proper estimation](#chapter-antivirus-tests) of it's power
-should be done first.
+How to properly read antivirus tests. As antivirus is neither a silver bullet nor useless a [proper estimation](#chapter-antivirus-tests) of it's power should be done first.
 
 ### Antivirus integration
 
 Antivirus can only scan files it gets access to. Many projects could benefit
-from an [interface between the project and an already installed antivirus](#chapter-antivirus-integration). And
-Microsoft is offering one.
+from an [interface between the project and an already installed antivirus](#chapter-antivirus-integration). And Microsoft is offering one.
 
 ### Antivirus sharing samples
 
@@ -240,28 +196,23 @@ There are several reasons to contact an antivirus vendor
 * They have a False Positive on your software
 * You found undetected malware (files or URLs)
 
-[This chapter will help you getting started](#chapter-sharing-samples) and give you some internals - the
-people working in an antivirus lab are on your side and will love to cooperate.
+[This chapter will help you getting started](#chapter-sharing-samples) and give you some internals - the people working in an antivirus lab are on your side and will love to cooperate.
 
 ### Antivirus: VirusTotal
 
 VirusTotal is the go-to way of quick scanning potential malware and
-false positives. But has an own tricky personality. Knowing that will [prevent
-you from coming to the wrong conclusions](#chapter-virustotal).
+false positives. But has an own tricky personality. Knowing that will [prevent you from coming to the wrong conclusions](#chapter-virustotal).
 
 
 ### Antivirus: Behaviour based classification
 
 Unknown samples must be classified before detection can be created. A quite
-reliable way to achieve that is behaviour based classification. Especially it
-is quite simple to interpret the resulting log for malicious behaviour. [The
-basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
+reliable way to achieve that is behaviour based classification. Especially it is quite simple to interpret the resulting log for malicious behaviour. [The basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
 
 ### IOC sources
 
 [IOC sources](#chapter-malware-sources) is a collection of lists of so
-called Indicator Of Compromise Sources. Those are Malware executables, hashes,
-URLs, registry key, ...
+called Indicator Of Compromise Sources. Those are Malware executables, hashes, URLs, registry key, ...
 
 The lists can be used for training, learning or (if they are curated)
 event directly blacklisting.
@@ -271,6 +222,11 @@ event directly blacklisting.
 
 Even if you are playing Defense - it is very important to know the tools,
 tricks and tactics of Offense. The basics are covered here.
+
+### Kill chain
+
+A [kill chain](#chapter-kill-chain) is a typical structure of an attack. With different steps happening in between "the attacker decided to attack" and "the attack succeeded and is spending the stolen money".
+A kill chain can be interrupted at any stage. Knowing kill chains will help the defender.
 
 ### Google Dorks
 
@@ -291,8 +247,7 @@ page and while crawling it enumerating the vulnerabilities.
 ### Mitmproxy
 
 [Mitmproxy](#chapter-mitmproxy) is a python proxy to intercept especially
-HTTP communication. Valuable for development of network communication, testing
-and pen testing.
+HTTP communication. Valuable for development of network communication, testing and pen testing.
 
 %% TODO Metasploit
 
@@ -311,9 +266,7 @@ A list of external references (books, talks and homepages).
 
 ### Glossary
 
-There are so many new acronyms in the security field. And even there they are
-territorial - Web security being totally different from Assembler hacking.
-Have a glossary ready. Here it is.
+There are so many new acronyms in the security field. And even there they are territorial - Web security being totally different from Assembler hacking. Have a glossary ready. Here it is.
 
 ### The author
 

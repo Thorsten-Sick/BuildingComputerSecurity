@@ -143,7 +143,8 @@ Bugs cluster. So it is very likely that a type of bug can be found on similar
 places in the code.
 Other good metrics how to find code that needs to be reviewed can be found
 in the book "Software Design X-rays".
-# TODO: Add link to book
+
+%% TODO: Add link to book
 
 This is a question of culture and habit. It can be hard to get the team to
 start using code reviews. Especially getting them done in a respectful way.
