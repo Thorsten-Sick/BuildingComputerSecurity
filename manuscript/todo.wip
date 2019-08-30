@@ -1,3 +1,8 @@
+
+Pagedout magazine: https://pagedout.institute/
+
+---------------
+
 https://github.com/cs01/gdbgui/
 
 
@@ -55,6 +60,17 @@ https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebi
 https://github.com/google/nogotofail
 
 
+# Signing software packages
+https://github.com/jedisct1/minisign
+
+# File transfer
+https://github.com/warner/magic-wormhole
+
+# Tarsnap: Encrypted backups
+https://www.tarsnap.com/
+
+# Encrypt application data
+https://download.libsodium.org/doc/
 
 
 
@@ -122,7 +138,7 @@ http://www.booksandtales.com/pod/index.php
 https://www.epubli.de/
 https://www.bookmundo.de/
 http://www.bookmarket.com/ondemand.htm
-
+lulu.com
 ----------
 Fonts:
 
@@ -130,6 +146,11 @@ https://fontawesome.com (icons)
 "Alle gut hackbar":
 https://www.fontzillion.com/fonts/barmee/afarat_ibn_blady
 -----------
+%% TODO: Anti Virus guidelines https://www.adlice.com/making-an-antivirus-engine-the-guidelines/
+Visuals
+https://www.openideo.com/challenge-briefs/cybersecurity-visuals
+
+--------------
 Backgrounds:
 
 https://www.templatemonster.com/blog/free-background-generators
@@ -181,3 +202,5 @@ Dynamic analysis of running processes:
 
 github.com/hasherezade/pe-sieve
 github.com/hasherezade/hollows_hunter
+
+https://github.com/Neo23x0/Loki

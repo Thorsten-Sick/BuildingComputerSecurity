@@ -32,7 +32,13 @@ The structure of a Virus lab
 * MISP
 * Phishtank and similar
 
+## EXE packer
 
+Executables can be packed (makes them smaller and only the unpacker stub stays static. The exe is unpacked into memory.)
+
+There are unpackers to extract the data:
+
+%% Verify: unp, gtr, iup
 
 
 %% TODO: https://www.youtube.com/watch?v=gFxImi5t37c

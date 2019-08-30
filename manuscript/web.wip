@@ -3,17 +3,61 @@
 
 .. State: 10 % Web
 
+%% https://nullsweep.com/http-security-headers-a-complete-guide/
+
 ## Web architecture
 
 https://engineering.videoblocks.com/web-architecture-101-a3224e126947
 
 ## SRI
 
+*Subresource Identifier (SRI)* is an optional attribute for tags with links to exernal resources. As static data (especially JS frameworks like JQuery) are stored on CDNs it is hard for a web page developer to trust that the referenced framework is the expected one. Using the SRI attribute (which is a hash) you can ensure that the loaded 3rd party content has not been messed with.
 
+The SRI value is the name of a hash function plus the base64 encoded hash value.
+
+Learn more [SRI details](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
 %% TODO: test it
+%% Oneliner: curl -s [url]|sha256sum|xxd -r -p|base64
 
-Oneliner: curl -s [url]|sha256sum|xxd -r -p|base64
+## CORS
+
+## Attack vector web cache
+
+https://portswigger.net/blog/practical-web-cache-poisoning
+
+## CSP
+
+Cross site scripting protection. A security header is set in the http reply restricting external resources allowed to be loaded.
+
+%% https://uselesscsp.com/
+
+%% https://www.cspisawesome.com/
+
+https://addons.mozilla.org/en-US/firefox/addon/laboratory-by-mozilla/
+
+## X-Content-Type header
+
+Defines the MIME type of the returned content. Prevents Cross Site Scripting.
+
+## Corb
+
+## IFrame isolation
+
+*X-Frame-Options* header: Can a site use this page in a frame ? Prevents Click jacking attacks.
+
+## Cookie permissions
+
+A HTTP header (Set-Cookie) can restrict cookie permissions:
+
+* Secure; Transfer https only
+* HttpOnly; No access from JAvaScript
+
+## X-XSS-Protection
+
+*X-XSS-Protection: 1; mode=block*
+
+%% TODO: What exactly is it doing ? "Browser halts execution on XSS detection"
 
 ## Standard attacks on browsers
 
@@ -69,23 +113,8 @@ https://github.com/CoolerVoid/0d1n
 
 https://www.heise.de/security/meldung/Malvertising-Kriminelle-nutzen-Tausende-WordPress-Sites-als-Malware-Schleudern-4125985.html
 
-## CORS
 
-## Attack vector web catche
-
-https://portswigger.net/blog/practical-web-cache-poisoning
-
-## CSP
-
-%% https://uselesscsp.com/
-
-%% https://www.cspisawesome.com/
-
-## Corb
-
-## IFrame isolation
-
-## Buy similar URLs
+## Best practice: Buy similar URLs
 
 Buy similar urls. Also maintain your hold on the domains you own. Maybe even
 past the time you use them - if you are running your mails over your domain
@@ -94,6 +123,14 @@ attacker who bought the domain after you quit.
 
 * Typo squatting
 * Certificates
+
+## Best practice: Anti Pony/Fareit
+
+There is a famoud malware module used by many malware samples: Pony.
+Once a computer is infected it harvests the store of browsers and FTP clients for passwords.
+This is done to get access to new sites to infect.
+
+Long story short: Keep your development environment malware free and do not store you passwords in our FTP clients.
 
 %% TODO: Subdomain enumeration: https://github.com/cakinney/domained
 %% http://michenriksen.com/blog/aquatone-tool-for-domain-flyovers/

@@ -1,3 +1,42 @@
 
 %% TODO: Robber is open source tool for finding executables prone to DLL hijacking
 https://github.com/MojtabaTajik/Robber
+
+## Registry
+
+Stored in *Windows\system32\config* folder:
+
+* SOFTWARE
+* SAM
+* SYSTEM
+* SECURITY
+* COMPONENTS
+
+Starting Windows 8:
+
+* BBI
+* BCD
+* COMPONENTS
+* DRIVERS
+* ELAM
+
+For user data:
+
+* NTUSER.DAT
+* USSRCLASS.DAT
+
+### Further reading
+
+[Windows Registry Forensics](https://learning.oreilly.com/library/view/windows-registry-forensics/9780128033357/)
+If you want to do exactly what the title says: Doing registry forensics. A very focussed book.
+
+## Sysinternals tools
+
+https://docs.microsoft.com/en-us/sysinteernals/
+
+## Further reading
+
+Windows Internals, Part 1
+Windows Internals, Part 2
+
+(updated regularly, last edition I saw was 7th, 2017)
