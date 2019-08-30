@@ -7,9 +7,7 @@ C> For: Developers, Tester, Pen Tester
 ## Basics
 
 [Mitmproxy](https://mitmproxy.org/) is a python command line tool to intercept
-HTTP network traffic.
-It is even able to handle encrypted (TLS) situations by either doing a
-TLS-MITM (creating an own certificate) or using sslstrip.
+HTTP network traffic. It is even able to handle encrypted (TLS) situations by either doing a TLS-MITM (creating an own certificate) or using sslstrip.
 
 Depending on your control over the client and the verification by the
 client application one of those will fit our need.
@@ -130,11 +128,9 @@ This can be done by using the sslstrip script:
 {lang="bash"}
     mitmproxy -s examples/complex/sslstrip.py
 
-Keep in mind: Some sites are hard coded *HSTS* in the browsers. This is
-especially true for google sites.
+Keep in mind: Some sites are hard coded *HSTS* in the browsers. This is especially true for google sites.
 
-You can get some improvement by sabotaging the security of the browser with
-switches like these:
+You can get some improvement by sabotaging the security of the browser with switches like these:
 
 {lang="bash"}
     chromium --proxy-server="localhost:8080" --ignore-certificate-errors --allow-running-insecure-content
@@ -142,11 +138,8 @@ switches like these:
 %% TODO Link to the browser chapter for more switches
 
 Some applications use their own certificate store, some the OS store.
-
-The special domain contains the mitmproxy certificate: mitm.it
-
-For some OS-es it will guide you through the way to install it.
-
+There is a special domain containing the mitmproxy certificate (which can be accessed through the victim-browser): mitm.it
+For some OS-es it will guide you through the way to install the root certificate.
 For Ubuntu you will have to install it OS-wide:
 
 {lang="bash"}
@@ -167,3 +160,6 @@ trust the OS store. Especially for browsers that can differ.
 
 * [Learning Python Web Penetration Testing](https://learning.oreilly.com/library/view/learning-python-web/9781789533972/) It has a bigger chapter covering mitmproxy. Including coding of plugins.
 * [mitmproxy documentation](https://docs.mitmproxy.org/stable/)
+
+%% TODO: https://0x00sec.org/t/the-art-of-man-in-the-middle-attack/15140
+%% This contains description of the python module "NetFilterQueue" which allows to hook into a netfilter re-direction and manipulate packages (scapy)
