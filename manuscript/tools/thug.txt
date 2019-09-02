@@ -56,3 +56,9 @@ Basic Thug commands:
 
 
 %% TODO: JS hooking
+
+%% TODO: Classifier
+
+%% TODO: Hooking file detection into it (maybe using plugin framework)
+
+%% TODO: JSON logging

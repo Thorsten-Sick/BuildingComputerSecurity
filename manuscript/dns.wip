@@ -7,11 +7,37 @@ https://www.ghacks.net/2019/04/29/check-if-your-browser-uses-secure-dns-dnssec-t
 
 https://www.cloudflare.com/ssl/encrypted-sni/
 
-## DNS over HTTPS
+## DNS classic
+
+The standard DNS. DNS request are sent to the UDP port 53. For larger DNS requests there must be a fallback to TCP, same port.
+
+## DNS over HTTPS (DoH)
+
+HTTPS as transport for DNS. Port 443. Connection is to a web server which forwards it to DNS. This will kill network based DNS security filter technology. Which is a mixed blessing.
+
+IMHO: Filtering must happen at the end-point
+
+Another issue with DoH can be company internal pages. An external 3rd party DoH server will not direct the browser to them.
+
+Current state (middle of 2019):
+
+Browser vendors are pushing for DoH. An RFC is available. Experiments in browsers are running.
 
 %% DNS over HTTPS: https://blog.nightly.mozilla.org/2018/06/01/improving-dns-privacy-in-firefox/
 
 %% https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/
+
+## DNS over TLS (DoT)
+
+TLS as transport for DNS. The DNS packets are standard DNS packets. The port being used is 853 TCP.
+
+## DNS over QUIC (DoQ)
+
+QUIC as transport for DNS (Google protocol)
+
+## DNS over Cloud (DoC)
+
+DNS via cloud services (Q9, Cloudflare, ...)
 
 ## DNS Rebinding attacks
 
@@ -64,3 +90,6 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 
 
 %% http://dnsviz.net/
+
+
+%% Link to CCC Camp 2019 Talk: https://media.ccc.de/v/Camp2019-10213-doh_or_don_t

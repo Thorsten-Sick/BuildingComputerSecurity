@@ -82,6 +82,8 @@
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
+**QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
+
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
