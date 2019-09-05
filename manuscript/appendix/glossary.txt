@@ -108,6 +108,8 @@
 
 **Side Channel**: Using side effects to hack a system. For crypto a side channel can be timing differences between a right and a wrong password.
 
+**Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
+
 **Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)

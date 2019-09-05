@@ -52,14 +52,14 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add and finish "artificial_intelligence"
 %% TODO: Add viruslab.wip
 %% TODO: Add antivirus_detection.wip
-%% TODO: Delete king-phisher
-%% TODO: Add conferences somehow
-%% TODO: Add kill chain to offense as chapter.
 
-%% TODO: Much better thug !
+%% TODO: Add conferences somehow
+
 
 * Improved *mitmproxy*
 * Added *kill chain*
+* Added the practical parts to *thug*
+* Extended *glossary*
 
 ## July 2019
 

@@ -15,21 +15,21 @@ detected items from causing harm.
 
 **Classification** is used to create such a database: Unknown objects are classified either manually or by some tools into at least the categories good/bad. Maybe we can also identify the families or the type of malware (trojan, worm).
 
-**Analysis** Is an in depth analysis of a malware to learn about the used technology, trick and origin. An analysis is important to improve classification technology. It also produces interesting blog posts. Quite often an analysis will eat days and weeks of a specialist's time.
+**Analysis** Is an in depth analysis of a malware to learn about the used technology, tricks and origin. An analysis is important to improve classification technology. It also produces interesting blog posts. Quite often an analysis will eat days and weeks of a specialist's time.
 
-## Pro
+## Pro detection technology
 
 * Simple to add on top of an existing system
 * With bought signatures: Can filter the outer perimeter for common attacks
-* Own signatures in the innermost layer identify when other security features did break
+* Own signatures in the innermost layer identify when other security defenses did not stop the malware
 * Fast response (within minutes) - can cover the gap until a patch is rolled out
 
-## Con
+## Con detection technology
 
 * Fast Flux beats IP filtering
 * It is a statistics game. Do not expect perfect security
 * Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
-* If file processing is not sandboxed: Not good
+* If file processing by the detection technology is not sandboxed: It becomes a new attack vector
 * If file processing is done in kernel: Double plus not good
 * "Clean" detection should not be read as "Clean". It is "did not find anything"
 
@@ -43,8 +43,8 @@ detected items from causing harm.
 * Bad guys have their own "VirusTotal" malware scanner to create their malware FUD (Fully Un Detected)
 ** Malware authors even offer support contracts for updates should the malware be detected
 ** This update-test-release cycle is at least semi automatic
-** Detection technology that is not accessible for the bad guys lasts a lot longer (smaller "AVs" benefit - create you own in house AV ?)
-* Do not send feedback to the attack ("Your mail has been blocked"). Maybe postpone feedback for one day. That way the attacker can not tune the attack to your defense
+** Detection technology that is not accessible to the bad guys lasts a lot longer (smaller "AVs" benefit - create you own in house AV ?)
+* Do not send feedback to the attacker ("Your mail has been blocked"). Maybe postpone feedback for one day. That way the attacker can not tune the attack to your defense
 
 There is a statistics trick how to boost the combination of different detection technologies.
 To get a good combination combine several _different_ technologies together.
@@ -52,8 +52,7 @@ To get a good combination combine several _different_ technologies together.
 I will be using simple numbers to make a point now:
 Lets assume we have three different scanners each having 90% detection (a bad detection quality).
 Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second scanner.
-1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technologies. Or the same samples
-not detected by number one will also not be detected by number 2....
+1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technologies. Or the same samples not detected by number one will also not be detected by number 2....
 
 ## Choosing technology
 
@@ -67,17 +66,20 @@ You can pick any AV of the top 5 in the tests. Basically you will pick the one t
 * Supports your mail system, web proxy, ....
 * Check for False Positives as well in those tests
 
+YMMV
+
 It could also be important to check for privacy commitment. F-Secure has some detailed ones, for example:
 
 https://www.f-secure.com/en/web/legal/principles
 
 ### Numbers
 
-In tests yous should aim for a detection rating north of 95 %, a False Positive Rating south of 0.05 %.
-For False Positives (detection on innocent files): If you have a well maintained
-system with only basic and boring files a higher FP rating will also work for you.
-If you have a heterogeneous landscape, many computers, fancy extraordinary tools:
-Aim for a lower FP rating.
+In tests you should aim for a detection rating north of 95 % and a False Positive Rating south of 0.05 %.
+For False Positives (detection on innocent files): If you have a well maintained system with only basic and boring files a higher FP rating will also work for you.
+
+If you have a heterogeneous landscape, many computers, fancy extraordinary tools: Aim for a lower FP rating.
+
+Many FPs the AVs have in tests are on quite exotic shareware files. It is quite possible you will not have (or want) them in your system anyway.
 
 ### Test institutions
 
@@ -109,7 +111,7 @@ Problem here:
 
 Real-world-tests:
 
-A VM set prepared and a script surfs to an infected page. The whole product can now prevent infection of the system.
+A Virtual Machine gets prepared to simulate a normal system. A script surfs to an infected page. The whole product can now prevent infection of the system - or fail.
 
 This has it's own challenges for the testers.
 
@@ -119,29 +121,23 @@ This has it's own challenges for the testers.
 * Bad: Hard to reproduce
 * Bad: Only small sample set because it is so complex
 
-As for which test to trust: Go for Real-world tests. As soon as you have the
-product test your specific entry points for malware with Eicar test file or
-simulated malicious URLs. If the products properly cover those.
+As for which test to trust: Go for Real-world tests. As soon as you have the product test your specific entry points for malware with Eicar test file or simulated malicious URLs. If the products properly cover those.
 
 ## DIY detection
 
-There are different tools to detect malware. Normally you do have some internal
-knowledge covering which apps are malicious and which benign. For more on
-that see the "DIY classification" chapter. Detection is how you get this knowledge
-from your lab to the computer you want to protect.
+There are different tools to detect malware. Normally you do have some internal knowledge covering which apps are malicious and which are benign. For more on that see the "DIY classification" chapter. Detection is how you get this knowledge from your lab to the computer you want to protect.
 
-%% TODO: write DIY classification chapter
+%% TODO: write DIY classification chapter, add link
 
 ### Hashes
 
-The simplest and most reliable way is file hashes. The good thing: If your
-classification is correct they will not add FPs on their own. The bad news:
-They will not detect much as malware is normally polymorphic. But if you can
-create them by a script "for free" and without effort: Use them in addition
-to better tools.
+The simplest and most reliable way is file hashes. The good thing: If your classification is correct they will not add FPs on their own. The bad news:
+They will not detect much. Malware is normally polymorphic. But if you can create them by a script "for free" and without effort: Use them in addition to better tools.
 
 Important: CRC32, MD5 and SHA1 are dead.
 Use Sha256 instead. If you feel fancy look at SSDeep
+
+%% TODO: Add Box
 
     Optional background: With the large number of files currently released it is
     even possible to have accidental MD5 collisions. Result will be two totally
@@ -163,12 +159,9 @@ Yara combines logic and (regex) patterns into a quite simple config language.
 [SNORT](https://www.snort.org/) is a tool detect network packages
 
 
-
-
 ## DIY classification
 
-You have an unknown sample and want to learn if it is malicious. This is the step
-you normally do *before* you do detection.
+You have an unknown sample and want to learn if it is malicious. This is the step you normally do *before* you do detection.
 
 **VirusTotal**: One way to do classification is to run it through a multi scanner like [VirusTotal](https://www.virustotal.com).
 You will benefit from the classification work of several virus labs. Negative side effects:

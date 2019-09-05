@@ -54,11 +54,44 @@ Basic Thug commands:
 * -A <Acrobat PDF reader version> simulates a vulnerable reader
 * -S <Shockwave Flash version> Simulate Shockwave Flash
 
+{lang="bash"}
+    thug -Z -F -W https://foo.bar.com
+    ...lots-of-logs...
+    [2019-09-04 11:12:13] Thug analysis logs saved at <folder>
+
+* -Z Logs are written as JSON
+* -F Logs are written to a file
+* -W enable features logging. You probably do not need them
+
+The resulting json data file will be in *<folder>/analysis/json/analysis.json*. It is large and quite detailed.
+
+Classifiers can be added to the analysis process. A classifier is a Yara rule. Examples can be found in the *thug/Cöassifier/rules/urlclassifier* directory - and parallel directories.
+
+To add a hand written Yara rule to the analysis process, call thug with:
+
+{lang="bash"}
+    thug -Z -F -W --urlclassifier=myclassifier.yar https://foo.bar.com
+
+The resulting JSON log will contain an array with matching classifiers.
+
+There are other classifiers besides urlclassifiers (that are matched on urls):
+
+* htmlclassifier
+* jsclassifier
+* sampleclassifier (for files)
+* textclassifier
+* cookieclassifier
+
+The JavaScript classifier is only matching in JavaScripts. But it has the cool feature to scan after the JS has been eval-ed as well as directly scanning the script. That way it is breaking obfuscation in a generic way.
+
+In other words:
+
+1) JS is scanned with classifier
+2) Evals are executed. One Obfuscation layer is removed
+3) de-obfuscated scripts are scanned again
 
 %% TODO: JS hooking
 
-%% TODO: Classifier
+
 
 %% TODO: Hooking file detection into it (maybe using plugin framework)
-
-%% TODO: JSON logging

@@ -123,6 +123,8 @@ https://github.com/bbc/bbplot
 https://bbc.github.io/rcookbook/
 
 Python seaborn uses matplotlib for statistics
+Python http://altair-viz.github.io/ for statistics (seems more powerful than seaborn)
+
 
 Mermaidjs.github.io  https://mermaidjs.github.io/
 http://plantuml.com/

@@ -6,10 +6,10 @@ C> For: Architects, Developers, Tester, Pen Tester
 
 ## Basics
 
-A kill chain is the single steps of an attack. Some of those steps are optional, specific for a type of target, ...
-But quite often you can see those steps in a real attack.
+A kill chain is the chain of the single steps of an attack. Some of those steps are optional, specific for a type of target, ...
+But quite often you can see many those steps chained in a real attack.
 
-One more difference is caused by the type of the attack.
+One more difference in the kill chain structure is caused by the type of the attack.
 **Opportunistic attacks** just target anyone with a specific vulnerability. This affects the first phase: Intelligence. Which is not required.
 The "looting" phase is also affected: A bunch of innocents is infected. Now the attacker needs a convenient way to enumerate the possible loot (from CPU power to ransomware targets) and make money as efficient as possible.
 
@@ -21,12 +21,13 @@ The important takeaway: As a defender you can break this attack chain at any sta
 
 * The sooner the better
 * Also block alternative ways the attacker could have to achieve his goals
+* And block it at several stages. If you first defense fails, you get a second and third chance.
 
-The rough overview looks like:
+The rough overview looks like this:
 
 ## OSINT (Open Source Intelligence)
 
-Mail addresses, internal company structure, typical server names, hobbies...
+The attacker researches mail addresses, internal company structure, typical server names, hobbies...
 Knowing these things can improve the chance that a phishing link is clicked by the victim.
 
 This is used for targeted attacks. There are tools to collect this data from the internet. They correlate accounts and names on
@@ -36,44 +37,42 @@ This is used for targeted attacks. There are tools to collect this data from the
 * Linked in
 ...
 
-There is a malware named EMOTET that currently is somewhere in between a
-targeted and an opportunistic attack.
-Silently infecting systems and collecting data for the next OSINT supported targeted attack.
+There is a malware named EMOTET that currently is somewhere in between a targeted and an opportunistic attack.
+It is silently infecting systems and collecting data for the next OSINT supported targeted attack. Improving the chance to spread in a company.
 
 ## Initial access
 
-0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
-Many systems still have fixed vulnerabilities in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain. This is where phishing, social engineering and OSINT are relevant.
+After targets are aquired the malware needs initial access to the victim systems. 0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
+Many systems still have vulnerabilities fixed by the vendor in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain. This is where phishing, social engineering and OSINT are relevant.
+
+The initial access phase is over as soon as the attacker can run any code on the victim systems.
 
 ## Persistence
 
 Most malware wants to survive a reboot of the system. So adding the own file to *autostart* or similar services is an important step.
 
-Persistence leaves traces and is kind of obvious if the defender knows where to look for it.
+Persistence leaves traces and is kind of obvious if the defender knows where to look for it. But there are many parts of the system that start a program after reboot - not just autostart.
 
-So some malware can deal without persistence:
+And there is another option - some malware can deal without persistence:
 
-* Hit and run: Steal the data and do not care about re-infecting the system afterwards
+* Hit and run: Steal the data and do not care about re-infecting the system after a reboot
 * Re-infect: Internet connected systems that have a vulnerability could just be re-infected after reboot
 
 ## Privilege Escalation
 
-After the first attack, many attackers only have the user's privileges.
-Not Admin/Root/System. So another exploit is used to escalate privileges.
-The other exploit does not have to be in the same application that has been
-the infection vector.
+After the first attack, many attackers only have the user's privileges. Not Admin/Root/System. So another exploit is used to *escalate privileges*.
+The other exploit does not have to be in the same application that has been the infection vector.
 
-So even if the application you wrote did not offer the initial access, it can still be a part of the kill chain.
+So even if the application you wrote did not offer the initial access, it can still be a part of the kill chain by offering the privilege escalation vulnerability.
 
 When coding: Drop privileges and wrap your program into a restricting sandbox to protect it from being a part of the kill chain.
 
 ## Sandbox Escape
 
 Sandboxes are compartments on a system with restricted permissions and restricted access to the "outside" world.
-Sandboxes can be virtual machines, container, compartments in an application like Chrome (where tabs, extensions, ... are own boxes) or even
-things built as sandboxes like AppArmor.
+Sandboxes can be virtual machines, container, compartments in an application like Chrome (where tabs, extensions, ... are own boxes) or even things built as sandboxes like AppArmor.
 
-In this list, only the in-app-compartments and intentional sandboxes are built with a security goal. For container and virtual machines additional security is more a side effect.
+In this list, only the in-app-compartments and intentional sandboxes are built with a security goal. For container and virtual machines additional security is more a side effect. Their main goal is to simplify management of applications.
 
 If the attacker gained control over a part of the system that is inside one of those sandboxes the next goal is to influence the system outside of it.
 And this is the so called "sandbox escape".
@@ -85,20 +84,23 @@ The attacker will want to not trigger any alarms. So the attacker uses tricks to
 
 ## Lateral Movement
 
-Lateral movement is using the system infected initially to move to another system with more interesting data.
-A smart defensive strategy is to split the whole system into components with different permissions, data and outward facing attack vectors.
+Lateral movement is using the infected computer to move to another system with more interesting data.
+A smart defensive strategy is to split the whole network into components with different permissions, data and outward facing attack vectors.
 
 For example you have one PC where the HR person opens PDFs from unknown 3rd parties (their job !) and another system with the backup of all the not-yet patented inventions.
+
+The HR department is very likely the system infected first. The data storage the real target of the attackers.
+
 Separating those systems is the task of the defender. The attacker will want to move laterally from the office PC to the backup systems.
 
 ## Collection
 
-Malware will collect data, system information and similar. Especially the *Pony* component of common malware will target browser password databases and the passwords stored by FTP clients.
+Malware will collect data, system information and similar. Especially the *Pony* (aka Fareit) component of common malware will target browser password databases and the passwords stored by FTP clients.
 That way the malware author can later on infect the web servers and new victims visiting those infected web sites.
 
 ## Command and Control
 
-Especially malware attacks that are opportunistic need a remote control. This is an external server that allows a botnet overview and the potential to remote control all bots, groups of bots or single bots.
+Malware attacks very often need a remote control. This is an external server that allows a botnet overview and the potential to remote control all bots, groups of bots or a single bot.
 New malware components can be downloaded to the victims, data exfiltrated, ransomware encryption started, or cryptominers executed.
 
 These C&C servers need to be connected from the clients. Which results in:
