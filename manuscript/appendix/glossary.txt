@@ -78,7 +78,11 @@
 
 **Evercookies**: Are snippets stored in the browser like cookies. Storage is JavaScript Local storage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
 
+%% TODO: Firewall (Web app firewall ?)
+
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
+
+%% TODO: Honeypot
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
