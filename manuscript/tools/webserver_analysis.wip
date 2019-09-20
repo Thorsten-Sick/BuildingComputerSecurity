@@ -1,0 +1,73 @@
+%% TODO: Rename
+
+This is about tools to recon webservers.
+
+* Done: Where is it's location
+* Done: Server version running on it
+* First seen
+* Done: Open ports
+* Who is running it
+* Are there alternate DNS entries
+* Done: OS used
+* Applications used
+* Done: Certificates being used
+
+Basic idea is to gather intelligence so we can then connect an attack to an actor or learn more about the attack.
+
+But not using URLs or files but meta-data.
+
+## dig dns basics
+
+dig with the parameter ANY can return valuable data like:
+
+* IP4 address
+* IPv6 address
+* nameservers
+* mailservers
+
+A domain can be hosted on several ips and the DNS is just returning the closest one.
+
+Missing is the name of the regiserting person/entity. It is redacted.
+
+## Geoip
+
+https://pythonhosted.org/python-geoip/ (not actively maintained)
+
+{lang="bash"}
+    apt install geoip-bin
+    geoiplookup cnn.com
+    GeoIP Country Edition: US, United States
+
+Better data can be received using the python library https://github.com/maxmind/GeoIP2-python.
+
+There is an offline database that is used or a maxmind.com online request db. Free trial available. It can return
+
+* continent
+* country
+* city
+* isp
+* asn
+* postcode
+* longitude/latitude (for pew pew maps)
+* anonymity status of ip (vpn,proxy, tor exit node)
+
+%% TODO: Experiment with python
+
+## NMAP
+
+A basic nmap scan on the server by
+
+{lang="bash"}
+    nmap -A 2sick.chickenkiller.com
+
+already results in
+
+* Open ports
+* Versions of serives running there
+* ssh hostkey names
+* ssl certificate details
+* OS
+
+%% TODO: https://nmap.org/book/nse.html
+
+%% TODO: What can shodan offer us here ?

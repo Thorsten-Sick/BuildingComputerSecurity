@@ -1,0 +1,48 @@
+# Python 3 features
+
+https://realpython.com/python37-new-features/
+
+Just in case I need them somewhere:
+
+## Advanced unpacking:
+a,*_,b = [1,2,3,4,5]
+
+## Keyword only arguments in functions:
+
+def function(a,b,*,kwonly=None)
+
+## Chained Exceptions
+
+## OSError Exception has subclasses
+
+## Everything is an iterator
+
+## Comparison is type safe
+
+"one" < 2    # => error
+
+## "yield from" generator
+
+## asyncio (@coroutine)
+
+## libraries
+
+* faulthandler catches so far uncatched exceptions
+* ipaddress
+* lru_cache decorator for caching
+* enums as class
+* dataclasses
+
+## Unicode variable names
+
+## annotation in function arguments and return values
+ Good for code checks, but not programming effect
+
+## file path handling
+
+from pathlib import Path
+(see there)
+
+## breakpoint()
+
+Replaces pdb.set_trace()
