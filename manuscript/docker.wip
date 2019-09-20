@@ -8,7 +8,7 @@ https://learning.oreilly.com/learning-paths/learning-path-docker/9781788997355/
 
 %% TODO: Docker security https://linux-audit.com/docker-security-best-practices-for-your-vessel-and-containers/
 
-%% TODO: Vulnerability scanner https://github.com/coreos/clair
+%% TODO: Vulnerability scanner https://github.com/coreos/clair Seems to be cool.
 
 %% TODO: https://github.com/docker/docker-bench-security
 

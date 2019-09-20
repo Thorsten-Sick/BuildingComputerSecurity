@@ -1,6 +1,8 @@
 
 Pagedout magazine: https://pagedout.institute/
 
+av-test threat intelligence: https://av-atlas.org
+
 ---------------
 
 https://github.com/cs01/gdbgui/
@@ -147,6 +149,16 @@ Fonts:
 https://fontawesome.com (icons)
 "Alle gut hackbar":
 https://www.fontzillion.com/fonts/barmee/afarat_ibn_blady
+
+Samurai Font (Brush Font)
+https://creativemarket.com/nurrehmettt/2646145-Fujimaru-Ninjas-Brush-Font
+
+-------------
+For presentations
+
+https://creativemarket.com/
+
+istockphoto.com
 -----------
 %% TODO: Anti Virus guidelines https://www.adlice.com/making-an-antivirus-engine-the-guidelines/
 Visuals
@@ -206,3 +218,12 @@ github.com/hasherezade/pe-sieve
 github.com/hasherezade/hollows_hunter
 
 https://github.com/Neo23x0/Loki
+
+--------------- Infrastruktur stress test / Chaos Engineering
+
+tools:
+* stress https://linux.die.net/man/1/stress
+* tc (traffic control) https://linux.die.net/man/8/tc
+* pumba (for docker) https://github.com/alexei-led/pumba
+* http://principlesofchaos.org
+* Book "Chaos Engineering"
