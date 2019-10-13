@@ -42,7 +42,7 @@ It is silently infecting systems and collecting data for the next OSINT supporte
 
 ## Initial access
 
-After targets are aquired the malware needs initial access to the victim systems. 0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
+After targets are acquired the malware needs initial access to the victim systems. 0 day vulnerabilities are very expensive and normally not used to attack ordinary victims.
 Many systems still have vulnerabilities fixed by the vendor in an unpatched state. Or the users are abused as phishing target to move the attack one step further through the attack chain. This is where phishing, social engineering and OSINT are relevant.
 
 The initial access phase is over as soon as the attacker can run any code on the victim systems.

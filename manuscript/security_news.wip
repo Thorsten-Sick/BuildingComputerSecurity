@@ -6,7 +6,7 @@
 %% Take only max. 3
 
 * Canto (Command line)
-* Akregator  (KDE)
+* Akregator  (KDE)s
 * Feed Reader (apt install feedreader)
 * Lifera
 * Quiet RSS
@@ -34,6 +34,7 @@ The hacker news: https://feeds.feedburner.com/TheHackersNews?format=xml
 * securelist.com (kaspersky)
 * blog.malwarebytes.com
 
+* https://krebsonsecurity.com/ A perspective focussing on the criminal side of hacker attacks
 
 * spuz.me security, pen testing
 * Virus Bulletin newsletter

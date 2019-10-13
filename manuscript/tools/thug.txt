@@ -65,7 +65,7 @@ Basic Thug commands:
 
 The resulting json data file will be in *<folder>/analysis/json/analysis.json*. It is large and quite detailed.
 
-Classifiers can be added to the analysis process. A classifier is a Yara rule. Examples can be found in the *thug/Cöassifier/rules/urlclassifier* directory - and parallel directories.
+Classifiers can be added to the analysis process. A classifier is a Yara rule. Examples can be found in the *thug/classifier/rules/urlclassifier* directory - and parallel directories.
 
 To add a hand written Yara rule to the analysis process, call thug with:
 
@@ -82,7 +82,7 @@ There are other classifiers besides urlclassifiers (that are matched on urls):
 * textclassifier
 * cookieclassifier
 
-The JavaScript classifier is only matching in JavaScripts. But it has the cool feature to scan after the JS has been eval-ed as well as directly scanning the script. That way it is breaking obfuscation in a generic way.
+The JavaScript classifier is only matching in Java-Scripts. But it has the cool feature to scan after the JS has been eval-ed as well as directly scanning the script. That way it is breaking obfuscation in a generic way.
 
 In other words:
 

@@ -94,7 +94,7 @@ You can then select which item to edit. The *Tab* key lets you switch.
 {lang="bash"}
     mitmproxy --mode regular -s scriptname.py
 
-* --mode sets the operation mode. The most intersting ones are *regular*, *transparent* and *socks5*
+* --mode sets the operation mode. The most interesting ones are *regular*, *transparent* and *socks5*
 * -s executes this script. You can use -s several times to run more than one script
 
 

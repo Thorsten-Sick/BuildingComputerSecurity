@@ -42,7 +42,7 @@
 
 **CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the HTTP header
 
-**CERT**: Computer Emergency Respinse Team. Handles security breaches in organisations or nations.
+**CERT**: Computer Emergency Response Team. Handles security breaches in organisations or nations.
 
 %% TODO: **CSRF & Cross site request forgery**
 
@@ -124,7 +124,7 @@
 
 **SIEM / Security Information and Event Management**: Collect and analyse different security relevant data into logs. Actions are triggered based on this data.
 
-**SOC / Security Operations Center**: The team running SIEMS in an organisation.
+**SOC / Security Operations Center**: The team running SIEMs in an organisation.
 
 **Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
 
