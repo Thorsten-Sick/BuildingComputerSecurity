@@ -1,2 +1,87 @@
+%%%%%%%%%%%%%%%%
+%% TODO: Remove - this is going into an own project
+%%%%%%%%%%%%%%%%
+
 Cheat sheet neural networks:
 https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
+
+
+## Supervised learning
+
+Tasks:
+
+* Classify
+* Predict a target numeric value (aka "regression") given features
+
+Examples:
+Training set given. Training set sorted by labels (HAM/SPAM).
+
+House price based on features
+
+
+Classificator is optimized until results are ok.
+
+## Unsupervised learning
+
+Machine tries to identify patterns in entry data. No goals or reward used.
+
+Tasks:
+
+* Clustering
+* Visualisation and dimensionality reduction
+* Association rule learning
+* Anomaly detection
+* Association rule learning (which features have relationships)
+
+Examples:
+
+* Clustering users into groups
+* Visualisation of semantic clusters in a dot-cloud graph
+* Dimensionality reduction = feature extraction
+
+## Semisupervised learning
+
+Clustering first. Getting the labels for the clusters later. The second step is supervised.
+
+## Reinforced learning
+
+"Learning by doing"
+
+
+%% TODO: Keras
+
+%% TODO: Tensorflow
+
+%% TODO: MAlware detection using AI
+
+%% TODO: Pytorch
+
+# Glossary
+
+* Reward
+* Penalty
+* Batch learning: Learn first, apply later
+* Incremental learning (online learning): Learn step by step and not in a single big batch. Good for data storage space
+* Learning rate: For Incremental learning systems. High=adapt to new, forget old. Low: More inertia
+* Generalization:
+* Instance based learning: New item is compared in similarity to existing items
+* Model based learning: Learning produces a model. This is used to make predictions
+* utility function = fitness function: measure how good a model is
+* cost function: measure how bad a model is
+* inference: Make predictions using a model on new data
+* sampling noise: Error in data set caused by having a bias in picking the training samples
+* Overfitting: The AI is trained to classify the training data only - but exactly.
+* Regularization: Simplify a model and reduce overfitting
+* hyperparameter: parameter of the learning algorithm, not the model
+* underfitting: Model is too simple
+* generalization error: Error rate on new samples
+* cross-validation: Split training set into (maybe) 10 groups. Learn with 9 of them, test with the remaining 1. Loop and use the other groups as test set
+* Regression: Goal is to predict a target value
+* RMSE Root Mean Square Error: Function to evaluate error of a system. Good for regression tasks
+* MAE Mean Absolute Error: Function to measure error (like RMSE). Good if there are many outliers.
+
+# Books
+
+"Hands-On Maching Learning with Scikit-Learn and TensorFlow"
+
+"Malware Data Science"
