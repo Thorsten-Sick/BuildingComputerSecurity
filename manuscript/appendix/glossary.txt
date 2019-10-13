@@ -42,6 +42,8 @@
 
 **CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the HTTP header
 
+**CERT**: Computer Emergency Respinse Team. Handles security breaches in organisations or nations.
+
 %% TODO: **CSRF & Cross site request forgery**
 
 **DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
@@ -92,6 +94,14 @@
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
 
+**UAF / Use After Free vulnerability**: Typical memory corruption bug
+
+%% TODO: Write article covering all types of memory bugs
+
+**IDS / Intrusion Detection System**: System or network monitor for anomalies that indicate malicious behaviour.
+
+**IPS / Intrusion Prevention System**: An IDS that can prevent attacks after detecting them.
+
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
 **Kill chain**: Phases of an attack
@@ -111,6 +121,10 @@
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 
 **Side Channel**: Using side effects to hack a system. For crypto a side channel can be timing differences between a right and a wrong password.
+
+**SIEM / Security Information and Event Management**: Collect and analyse different security relevant data into logs. Actions are triggered based on this data.
+
+**SOC / Security Operations Center**: The team running SIEMS in an organisation.
 
 **Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
 
