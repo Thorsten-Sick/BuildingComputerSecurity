@@ -292,6 +292,8 @@ and not the one you use for browsing for cat videos.
 
 ## Phishing
 
+%% TODO: https://twitter.com/JCyberSec_/status/1130793084957134848
+
 Phishing - social engineering users to get their credentials - will continue as
 it is a very powerful attack.
 
@@ -316,6 +318,8 @@ URL you protect the others by adding it to a blacklist.
 %% TODO: [Spear Phishing](https://securityaffairs.co/wordpress/75033/hacking/industrial-sector-spear-phishing.html)
 
 [Phishtank](https://www.phishtank.com)
+
+[Phishstats](https://phishstats.info)
 
 %% TODO [Certstream phishing catcher](https://github.com/x0rz/phishing_catcher)
 
