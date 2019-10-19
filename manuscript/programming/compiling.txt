@@ -204,9 +204,7 @@ A classic tool for Code analysis (C). Works out of the box and is a simple entry
 
 ### Special tool: Flawfinder
 
-As simple as Splint. Run it in your directory and it will point out risky
-regions of your code. As it is a "grep on speed" it will have it's limits. But
-use it and fix all bugs it finds before going to the next level.
+As simple as Splint. Run it in your directory and it will point out risky regions of your code. As it is a "grep on speed" it will have its limits. But use it and fix all bugs it finds before going to the next level.
 
 [Flawfinder has an own chapter](#chapter-flawfinder)
 

@@ -337,7 +337,7 @@ Tricks used:
 * before calling free, we check if memory pointer is already NULL
 * memory is set to 0 before freeing
     * freeing just "disconnects" the pointer
-    * memory is still there - and it's content
+    * memory is still there - and its content
     * without memset: next time someone requests memory, it can be pre-initialized with the old content
         * and this could be credentials and passwords
     * After calling *free* the pointer is set to NULL to prevent double-free issues

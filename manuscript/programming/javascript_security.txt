@@ -40,13 +40,10 @@ any kind of system:
 
 ## Use a linter: ESLint
 
-The closest you can get to compiler warnings in JS is a linter.
-Use it and respect it's warnings. Fix them.
+The closest you can get to compiler warnings in JS is a linter. Use it and respect its warnings. Fix them.
 
-Most important: Besides using those things in your IDE, also add them to the
-build system or VCS. That way everyone in your team automatically uses the
-same style and warnings will be throw even if someone makes a quick-fix
-using notepad.
+Most important: Besides using those things in your IDE, also add them to the build system or VCS. That way everyone in your team automatically uses the
+same style and warnings will be throw even if someone makes a quick-fix using notepad.
 
 ESLint has a very flexible system of config files. Where everything from a
 "project global" config file to "source-code-line" granular setting is possible.
@@ -148,3 +145,7 @@ I'll just list the moving parts for reference.
 * Grunt: JS task runner (automation), based on NodeJS: can be used for builds and similar
 * Bower: Package manager
 * Gulp: JS task automation, build system
+
+
+%% TODO: Add JS risky functions (eval and similar):
+%% eval(); new Function; setTimeout; setInterval

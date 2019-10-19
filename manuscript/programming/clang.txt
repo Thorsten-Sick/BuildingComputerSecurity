@@ -55,7 +55,7 @@ It will use the project's Makefile to build the project and analyse it afterward
 {lang="bash"}
     sudo apt install clang clang-tools
     sudo ln -s /usr/bin/llvm-symbolizer-6.0 /usr/bin/llvm-symbolizer   # Needed if several symbolizers are installed
-    scan-build <C-Compiler and it's settings>
+    scan-build <C-Compiler and its settings>
 
 %% TODO: [Available CLANG checks](https://clang-analyzer.llvm.org/available_checks.html)
 

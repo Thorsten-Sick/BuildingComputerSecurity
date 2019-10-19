@@ -8,7 +8,7 @@ C> For: Malware Analysts
 
 [Thug](https://github.com/buffer/thug) is a active low-interactive honey client to check web pages for exploits.
 
-You can find it's [Documentation online](https://thug-honeyclient.readthedocs.io/en/latest/)
+You can find its [Documentation online](https://thug-honeyclient.readthedocs.io/en/latest/)
 
 Thug uses lots of complicated 3rd party libraries. Some not properly maintained.
 PyV8. I am looking at you.

@@ -16,8 +16,7 @@ for targeted phishing.
 
 [recon-ng](https://bitbucket.org/LaNMaSteR53/recon-ng)
 
-It is written in python and create an own shell where you can execute it's
-modules to dig deeper and deeper into available data.
+It is written in python and create an own shell where you can execute its modules to dig deeper and deeper into available data.
 
 usage:
 
@@ -41,7 +40,7 @@ Every command has a detailed help
 
     Usage: show [companies|contacts|credentials|dashboard|domains|globals|hosts|info|inputs|keys|leaks|locations|modules|netblocks|options|ports|profiles|pushpins|repositories|schema|source|vulnerabilities]
 
-To load a module and show it's info, call
+To load a module and show its info, call
 
 {lang="bash"}
     [recon-ng][default] > use recon/domains-hosts/brute_hosts
