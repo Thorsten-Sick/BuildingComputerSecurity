@@ -113,7 +113,7 @@ Real-world-tests:
 
 A Virtual Machine gets prepared to simulate a normal system. A script surfs to an infected page. The whole product can now prevent infection of the system - or fail.
 
-This has it's own challenges for the testers.
+This has its own challenges for the testers.
 
 * Good: The whole product is tested
 * Bad: It is hard to simulate the exact infection vector of the malware

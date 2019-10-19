@@ -97,7 +97,7 @@ The secret key must be stored on an isolated system. Not a build machine and
 especially not the download server. You sign the update binary or config config
 prior to release with this key.
 
-You will want a second emergency key (it's public part also distributed to the clients).
+You will want a second emergency key (its public part also distributed to the clients).
 This one is stored in a safe. If the first key is compromised you can can
 revoke it and do an emergency update now binding the emergency key to the clients.
 

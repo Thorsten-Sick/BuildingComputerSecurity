@@ -47,11 +47,9 @@ A simplified handshake for browsers to web servers looks like
 ![Simplified TLS handshake](../images/tls_simple.png)
 
 The relevant part is where browser and server negotiate TLS version and Cipher suite.
-The browser offers all variants it can manage. The server selects the most
-secure one that matches it's own configured options.
+The browser offers all variants it can manage. The server selects the most secure one that matches its own configured options.
 
-To also support older browsers servers can have a set of weak and broken
-cipher suites in the option list.
+To also support older browsers servers can have a set of weak and broken cipher suites in the option list.
 
 For a more secure web site (banking) it could be wise to monitor the version
 of browsers connecting and weed out less secure fallback ciphers from the
@@ -160,13 +158,8 @@ But: **OCSP Stapling** solves this problem.
 
 ## OCSP Stapling
 
-Here the server serving the homepage does not only send the certificate but also
-a signed validation (signed by the validation server) that the certificate
-was not revoked. This validation has a time stamp and a very short time to life
-(minutes, not months). The for this reason the web-server has to renew the
-validation for it's own certificates quite often.
-This system fixes the OCSP problem because no extra connection from the client
-to a revocation server needs to be established.
+Here the server serving the homepage does not only send the certificate but also a signed validation (signed by the validation server) that the certificate was not revoked. This validation has a time stamp and a very short time to life (minutes, not months). The for this reason the web-server has to renew the validation for its own certificates quite often.
+This system fixes the OCSP problem because no extra connection from the client to a revocation server needs to be established.
 
 ## Key/Certificate lifetime
 

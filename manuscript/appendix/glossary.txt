@@ -146,6 +146,8 @@
 
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
+%% TODO: Trust boundary
+
 %% TODO: **XSS / Cross Site Scripting**:
 
 **Vulnerability**: A bug or a flaw that has security implications
@@ -168,7 +170,7 @@
 %% TODO: Responsible/full disclosure
 
 
-%% win32k - windows syscall containing lots of vulnerable GUI functionality - process can disable it's usage (research how) starting win8
+%% win32k - windows syscall containing lots of vulnerable GUI functionality - process can disable its usage (research how) starting win8
 %% NULL pointer de reference: in kernel process can access memory at NULL page (mitigation from win8+)
 
 %% SMEP Supervisory Mode Execution Prevention

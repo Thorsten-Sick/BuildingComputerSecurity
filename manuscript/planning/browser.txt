@@ -43,7 +43,7 @@ are built on the same foundations as Firefox or Chrome.
 
 A more basic checklist is that you ensure three things are secured:
 
-* The web server and it's content - it will be executed within your browser
+* The web server and its content - it will be executed within your browser
 * The network connection - TLS all the things
 * The client side: Browser and Extensions
 
@@ -179,8 +179,7 @@ But the same technology can be used to track users and observe them.
 In a browser blocking "Third party cookies" is a way to restrict information
 leakage. These cookies are set by sub-content in a web site from third parties.
 
-It is OK if the page offering a service to you is setting it's cookies. It is
-bad if every third party content does that.
+It is OK if the page offering a service to you is setting its cookies. It is bad if every third party content does that.
 
 %% TODO Cookie security. Not in scripts and encrypted only. Lifetime
 
@@ -339,7 +338,7 @@ name should be good reasons to have one or more pseudonyms.
 ### The Browser Hacker's Handbook
 
 [The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://www.safaribooksonline.com/search/?query=The%20Browser%20Hacker%27s%20Handbook)
-covers many attacks on web browsers. It's focus is on the BeEF framework.
+covers many attacks on web browsers. Its focus is on the BeEF framework.
 
 ### Web site for browser tests
 
@@ -401,8 +400,7 @@ is inserting them (hacked routers) into unencrypted pages.
 
 ## Pony / Fareit
 
-Pony, aka Fareit is a malware module. It is spread with other malware.
-It's main tasks is to collect passwords on a computer. It especially targets
+Pony, aka Fareit is a malware module. It is spread with other malware. Its main tasks is to collect passwords on a computer. It especially targets
 the internal password stores of browsers and FTP clients.
 
 Those passwords are sent to the attacker.
@@ -629,7 +627,7 @@ I focus on the urls relevant for security or general purpose. There are many mor
 
 %% TODO [Firefox breach detection](https://blog.mozilla.org/blog/2018/11/14/firefox-monitor-launches-in-26-languages-and-adds-new-desktop-browser-feature/?utm_content=buffer1c277&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 
-%% TODO: @icommitfelonies If a user on a compromised host is using Chrome, it's worth checking out their custom dictionary. C:\Users\targetUser\AppData\Local\Google\Chrome\User Data\Default\Custom Dictionary.txt
+%% TODO: @icommitfelonies If a user on a compromised host is using Chrome, its worth checking out their custom dictionary. C:\Users\targetUser\AppData\Local\Google\Chrome\User Data\Default\Custom Dictionary.txt
 %% TODO: [Browser hijacker](https://sensorstechforum.com/remove-searchesresult-browser-hijacker/)
 %% TODO [Data breaches and hacks](https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 %% TODO: [Security changes in Chrome 71](https://www.helpnetsecurity.com/2018/12/05/chrome-71-security-changes/)

@@ -64,7 +64,7 @@ For that reason this kind of tests is replaced by:
 ### Real-world protection tests
 
 Current malware is used to "infect" machines where a full AV product is running.
-The antivirus can use all it's features to protect the machine.
+The antivirus can use all its features to protect the machine.
 
 * URL blacklist
 * Static file scanning
@@ -115,10 +115,8 @@ your antivirus scanner.
 
 ## Windows Defender
 
-Windows Defender - pre-installed on Windows - is a kind of fallback if no other
-AV is installed. It improved it's detection rate over the last years and already
-offers a decent baseline. There are still good reasons to install 3rd party
-scanner. But from an engineering perspective you can expect:
+Windows Defender - pre-installed on Windows - is a kind of fallback if no other AV is installed. It improved its detection rate over the last years and already offers a decent baseline. There are still good reasons to install 3rd party scanner. But from an engineering perspective you can expect:
+
 **A current Windows with Defender has a decent scanner already installed**
 
 There are many drawbacks of having only the Defender as protection: Malware

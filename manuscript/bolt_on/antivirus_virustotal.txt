@@ -21,8 +21,7 @@ extra knowledge.
 6. Uploaded files are shared with AV vendors or other people with VirusTotal-API access
 7. It can be detected if a file has already been uploaded before. And when.
 
-VirusTotal accepts files, hashes, URLs, IPs and domains and checks them against
-multiple detection solutions and it's own history database.
+VirusTotal accepts files, hashes, URLs, IPs and domains and checks them against multiple detection solutions and its own history database.
 
 Now for specific use cases:
 
@@ -57,9 +56,7 @@ file locked away in your local quarantine.
 
 ## Submitting samples
 
-By uploading a sample to VirusTotal you are submitting it to the whole AV
-community. And they can cause trouble for the adversaries who wrote the malware
-by detecting it and it's siblings.
+By uploading a sample to VirusTotal you are submitting it to the whole AV community. And they can cause trouble for the adversaries who wrote the malware by detecting it and its siblings.
 
 This is a good thing and you should upload suspicious things. Just in case.
 

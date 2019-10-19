@@ -124,7 +124,7 @@ settings](#chapter-clang).
 
 ### JavaScript security
 
-I am a big fan of automated security tests. And JavaScript has it's own pitfalls.
+I am a big fan of automated security tests. And JavaScript has its own pitfalls.
 But those can be fixed by tools you can integrate seamlessly into your workflow. The [JavaScript security](#chapter-javascript-security) will show you the low hanging fruit.
 
 ## Testing
@@ -182,7 +182,7 @@ Especially myths make it hard to find the right way to use it. These chapters wi
 
 ### Antivirus tests
 
-How to properly read antivirus tests. As antivirus is neither a silver bullet nor useless a [proper estimation](#chapter-antivirus-tests) of it's power should be done first.
+How to properly read antivirus tests. As antivirus is neither a silver bullet nor useless a [proper estimation](#chapter-antivirus-tests) of its power should be done first.
 
 ### Antivirus integration
 

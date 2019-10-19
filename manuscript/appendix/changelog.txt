@@ -51,6 +51,12 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add antivirus_detection.wip
 %% TODO: Add conferences somehow
 
+## November
+
+%% Todo: Add Conferences and other sources
+
+* Spell and quality improvements
+
 ## August/September/October 2019
 
 * Improved *mitmproxy*

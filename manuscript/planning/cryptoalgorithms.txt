@@ -69,12 +69,10 @@ SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But
 if something should happen to it, there is SHA-3 with is based on a totally
 different internal principle.
 
-[BLAKE2](https://blake2.net/) was in the SHA-3 contest. It's main feature is
-speed. There are different variants optimized for different architectures.
-The core ones are:
+[BLAKE2](https://blake2.net/) was in the SHA-3 contest. Its main feature is speed. There are different variants optimized for different architectures. The core ones are:
 
-BLAKE2b: for 64 bit platforms
-BLAKE2s: For 8 to 32 bit platforms
+* BLAKE2b: for 64 bit platforms
+* BLAKE2s: For 8 to 32 bit platforms
 
 If you need speed, give it a chance.
 
