@@ -44,7 +44,7 @@ Older versions have vulnerabilities.
 
 A simplified handshake for browsers to web servers looks like
 
-![Simplified TLS handshake](../images/tls_simple.png)
+![Simplified TLS handshake](../../images/tls_simple.png)
 
 The relevant part is where browser and server negotiate TLS version and Cipher suite.
 The browser offers all variants it can manage. The server selects the most secure one that matches its own configured options.

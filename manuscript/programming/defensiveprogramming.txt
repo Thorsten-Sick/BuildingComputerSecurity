@@ -351,17 +351,14 @@ Improvements:
 
 %% TODO: Create focus chapters for different programming languages.
 
-## Memsad rabbit hole{#memsad}
+## Memsad rabbit hole {#memsad}
 
-Compiler optimisations can remove the call you used to clean the passwords
-from stored memory (where you memset the memory with "0").
+Compiler optimisations can remove the call you used to clean the passwords from stored memory (where you memset the memory with "0").
 
 There is a very cool [talk at 35C3 called "Memsad"](https://media.ccc.de/v/35c3-9788-memsad)
-covering this topic. You should **now watch** this talk. The rest of this
-section in the book will be just references for looking it up later.
+covering this topic. You should **now watch** this talk. The rest of this section in the book will be just references for looking it up later.
 
-To experiment with compiler optimisation this talk points to the cool
-[Compiler Explorer](https://godbolt.org/) page.
+To experiment with compiler optimisation this talk points to the cool [Compiler Explorer](https://godbolt.org/) page.
 
 * explicit_bzero (glibc)
 * SecureZeroMemory(Windows)
@@ -373,8 +370,7 @@ To experiment with compiler optimisation this talk points to the cool
 
 Compiler: *-fno-builtin-memset* (GCC, newer version of CLANG)
 
-The talk has lots of other options, but there are more specific and will only
-work in specific situations. Watch it.
+The talk has lots of other options, but there are more specific and will only work in specific situations. Watch it.
 
 ## Further reading
 

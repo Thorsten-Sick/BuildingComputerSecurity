@@ -54,8 +54,11 @@ changelog to make it simpler for you to find the new sections.
 ## November
 
 %% Todo: Add Conferences and other sources
+%% TODO: Fix compile errors
 
-* Spell and quality improvements
+* Spelling and quality improvements
+* fixed ../../images/tls_simple.png
+
 
 ## August/September/October 2019
 
@@ -64,6 +67,8 @@ changelog to make it simpler for you to find the new sections.
 * Added *kill chain*
 * Added the practical parts to *thug*
 * Extended *glossary*
+
+%% Maybe add chapter coding
 
 ## July 2019
 
