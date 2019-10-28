@@ -40,6 +40,8 @@ Move slowly. Test and verify before enabling the source and over-block.
 
 [Phishtank](https://www.phishtank.com/)
 
+[Phishstats](https://phishstats.info)
+
 ## Data breaches
 
 [Have I been pwned](https://haveibeenpwned.com/)

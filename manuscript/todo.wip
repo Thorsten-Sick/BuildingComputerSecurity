@@ -13,6 +13,10 @@ id-ransomware.malwarehunterteam.com
 
 Open Threat intelligence sharing: https://www.ssi.gouv.fr/en/actualite/opencti-the-open-source-solution-for-processing-and-sharing-threat-intelligence-knowledge/
 
+Kaspersky (blog + threat intelligence platform): https://eugene.kaspersky.com/2019/10/24/open-tip/
+
+https://pan-unit42.github.io/playbook_viewer/
+
 ---------------
 
 https://github.com/cs01/gdbgui/
@@ -153,6 +157,7 @@ https://www.epubli.de/
 https://www.bookmundo.de/
 http://www.bookmarket.com/ondemand.htm
 lulu.com
+packt publishing ?
 ----------
 Fonts:
 
@@ -244,3 +249,9 @@ tools:
 * pumba (for docker) https://github.com/alexei-led/pumba
 * http://principlesofchaos.org
 * Book "Chaos Engineering"
+
+
+--------------------------
+RTF File handling
+
+https://github.com/DidierStevens/DidierStevensSuite/blob/master/rtfdump.py

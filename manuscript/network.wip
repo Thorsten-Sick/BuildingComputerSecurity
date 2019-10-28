@@ -1,3 +1,9 @@
+## Grabbing IP addresses from ASN
+
+whois -h whois.radb.net -- '-i origin AS36459' |grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
+
+by @notdan
+
 ## NMAP
 
 https://linux-audit.com/linux-host-discovery-with-nmap/
