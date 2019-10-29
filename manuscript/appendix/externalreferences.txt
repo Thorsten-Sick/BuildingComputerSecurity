@@ -1,6 +1,8 @@
 # External references and resources {#chapter-references}
 
+In addition to the references spread in the chapters - most often as "Further reading" - here is an extended list of hacking and security resources.
 
+## Books
 
 ### Book: Practical Internet of Things Security {#reference-book-practical-iot-security}
 
@@ -64,8 +66,6 @@ IoT Penetration Cookbook by Aaron Guzman, Aditya Gupta
 
 Wide spectrum of offensive technologies. Good to create a checklist what to protect. Be prepared to read more in-depth books for the technologies you are interested in.
 
-## The human mind
-
 ### Book: Pragmatic Thinking and Learning {#reference-book-pragmatic-thinking-and-learning}
 
 Pragmatic Thinking and Learning, by Andy Hunt
@@ -89,16 +89,106 @@ A book showing typical anti-patterns that just happen in larger (software)
 projects. Your project will also suffer from some of those. Read this to
 understand those patterns and learn how to eliminate them.
 
+## Conferences
+
+An important criterium for conferences added here is online publication of talks and papers.
+
+When you know where to look you will find lots of awesome conferences with different priorities and a different focus.
+
+### CCC
+
+The Chaos Computer Club has several conferences in Germany. Those have different focus and size. If you are interested in computer security, the MRMCD and the Congress are the most valuable ones for you. Talks are recorded and can be found on [media.ccc.de](https://media.ccc.de)
+
+### Usenix (scientific security conference)
+
+[Usenix](https://www.usenix.org/) is a high tech security and academic conference. Bleeding edge technology but a bit harder to get it into a product than with other conferences.
+
+[Usenix 2016](https://www.usenix.org/conference/usenixsecurity16/technical-sessions)
+
+[Usenix 2017](https://www.usenix.org/conference/usenixsecurity17/technical-sessions)
+
+[Usenix 2018](https://www.usenix.org/conference/usenixsecurity18/technical-sessions)
+
+[Usenix 2019](https://www.usenix.org/conference/usenixsecurity19/technical-sessions)
+
+### Hack.lu
+
+[Hack.lu](https://hack.lu/) is a security conference in Luxembourg. Talks are recorded, but it seems there is no central storage besides Youtube where you can find them.
+
+### Blackhat
+
+Blackhat is a security conference with events in US, Europa and Asia (so don't get confused).
+
+[Blackhat USA 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsWrfkjwFSI256x1u2Zy49VI)
+
+### Virus Bulletin
+
+[Virus Bulletin](https://www.virusbulletin.com/) is an Anti-Virus community magazine, tester and conference.
+
+Especially the conference has in-depth talks covering malware and malware actors. Some of those talks can be found on Youtube.
+
+[Virus Bulletin videos](https://www.youtube.com/user/virusbtn/videos)
+
+## Blogs
+
+Blogs are a good resource for in-depth malware analysis or content of almost any complexity.
+I suggest you check out which ones cover topics you are interested in and then start monitoring them for changes.
+
+Security perspective from a bank, check out articles, blogs, handbooks, whitepapers: [Bank indosecurity](https://www.bankinfosecurity.com)
+
+Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/category/research-and-intelligence.html)
+
+[Team Cymru blog](https://blog.team-cymru.com/) covers threat intelligence.
+
+[Malware must die blog](https://blog.malwaremustdie.org/) contains malware information
+
+[Malware don't need coffee](https://malware.dontneedcoffee.com/blog/) focusses on Exploit kits and their distribution.
+
+[Cybercrime Magazine](https://cybersecurityventures.com/) focusses more on the crime aspect.
+
+Also [Brian Krebs](https://krebsonsecurity.com/) is very well known for his investigations into the crime part of the topic.
+
+To stay in the world of crime: [Europol](https://www.europol.europa.eu/newsroom/news/) will also cover it. But not focussed on computer security.
+
+The Anti Virus companies also have blogs. Sometimes several blogs. With a focus on end-users or tech nerds. Those can vary in depth.
+
+* [Emsisoft](https://blog.emsisoft.com/en/)
+* [Kaspersky](https://www.kaspersky.com/blog/)
+* [Bitdefender](https://hotforsecurity.bitdefender.com/)
+
+Just to name a few.
+
+## News
+
+Hacker news portals:
+
+* [The hacker news](https://thehackernews.com/)
+
+## Podcasts
+
+* Security Now
+* The Silver Bullet
+* Darknet Diaries
+
+## Magazines
+
+Magazines (called Zines) are a prt of the hacker culture. And they still exist.
+
+* [Pagedout magazine](https://pagedout.institute/)
+* [POC or GTFO](https://pocorgtfo.hacke.rs/) Also available on other mirrors and as books
+
+## Videos
+
+%% TODO: Talks on video: https://administraitor.video/
+
+* [Hak5](https://shop.hak5.org/pages/videos)
 
 
 
-## Testing projects
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-## Getting used to security
-
-A list of easy to read books (even for non-tech people) that can be used to
-introduce people into the shady world of security
 
 ## Workshops
 
