@@ -1,3 +1,5 @@
+%% TODO: BSides https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG
+
 # External references and resources {#chapter-references}
 
 In addition to the references spread in the chapters - most often as "Further reading" - here is an extended list of hacking and security resources.
@@ -183,32 +185,43 @@ Magazines (called Zines) are a prt of the hacker culture. And they still exist.
 
 * [Hak5](https://shop.hak5.org/pages/videos)
 
+## Workshops and trainings
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-## Workshops
-
-%% TODO: [Open Security Training](http://opensecuritytraining.info/Training.html)
-%% [Reverse Engineering for Beginners](https://www.begin.re/)
+* [Open Security Training](http://opensecuritytraining.info/Training.html)
+* [Reverse Engineering for Beginners](https://www.begin.re/)
 
 
 ## CTF
-%% TODO: [Awesome CTF](https://apsdehal.in/awesome-ctf/)
 
-%% TODO [Gruyere CTF](https://google-gruyere.appspot.com/)
+Capture the flags (CTF) are challenges to test your own skills in hacking.
+A good way to do that wihtout committing any crimes.
+
+* [Gruyere CTF](https://google-gruyere.appspot.com/)
+* [Vulnhub](https://www.vulnhub.com/)
+* [CTF by Samsung](https://research.samsung.com/sctf)
+* [CTF list](https://captf.com/practice-ctf/)
+
+
+Background and some help:
+
+* [Awesome CTF](https://apsdehal.in/awesome-ctf/)
+
+There are also CTF competitions:
+
+* [https://ctftime.org/](https://ctftime.org/)
 
 %% [Vulnerable Web Applications](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
-%% [More CTF](https://twitter.com/realgam3/status/1009805751894896640?s=09)
-
-%% [CTF writeups](https://github.com/VulnHub/ctf-writeups/tree/master/2017/alexctf)
-%% [CTF by Samsung](https://research.samsung.com/sctf)
 
 
-## Economics
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% ## Economics
 
 %% [Time for attackers and defenders](https://www.recordedfuture.com/cyber-operations-time/)
 %% [Malware economics](https://www.techrepublic.com/article/starting-at-40-hackers-can-attack-your-business-with-services-bought-on-the-dark-web/#ftag=RSS56d97e7)
