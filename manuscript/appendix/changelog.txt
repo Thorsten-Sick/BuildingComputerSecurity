@@ -45,22 +45,21 @@ changelog to make it simpler for you to find the new sections.
 
 %% Add lolbas / lolbins. Currently in malware. Maybe make attacker tactics page
 
-%% TODO: Full quality check "planning section"
+
 %% TODO: Add and finish "artificial_intelligence"
 %% TODO: Add viruslab.wip
 %% TODO: Add antivirus_detection.wip
-%% TODO: Add conferences somehow
+
 
 ## November
 
-%% Todo: Add Conferences and other sources
-%% TODO: Fix compile errors
-
 %% TODO: Check recon-ng repo: https://github.com/lanmaster53/recon-ng
+
+%% TODO: Full quality check "planning section"
 
 * Spelling and quality improvements
 * fixed ../../images/tls_simple.png
-
+* Adding [Recon-NG](#chapter-recon-ng)
 
 ## August/September/October 2019
 

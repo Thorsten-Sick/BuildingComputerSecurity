@@ -57,6 +57,7 @@ bolt_on/sources.txt
 offense/part_offense.txt
 offense/intro.txt
 offense/kill_chain.txt
+offense/recon-ng.txt
 offense/google_dork.txt
 offense/beef.txt
 offense/burp.txt

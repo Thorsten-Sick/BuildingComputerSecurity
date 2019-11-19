@@ -228,6 +228,10 @@ tricks and tactics of Offense. The basics are covered here.
 A [kill chain](#chapter-kill-chain) is a typical structure of an attack. With different steps happening in between "the attacker decided to attack" and "the attack succeeded and is spending the stolen money".
 A kill chain can be interrupted at any stage. Knowing kill chains will help the defender.
 
+### Recon NG
+
+An early part of manual attacks is reconnaissance of the target. There are several tools helping the attacker doing that. The same tools help defenders estimate their attack surface. One of those is [Recon-NG](#chapter-recon-ng).
+
 ### Google Dorks
 
 [Google Dorks](#chapter-google-dork) are simple reconnaissance tricks
