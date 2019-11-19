@@ -1,20 +1,15 @@
 # Recon-NG {#chapter-recon-ng}
 
-Recon-NG is a Web Reconnaissance framework. It can be used to investigate
+[Recon-NG](https://github.com/lanmaster53/recon-ng) is a Web Reconnaissance framework. It can be used to investigate
 web pages, people, companies and their connections with each other.
 
-One strength is that it is using 3rd party info and does not necessarily
-directly connect to the target.
+One strength is that it is using 3rd party info and does not necessarily directly connect to the target.
 
 That way the target will not know "what is coming".
 
-If you are a potential target, it is smart to test this tool and try to find
-all the traces your employees and you left online.
+If you are a potential target, it is smart to test this tool and try to find all the traces your employees and you left online.
 
-PGP keys, mail addresses and Linked In profiles for example are good resources
-for targeted phishing.
-
-[recon-ng](https://bitbucket.org/LaNMaSteR53/recon-ng)
+PGP keys, mail addresses and Linked In profiles for example are good resources for targeted phishing.
 
 It is written in python and create an own shell where you can execute its modules to dig deeper and deeper into available data.
 
@@ -88,9 +83,6 @@ To execute a module, load it, set the configuration and execute it.
     SOURCE => domain.com
     [recon-ng][default][brute_hosts] > run
 
-
-
-
 Show installed modules
 
 {lang="bash"}
@@ -114,9 +106,9 @@ For example uses *profiles* that have already been collected to find *repositori
 
 Some cool modules:
 
-Find hosts in a domain: recon/domains-hosts/certificate_transparency
+* Find hosts in a domain: recon/domains-hosts/ certificate_transparency
 
-
+%% TODO: Find more modules
 
 The last command you will need is
 
@@ -124,3 +116,5 @@ The last command you will need is
     exit
 
 To exit the special shell.
+
+%% TODO: Further reading
