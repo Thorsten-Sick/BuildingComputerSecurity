@@ -25,3 +25,5 @@ for vulnerabilities.
 [The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws, 2nd Edition](https://learning.oreilly.com/library/view/the-web-application/9781118026472/)
 
 %% TODO: [Auto repeater](https://github.com/nccgroup/autorepeater)
+
+%% TODO: PagedOut2, 58: Android certificate tricks
