@@ -134,6 +134,10 @@
 
 **Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
 
+%% TODO ROP
+
+%% TODO SROP (pagedOut 2, p 54)
+
 **SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
 
 **Spear Phishing**: Targeted phishing. Learn about the target first to create better social engineering attack
