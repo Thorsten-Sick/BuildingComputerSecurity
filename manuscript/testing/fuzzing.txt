@@ -183,6 +183,11 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 * Fix found bugs ASAP, so your fuzzer can dig deeper
     * There are smart fuzzers that can cluster the crashes by the bugs they very likely belong to
 
+## Further reading
+
+Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/download/PagedOut_002_beta2.pdf) contains a good check list for your fuzzing project.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% TODO: [Clusterfuzz](https://opensource.googleblog.com/2019/02/open-sourcing-clusterfuzz.html)
 
 %% TODO run under Valgrind or strace or gdb
