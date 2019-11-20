@@ -6,30 +6,23 @@ C> For: Architects, Developers, Tester
 
 ## Basics
 
-Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It
-behaves very differently from normal Bluetooth behaviour with the benefit of
+Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It behaves very differently from normal Bluetooth behaviour with the benefit of
 significantly lower power consumption.
 
-It does not maintain a longer connection (like used by classical Bluetooth
-and streaming audio) but uses small data bursts to exchange data snippets.
+It does not maintain a longer connection (like used by classical Bluetooth and streaming audio) but uses small data bursts to exchange data snippets.
 
 Those data snippets are basically key-value pairs.
 
-A key is called a "characteristic". Several characteristics can be combined
-into a service. A device can have several services. For example one handling
-all the device specific data (brand, model, version) while another is sharing
+A key is called a "characteristic". Several characteristics can be combined into a service. A device can have several services. For example one handling all the device specific data (brand, model, version) while another is sharing
 measurements (temperature, air pressure, ...)
 
-There are also "profiles" which are standardized services/characteristics for
-a ble device. The "Heart Rate monitor" profile for example allows any heart
+There are also "profiles" which are standardized services/characteristics for a ble device. The "Heart Rate monitor" profile for example allows any heart
 rate monitor device to be compatible with a range of apps.
 
 A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
-I am using Kali Linux for many of my tests/attacks on my devices. Sometimes it
-can be hard to find a Bluetooth device that is working correctly
-(my built-in Bluetooth adapter of my laptop fails). So search your drawers for
-a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
+I am using Kali Linux for many of my tests/attacks on my devices. Sometimes it can be hard to find a Bluetooth device that is working correctly
+(my built-in Bluetooth adapter of my laptop fails). So search your drawers for a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 
 ## Potential attacks
 
@@ -46,17 +39,12 @@ List of potential attacks for threat modelling:
 * MITM by cloning device. If encryption was established before, the connection will not work. The user will very likely delete/re-pair and end up paired with the attacking device
 * Unpairing: Force devices to unpair. When re-pairing happens, sniff and use *Crackle* to break encryption
 
-Not all of those potential attacks will be relevant for your use case. But
-consider all of them in your scenario. Bluetooth is a cool technology. But
-compared to a wired connection it adds complexity and increases the
-attack surface.
+Not all of those potential attacks will be relevant for your use case. But consider all of them in your scenario. Bluetooth is a cool technology. But
+compared to a wired connection it adds complexity and increases the attack surface.
 
 ## BLE Security
 
-BLE security is weaker than the Bluetooth classic security. Limiting factor is
-the pairing of devices. It requires a pin number to be entered - but with small
-and cheap devices without human interaction (keypad, display) this is hard
-to achieve.
+BLE security is weaker than the Bluetooth classic security. Limiting factor is the pairing of devices. It requires a pin number to be entered - but with small and cheap devices without human interaction (keypad, display) this is hard to achieve.
 
 The options for pairing are:
 
@@ -65,18 +53,14 @@ The options for pairing are:
 * Passkey Entry
 * Out of Band (OOB)
 
-Where the first three options have drawbacks: either an all 0 key (just works)
-or short keys (all the others). The thing to go for is OOB: The pairing is
-done over an other channel - not over the air. This can be NFC or QR codes or
-an attached wire. Secure but not an option for many device classes.
+Where the first three options have drawbacks: either an all 0 key (just works) or short keys (all the others). The thing to go for is OOB: The pairing is
+done over an other channel - not over the air. This can be NFC or QR codes or an attached wire. Secure but not an option for many device classes.
 
 The [Bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) has more details.
 
-Also: With Bluetooth 4.2 Elliptic Curve Diffie Hellman (ECDH) is introduced.
-Try to be compatible with this version or better !
+Also: With Bluetooth 4.2 Elliptic Curve Diffie Hellman (ECDH) is introduced. Try to be compatible with this version or better !
 
-More on BLE security in the [official BLE security standard](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en)
-or the basics in [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
+More on BLE security in the [official BLE security standard](https://www.bluetooth.com/~/media/files/specification/bluetooth-low-energy-security.ashx?la=en) or the basics in [BLE security basics](https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security)
 
 %% TODO Experiment: Can we exchange keys using bluetoothctl ?
 %% [Pairing key](https://github.com/IanHarvey/bluepy/issues/227)
@@ -85,13 +69,10 @@ or the basics in [BLE security basics](https://eewiki.net/display/Wireless/A+Bas
 
 ## Nordic Semiconductor: nRF Connect
 
-The simplest tool to support you in testing a ble device you are developing is
-an Android tool by Nordic Semiconductor. As you can not see radio frequencies
-you have to fall back to this. Just install **nRF Connect App** and scan for
+The simplest tool to support you in testing a ble device you are developing is an Android tool by Nordic Semiconductor. As you can not see radio frequencies you have to fall back to this. Just install **nRF Connect App** and scan for
 devices. Connect to them, list their Services and Characteristics.
 
-For automatic testing you will later want some other things. Just continue
-reading.
+For automatic testing you will later want some other things. Just continue reading.
 
 ## Basic OS tools
 
@@ -145,8 +126,7 @@ W> Same author, different tool, different UI. More awesome.
 W> This part of the book will soon be updated.
 
 A tool for Bluetooth le hacking - and testing - is [bleah](https://github.com/evilsocket/bleah).
-It can enumerate devices, list their services, list the characteristics and
-write to them. This is very handy when developing Bluetooth LE enabled devices.
+It can enumerate devices, list their services, list the characteristics and write to them. This is very handy when developing Bluetooth LE enabled devices.
 
 It was developed by [Evilsocket](https://www.evilsocket.net/).
 
@@ -171,8 +151,7 @@ Set a specific value
 * -d value to set
 * -b <MAC> mac address of target
 
-Bleah can be a bit slow (especially when doing fuzzing).
-Gatttool can be an alternative for writing to characteristics:
+Bleah can be a bit slow (especially when doing fuzzing). Gatttool can be an alternative for writing to characteristics:
 
 {lang="bash"}
     gatttool -b 30:ae:a4:1c:0c:26 --char-write-req -a 0x0039 -n $(echo -n "200"|xxd -ps)
@@ -188,11 +167,9 @@ Bleah is based on bluepy - which you can use directly by writing a python tool.
 
 ## Bluepy - python library for Bluetooth le
 
-[Bluepy](https://github.com/IanHarvey/bluepy) is the library to use for
-Bluetooth LE programming.
+[Bluepy](https://github.com/IanHarvey/bluepy) is the library to use for Bluetooth LE programming.
 
-Thanks to a good [documentation](https://ianharvey.github.io/bluepy-doc/) it
-is simple to write short python scripts to interact with your device.
+Thanks to a good [documentation](https://ianharvey.github.io/bluepy-doc/) it is simple to write short python scripts to interact with your device.
 
 %% TODO Add examples
 
@@ -204,17 +181,13 @@ is simple to write short python scripts to interact with your device.
 
 ## BlueZ
 
-BlueZ is the Linux kernel part (and user space tools) for Bluetooth.
-Bluepy sits on top of BlueZ
+BlueZ is the Linux kernel part (and user space tools) for Bluetooth. Bluepy sits on top of BlueZ
 
 ## Adafruit Bluetooth LE sniffer
 
-So far we have been checking the higher OSI layers. If you want to go down to
-single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer"
-and the "Ubertooth".
+So far we have been checking the higher OSI layers. If you want to go down to single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer" and the "Ubertooth".
 
-Experimenting with the Adafruit I got challenged by some glitches
-(maybe my fault -or the tools are better tested with the Ubertooth).
+Experimenting with the Adafruit I got challenged by some glitches (maybe my fault -or the tools are better tested with the Ubertooth).
 
 [Adafruit Bluefruit LE Sniffer - Bluetooth Low Energy (BLE 4.0) - nRF51822 - v3.0](https://www.adafruit.com/product/2269)
 
@@ -225,8 +198,7 @@ Call it with:
 {lang="bash"}
   python sniffer.py  /dev/ttyUSB0
 
-After selecting a device it will log the BTLE messages for this device
-connection into a pcap file.
+After selecting a device it will log the BTLE messages for this device connection into a pcap file.
 
 To view it properly with wireshark, define the **DLT_USER id** to be "btle":
 Preferences->Protocols->DLT_USER, set ID as "btle".
@@ -260,18 +232,14 @@ See the [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issue
 
 ### Crackle: BTLE key cracking
 
-For some attacks it is relevant that the Bluetooth le key is cracked first.
-With crackle it is possible - but requires a dump of the Bluetooth packets
-during the pairing process. This is the tricky part. The Adafruit sniffer or
-Ubertooth can do that.
+For some attacks it is relevant that the Bluetooth le key is cracked first. With crackle it is possible - but requires a dump of the Bluetooth packets
+during the pairing process. This is the tricky part. The Adafruit sniffer or Ubertooth can do that.
 
 [Crackle description](https://lacklustre.net/projects/crackle/)
 [Crackle on Github](https://github.com/mikeryan/crackle/)
 
-Input file must contain the **complete** pairing conversation or it will not
-work. The *tests* folder of the crackle packet has some pcaps to start
-experimenting with it. Better to start with them than wasting time debugging
-your tools - just because the pcap you dumped is incomplete.
+Input file must contain the **complete** pairing conversation or it will not work. The *tests* folder of the crackle packet has some pcaps to start
+experimenting with it. Better to start with them than wasting time debugging your tools - just because the pcap you dumped is incomplete.
 
 Getting the LTK key:
 
@@ -283,22 +251,17 @@ Decrypting the pcap:
 {lang="bash"}
      crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
 
-The Adafruit sniffer seems to produce a different pcap than Ubertooth and I
-had to convert my pcaps before processing with Crackle. Thanks to the internet
+The Adafruit sniffer seems to produce a different pcap than Ubertooth and I had to convert my pcaps before processing with Crackle. Thanks to the internet
 for help. More about how to [convert PCAP](https://github.com/mikeryan/crackle/issues/26)
 
 ## Training: BLE CTF (Capture the Flag)
 
-There is a software for cheap ESP32 controllers to test you hacking skills
-(and especially the tools listed in this chapter). It is
-a [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf). Just install it
-as described and start testing your tools.
+There is a software for cheap ESP32 controllers to test you hacking skills (and especially the tools listed in this chapter). It is
+a [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf). Just install it as described and start testing your tools.
 
-Hint: You will need several of the tools listed in this book. And maybe some simple bash
-scripting or python programming.
+Hint: You will need several of the tools listed in this book. And maybe some simple bash scripting or python programming.
 
-As the ESP32 is a good eval board (with an own SDK or the Android SDK) I'll
-just drop some links for this as well.
+As the ESP32 is a good eval board (with an own SDK or the Android SDK) I'll just drop some links for this as well.
 
 * [ESP IDF Documentation](https://esp-idf.readthedocs.io/en/latest/get-started/#)
 * [ESP IDF Code](https://github.com/espressif/esp-idf)
@@ -314,26 +277,21 @@ just drop some links for this as well.
 
 There is a list of books, talks and tools.
 
-BTLE is a complex topic and depending on your learning style you should
-either start at the *hands-on* side or at the *theoretical* side.
+BTLE is a complex topic and depending on your learning style you should either start at the *hands-on* side or at the *theoretical* side.
 
-No matter where you start, it is very likely that you will also need some
-(cheap) btle tools and products.
+No matter where you start, it is very likely that you will also need some (cheap) btle tools and products.
 
 ### Book: Make: Bluetooth {#reference-book-make-bluetooth}
 
 [Make: Bluetooth, by Don Coleman; Sandeep Mistry; Alasdair Allan](https://www.safaribooksonline.com/library/view/make-bluetooth/9781680451108/)
 
-A Bluetooth LE book. For people who prefer to learn with their hands.
-Lots of Arduino and NodeJS based projects.
+A Bluetooth LE book. For people who prefer to learn with their hands. Lots of Arduino and NodeJS based projects.
 
 It is not mentioning security. But a good way to get you started.
 
 ### Book: IoT Projects with Bluetooth Low Energy {#reference-book-iot-projects-with-bluetooth-low-energy}
 
-[IoT Projects with Bluetooth Low Energy by Madhur Bhargava](https://www.safaribooksonline.com/library/view/iot-projects-with/9781788399449/). Still a hands-on
-book. But the *Make: Bluetooth* is simpler. This one has more theory.
-It also covers BTLE 5.0
+[IoT Projects with Bluetooth Low Energy by Madhur Bhargava](https://www.safaribooksonline.com/library/view/iot-projects-with/9781788399449/). Still a hands-on book. But the *Make: Bluetooth* is simpler. This one has more theory. It also covers BTLE 5.0
 
 
 %% TODO: Add this
@@ -389,8 +347,7 @@ Very dense talk on Bluetooth LE security.
 
 [Lockpicking in the IoT](https://media.ccc.de/v/33c3-8019-lockpicking_in_the_iot)
 
-Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*.
-Relevant if you want to create IoT locks.
+Very specific for BLE locks. Some mentioning of *mitmproxy* and *ble sniffers*. Relevant if you want to create IoT locks.
 
 
 %% TODO: Review [Practical guide to BLE](https://blog.attify.com/the-practical-guide-to-hacking-bluetooth-low-energy/)

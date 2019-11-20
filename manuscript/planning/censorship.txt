@@ -2,52 +2,40 @@
 
 C> By: Thorsten Sick
 
-The original internet was planned with lots of resilience. Even if parts of
-the internet have failures, the rest will route around it.
+The original internet was planned with lots of resilience. Even if parts of the internet have failures, the rest will route around it.
 
-Centralisation has added dependencies on a few companies.
-This results in accidental outages or planned censorship.
+Centralisation has added dependencies on a few companies. This results in accidental outages or planned censorship.
 
 Both are totally contrary to the spirit of the internet.
 
-By engineering *resilience* into the software you can protect from
-outages.
+By engineering *resilience* into the software you can protect from outages.
 
-If you are not building a system but administrating one, there are several tools
-that add redundancy to your current tool set. Especially by disconnecting from
-centralized services.
+If you are not building a system but administrating one, there are several tools that add redundancy to your current tool set. Especially by disconnecting from centralized services.
 
-The tricky thing: You have to install those programs before the internet fails.
-And regularly use them to be sure they are operational in case of emergency.
+The tricky thing: You have to install those programs before the internet fails. And regularly use them to be sure they are operational in case of emergency.
 
-The programs you currently use will not have to be replaced. Just have
-those additional programs installed as well.
+The programs you currently use will not have to be replaced. Just have those additional programs installed as well.
 
 ## Mapping censorship
 
-There are several projects mapping internet failures. This can be
-censorship (Turkey) or power outages causing internet downtime (Venezuela).
+There are several projects mapping internet failures. This can be censorship (Turkey) or power outages causing internet downtime (Venezuela).
 
 ### OONI by the Tor project
 
-[Oooni](https://ooni.torproject.org/) has globally distributed sensors
-measuring the reach-ability of services. Data can be accessed on a map, by a
+[Oooni](https://ooni.torproject.org/) has globally distributed sensors measuring the reach-ability of services. Data can be accessed on a map, by a
 list of "best of censorship" events and by an API.
 
-The project is Open Source and there is a description how to set up a sensor
-on a Raspberry Pi.
+The project is Open Source and there is a description how to set up a sensor on a Raspberry Pi.
 
 The whole project is part of the Tor project.
 
 ### Netblocks
 
-[Netblocks](https://netblocks.org) is run by a civil society group.
-Focus is more on written reports based on special internet outage events.
+[Netblocks](https://netblocks.org) is run by a civil society group. Focus is more on written reports based on special internet outage events.
 
 ### Blocked.org.uk
 
-[Censored pages in UK](https://www.blocked.org.uk/). UK has a voluntary
-filter for <18 content. This is over-blocking.
+[Censored pages in UK](https://www.blocked.org.uk/). UK has a voluntary filter for <18 content. This is over-blocking.
 
 This site tests and monitors specific sites.
 
@@ -59,13 +47,10 @@ Basic countermeasures are based on "have a plan B". Redundancy.
 
 #### Jabber + OMEMO
 
-Jabber is a chat software.
-Jabber (aka XMPP) is like E-Mail: You can have an address at any
-[Jabber server](https://list.jabber.at), use any kind of Jabber client
-to access it and contact everyone with a Jabber account.
+Jabber is a chat software. Jabber (aka XMPP) is like E-Mail: You can have an address at any
+[Jabber server](https://list.jabber.at), use any kind of Jabber client to access it and contact everyone with a Jabber account.
 
-OMEMO is the encryption technology for Jabber. Just activate it in your
-client and done.
+OMEMO is the encryption technology for Jabber. Just activate it in your client and done.
 
 There a different Jabber clients for example:
 
@@ -74,24 +59,19 @@ There a different Jabber clients for example:
 
 Jabber is de-centralized and this makes it very resilient.
 
-There is also no central directory of user names. Pro: No one is tracking
-you or your network. Con: You have to give your friends your Jabber address.
+There is also no central directory of user names. Pro: No one is tracking you or your network. Con: You have to give your friends your Jabber address.
 
 #### Signal
 
-Signal is a free client for mobile phones with a very good encryption.
-The Con: There is a central directory. Pro: As soon as you register on
+Signal is a free client for mobile phones with a very good encryption. The Con: There is a central directory. Pro: As soon as you register on
 Signal, all your address book contacts that also use Signal will be in your Signal-connections-list.
 
 Similar to WhatsApp. But without Facebook.
 
 #### Threema
 
-Threema is a mobile phone communication app. It is cheap but not free.
-Also: It is closed source - but is getting security reviews.
-The encryption and the feature set are good and it is a very good messenger
-and simple to use.
-I especially like the (optional) key verification that forces people to meet
+Threema is a mobile phone communication app. It is cheap but not free. Also: It is closed source - but is getting security reviews. The encryption and the feature set are good and it is a very good messenger
+and simple to use. I especially like the (optional) key verification that forces people to meet
 in person and confirm their identity by scanning a QR code. Intuitive and secure.
 
 #### Telegram
@@ -108,21 +88,15 @@ Use it but be aware: It is less secure to spying attempts than the other messeng
 
 #### Tor browser
 
-The Tor browser is hiding your tracks on the internet. Just install it.
-It will look like a Firefox browser with a few extra options. You can ignore
-them - the defaults are OK.
+The Tor browser is hiding your tracks on the internet. Just install it. It will look like a Firefox browser with a few extra options. You can ignore them - the defaults are OK.
 
-The Tor trick: Your data is sent encrypted over three "Tor nodes" to hide you
-from the internet.
+The Tor trick: Your data is sent encrypted over three "Tor nodes" to hide you from the internet.
 
-Some very restrictive states limit the Tor browser. For those there are extra
-modes to exit their internet.
+Some very restrictive states limit the Tor browser. For those there are extra modes to exit their internet.
 
-The Tor browser can access special ".onion" URLs. That is the Dark part of
-the web.
+The Tor browser can access special ".onion" URLs. That is the Dark part of the web.
 
-This may sound spooky. But even Facebook has a an entry door on the Dark side
-of the web. [Facebook on Tor](https://www.facebookcorewwwi.onion/)
+This may sound spooky. But even Facebook has a an entry door on the Dark side of the web. [Facebook on Tor](https://www.facebookcorewwwi.onion/)
 So it is is not as big a thing as you may think.
 
 Install the Tor browser and give it a try. You may not need it now. But maybe later.
@@ -132,29 +106,21 @@ Install the Tor browser and give it a try. You may not need it now. But maybe la
 
 ### Network infrastructure
 
-In some regions the web coverage is under-developed. For some political
-reasons that is quite common in Germany. The [Freifunk](https://freifunk.net/)
-project is offering free WiFi under the SSID "Freifunk". Just connect and use
-the internet.
+In some regions the web coverage is under-developed. For some political reasons that is quite common in Germany. The [Freifunk](https://freifunk.net/)
+project is offering free WiFi under the SSID "Freifunk". Just connect and use the internet.
 
-This project is a good alternative for company owned infrastructure and
-adds resilience.
+This project is a good alternative for company owned infrastructure and adds resilience.
 
 If you are responsible for an area where people gather
-(restaurant, library, ...) think about contacting this project and running
-and own Freifunk router. Which is basically an AP with special configuration.
+(restaurant, library, ...) think about contacting this project and running and own Freifunk router. Which is basically an AP with special configuration.
 
 #### DNS
 
-Domain Name System is the phone book of the internet. It converts URLs into
-server IP numbers (IPv4 or IPv6).
-Ripping entries out of the DNS pre-configured by your ISP is a simple way to
-censor specific services.
+Domain Name System is the phone book of the internet. It converts URLs into server IP numbers (IPv4 or IPv6). Ripping entries out of the DNS pre-configured by your ISP is a simple way to censor specific services.
 
 If it looks like that happened to you:
 
-DNS settings are in your Operating System. Some big companies run their own DNS.
-Try changing the old DNS entries for one of those:
+DNS settings are in your Operating System. Some big companies run their own DNS. Try changing the old DNS entries for one of those:
 
 * Google: 8.8.8.8
 * Cloudflare: 1.1.1.1
@@ -166,11 +132,9 @@ Blocking on DNS level happened at the "Censorship in Turkey" event.
 
 ### File sharing
 
-Using [OnionShare](https://onionshare.org/) it is possible to share files.
-Just drag some files into the box, click the "start sharing" button and send
+Using [OnionShare](https://onionshare.org/) it is possible to share files. Just drag some files into the box, click the "start sharing" button and send
 the generated URL to your communication partner.
-As long as the server is running the partner can download it by simply using
-the Tor browser.
+As long as the server is running the partner can download it by simply using the Tor browser.
 
 %% ## Resilience
 %% TODO: Resilience
@@ -179,8 +143,7 @@ the Tor browser.
 
 ## Further reading
 
-A large collection of alternative to centralised and surveilled services can
-be found on [prism-break.org](https://prism-break.org/en/)
+A large collection of alternative to centralised and surveilled services can be found on [prism-break.org](https://prism-break.org/en/)
 
 %% Demos organisieren
 

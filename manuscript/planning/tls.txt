@@ -10,35 +10,24 @@ But TLS can be used to secure all kinds of connections.
 
 By using TLS you get **authenticity**, **integrity** and **confidentiality** and you really want those.
 
-**authenticity** is identifying the other communication partner. Especially the web server out there. By checking that
-it protects against MITM attacks and DNS spoofing attacks.
+**authenticity** is identifying the other communication partner. Especially the web server out there. By checking that it protects against MITM attacks and DNS spoofing attacks.
 
-**integrity** is protection against modification of the data in transit. For example replacing the receiver of a
-large money transfer.
+**integrity** is protection against modification of the data in transit. For example replacing the receiver of a large money transfer.
 
 **confidentiality** is hiding the content of the message from spies.
 
-What you do not get is the hiding of the identity of the communication partners. For that you would need TOR or
-similar technology.
+What you do not get is the hiding of the identity of the communication partners. For that you would need TOR or similar technology.
 
-TLS is a protocol that defines how computers negotiate their encryption settings and do the encryption afterwards.
-By TLS the client (browser or similar) and the server (web server) negotiate their features and choose
-the best of the available options.
-The options are different combinations of algorithms and their settings.
-It offers to choose between different algorithms being used as a kind of set of building blocks. Depending on your situation
+TLS is a protocol that defines how computers negotiate their encryption settings and do the encryption afterwards. By TLS the client (browser or similar) and the server (web server) negotiate their features and choose the best of the available options.
+The options are different combinations of algorithms and their settings. It offers to choose between different algorithms being used as a kind of set of building blocks. Depending on your situation
 (especially: Are old systems involved) you can have TLS go for the more secure or the weaker algorithms.
 
 Current version of TLS is 1.3, just being rolled out.
 
-As between version steps there are several years a step in a minor version
-number means lots of improvements.
-TLS 1.3 is a re-work that removes many of the security issues the old versions had.
-Especially risky features and parameters that could be used in TLS < 1.3.
-If possible (all clients and servers support it) - use TLS 1.3.
+As between version steps there are several years a step in a minor version number means lots of improvements. TLS 1.3 is a re-work that removes many of the security issues the old versions had.
+Especially risky features and parameters that could be used in TLS < 1.3. If possible (all clients and servers support it) - use TLS 1.3.
 
-You will want to monitor the versions used to connect to your servers
-and de-activate old versions you do not see anymore.
-Older versions have vulnerabilities.
+You will want to monitor the versions used to connect to your servers and de-activate old versions you do not see anymore. Older versions have vulnerabilities.
 
 ## TLS handshake
 
@@ -46,13 +35,11 @@ A simplified handshake for browsers to web servers looks like
 
 ![Simplified TLS handshake](../../images/tls_simple.png)
 
-The relevant part is where browser and server negotiate TLS version and Cipher suite.
-The browser offers all variants it can manage. The server selects the most secure one that matches its own configured options.
+The relevant part is where browser and server negotiate TLS version and Cipher suite. The browser offers all variants it can manage. The server selects the most secure one that matches its own configured options.
 
 To also support older browsers servers can have a set of weak and broken cipher suites in the option list.
 
-For a more secure web site (banking) it could be wise to monitor the version
-of browsers connecting and weed out less secure fallback ciphers from the
+For a more secure web site (banking) it could be wise to monitor the version of browsers connecting and weed out less secure fallback ciphers from the
 server config on a regular basis.
 
 If you want to dig much deeper into the TLS 1.2 protocol, see the ["The Illustrated TLS Connection"](https://tls.ulfheim.net/).
@@ -90,8 +77,7 @@ Tools for that kind of attacks are:
 
 ## Mozilla server side TLS config guide
 
-TLS is a toolbox for encryption which is mainly used in the browser to server
-configuration. For this reason Mozilla offers a simple guide how to best set up your server.
+TLS is a toolbox for encryption which is mainly used in the browser to server configuration. For this reason Mozilla offers a simple guide how to best set up your server.
 
 [Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
 
@@ -99,28 +85,19 @@ configuration. For this reason Mozilla offers a simple guide how to best set up 
 
 TLS requires the server to have a certificate.
 
-Normally the server authenticates itself with a certificate. Those certificates
-are verified by a Certificate Authority (CA).
-This one can either sign either
-"This person controlled the infrastructure when we checked"
-or the more expensive "Extended Validation" certificate
+Normally the server authenticates itself with a certificate. Those certificates are verified by a Certificate Authority (CA). This one can either sign either "This person controlled the infrastructure when we checked" or the more expensive "Extended Validation" certificate
 "This person has the name Mr. Foo Bar and lives in Wherever, we checked the passport".
 
-The certificate system has serious flaws. Basic sin is trusting at least
-dozens of companies that can sign any kind of certificate. Which will then be trusted.
+The certificate system has serious flaws. Basic sin is trusting at least dozens of companies that can sign any kind of certificate. Which will then be trusted.
 
-Despite the flaws: Not verifying the certificate properly is much worse. So go
-with the current CA system even if it is not perfect.
+Despite the flaws: Not verifying the certificate properly is much worse. So go with the current CA system even if it is not perfect.
 
-The project *Certificate Transparency* wants to fix this (see below).
-You can add CT on top of the classic CA system.
+The project *Certificate Transparency* wants to fix this (see below). You can add CT on top of the classic CA system.
 
-**Let's Encrypt** is a new initiative with a set of tools and infrastructure
-where everyone can get themselves a certificate within minutes and for free.
+**Let's Encrypt** is a new initiative with a set of tools and infrastructure where everyone can get themselves a certificate within minutes and for free.
 Those are just not EV certificates.
 
-Not hiding it: The simplest kind of certificates are *self signed* certificates.
-No CA signed it and the clients will normally complain and have you
+Not hiding it: The simplest kind of certificates are *self signed* certificates. No CA signed it and the clients will normally complain and have you
 manually accept it as a user.
 
 Thanks to Let's encrypt you should not need those self signed certificates anymore.
@@ -135,23 +112,16 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 Certificates can be stored in different container formats. Conversion can be required.
 
-Common is PEM (base64 encoded x509 ASN.1). X509 is a standard.There is also
-DER (with filenames like .cer, .crt, .der) basing on the X.690 standard.
+Common is PEM (base64 encoded x509 ASN.1). X509 is a standard.There is also DER (with filenames like .cer, .crt, .der) basing on the X.690 standard.
 
 ## Revocation (OCSP = Online Certificate Status Protocol)
 
-If control over a certificate gets lost
-(as in "server hacked, it had the key on it...") the certificate needs to be
-revoked. Together with CRL (Certificate Revocation Lists) this online protocol
+If control over a certificate gets lost (as in "server hacked, it had the key on it...") the certificate needs to be revoked. Together with CRL (Certificate Revocation Lists) this online protocol
 and the servers using it offer revocation management.
 
-It does not work properly: If an attacker is able to fake a certificate, the attacker
-can as well block the connection to those revocation servers. How should the
-browsers react ? Block the connection (and do that whenever the revocation
-server can not be reached) or allow it and do not block the attack ?
+It does not work properly: If an attacker is able to fake a certificate, the attacker can as well block the connection to those revocation servers. How should the browsers react ? Block the connection (and do that whenever the revocation server can not be reached) or allow it and do not block the attack ?
 
-This system is quite broken and browser vendors did not find a good solution.
-So basically the revocation verification code directly contacting the
+This system is quite broken and browser vendors did not find a good solution. So basically the revocation verification code directly contacting the
 revocation servers is switched off.
 
 But: **OCSP Stapling** solves this problem.
@@ -163,38 +133,26 @@ This system fixes the OCSP problem because no extra connection from the client t
 
 ## Key/Certificate lifetime
 
-Certificates have a lifetime. After this they have to be renewed. The first
-reflex of any admin is to set it high (2 years) when creating a certificate
-and be done with it.
-This results in all those pages where the key timed out and no one can remember
+Certificates have a lifetime. After this they have to be renewed. The first reflex of any admin is to set it high (2 years) when creating a certificate
+and be done with it. This results in all those pages where the key timed out and no one can remember
 how to generate a new key. You saw them.
 
-The true simple path is to set it to a short life time (weeks) and implement
-an automatic renewing process right from the start. With this short life time
-it is directly tested while you still remember what you did and everything is smooth.
+The true simple path is to set it to a short life time (weeks) and implement an automatic renewing process right from the start. With this short life time it is directly tested while you still remember what you did and everything is smooth.
 
 ## Testing TLS
 
-SSLLabs offers a testing service that checks the TLS settings of your web page.
-[SSLLabs](https://www.ssllabs.com/). They also offer lots of guides and documentation.
-Monitor the configuration of your servers regularly
-(there might be a new attack available to the bad guys).
+SSLLabs offers a testing service that checks the TLS settings of your web page. [SSLLabs](https://www.ssllabs.com/). They also offer lots of guides and documentation. Monitor the configuration of your servers regularly (there might be a new attack available to the bad guys).
 
 ## HSTS - HTTP Strict Transport Security
 
-HTTP servers can send a special header promising to *always* encrypt and prevent
-downgrade attacks down to HTTP that way. The browser will store that fact that
-there is TLS every time after the first connection and is now immunized against
-MITM attacks. It will always replace *HTTP* URLs with *HTTPS* ones and handle
-encryption failures as hard errors.
+HTTP servers can send a special header promising to *always* encrypt and prevent downgrade attacks down to HTTP that way. The browser will store that fact that there is TLS every time after the first connection and is now immunized against
+MITM attacks. It will always replace *HTTP* URLs with *HTTPS* ones and handle encryption failures as hard errors.
 
 %% TODO: Add header code: Strict-Transport-Security: max-age=31536000
 
-This is a TOFU (trust on first use) technology and the attacker can intercept
-the first connection between client and server, deleting the special HSTS header.
+This is a TOFU (trust on first use) technology and the attacker can intercept the first connection between client and server, deleting the special HSTS header.
 
-As an option the browser vendors offer a *preload list* where web sites can
-register and get their HSTS setting hard coded into the browsers.
+As an option the browser vendors offer a *preload list* where web sites can register and get their HSTS setting hard coded into the browsers.
 
 %% TODO Link to the list
 
@@ -210,13 +168,10 @@ HTTP protocol defines a key id [^foot_hpkp]. The browser stores that and will no
 
 This is also a TOFU technology.
 
-As many things can go wrong (keys lost) and pages could be permanently unreachable
-for a group of users you will want to have fallback plans/keys, ...
-or maybe use other technologies. If you can use HPKP in a reliable way: Great.
-If you do not feel comfortable: Do not use it.
+As many things can go wrong (keys lost) and pages could be permanently unreachable for a group of users you will want to have fallback plans/keys, ...
+or maybe use other technologies. If you can use HPKP in a reliable way: Great. If you do not feel comfortable: Do not use it.
 
-Update: Acceptance of HPKP was low. As it is a tricky technology to use.
-Chrome 72 deprecated it. This technology is described here for historical
+Update: Acceptance of HPKP was low. As it is a tricky technology to use. Chrome 72 deprecated it. This technology is described here for historical
 reasons and maybe you can learn something from it.
 
 [^foot_hpkp]: If you are smart you also offer a second id of a backup key
@@ -225,9 +180,7 @@ reasons and maybe you can learn something from it.
 
 ## Certificate Transparency
 
-[Certificate Transparency](https://www.certificate-transparency.org/) is a
-Google project to extend the CA way of certificate validation and maybe
-replace it in the future.
+[Certificate Transparency](https://www.certificate-transparency.org/) is a Google project to extend the CA way of certificate validation and maybe replace it in the future.
 
 Special online services will create logs of certificates seen in the wild. Any anomaly can be
 found that way (like Google page certificates only seen by computers in Foobaristan).
@@ -253,8 +206,7 @@ The issues that happened the last years have been found on several layers:
 
 ## Testing SSL
 
-[badssl](https://badssl.com/) offers several sub-domains with different
-TLS/SSL configuration to test your endpoint.
+[badssl](https://badssl.com/) offers several sub-domains with different TLS/SSL configuration to test your endpoint.
 
 ## Further reading
 
@@ -264,8 +216,7 @@ TLS/SSL configuration to test your endpoint.
 
 ### The Mozilla TLS guide
 
-[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
-A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations. A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
 
 ### Statistics
 

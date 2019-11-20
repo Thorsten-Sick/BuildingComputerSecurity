@@ -6,17 +6,12 @@ C> For: Manager, Architects
 
 ## Basics
 
-A company needs internal processes to handle security incidents.
-Incidents will happen. And if everyone knows how to handle those emergencies
-and had enough fire-drills, handling the incidents will be much smoother than without.
+A company needs internal processes to handle security incidents. Incidents will happen. And if everyone knows how to handle those emergencies and had enough fire-drills, handling the incidents will be much smoother than without.
 
-As every company is different (size, structure, goals) it is hard to write a
-one-size-fits-all manual. I will still try to collect the essential pieces.
-But finding an expert to assist you in this endeavour would be smart.
+As every company is different (size, structure, goals) it is hard to write a one-size-fits-all manual. I will still try to collect the essential pieces. But finding an expert to assist you in this endeavour would be smart.
 
 A *window of vulnerability* is the time span between
-"first use of the vulnerable software" and "user patched". Of course you
-want this to be zero or as small as possible.
+"first use of the vulnerable software" and "user patched". Of course you want this to be zero or as small as possible.
 
 ## Good and bad ways to find vulnerabilities
 
@@ -42,43 +37,26 @@ This list is from good to really bad.
 
 As you can see: You want to fix your vulnerabilities as early in the process as possible.
 
-Another thing to keep in mind: programming bugs are simpler to fix than design flaws.
-Because if design has to be re-done, lots of code changes will follow.
+Another thing to keep in mind: programming bugs are simpler to fix than design flaws. Because if design has to be re-done, lots of code changes will follow.
 
-With responsible disclosure the reporter reports the vulnerability by mail
-and defines 90 days of non-disclosure[^90days]. Assisting the company to fix it and
-push the release. 90 days are a reasonable time for most companies to
-reproduce the bug, fix it, test it and release it.
-After the release the company writes a warning for the users to update - a blog
-post also thanking the researcher. These credits are the "payment" the
-researcher receives for a job that could also have gotten him thousands of
-dollars doing it a "Pen test".
-Why 90 days ?
-As the experience of security people is: Many companies are lazy - they would
+With responsible disclosure the reporter reports the vulnerability by mail and defines 90 days of non-disclosure[^90days]. Assisting the company to fix it and push the release. 90 days are a reasonable time for most companies to reproduce the bug, fix it, test it and release it.
+After the release the company writes a warning for the users to update - a blog post also thanking the researcher. These credits are the "payment" the researcher receives for a job that could also have gotten him thousands of dollars doing it a "Pen test".
+Why 90 days ? As the experience of security people is: Many companies are lazy - they would
 wish to fix the bug in the next version the sell.
-In the end: no one will get a fix. People are vulnerable and the vulnerability
-is abused. So 90 days. Then disclosure. This is fair and puts a (low) pressure
-on the company to step our of their development schedule and get things done.
+In the end: no one will get a fix. People are vulnerable and the vulnerability is abused. So 90 days. Then disclosure. This is fair and puts a (low) pressure on the company to step our of their development schedule and get things done.
 
-[^90days]: 90 days is the most friendly default variant. It can be less (30 days) or much less (0 days).
-Do not take this for granted. You could also just find vulnerability reports for your product at places like [Seclists](https://seclists.org/bugtraq/)
+[^90days]: 90 days is the most friendly default variant. It can be less (30 days) or much less (0 days). Do not take this for granted. You could also just find vulnerability reports for your product at places like [Seclists](https://seclists.org/bugtraq/)
 
-This time frame can be shortened if malicious actors find it in parallel
-and abuse it ! Not the fault of the original security researcher. That
-happened multiple times already. A hint:
+This time frame can be shortened if malicious actors find it in parallel and abuse it ! Not the fault of the original security researcher. That happened multiple times already. A hint:
 If you can over-achieve from day one and release in 45 days: Do it !
 
-Another thing: Some people think it smart do sue the reporter and never fix
-the vulnerability. These companies will never again receive responsible
-disclosures from anyone.
-From this time on they will find their vulnerabilities leaked on pastebin. In a
-non-responsible way. Press pressure and the police will then make them fix
-their vulnerabilities as fast as possible.
+Another thing: Some people think it smart do sue the reporter and never fix the vulnerability. These companies will never again receive responsible
+disclosures from anyone. From this time on they will find their vulnerabilities leaked on pastebin. In a
+non-responsible way. Press pressure and the police will then make them fix their vulnerabilities as fast as possible.
 
 ## The three steps
 
-There are three steps to roll out this kind of processes. The last one
-(asking for vulnerabilities) is optional.
+There are three steps to roll out this kind of processes. The last one (asking for vulnerabilities) is optional.
 
 1. Introduce internal communication channels
     * Support to triage
@@ -99,80 +77,56 @@ There are three steps to roll out this kind of processes. The last one
     * Hired pen testers
 
 It is important to finish one step before starting the next one.
-Asking for vulnerabilities - and receiving thousands of them - without having
-internal processes will result in disaster.
+Asking for vulnerabilities - and receiving thousands of them - without having internal processes will result in disaster.
 
 %% TODO: Diagram
 
 ### Report mail address
 
 Traditional you will need a *security@yourcompany.com* mail address. This is
-published on your homepage (and somewhere in your application) together with
-directions how to send vulnerability reports.
+published on your homepage (and somewhere in your application) together with directions how to send vulnerability reports.
 
-There should always be someone monitoring the mail account and forwarding the
-mails to the proper product manager.
-The whole process from *receiving a mail* to *having a properly prioritised bug report*
-should be as fast as possible. Following the responsible disclosure standard you
-have 90 days to the point where you release a patch to all your customers.
-Losing days to holidays and no good internal communication causes trouble
-that could have been avoided.
+There should always be someone monitoring the mail account and forwarding the mails to the proper product manager. The whole process from *receiving a mail* to *having a properly prioritised bug report*
+should be as fast as possible. Following the responsible disclosure standard you have 90 days to the point where you release a patch to all your customers.
+Losing days to holidays and no good internal communication causes trouble that could have been avoided.
 
 You will get bonus points for publishing a PGP key for that mail address on your homepage.
 So a reporter can send you a confidential mail.
-Of course: while PGP is not rocket science, many people will be inexperienced using it.
-This requires PGP-fire drills with your support people.
+Of course: while PGP is not rocket science, many people will be inexperienced using it. This requires PGP-fire drills with your support people.
 
 ### security.txt
 
-[security.txt](https://securitytxt.org) is a proposed standard how to define
-security policies.
-It is a defines a document helping security researches to get into contact to
-the person responsible to handle incidents.
-Basically it just collects all the information like mail-address, PGP key and
-urls into a well defined format.
+[security.txt](https://securitytxt.org) is a proposed standard how to define security policies.
+It is a defines a document helping security researches to get into contact to the person responsible to handle incidents.
+Basically it just collects all the information like mail-address, PGP key and urls into a well defined format.
 
 Nothing magic. But practical.
 
 ### Code reviews
 
-Establish a culture of code reviews on check-ins and on other
-important way-points. Like releases or after finding bugs.
+Establish a culture of code reviews on check-ins and on other important way-points. Like releases or after finding bugs.
 
-Bugs cluster. So it is very likely that a type of bug can be found on similar
-places in the code.
-Other good metrics how to find code that needs to be reviewed can be found
-in the book "Software Design X-rays".
+Bugs cluster. So it is very likely that a type of bug can be found on similar places in the code.
+Other good metrics how to find code that needs to be reviewed can be found in the book "Software Design X-rays".
 
 %% TODO: Add link to book
 
-This is a question of culture and habit. It can be hard to get the team to
-start using code reviews. Especially getting them done in a respectful way.
-But they are worth the investment. Especially when they are used as a was to
-learn and teach.
+This is a question of culture and habit. It can be hard to get the team to start using code reviews. Especially getting them done in a respectful way.
+But they are worth the investment. Especially when they are used as a was to learn and teach.
 
 ### Communication/PR
 
-Establish a good relationship with your PR department. There will be an
-incident. And int that case you will want a short route to someone who can
-communicate the situation to the public, what the workaround is, how large
-the impact is, how you want to fix it, ...
-In case of an incident, the vulnerability was abused by an attacker. But it
-is important to move on and show skills in disaster management. This will get
-you some of the respect points back that you just lost.
-And for that you need to stay in close contact with your users.
+Establish a good relationship with your PR department. There will be an incident. And int that case you will want a short route to someone who can
+communicate the situation to the public, what the workaround is, how large the impact is, how you want to fix it, ...
+In case of an incident, the vulnerability was abused by an attacker. But it is important to move on and show skills in disaster management. This will get
+you some of the respect points back that you just lost. And for that you need to stay in close contact with your users.
 
 ### Internal pen tests/code reviews
 
-After you have your processes for bug prioritisation and vulnerability handling
-in place and all the hot areas of your code are bug-free you can hire external *pen testers*.
-This companies are specialists for finding vulnerabilities and bugs.
-If you did not fix well known issues before hiring them, you are wasting money.
-If you do not have processes for dealing with issues - you are wasting money.
-So please get your team and processes in perfect shape first.
+After you have your processes for bug prioritisation and vulnerability handling in place and all the hot areas of your code are bug-free you can hire external *pen testers*. This companies are specialists for finding vulnerabilities and bugs.
+If you did not fix well known issues before hiring them, you are wasting money. If you do not have processes for dealing with issues - you are wasting money. So please get your team and processes in perfect shape first.
 
-You hire this company. Define a scope (the most risky parts of your project)
-and they will review it. Bugs will be created and prioritised.
+You hire this company. Define a scope (the most risky parts of your project) and they will review it. Bugs will be created and prioritised.
 
 Then you can start fixing them.
 
@@ -181,10 +135,8 @@ Then you can start fixing them.
 
 ### Example: Mozilla
 
-Mozilla is the Open Source organisation behind Firefox and other projects.
-They have additional challenges: Their bug tracker is open. And they have
-lots of external coders (Open Source and ones working for other companies by
-contributing to Mozilla source). This is the reason why they had to achieve
+Mozilla is the Open Source organisation behind Firefox and other projects. They have additional challenges: Their bug tracker is open. And they have
+lots of external coders (Open Source and ones working for other companies by contributing to Mozilla source). This is the reason why they had to achieve
 some things that you will very likely not have to manage.
 
 [https://www.mozilla.org/en-US/security/](https://www.mozilla.org/en-US/security/)
@@ -201,3 +153,10 @@ some things that you will very likely not have to manage.
     * give credits
 * Be ready to publish work-arounds should it be abused while still working on fix
 * Bug reporter can decide when to publish
+
+
+## Further Reading
+
+"Software Design X-rays"
+
+%% TODO: Add link

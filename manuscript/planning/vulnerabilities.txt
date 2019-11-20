@@ -13,24 +13,22 @@ Vulnerabilities want to be managed. And fixed. To get the terms right:
 * *some* **exploits** can be **weaponized** - made simple to use and reliable
 * **vulnerabilities** can also be patched.....
 * and the **patch** can be applied to all the systems
+* **managing** vulnerabilities is the awareness of the current state of the system - as realistic as possible
+* **fixing** vulnerabilities (and rolling out the update) removes them
 
-So it is a race between the attackers - wanting to get to the stage of
-exploit or weaponized exploit and the defenders - wanting the patches rolled
-out to all of their customers.
+So it is a race between the attackers - wanting to get to the stage of exploit or weaponized exploit and the defenders - wanting the patches rolled out to all of their customers.
 
-The tricky part is not to miss the start of the race. And be well organised to
-push towards the goal.
+The tricky part is not to miss the start of the race. And be well organised to push towards the goal.
 
-For the defenders it starts as soon as they learn about the bug/flaw.
-For the attacker it also starts at that stage of finding a bug/flaw. Worst
-case for the attacker: A patch is already developed and the attacker
-reverse-engineers it to find the bug.
+For the defenders it starts as soon as they learn about the bug/flaw. For the attacker it also starts at that stage of finding a bug/flaw.
+
+A special case is when updates are rolled out slowly:
+A patch is already developed and the attacker reverse-engineers it to find the bug.
 In that case:
 * Less effort for the attacker
 * The race for the attacker gets shorter: From the patch stage to where the last customer applied the patch.
 
-There are vulnerabilities only known to the defenders. Or only known to the attackers.
-So one party can already run the race while the other is waiting for the start.
+There are vulnerabilities only known to the defenders. Or only known to the attackers. So one party can already run the race while the other is waiting for the start.
 
 Knowledge management and starting early is essential here.
 
@@ -55,8 +53,7 @@ A system/program can get bugs and flaws from different sources:
 
 ## CVSS Score
 
-In many cases it is harder to triage if a reported bug if it is also a
-vulnerability than to just fix it. In this case: I would just fix it.
+In many cases it is harder to triage if a reported bug if it is also a vulnerability than to just fix it. In this case: I would just fix it.
 
 For the harder cases you can do:
 
@@ -65,13 +62,10 @@ For the harder cases you can do:
     * [CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 * Prioritize the bug into your backlog
 
-
-
 ## Security process
 
 Managers can build [internal processes](#chapter-security-process) to manage vulnerabilities and to avoid them.
-Developers and testers can avoid them during the development phase or detect
-them while testing.
+Developers and testers can avoid them during the development phase or detect them while testing.
 
 There are chapters in this book covering this - because it is the essence of security.
 
@@ -112,3 +106,22 @@ There are chapters in this book covering this - because it is the essence of sec
 %% [Vulnerability management App](https://thehackernews.com/2018/12/whitesource-bolt-github-security.html)
 
 %% TODO: Metasploit, Armitage
+
+
+## Fixing Bugs
+
+As bugs are vulnerabilities, you should mentally prepare for them.
+Prepare you bug tracker, developers and qa engineers and give them space to create a solid product.
+
+The development phases are
+
+* Planning/Design
+* Coding
+* Internal testing
+* External testing (Beta)
+* Release
+* Maintenance
+
+Fixing bugs in the early phases is quite cheap. While fixing a Design bug (called "flaw") after Release can be horribly expensive - you have to process the change through all the phases in between Design and Release.
+
+TL;DR: Fix bugs early. Verify your Design. Fix bugs fast.

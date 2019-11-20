@@ -4,8 +4,7 @@ C> By: Thorsten Sick
 
 C> For: Manager, Architects, Developers
 
-As soon as your system reaches a certain level of complexity, you will require
-updates.
+As soon as your system reaches a certain level of complexity, you will require updates.
 
 %% TODO: Why updates
 
@@ -33,163 +32,115 @@ updates.
 
 This is the time you have to response to an incident. Normally it is the span between learning about an issue and successfully updating all your customers systems.
 
-If a vulnerability gets known to the *bad guys*, expect a time-to-exploit
-of a few days. Normal process is that someone identifies the vulnerability
-and writes an exploit (plus a blog post). The exploit is then stabilized and
-integrated into attack systems (metasploit for the more white hack side,
-exploit kits for the bad guys).
+If a vulnerability gets known to the *bad guys*, expect a time-to-exploit of a few days. Normal process is that someone identifies the vulnerability
+and writes an exploit (plus a blog post). The exploit is then stabilized and integrated into attack systems (metasploit for the more white hack side, exploit kits for the bad guys).
 
 
-If a vulnerability gets reported as "responsible disclosure" by a
-friendly hacker you will have about 90 days (standard) to release the fix
-to all customers. If you have good reasons (complex situation where it is
-hard to get all your users updated) you can maybe negotiate and get some
-more days. But there is a very good reason for the 90 days: It is a
-reasonable time to get the fix released and a longer time frame would
-increase the risk that a bad guy finds the same vulnerability in parallel.
+If a vulnerability gets reported as "responsible disclosure" by a friendly hacker you will have about 90 days (standard) to release the fix to all customers. If you have good reasons (complex situation where it is hard to get all your users updated) you can maybe negotiate and get some
+more days. But there is a very good reason for the 90 days: It is a reasonable time to get the fix released and a longer time frame would increase the risk that a bad guy finds the same vulnerability in parallel.
 This happened more often than you think.
 
-Short: You will not be able to ship the fixes with the next regular update.
-Be ready to for quick response.
-Build your processes from support call to all-your-users update accordingly.
+Short: You will not be able to ship the fixes with the next regular update. Be ready to for quick response. Build your processes from support call to all-your-users update accordingly.
 
-One more thing: As soon as the first client gets an update, the bad guys
-could get it as well. Normally they do a binary diff
-(using disassembly tools]).
-From that diff they can learn which vulnerability you just patched.
-The race is on between the bad guys creating a reliable exploit and you
-getting the update to your last customer.
+One more thing: As soon as the first client gets an update, the bad guys could get it as well. Normally they do a binary diff (using disassembly tools).
+From that diff they can learn which vulnerability you just patched. The race is on between the bad guys creating a reliable exploit and you getting the update to your last customer.
 
-These *disassembler* tools may sound arcane, but are quite simple to find
-and sophisticated.
+These *disassembler* tools may sound arcane, but are quite simple to find and sophisticated.
 
 * [IDA](https://www.hex-rays.com/products/ida/index.shtml), paid and free test version. For Mac/Win/Linux
 * [Hopper](https://www.hopperapp.com/), Mac/Linux. Test version available
 * [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
-
+%% TODO Add Ghidra
 
 ## Details todo list
 
 ### Be able to rollback
 
-Be able to roll back your changes either automatically or by user interaction if the update breaks something.
-User interaction could be "press the reset button for 10 seconds". Rollback could be to factory system or last-know-good software state.
+Be able to roll back your changes either automatically or by user interaction if the update breaks something. User interaction could be "press the reset button for 10 seconds". Rollback could be to factory system or last-know-good software state.
 This will reduce your stress when doing emergency updates.
 
 ### Verify signature
 
 Cryptographically sign your binaries (**public key cryptography** is the keyword).
 
-One way of signing your binaries is to create at least a sha256 hash of your binaries
-(md5, CRC and sha1 are broken). Create a update config file containing all your
-files, their versions and their hashes. This update config file should also
-have a unique version number that is incremented only.
+One way of signing your binaries is to create at least a sha256 hash of your binaries (md5, CRC and sha1 are broken). Create a update config file containing all your files, their versions and their hashes. This update config file should also have a unique version number that is incremented only.
 
 Now sign this config file using **public key signatures**.
 
-This config file will be checked against the public key file on the end-system.
-If the key matches and the version is bigger than the current one the binaries
-can be downloaded and verified against the hashes.
+This config file will be checked against the public key file on the end-system. If the key matches and the version is bigger than the current one the binaries can be downloaded and verified against the hashes.
 
 ### Secure key handling
 
-The secret key must be stored on an isolated system. Not a build machine and
-especially not the download server. You sign the update binary or config config
+The secret key must be stored on an isolated system. Not a build machine and especially not the download server. You sign the update binary or config config
 prior to release with this key.
 
-You will want a second emergency key (its public part also distributed to the clients).
-This one is stored in a safe. If the first key is compromised you can can
+You will want a second emergency key (its public part also distributed to the clients). This one is stored in a safe. If the first key is compromised you can can
 revoke it and do an emergency update now binding the emergency key to the clients.
 
 
 ## Verify version - only upgrade
 
-Only update to a **newer** version. No updates to older versions. If you ever want to roll
-back a change, release an old version of your programs with a higher version number.
+Only update to a **newer** version. No updates to older versions. If you ever want to roll back a change, release an old version of your programs with a higher version number.
 
-The reason for this is that an attacker could roll out updates with older versions
-of your program that still contains known vulnerabilities. And hack the systems afterwards.
+The reason for this is that an attacker could roll out updates with older versions of your program that still contains known vulnerabilities. And hack the systems afterwards.
 
 ## Track distribution
 
-You want to track your update roll out. And if systems are functional post-update.
-Especially that.
+You want to track your update roll out. And if systems are functional post-update. Especially that.
 
 ## Be able to stop updates
 
-If you roll out a broken update, you should be able to remove it from your
-update servers very quick. So other users do not risk ruining their systems.
-Automatic roll back (mentioned a few chapters above) will take care for the
-updated systems.
+If you roll out a broken update, you should be able to remove it from your update servers very quick. So other users do not risk ruining their systems.
+Automatic roll back (mentioned a few chapters above) will take care for the updated systems.
 
 ## Distributing the updates
 
-If your updates are big your servers will not have enough bandwidth for to
-update all clients in time.
+If your updates are big your servers will not have enough bandwidth for to update all clients in time.
 You could use a CDN for your updates. To further reduce load update in stages:
 
 1. Check if there is a newer version. This is a few bytes only
 2. Download config file. Verify.
 3. Download binaries
 
-As you have your files signed, an option to be protected against DDOS-es vs. your
-update infrastructure would be to also have a fallback to a peer-to-peer network
-(BitTorrent). Some bigger software applications (games) use BitTorrent.
-Do not make that the only source ! Because BitTorrent could be blocked in
-some environments like companies. Also do not waste the users bandwidth
-without asking. Could be expensive for some of them if they are connected
-using a mobile network.
+As you have your files signed, an option to be protected against DDOS-es vs. your update infrastructure would be to also have a fallback to a peer-to-peer network (BitTorrent). Some bigger software applications (games) use BitTorrent.
+Do not make that the only source ! Because BitTorrent could be blocked in some environments like companies. Also do not waste the users bandwidth without asking. Could be expensive for some of them if they are connected using a mobile network.
 
 %% TODO: Details: Your updates should be served in chunks, where paused downloads can be continued. You either implement this by hand our your server supports pause and continue of downloads.
 
 ## Compress updates
 
-Compressing updates reduces stress on your update servers and makes them more
-resilient against DDOS attacks. Test common algorithms with your update files.
-The algorithms have different strengths and weaknesses. Also: De-compressing
-is very often much faster than compressing. And this is what your clients are doing.
+Compressing updates reduces stress on your update servers and makes them more resilient against DDOS attacks. Test common algorithms with your update files. The algorithms have different strengths and weaknesses. Also: De-compressing is very often much faster than compressing. And this is what your clients are doing.
 
 ## Diff updates
 
 If you are shipping large updates, you want to ship them as diffs to previous versions.
-Depending on your file types there can be different diff algorithms that are
-quite effective. Please test before using.
+Depending on your file types there can be different diff algorithms that are quite effective. Please test before using.
 For PE files there is ["courgette"](https://www.chromium.org/developers/design-documents/software-updates-courgette).
-Always verify after diffing if the created file is the proper one (by hash).
-If something went wrong, fall back to whole-file download.
+Always verify after diffing if the created file is the proper one (by hash). If something went wrong, fall back to whole-file download.
 
 That way there is no additional risk.
 
 ## Incentives
 
-Some users care more about new Emojis than about vulnerability fixes. Maybe bundle some
-eye candy (new backgrounds, ...) with the updates to get the users to update.
-Sad but true.
+Some users care more about new Emojis than about vulnerability fixes. Maybe bundle some eye candy (new backgrounds, ...) with the updates to get the users to update. Sad but true.
 
 %% TODO: interne und beta channels dazu zu updates
 
 ## Automatic updates
 
-Do updates in the background. Without user interaction. Especially if you have
-corporate users, offer an Opt-out hidden in some config. Companies want to test
-before they deploy to thousands of users.
+Do updates in the background. Without user interaction. Especially if you have corporate users, offer an Opt-out hidden in some config. Companies want to test before they deploy to thousands of users.
 
-If the update requires a restart of the software think about waiting for
-the user to naturally restart it - with a timer. If the user does not restart
-it after X days nudge him.
+If the update requires a restart of the software think about waiting for the user to naturally restart it - with a timer. If the user does not restart it after X days nudge him.
 
 ## Control the update infrastructure
 
-It is essential that you control your update infrastructure. There are several
-things that can break given time:
+It is essential that you control your update infrastructure. There are several things that can break given time:
 
 * certificates run out
 * You lose ownership of your domain
 * server needs system updates
 
-Plan ahead and create scripts that test your current situation and warn you
-weeks ahead before your domain ownership runs out or before you should create
-a new certificate.
+Plan ahead and create scripts that test your current situation and warn you weeks ahead before your domain ownership runs out or before you should create a new certificate.
 
 ## Details Not-todo list
 
@@ -197,23 +148,18 @@ a new certificate.
 
 [Wikipedia on TOCTOU](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use)
 
-A possible issue when checking the signature of an update package:
-If the package is on an external medium and the updater is not copying it
-locally, the attacker can switch the (legit) package after verification with a
-malicious package.
+A possible issue when checking the signature of an update package: If the package is on an external medium and the updater is not copying it locally, the attacker can switch the (legit) package after verification with a malicious package.
 
 1. You verify the (clean) external data's signature
 2. Attacker replaces clean software with malicious software
 3. Your tool now installs the malicious software from external medium
 
 Solution:
-Copy the package into a local storage before
-verification and installation.
+Copy the package into a local storage before verification and installation.
 
 ## Break the update chain
 
-Never break the update chain for your devices. As long as updates work you can
-fix anything. Focus of your testers should be to (automatically) test updates
+Never break the update chain for your devices. As long as updates work you can fix anything. Focus of your testers should be to (automatically) test updates
 over several versions.
 
 

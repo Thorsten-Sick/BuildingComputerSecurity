@@ -6,20 +6,15 @@ C> For Designers, Managers, Architects and Developers
 
 ## My secret source
 
-Software design is a big time investment. In your lifetime you will not be
-able to make all possible design mistakes and learn from them.
+Software design is a big time investment. In your lifetime you will not be able to make all possible design mistakes and learn from them.
 
 So you have to learn from other peoples mistakes.
 
-Hacker talks where they tell you how they broke software and hardware of
-other vendors is a very good source. I just add some generalisation to the
-flaws uncovered there and add it to this list.
+Hacker talks where they tell you how they broke software and hardware of other vendors is a very good source. I just add some generalisation to the flaws uncovered there and add it to this list.
 
-And my own, secret list....as this book tries to be as generic as possible I
-will just leave very specific issues out.
+And my own, secret list....as this book tries to be as generic as possible I will just leave very specific issues out.
 
-So you will have to take this generic list and add your own specific
-experience to it.
+So you will have to take this generic list and add your own specific experience to it.
 
 ## Checklist
 
@@ -65,8 +60,7 @@ T> of the video.
 
 ### Specific
 
-Some hacking talks that worked well as source for information. There are many
-more, those are just some examples.
+Some hacking talks that worked well as source for information. There are many more, those are just some examples.
 
 * [35C3 All your Gesundheitsakten are belong to us](https://media.ccc.de/v/35c3-9992-all_your_gesundheitsakten_are_belong_to_us)
 * [35C3 What the Fax?!](https://media.ccc.de/v/35c3-9462-what_the_fax)

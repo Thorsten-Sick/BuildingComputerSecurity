@@ -4,42 +4,27 @@ C> By: Thorsten Sick
 
 C> For: Architects, Developers
 
-Crypto Algorithms are the basic building block for encryption. Above them are
-protocols ("how do we glue algorithms together to achieve our goal ?").
-And above the protocol are libraries offering an easy programming interface to
-select use protocol.
+Crypto Algorithms are the basic building block for encryption. Above them are protocols ("how do we glue algorithms together to achieve our goal ?"). And above the protocol are libraries offering an easy programming interface to select use protocol.
 
-In many cases the user of the library still has to pick the algorithm to slot
-into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
+In many cases the user of the library still has to pick the algorithm to slot into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
 
-I will skip the mathematics and try to build simple "Good vs Bad" tables. If
-you want to dig deeper, please read the books in the links.
+I will skip the mathematics and try to build simple "Good vs Bad" tables. If you want to dig deeper, please read the books in the links.
 
-A good crypto algorithm is created and tested in challenges. It will get a good
-peer review by other crypto experts.
-When mathematics improves (and computers get faster as well) the
-*estimated time to crack it* will shrink.
-Moore's law predicts a increase of processing power by factor 2 every 18 months.
-GPUs, ASICs and Clouds (lots of cheap computers from Amazon Cloud, for example) can
+A good crypto algorithm is created and tested in challenges. It will get a good peer review by other crypto experts. When mathematics improves (and computers get faster as well) the *estimated time to crack it* will shrink. Moore's law predicts a increase of processing power by factor 2 every 18 months. GPUs, ASICs and Clouds (lots of cheap computers from Amazon Cloud, for example) can
 also bring down the attack time.
 
-Normally experts will warn months or even years before a realistic attack on
-an algorithm is possible. That's the time to move on to use a better algorithm.
+Normally experts will warn months or even years before a realistic attack on an algorithm is possible. That's the time to move on to use a better algorithm.
 
 **Be prepared to swap the algorithm used in your protocol and files**
 
-If you rely on a crypto book on your desk, check out the date it was published.
-During the last years new attacks have been invented and some algorithms and
-protocols did not age well. If your decisions still are based on ta book
-from 1995 they will be wrong - even if the book was great at that time.
+If you rely on a crypto book on your desk, check out the date it was published. During the last years new attacks have been invented and some algorithms and
+protocols did not age well. If your decisions still are based on ta book from 1995 they will be wrong - even if the book was great at that time.
 
-Be aware: This chapter is an extreme simplification. If crypto security is an
-essential part of your project dig deeper and use the *further reading* section.
+Be aware: This chapter is an extreme simplification. If crypto security is an essential part of your project dig deeper and use the *further reading* section.
 
 ## Hash functions
 
-Hash functions are one way functions that generate a value of a fixed size
-from any length of input. One input always generates the same Hash. On the
+Hash functions are one way functions that generate a value of a fixed size from any length of input. One input always generates the same Hash. On the
 other hand: One Hash can be the same for different inputs.
 
 For security reasons it must be impossible:
@@ -57,16 +42,14 @@ For security reasons it must be impossible:
 |SHA-3  |variable            |Good   |
 |BLAKE2 |variable            |Good   |
 
-A CRC is not a Crypto Hash function. It is good for validating bit flips in
-data. But not to prevent or detect human attacks. Still some people use it
+A CRC is not a Crypto Hash function. It is good for validating bit flips in data. But not to prevent or detect human attacks. Still some people use it
 that way...
 
 [shattered.io on breaking SHA-1](https://shattered.io/)
 
 SHA256 and SHA512 are SHA-2 hashes. Where the number indicates the bit length.
 
-SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But
-if something should happen to it, there is SHA-3 with is based on a totally
+SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But if something should happen to it, there is SHA-3 with is based on a totally
 different internal principle.
 
 [BLAKE2](https://blake2.net/) was in the SHA-3 contest. Its main feature is speed. There are different variants optimized for different architectures. The core ones are:
@@ -83,8 +66,7 @@ If you need speed, give it a chance.
 
 ## HMAC or MAC
 
-MAC allows *Integrity* and *Authentication*. Simplified: It is a Hash with a shared key involved. That way the parties can
-authenticate the origin.
+MAC allows *Integrity* and *Authentication*. Simplified: It is a Hash with a shared key involved. That way the parties can authenticate the origin.
 
 |Name        |Quality          |
 |------------|-----------------|
@@ -97,11 +79,8 @@ authenticate the origin.
 
 ## Password hash functions
 
-While other hash functions are efficient, for password hashes we want
-inefficient hash functions. On a normal server it does not matter that much if
-1 or 500 milliseconds are wasted on calculating the Hash.
-But the attacker wanting to break a database dumb with hundreds of thousands
-Hashes gets into lots of trouble thanks to the in-efficient hash.
+While other hash functions are efficient, for password hashes we want inefficient hash functions. On a normal server it does not matter that much if
+1 or 500 milliseconds are wasted on calculating the Hash. But the attacker wanting to break a database dumb with hundreds of thousands Hashes gets into lots of trouble thanks to the in-efficient hash.
 
 
 |Name    |Comments                                   |
@@ -124,8 +103,7 @@ Links:
 
 ## Stream Ciphers
 
-Stream ciphers are used especially in telecommunication to encrypt a data
-stream (mobile phone voice channel).
+Stream ciphers are used especially in telecommunication to encrypt a data stream (mobile phone voice channel).
 
 %% TODO: Add something about "Funktionsweise"
 %% TODO: How to key exchange with public key crypto and fallback to symmetric crypto
@@ -139,8 +117,7 @@ stream (mobile phone voice channel).
 
 ## Block Ciphers
 
-Block Ciphers are the work horse to encrypt large data. Besides selecting
-the Algorithm and the key length it is also important to use it in the
+Block Ciphers are the work horse to encrypt large data. Besides selecting the Algorithm and the key length it is also important to use it in the
 proper mode. There will be an own table for that.
 
 ### Algorithms
@@ -151,14 +128,12 @@ proper mode. There will be an own table for that.
 |3DES    |Mediocre |
 |AES     |Good     |
 
-3DES is rated mediocre because AES offers a better key-length
-to protection ratio. You should be using that.
+3DES is rated mediocre because AES offers a better key-length to protection ratio. You should be using that.
 
 
 ### Modes
 
-Block ciphers are encrypting the data block-by-block. The **mode** defines
-*if* and *how* the encryption of one block influences the encryption of the
+Block ciphers are encrypting the data block-by-block. The **mode** defines *if* and *how* the encryption of one block influences the encryption of the
 other blocks.
 
 |Name                        |Quality|
@@ -169,12 +144,7 @@ other blocks.
 
 %% TODO: Add CCM
 
-If possible use CTR. Some of those modes need not only the password but also
-a number named *IV* (initialisation vector) or *nonce* (number used only once).
-This number can be public. But it has an important requirement: Do not
-recycle it ! This number must be used once only. For the
-next data you encrypt use a different one. With that requirement:
-A **counter** would be do the job.
+If possible use CTR. Some of those modes need not only the password but also a number named *IV* (initialisation vector) or *nonce* (number used only once). This number can be public. But it has an important requirement: Do not recycle it ! This number must be used once only. For the next data you encrypt use a different one. With that requirement: A **counter** would be do the job.
 
 ## Authenticated Encryption
 
@@ -193,8 +163,7 @@ One important differentiation is if to do MAC first or encryption. It seems duri
 MAC and cipher must use distinct keys.
 But there are foot guns and alternatives to this whole AE complex.
 
-If you go down that road, please check out further reading and at least 2 more books. Implementing this is lots of work (months-for experts).
-Invest your time into smartening up first.
+If you go down that road, please check out further reading and at least 2 more books. Implementing this is lots of work (months-for experts). Invest your time into smartening up first.
 
 Or use libraries implementing this technology ready-to-use (which I would do).
 
@@ -214,8 +183,7 @@ For signatures with RSA use RSA-PSS(Probabilistic Signature Scheme)
 
 ## Key exchange
 
-To do a key agreement/key exchange the state of the art is DH: Diffie-Hellman protocol.
-It can be used in different flavours.
+To do a key agreement/key exchange the state of the art is DH: Diffie-Hellman protocol. It can be used in different flavours.
 
 |Name                         |Quality         |
 |-----------------------------|----------------|
@@ -231,15 +199,12 @@ Most often used is *Authenticated DH*
 
 ## Elliptic Curve Cryptography (ECC)
 
-Elliptic curve based cryptography is an upgrade on many crypto protocols.
-It offers more security for less key length. And thanks to the smaller keys it
+Elliptic curve based cryptography is an upgrade on many crypto protocols. It offers more security for less key length. And thanks to the smaller keys it
 is often faster.
 
 If possible replace your RSA and DH with ECC.
 
-EC crypto depends on one special parameter: the curve it runs on.
-The curve has to be special. So you can not make up your own. Instead use one
-of the standard curves:
+EC crypto depends on one special parameter: the curve it runs on. The curve has to be special. So you can not make up your own. Instead use one of the standard curves:
 
 * NIST curves
 * Curve25519 (which is very common)
@@ -247,8 +212,7 @@ of the standard curves:
 
 ## Key length
 
-Depending on your computing power, lifetime of your product and adversary this may vary.
-But sane best-practice key lengths are:
+Depending on your computing power, lifetime of your product and adversary this may vary. But sane best-practice key lengths are:
 
 * Asymmetric: >= 3248 bit
 * Elliptic Curve to replace classical asymmetric crypto: >= 256 bit

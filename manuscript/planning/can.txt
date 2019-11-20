@@ -4,29 +4,24 @@ C> By: Thorsten Sick
 
 C> For: Architects, Developers, Tester
 
-The CAN bus is central in many vehicles and other more complex embedded things.
-It connects different micro controllers and systems in the vehicle. CAN is
+The CAN bus is central in many vehicles and other more complex embedded things. It connects different micro controllers and systems in the vehicle. CAN is
 simple and cheap - but not the most simple and not the cheapest connection in a system.
 
 It is designed to be reliable - safety - but not for security.
 
-CAN messages do have a message identifier and a payload. There is no *sender*
-or *receiver* in the CAN philosophy.
+CAN messages do have a message identifier and a payload. There is no *sender* or *receiver* in the CAN philosophy.
 
-The message identifiers do identify **what** is sent. And every chip listens and
-reacts to the messages relevant to it.
+The message identifiers do identify **what** is sent. And every chip listens and reacts to the messages relevant to it.
 
 On the physical layer: Lower message ids beat higher ones if a collision happens.
 
 There are adapters to connect a PC to a CAN bus (PEAK, for example).
 
-Linux is very well equipped to handle CAN - on current Linux variants you will
-see it as a network interface like "can0".
+Linux is very well equipped to handle CAN - on current Linux variants you will see it as a network interface like "can0".
 
 ## can-utils
 
-On Linux the can-utils offer the basic command line bash interaction functionality.
-As stated before, a can bus is just another network interface for Linux.
+On Linux the can-utils offer the basic command line bash interaction functionality. As stated before, a can bus is just another network interface for Linux.
 
 {lang="bash"}
     sudo apt-get install can-utils
@@ -37,8 +32,7 @@ Now you should see a list of can messages scrolling through.
 
 ### candump
 
-Candump dumps the can bus data onto stdout or into a log file. It is quite
-simple to use and does not suffer from feature creep. Some switches to change
+Candump dumps the can bus data onto stdout or into a log file. It is quite simple to use and does not suffer from feature creep. Some switches to change
 the log format exist. Just use the *man page* for details.
 
 An example (data modified to prevent leakage):
@@ -57,8 +51,7 @@ It contains
 
 ### Other tools in can-utils
 
-The other tools in can-utils get a short mention. As I want to be flexible and
-the python framework is powerful, I normally write small python scripts
+The other tools in can-utils get a short mention. As I want to be flexible and the python framework is powerful, I normally write small python scripts
 instead of using them. But if you as a bash nerd, they will be your choice.
 
 Check the man page for details and start hacking.
@@ -73,14 +66,12 @@ Cansniffer is an enhanced logger.
 
 **canplayer**
 
-Replays a can log file onto the bus. It also offers to use stdin. And as you
-can modify the log file with a text editor before sending it is a simple way to
+Replays a can log file onto the bus. It also offers to use stdin. And as you can modify the log file with a text editor before sending it is a simple way to
 simulate specific scenarios and run them from command line.
 
 **cansend**
 
-Cansend sends one or more can frames. It is a bit simpler than the canplayer
-and a good tool for simple bash test scenarios.
+Cansend sends one or more can frames. It is a bit simpler than the canplayer and a good tool for simple bash test scenarios.
 
 If you use *candump* to listen to your can bus and the bus needs some timed motivation to send specific data packets, *cansend* is the low tech tool to use in your scripts.
 
@@ -88,8 +79,7 @@ If you use *candump* to listen to your can bus and the bus needs some timed moti
 
 ### PEAK CAN controller specific
 
-While the PC Kali OS has drivers for the PEAK can controllers pre-installed,
-they are missing for the Raspberry Pi (Kali and Raspbian have been tested) or Ubuntu.
+While the PC Kali OS has drivers for the PEAK can controllers pre-installed, they are missing for the Raspberry Pi (Kali and Raspbian have been tested) or Ubuntu.
 
 But the company offered the source code and it is simple to compile it yourself.
 
@@ -113,8 +103,7 @@ More in the forum:
 
 ## Python
 
-There is a python API to interact with can. For complex automation and tests I
-would prefer that to the command line interface.
+There is a python API to interact with can. For complex automation and tests I would prefer that to the command line interface.
 
 Automation includes stress testing and fuzzing.
 
@@ -141,26 +130,21 @@ W> Be aware of the mixed data types in this example. The id is an int,
 W> data is an array of int values. Result is a byte array. Depending on your use case,
 W> this could first cause some irritation.
 
-One additional python module will be very handy to manipulate the binary data
-payloads. Meet *python struct*. [Documentation](https://docs.python.org/3.7/library/struct.html) can be found online.
+One additional python module will be very handy to manipulate the binary data payloads. Meet *python struct*. [Documentation](https://docs.python.org/3.7/library/struct.html) can be found online.
 
-Short: It is a part of the python standard lib. It can *unpack* bytes into
-several variables based on a defined format. Or it can *pack* several variables
-into a binary representation based on a given format. One line will handle all
-your data processing problems.
+Short: It is a part of the python standard lib. It can *unpack* bytes into several variables based on a defined format. Or it can *pack* several variables
+into a binary representation based on a given format. One line will handle all your data processing problems.
 
 %% TODO: Also good for binary processing is https://kaitai.io/
 
 ## Fuzzing the CAN bus with python
 
-When I fuzz a device I will first find ways to detect if the device is behaving
-normal: Read the firmware version by CAN bus and comparing the results to the
+When I fuzz a device I will first find ways to detect if the device is behaving normal: Read the firmware version by CAN bus and comparing the results to the
 expected value. For example.
 
 Better to use several simple tests and combine them.
 
-Using a candump log I will estimate the expected data pattern and create a
-python function that creates random data almost matching this data.
+Using a candump log I will estimate the expected data pattern and create a python function that creates random data almost matching this data.
 
 Add some additional bit flips.
 
@@ -176,8 +160,7 @@ For additional benefits:
 * Log more than one packet in case it breaks. Maybe the combination of those packets caused the failure
 * Detect packet storms in the bus system. Especially interesting if more than one controlled is attached while fuzzing
 
-With the **candump** command and the python modules described in this chapter
-you should now bre prepared to tackle this task.
+With the **candump** command and the python modules described in this chapter you should now bre prepared to tackle this task.
 
 Have fun.
 
@@ -187,8 +170,7 @@ Have fun.
 
 ### The Car Hacker's Handbook: A Guide for the Penetration Tester
 
-A very good book covering hacking of cars. With a big focus on CAN bus hacking.
-There is a free version for it available on *opengarages.org* but this page
+A very good book covering hacking of cars. With a big focus on CAN bus hacking. There is a free version for it available on *opengarages.org* but this page
 can currently not be reached. I wish you luck.
 
 %% TODO: [Car Hacker's Handbook paid](https://nostarch.com/carhacking)

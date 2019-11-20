@@ -4,40 +4,30 @@ C> By: Thorsten Sick
 
 C> For: Architects, Developers, Tester
 
-IoT is cheap embedded devices with (optional) network connectivity.
-They have their own security challenge plus many things from the network chapter.
+IoT is cheap embedded devices with (optional) network connectivity. They have their own security challenge plus many things from the network chapter.
 
 ## Class break
 
-A thing very relevant for IoT devices is the *class break* (it is still relevant
-for many other systems, but here it is devastating).
+A thing very relevant for IoT devices is the *class break* (it is still relevant for many other systems, but here it is devastating).
 
-Class breaks is when a vulnerability exists in all devices of a specific class.
-The adversary buys one of the devices (maybe second hand on eBay) and has
-plenty of time to hack it. The attack itself can then be described (blog posts)
-or weaponized - simple to use scripts are created for everyone to run the attack.
+Class breaks is when a vulnerability exists in all devices of a specific class. The adversary buys one of the devices (maybe second hand on eBay) and has
+plenty of time to hack it. The attack itself can then be described (blog posts) or weaponized - simple to use scripts are created for everyone to run the attack.
 
-Now the whole class of this device is broken. Anyone can use this knowledge to
-hack any device of this specific class.
+Now the whole class of this device is broken. Anyone can use this knowledge to hack any device of this specific class.
 
-Class breaks hit IoT especially hard because quite often they can not be
-updated, are easy to get and a break will hit thousands or millions of devices.
+Class breaks hit IoT especially hard because quite often they can not be updated, are easy to get and a break will hit thousands or millions of devices.
 
 ## Interfaces (UART, JTAG)
 
-Interfaces like JTAG or UART are very convenient for development or debugging.
-UART is a serial interface that can be used to accept commands or at least
-send logging data.
-JTAG is an official debugging interface to debug the firmware.
+Interfaces like JTAG or UART are very convenient for development or debugging. UART is a serial interface that can be used to accept commands or at least
+send logging data. JTAG is an official debugging interface to debug the firmware.
 
 Controlling them is a big step for an attacker towards takeover of the device.
 
-Sometimes an embedded device has connectors for those interfaces soldered
-already. If not it is at least very likely there are the solder points to
+Sometimes an embedded device has connectors for those interfaces soldered already. If not it is at least very likely there are the solder points to
 attach them.
 
-There are several options you have to lock them down. All of them have side
-effects and weaknesses.
+There are several options you have to lock them down. All of them have side effects and weaknesses.
 
 * Use #ifdefs to kill the code for UART for the production release
     * Side effect: Can not be used to debug in-the-field
@@ -57,15 +47,11 @@ effects and weaknesses.
 
 ### Public key challenge response
 
-This is a very complex option to solve the interface problem and so be warned:
-As I do not know your specific situation I will just give you some hints now
+This is a very complex option to solve the interface problem and so be warned: As I do not know your specific situation I will just give you some hints now
 and you will have to fill in your specifics.
 
-A public key pair is created for each device. The secret key stored on the server.
-If someone wants to access a IoT device it creates a unique and random challenge.
-The Support Technician can contact the server and forward the challenge together
-with the device ID. The server signs the challenge with the device specific
-secret key. The device gets the signed challenge and verifies:
+A public key pair is created for each device. The secret key stored on the server. If someone wants to access a IoT device it creates a unique and random challenge. The Support Technician can contact the server and forward the challenge together
+with the device ID. The server signs the challenge with the device specific secret key. The device gets the signed challenge and verifies:
 
 * Is this my current challenge ?
 * Is it signed by the secret key matching my public one ?
@@ -74,8 +60,7 @@ If both are true the device allows debugging access.
 
 Of course the support Technician also needs to authenticate himself at the server...
 
-This is all a bit much for a WiFi enabled toaster. But maybe in some cases this
-kind of approach is the right size of paranoia.
+This is all a bit much for a WiFi enabled toaster. But maybe in some cases this kind of approach is the right size of paranoia.
 
 %% encrypted MQTT
 %% [teserakt](https://teserakt.io/)
