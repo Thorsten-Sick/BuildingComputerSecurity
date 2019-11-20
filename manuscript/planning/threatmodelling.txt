@@ -1,17 +1,14 @@
 # Threat Modelling {#chapter-threat-modelling}
 
-Threat modeling is a way to get an honest overview of the security state of a project.
-It should be done quite early (design phase) and continued during the
-project - especially when requirements change..
+Threat modeling is a way to get an honest overview of the security state of a project. It should be done quite early (design phase) and continued during the project - especially when requirements change...
 
 There are several methods for threat modelling.
 
-The big goal of all of then is to achieve better knowledge of all the bad
-things that could happen.
+The big goal of all of then is to achieve better knowledge of all the bad things that could happen.
 
-To achieve the big goal there are lots of sub-goals you could want to achieve.
-The priority of those depends on circumstances like the company goals,
-the project state, ...
+To achieve this big goal there are lots of sub-goals you could want to achieve. The priority of those depends on circumstances like the company goals, the project state, ...
+
+They are:
 
 * System overview
 * Systematic check for attack vectors
@@ -19,22 +16,20 @@ the project state, ...
 * Guiding non-security people through the process
 * Understanding attackers
 * Security awareness training
-* Documents the security state (and there are software tools for that !)
+* Document the security state (and there are software tools for that !)
 * Probabilities of the attack to happen
 
-Probabilities of the attack to happen is a bit tricky. As compared to
-safety analysis.
+Probabilities of the attack to happen is a bit tricky. Especially compared to safety analysis.
 
 A> Ransomware was a factor for the rising bitcoin price. And the rising bitcoin
 A> price dragged other crypto currencies up as well. A company created a simple
 A> API to mine Monero crypto coins in a web page - as replacement for Ads. And
 A> this got abused by crypto miner malware that emerged after the Ransomware.
 A>
-A> Who could have predicted this 2-3 years cycle ?
+A> Who could have predicted this 2-3 years event cycle ?
 
 The method you pick depends on your exact sub-goals, the people
-participating and your personality. Also on external circumstances like
-"available time" and "available meeting space".
+participating and your personality. Also on external circumstances like "available time" and "available meeting space".
 
 There is a cool list of [12 methodologies](https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html).
 Please read that and other sources to find your set of methods.
@@ -52,14 +47,9 @@ Before I forget: You can combine them
 
 ## Security cards
 
-Security cards are a brainstorming method where randomly drawn cards add an
-element of randomness into the thought process. This is a good way to boost
-creativity. But it will not guarantee full coverage.
+Security cards are a brainstorming method where randomly drawn cards add an element of randomness into the thought process. This is a good way to boost creativity. But it will not guarantee full coverage.
 
 [Download](http://securitycards.cs.washington.edu/index.html)
-
-%% ## Microsoft SDL
-%% [SDL](https://www.microsoft.com/en-us/sdl)
 
 ## STRIDE
 
@@ -67,14 +57,18 @@ The Microsoft checklist for Threat Modelling:
 
 [STRIDE](https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx)
 
-%% TODO: Add details
+After you read the details, here a short checklist for your convenience:
+
+* Spoofing
+* Tampering
+* Repudiation
+* Information Disclosure
+* Denial of Service
+* Elevation of privilege
 
 ## Attack tree
 
-Attack trees are built by first defining *targets* an attacker can have
-("Crash server") and then adding details. This is done by adding more and
-more details with each step ("DDOS network", "DOS RAM", ...). More and more
-deeper levels are added.
+Attack trees are built by first defining *targets* an attacker can have ("crash server") and then adding details. This is done by adding more and more details with each step ("DDOS network", "DOS RAM", ...). More and more deeper levels are added.
 
 This create a collection of trees (one for each target).
 
@@ -82,51 +76,48 @@ There are software tools to manage that. It is a very methodical approach.
 
 ## Persona non Grata
 
-Similar to the approach of personas for Agile development there is also an
-approach to model different types of attackers. With their resources, goals,
-interests and methods.
+Similar to the approach of *personas* for Agile development there is also an approach to model different types of attackers. With their resources, goals, interests and methods.
 
 The system is then "attacked" using their point of view.
 
-This one is leaning more to the creative side and I think teams used to Agile
-user-personas will get used to this one quite fast.
+This one is leaning more to the creative side and I think teams used to Agile user-personas will get used to this one quite fast.
+
+Some basic attacker types being used can be:
+
+* Amateur: drunken kid without skills, up to no good and not caring about consequences
+* Criminal: Criminal with one specific skill. Wants to stay out of prison after the attack
+* Pro Criminal: Several skills, lots of planning. Maybe hires a team
+* Terrorist group / natio state attackers: No limits. Nowhere.
+
+Pick your attacker based on your product. If you build a candy grabber, the first two are a realistic threat.
 
 ## CVSS
 
-This is not a brain storming method but a way to evaluate the impact of
-already found issues.
+This is not a brain storming method but a way to evaluate the impact of already found issues. This way you can prioritize the tasks to fix several issues. And maybe get additional resources or an early update-release-slot.
 
 It can be combined with any of the methods above.
 
 And it shortens those endless discussions "Which one is more relevant".
 
-Just check some boxes in the online calculator and you will receive a CVSS score.
-Not perfect - but much better than the alternative.
+Just check some boxes in the online calculator and you will receive a CVSS score. Not perfect - but much better than the alternative.
 
 [CVSS calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
 ## Thorsten Style
 
-I am more a person who loves to enable others. I observed myself to quite
-often get into "coffee-machine chats" where I trigger the evil neurons of
-people to make them think about the bad things that could happen to their
-projects. A 1:1 brainstorming with technical background lessons in 10
-minutes in a relaxed atmosphere.
+I am more a person who loves to enable others. I observed myself to quite often get into "coffee-machine chats" where I trigger the evil neurons of people to make them think about the bad things that could happen to their projects. A 1:1 brainstorming with technical background lessons in 10 minutes in a relaxed atmosphere.
 
-This will not result in a perfect threat modelled project. But it raises
-awareness and will reduce things in the long term.
+This will not result in a perfect threat modelled project. But it raises awareness and will reduce things in the long term.
 
 It also adds some fun aspects into the whole security topic.
 
-I would be happy to be able to brag about intentionally inventing it. But this
-"just happened" and I observed this pattern around me.
+I would be happy to be able to brag about intentionally inventing it. But this "just happened" and I observed this pattern around me.
 
 This is not a replacement for a properly prepared security assessment.
 
 ## MITRE attack checklist
 
-[MITRE](https://attack.mitre.org/) has a very good attack checklist. You can
-use it in combination with any of the methods above.
+[MITRE](https://attack.mitre.org/) has a very good attack checklist. You can use it in combination with any of the methods above.
 
 The table there contains potential attacks (and links to details).
 The columns from left to right are stages of an attack.
@@ -137,6 +128,13 @@ Put this table on a whiteboard and mark those boxes that are relevant for your p
 %% And: https://github.com/swimlane/pyattck
 %% And: https://pyattck.readthedocs.io/en/latest/
 
-%% ## OWASP Embedded Application Security Project
-%% [OWASP embedded application security][https://www.owasp.org/index.php/OWASP_Embedded_Application_Security]
-%% [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)
+## OWASP (Open Web Application Security Project)
+
+Their mission is to improve the security of software. The offer heaps of free material and tools assisting you in that task.
+
+A strong focus is on web applications (being internet facing they are a perfect target for attacks). A core project is ["OWASP Top 10"](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) listing the top 10 most common web application security risks.
+
+%% TODO: Still in incubator: [OWASP embedded application security](https://www.owasp.org/index.php/OWASP_Embedded_Application_Security)
+
+
+%% TODO: [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)

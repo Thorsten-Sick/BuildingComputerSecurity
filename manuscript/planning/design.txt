@@ -4,70 +4,35 @@ C> By Thorsten Sick
 
 C> For Designers, Managers, Architects and Developers
 
-Architecture and design already starts long before starting to code.
-As it can also include preparing the environment, tools and getting the
-requirement it has a blurred line to management tasks.
+Architecture and design already starts long before someone starts to code. As it can also include preparing the environment, tools and getting the requirement it has a blurred line to management tasks.
 
-%% TODO: Kind of mention "Supply chain attacks" in infrastructure
+Microsoft had a very bad security reputation many years ago. This is why they started to use their "Security Development Lifecycle" in their project - resulting in incredible security improvements.
 
-%% TODO: Maybe split "processes in company" out of infrastructure (bug reporting, ...)
+The [SDL](https://www.microsoft.com/en-us/sdl) covers much more than just development and a bit of testing.
 
-## Preparation
+Other tasks are for example:
 
-### Infrastructure
+* Provide Training
+* Define Security Requirements
+* Establish a Standard Incident Response Process
+
+Which are more processes to be set up by management. More can be found in the [SDL documentation](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
+
+Security is a team effort.
+
+This chapter will now pick some topics more on the management side (and less techy). It is "preapring the battle ground".
+
+## Infrastructure aka "Establish a Standard Incident Response Process in SDL"
 
 * Have an email address to report vulnerabilities to like security@domainname.com
 * Add a PGP key for this address. And train everyone to use it properly
 * Prepare a [security.txt](https://securitytxt.org/)
 * Put it onto your homepage
-* Prepare bugtrackers
-* Have processes for handling vulnerabilities into the bugtracker
+* Publish the PGP key on your homepage
+* Prepare bugtrackers (special flags)
+* Have processes for forwarding vulnerabilities into the bugtracker
 * Have an internal wiki to share experience and knowledge
 * Collect "lessons learned" into this wiki
-
-## Hardening Open Source Development
-
-[34C3: Hardening Open source development](https://media.ccc.de/v/34c3-9249-hardening_open_source_development)
-
-* Tools have their own package managers - maybe sandbox dev environment ?
-* VCS can have shell code attached (git hooks) - use them
-* Build environment could leak keys and credentials....verify that by tools
-* Go for reproducible builds
-* Trusting external lib repos (npm, ...) is tricky. Reduce dependencies
-* Choose proper tooling for development
-* Bus-factor: How many developers may be hit by a bus before the project fails ? Make it > 3
-* Dependency tracking (vulnerabilities for different versions of dependency)
-* Compartmentalize Github projects
-* Create incident response process
-
-
-%% TODO: Tools to check for checked in credentials in detail
-%% TODO: Reproducible builds in detail
-
-## Basics
-
-### Fixing Bugs
-
-The development phases are
-
-* Planning/Design
-* Coding
-* Internal testing
-* External testing (Beta)
-* Release
-* Maintenance
-
-Fixing bugs in the early phases is quite cheap. While fixing a Design
-bug (called "flaw") after Release can be horribly expensive - you have to
-process the change through all the phases in between Design and Release.
-
-TL;DR: Fix bugs early. Verify your Design.
-
-### Data files
-
-* Data files you use should contain a version number for the structure. This frees you to push new versions of the software which can open the old variant as well
-
-
 
 ## Complexity
 
@@ -110,7 +75,32 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 * Plan for recovery
 * Plan for post incident analysis
 * Avoid vendor lock in
+* Data files you use should contain a version number for the structure. This frees you to push new versions of the software which can open the old variant as well
 
+%% TODO: Kind of mention "Supply chain attacks" in infrastructure
+
+%% TODO: Maybe split "processes in company" out of infrastructure (bug reporting, ...)
+
+## Set up a reliable build system
+
+To maintain flexibility, automatically reduce issues and keep your engineers focussed on the real issues plan a good build system early on.
+
+[34C3: Hardening Open source development](https://media.ccc.de/v/34c3-9249-hardening_open_source_development)
+
+* Tools have their own package managers - maybe sandbox dev environment ?
+* VCS can have shell code attached (git hooks) - use them
+* Build environment could leak keys and credentials....verify that by tools
+* Go for reproducible builds
+* Trusting external lib repos (npm, ...) is tricky. Reduce dependencies
+* Choose proper tooling for development
+* Bus-factor: How many developers may be hit by a bus before the project fails ? Make it > 3
+* Dependency tracking (vulnerabilities for different versions of dependency)
+* Compartmentalize Github projects
+* Create incident response process
+
+
+%% TODO: Tools to check for checked in credentials in detail
+%% TODO: Reproducible builds in detail
 
 ## Further reading
 
@@ -118,6 +108,4 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 
 [Security Engineering by Ross J. Anderson](https://www.safaribooksonline.com/library/view/security-engineering-a/9780470068526/)
 
-A book more focused on Designers/Architects. Lots of chapters with specific topics.
-Some may not be relevant for you. But as the book is very good you either soldier on or you
-cherry pick interesting chapters. No matter what of those you are doing: Read it.
+A book more focused on Designers/Architects. Lots of chapters with specific topics. Some may not be relevant for you. But as the book is very good you either soldier on or you cherry pick interesting chapters. No matter what of those you are doing: Read it.

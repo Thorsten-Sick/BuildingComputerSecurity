@@ -1,14 +1,9 @@
 # Intro {#chapter-planning-intro}
 
-Design flaws are as bad as programming bugs: Both are vulnerabilities
-an attacker can abuse.
+Design flaws are as bad as programming bugs: Both are vulnerabilities an attacker can abuse.
 
-A software or hardware design well done can simplify programming and
-strongly improve security.
+A software or hardware design well done can simplify programming and strongly improve security.
 
-Many specific technologies require domain knowledge to be used in a
-secure fashion. Ver often this is available - but hidden under heaps of
-interesting features those technologies offer.
+Many specific technologies require domain knowledge to be used in a secure fashion. For example a crypto library offers an API to be used by programmers without having them understand the maths. This API can be simple and fool-proof or built-for-experts with lots of ways to make horrible mistakes. In the last case you will require lots of domain knowledge to build a secure application.
 
-This chapter will extend principles from the background chapter into
-technology specific knowledge.
+This chapter will extend principles from the background chapter into technology specific knowledge.
