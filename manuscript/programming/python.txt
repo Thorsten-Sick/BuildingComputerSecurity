@@ -4,10 +4,8 @@ C> By: Thorsten Sick
 
 C> For: Developers, Tester
 
-Python does not deal with pointers to memory
-(a constant source of issues in C-Languages) or is flexible/crazy like JavaScript.
-But even a simple and deterministic language without complex memory handling
-can have tricky areas causing security issues.
+Python does not deal with pointers to memory (a constant source of issues in C-Languages) or is flexible/crazy like JavaScript.
+But even a simple and deterministic language without complex memory handling can have tricky areas causing security issues.
 
 And some of them are very sikmilar to what is known from the other languages.
 
@@ -207,3 +205,6 @@ As it can be extended using python plugins, it is very flexible.
 %% [Code coverage](https://codecov.io)
 %% [Code review](https://www.codefactor.io)
 %% [Travis build system](https://travis-ci.org/)
+
+
+%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy) or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. PySpy is good to profile servers which do not terminate.
