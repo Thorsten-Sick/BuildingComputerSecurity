@@ -127,3 +127,6 @@ https://www.darkreading.com/attacks-breaches/mirai-evolves-from-iot-devices-to-l
 
 
 %% AVML (Aquire volatile memory for linux: https://github.com/microsoft/avml)
+
+
+%% TODO: ltrace (library call trace): "ltrace -C -f -e 'getenv'" > all getenv calls by the observed process or its forks
