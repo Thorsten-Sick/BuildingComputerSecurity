@@ -53,13 +53,34 @@ changelog to make it simpler for you to find the new sections.
 
 ## November
 
-%% TODO: Check recon-ng repo: https://github.com/lanmaster53/recon-ng
-
 %% TODO: Full quality check "planning section"
+%% 1: Code review, 2: Spell check, 3: Layout in PDF reviewed
+%% 1 planning/part_planning.txt
+%% 1 planning/intro.txt
+%% 1 planning/threatmodelling.txt
+%% 1 planning/design.txt
+%% planning/vulnerabilities.txt
+%% planning/security_process.txt
+%% planning/software_design_checklist.txt
+%% planning/updates.txt
+%% planning/ux.txt
+%% planning/passwords.txt
+%% planning/browser.txt
+%% planning/censorship.txt
+%% planning/iot.txt
+%% planning/can.txt
+%% planning/bluetooth_le.txt
+%% planning/tls.txt
+%% planning/cryptoalgorithms.txt
+
+%% TODO: Add SDL to design, swap design and threat modelling
+
+%% TODO: unzip external references todo
 
 * Spelling and quality improvements
 * fixed ../../images/tls_simple.png
 * Adding [Recon-NG](#chapter-recon-ng)
+* Small fuzzing upgrade
 
 ## August/September/October 2019
 
