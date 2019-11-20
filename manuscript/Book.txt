@@ -9,8 +9,8 @@ background/attackers_goals.txt
 background/principles.txt
 planning/part_planning.txt
 planning/intro.txt
-planning/threatmodelling.txt
 planning/design.txt
+planning/threatmodelling.txt
 planning/vulnerabilities.txt
 planning/security_process.txt
 planning/software_design_checklist.txt
