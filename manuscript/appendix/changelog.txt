@@ -59,28 +59,29 @@ changelog to make it simpler for you to find the new sections.
 %% 1 planning/intro.txt
 %% 1 planning/threatmodelling.txt
 %% 1 planning/design.txt
-%% planning/vulnerabilities.txt
-%% planning/security_process.txt
-%% planning/software_design_checklist.txt
-%% planning/updates.txt
-%% planning/ux.txt
-%% planning/passwords.txt
-%% planning/browser.txt
-%% planning/censorship.txt
-%% planning/iot.txt
-%% planning/can.txt
-%% planning/bluetooth_le.txt
-%% planning/tls.txt
-%% planning/cryptoalgorithms.txt
-
-%% TODO: Add SDL to design, swap design and threat modelling
+%% 1 planning/vulnerabilities.txt
+%% 1 planning/security_process.txt
+%% 1 planning/software_design_checklist.txt
+%% 1 planning/updates.txt
+%% 1 planning/ux.txt
+%% 1 planning/passwords.txt
+%% 1 planning/browser.txt
+%% 1 planning/censorship.txt
+%% 1 planning/iot.txt
+%% 1 planning/can.txt
+%% 1 planning/bluetooth_le.txt
+%% 1 planning/tls.txt
+%% 1 planning/cryptoalgorithms.txt
 
 %% TODO: unzip external references todo
+
+%% TODO: Add link to security_process
 
 * Spelling and quality improvements
 * fixed ../../images/tls_simple.png
 * Adding [Recon-NG](#chapter-recon-ng)
 * Small fuzzing upgrade
+* Upgrade in *vulnerabilities*
 
 ## August/September/October 2019
 
