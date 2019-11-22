@@ -18,12 +18,14 @@ So you will have to take this generic list and add your own specific experience 
 
 ## Checklist
 
+This is an example checklist. Please expand it for your needs.
+
 * Session Ids can be brute forced. Make them really long
-    * Detect brute forcing attacks and  slow down the speed for that connection
+    * Detect brute forcing attacks and slow down the speed for that connection
     * Keep in mind: Do not add a DDOS vulnerability that way
 * Decide how long a session is valid. Find a reasonable timeout
 * If you use webviews: Can HTML code be injected by the attacker ? Would scripts be executed ?
-* If you use Tokens: Make them really long
+* If you use Tokens: Make them really long and non-deterministic
 * Can security relevant data (private key, ...) be read or written ?
     * If the attacker can set a chosen key it is sometimes as good as writing it
 * Is SQL injection possible ?
@@ -37,7 +39,7 @@ So you will have to take this generic list and add your own specific experience 
     * tokens must be long and link to the user's data in your backend DB
 * Check **all** entry points to your service
 * Does an attacker have all the data to enable him to do *offline* password cracking ?
-        * processing power is cheap
+        * because: processing power is cheap
         * if a verification that a guessed password is correct can be done offline, brute force is possible
 * Using esoteric or uncommon components (CPU, libraries) will not protect you
 * De-activate debugging features before shipping
@@ -50,7 +52,11 @@ So you will have to take this generic list and add your own specific experience 
 
 ## Further reading
 
-T> ## International
+Lots of hacked conferences now have tlaks recorded on videos. A larg heap of knowledge is available online.
+
+One good source is [media.ccc.de](https://media.ccc.de)
+
+T> ## Internationalisation
 T>
 T> The CCC is a German hacker group and runs events. Talks are often in
 T> German or English.
@@ -65,6 +71,4 @@ Some hacking talks that worked well as source for information. There are many mo
 * [35C3 All your Gesundheitsakten are belong to us](https://media.ccc.de/v/35c3-9992-all_your_gesundheitsakten_are_belong_to_us)
 * [35C3 What the Fax?!](https://media.ccc.de/v/35c3-9462-what_the_fax)
 
-### Sources for talks
-
-* [media.ccc.de](https://media.ccc.de/)
+Use talks about projects similar to yours to collect design mistakes made by others.

@@ -8,9 +8,9 @@ C> For: Architects, Developers
 
 Browsers are one of the most complex things running on your computer. They are basically a small operating system.
 
-They run code from external sources: scripts from homepages, extensions, PDFs. They are the user interface to many of your devices at home (WiFi access points, your NAS), They do your online banking, store your passwords and are the main interface to the development process in your company (JIRA, GitHub).
+They run code from external sources: scripts from homepages, extensions, PDFs. They are the user interface to many of your devices at home (WiFi access points, your NAS), they do your online banking, store your passwords and are the main interface to the development process in your company (JIRA, GitHub).
 
-Browsers are also built for user interaction  and forcing the user to decide complex technical topics (for example: the certificate of a page is not valid).
+Browsers are also built for user interaction and forcing the user to decide complex technical topics (for example: the certificate of a page is not valid).
 
 A scary combination.
 
@@ -23,7 +23,8 @@ Even if you do not develop your own browser (I guess you do not...) there are so
 
 Both are OK. There are other, more specialised browsers out there. But they are built on the same foundations as Firefox or Chrome.
 
-%% TODO: Check out more esoteric browsers. Tor browser, Brave
+Especially for the privacy concerned users there are the options of the *Tor* and the *Brave browser*.
+Test them and maybe you will at least get a second browser for certain use cases.
 
 ## Harden your browser
 
@@ -34,22 +35,17 @@ Both are OK. There are other, more specialised browsers out there. But they are 
 * Install Privacy Badger
 * If you are skilled: Install NoScript for Firefox
 
-A more basic checklist is that you ensure three things are secured:
+A more basic checklist is that you ensure three general things are secured:
 
-* The web server and its content - it will be executed within your browser
-* The network connection - TLS all the things
+* The web server and its content - it will be executed within your browser. URL blacklists are used by the browser to block access to known malicious sites.
+* The network connection - TLS all the things. HTTPS-Everywhere covers that.
 * The client side: Browser and Extensions
 
 %% TODO: Check this and add links
 
-%% TODO: pick the right extensions
-
 ## Basic browser security philosophy
 
-The most essential philosophy in browser security is *compartments*.
-Extensions are isolated from each other. Extensions have only a very restricted ability to interact with web pages (and those depend on the manifest
-they ship with). Tabs and web sites are isolated from each other. IFrames are isolated in web
-pages (with special arguments in the Iframe tag to further restrict their abilities).
+The most essential philosophy in browser security is *compartments*. Extensions are isolated from each other. Extensions have only a very restricted permissions to interact with web pages (and those depend on the manifest they ship with). Tabs and web sites are isolated from each other. IFrames are isolated in web pages (with special arguments in the Iframe tag to further restrict their abilities).
 The whole browser is sandboxed away from the system.
 
 Being aware of those boundaries will help you to understand why some design decisions first look strange and alien. Especially when developing Extensions and web pages.
@@ -58,17 +54,16 @@ Being aware of those boundaries will help you to understand why some design deci
 
 Advertising is one of the central ways malware is delivered to you.
 
-The Ads you see online are very often not only pictures or animations - they also contain scripts. Many have to contain them to property measure the impact factor - which is relevant for the price that the advertising party has to pay.
+The Ads you see online are very often not only pictures or animations - they also contain scripts. Many have to contain them to properly measure the impact factor - which is relevant for the price that the advertising party has to pay.
 
-Web pages are selling parts of the screen space to Ad companies. They either re-sell it to other Ad companies or offer the space to entities who want to
+Web pages are selling parts of the screen space to Ad companies. Those either re-sell it to other Ad companies or offer the space to entities who want to
 advertise something.
 
-So it is very unclear who is responsible for the ad you see embedded in a page.
+So it is very unclear who is responsible for the ad content and code you see embedded in a page.
 
 As the Ads are targeted, the company paying to display the Ad can define who will see it:
 
-"Display it to older people who do a lot of online shopping and maybe banking
-who surf with an old Internet Explorer"
+"Display it to older people who do a lot of online shopping and maybe banking who surf with an old Internet Explorer"
 
 And this is what makes it simple to spread malware and exploits in a very reliable way.
 
@@ -87,30 +82,27 @@ There are projects to monitor pages for privacy features. Or you can just check 
 
 [privacyscore](https://privacyscore.org/)
 
-To protect yourself and do your own tracker-tracking use
-
-[Privacy Badger](https://www.eff.org/privacybadger)
+To protect yourself and do your own tracker-tracking use [Privacy Badger](https://www.eff.org/privacybadger)
 
 ### Social Icons: Facebook and Twitter trackers
 
 The Facebook and Twitter buttons you can find on many pages ("Share on Twitter") are trackers: As soon as you see the Facebook button, Facebook knows you
-visited this page. If you have a Facebook account you use with this browser:
-It will have your Facebook identity. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your id.
+visited this page. If you have a Facebook account you use with this browser: Facebook will connect your Facebook identity to the page you are currently visting. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your identity.
 
-What exactly each of the companies is doing on their backend DB us unknown. But this scenario is possible and the most likely one.
+What exactly each of the companies is doing on their backend DB is unknown. But this scenario is possible and the most likely one.
 
 To protect yourself there are ways to **de-activate** the button until it is **activated** with a first click. The the social media company will know - and
 the user can use the button as normal.
 
 Several Extensions offer this. Privacy Badger is amongst them.
 
-[tracking through Social icons](https://threatpost.com/privacy-badger-extension-blocks-tracking-through-social-icons/107348/)
+More details on [tracking through Social icons](https://threatpost.com/privacy-badger-extension-blocks-tracking-through-social-icons/107348/)
 
 ## Exploit Kits
 
 Exploit Kits are simple to use tools. They help criminals run a large scale attack on browser users to spread malware.
 
-They offer a simple user interface to infect thousands of homepages with the exploits. Once a user visits these pages the attack against the user is chose based on the browser and flash version the user has. Success statistics are available to the attacker.
+They offer a simple user interface to infect thousands of homepages with the exploits. Once a user visits these pages the attack against the user is chosen based on the browser and flash version the user has. Success statistics are available to the attacker.
 
 If all the attacks against your browser failed, exploit kits can offer a so called *social engineering* attack against the user. Like "Please download this codec to view this video now".
 
@@ -118,15 +110,14 @@ For a defender the take-aways are:
 
 * A page that was benign yesterday can suddenly be malicious
 * Attackers go for scale
-* The do not necessarily target you, you just happened to be at the wrong place at the wrong time
+* They do not necessarily target you, you just happened to be at the wrong place at the wrong time
 * Several ways of attacks are tried against you until one succeeds
 * Even if the system is hardened: The user is another vulnerability
 
 %% TODO: Write Info source
 
-[Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
-
-[Exploit kits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
+* [Banking trojans](https://www.virusbulletin.com/blog/2018/07/vb2017-paper-and-update-browser-attack-points-still-abused-banking-trojans/)
+* [Exploit kits Winter 2017](https://blog.malwarebytes.com/threat-analysis/2017/03/exploit-kits-winter-2017-review/)
 
 %% TODO: [Fallout Exploit kit](https://www.nao-sec.org/2019/01/in-depth-analysis-of-new-fallout.html)
 %% [Fallout 2](https://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html#fallout)
@@ -144,12 +135,14 @@ In a browser blocking "Third party cookies" is a way to restrict information lea
 
 It is OK if the page offering a service to you is setting its cookies. It is bad if every third party content does that.
 
+The extension "Privacy Badger" uses an internal list to block tracking cookies while leaving normal cookies untouched.
+
 %% TODO Cookie security. Not in scripts and encrypted only. Lifetime
 
 ## Fingerprinting
 
 Besides cookies there are other ways to identify a unique user. This is called *fingerprinting*. By using as many system specific features that
-are available in the browser as possible it creates a kind of unique id.
+are available in the browser as possible it creates a kind of unique id for this browser.
 
 Screen size, languages, installed fonts, user agent, OS platform, browser plugins ...
 
@@ -158,21 +151,18 @@ To test your own setup visit:
 [Panopticlicks](https://panopticlick.eff.org/)
 [Browserleaks](https://browserleaks.com)
 
-
 ## TLS/SSL/HTTPS
 
 TLS (aka HTTPS or SSL) encrypts the connection between your browser and the server. It also verifies the identity of the server.
 
-There are several ways to enable HTTPS. Most of them depend on the admin or web designer to set the right config.
+There are several ways to enable HTTPS. Most of them depend on the admin or web designer to set the right configuration.
 
-One way to get some more encrypted connections out of the web to have your browser request them. This can be done by the [HTTPS-everywhere](https://www.eff.org/https-everywhere) plugin. Just install it.
+One way to get some more encrypted connections out of the web is to have your browser request them. This can be done by the [HTTPS-everywhere](https://www.eff.org/https-everywhere) plugin. Just install it.
 
 There are more advanced use cases for TLS with the acronyms HSTS and HPKP where the server promises to always use a certain encryption standard.
 This is described in the [TLS chapter](#chapter-tls). On the browser side you can access the HPKP and HSTS settings:
 
 Chrome:
-
-To make Chrome forget about the HPKP of a site visit:
 
 chrome://net-internals/#hsts
 
@@ -209,10 +199,7 @@ As BeEF is a very specific tool and not many people will require it it gets a sp
 
 Burp suite is a tool to check web pages for vulnerabilities. Vulnerabilities in web sites lead to hacked web sites. Hacked web sites lead to web sites with browser exploits (BeEF or Exploit Kits). Browser exploits lead to hacked browsers after they visited this page.
 
-So please harden your web sites if you run any. To help you do that there is the Burp Suite.
-As it is very specific and more web-site security oriented I will just leave this few lines here for the bigger picture and direct you to the specific chapter.
-
-[See Burp chapter](#chapter-burp)
+So please harden your web sites if you run any. To help you do that there is the [Burp Suite](#chapter-burp).
 
 ## Attack on Routers
 
@@ -225,22 +212,23 @@ A standard goal is to set the DNS used by your router to the attacker's DNS serv
 Update your router, do not go for the cheap ones. Log out after configuration. Maybe use a different browser profile or browser for Administration tasks  -
 and not the one you use for browsing for cat videos.
 
+Examples:
 
-%% TODO: [Novidade Exploit Kits vs. Routers](https://blog.trendmicro.com/trendlabs-security-intelligence/new-exploit-kit-novidade-found-targeting-home-and-soho-routers/)
-%% TODO: [crypto jacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
-%% TODO: [Router hacking](https://www.zdnet.com/article/hacking-attacks-on-your-router-why-the-worst-is-yet-to-come/)
+* [Novidade Exploit Kits vs. Routers](https://blog.trendmicro.com/trendlabs-security-intelligence/new-exploit-kit-novidade-found-targeting-home-and-soho-routers/)
+* [crypto jacking Routers turn browsers into zombies](https://nakedsecurity.sophos.com/2018/08/03/routers-turned-into-zombie-cryptojackers-is-yours-one-of-them/)
+* [Router hacking](https://www.zdnet.com/article/hacking-attacks-on-your-router-why-the-worst-is-yet-to-come/)
 
 ## Phishing
 
 %% TODO: https://twitter.com/JCyberSec_/status/1130793084957134848
 
-Phishing - social engineering users to get their credentials - will continue as it is a very powerful attack.
+Phishing - social engineering users to get their credentials - will stay around as it is a very powerful attack.
 
-Phishing is a social engineering attack but can contain steps that are technical ("Please install our support software you can download here: https://..."),
+Phishing is a social engineering attack but can contain steps that are technical ("Please install our support software. Download it here: https://..."),
 
 As the goal is credentials browsers normally store them - and are also a part of the social engineering aspect.
 
-Besides blacklisting phishing sites user education is also an important step.
+Besides blacklisting phishing sites user education is also an important protection.
 
 Many browsers do already blacklist phishing sites. If you want to build something similar, Phishtank could be a source for your blacklist. Adding internal data (submitted by aware users) to your blacklist is also smart. If several of your customers are targeted in parallel and the first one reports a URL you protect the others by adding it to a blacklist.
 
@@ -250,72 +238,22 @@ Many browsers do already blacklist phishing sites. If you want to build somethin
 
 %% TODO: [Spear Phishing](https://securityaffairs.co/wordpress/75033/hacking/industrial-sector-spear-phishing.html)
 
-[Phishtank](https://www.phishtank.com)
-
-[Phishstats](https://phishstats.info)
+* [Phishtank](https://www.phishtank.com)
+* [Phishstats](https://phishstats.info)
 
 %% TODO [Certstream phishing catcher](https://github.com/x0rz/phishing_catcher)
 
 ## Pseudonymity
 
-A good way to protect yourself online is to create pseudonyms for our identity.
-Changing your real name and you home is hard if things go south (stalking, mobbing, ...). But a pseudonym can be replaced. Nowadays having a pseudonym is quite common and some people became famous without having to publish their real
-identity.
+A good way to protect yourself online is to create pseudonyms for our identity. Changing your real name and you home is hard if things go south (stalking, mobbing, ...). But a pseudonym can be replaced. Nowadays having a pseudonym is quite common and some people became famous without having to publish their real identity.
 
-This and the fact that Facebook want your account to be linked to your real name should be good reasons to have one or more pseudonyms.
-
-## Further reading
-
-### The Browser Hacker's Handbook
-
-[The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://www.safaribooksonline.com/search/?query=The%20Browser%20Hacker%27s%20Handbook)
-covers many attacks on web browsers. Its focus is on the BeEF framework.
-
-### Web site for browser tests
-
-[https://sploit.io](sploit.io) is a web site to test your browser.
-
-
-
-%% ## Automating the browser and tests
-
-%% TODO: [Selenium with Python](https://selenium-python.readthedocs.io/installation.html)
-%% TODO: [Chromium automation clicks](https://medium.com/@aslushnikov/automating-clicks-in-chromium-a50e7f01d3fb)
-%% TODO [BFuzz: Browser fuzzing](https://twitter.com/binitamshah/status/1058669688719376384?s=09)
-
-%% TODO: [Debugger extension API](https://bugs.chromium.org/p/project-zero/issues/detail?id=1621)
-
-
-%% TODO [Headless Chrome](https://www.imperva.com/blog/headless-chrome-devops-love-it-so-do-hackers-heres-why/)
-%% TODO [Puppeteer](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.9.0)
-
-
-
-%% ## Spying Extensions
-
-%% [Firefox spying extensions](https://www.techrepublic.com/article/firefox-users-beware-this-popular-add-on-could-steal-your-browsing-history/#ftag=RSS56d97e7)
-%% [Mozilla removes spying extensions](https://www.bleepingcomputer.com/news/security/mozilla-removes-23-firefox-add-ons-that-snooped-on-users/)
-%% [More extensions removed](https://hackercombat.com/why-mozilla-banned-23-firefox-add-ons-for-mining-user-data/)
-%% TODO: Add CCC talk
-%% TODO: [Extensions can steal data](https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/)
-
-%% TODO: [Spying chrome extensions](https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab)
-
-
-
-
-%% ## Hacked Shops
-
-%% TODO [Magenta Shops](https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html)
-%% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
-%% [Riskiq Magecart](https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline)
-%% [Trend Micro Magecart](https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/)
+This and the fact that Facebook wants your account to be linked to your real name should be good reasons to have one or more pseudonyms.
 
 ## Crypto mining
 
-Crypto mining became a new common attack in 2018. Miners can be written in JavaScript and run in the victims browser. Sandboxing and isolation will not
+Crypto mining became a common attack in 2018. Miners can be written in JavaScript and run in the victims browser. Sandboxing and isolation will not
 work because the miner is not accessing any outside resources. Just CPU and network connectivity.
-The damage for the user is monetary - the user has to pay the electricity bill. The gain for the attacker is the bitcoins being mined. Side effect is a slow PC.
+The damage for the user is monetary - the user has to pay the electricity bill. The gain for the attacker is the Bitcoins (Monero is more common) being mined. Side effect is a slow PC.
 
 Miners can either be intentionally inserted in pages - with the user willingly paying for the page's content by mining.
 
@@ -327,9 +265,7 @@ Or hacked pages can contain miners. A third option is network infrastructure is 
 ## Pony / Fareit
 
 Pony, aka Fareit is a malware module. It is spread with other malware. Its main tasks is to collect passwords on a computer. It especially targets
-the internal password stores of browsers and FTP clients.
-
-Those passwords are sent to the attacker.
+the internal password stores of browsers and FTP clients. Those passwords are sent to the attacker.
 
 For browsers this is relevant in several ways:
 
@@ -340,16 +276,14 @@ For browsers this is relevant in several ways:
 
 ## URL blacklists
 
-GSB (Google Safe Browsing) is a URL blacklist that is sued to protect against malicious URLs. There are others and Firefox also has an own system.
+GSB (Google Safe Browsing) is a URL blacklist that is used to protect against malicious URLs. There are others and Firefox also has an own system.
 
-To QA the usage of blacklist (and check the warning dialogues) there is a list of
+To QA the usage of blacklist (and check the warning dialogues) there is a list of test urls:
 
 * Firefox Malware [http://itisatrap.org/firefox/its-an-attack.html](http://itisatrap.org/firefox/its-an-attack.html)
 * Firefox Phishing [http://itisatrap.org/firefox/its-a-trap.tml](http://itisatrap.org/firefox/its-a-trap.tml)
 * Firefox PUA [http://itisatrap.org/firefox/unwanted.html](http://itisatrap.org/firefox/unwanted.html)
 * GSB collection [https://testsafebrowsing.appspot.com/](https://testsafebrowsing.appspot.com/)
-
-
 
 ## Browser god modes
 
@@ -369,14 +303,12 @@ Chrome has lots of command line parameters. Many are to assist development. But 
 * Web server hardening
 * Web page hardening
 
-With so many moving parts (think: enabling additional security in the HTTP header the server sends) things break. To sort out "what broke why" it is
-possible to de-activate security features in the browser.
+With so many moving parts (think: enabling additional security in the HTTP header the server sends) things break. To sort out "what broke why" it is possible to de-activate security features in the browser.
 
 This can be essential to roll out new security.
 
 This can be devastating when abused.
-
-(some malware scripts start a browser with reduced security and point the user to start banking).
+Some malware scripts start a browser with reduced security and point the user to start banking.
 
 As the command lines switches are constantly updated, this list will contain bugs.
 
@@ -392,7 +324,6 @@ As the command lines switches are constantly updated, this list will contain bug
 * *unsafely-treat--insecure-origin-as-secure* special insecure treatment of urls in list
 * *disable-xss-auditor* (reflective XSS)
 
-
 #### Crypto security
 
 * *ssl-version-min* minimum ssl version
@@ -403,7 +334,6 @@ As the command lines switches are constantly updated, this list will contain bug
 * *ssl-key-log-file* log SSL key material to the given file
 * *enable-strict-mix-content-checking* strict mixed content check (HTTP in HTTPS)
 
-
 #### Sandbox
 
 * *enable-sandbox* enable sandbox for the process
@@ -412,7 +342,6 @@ As the command lines switches are constantly updated, this list will contain bug
 * *allow-sandbox-debugging*
 * *disable-setuid-sandbox*
 * *enable-sandbox-logging* mac OS logging
-
 
 #### Plugins/Extensions
 
@@ -423,7 +352,6 @@ As the command lines switches are constantly updated, this list will contain bug
 * *allow-outdated-plugins* do not block outdated plugins
 * *whitelisted-extension-id* add to all the permission whitelists
 * *enable-crx-hash-check*
-
 
 #### Everything else
 
@@ -494,6 +422,56 @@ I focus on the urls relevant for security or general purpose. There are many mor
 %% chrome://user-actions
 %% * chrome://serviceworker-internals
 %% chrome://settings Settings dialog
+
+## Further reading
+
+### The Browser Hacker's Handbook
+
+[The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://www.safaribooksonline.com/search/?query=The%20Browser%20Hacker%27s%20Handbook)
+covers many attacks on web browsers. Its focus is on the BeEF framework.
+
+### Web site for browser tests
+
+[https://sploit.io](sploit.io) is a web site to test your browser.
+
+
+
+%% ## Automating the browser and tests
+
+%% TODO: [Selenium with Python](https://selenium-python.readthedocs.io/installation.html)
+%% TODO: [Chromium automation clicks](https://medium.com/@aslushnikov/automating-clicks-in-chromium-a50e7f01d3fb)
+%% TODO [BFuzz: Browser fuzzing](https://twitter.com/binitamshah/status/1058669688719376384?s=09)
+
+%% TODO: [Debugger extension API](https://bugs.chromium.org/p/project-zero/issues/detail?id=1621)
+
+
+%% TODO [Headless Chrome](https://www.imperva.com/blog/headless-chrome-devops-love-it-so-do-hackers-heres-why/)
+%% TODO [Puppeteer](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.9.0)
+
+
+
+%% ## Spying Extensions
+
+%% [Firefox spying extensions](https://www.techrepublic.com/article/firefox-users-beware-this-popular-add-on-could-steal-your-browsing-history/#ftag=RSS56d97e7)
+%% [Mozilla removes spying extensions](https://www.bleepingcomputer.com/news/security/mozilla-removes-23-firefox-add-ons-that-snooped-on-users/)
+%% [More extensions removed](https://hackercombat.com/why-mozilla-banned-23-firefox-add-ons-for-mining-user-data/)
+%% TODO: Add CCC talk
+%% TODO: [Extensions can steal data](https://www.zdnet.com/article/websites-can-steal-browser-data-via-extensions-apis/)
+
+%% TODO: [Spying chrome extensions](https://www.tripwire.com/state-of-security/security-data-protection/malicious-chrome-extension-which-sloppily-spied-on-academics-believed-to-originate-from-north-korea/#new_tab)
+
+
+
+
+%% ## Hacked Shops
+
+%% TODO [Magenta Shops](https://www.heise.de/security/meldung/Magento-Shops-Verwundbare-Add-ons-als-Schlupfloch-fuer-Kreditkarten-Skimmer-4204828.html)
+%% TODO [Magecart](https://sensorstechforum.com/sites-magecart-malware-reinfected/)
+%% [Riskiq Magecart](https://www.riskiq.com/blog/labs/magecart-adverline/&utm_campaign=magecart_adverline&utm_source=twitter&utm_medium=organic&utm_content=magecart_adverline)
+%% [Trend Micro Magecart](https://blog.trendmicro.com/trendlabs-security-intelligence/new-magecart-attack-delivered-through-compromised-advertising-supply-chain/)
+
+
+
 
 %% ## Futuristic Technologies
 
@@ -571,7 +549,5 @@ I focus on the urls relevant for security or general purpose. There are many mor
 %% TODO: [URL Display guidelines](https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md)
 
 %% TODO: [XSS](https://github.com/dxa4481/XSSOauthPersistence)
-
-%% TODO: List of test URLs
 
 %% TODO: Routers inject coinhive script into websites (Mikrotick ISP routers from SN675)

@@ -4,29 +4,37 @@ C> By: Thorsten Sick
 
 C> For: Manager, Architects, Developers
 
-As soon as your system reaches a certain level of complexity, you will require updates.
+As soon as your system reaches a certain level of complexity, you will require updates. Reason for that are the inevitable bugs and feature requests.
 
-%% TODO: Why updates
+And as bugs can be vulnerabilities you will not be offering a secure solution without updates.
 
-## Todo
+The software offered today is highly complex. Caused by the foundation that is used: Operating Systems, libraries, frameworks, ...
+
+Even CPU microcode can be updated.
+
+Updates are the solution. And they add more complexity.
+
+## Things that a good update strategy covers
 
 * Be able to rollback
 * Verify signature
 * Secure key handling
-* Verify version - only upgrade
+* Verify version - only upgrade and no downgrades
 * Track distribution
-* Be able to stop updates
+* Be able to stop update rollouts
 * Distributing the updates
 * Compress updates
 * Diff updates
-* Incentives
+* Incentives to update
 * Automatic updates
 
 
-## Not todo
+## Things to avoid
 
 * TOCTTOU Time of check to time of use - error
 * Break the update chain
+
+Especially breaking the update chain (for example by ruining the update on the client system) is one of the biggest fears.
 
 ## Response Time
 
@@ -34,7 +42,6 @@ This is the time you have to response to an incident. Normally it is the span be
 
 If a vulnerability gets known to the *bad guys*, expect a time-to-exploit of a few days. Normal process is that someone identifies the vulnerability
 and writes an exploit (plus a blog post). The exploit is then stabilized and integrated into attack systems (metasploit for the more white hack side, exploit kits for the bad guys).
-
 
 If a vulnerability gets reported as "responsible disclosure" by a friendly hacker you will have about 90 days (standard) to release the fix to all customers. If you have good reasons (complex situation where it is hard to get all your users updated) you can maybe negotiate and get some
 more days. But there is a very good reason for the 90 days: It is a reasonable time to get the fix released and a longer time frame would increase the risk that a bad guy finds the same vulnerability in parallel.
@@ -52,11 +59,11 @@ These *disassembler* tools may sound arcane, but are quite simple to find and so
 * [Radare2](http://radare.org/r/), Mac/Windows/Linux/...
 %% TODO Add Ghidra
 
-## Details todo list
+## Update strategy details
 
 ### Be able to rollback
 
-Be able to roll back your changes either automatically or by user interaction if the update breaks something. User interaction could be "press the reset button for 10 seconds". Rollback could be to factory system or last-know-good software state.
+Be able to roll back your changes either automatically or by user interaction if the update breaks something. User interaction could be "press the reset button for 10 seconds". Rollback could be to the *factory system* or *last-know-good* software state.
 This will reduce your stress when doing emergency updates.
 
 ### Verify signature
@@ -82,7 +89,7 @@ revoke it and do an emergency update now binding the emergency key to the client
 
 Only update to a **newer** version. No updates to older versions. If you ever want to roll back a change, release an old version of your programs with a higher version number.
 
-The reason for this is that an attacker could roll out updates with older versions of your program that still contains known vulnerabilities. And hack the systems afterwards.
+The reason for this is that an attacker could trick clients to install updates with older versions of your program that still contains known vulnerabilities. And hack the systems afterwards.
 
 ## Track distribution
 
@@ -93,17 +100,21 @@ You want to track your update roll out. And if systems are functional post-updat
 If you roll out a broken update, you should be able to remove it from your update servers very quick. So other users do not risk ruining their systems.
 Automatic roll back (mentioned a few chapters above) will take care for the updated systems.
 
+Slowly increasing the percentage of client systems getting the update offered is also part of this. Start with a few percent, measure success, increase percentage.
+
+Result of these precautions is that everyone (including management) feels much more comfortable rolling out updates. And this will make it simpler to update clients with a new version that contains "only one security fix that is not even abused - as far as we know".
+
 ## Distributing the updates
 
 If your updates are big your servers will not have enough bandwidth for to update all clients in time.
 You could use a CDN for your updates. To further reduce load update in stages:
 
-1. Check if there is a newer version. This is a few bytes only
-2. Download config file. Verify.
+1. Check first if there is a newer version than the one installed. This is a few bytes only
+2. Download config file. Verify it.
 3. Download binaries
 
 As you have your files signed, an option to be protected against DDOS-es vs. your update infrastructure would be to also have a fallback to a peer-to-peer network (BitTorrent). Some bigger software applications (games) use BitTorrent.
-Do not make that the only source ! Because BitTorrent could be blocked in some environments like companies. Also do not waste the users bandwidth without asking. Could be expensive for some of them if they are connected using a mobile network.
+Do not make that the only source ! BitTorrent could be blocked in some environments like companies. Also do not waste the users bandwidth without asking. It could be expensive for some of them if they are connected using a mobile network.
 
 %% TODO: Details: Your updates should be served in chunks, where paused downloads can be continued. You either implement this by hand our your server supports pause and continue of downloads.
 
@@ -124,11 +135,13 @@ That way there is no additional risk.
 
 Some users care more about new Emojis than about vulnerability fixes. Maybe bundle some eye candy (new backgrounds, ...) with the updates to get the users to update. Sad but true.
 
-%% TODO: interne und beta channels dazu zu updates
+## Plan for several channels
+
+When creating an updater be ready to add new channels later. Valuable channels to have are for example an "internal" and a "beta" channel.
 
 ## Automatic updates
 
-Do updates in the background. Without user interaction. Especially if you have corporate users, offer an Opt-out hidden in some config. Companies want to test before they deploy to thousands of users.
+Do updates in the background. Without user interaction. Especially if you have corporate users offer an Opt-out hidden in some config. Companies want to test before they deploy to thousands of users.
 
 If the update requires a restart of the software think about waiting for the user to naturally restart it - with a timer. If the user does not restart it after X days nudge him.
 
@@ -142,7 +155,9 @@ It is essential that you control your update infrastructure. There are several t
 
 Plan ahead and create scripts that test your current situation and warn you weeks ahead before your domain ownership runs out or before you should create a new certificate.
 
-## Details Not-todo list
+Another thing to control is the certificate that signs the updates. It must not be on the update server. It also should not be on the build server (where lots of people from you company can access it) but on a dedicated system.
+
+## Details for things to avoid
 
 ### TOCTTOU Time of check to time of use - error
 

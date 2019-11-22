@@ -4,7 +4,7 @@ C> By: Thorsten Sick
 
 C> For: Architects, Developers
 
-Crypto Algorithms are the basic building block for encryption. Above them are protocols ("how do we glue algorithms together to achieve our goal ?"). And above the protocol are libraries offering an easy programming interface to select use protocol.
+Crypto Algorithms are the basic building blocks of encryption. Above them are protocols ("how do we glue algorithms together to achieve our goal ?"). And above the protocols are libraries offering an easy programming interface to use a protocol.
 
 In many cases the user of the library still has to pick the algorithm to slot into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
 
@@ -15,10 +15,10 @@ also bring down the attack time.
 
 Normally experts will warn months or even years before a realistic attack on an algorithm is possible. That's the time to move on to use a better algorithm.
 
-**Be prepared to swap the algorithm used in your protocol and files**
+**Be prepared to swap the algorithm used in your products and services**
 
 If you rely on a crypto book on your desk, check out the date it was published. During the last years new attacks have been invented and some algorithms and
-protocols did not age well. If your decisions still are based on ta book from 1995 they will be wrong - even if the book was great at that time.
+protocols did not age well. If your decisions still are based on a book from 1995 they will be wrong - even if the book was great at that time.
 
 Be aware: This chapter is an extreme simplification. If crypto security is an essential part of your project dig deeper and use the *further reading* section.
 
@@ -49,8 +49,7 @@ that way...
 
 SHA256 and SHA512 are SHA-2 hashes. Where the number indicates the bit length.
 
-SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But if something should happen to it, there is SHA-3 with is based on a totally
-different internal principle.
+SHA-3 aka Keccak: Is developed as fallback for SHA-2. SHA-2 is still good. But if something should happen to it, there is SHA-3 with is based on a totally different internal principle.
 
 [BLAKE2](https://blake2.net/) was in the SHA-3 contest. Its main feature is speed. There are different variants optimized for different architectures. The core ones are:
 
@@ -59,10 +58,8 @@ different internal principle.
 
 If you need speed, give it a chance.
 
-
 %% TODO [Hash function security summary](https://en.wikipedia.org/wiki/Hash_function_security_summary)
 %% TODO: [Comparison of crypto graphic hash functions](https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions)
-
 
 ## HMAC or MAC
 
@@ -80,7 +77,7 @@ MAC allows *Integrity* and *Authentication*. Simplified: It is a Hash with a sha
 ## Password hash functions
 
 While other hash functions are efficient, for password hashes we want inefficient hash functions. On a normal server it does not matter that much if
-1 or 500 milliseconds are wasted on calculating the Hash. But the attacker wanting to break a database dumb with hundreds of thousands Hashes gets into lots of trouble thanks to the in-efficient hash.
+1 or 500 milliseconds are wasted on calculating the Hash. But the attacker wanting to break a database dump with hundreds of thousands Hashes gets into lots of trouble thanks to the in-efficient hash.
 
 
 |Name    |Comments                                   |
@@ -133,8 +130,7 @@ proper mode. There will be an own table for that.
 
 ### Modes
 
-Block ciphers are encrypting the data block-by-block. The **mode** defines *if* and *how* the encryption of one block influences the encryption of the
-other blocks.
+Block ciphers are encrypting the data block-by-block. The **mode** defines *if* and *how* the encryption of one block influences the encryption of the other blocks.
 
 |Name                        |Quality|
 |----------------------------|-------|
@@ -163,13 +159,11 @@ One important differentiation is if to do MAC first or encryption. It seems duri
 MAC and cipher must use distinct keys.
 But there are foot guns and alternatives to this whole AE complex.
 
-If you go down that road, please check out further reading and at least 2 more books. Implementing this is lots of work (months-for experts). Invest your time into smartening up first.
+If you go down that road, please check out "further reading" and at least 2 more books. Implementing this is lots of work (months-for experts). Invest your time into smartening up first.
 
 Or use libraries implementing this technology ready-to-use (which I would do).
 
 %% TODO: Example
-
-
 
 ## Asymmetric Ciphers
 

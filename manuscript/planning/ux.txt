@@ -6,21 +6,19 @@ C> For: Architects, UX specialists
 
 
 %% TODO: "Human Error" by James Reason lesen
-
 %% TODO: Add books on social engineering
+%% TODO: Daniel Suarez: "From the perspective of an AI, the human mind is a stationary target"
 
-%% Daniel Suarez: "From the perspective of an AI, the human mind is a stationary target"
+"From the perspective of an AI, the human mind is a stationary target" Daniel Suarez
 
-"The human mind is a stationary target"
-
-Attackers normally have to chain several steps until they control the target. Quite often the human mind is the weakest link. Hacking humans is named "Social engineering". To strengthen humans against attacks you have two options:
+Attackers normally have to chain several attack steps until they control the target (the so called "kill chain"). Quite often the human mind is the weakest link. Hacking humans is named "Social engineering". To strengthen humans against attacks you have two options:
 
 * Education
 * Resilient user interfaces
 
-This is about the user interfaces.
+This chapter is about the user interfaces.
 
-## Todo
+## Things to do
 
 * Find usability experts
 * Secure setting is default
@@ -32,7 +30,7 @@ This is about the user interfaces.
 * Stop the user's momentum
 
 
-## Not todo
+## Dangerous things - please avoid
 
 * Show security UI on external content area
 * Over-simplify
@@ -40,21 +38,21 @@ This is about the user interfaces.
 ## Attacks
 
 Social engineering attacks normally abuse emotions like greed, fear, panic, ...
-Common for browsers is for example "To view this video, please download the codec/font". It is no codec. Even if the page looks like it is a Google page (designs can be faked).
+Common for browsers is for example "To view this video, please download the codec/font". It is no codec. Even if the page looks like it is a Google page (designs can be faked). In the end it is a standard download, a web page with some nice looking "codec" content and a user executing the just downloaded malware.
 
-For emails panic subjects are common. Just check your spam folder for invoices, "urgent" and similar.
+For emails panic causing subjects are common. Just check your spam folder for invoices, "urgent" and similar.
 
 Maybe it does not work on an average person. But if the timing is bad - the person is expecting something like that and it was a long day - everyone could be exploited.
 
-There is also technology for more advanced attacks:
+There is also technology for more advanced phishing attacks:
 
 * Waterhole attack: A web page where a specific kind of people normally meet is "mined"
 * Phishing: General targeting for credentials. Can be Social Engineering plus malware as attack vector
-* Spear Phishing: First invest time to know the target and have a more convincing message
-* Whaling: Target the "big fish". Lots of prior time invested
-* Browser exploits like BEEF also have lots of convincing tools for UI modification
+* Spear Phishing: The attacker first invests time to know the target and have a more convincing phishing message
+* Whaling: Target the "big fish". The attacker invests lots of prior intelligence gathering time
+* Browser exploits like you can find them in BEEF also have lots of convincing tools for UI modification
 
-## Details Todo list
+## Details fot "Things to do"
 
 ### Find usability experts
 
@@ -79,7 +77,7 @@ This said: Create a simple way for the user to granular get the extended permiss
 
 If there are many warnings, people will start to ignore them and click them away. Maybe for some events it is better to "Just do the right thing and inform the user afterwards".
 
-Also: If your normal pop-ups (especially things like ads) look like warnings you will train the users to click them away in top speed. Never ever do that !
+Also: If your normal pop-ups (especially things like ads) look like warnings you will train the users to click them away at top speed. Never ever do that !
 
 Show those things in different screen areas, with a different color scheme.
 
@@ -87,7 +85,7 @@ Still have the warnings in a kind of "corporate identity" so the user can connec
 
 ### Show marker on warning
 
-If you have (browser) UI where a missing lock icon indicates the insecurity: This will fail. Users do not notice anything missing. Add a warning sign
+If you have a (browser) UI where a missing lock icon indicates the insecurity: This will fail. Users do not notice anything missing. Add a warning sign
 for the "not secure state" instead. Keep the lock icon for the secure state.
 
 ### Unique warning ID ?
@@ -115,11 +113,11 @@ user will be infected.
 AFAIK: Debian even had a nice feature where the user had to enter a sentence like "I am a bonehead and this will fry my computer" into an edit box before
 being able to delete the OS kernel.
 
-## Details Not-todo list
+## Details list of dangerous things
 
 ### Show security UI on external content area
 
-Especially for a browser: There is a Browser UI and a third party area (the homepage). The third party area is attacker controlled. They can fake any UI, Logos and things in there. Be aware of that.
+Especially relevant for a browser: There is a browser UI and a third party area (the homepage area). The third party area is potentially attacker controlled. They can fake any UI, Logos and things in there. Be aware of that.
 
 ### Not deciding is the secure option
 
@@ -132,7 +130,7 @@ This should lead to the secure default.
 Security is complex. Sometimes you can not have one indicator for all kinds of risks and attacks.
 
 This happened to the browser developers because the situation changed during the last years.
-The lock icon next to the URL bar always indicated "The connection is secure". But as users started to understand this icon as "This page is secure" malware started to encrypt the connection. So users would see the lock and assumed the page is OK.
+The lock icon next to the URL bar always indicated "The connection is secure". But as users started to understand this icon as "This page is secure" malware started to TLS-encrypt the connection. So users would see the lock and assumed the page content is OK.
 This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page,
 one for the connection). Or start indicating differently (red bar for unencrypted connections). While a malware attack will be blocked hard with the
 whole tab displaying info on a red background.

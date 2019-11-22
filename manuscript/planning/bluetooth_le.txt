@@ -6,8 +6,7 @@ C> For: Architects, Developers, Tester
 
 ## Basics
 
-Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It behaves very differently from normal Bluetooth behaviour with the benefit of
-significantly lower power consumption.
+Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It behaves very differently from normal Bluetooth behaviour with the benefit of significantly lower power consumption.
 
 It does not maintain a longer connection (like used by classical Bluetooth and streaming audio) but uses small data bursts to exchange data snippets.
 
@@ -16,13 +15,12 @@ Those data snippets are basically key-value pairs.
 A key is called a "characteristic". Several characteristics can be combined into a service. A device can have several services. For example one handling all the device specific data (brand, model, version) while another is sharing
 measurements (temperature, air pressure, ...)
 
-There are also "profiles" which are standardized services/characteristics for a ble device. The "Heart Rate monitor" profile for example allows any heart
-rate monitor device to be compatible with a range of apps.
+There are also "profiles" which are standardized services/characteristics for a ble device. The "Heart Rate monitor" profile for example allows any heart rate monitor device to be compatible with a range of apps.
 
 A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
 I am using Kali Linux for many of my tests/attacks on my devices. Sometimes it can be hard to find a Bluetooth device that is working correctly
-(my built-in Bluetooth adapter of my laptop fails). So search your drawers for a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
+(the built-in Bluetooth adapter of my laptop fails). So search your drawers for a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 
 ## Potential attacks
 
@@ -251,13 +249,11 @@ Decrypting the pcap:
 {lang="bash"}
      crackle -v -i logs/encrypted.pcap -o logs/decrypted.pcap
 
-The Adafruit sniffer seems to produce a different pcap than Ubertooth and I had to convert my pcaps before processing with Crackle. Thanks to the internet
-for help. More about how to [convert PCAP](https://github.com/mikeryan/crackle/issues/26)
+The Adafruit sniffer seems to produce a different pcap than Ubertooth and I had to convert my pcaps before processing with Crackle. Thanks to the internet for help. More about how to [convert PCAP](https://github.com/mikeryan/crackle/issues/26)
 
 ## Training: BLE CTF (Capture the Flag)
 
-There is a software for cheap ESP32 controllers to test you hacking skills (and especially the tools listed in this chapter). It is
-a [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf). Just install it as described and start testing your tools.
+There is a software for cheap ESP32 controllers to test you hacking skills (and especially the tools listed in this chapter). It is a [BLE Capture the Flag](https://github.com/hackgnar/ble_ctf). Just install it as described and start testing your tools.
 
 Hint: You will need several of the tools listed in this book. And maybe some simple bash scripting or python programming.
 

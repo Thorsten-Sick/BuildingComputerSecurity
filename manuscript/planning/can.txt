@@ -66,8 +66,7 @@ Cansniffer is an enhanced logger.
 
 **canplayer**
 
-Replays a can log file onto the bus. It also offers to use stdin. And as you can modify the log file with a text editor before sending it is a simple way to
-simulate specific scenarios and run them from command line.
+Replays a can bus log file onto the bus. It also offers to use stdin. And as you can modify the log file with a text editor before sending it is a simple way to simulate specific scenarios and run them from command line.
 
 **cansend**
 
@@ -139,8 +138,7 @@ into a binary representation based on a given format. One line will handle all y
 
 ## Fuzzing the CAN bus with python
 
-When I fuzz a device I will first find ways to detect if the device is behaving normal: Read the firmware version by CAN bus and comparing the results to the
-expected value. For example.
+When I fuzz a device I will first find ways to detect if the device is behaving normal: Read the firmware version by CAN bus and comparing the results to the expected value.
 
 Better to use several simple tests and combine them.
 
@@ -170,8 +168,7 @@ Have fun.
 
 ### The Car Hacker's Handbook: A Guide for the Penetration Tester
 
-A very good book covering hacking of cars. With a big focus on CAN bus hacking. There is a free version for it available on *opengarages.org* but this page
-can currently not be reached. I wish you luck.
+A very good book covering hacking of cars. With a big focus on CAN bus hacking. There is a free version for it available on *opengarages.org* but this page can currently not be reached. I wish you luck.
 
 %% TODO: [Car Hacker's Handbook paid](https://nostarch.com/carhacking)
 %% TODO: [Car Hacker's Handbook free](http://opengarages.org/handbook/)

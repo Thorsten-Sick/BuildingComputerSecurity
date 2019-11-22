@@ -77,8 +77,6 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 * Avoid vendor lock in
 * Data files you use should contain a version number for the structure. This frees you to push new versions of the software which can open the old variant as well
 
-%% TODO: Kind of mention "Supply chain attacks" in infrastructure
-
 %% TODO: Maybe split "processes in company" out of infrastructure (bug reporting, ...)
 
 ## Set up a reliable build system
@@ -98,6 +96,12 @@ To maintain flexibility, automatically reduce issues and keep your engineers foc
 * Compartmentalize Github projects
 * Create incident response process
 
+For attackers you supply chain is a valid target. Hacking the chain between the code your developers wrote, the build system, the signature server, the update server and the updater on your customer's system has some benefits for the attacker:
+
+* Several options to find weaknesses
+* The potential to attack all the customers at once
+
+Harden those systems.
 
 %% TODO: Tools to check for checked in credentials in detail
 %% TODO: Reproducible builds in detail

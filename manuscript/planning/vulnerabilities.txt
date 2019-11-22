@@ -16,7 +16,7 @@ Vulnerabilities want to be managed. And fixed. To get the terms right:
 * **managing** vulnerabilities is the awareness of the current state of the system - as realistic as possible
 * **fixing** vulnerabilities (and rolling out the update) removes them
 
-So it is a race between the attackers - wanting to get to the stage of exploit or weaponized exploit and the defenders - wanting the patches rolled out to all of their customers.
+So it is a race between the attackers - wanting to get to the stage of *exploit* or *weaponized exploit* and the defenders - wanting the *patches rolled out* to all of their customers.
 
 The tricky part is not to miss the start of the race. And be well organised to push towards the goal.
 
@@ -41,6 +41,12 @@ There are several pools where knowledge about vulnerabilities can be found:
 * Public knowledge [CVE](https://cve.mitre.org), [Rapid7](https://www.rapid7.com/db/vulnerabilities), [VulDB](https://vuldb.com) or [NVD](https://nvd.nist.gov/vuln/)
 * The darker markets for exploits [Zerodium](https://zerodium.com/program.html) - they are not interested in patching vulnerabilities
 
+You can use them in several ways:
+
+* Monitor for vulnerabilities in your own products
+* Monitor for vulnerablities in libraries and tools your product uses
+* Learn from other projects mistakes and check if you have similar vulnerabilities
+
 ## Building bugs and flaws
 
 A system/program can get bugs and flaws from different sources:
@@ -51,9 +57,11 @@ A system/program can get bugs and flaws from different sources:
     * Current library version used - the vulnerability is unknown
 * As a software project by flaws/bugs introduced by your own team
 
+Keep close track on those sources
+
 ## CVSS Score
 
-In many cases it is harder to triage if a reported bug if it is also a vulnerability than to just fix it. In this case: I would just fix it.
+In many cases it is harder to triage if a reported bug is also a vulnerability than to just fix it. In this case: I would just fix it.
 
 For the harder cases you can do:
 
@@ -61,6 +69,10 @@ For the harder cases you can do:
 * Calculate the CVSS score - which indicated how serious this bug is
     * [CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 * Prioritize the bug into your backlog
+* Fix it
+* Roll out update
+
+And constantly monitor if the vulnerability stays fixed or if you have a regression. Use automated tests here.
 
 ## Security process
 
@@ -69,24 +81,24 @@ Developers and testers can avoid them during the development phase or detect the
 
 There are chapters in this book covering this - because it is the essence of security.
 
-%% TODO: Add to test cases to avoid regression
+## Search engines for exploits
 
-%% ## Search engines
+Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both seem to have a strong focus and bias. So I suggest you either use several or experiment with them to find the one matching your requirements.
 
-%% [Sploitus](https://sploitus.com/)
-%% [CVS](https://cve.mitre.org)
-%% [NVD](https://nvd.nist.gov/vuln/)
-%% [Google hacking](https://www.exploit-db.com/google-hacking-database/)
+Some exploit tools (metasploit) are also a good source for exploits. Going for the paid version is smart if you want the newest exploits.
 
-%% [Rapid 7 vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
-%% [Vuldb](https://vuldb.com)
+Search engines to try are:
 
-%% [Explit-db](https://www.exploit-db.com)
+* [Sploitus](https://sploitus.com/)
+* [CVE](https://cve.mitre.org)
+* [NVD](https://nvd.nist.gov/vuln/)
+* [Vuldb](https://vuldb.com)
+* [Exploit-db](https://www.exploit-db.com)
+* [Rapid 7 (Metasploit) vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
+* [snyk.io](https://snyk.io)
 
-%% # snyk.io
+A special case if you are more interested in web security is this sub-database for [Google hacking](https://www.exploit-db.com/google-hacking-database/)
 
-%% # Measuring impact of vulnerability (Common vulnerability scoring system)
-%% # [CVSS](https://nvd.nist.gov/vuln-metrics/cvss)
 
 %% # Exploitation
 
@@ -108,12 +120,15 @@ There are chapters in this book covering this - because it is the essence of sec
 %% TODO: Metasploit, Armitage
 
 
-## Fixing Bugs
+## Fixing Bugs - tasks for management
 
-As bugs are vulnerabilities, you should mentally prepare for them.
-Prepare you bug tracker, developers and qa engineers and give them space to create a solid product.
+As bugs can be vulnerabilities, you should mentally prepare for them. Prepare your bug tracker, developers and qa engineers and give them space to create a solid product.
 
-The development phases are
+This will mean protecting the team from a flood of challenging feature requests.
+
+Set up your build process to detect bugs early and get them fixed soon. The time scale here is the development phases.
+
+Those are:
 
 * Planning/Design
 * Coding

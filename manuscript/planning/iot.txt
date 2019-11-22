@@ -8,7 +8,7 @@ IoT is cheap embedded devices with (optional) network connectivity. They have th
 
 ## Class break
 
-A thing very relevant for IoT devices is the *class break* (it is still relevant for many other systems, but here it is devastating).
+A thing very relevant for IoT devices is the so called *class break* (it is still relevant for many other systems, but here it is devastating).
 
 Class breaks is when a vulnerability exists in all devices of a specific class. The adversary buys one of the devices (maybe second hand on eBay) and has
 plenty of time to hack it. The attack itself can then be described (blog posts) or weaponized - simple to use scripts are created for everyone to run the attack.
@@ -22,7 +22,7 @@ Class breaks hit IoT especially hard because quite often they can not be updated
 Interfaces like JTAG or UART are very convenient for development or debugging. UART is a serial interface that can be used to accept commands or at least
 send logging data. JTAG is an official debugging interface to debug the firmware.
 
-Controlling them is a big step for an attacker towards takeover of the device.
+Controlling them is a big step for an attacker towards device takeover.
 
 Sometimes an embedded device has connectors for those interfaces soldered already. If not it is at least very likely there are the solder points to
 attach them.
@@ -38,7 +38,7 @@ There are several options you have to lock them down. All of them have side effe
     * Weakness: Better than hard coded password (strings does not work)
     * But: Attackers with disassembly skills can break it
     * Weakness: Leaks by support engineers still possible
-* Burn Micro controller fuse to break UART and JTAG right before shipping
+* Burn a micro controller fuse to break UART and JTAG right before shipping
     * Side effect: No field debugging possible anymore
     * Burnt fuses can be overridden...with lots of effort, but it is possible
 * Public key challenge response to access debugging functionality
@@ -47,8 +47,7 @@ There are several options you have to lock them down. All of them have side effe
 
 ### Public key challenge response
 
-This is a very complex option to solve the interface problem and so be warned: As I do not know your specific situation I will just give you some hints now
-and you will have to fill in your specifics.
+This is a very complex option to solve the interface problem and so be warned: As I do not know your specific situation I will just give you some hints now and you will have to fill in your specifics.
 
 A public key pair is created for each device. The secret key stored on the server. If someone wants to access a IoT device it creates a unique and random challenge. The Support Technician can contact the server and forward the challenge together
 with the device ID. The server signs the challenge with the device specific secret key. The device gets the signed challenge and verifies:
