@@ -8,7 +8,7 @@ Vulnerabilities want to be managed. And fixed. To get the terms right:
 
 * **Bugs** are mistakes in **code**
 * **Flaws** are mistakes in the **design** of the software
-* **bugs** and **flaws** *can* be **vulnerabilities
+* **bugs** and **flaws** *can* be **vulnerabilities**
 * *some* vulnerabilities can be **exploited**
 * *some* **exploits** can be **weaponized** - made simple to use and reliable
 * **vulnerabilities** can also be patched.....

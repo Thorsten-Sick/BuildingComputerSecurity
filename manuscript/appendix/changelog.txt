@@ -50,38 +50,23 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add viruslab.wip
 %% TODO: Add antivirus_detection.wip
 
+%% ## December
 
-## November
-
-%% TODO: Full quality check "planning section"
-%% 1: Code review, 2: Spell check, 3: Layout in PDF reviewed
-%% 1 planning/part_planning.txt
-%% 1 planning/intro.txt
-%% 1 planning/threatmodelling.txt
-%% 1 planning/design.txt
-%% 1 planning/vulnerabilities.txt
-%% 1 planning/security_process.txt
-%% 1 planning/software_design_checklist.txt
-%% 1 planning/updates.txt
-%% 1 planning/ux.txt
-%% 1 planning/passwords.txt
-%% 1 planning/browser.txt
-%% 1 planning/censorship.txt
-%% 1 planning/iot.txt
-%% 1 planning/can.txt
-%% 1 planning/bluetooth_le.txt
-%% 1 planning/tls.txt
-%% 1 planning/cryptoalgorithms.txt
+%% TODO: Proper format for Recon NG header, Threat modelling
 
 %% TODO: unzip external references todo
 
 %% TODO: Add link to security_process
+
+
+## November
 
 * Spelling and quality improvements
 * fixed ../../images/tls_simple.png
 * Adding [Recon-NG](#chapter-recon-ng)
 * Small fuzzing upgrade
 * Upgrade in *vulnerabilities*
+* The part *planning* got a proper review.
 
 ## August/September/October 2019
 
