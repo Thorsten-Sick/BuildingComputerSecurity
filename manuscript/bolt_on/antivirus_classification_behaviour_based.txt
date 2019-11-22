@@ -94,6 +94,8 @@ Use VMCloak to create a virtual machine and test with Pafish if it can be detect
 
 Those VMs can be controlled by tools like Cuckoo to do the analysis.
 
+%% TODO: https://www.cyberbit.com/blog/endpoint-security/anti-vm-and-anti-sandbox-explained/
+
 ## Cuckoo Sandbox
 
 [Cuckoo Sandbox](https://cuckoosandbox.org/) is an analysis environment. After setup you push files in and
