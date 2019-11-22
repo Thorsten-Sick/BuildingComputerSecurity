@@ -132,7 +132,7 @@ you some of the respect points back that you just lost. And for that you need to
 After you have your processes for bug prioritisation and vulnerability handling in place and all the hot areas of your code are bug-free you can hire external *pen testers*. This companies are specialists for finding vulnerabilities and bugs.
 If you did not fix well known issues before hiring them, you are wasting money. If you do not have processes for dealing with issues - you are wasting money. So please get your team and processes in perfect shape first.
 
-Standard process when hiring pen testers is todefine a scope (the most risky parts of your project) and they will review it. Bugs will be created and prioritised.
+Standard process when hiring pen testers is to define a scope (the most risky parts of your project) and they will review it. Bugs will be created and prioritised.
 
 Then your team can start fixing them.
 

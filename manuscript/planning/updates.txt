@@ -21,7 +21,7 @@ Updates are the solution. And they add more complexity.
 * Secure key handling
 * Verify version - only upgrade and no downgrades
 * Track distribution
-* Be able to stop update rollouts
+* Be able to stop update roll outs
 * Distributing the updates
 * Compress updates
 * Diff updates

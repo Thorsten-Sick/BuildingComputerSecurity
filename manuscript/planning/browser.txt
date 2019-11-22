@@ -87,7 +87,7 @@ To protect yourself and do your own tracker-tracking use [Privacy Badger](https:
 ### Social Icons: Facebook and Twitter trackers
 
 The Facebook and Twitter buttons you can find on many pages ("Share on Twitter") are trackers: As soon as you see the Facebook button, Facebook knows you
-visited this page. If you have a Facebook account you use with this browser: Facebook will connect your Facebook identity to the page you are currently visting. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your identity.
+visited this page. If you have a Facebook account you use with this browser: Facebook will connect your Facebook identity to the page you are currently visiting. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your identity.
 
 What exactly each of the companies is doing on their backend DB is unknown. But this scenario is possible and the most likely one.
 

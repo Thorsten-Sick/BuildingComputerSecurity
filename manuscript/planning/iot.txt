@@ -91,7 +91,7 @@ This is all a bit much for a WiFi enabled toaster. But maybe in some cases this 
 %% [VPNFilter](https://thehackernews.com/2018/05/vpnfilter-botnet-malware.html)
 %% [Roaming Mantis](https://www.kaspersky.com/blog/roaming-mantis-malware/22427/)
 
-%% [Pentest hardware book (review)](https://github.com/unprovable/PentestHardware)
+%% [Pen-test hardware book (review)](https://github.com/unprovable/PentestHardware)
 
 
 %% [IOT Botnets](https://krebsonsecurity.com/2018/01/expert-iot-botnets-the-work-of-a-vast-minority/)

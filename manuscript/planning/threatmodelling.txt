@@ -87,7 +87,7 @@ Some basic attacker types being used can be:
 * Amateur: drunken kid without skills, up to no good and not caring about consequences
 * Criminal: Criminal with one specific skill. Wants to stay out of prison after the attack
 * Pro Criminal: Several skills, lots of planning. Maybe hires a team
-* Terrorist group / natio state attackers: No limits. Nowhere.
+* Terrorist group / Nation state attackers: No limits. Nowhere.
 
 Pick your attacker based on your product. If you build a candy grabber, the first two are a realistic threat.
 

@@ -44,7 +44,7 @@ There are several pools where knowledge about vulnerabilities can be found:
 You can use them in several ways:
 
 * Monitor for vulnerabilities in your own products
-* Monitor for vulnerablities in libraries and tools your product uses
+* Monitor for vulnerabilities in libraries and tools your product uses
 * Learn from other projects mistakes and check if you have similar vulnerabilities
 
 ## Building bugs and flaws
@@ -122,7 +122,7 @@ A special case if you are more interested in web security is this sub-database f
 
 ## Fixing Bugs - tasks for management
 
-As bugs can be vulnerabilities, you should mentally prepare for them. Prepare your bug tracker, developers and qa engineers and give them space to create a solid product.
+As bugs can be vulnerabilities, you should mentally prepare for them. Prepare your bug tracker, developers and QA engineers and give them space to create a solid product.
 
 This will mean protecting the team from a flood of challenging feature requests.
 

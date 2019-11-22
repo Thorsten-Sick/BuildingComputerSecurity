@@ -20,7 +20,7 @@ There are several projects mapping internet failures. This can be censorship (Tu
 
 ### OONI by the Tor project
 
-[Oooni](https://ooni.torproject.org/) has globally distributed sensors measuring the reachability of services. Data can be accessed on a map, by a
+[Oooni](https://ooni.torproject.org/) has globally distributed sensors measuring the reach ability of services. Data can be accessed on a map, by a
 list of "best of censorship" events and by an API.
 
 The project is Open Source and there is a description how to set up a sensor on a Raspberry Pi.

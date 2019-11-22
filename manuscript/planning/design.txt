@@ -6,7 +6,7 @@ C> For Designers, Managers, Architects and Developers
 
 Architecture and design already starts long before someone starts to code. As it can also include preparing the environment, tools and getting the requirement it has a blurred line to management tasks.
 
-Microsoft had a very bad security reputation many years ago. This is why they started to use their "Security Development Lifecycle" in their project - resulting in incredible security improvements.
+Microsoft had a very bad security reputation many years ago. This is why they started to use their "Security Development Life cycle" in their project - resulting in incredible security improvements.
 
 The [SDL](https://www.microsoft.com/en-us/sdl) covers much more than just development and a bit of testing.
 
@@ -20,7 +20,7 @@ Which are more processes to be set up by management. More can be found in the [S
 
 Security is a team effort.
 
-This chapter will now pick some topics more on the management side (and less techy). It is "preapring the battle ground".
+This chapter will now pick some topics more on the management side (and less techy). It is "preparing the battle ground".
 
 ## Infrastructure aka "Establish a Standard Incident Response Process in SDL"
 
@@ -29,8 +29,8 @@ This chapter will now pick some topics more on the management side (and less tec
 * Prepare a [security.txt](https://securitytxt.org/)
 * Put it onto your homepage
 * Publish the PGP key on your homepage
-* Prepare bugtrackers (special flags)
-* Have processes for forwarding vulnerabilities into the bugtracker
+* Prepare bug trackers (special flags)
+* Have processes for forwarding vulnerabilities into the bug tracker
 * Have an internal wiki to share experience and knowledge
 * Collect "lessons learned" into this wiki
 
@@ -61,7 +61,7 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 |----------------------------------|------------------|
 |written in C/C++                  |High              |
 |----------------------------------|------------------|
-|Javascript...                     |Medium            |
+|JavaScript...                     |Medium            |
 |----------------------------------|------------------|
 |JS with Frameworks                |High              |
 |----------------------------------|------------------|
@@ -81,7 +81,7 @@ Be aware of your complexity budget and all your plans (see "updates") depend on 
 
 ## Set up a reliable build system
 
-To maintain flexibility, automatically reduce issues and keep your engineers focussed on the real issues plan a good build system early on.
+To maintain flexibility, automatically reduce issues and keep your engineers focused on the real issues plan a good build system early on.
 
 [34C3: Hardening Open source development](https://media.ccc.de/v/34c3-9249-hardening_open_source_development)
 
@@ -93,7 +93,7 @@ To maintain flexibility, automatically reduce issues and keep your engineers foc
 * Choose proper tooling for development
 * Bus-factor: How many developers may be hit by a bus before the project fails ? Make it > 3
 * Dependency tracking (vulnerabilities for different versions of dependency)
-* Compartmentalize Github projects
+* Compartmentalize GitHub projects
 * Create incident response process
 
 For attackers you supply chain is a valid target. Hacking the chain between the code your developers wrote, the build system, the signature server, the update server and the updater on your customer's system has some benefits for the attacker:

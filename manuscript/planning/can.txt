@@ -158,7 +158,7 @@ For additional benefits:
 * Log more than one packet in case it breaks. Maybe the combination of those packets caused the failure
 * Detect packet storms in the bus system. Especially interesting if more than one controlled is attached while fuzzing
 
-With the **candump** command and the python modules described in this chapter you should now bre prepared to tackle this task.
+With the **candump** command and the python modules described in this chapter you should now be prepared to tackle this task.
 
 Have fun.
 

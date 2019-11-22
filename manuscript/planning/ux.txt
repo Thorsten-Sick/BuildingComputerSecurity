@@ -52,7 +52,7 @@ There is also technology for more advanced phishing attacks:
 * Whaling: Target the "big fish". The attacker invests lots of prior intelligence gathering time
 * Browser exploits like you can find them in BEEF also have lots of convincing tools for UI modification
 
-## Details fot "Things to do"
+## Details for "Things to do"
 
 ### Find usability experts
 

@@ -52,7 +52,7 @@ This is an example checklist. Please expand it for your needs.
 
 ## Further reading
 
-Lots of hacked conferences now have tlaks recorded on videos. A larg heap of knowledge is available online.
+Lots of hacked conferences now have talks recorded on videos. A large heap of knowledge is available online.
 
 One good source is [media.ccc.de](https://media.ccc.de)
 
