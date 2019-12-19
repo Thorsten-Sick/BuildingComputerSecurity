@@ -58,6 +58,10 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add link to security_process
 
+## December 2019
+
+* Thug chapter extended
+* TLS chapter extended
 
 ## November
 
