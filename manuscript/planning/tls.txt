@@ -17,16 +17,16 @@ By using TLS you get **authenticity**, **integrity** and **confidentiality** and
 
 What you do not get is the hiding of the identity of the communication partners. For that you would need TOR or similar technology.
 
-TLS is a protocol that defines how computers negotiate their encryption settings and do the encryption afterwards. By TLS the client (browser or similar) and the server (web server) negotiate their features and choose the best of the available options.
+TLS is a protocol that defines how computers negotiate their encryption settings and do the encryption afterwards. By using TLS the client (browser or similar) and the server (web server) negotiate their features and choose the best of the available options.
 The options are different combinations of algorithms and their settings. It offers to choose between different algorithms being used as a kind of set of building blocks. Depending on your situation
 (especially: Are old systems involved) you can have TLS go for the more secure or the weaker algorithms.
 
 Current version of TLS is 1.3.
 
 Between TLS version steps there are several years. A step in a minor version number means lots of improvements. TLS 1.3 is a re-work that removes many of the security issues the old versions had.
-Especially risky features and parameters that could be used in TLS < 1.3. Use TLS 1.3.
+Especially risky features and parameters that could be used in TLS < 1.3. Long story short: Use TLS 1.3.
 
-You will want to monitor the versions used to connect to your servers and de-activate old versions you do not see anymore. Older versions have vulnerabilities.
+For the transition phase you could monitor the versions used to connect to your servers and de-activate old versions you do not see anymore. Older versions have vulnerabilities.
 
 ## TLS handshake
 
@@ -76,7 +76,7 @@ Tools for that kind of attacks are:
 
 ## Mozilla server side TLS config guide
 
-TLS is a toolbox for encryption which is mainly used in the browser to server configuration. For this reason Mozilla offers a simple guide how to best set up your server.
+TLS is a toolbox for encryption which is mainly used in the browser to server communication. For this reason Mozilla offers a simple guide how to best set up your server.
 
 [Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
 
@@ -117,7 +117,7 @@ Common is PEM (base64 encoded x509 ASN.1). X509 is a standard.There is also DER 
 If control over a certificate gets lost (as in "server hacked, it had the key on it...") the certificate needs to be revoked. Together with CRL (Certificate Revocation Lists) this online protocol
 and the servers using it offer revocation management.
 
-It does not work properly: If an attacker is able to fake a certificate, the attacker can as well block the connection to those revocation servers. How should the browsers react ? Block the connection (and do that whenever the revocation server can not be reached) or allow it and do not block the attack ?
+The bad news is - It does not work properly: If an attacker is able to fake a certificate, the attacker can as well block the connection to those revocation servers. How should the browsers react ? Block the connection (and do that whenever the revocation server can not be reached) or allow it and do not block the attack ?
 
 This system is quite broken and browser vendors did not find a good solution. So basically the revocation verification code directly contacting the
 revocation servers is switched off.
@@ -126,16 +126,15 @@ But: **OCSP Stapling** solves this problem.
 
 ## OCSP Stapling
 
-Here the server serving the homepage does not only send the certificate but also a signed validation (signed by the validation server) that the certificate was not revoked. This validation has a time stamp and a very short time to life (minutes, not months). The for this reason the web-server has to renew the validation for its own certificates quite often.
+Here the server serving the homepage does not only send the certificate but also a signed validation (signed by the validation server) that the certificate was not revoked. This validation has a time stamp and a very short time to life (minutes, not months). For this reason the web-server has to renew the validation for its own certificates quite often.
 This system fixes the OCSP problem because no extra connection from the client to a revocation server needs to be established.
 
 ## Key/Certificate lifetime
 
 Certificates have a lifetime. After this they have to be renewed. The first reflex of any admin is to set it high (2 years) when creating a certificate
-and be done with it. This results in all those pages where the key timed out and no one can remember
-how to generate a new key. You saw them.
+and be done with it. This results in all those pages where the certificate timed out and no one can remember how to refresh it. Happens all the time and I know you saw that happening.
 
-The true simple path is to set it to a short life time (weeks) and implement an automatic renewing process right from the start. With this short life time it is directly tested while you still remember what you did and everything is smooth.
+The true simple path is to set it to a short life time (weeks) and implement an automatic renewing process right from the start. With this short life time renewing is directly tested while you still remember what you did and everything is smooth.
 
 ## Testing TLS
 
@@ -143,31 +142,29 @@ SSLLabs offers a testing service that checks the TLS settings of your web page. 
 
 ## HSTS - HTTP Strict Transport Security
 
-HTTP servers can send a special header promising to *always* encrypt and prevent downgrade attacks down to HTTP that way. The browser will store the fact that there is TLS every time after the first connection and is now immunized against
-MITM attacks. It will always replace *HTTP* URLs with *HTTPS* ones and handle encryption failures as hard errors.
+HTTP servers can send a special header promising to *always* encrypt and prevent downgrade attacks down to HTTP that way. The browser will store the fact that there is TLS encryption available for this server every time after the first connection and is now immunized against MITM attacks. It will always replace *HTTP* URLs with *HTTPS* ones and handle encryption failures as hard errors.
 
-%% TODO: Add header code: Strict-Transport-Security: max-age=31536000
+The HTTP header for that looks like:
+{lang="bash"}
+    Strict-Transport-Security: max-age=31536000
 
 This is a TOFU (trust on first use) technology and the attacker can intercept the first connection between client and server, deleting the special HSTS header.
 
-As an option the browser vendors offer a *preload list* where web sites can register and get their HSTS setting hard coded into the browsers.
+As an option the browser vendors offer a *preload list* where web sites can register and get their HSTS setting [preloaded](https://hstspreload.org/) into the browsers.
 
-%% TODO Link to the list
-
-%% TODO: [Configure HSTS](https://linux-audit.com/configure-hsts-http-strict-transport-security-apache-nginx/)
+[More on configuring HSTS](https://linux-audit.com/configure-hsts-http-strict-transport-security-apache-nginx/)
 
 ## HPKP - HTTP Public Key Pinning
 
-More security against MITM attacks. With lots of nasty side effects. For HPKP a header in the
+HPKP offers more security against MITM attacks. With lots of nasty side effects. For HPKP a header in the
 HTTP protocol defines a key id [^foot_hpkp]. The browser stores that and will now only:
 
-* communicate encrypted with this page
+* always communicate encrypted with this page (see: HSTS)
 * only accept this specific key
 
 This is also a TOFU technology.
 
-As many things can go wrong (keys lost) and pages could be permanently unreachable for a group of users you will want to have fallback plans/keys, ...
-or maybe use other technologies. If you can use HPKP in a reliable way: Great. If you do not feel comfortable: Do not use it.
+As many things can go wrong (keys lost) and pages could be permanently unreachable for a group of users afterwards you will want to have fallback plans/keys, ... or maybe use other technologies. If you can use HPKP in a reliable way: Great. If you do not feel comfortable: Do not use it.
 
 Update: Acceptance of HPKP was low. As it is a tricky technology to use. Chrome 72 deprecated it. This technology is described here for historical
 reasons and maybe you can learn something from it.
@@ -181,9 +178,11 @@ reasons and maybe you can learn something from it.
 [Certificate Transparency](https://www.certificate-transparency.org/) is a Google project to extend the CA way of certificate validation and maybe replace it in the future.
 
 Special online services will create logs of certificates seen in the wild. Any anomaly can be
-found that way (like Google page certificates only seen by computers in Foobaristan).
+found that way (like faked Google page certificates only seen by computers in Foobaristan).
 
 This is already used in Chrome and turned up some nasty certificates being used by attackers.
+
+For a live stream of CT entries you can monitor the CT system using tools like [certstream](https://certstream.calidog.io/).
 
 %% TODO Different TLS libraries
 
@@ -204,9 +203,9 @@ The issues that happened the last years have been found on several layers:
 
 ## Testing SSL
 
-[badssl](https://badssl.com/) offers several sub-domains with different TLS/SSL configuration to test your endpoint.
+[badssl](https://badssl.com/) offers several sub-domains with different creative TLS/SSL configuration to test your endpoint.
 
-There is one page that will never use SSL/TLS and can be quite handy for testing. For obvious reasons it is named [neverssl.com](http://neverssl.com/)
+There is also one page that will never use SSL/TLS and can be quite handy for testing. For obvious reasons it is named [neverssl.com](http://neverssl.com/)
 
 ## Further reading
 
@@ -248,4 +247,4 @@ There is one page that will never use SSL/TLS and can be quite handy for testing
 
 %% TODO: Building certificate chain [sslmerge](https://github.com/trimstray/sslmerge)
 
-%% TODO: certstream.calidog.io
+%% TODO: Add https://httpswatch.com

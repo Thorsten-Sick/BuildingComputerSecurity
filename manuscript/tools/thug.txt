@@ -10,19 +10,11 @@ C> For: Malware Analysts
 
 You can find its [Documentation online](https://thug-honeyclient.readthedocs.io/en/latest/)
 
-Thug uses lots of complicated 3rd party libraries. Some not properly maintained.
-PyV8. I am looking at you.
-PyV8 is a way to connect the V8 JavaScript engine to Python. PyV8 is not
-properly maintained at the moment, while all the other libraries change a lot.
-If you use a modern Linux as base, it will be tricky to compile.
+Thug uses lots of complicated 3rd party libraries. Some not properly maintained. PyV8. I am looking at you. PyV8 is a way to connect the V8 JavaScript engine to Python. PyV8 is not properly maintained at the moment, while all the other libraries change a lot. If you use a modern Linux as base, it will be tricky to compile.
 
-The docker container fixes these dependency issues for now. It is based on
-an old Linux.
+The docker container fixes these dependency issues for now. It is based on an old Linux.
 
-Important: It depends on PyV8, which is a python wrapper around the V8 engine.
-It will compile properly on Ubuntu 16.04. But fails with a linker error
-(-lv8_snapshot not found) on Ubuntu 18.04 LTS and newer. The docker image is
-based on Ubuntu 16.04.
+Important: It depends on PyV8, which is a python wrapper around the V8 engine. It will compile properly on Ubuntu 16.04. But fails with a linker error (-lv8_snapshot not found) on Ubuntu 18.04 LTS and newer. The docker image is based on Ubuntu 16.04.
 
 Build it in the docker directory:
 
@@ -74,6 +66,8 @@ To add a hand written Yara rule to the analysis process, call thug with:
 
 The resulting JSON log will contain an array with matching classifiers.
 
+If you use *tags* in your Yara file they will also be added to the log.
+
 There are other classifiers besides urlclassifiers (that are matched on urls):
 
 * htmlclassifier
@@ -90,8 +84,44 @@ In other words:
 2) Evals are executed. One Obfuscation layer is removed
 3) de-obfuscated scripts are scanned again
 
+## Data available in json file
+
+* files
+* cookies
+    * domain: domain it is bound to
+    * name: name of the cookie
+    * value: value of the cookie
+    * *also contains security flags*
+* code
+    * snippet: code sample
+    * relationship: how is it related to the page. *external*
+* timestamp
+* locations
+    * content: html code
+    * flags: *error*, nothing else AFAIK
+    * mimetype: What the local file type test results are
+    * content-type: What the server says
+    * sha256: hash
+    * md5: hash
+    * url: url of the content
+* connections
+    * source
+    * destination
+    * flags: not used AFAIK
+    * method: *window open*,*script src*,*link*,*http-redirect*
+* thug
+    * *version and settings*
+* classifiers:
+    * classifier: name of the classifier,
+    * url: url with match
+    * rule: rule that matched
+    * tags: attached tags
+* url: start url
+* behavior
+    * timestamp: timestamp of the observation
+    * description: description of the observation
+
+
 %% TODO: JS hooking
-
-
 
 %% TODO: Hooking file detection into it (maybe using plugin framework)
