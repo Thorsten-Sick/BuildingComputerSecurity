@@ -97,3 +97,4 @@ This is all a bit much for a WiFi enabled toaster. But maybe in some cases this 
 %% [IOT Botnets](https://krebsonsecurity.com/2018/01/expert-iot-botnets-the-work-of-a-vast-minority/)
 
 %% TODO: Shodan
+%% TODO: [Shodan queries](https://github.com/jakejarvis/awesome-shodan-queries)
