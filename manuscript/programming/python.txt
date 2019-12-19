@@ -207,4 +207,4 @@ As it can be extended using python plugins, it is very flexible.
 %% [Travis build system](https://travis-ci.org/)
 
 
-%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy) or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. PySpy is good to profile servers which do not terminate.
+%% TODO: See also profiling.wip for stuff that is cool but not relevant here
