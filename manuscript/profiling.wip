@@ -1,0 +1,63 @@
+# Profiling
+
+Making programs fast:
+
+* Doing nothing is faster than CPU
+* CPU is faster than Cache
+* Cache is faster than RAM
+* RAM is faster than disk
+* disk is faster than network
+
+Optimize:
+
+* functions called often
+* functions needing lots of CPU cycles
+* Use many cores
+* Get the program to sleep mode fast by completing the tasks
+* Use events to trigger action, not timers and polling
+* Keep data cache-sized. Do not switch between data structes (RAM-cache swap)
+* Optimizing data structures and algorithms is essential in the planning phase
+
+## Python
+
+%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy) or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. PySpy is good to profile servers which do not terminate.
+
+%% TODO: Hotshot was a python 2 profiler
+%% TODO: kcachegrind has conversion scripts for other profilers
+%% TODO: PYthon 3 uses cProfile/profile for profiling (see default doc)
+
+## C
+
+### Valgrind
+
+Valgrind is used to detect memory issues. But it can also be used to profile files
+
+https://valgrind.org/docs/manual/cl-manual.html
+
+### callgrind format
+
+https://valgrind.org/docs/manual/cl-format.html
+
+### gprof
+
+* Compile and link with *-pg*
+* gprof program > output.txt
+
+## System
+
+### OProfile
+
+https://oprofile.sourceforge.io
+
+should be in
+
+{lang="bash"}
+    apt install oprofile
+
+
+
+### Powertop
+
+## Display
+
+### KCachegrind
