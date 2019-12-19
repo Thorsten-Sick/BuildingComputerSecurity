@@ -1,0 +1,120 @@
+# Recon-NG {#chapter-recon-ng}
+
+[Recon-NG](https://github.com/lanmaster53/recon-ng) is a Web Reconnaissance framework. It can be used to investigate
+web pages, people, companies and their connections with each other.
+
+One strength is that it is using 3rd party info and does not necessarily directly connect to the target.
+
+That way the target will not know "what is coming".
+
+If you are a potential target, it is smart to test this tool and try to find all the traces your employees and you left online.
+
+PGP keys, mail addresses and Linked In profiles for example are good resources for targeted phishing.
+
+It is written in python and create an own shell where you can execute its modules to dig deeper and deeper into available data.
+
+usage:
+
+Start it with
+
+{lang="bash"}
+    recon-ng
+
+After that you will have a special shell for reconnaissance.
+
+Show help:
+
+{lang="bash"}
+    help
+
+Every command has a detailed help
+
+{lang="bash"}
+    [recon-ng][default][brute_hosts] > help show
+    Shows various framework items
+
+    Usage: show [companies|contacts|credentials|dashboard|domains|globals|hosts|info|inputs|keys|leaks|locations|modules|netblocks|options|ports|profiles|pushpins|repositories|schema|source|vulnerabilities]
+
+To load a module and show its info, call
+
+{lang="bash"}
+    [recon-ng][default] > use recon/domains-hosts/brute_hosts
+
+    [recon-ng][default][brute_hosts] > show info
+
+          Name: DNS Host name Brute Forcer
+          Path: modules/recon/domains-hosts/brute_hosts.py
+        Author: Tim Tomes (@LaNMaSteR53)
+
+    Description:
+      Brute forces host names using DNS. Updates the 'hosts' table with the results.
+
+    Options:
+      Name      Current Value                           Required  Description
+      --------  -------------                           --------  -----------
+      SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
+      WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to host name word list
+
+    Source Options:
+      default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
+      <string>       string representing a single input
+      <path>         path to a file containing a list of inputs
+      query <sql>    database query returning one column of inputs
+
+To show the options of a module, call
+
+{lang="bash"}
+  [recon-ng][default] > use recon/domains-hosts/brute_hosts
+  [recon-ng][default][brute_hosts] > show options
+
+    Name      Current Value                           Required  Description
+    --------  -------------                           --------  -----------
+    SOURCE    000webhostapp.com                       yes       source of input (see 'show info' for details)
+    WORDLIST  /usr/share/recon-ng/data/hostnames.txt  yes       path to host name word list
+
+
+
+
+To execute a module, load it, set the configuration and execute it.
+
+{lang="bash"}
+    [recon-ng][default] > use recon/domains-hosts/brute_hosts
+    [recon-ng][default][brute_hosts] > set SOURCE domain.com
+    SOURCE => domain.com
+    [recon-ng][default][brute_hosts] > run
+
+Show installed modules
+
+{lang="bash"}
+    [recon-ng][default][brute_hosts] > show modules
+
+      Discovery
+      ---------
+        discovery/info_disclosure/cache_snoop
+        discovery/info_disclosure/interesting_files
+
+      Exploitation
+      ------------
+        exploitation/injection/command_injector
+        exploitation/injection/xpath_bruter
+
+There is a smart naming structure for the modules.
+
+*recon/profiles-repositories/github_repos*
+
+For example uses *profiles* that have already been collected to find *repositories*.
+
+Some cool modules:
+
+* Find hosts in a domain: recon/domains-hosts/ certificate_transparency
+
+%% TODO: Find more modules
+
+The last command you will need is
+
+{lang="bash"}
+    exit
+
+To exit the special shell.
+
+%% TODO: Further reading
