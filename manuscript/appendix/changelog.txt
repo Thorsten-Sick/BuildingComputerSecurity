@@ -58,6 +58,10 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add link to security_process
 
+## Januar 2020
+
+* Extended "external references" 
+
 ## December 2019
 
 * Thug chapter extended

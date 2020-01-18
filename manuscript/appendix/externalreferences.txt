@@ -1,16 +1,14 @@
-%% TODO: BSides https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG
-
-%% TODO: blog.cloudflare.com
-
-%% TODO: AVAR
-
-%% TODO: almanac.httparchive.org/en/2019
-
-%% TODO: @Cryptolaemus (Emotet IOCs)
-
 # External references and resources {#chapter-references}
 
 In addition to the references spread in the chapters - most often as "Further reading" - here is an extended list of hacking and security resources.
+
+It is important that you rate those resources for yourself. I have my personal categories.
+
+* ALERT: Resources being fast on alerting. But I do not expect in depth coverage
+* DEEP: Slow (months after the incident) but incredibly deep coverage
+* SIMPLE: Resources to share with non-tech people
+
+All of them have their benefits and you should always use the proper source for the task at hand.
 
 ## Books
 
@@ -131,6 +129,14 @@ Blackhat is a security conference with events in US, Europa and Asia (so don't g
 
 [Blackhat USA 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsWrfkjwFSI256x1u2Zy49VI)
 
+### Defcon
+
+* [Defcon 26](https://www.youtube.com/user/DEFCONConference/videos)
+
+### BSides
+
+[BSides](https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG)
+
 ### Virus Bulletin
 
 [Virus Bulletin](https://www.virusbulletin.com/) is an Anti-Virus community magazine, tester and conference.
@@ -156,6 +162,12 @@ Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/categor
 
 [Cybercrime Magazine](https://cybersecurityventures.com/) focusses more on the crime aspect.
 
+[Internet Storm Center](https://isc.sans.edu/)
+
+[Cloudflare](https://blog.cloudflare.com/tag/security/)
+
+[Citizen lab - big game hunting](https://citizenlab.ca/)
+
 Also [Brian Krebs](https://krebsonsecurity.com/) is very well known for his investigations into the crime part of the topic.
 
 To stay in the world of crime: [Europol](https://www.europol.europa.eu/newsroom/news/) will also cover it. But not focussed on computer security.
@@ -164,7 +176,10 @@ The Anti Virus companies also have blogs. Sometimes several blogs. With a focus 
 
 * [Emsisoft](https://blog.emsisoft.com/en/)
 * [Kaspersky](https://www.kaspersky.com/blog/)
+* [Kaspersky technical](https://securelist.com/)
 * [Bitdefender](https://hotforsecurity.bitdefender.com/)
+* [Eset](https://www.eset.com/blog/)
+* [Malwarebytes](https://blog.malwarebytes.com/)
 
 Just to name a few.
 
@@ -173,6 +188,9 @@ Just to name a few.
 Hacker news portals:
 
 * [The hacker news](https://thehackernews.com/)
+* [CNET security](https://www.cnet.com/topics/security/)
+* [Bleeping Computer](https://www.bleepingcomputer.com/)
+
 
 ## Podcasts
 
@@ -186,11 +204,11 @@ Magazines (called Zines) are a prt of the hacker culture. And they still exist.
 
 * [Pagedout magazine](https://pagedout.institute/)
 * [POC or GTFO](https://pocorgtfo.hacke.rs/) Also available on other mirrors and as books
+* [Spuz.me pen testing](https://spuz.me/)
 
 ## Videos
 
-%% TODO: Talks on video: https://administraitor.video/
-
+* ["Administraitor" talks](https://administraitor.video/)
 * [Hak5](https://shop.hak5.org/pages/videos)
 
 ## Workshops and trainings
@@ -221,8 +239,10 @@ There are also CTF competitions:
 %% [Vulnerable Web Applications](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
 
 
+## Lists and bookmarks
 
-
+* [Offensive security bookmarks (2015)](https://jivoi.github.io/2015/07/03/offensive-security-bookmarks/)
+* [Security resource list](https://github.com/sbilly/awesome-security)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,12 +255,6 @@ There are also CTF competitions:
 %% [Malware economics](https://www.techrepublic.com/article/starting-at-40-hackers-can-attack-your-business-with-services-bought-on-the-dark-web/#ftag=RSS56d97e7)
 
 
-
-
-
-%% IoT [Hardsploit](https://hardsploit.io/)
-
-%% [Phishtank](https://www.phishtank.com/)
 %% [stopbadware.org](https://www.stopbadware.org/)
 
 %% [Beginning Software Engineering](https://www.safaribooksonline.com/library/view/beginning-software-engineering/9781118969175/)
@@ -250,14 +264,16 @@ There are also CTF competitions:
 %% [Agile Estimating and Planning](https://www.safaribooksonline.com/library/view/agile-estimating-and/9780137126347/)
 
 
-
-
-%% [Security resource list](https://github.com/sbilly/awesome-security)
-
 %% IOT [I Am the Cavalry](https://www.iamthecavalry.org/)
 
 
 %% [General Awesome List](https://github.com/sindresorhus/awesome)
 
 
-%% TODO: [Offensive security bookmarks](https://jivoi.github.io/2015/07/03/offensive-security-bookmarks/)
+
+%% TODO: historical 40Hex magazine https://vxug.fakedoma.in/zines.html
+
+
+%% TODO: state of the web: almanac.httparchive.org/en/2019
+
+%% TODO: @Cryptolaemus (Emotet IOCs)
