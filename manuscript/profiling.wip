@@ -1,4 +1,4 @@
-# Profiling
+# Profiling / Performance
 
 Making programs fast:
 
@@ -17,14 +17,68 @@ Optimize:
 * Use events to trigger action, not timers and polling
 * Keep data cache-sized. Do not switch between data structes (RAM-cache swap)
 * Optimizing data structures and algorithms is essential in the planning phase
+* Quick outs: For functions with a high chance of quitting early: Test soon and don't do what you do not need anyway
+* Use the compiler's optimization. It knows best
+
+## Perf
+
+* Perf offers performance metrics for a process. CPU, swaps, Cache misses, ....
+
+### Perf
+
+### perf-top
+
+### perf-list
+
+### perf-record
+
+### perf-report
 
 ## Python
 
-%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy) or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. PySpy is good to profile servers which do not terminate.
+### Coding tricks
 
+%% Tip use "bisect" module for list search (sorted lists)
+
+### PySpy
+
+%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy)
+%% Does (not yet) have callgrind exports
+%% PySpy is good to profile servers which do not terminate.
+%% Offers a top style display !
+
+
+### Timeit
+%% Array types and numpy can be faster than lists
+%% timeit module: Run from command line and test code snippets there, use IPython magic %timeit
+%% the book has a decorator "timefn" for functions as example code
+
+### CProfile
+
+Good for functions
+Can export statistics for pstats module
+SnakeViz is UI for CProfile
+
+### Line_profiler
+
+### Memory_profiler
+
+MProf memory profiler tool with diagram. You can add a timestamp to add markers to the profile
+IPython %memit magic available
+
+### Unix time tool
+
+
+### Further Reading
+
+Book "High Performance Python" (Preview)
+
+
+### Other Things
 %% TODO: Hotshot was a python 2 profiler
 %% TODO: kcachegrind has conversion scripts for other profilers
 %% TODO: PYthon 3 uses cProfile/profile for profiling (see default doc)
+ or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. 
 
 ## C
 
@@ -61,3 +115,12 @@ should be in
 ## Display
 
 ### KCachegrind
+
+## Compiler flags for performances
+
+- O3
+- fbranch-probabilities, run it, -fprofile-arcs
+
+### System benchmark
+
+tool: sysbench does memory, CPU, IO, ...
