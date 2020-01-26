@@ -11,3 +11,5 @@ Calling it:
 
 A file can be signed based on multiple hashes. Keep in mind: SHA1 is broken !
 There should be a SHA256 as well !
+
+%% TODO: Also "signcode" and "chktrust". Needs testing !
