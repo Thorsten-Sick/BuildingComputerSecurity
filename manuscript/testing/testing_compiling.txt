@@ -70,7 +70,24 @@ the binary. Remove them by calling the command line tool *strip*.
 
 %% Also relevant for "elf_format.wip": [ELF format](https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/)
 
-%% Todo: ldd and lddtree
+### Dynamic libraries
+
+To show the used dynamic libraries of a program, use:
+
+{lang="bash"}
+    ldd <program>
+
+**Important: Only use that on trusted programs ! It can execute code**
+
+ldd will invoke ld and monitor the loaded .so files. This works recursively.
+
+lddtree does display a more fancy tree.
+
+If you do not trust a program you can get similar results by calling
+
+{lang="bash"}
+    objdump -p /path/to/program | grep NEEDED
+
 
 %% TODO: apt install pax-utils; scanelf
 
@@ -132,15 +149,11 @@ Best way is to go for 64 bit.
 
 %% TODO: [Searching statically-linked vulnerable library functions in executable code](https://googleprojectzero.blogspot.com/2018/12/searching-statically-linked-vulnerable.html)
 
+%% TODO: Show imports of PE files: how ?
+
 ## Attached info
 
-It is possible to attach an info blob (like xml) to a PE and ELF file.
-Directly after you compiled the binary, your build tool could create that info blob
-and your release system could later verify it - to be sure to release the
-intended version of the file. It can contain things like a "beta" flag -
-to avoid accidentally release a beta on the stable update channel and
-version numbers - to ensure to release the proper version. Or it could be a
-list of dependencies (modules and their version) to other components you offer.
+It is possible to attach an info blob (like xml) to a PE and ELF file. Directly after you compiled the binary, your build tool could create that info blob
+and your release system could later verify it - to be sure to release the intended version of the file. It can contain things like a "beta" flag - to avoid accidentally release a beta on the stable update channel and version numbers - to ensure to release the proper version. Or it could be a list of dependencies (modules and their version) to other components you offer.
 
-Of course this can also be achieved by registering the binary in your file
-database by sha256 and putting the flags in there.
+Of course this can also be achieved by registering the binary in your file database by sha256 and putting the flags in there.

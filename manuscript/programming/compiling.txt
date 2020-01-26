@@ -260,14 +260,29 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 * Do not leave debug symbols in the released binary. **DO NOT ADD** *-g*
     * Call the *strip* command on your binary to remove the debug symbols
 
+
+
 %% TODO: GCC GCC's -fstack-clash-protection
 
 %% .. TODO: * heap protector:
 %% .. TODO: * libc pointer encryption:
 
+#### Visual Studio
 
 %% .. TODO: Visual Studio /RTCs flag research and add add proper place
 %% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
+
+* /GS, default on, buffer overrun check
+* /guard:cf, default off, monitor control flow in executing program
+* /Qspectre, default off, defense against spectre attacks
+* /sdl, default off, activate additional warnings and run time checks
+* RTC, special, run time error checks are for test builds only. Will find lots of different run time errors
+* /Wall, several level available, activate warnings
+ 
+
+
+
+%%%%%%%%%%%%%
 
 %% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
 

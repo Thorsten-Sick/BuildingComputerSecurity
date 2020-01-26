@@ -60,7 +60,10 @@ changelog to make it simpler for you to find the new sections.
 
 ## Januar 2020
 
-* Extended "external references" 
+* Extended "external references"
+%% TODO: glossary
+%% TODO: compiling visual studio
+%% TODO: Testing compiling
 
 ## December 2019
 

@@ -170,6 +170,7 @@
 
 %% Perfect forward secrecy
 
+%% TODO: Warning fatigue
 
 %% TODO: Responsible/full disclosure
 
