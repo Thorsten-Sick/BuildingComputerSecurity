@@ -1,0 +1,42 @@
+# Frida {#chapter-frida}
+
+%% TODO: Add this to the book !
+
+A kind of manual Cuckoo monitor:
+
+Python code injects a Java VM into a process. There a JavaScript code can manipulate executing processes.
+
+[Frida.re](https://frida.re)
+
+## Installation and setup
+
+{lang="bash"}
+    pip install frida  # library
+    pip install frida-tools  # command line tools
+    sudo sysctl kernel.yama.ptrace_scope=0  # ptrace can be used by processes with the same uid
+
+I saw target program crashes with several frida settings. Maybe you will not want to test it on your live system...
+
+## frida-discover
+
+{lang="bash"}
+    frida-discover -p <pid>
+
+Returns a list of called functions, including call count and the shared object they are in.
+
+Good first assessment, but frida-trace with wildcard is more detailed.
+
+## frida-trace
+
+Blasphemy and madness (takes lots of time)
+
+{lang="bash"}
+    frida-trace -p <pid> -i "*"
+
+Will hook into every library function and start tracing.
+
+Better filter it (used that for *ping*):
+
+{lang="bash"}
+    frida-trace -p <pid> -i "*sendto*"
+    # 824 ms sendto(sockfd=0x3, buf=0x..., len=0x40, flags=0x0, dest_addr=0x..., addrlen=0x10)
