@@ -1,13 +1,8 @@
 # Testing compiled binaries {#chapter-testing-compiling}
 
-C> By: Thorsten Sick
+As many mitigation features are kind of invisible you will needs tools to test the compiled binary before you release it.
 
-C> For: Developers, Tester
-
-As many mitigation features are kind of invisible you will needs tools
-to test the compiled binary before you release it.
-
-You want to automatically test:
+Compiler mitigation that can be identified in the binary are:
 
 * Is this a beta release or the real one ?
 * Is it a debug release ? (with or without debug symbols)
@@ -16,13 +11,11 @@ You want to automatically test:
     * linked libs ?
     * attached info (see there)
 
-Having prepared a set of tools for manual verification plus a automatic test
-at least before the binaries are shipped is very smart.
+A set of tools that identifies errors in the compile process should be a part of the automated tests.
 
 ## Linux
 
-On Linux, a tool to verify the hardening settings is *hardening-check* which can
-be found here:
+On Linux, a tool to verify the hardening settings is *hardening-check* which can be found here:
 
 [Hardening-check](https://github.com/ProhtMeyhet/hardening-check)
 
@@ -34,7 +27,7 @@ It will check for:
 * Read-only relocations (relro)
 * Immediate binding
 
-You can do many of these verifications using built-in tools.
+You can also do many of these verifications using built-in tools.
 
 Testing specifically for **immediate binding** manually:
 
@@ -48,8 +41,7 @@ On a secure program you will get something like:
 
 Insecure programs will return nothing.
 
-If you do not get the BIND_NOW (which would indicate *full relro*)
-you can still check for *partial relro*:
+If you do not get the BIND_NOW (which would indicate *full relro*) you can still check for *partial relro*:
 
 {lang = "bash"}
     objdump -x program|grep RELRO
@@ -65,8 +57,7 @@ Checking for **forgotten debug symbols** in a secure program:
     SYMBOL TABLE:
     no symbols
 
-If you see anything else (especially a list of symbols) you forgot them in
-the binary. Remove them by calling the command line tool *strip*.
+If you see anything else (especially a list of symbols) you forgot them in the binary. Remove them by calling the command line tool *strip*.
 
 %% Also relevant for "elf_format.wip": [ELF format](https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/)
 
@@ -79,9 +70,9 @@ To show the used dynamic libraries of a program, use:
 
 **Important: Only use that on trusted programs ! It can execute code**
 
-ldd will invoke ld and monitor the loaded .so files. This works recursively.
+*ldd* will invoke ld and monitor the loaded .so files. This works recursively.
 
-lddtree does display a more fancy tree.
+*lddtree* does display a more fancy tree.
 
 If you do not trust a program you can get similar results by calling
 
@@ -93,13 +84,13 @@ If you do not trust a program you can get similar results by calling
 
 ## Windows
 
-Check for ASLR, DEP, SafeSEH, ... in Windows binaries. There is a powershell tool on github:
+To check for ASLR, DEP, SafeSEH, ... in Windows binaries. There is a powershell tool on github:
 
 [PESecurity](https://github.com/NetSPI/PESecurity)
 
-But I prefer to create my own python tools. They are simpler to integrate into my other tools.
+But I prefer to create my own python tools. As they are simpler to integrate into my other tools. YMMV.
 
-And using *pefile* it is quite simple to write.
+The module to use here is *pefile*
 
 {lang="python"}
     import pefile
@@ -143,17 +134,15 @@ SEH: Structured Exception Handlers can be abused by exploit code. Having them is
 * PE is 64 bit compiled - then the SEHs are secured automatically
 * Or SEH is deactivated
 
-Best way is to go for 64 bit.
 
 %% TODO [CheckSec](https://github.com/slimm609/checksec.sh)
 
 %% TODO: [Searching statically-linked vulnerable library functions in executable code](https://googleprojectzero.blogspot.com/2018/12/searching-statically-linked-vulnerable.html)
 
-%% TODO: Show imports of PE files: how ?
+%% TODO: Show imports of PE files: how ? (pefile can do that)
 
 ## Attached info
 
-It is possible to attach an info blob (like xml) to a PE and ELF file. Directly after you compiled the binary, your build tool could create that info blob
-and your release system could later verify it - to be sure to release the intended version of the file. It can contain things like a "beta" flag - to avoid accidentally release a beta on the stable update channel and version numbers - to ensure to release the proper version. Or it could be a list of dependencies (modules and their version) to other components you offer.
+It is possible to attach an info blob (like xml) to a PE and ELF file. Directly after you compiled the binary, your build tool could create that info blob and your release system could later verify it - to be sure to release the intended version of the file. It can contain things like a "beta" flag - to avoid accidentally release a beta on the stable update channel and version numbers - to ensure to release the proper version. Or it could be a list of dependencies (modules and their version) to other components you offer.
 
 Of course this can also be achieved by registering the binary in your file database by sha256 and putting the flags in there.

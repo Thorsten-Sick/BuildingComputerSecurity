@@ -1,51 +1,30 @@
 # Compiling {#chapter-compiling}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Tester
-
-There are several ways to improve security at the compiling step. This ranges from
-static code analysis, dynamic code analysis to mitigation.
+There are several ways to improve security at the compiling step. This ranges from static code analysis, dynamic code analysis to mitigation.
 
 There are several pros and cons for all of those and you will want to combine them.
 
-As your investment is just "collect new tools and test them" for a large bunch of
-benefits you should go there.
-
 **Static code analysis**:
-It has the benefits that it is fast and simple. It can be run with commit hooks
-or at least nightly on your servers.
-Disadvantage is the potential for false positives and that it will miss a big
-chunk of vulnerabilities. As it is simple and cheap: Do it. And do other things
-as well.
+It has the benefits that it is fast and simple. It can be run with commit hooks or at least nightly on your servers.
+Disadvantage is the potential for false positives and that it will miss a big chunk of vulnerabilities. As it is simple and cheap: Do it. And do other things as well.
 
 **Dynamic code analysis**:
 Runs a specially compiled version of your program and checks it for
-mis-behaviour. Very good and finding tricky memory bugs and similar. It is
-powerful if you have an automated test framework or fuzzer that does the
-running of your program for you. Can be done nightly or at least during weekends.
-You should of course fix all found bugs.
-You do not want to release this special version with dynamic code analysis.
-It is for your testers only.
+mis-behaviour. Very good at finding tricky memory bugs and similar issues. It is powerful if you have an automated test framework or fuzzer that does the running of your program for you. Can be done nightly or at least during weekends. You should of course fix all found bugs.
+**Important**:
+You do not want to release this special version compiled with dynamic code analysis. It is for your testers only. Because side effects of dynamic code analysis is slow down and increased size.
 
 **Mitigation**:
-Mitigation is extra linker/compiler settings that make it harder to exploit
-your program. It will **not** fix the vulnerabilities and make our program better.
-Instead it will make it harder to create a reliable exploit. Buying you time
-to push an update. Some security experts do not like mitigation because they
-saw people going for it **only**. As an additional layer of security it i cool.
-But base line is: Fix your bugs and do your updates.
-Possible side effects: Programs compiled with mitigation could be slower,
-larger, ...
-Please test for these effects !
+Mitigation are extra linker/compiler settings that make it harder to exploit your program. It will **not** fix the vulnerabilities and make our program better. Instead it will make it harder to create a reliable exploit. Buying you time to push an update. Some security experts do not like mitigation because they saw people going for it **only**. But as an additional layer of security it is cool great.
+Possible side effects: Programs compiled with mitigation could be slower, larger, ...
+Please test for these effects if size/speed is essential !
 
-%% TODO: Fix markup
 
 ## Build system
 
-If you want to be able to build old versions with new bug fixes, link to newer
-library versions (because the old ones are broken), ...
-You require a build system that is
+To be able to play with different compiler settings, you first start with creating a build system.
+
+If you want to be able to build old versions with new bug fixes, link to newer library versions (because the old ones are broken), ... then you require a build system that is
 
 * At a very well defined state (libraries, compiler version, ....)
 * Can be transferred to other build machines
@@ -59,29 +38,22 @@ There are currently two major ways to manage that.
 
 1. Docker (for Linux based building)
 2. Vagrant (for more flexible builds)
+3. And third: a smart *make* file
 
-Besides those two there are even more complex Continuous Integration
-technologies (CI). IF your team already uses those: Congratulations.
+Besides those there are even more complex Continuous Integration technologies (CI) setups. If your team already uses those: Congratulations.
 
 
 ## Use Docker
 
-Docker is a container system for Linux. If you develop on Linux and create
-for Linux (or cross compile) - it is the way to go.
+Docker is a container system for Linux. If you develop on Linux and create for Linux (or cross compile) - it is the way to go.
 
-Thanks to Docker you can create a container that you can transfer between different
-build machines. The installed tools and libraries will always have the same
-version number - reducing bugs that just happen on one machines and creating
-a stable build experience.
-
-%% TODO: Extra docker details
+Thanks to Docker you can create a container that you can transfer between different build machines. The installed tools and libraries will always have the same version number - reducing bugs that just happen on one machines and creating a stable build experience.
 
 ## Use Vagrant
 
-Vagrant is one step up from Docker: It is cross platform and you choose this
-one if you build on Windows or your build machines are Window based.
-Small print: running Windows in a Vagrant instance could force you to pay for an
-extra license. Linux is not a problem here.
+Vagrant is one step up from Docker: It is cross platform and you choose this one if you build on Windows or your build machines are Window based. Vagrant builds full VMs from configuration files. Not only containers. Those VMs are larger and more complex, of course.
+
+Small print: running Windows in a Vagrant instance could force you to pay for an extra license. Linux is not a problem here.
 
 [Vagrant](https://www.vagrantup.com/)
 
@@ -106,25 +78,17 @@ The two most common ones would be
 
 ### Vagrant for build system
 
-Your project needs a reliable and verified build system. Your developers are
-invested in more than one project and have different IDEs and libraries with
-different versions installed. Using one of those PCs is not the way to go.
+Your project needs a reliable and verified build system. If your developers are invested in more than one project and have different IDEs and libraries with different versions installed - you will have a hard time to get reliable and identical builds on two developer machines. Using one of those PCs is not the way to go.
 
-A virtual machine with the verified official build tools and libraries solves
-the problem. And in addition you can check the Vagrant configuration into
-your VCS.
+A virtual machine with the verified official build tools and libraries solves the problem. And in addition you can check the Vagrant configuration into your VCS.
 
-The programmers have less restrictions when choosing their development tools
-and the whole team has a central build system with reliable builds. And finally
-you can answer the question "Can you also observe the bug in the official build ?".
+By doing it that way, the programmers have less restrictions when choosing their development tools and the whole team has a central build system with reliable builds. And finally you can answer the question "Can you also observe the bug in the official build ?".
 
-Even if you have no Continuous Integration system running you can get some of
-the benefits by creating a Vagrant box to be run on the developers PCs.
+Even if you have no Continuous Integration system running you can get some of the benefits by creating a Vagrant box to be run on the developers PCs for the builds tagged as "official".
 
 ### Vagrant for testing system
 
-Similar to a build system you can create a testing environment. All the tests
-described in this book can be run on a VM.
+Similar to a build system you can create a testing environment. All the tests described in this book can be run on a VM.
 
 * Code coverage
 * Unit tests
@@ -132,88 +96,72 @@ described in this book can be run on a VM.
 * Dynamic code analysis
 * Fuzzing
 
-If you have no CI system running, at least build your own Vagrant testing
-toolbox. Check that into your VCS and everyone will be able to run it on the
-development PCs to have common metrics.
-
-%% TODO: A list of vagrant examples.
+If you have no CI system running, at least build your own Vagrant testing toolbox. Check that into your VCS and everyone will be able to run it on the development PCs to have common metrics.
 
 ## Compile for Linux
 
 Linux has many powerful code verification tools (fuzzing, ...).
-You want to be able to compile at least parts of your system on Linux
-(especially libraries to process file or data formats). Maybe even everything.
-So you can use these tools to test your code.
+Even if you develop for Windows it would be an idea to try to build your code on Linux. Maybe at least parts of your system - especially libraries to process file or data formats. So you can use these Linux specific testing tools to test your code.
 
-This is why Tavis Ormandy ported Windows Defender to Linux: to test it for
-vulnerabilities: [Tavis on Twitter](https://twitter.com/taviso/status/867134496935563264)
+This is why Tavis Ormandy ported Windows Defender to Linux: to test it for vulnerabilities: [Tavis on Twitter](https://twitter.com/taviso/status/867134496935563264)
 and [Tavis Ormandy loadlibrary](https://github.com/taviso/loadlibrary)
 
 ## Reproducible builds
 
-So you have a page with Open Source code and a binary to download. You checked
-the source and installed the binary. But how do you know the binary is linked
-to the source ? Maybe some backdoors where added just before compilation ?
-Or maybe even by a malicious compiler ?
+Assume you have a page with Open Source code and a binary to download. You checked the source for bugs and backdoors and install the binary. But how do you know the binary is built from the source you just checked ? Maybe some backdoors where added just before compilation ? Or maybe even by a malicious compiler when you compiled it on your systemv?
 
-If you do not trust your toolchain, create reproducible builds.
-You ship source code and build config. Reproducible builds will generate
-the exact same files (hash wise) on any build system. Your customers and
-co-workers can verify your build.
+If you do not trust your toolchain, create reproducible builds. You ship source code and build config. Reproducible builds will generate the exact same files (hash wise) on any build system. Your customers and co-workers can verify your build by building it on their system and comparing the results afterwards.
 
 This is how Debian is doing it:
 
 [Debian reproducible builds](https://wiki.debian.org/ReproducibleBuilds)
 
-And this is the big [reproducible builds](https://reproducible-builds.org/) project
+And this is the big [reproducible builds](https://reproducible-builds.org/) project.
 
-## Compiler warnings/static code analysis
-
-The cheapest way to increase security is to activate warnings in your compiler.
-Fix all those warnings. After that you have a useful system that warns you
-during development of anything strange in your code.
+Reproducible builds are not simple. But achieving them will be a large step in secure development.
 
 ## Static code analysis
 
-### Compile switches
+The cheapest way to increase security is to activate warnings in your compiler. Fix all those warnings. After that you have a useful system that warns you during development of anything strange in your code.
+
+There are several levels of warnings in your compiler. If those are not enough, you can also pick special tools that focus on static code analysis.
+
+### Compiler switches
 
 **GCC**
-
 
 * use *-Wall*. This will switch on many warnings, but not everything.
 * use *-Wextra* for even more tests than by -Wall
 * printf format checks: *gcc -Wformat -Wformat-security -Werror=format-security*
-* gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - compile time [Fortify Source](https://access.redhat.com/blogs/766093/posts/1976213)
+* gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - during compile time [Fortify Source](https://access.redhat.com/blogs/766093/posts/1976213)
 * Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
+%% TODO: Clang warnings
+
+%% TODO: Visual Studio warnings
 
 **Embedded: MISRA**
 
-There is a safety standard called "MISRA" - it is especially relevant for
-Embedded Systems. The TI compiler for example is not very strong on Warnings
-but offers to do MISRA checks. Find that setting in the TI compiler and
-cherry pick some MISRA requirements to check your code for - and you'll have
-some enhancement for warnings in this compiler. Even if MISRA is not a
-requirement at your workplace.
+There is a safety standard called "MISRA" - it is especially relevant for Embedded Systems. The TI compiler for example is not very strong on Warnings but offers to do MISRA checks. Find that setting in the TI compiler and cherry pick some MISRA requirements to check your code for - and you'll have some enhancement for warnings in this compiler. Even if MISRA is not a requirement at your workplace.
 
 [Wikipedia on Misra](https://en.wikipedia.org/wiki/MISRA_C)
 
 ### Special tool: Splint
 
-A classic tool for Code analysis (C). Works out of the box and is a simple entry tool.
+Splint is a classic tool for Code analysis for C programs. It works out of the box and is a simple entry level tool.
+
+Drawback: It sacrificed deteciton power to this simplicity.
 
 ### Special tool: Flawfinder
 
-As simple as Splint. Run it in your directory and it will point out risky regions of your code. As it is a "grep on speed" it will have its limits. But use it and fix all bugs it finds before going to the next level.
+As simple as Splint. Run it in your directory and it will point out risky regions in your code. As it is a "grep on speed" it will have its limits. But use it and fix all bugs it finds before going to the next level.
 
 [Flawfinder has an own chapter](#chapter-flawfinder)
 
 ### Special tool: CPPCheck
 
-A more advanced tool than splint. Does work out of the box but also supports configuration files.
-in those files you describe your library interfaces and the parameters they accept.
-CPPCheck then can validate all calls to those functions.
-If you plan more serious validation, go for this tool.
+A more advanced tool than splint or flawfinder. It does work out of the box but also supports configuration files. In those files you describe your library interfaces and the parameters they accept.
+CPPCheck then can validate all calls to those functions. If you plan more serious validation, go for this tool.
 
 Page for [CppCheck](http://cppcheck.sourceforge.net/)
 
@@ -221,9 +169,9 @@ Page for [CppCheck](http://cppcheck.sourceforge.net/)
 
 [Code on Github](https://github.com/danmar/cppcheck)
 
-On Ubuntu you want to install the UI - which is a separate package (cppcheck-gui).
-Also: There seems to be a bug. Packages do not properly install the config files.
-Get the current folder with the config files from the repo.
+On Ubuntu you want to install the UI - which is a separate package called *cppcheck-gui*.
+
+There  seems to be a bug in this package. It does not properly install the config files. Get the current folder with the config files from the repo if your version has this bug.
 
 %% TODO: More hands on examples for CPPCheck
 
@@ -232,14 +180,9 @@ Get the current folder with the config files from the repo.
 
 ## Mitigation and hardening
 
-Mitigation makes exploits harder to write and reduces the chance they work.
-If skilled attackers share the exploits with others or the attackers can attack
-multiple times without being stopped - until the exploit works - this will
-not protect you.
+Mitigation makes exploits harder to write and reduces the chance they work properly. If skilled attackers share their exploits with others ("Weaponized exploits") or the attackers can attack multiple times without being stopped - until the exploit works - this will not protect you.
 
-This is why mitigation has a bad reputation amongst defenders who focus on the
-100% approach. But: as they are simple to activate - just one compile
-switch - you should do it anyway. Just do not get false sense of security.
+This is why mitigation has a bad reputation amongst defenders who focus on the 100% approach. But: as they are simple to activate - just one compile switch - you should do it anyway. Just do not get false sense of security.
 
 ### Mitigation/hardening switches
 
@@ -251,6 +194,7 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 
 * stack protector: *-fstack-protector-all* (=all functions protected)
 * stack protector (since gcc 4.9, replaces the old one): *-fstack-protector-strong* (adds local array definitions)
+* stack clash protection, not available on all targets: *-fstack-clash-protection*
 * Macros replace some risky functions (memcpy, ...) and check the parameters: *-D_FORTIFY_SOURCE=2*
   * more aggressive run time checks. Can modify runtime behaviour.
 * position independent executable: *gcc -pie -fPIE*
@@ -259,26 +203,20 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 * Resolve all dynamic symbols during program load: *ld -z now*
 * Do not leave debug symbols in the released binary. **DO NOT ADD** *-g*
     * Call the *strip* command on your binary to remove the debug symbols
-
-
-
-%% TODO: GCC GCC's -fstack-clash-protection
-
-%% .. TODO: * heap protector:
-%% .. TODO: * libc pointer encryption:
+* mitigate ROP, making ROP a bit harder: *-mmitigate-rop*
 
 #### Visual Studio
 
-%% .. TODO: Visual Studio /RTCs flag research and add add proper place
-%% .. TODO: More Visual studio things (stack protector /GS, #pragma string_gs_check(on), ...)
-
-* /GS, default on, buffer overrun check
+* /GS, default on, buffer overrun check using canaries for the stack
 * /guard:cf, default off, monitor control flow in executing program
 * /Qspectre, default off, defense against spectre attacks
 * /sdl, default off, activate additional warnings and run time checks
 * RTC, special, run time error checks are for test builds only. Will find lots of different run time errors
+    * c: data type conversion checks
+    * s: stack frame checking
+    * u: uninitialized variables checking
 * /Wall, several level available, activate warnings
- 
+
 
 
 
@@ -286,7 +224,6 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 
 %% TODO: [ASLR for statically linked exes](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables)
 
-%% TODO: [-mmitigate-rop](https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=kspp/gcc/mitigate-rop&id=5576f5fa57ff2fcdf041156bebf190a8f6b4dd9e)
 
 %% TODO: Valgrind
 %% TODO: kcachegrind
@@ -303,3 +240,5 @@ See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) a
 %% TODO: [GCC warnings](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 
 %% [Systematic sanitizer overview](https://arxiv.org/pdf/1806.04355.pdf)
+
+%% GOLANG

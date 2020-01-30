@@ -1,7 +1,5 @@
 # Glossary {#chapter-glossary}
 
-**StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
-
 **0-day**: An exploit used by the attackers before the vulnerability is known to the defender. They are expensive on the black market. Typical malware does not need 0-days. As many users do not patch their systems.
 
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
@@ -34,7 +32,9 @@
 
 **Bug**: Error made in the programming phase. Not all bugs are vulnerabilities
 
-%% TODO: Campaign
+**Campaign**: Malware campaigns are events where a malware actor spreads malware by phishing, infected sites, ... As malware is a business with division of work, one malware type can be spread by different actors in separate campaigns in parallel
+
+**Canary**: A trigger that will alert in an intrusion attempt. Code canaries for example are values in the code that trigger when being overwritten
 
 **C&C**: Command and Control server. Central control over a botnet
 
@@ -84,7 +84,7 @@
 
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
 
-%% TODO: Honeypot
+**Honeypot**: A Honeypot is a simulated vulnerable system to attract attackers. The attacks will then be analysed to learn about the attackers.
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
@@ -130,11 +130,13 @@
 
 **Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
 
+**StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
+
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 
 **Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
 
-%% TODO ROP
+**ROP / Return Oriented Programming**: If an executable is compiled with DEP it is not possible to insert new shellcode to execute. ROP uses *existing* code from the victim-executable and chains those ROP gadgets into a new order to achieve the goal.
 
 %% TODO SROP (pagedOut 2, p 54)
 
@@ -150,11 +152,13 @@
 
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
-%% TODO: Trust boundary
+**Trust boundary**: Who do you trust with what ? If your project integrated 3rd party compilers, tools, library, ... you are already trusting someone. Knowing *who you trust* and *how far* is the trick.
 
 %% TODO: **XSS / Cross Site Scripting**:
 
 **Vulnerability**: A bug or a flaw that has security implications
+
+**Warning fatigue**: A psychological aspect for secure UI design. If you display to many warning UIs your users will be trained to ignore them.
 
 **Waterhole attack**: Targeted phishing attack using a hacked/manufactured homepage the victim is known to visit and trust
 
@@ -169,8 +173,6 @@
 %% forward secrecy
 
 %% Perfect forward secrecy
-
-%% TODO: Warning fatigue
 
 %% TODO: Responsible/full disclosure
 

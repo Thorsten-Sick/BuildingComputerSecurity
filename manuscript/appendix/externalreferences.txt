@@ -123,6 +123,10 @@ The Chaos Computer Club has several conferences in Germany. Those have different
 
 [Hack.lu](https://hack.lu/) is a security conference in Luxembourg. Talks are recorded, but it seems there is no central storage besides Youtube where you can find them.
 
+### OWASP
+
+* [German OWASP Day 2019](https://www.youtube.com/playlist?list=PLCUxWIPmliVnXa6jJLDYy5Rs6iv-zFj2o)
+
 ### Blackhat
 
 Blackhat is a security conference with events in US, Europa and Asia (so don't get confused).
@@ -165,6 +169,8 @@ Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/categor
 [Internet Storm Center](https://isc.sans.edu/)
 
 [Cloudflare](https://blog.cloudflare.com/tag/security/)
+
+[HITBSecNews](https://news.hitb.org/tags/security)
 
 [Citizen lab - big game hunting](https://citizenlab.ca/)
 

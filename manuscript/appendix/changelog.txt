@@ -58,12 +58,18 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add link to security_process
 
-## Januar 2020
+%% TODO: Add Frida to the book
 
-* Extended "external references"
-%% TODO: glossary
-%% TODO: compiling visual studio
-%% TODO: Testing compiling
+%% TODO: Add Pwnagotchi
+
+## January 2020
+
+* Extended *external references*
+* Extended *glossary*
+* *Programming/compiling*: visual studio added
+* *Testing-compiling* extended
+* Decission: I will remove the target audience from all chapters. Also the author as long as it is just me. 3rd party authors will get the credits.
+
 
 ## December 2019
 
