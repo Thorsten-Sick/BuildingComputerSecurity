@@ -138,7 +138,7 @@
 
 **ROP / Return Oriented Programming**: If an executable is compiled with DEP it is not possible to insert new shellcode to execute. ROP uses *existing* code from the victim-executable and chains those ROP gadgets into a new order to achieve the goal.
 
-%% TODO SROP (pagedOut 2, p 54)
+%% TODO SROP (Pagedout 2, p 54)
 
 **SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
 

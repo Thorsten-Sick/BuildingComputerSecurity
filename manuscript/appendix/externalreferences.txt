@@ -99,7 +99,7 @@ understand those patterns and learn how to eliminate them.
 
 ## Conferences
 
-An important criterium for conferences added here is online publication of talks and papers.
+An important criterion for conferences added here is online publication of talks and papers.
 
 When you know where to look you will find lots of awesome conferences with different priorities and a different focus.
 
@@ -121,7 +121,7 @@ The Chaos Computer Club has several conferences in Germany. Those have different
 
 ### Hack.lu
 
-[Hack.lu](https://hack.lu/) is a security conference in Luxembourg. Talks are recorded, but it seems there is no central storage besides Youtube where you can find them.
+[Hack.lu](https://hack.lu/) is a security conference in Luxembourg. Talks are recorded, but it seems there is no central storage besides YouTube where you can find them.
 
 ### OWASP
 
@@ -145,7 +145,7 @@ Blackhat is a security conference with events in US, Europa and Asia (so don't g
 
 [Virus Bulletin](https://www.virusbulletin.com/) is an Anti-Virus community magazine, tester and conference.
 
-Especially the conference has in-depth talks covering malware and malware actors. Some of those talks can be found on Youtube.
+Especially the conference has in-depth talks covering malware and malware actors. Some of those talks can be found on YouTube.
 
 [Virus Bulletin videos](https://www.youtube.com/user/virusbtn/videos)
 
@@ -154,7 +154,7 @@ Especially the conference has in-depth talks covering malware and malware actors
 Blogs are a good resource for in-depth malware analysis or content of almost any complexity.
 I suggest you check out which ones cover topics you are interested in and then start monitoring them for changes.
 
-Security perspective from a bank, check out articles, blogs, handbooks, whitepapers: [Bank indosecurity](https://www.bankinfosecurity.com)
+Security perspective from a bank, check out articles, blogs, handbooks, white-papers: [Bank indosecurity](https://www.bankinfosecurity.com)
 
 Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/category/research-and-intelligence.html)
 
@@ -162,9 +162,9 @@ Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/categor
 
 [Malware must die blog](https://blog.malwaremustdie.org/) contains malware information
 
-[Malware don't need coffee](https://malware.dontneedcoffee.com/blog/) focusses on Exploit kits and their distribution.
+[Malware don't need coffee](https://malware.dontneedcoffee.com/blog/) focuses on Exploit kits and their distribution.
 
-[Cybercrime Magazine](https://cybersecurityventures.com/) focusses more on the crime aspect.
+[Cyber crime Magazine](https://cybersecurityventures.com/) focuses more on the crime aspect.
 
 [Internet Storm Center](https://isc.sans.edu/)
 
@@ -176,7 +176,7 @@ Deep analysis and IOCs: [Cylance](https://threatvector.cylance.com/en_us/categor
 
 Also [Brian Krebs](https://krebsonsecurity.com/) is very well known for his investigations into the crime part of the topic.
 
-To stay in the world of crime: [Europol](https://www.europol.europa.eu/newsroom/news/) will also cover it. But not focussed on computer security.
+To stay in the world of crime: [Europol](https://www.europol.europa.eu/newsroom/news/) will also cover it. But not focused on computer security.
 
 The Anti Virus companies also have blogs. Sometimes several blogs. With a focus on end-users or tech nerds. Those can vary in depth.
 
@@ -206,7 +206,7 @@ Hacker news portals:
 
 ## Magazines
 
-Magazines (called Zines) are a prt of the hacker culture. And they still exist.
+Magazines (called Zines) are a part of the hacker culture. And they still exist.
 
 * [Pagedout magazine](https://pagedout.institute/)
 * [POC or GTFO](https://pocorgtfo.hacke.rs/) Also available on other mirrors and as books
@@ -226,7 +226,7 @@ Magazines (called Zines) are a prt of the hacker culture. And they still exist.
 ## CTF
 
 Capture the flags (CTF) are challenges to test your own skills in hacking.
-A good way to do that wihtout committing any crimes.
+A good way to do that without committing any crimes.
 
 * [Gruyere CTF](https://google-gruyere.appspot.com/)
 * [Vulnhub](https://www.vulnhub.com/)

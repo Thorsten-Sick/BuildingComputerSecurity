@@ -27,7 +27,7 @@ It will check for:
 * Read-only relocations (relro)
 * Immediate binding
 
-You can also do many of these verifications using built-in tools.
+You can also do many of these verification using built-in tools.
 
 Testing specifically for **immediate binding** manually:
 
@@ -84,7 +84,7 @@ If you do not trust a program you can get similar results by calling
 
 ## Windows
 
-To check for ASLR, DEP, SafeSEH, ... in Windows binaries. There is a powershell tool on github:
+To check for ASLR, DEP, SafeSEH, ... in Windows binaries. There is a powershell tool on GitHub:
 
 [PESecurity](https://github.com/NetSPI/PESecurity)
 
@@ -108,10 +108,10 @@ The module to use here is *pefile*
     for s, h in features:
         print("{}: {}".format(s, bool(pe.OPTIONAL_HEADER.DllCharacteristics & h)))
 
-Those PE features can be set by th compiler/linker or the tool editbin.
+Those PE features can be set by the compiler/linker or the tool editbin.
 [Microsoft has a good documentation](https://docs.microsoft.com/en-us/cpp/build/reference/linker-options?view=vs-2017)
 
-One of the first things you should do is to compile for 64 bit. It enables more seurity features:
+One of the first things you should do is to compile for 64 bit. It enables more security features:
 
 * IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA
 * The SEH is secured automatically

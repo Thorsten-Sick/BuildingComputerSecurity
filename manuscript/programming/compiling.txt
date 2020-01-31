@@ -108,7 +108,7 @@ and [Tavis Ormandy loadlibrary](https://github.com/taviso/loadlibrary)
 
 ## Reproducible builds
 
-Assume you have a page with Open Source code and a binary to download. You checked the source for bugs and backdoors and install the binary. But how do you know the binary is built from the source you just checked ? Maybe some backdoors where added just before compilation ? Or maybe even by a malicious compiler when you compiled it on your systemv?
+Assume you have a page with Open Source code and a binary to download. You checked the source for bugs and backdoors and install the binary. But how do you know the binary is built from the source you just checked ? Maybe some backdoors where added just before compilation ? Or maybe even by a malicious compiler when you compiled it on your system?
 
 If you do not trust your toolchain, create reproducible builds. You ship source code and build config. Reproducible builds will generate the exact same files (hash wise) on any build system. Your customers and co-workers can verify your build by building it on their system and comparing the results afterwards.
 
@@ -150,7 +150,7 @@ There is a safety standard called "MISRA" - it is especially relevant for Embedd
 
 Splint is a classic tool for Code analysis for C programs. It works out of the box and is a simple entry level tool.
 
-Drawback: It sacrificed deteciton power to this simplicity.
+Drawback: It sacrificed detection power to this simplicity.
 
 ### Special tool: Flawfinder
 
@@ -188,7 +188,7 @@ This is why mitigation has a bad reputation amongst defenders who focus on the 1
 
 #### GCC
 
-%% TODO: More details here. Can bareley understand what -fstack-protector does
+%% TODO: More details here. Can barely understand what -fstack-protector does
 
 See more [GCC compiler flags](https://wiki.ubuntu.com/ToolChain/CompilerFlags) and [Debian hardening](https://wiki.debian.org/Hardening)
 
