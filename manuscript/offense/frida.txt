@@ -4,7 +4,7 @@
 
 A kind of manual Cuckoo monitor:
 
-Python code injects a Java VM into a process. There a JavaScript code can manipulate executing processes.
+Python code injects a JavaScript VM into a process. As soon as it is running there, JavaScript code can manipulate the executing processes.
 
 [Frida.re](https://frida.re)
 

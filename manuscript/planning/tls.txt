@@ -248,3 +248,5 @@ There is also one page that will never use SSL/TLS and can be quite handy for te
 %% TODO: Building certificate chain [sslmerge](https://github.com/trimstray/sslmerge)
 
 %% TODO: Add https://httpswatch.com
+
+%% TODO: https://github.com/drwetter/testssl.sh  SSL/TLS test tool 
