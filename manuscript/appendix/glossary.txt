@@ -114,6 +114,8 @@
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
+**Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
+
 **RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
 
 **Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controls.
