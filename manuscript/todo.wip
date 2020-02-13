@@ -257,3 +257,7 @@ https://github.com/DidierStevens/DidierStevensSuite/blob/master/rtfdump.py
 -------------
 Anti debugging (anti-debugging)
 https://www.apriorit.com/dev-blog/367-anti-reverse-engineering-protection-techniques-to-use-before-releasing-software
+-----------
+ROP tutorial: https://nagarrosecurity.com/blog/interactive-rop-tutorial
+----------
+Malware simulator: https://github.com/redcanaryco/chain-reactor

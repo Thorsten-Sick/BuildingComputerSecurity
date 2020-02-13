@@ -45,3 +45,8 @@ Windows Internals, Part 2
 
 
 %% TODO: Artifacts of execution https://blog.1234n6.com/2018/10/available-artifacts-evidence-of.html
+
+
+## UAC
+
+UAC bypass: https://github.com/hfiref0x/UACME
