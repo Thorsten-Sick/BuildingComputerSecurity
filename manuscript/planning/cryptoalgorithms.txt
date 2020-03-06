@@ -222,8 +222,7 @@ A source for a more specific evaluation of your required [key length is here](ht
 
 ### The Mozilla TLS guide
 
-[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations.
-A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
+[Mozilla TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS) is a collection of TLS server settings for different situations. A good cheat sheet ranking the current quality of algorithms in a pragmatic ("don't break the web") environment.
 
 ### BetterCrypto.org
 
@@ -247,4 +246,4 @@ A good cheat sheet ranking the current quality of algorithms in a pragmatic ("do
 
 %% TODO: Ange's [MD5 Attack](https://github.com/corkami/pocs/blob/master/collisions/README.md)
 
-%% TODO: KErckhoff's principle: https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle
+%% TODO: Kerckhoff's principle: https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle

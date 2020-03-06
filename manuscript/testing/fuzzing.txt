@@ -128,10 +128,7 @@ Taking an example from Radamsa (check out the link, there are more examples).
 
 ## AFL American fuzzy lop
 
-AFL is a very sophisticated fuzzer.
-It uses compile-time instrumentation and a genetic algorithm to discover new
-test cases. For that it does a *Code Coverage* on the victim binary and tries to
-create data in a way that every existing code path is used.
+AFL is a very sophisticated fuzzer. It uses compile-time instrumentation and a genetic algorithm to discover new test cases. For that it does a *Code Coverage* on the victim binary and tries to create data in a way that every existing code path is used.
 
 Pro:
     * It is fast
@@ -143,13 +140,11 @@ Con:
 {lang="bash"}
     apt install AFL
 
-To use AFL the program must be compiled with a special AFL compiler.
-AFL is available for clang (afl-clang) and gcc (afl-gcc).
+To use AFL the program must be compiled with a special AFL compiler. AFL is available for clang (afl-clang) and gcc (afl-gcc).
 
 After compiling you call it with *afl-fuzz*.
 
-A good example is the *fuzzgoat* project which has a vulnerable program and a
-Makefile to show how AFL is compiled into it and then executed.
+A good example is the *fuzzgoat* project which has a vulnerable program and a Makefile to show how AFL is compiled into it and then executed.
 
 The home page of [AFL](http://lcamtuf.coredump.cx/afl/)
 
@@ -223,3 +218,6 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% TODO: Fuzzing basics: https://labs.mwrinfosecurity.com/blog/what-the-fuzz
 %% Network protocol fuzzing: https://blog.own.sh/introduction-to-network-protocol-fuzzing-buffer-overflow-exploitation/
+
+
+%% TODO: https://github.com/mxmssh/manul coverage guided cross platform fuzzer
