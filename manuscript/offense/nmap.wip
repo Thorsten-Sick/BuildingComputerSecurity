@@ -1,0 +1,9 @@
+# nmap
+
+nmap <ip> # scan ip
+
+nmap -p <port> <ip>  #  scan only port
+
+nmap -p- <ip>  # scan all ports there
+
+nmap -sV <ip>  # find version of server there

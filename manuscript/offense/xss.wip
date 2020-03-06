@@ -1,0 +1,5 @@
+# XSS
+
+Cross site scripting
+
+*document.cookie* is the local cookies. Can be read and set in JS
