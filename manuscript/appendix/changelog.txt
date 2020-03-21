@@ -62,6 +62,10 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add Pwnagotchi
 
+## March 2020
+
+* Extended external references
+
 ## February 2020
 
 * Glossary extended
