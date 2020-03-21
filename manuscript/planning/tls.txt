@@ -249,4 +249,6 @@ There is also one page that will never use SSL/TLS and can be quite handy for te
 
 %% TODO: Add https://httpswatch.com
 
-%% TODO: https://github.com/drwetter/testssl.sh  SSL/TLS test tool 
+%% TODO: https://github.com/drwetter/testssl.sh  SSL/TLS test tool
+
+%% TODO: https://decoder.link/
