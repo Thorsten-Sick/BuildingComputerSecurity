@@ -1,0 +1,21 @@
+# Mail hacking
+
+Finding open relays:
+
+{lang="bash"}
+    telnet <ip> 25
+
+    helo test
+    mail from: lala@test.de
+    rcpt to: own_address@mail.de
+    data
+    Subject: This is a test
+    From: faked@something.de
+
+    Mail text
+    .
+
+    quit
+
+If doing this on an open relay it will send a mail to the own address.
+Open relays are what spammers are looking for.

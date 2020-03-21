@@ -7,3 +7,10 @@ nmap -p <port> <ip>  #  scan only port
 nmap -p- <ip>  # scan all ports there
 
 nmap -sV <ip>  # find version of server there
+
+
+## udp scanning specialised tool: udp-proto-scanner
+
+[udp-proto-scanner](https://github.com/portcullislabs/udp-proto-scanner) simulates a client trying to connect to a udp server.
+
+That way udp services can be scanned.

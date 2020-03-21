@@ -65,6 +65,20 @@ Burp suite as proxy
 
 * Foxy proxy is a good addition to switch proxies
 
+## Protection
+
+Use *prepared statements*
+
+https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
+
+{lang="php"}
+    $sql = new mysqli("host", "username", "password", "database");
+    $q = $sql->prepare("SELECT title, message FROM pages WHERE id = (?)");  // (?) will be defined with the bind next line
+    $q->bind_param("i", $id);   // id must be integer
+    $q->execute();    // execute the request
+    $q->bind_result($title, $message);  // Bind the output variables
+    $q->fetch();  // Fetch the data, can be in a loop
+    print "<h2>" . $title . "</h2>" . $message;
 
 ## Further reading
 

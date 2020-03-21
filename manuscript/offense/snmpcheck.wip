@@ -1,0 +1,6 @@
+# SNMP
+
+snmpcheck.pl analysis snmp servers
+
+{lang="bash"}
+    snmpcheck.pl -t <ip>

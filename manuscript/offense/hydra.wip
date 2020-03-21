@@ -1,0 +1,12 @@
+# Hydra password brute forcing
+
+[original](https://www.ssec.wsc.edu/hydra/download.html)
+[current git](https://github.com/vanhauser-thc/thc-hydra)
+
+
+Hydra brute forces passwords for services.
+
+{lang="bash"}
+    hydra -L users.txt -P pwds.txt <IP> ssh
+
+Brute forces all combinations of username:pwd that can be created out of the lists in those text files.
