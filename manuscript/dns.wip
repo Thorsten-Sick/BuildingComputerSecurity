@@ -1,11 +1,25 @@
+# DNS
+
 %% DNS hijacking: https://thehackernews.com/2018/04/android-dns-hijack-malware.html
 %% Research DANE/DNSSEC
 
+## Attack: DNS Spoofing
+
+%% TODO
+
+## Attack: DNS Cache poisoning
+
+%% TODO
+
 ## DNSSEC
+
+DNSSEC signs DNS answers and protects from DNS spoofing and DNS cache poisoning. The requests and answers are *not* encrypted and do not provide confidentiality.
 
 https://www.ghacks.net/2019/04/29/check-if-your-browser-uses-secure-dns-dnssec-tls-1-3-and-encrypted-sni/
 
 https://www.cloudflare.com/ssl/encrypted-sni/
+
+[DNSSEC](https://dnssec.net/)
 
 ## DNS classic
 
@@ -28,6 +42,8 @@ Browser vendors are pushing for DoH. An RFC is available. Experiments in browser
 %% https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/
 
 DoH looks like web traffic. It can not be blocked. This is better than what DoT offers - which can be identified. That is the reason why DoH is more private than DoT.
+
+[RFC 8484](https://tools.ietf.org/html/rfc8484)
 
 ## DNS over TLS (DoT)
 

@@ -132,6 +132,40 @@ This is done to get access to new sites to infect.
 
 Long story short: Keep your development environment malware free and do not store you passwords in our FTP clients.
 
+## XSRF
+
+Cross Site request forgery uses uses a second web page to trigger events on the attacked web page. For that it is using links to teh attacked web page with parameters that trigger server side actions.
+
+For actions triggered by GET requests simple links with GET parameters can be used.
+
+For actions triggered by POST requests, the attacking page can use invisible forms with POST and a JS script sending the POST request by submit.
+
+%% TODO Add examples
+
+### XSRF Token
+
+To protect against XSRF a token can be used. This is unique for each session and is sent with every request that changes any state on the server. The attacker can not know the token the victim has.
+
+
+## Command injection
+
+If the functionality of a web application is based on linux command line tools and the user can submit a parameter that will later by the backend be fed into a linux tool, use ";" to call a new command right after the the first one.
+
+## PHP uploads
+
+If a web application allows file uploads (images, ...) and you can send php files instead that will be interpreted by the backend you got an attack.
+
+Craft a php file, upload it and check what happens.
+
+PHP commands to use:
+
+* phpinfo();
+* passthru("commandline command");
+
+
+
+%%%%%%%%%%%%%%%
+
 %% TODO: Subdomain enumeration: https://github.com/cakinney/domained
 %% http://michenriksen.com/blog/aquatone-tool-for-domain-flyovers/
 %% https://github.com/michenriksen/aquatone/

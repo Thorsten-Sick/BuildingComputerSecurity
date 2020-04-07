@@ -30,6 +30,25 @@ https://linux-audit.com/linux-security-guide-for-hardening-ipv6/
 
 https://linux-audit.com/bpfilter-next-generation-linux-firewall/
 
+Basic firewall:
+{lang="bash"}
+    # Deny all
+    iptables -P OUTPUT DROP
+    iptables -P INPUT DROP
+    iptables -P FORWARD DROP
+    iptables -F
+
+    # Allow outgoing
+    iptables -A OUTPUT -j ACCEPT
+    iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+    iptables -A INPUT -i lo -j ACCEPT
+
+    # Allow http
+    iptables -A INPUT -p TCP --dport 80 -j ACCEPT
+
+    # Log strange stuff
+    iptables -A INPUT -m limit --limit 10/m -j LOG --log-prefix="FW LOG DROPPED"
+
 
 ## Mitmproxy
 

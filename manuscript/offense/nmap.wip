@@ -14,3 +14,6 @@ nmap -sV <ip>  # find version of server there
 [udp-proto-scanner](https://github.com/portcullislabs/udp-proto-scanner) simulates a client trying to connect to a udp server.
 
 That way udp services can be scanned.
+
+{lang="bash"}
+    udp-proto-scanner.pl <ip>
