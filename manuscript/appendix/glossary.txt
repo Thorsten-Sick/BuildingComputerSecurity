@@ -86,6 +86,10 @@
 
 **Honeypot**: A Honeypot is a simulated vulnerable system to attract attackers. The attacks will then be analysed to learn about the attackers.
 
+**IDS / Intrusion Detection System**: Monitor in a network to analyse that for malicious activity. Using rules it can notify admins if anomalies are detected
+
+**IPS / Intrusion Prevention System**: IDS with the ability to automatically stop potential attacks (firewall up, terminate processes, ...)
+
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
 **QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
@@ -93,6 +97,10 @@
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
+
+** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrpted SNI) is used.
+
+**Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
 
 **UAF / Use After Free vulnerability**: Typical memory corruption bug
 

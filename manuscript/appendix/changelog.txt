@@ -64,7 +64,12 @@ changelog to make it simpler for you to find the new sections.
 
 ## March 2020
 
+%% TODO: Hydra, nmap, sqlinjecion, frida
+
+* Extended passwords
 * Extended external references
+* Extended fuzzing
+* Extended Glossary
 
 ## February 2020
 
