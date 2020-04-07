@@ -98,7 +98,7 @@
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
 
-** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrpted SNI) is used.
+** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
 

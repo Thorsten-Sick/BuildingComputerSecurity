@@ -241,7 +241,7 @@ Magazines (called Zines) are a part of the hacker culture. And they still exist.
 * ["Administraitor" talks](https://administraitor.video/)
 * [Hak5](https://shop.hak5.org/pages/videos)
 
-## Workshops and trainings
+## Workshops and Training
 
 * [Open Security Training](http://opensecuritytraining.info/Training.html)
 * [Reverse Engineering for Beginners](https://www.begin.re/)

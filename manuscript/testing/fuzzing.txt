@@ -95,7 +95,7 @@ Simple [DNS fuzzer](https://github.com/sgayou/medfusion-4000-research/blob/maste
 
 [Radamsa](https://gitlab.com/akihe/radamsa)
 
-Radamsa is a smart data permutation engine. Sending this permutated data into the program to fuzz and handling crashes is your responsibility. The Radamsa README has some very good examples how to do that.
+Radamsa is a smart data permutation engine. Sending this permuted data into the program to fuzz and handling crashes is your responsibility. The Radamsa README has some very good examples how to do that.
 
 A simple way to detect crashed programs in bash scripts is to check the exit value.
 
