@@ -85,3 +85,6 @@ https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
 ### SQL injection attacks and defense
 
 https://learning.oreilly.com/library/view/sql-injection-attacks/9781597499637
+
+
+%% TODO: SQL injection cheat sheet: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/

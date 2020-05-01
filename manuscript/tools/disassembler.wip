@@ -18,3 +18,7 @@ https://www.capstone-engine.org
 ## IDA
 
 https://github.com/inforion/idapython-cheatsheet
+
+## Binary Ninja
+
+Hexrays style decompiler for binary ninja: https://blog.trailofbits.com/2020/04/17/revisiting-2000-cuts-using-binary-ninjas-new-decompiler/

@@ -261,3 +261,9 @@ https://www.apriorit.com/dev-blog/367-anti-reverse-engineering-protection-techni
 ROP tutorial: https://nagarrosecurity.com/blog/interactive-rop-tutorial
 ----------
 Malware simulator: https://github.com/redcanaryco/chain-reactor
+-----------
+Books needing review
+Books: Mc Graw, "Software Security: Building Security in"
+Book: "Secure By DEsign"
+Book: "Secure Programming Cookbook for C and C++"
+Book: "Secure Coding in C and C++, Second Edition"
