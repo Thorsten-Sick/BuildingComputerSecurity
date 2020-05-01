@@ -44,3 +44,5 @@ Better filter it (used that for *ping*):
 %% TODO: Frida fuzzing https://www.kitploit.com/2020/04/frida-api-fuzzer-this-experimetal.html
 
 %% TODO: Bypassing Xamarin/Mono certificate pinning: https://www.gosecure.net/blog/2020/04/06/bypassing-xamarin-certificate-pinning-on-android/
+
+%% TODO: Brida (Burp + Frida) https://github.com/federicodotta/Brida/

@@ -98,6 +98,8 @@
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
 
+**Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
+
 ** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
@@ -168,7 +170,9 @@
 
 **Trust boundary**: Who do you trust with what ? If your project integrated 3rd party compilers, tools, library, ... you are already trusting someone. Knowing *who you trust* and *how far* is the trick.
 
-%% TODO: **XSS / Cross Site Scripting**:
+**XSS, Persistent**: An attacker can store a script on the web server that is for another user rendered. As it is a script it will execute in the context of the victim's page.
+
+**XSS, Reflected**: The attacker can add a script to a url parameter which is part of the rendered page. This script will then run in page context
 
 **Vulnerability**: A bug or a flaw that has security implications
 

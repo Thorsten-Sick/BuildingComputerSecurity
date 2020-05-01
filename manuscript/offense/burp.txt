@@ -1,9 +1,5 @@
 # Burp suite {#chapter-burp}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Tester, Pen Tester
-
 ## Basics
 
 Burp suite is a web vulnerability scanner - it checks web pages
@@ -27,3 +23,6 @@ for vulnerabilities.
 %% TODO: [Auto repeater](https://github.com/nccgroup/autorepeater)
 
 %% TODO: PagedOut2, 58: Android certificate tricks
+
+
+%% TODO: Add ZAProxy by OWASP (https://github.com/zaproxy/zaproxy)

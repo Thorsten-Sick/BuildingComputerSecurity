@@ -380,6 +380,10 @@ The best checklist I found so far is this:
 
 [CERT coding standards for C and C++](https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards)
 
+%% TODO: https://dwheeler.com/secure-programs/
+
+%% Matt Bishop secprog: http://nob.cs.ucdavis.edu/bishop/secprog/robust.html
+
 ### Wikipedia
 
 [Wikipedia on Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming)

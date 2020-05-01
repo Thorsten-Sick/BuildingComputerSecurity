@@ -1,9 +1,5 @@
 # Fuzzing {#chapter-fuzzing}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Tester
-
 Fuzzing is inserting random data into the system with the goal to cause invalid
 states. This can be crashing, memory leaks, unresponsiveness, endless loops,
 log storms ...
@@ -208,3 +204,6 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 
 %% TODO: https://github.com/mxmssh/manul coverage guided cross platform fuzzer
+
+
+%% TODO: Check out "spike": network based fuzzing
