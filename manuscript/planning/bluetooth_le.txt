@@ -1,9 +1,5 @@
 # Bluetooth LE {#chapter-btle}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Tester
-
 ## Basics
 
 Bluetooth LE (low energy) is a special mode of modern Bluetooth devices. It behaves very differently from normal Bluetooth behaviour with the benefit of significantly lower power consumption.
@@ -51,8 +47,7 @@ The options for pairing are:
 * Passkey Entry
 * Out of Band (OOB)
 
-Where the first three options have drawbacks: either an all 0 key (just works) or short keys (all the others). The thing to go for is OOB: The pairing is
-done over an other channel - not over the air. This can be NFC or QR codes or an attached wire. Secure but not an option for many device classes.
+Where the first three options have drawbacks: either an all 0 key (just works) or short keys (all the others). The thing to go for is OOB: The pairing is done over an other channel - not over the air. This can be NFC or QR codes or an attached wire. Secure but not an option for many device classes.
 
 The [Bluetooth standard](https://blog.bluetooth.com/bluetooth-pairing-part-4) has more details.
 
@@ -230,8 +225,7 @@ See the [Ubertooth DLT fix](https://github.com/greatscottgadgets/ubertooth/issue
 
 ### Crackle: BTLE key cracking
 
-For some attacks it is relevant that the Bluetooth le key is cracked first. With crackle it is possible - but requires a dump of the Bluetooth packets
-during the pairing process. This is the tricky part. The Adafruit sniffer or Ubertooth can do that.
+For some attacks it is relevant that the Bluetooth le key is cracked first. With crackle it is possible - but requires a dump of the Bluetooth packets during the pairing process. This is the tricky part. The Adafruit sniffer or Ubertooth can do that.
 
 [Crackle description](https://lacklustre.net/projects/crackle/)
 [Crackle on Github](https://github.com/mikeryan/crackle/)

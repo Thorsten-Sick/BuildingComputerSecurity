@@ -1,10 +1,5 @@
 # User interfaces {#chapter-user-interface}
 
-C> By: Thorsten Sick
-
-C> For: Architects, UX specialists
-
-
 %% TODO: "Human Error" by James Reason lesen
 %% TODO: Add books on social engineering
 %% TODO: Daniel Suarez: "From the perspective of an AI, the human mind is a stationary target"
@@ -85,33 +80,26 @@ Still have the warnings in a kind of "corporate identity" so the user can connec
 
 ### Show marker on warning
 
-If you have a (browser) UI where a missing lock icon indicates the insecurity: This will fail. Users do not notice anything missing. Add a warning sign
-for the "not secure state" instead. Keep the lock icon for the secure state.
+If you have a (browser) UI where a missing lock icon indicates the insecurity: This will fail. Users do not notice anything missing. Add a warning sign for the "not secure state" instead. Keep the lock icon for the secure state.
 
 ### Unique warning ID ?
 
-In addition to an easy-to-understand warning message you maybe want to create a unique ID for the user to google and find help for. Display this ID in
-addition to the message. Give your support people a list with those IDs.
+In addition to an easy-to-understand warning message you maybe want to create a unique ID for the user to google and find help for. Display this ID in addition to the message. Give your support people a list with those IDs.
 
 ### Create event logs
 
-Create an event log containing all the recent warnings. Especially when building end-user software. Experts (or the most skilled family member) will
-want this info when they are faced with a help request
-"And there was this box and I clicked a button and then the computer did behave strange".
+Create an event log containing all the recent warnings. Especially when building end-user software. Experts (or the most skilled family member) will want this info when they are faced with a help request "And there was this box and I clicked a button and then the computer did behave strange".
 
 ### Stop the user's momentum
 
-A users wants to achieve a goal (like: visit this porn site). Any UX indicator stopping the user will have to stop the user long enough so that the neurons
-for more complex decision making can boot up. If you just show a simple block page here it will be dismissed as "False Positive" and clicked away. The
-user will be infected.
+A users wants to achieve a goal (like: visit this porn site). Any UX indicator stopping the user will have to stop the user long enough so that the neurons for more complex decision making can boot up. If you just show a simple block page here it will be dismissed as "False Positive" and clicked away. The user will be infected.
 
 * Block the user
 * Give enough (simple) information
 * Create a small UI "labyrinth" of buttons or "more..." links so that the brain can change direction
 * Then - and not before - you can offer something like "continue anyway"
 
-AFAIK: Debian even had a nice feature where the user had to enter a sentence like "I am a bonehead and this will fry my computer" into an edit box before
-being able to delete the OS kernel.
+AFAIK: Debian even had a nice feature where the user had to enter a sentence like "I am a bonehead and this will fry my computer" into an edit box before being able to delete the OS kernel.
 
 ## Details list of dangerous things
 
@@ -131,6 +119,4 @@ Security is complex. Sometimes you can not have one indicator for all kinds of r
 
 This happened to the browser developers because the situation changed during the last years.
 The lock icon next to the URL bar always indicated "The connection is secure". But as users started to understand this icon as "This page is secure" malware started to TLS-encrypt the connection. So users would see the lock and assumed the page content is OK.
-This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page,
-one for the connection). Or start indicating differently (red bar for unencrypted connections). While a malware attack will be blocked hard with the
-whole tab displaying info on a red background.
+This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page, one for the connection). Or start indicating differently (red bar for unencrypted connections). While a malware attack will be blocked hard with the whole tab displaying info on a red background.

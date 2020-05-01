@@ -1,14 +1,8 @@
 # Antivirus Integration {#chapter-antivirus-integration}
 
-C> By: Thorsten Sick
+Anti Virus technology can be integrated into your program without adding much extra code.
 
-C> For: Architects, Developers
-
-Anti Virus technology can be integrated into your program without adding much
-extra code.
-
-If your program handles scripts and files from external sources it may be worth
-the effort.
+If your program handles scripts and files from external sources it may be worth the effort.
 
 
 ## What to scan
@@ -27,18 +21,14 @@ When data is identified as malicious, you should do:
 3. Notify the user
 4. Give the user a "Don't Panic" message and an option to pull it out of quarantine
 
-As in some cases you do not really know which kind of scanner did report your
-data as malicious you should have somewhere - deep down in our settings - the
-option to de-activate the scanning.
+As in some cases you do not really know which kind of scanner did report your data as malicious you should have somewhere - deep down in our settings - the option to de-activate the scanning.
 
-For example AMSI is offering a interface to the currently installed virus
-scanner. And this software could be some old version of a discontinued s***ty
+For example AMSI is offering a interface to the currently installed virus scanner. And this software could be some old version of a discontinued s***ty
 virus scanner.
 
 ## AMSI
 
-It is a Windows API where programs can contact the local virus scanner and
-request a scan.
+It is a Windows API where programs can contact the local virus scanner and request a scan.
 The interface is very simple - it would even love some additional features.
 
 It can scan a string or buffer and return a flag if it was malicious or not.
@@ -76,19 +66,14 @@ Maybe you had bad luck and the one on your development PC is just not connected.
 
 ## Google Safe Browsing
 
-Google offers a service to verify if a URL is malicious. The service can be
-found here: [GSB - Google Safe Browsing](https://developers.google.com/safe-browsing/)
+Google offers a service to verify if a URL is malicious. The service can be found here: [GSB - Google Safe Browsing](https://developers.google.com/safe-browsing/)
 
-It offers two ways to access the data. One is simple, the other one privacy
-respecting.
+It offers two ways to access the data. One is simple, the other one privacy respecting.
 
-You should scan at least the URLs that are followed. Maybe even the URLs
-contained in a document. If there is one URL in the document you are processing
+You should scan at least the URLs that are followed. Maybe even the URLs contained in a document. If there is one URL in the document you are processing
 that is malicious, the whole document could be dangerous.
 
-A common attack would be an interactive text document with a script that
-contains the URL to a malware server. This would be a so called *downloader* -
-one of the stages of a malware attack between *exploit* and *infection*.
+A common attack would be an interactive text document with a script that contains the URL to a malware server. This would be a so called *downloader* - one of the stages of a malware attack between *exploit* and *infection*.
 
 To test your implementation, you can use this [test URL](http://malware.testing.google.test/testing/malware/)
 

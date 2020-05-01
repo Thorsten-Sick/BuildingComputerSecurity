@@ -1,22 +1,14 @@
 # SSH {#chapter-ssh}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Tester, Architects
-
 ## Reasons for SSH
 
-SSH is one of the basic tools providing a long list of security features
-and replacing lots of risky technologies (ftp, telnet, ...).
+SSH is one of the basic tools providing a long list of security features and replacing lots of risky technologies (ftp, telnet, ...).
 
-It is quite likely that while developing you will never use it directly - but
-some of your tools depend on it. You already used it without knowing.
+It is quite likely that while developing you will never use it directly - but some of your tools depend on it. You already used it without knowing.
 
-For a developer or tester it is one more tool to simplify their daily work -
-with a security benefit.
+For a developer or tester it is one more tool to simplify their daily work - with a security benefit.
 
-For an architect it could be a building block designing a whole (Linux) system
-(maybe an embedded system or similar).
+For an architect it could be a building block designing a whole (Linux) system (maybe an embedded system or similar).
 
 It is able to several things:
 
@@ -27,56 +19,43 @@ It is able to several things:
 * File transfer
 * Offering a VPN service
 
-That's a lot. And everything is much simpler to understand as soon as you know
-the basics.
+That's a lot. And everything is much simpler to understand as soon as you know the basics.
 
 ## Background
 
-SSH is based on Public Key Cryptography. Long story short: There are two
-matching keys:
+SSH is based on Public Key Cryptography. Long story short: There are two matching keys:
 
 * A secret key
 * A public key
 
-Both belong together. And you also want to have a key pair per server you
-connect to.
+Both belong together. And you also want to have a key pair per server you connect to.
 
-The public key does not need top be protected. You can copy it around, put it
-on untrusted systems, share it or even print it in the newspaper. The file
+The public key does not need top be protected. You can copy it around, put it on untrusted systems, share it or even print it in the newspaper. The file
 containing it has the *.pub* extension.
 
-The secret key is Top Secret. It should be protected by a *passphrase*. So
-someone getting the file will still not be able to unlock it as the passphrase
-is missing.
+The secret key is Top Secret. It should be protected by a *passphrase*. So someone getting the file will still not be able to unlock it as the passphrase is missing.
 
-The passphrase is optional. But you should use it. There are tools that store
-it as long as you do not reboot your computer - so you just have to enter it
+The passphrase is optional. But you should use it. There are tools that store it as long as you do not reboot your computer - so you just have to enter it
 once after you log in.
 
-On a server without keyboard that has no tech person to manage it after a
-reboot a passphrase could cause trouble....
+On a server without keyboard that has no tech person to manage it after a reboot a passphrase could cause trouble....
 
-There are many (GUI) tools that integrate SSH and do some of the steps I
-describe here without you noticing.
+There are many (GUI) tools that integrate SSH and do some of the steps I describe here without you noticing.
 
 There are also SSH GUI tools that will do those steps. Visible but simplified.
 
-But here I will describe the basic command line functions for Linux. Because
-that way it is much simpler to peak behind the curtain.
+But here I will describe the basic command line functions for Linux. Because that way it is much simpler to peak behind the curtain.
 
 ### Client configuration
 
-There is also the SSH configuration.The one for the SSH client is in your personal
-folder: *~/.ssh/config*
+There is also the SSH configuration.The one for the SSH client is in your personal folder: *~/.ssh/config*
 
 This folder also contains your key files.
 
-The configuration can store some connection details for all the servers you
-normally connect to. Read about the features of this configuration and
+The configuration can store some connection details for all the servers you normally connect to. Read about the features of this configuration and
 simplify your life !
 
-Especially important is to define which key belongs to which server. SSH will
-start to try all our keys until one matches. But even with a low number of
+Especially important is to define which key belongs to which server. SSH will start to try all our keys until one matches. But even with a low number of
 keys this is not practical anymore.
 
 There are many resources online about the [config file format](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/).
@@ -84,14 +63,11 @@ There are many resources online about the [config file format](https://www.cyber
 ### known_hosts
 
 SSH tracks the servers it connected to and stores their *key fingerprints*.
-This way it identifies the servers. If the fingerprint of a server should
-ever change (by update or attack) you will be notified.
+This way it identifies the servers. If the fingerprint of a server should ever change (by update or attack) you will be notified.
 
-First time you connect to a server you will see a warning asking you to verify
-the fingerprint and confirm it. by pressing *yes* you accept it and it is stored.
+First time you connect to a server you will see a warning asking you to verify the fingerprint and confirm it. by pressing *yes* you accept it and it is stored.
 
-If you want to be prepared, you can also just extract the fingerprints from a
-SSH server and add them to your know_hosts file by calling:
+If you want to be prepared, you can also just extract the fingerprints from a SSH server and add them to your know_hosts file by calling:
 
 {lang="bash"}
     ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
@@ -109,13 +85,11 @@ You will generate a key - which consists of two files. One secret and one public
 * -b is the bit length of the key
 * -C is a comment. If you use it for GitHub, it should be your mail address
 
-As you will generate many more keys it is smart to start putting good
-comments in here.
+As you will generate many more keys it is smart to start putting good comments in here.
 
 [The official keygen page](https://www.ssh.com/ssh/keygen/) has much more about key generation.
 
-As you do not want to enter the passphrase several times a day, you should
-request that *ssh-agent* manages your key.
+As you do not want to enter the passphrase several times a day, you should request that *ssh-agent* manages your key.
 
 {lang="bash"}
     ssh-add ~/.ssh/id_rsa
@@ -142,8 +116,7 @@ To extract the same information from a key file, use
 
 ## Deploying keys
 
-The file *~/.ssh/authorized_keys* on a server contains all the (public)
-keys that can log into this server.
+The file *~/.ssh/authorized_keys* on a server contains all the (public) keys that can log into this server.
 
 One simple way to install your key on the server is to call
 
@@ -151,15 +124,12 @@ One simple way to install your key on the server is to call
     ssh-copy-id -i ~/.ssh/keyname user@host
 
 You will have to enter your server password and log in to install the key.
-What I did not tell you: You can configure your SSH server to accept
-passwords (not key files) as well.
+What I did not tell you: You can configure your SSH server to accept passwords (not key files) as well.
 
 Passwords only are not as secure as keys. This is why I did not tell you.
-But you could activate the password feature on the server until your keys
-are deployed.
+But you could activate the password feature on the server until your keys are deployed.
 
-As the file  *~/.ssh/authorized_keys* is "just" a text file containing
-the authorized public keys, you could also just cat it together:
+As the file  *~/.ssh/authorized_keys* is "just" a text file containing the authorized public keys, you could also just cat it together:
 
 {lang="bash"}
     cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -171,8 +141,7 @@ It is at least as simple as using
 {lang="bash"}
     ssh user@server
 
-It can be much simpler if you use your ssh config file to define the
-default **user** for this server. In that case you can also skip the user.
+It can be much simpler if you use your ssh config file to define the default **user** for this server. In that case you can also skip the user.
 
 By doing this you will get logged into a bash shell on the remote server.
 
@@ -184,14 +153,12 @@ To remotely execute just one command call it with
     ssh user@server command
 
 You will not get a shell but the command will be executed remotely.
-That way you can use ssh and remote control in a very simple way in your
-normal scripts.
+That way you can use ssh and remote control in a very simple way in your normal scripts.
 
 ## File transfer (scp)
 
 Copying a file over a network just works as when you copy a file locally -
-if you did add your password to the ssh-agent and configured your
-ssh-configuration properly.
+if you did add your password to the ssh-agent and configured your ssh-configuration properly.
 
 {lang="bash"}
     scp anime.txt server:/home/boss/incoming/
@@ -201,14 +168,10 @@ Of course: it is also possible to switch the order of the folders and copy it ba
 
 ## SSHFS
 
-SSHFS allows you to just mount a file systems over the network. There are
-alternative technologies (nfs, samba). SSH offers you encryption (not like
-nfs which some people say is the acronym for "No File Security"). And samba
-can be a bit tricky in the non windows world with lots of different versions
-and a not-very-granular control.
+SSHFS allows you to just mount a file systems over the network. There are alternative technologies (nfs, samba). SSH offers you encryption (not like
+nfs which some people say is the acronym for "No File Security"). And samba can be a bit tricky in the non windows world with lots of different versions and a not-very-granular control.
 
-If you already have your SSH connection running, mounting a remote file system
-automatically on boot up is just 2 more commands.
+If you already have your SSH connection running, mounting a remote file system automatically on boot up is just 2 more commands.
 
 No reason to stick to FTP.
 
@@ -216,18 +179,13 @@ The simple tutorial is on [digitalocean](https://www.digitalocean.com/community/
 
 ## GIT
 
-Git is using SSH as basic technology to protect the connection. Using GitHub
-you are asked to submit your public key.
+Git is using SSH as basic technology to protect the connection. Using GitHub you are asked to submit your public key.
 
 This is all the magic involved.
 
-As you can manage several keys I advice you to generate one for each computer
-you use. That way you can delete it from the online account as soon as you
-send your computer to any kind of recycling (eBay, relatives) as files can
-be restored from a deleted hard disk....
+As you can manage several keys I advice you to generate one for each computer you use. That way you can delete it from the online account as soon as you send your computer to any kind of recycling (eBay, relatives) as files can be restored from a deleted hard disk....
 
-Also a good way to handle things: GIT can handle several remote sources. By
-smart configuration and several ssh accounts you can have several end points
+Also a good way to handle things: GIT can handle several remote sources. By smart configuration and several ssh accounts you can have several end points
 you can push to:
 
 * origin
@@ -273,18 +231,14 @@ After that, set up your web browser to use a proxy. Or your whole OS.
 
 ## Telnet
 
-Telnet is deprecated. Use SSH. Everywhere. Just now (end of 2018) there
-were several  a major incidents with telnet on IoT products. One example is
+Telnet is deprecated. Use SSH. Everywhere. Just now (end of 2018) there were several  a major incidents with telnet on IoT products. One example is
 [Siglent Technologies SDS 1202X-E Digital Oscilloscope](https://seclists.org/fulldisclosure/2018/Nov/68).
 
 ## Further reading
 
 ### SSH, The Secure Shell: The Definitive Guide, 2nd Edition
 
-A book from 2005. Does not cover all features and some tips might not be
-compatible with the current ssh version. But it covers a wide
-range of SSH features. And I also do not think the SSH project is one of those
-that love to break compatibility and add lots of incompatible features with
+A book from 2005. Does not cover all features and some tips might not be compatible with the current ssh version. But it covers a wide range of SSH features. And I also do not think the SSH project is one of those that love to break compatibility and add lots of incompatible features with
 each release ...
 
 [SSH, The Secure Shell: The Definitive Guide, 2nd Edition](https://www.safaribooksonline.com/library/view/ssh-the-secure/0596008953/)

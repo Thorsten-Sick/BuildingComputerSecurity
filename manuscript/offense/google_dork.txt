@@ -1,17 +1,10 @@
 # Google Dork {#chapter-google-dork}
 
-
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Tester, Pen Tester
-
 ## Basics
 
-Google Dorks are a simple and passive way to enumerate vulnerable systems
-on the internet. All web pages and web apps are a potential target.
+Google Dorks are a simple and passive way to enumerate vulnerable systems on the internet. All web pages and web apps are a potential target.
 
-By using advanced google searches the attacker searches for indicator for
-known vulnerabilities.
+By using advanced google searches the attacker searches for indicator for known vulnerabilities.
 
 This can be a specific part of the URL path using the google *inurl* search.
 
@@ -21,8 +14,7 @@ This can be a specific part of the URL path using the google *inurl* search.
 ## SEO expertise
 
 This is basically the Search Engine Optimization knowledge field (SEO).
-As you are using  more advanced search engine features. If you want to go
-for Google Dorks SEO knowledge is your friend.
+As you are using  more advanced search engine features. If you want to go for Google Dorks SEO knowledge is your friend.
 
 |Action            |Google command  |DuckDuckGo command  |
 |------------------|----------------|--------------------|
@@ -38,21 +30,16 @@ for Google Dorks SEO knowledge is your friend.
 
 ## Vulnerability indicators
 
-Many web sites use existing web frameworks and applications
-(blogs, forums, shops) and only change configuration and style. Which is fine.
-No one has to re-invent the wheel. But this software is complex. Complex
-software contains bugs. And if it not patched after a vulnerability gets
+Many web sites use existing web frameworks and applications (blogs, forums, shops) and only change configuration and style. Which is fine.
+No one has to re-invent the wheel. But this software is complex. Complex software contains bugs. And if it not patched after a vulnerability gets
 published the service or one of the plugins can be attacked.
 
-Finding these vulnerable sites is much easier with an exploit database like
-[exploit-db.com](https://www.exploit-db.com/google-hacking-database/).
+Finding these vulnerable sites is much easier with an exploit database like [exploit-db.com](https://www.exploit-db.com/google-hacking-database/).
 
 ## Defense
 
-This technology will help the attacker assess potential vulnerabilities
-(SQL injection, old software).
-A good defense is to keep your frameworks, web apps and plugins up to date.
-Maybe sometimes use Google dorks yourself on your own pages to identify vulnerabilities.
+This technology will help the attacker assess potential vulnerabilities (SQL injection, old software).
+A good defense is to keep your frameworks, web apps and plugins up to date. Maybe sometimes use Google dorks yourself on your own pages to identify vulnerabilities.
 
 ## Further reading
 

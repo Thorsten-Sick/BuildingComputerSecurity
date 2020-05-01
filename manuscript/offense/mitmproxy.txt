@@ -1,16 +1,10 @@
 # Mitmproxy {#chapter-mitmproxy}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Tester, Pen Tester
-
 ## Basics
 
-[Mitmproxy](https://mitmproxy.org/) is a python command line tool to intercept
-HTTP network traffic. It is even able to handle encrypted (TLS) situations by either doing a TLS-MITM (creating an own certificate) or using sslstrip.
+[Mitmproxy](https://mitmproxy.org/) is a python command line tool to intercept HTTP network traffic. It is even able to handle encrypted (TLS) situations by either doing a TLS-MITM (creating an own certificate) or using sslstrip.
 
-Depending on your control over the client and the verification by the
-client application one of those will fit our need.
+Depending on your control over the client and the verification by the client application one of those will fit our need.
 
 A very interesting feature is that you can write plugins in Python.
 
@@ -29,11 +23,9 @@ Set the proxy of the browser to the local host (where mitmproxy is running).
 
 Or use the user interface of the browser to set the proxy.
 
-The mitmproxy will now display the HTTP connections without blocking
-or modifying them.
+The mitmproxy will now display the HTTP connections without blocking or modifying them.
 
-There is a command line interface that can be started by entering ":".
-It has a tab-completion.
+There is a command line interface that can be started by entering ":". It has a tab-completion.
 For example ":console.view.eventlog" shows the mitmproxy event log
 
 A list of commands can be shown by pressing *C*.
@@ -73,15 +65,13 @@ To filter the full communication route it through a PC and run the mitmproxy the
 
 * mitmproxy is using sslstrip here. It is optional but many connections are SSL encrypted.
 
-This script is not perfect. For example I had to connect the victim PC first
-directly to the router to get DHCP setup and loop the monitoring device in later.
+This script is not perfect. For example I had to connect the victim PC first directly to the router to get DHCP setup and loop the monitoring device in later.
 
 Just to give you some workarounds.
 
 ## Intercepting
 
-Press *i* to enter an interception filter. This can be a url-component.
-Wildcards are also accepted.
+Press *i* to enter an interception filter. This can be a url-component. Wildcards are also accepted.
 
 Intercepted flows can be edited by pressing the *e* key in the detail view.
 You can then select which item to edit. The *Tab* key lets you switch.
@@ -119,9 +109,7 @@ Especially the files *request.py* and *response.py* are relevant.
 
 ## Certificates
 
-Many connections are TLS encrypted (=HTTPS). Finally. But if not done right
-one simple way of sniffing and manipulation is: The attacker just removes
-the encryption and hopes no one will notice the UI indicators in the browser.
+Many connections are TLS encrypted (=HTTPS). Finally. But if not done right one simple way of sniffing and manipulation is: The attacker just removes the encryption and hopes no one will notice the UI indicators in the browser.
 
 This can be done by using the sslstrip script:
 
@@ -149,8 +137,7 @@ For Ubuntu you will have to install it OS-wide:
     sudo cp mitmproxy-ca.crt /usr/share/ca-certificates/mitm
     sudo dpkg-reconfigure ca-certificates
 
-It will still depend on the application if to use an own certificate or
-trust the OS store. Especially for browsers that can differ.
+It will still depend on the application if to use an own certificate or trust the OS store. Especially for browsers that can differ.
 
 
 

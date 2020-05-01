@@ -2,27 +2,21 @@
 
 %% State: 80 % Coding
 
-Good code quality results in less bugs, more robust code and less security
-vulnerabilities. It is an essential foundation for a secure program.
+Good code quality results in less bugs, more robust code and less security vulnerabilities. It is an essential foundation for a secure program.
 
 ## Tactics
 
-During coding there are several tactics to improve code quality manually
-and by tools.
-The tools are getting better and smarter every month - so it is worth
-re-visiting the documentation every few months.
+During coding there are several tactics to improve code quality manually and by tools.
+The tools are getting better and smarter every month - so it is worth re-visiting the documentation every few months.
 
 But first we need a way to convince oeple to invest into code quality.
 Investment is mostly time.
 
 ## Not wasting money
 
-The earlier a bug is found the cheaper it is to fix it. Best would be before
-commit. Worst: After release and shipping. So put effort into finding them
-early and automatic.
+The earlier a bug is found the cheaper it is to fix it. Best would be before commit. Worst: After release and shipping. So put effort into finding them early and automatic.
 
-Also: Watch out for design errors. A broken design could force you to
-re-write tons of code.
+Also: Watch out for design errors. A broken design could force you to re-write tons of code.
 
 ## Coding practice
 
@@ -30,14 +24,12 @@ re-write tons of code.
 
 Have an experienced engineer (at least one) code review a beginner's code.
 Be a good teacher and help your padawan. Focus on security issues first.
-Start knit-picking coding style issues later. Everyone has a certain limit
-he can learn at a time. Teacher: prioritize and be gentle.
+Start knit-picking coding style issues later. Everyone has a certain limit he can learn at a time. Teacher: prioritize and be gentle.
 See yourself as "Jedi and Padawan".
 
 Every team as is good as the weakest programmer - if there are no code reviews.
 
-Pair programming: Depends on the personalities. It is hard to get into a
-flow doing pair programming. If some coders are not pair programming
+Pair programming: Depends on the personalities. It is hard to get into a flow doing pair programming. If some coders are not pair programming
 personalities, find alternatives for reviews.
 
 You can also automate the system of reviews by enforcing them before merge.
@@ -54,13 +46,10 @@ After that they should be added to the Coding Style document of the team.
 
 Other secure coding standards can be found here:
 
-
-
 ## Tools for code reviews
 
 Use tools for code reviews (details in "compiling"). Static and Dynamic code
-analysis can improve your code a lot. But do not trust them blindly. They will
-not find everything.
+analysis can improve your code a lot. But do not trust them blindly. They will not find everything.
 
 ## General
 
@@ -81,15 +70,12 @@ Segmenting programs on a system protects the system from being hacked.
 
 %% TODO: write more
 
-The linux way of dropping privileges. At program start the program can drop
-privileges it does not need. This does not interfere. But if ever shellcode is
-injected, this shellcode is restricted to the permissions in this contract.
+The linux way of dropping privileges. At program start the program can drop privileges it does not need. This does not interfere. But if ever shellcode is injected, this shellcode is restricted to the permissions in this contract.
 
 
 #### AppArmor
 
-Exernal restrictions on program permissions set by the administrator
-(or maintainer). This prevents hacked programs from mis-behaving.
+Exernal restrictions on program permissions set by the administrator (or maintainer). This prevents hacked programs from mis-behaving.
 
 It is very strong on Ubuntu.
 
@@ -97,8 +83,7 @@ It is very strong on Ubuntu.
 
 #### Reduce power of network tools
 
-If you have pre-installed network tools (wget, ftp, telnet) on your system
-and a hacker gets in, he can use those for lateral movement and to get his
+If you have pre-installed network tools (wget, ftp, telnet) on your system and a hacker gets in, he can use those for lateral movement and to get his
 tools onto your system.
 
 Depending on your setup it could be smart to reduce the computers those can access.

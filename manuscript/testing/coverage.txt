@@ -1,9 +1,5 @@
 # Code Coverage {#chapter-code-coverage}
 
-C> By: Thorsten Sick
-
-C> For: Tester
-
 Unit testing and Code Coverage are symbiotic. Code coverage gives you
 metrics which amount of the program code was called by the tests. And which
 code lines need more testing. It will also give you nice numbers to wave in

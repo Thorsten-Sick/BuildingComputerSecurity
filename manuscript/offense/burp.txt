@@ -2,8 +2,7 @@
 
 ## Basics
 
-Burp suite is a web vulnerability scanner - it checks web pages
-for vulnerabilities.
+Burp suite is a web vulnerability scanner - it checks web pages for vulnerabilities.
 
 [Burp suite](https://portswigger.net/burp/)
 

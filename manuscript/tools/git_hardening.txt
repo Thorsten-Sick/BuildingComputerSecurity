@@ -6,20 +6,16 @@ Hooks are simple scripts in a special folder that are executed when this event o
 
 These can be *pre-commit*, *post-checkout* or similar.
 
-In addition to the differentiation by event that triggers it there are two
-style of hooks:
+In addition to the differentiation by event that triggers it there are two style of hooks:
 
-**Local hooks** are client side and the developer maintains them to simplify
-their workflow.
+**Local hooks** are client side and the developer maintains them to simplify their workflow.
 
 **Server-side hooks** are run on the server. They can be run right before the push happens - and this way **enforce** a policy.
 
-When setting up a team process it is smart to search the web for "git-hooks"
-and use it wisely to improve everyone's workflow (local hooks) and centrally
+When setting up a team process it is smart to search the web for "git-hooks" and use it wisely to improve everyone's workflow (local hooks) and centrally
 enforce policy (server-side hooks).
 
-This way especially security relevant things can be cared for
-("does it compile without warnings ?" would be the simplest one).
+This way especially security relevant things can be cared for ("does it compile without warnings ?" would be the simplest one).
 
 Other ideas would be:
 
@@ -38,11 +34,9 @@ Other problems this will prevent are VCS specific issues like "Do no commit cred
 
 ## Do not commit credentials and secrets
 
-Credentials carry permissions and privileges. Like "signing a file" and
-"access to a server". You do not want those in a Git repository. Even if it is a private one. Sooner or later you will invite other people to contribute. And then those credentials are either forgotten and there as-files or in the git history.
+Credentials carry permissions and privileges. Like "signing a file" and "access to a server". You do not want those in a Git repository. Even if it is a private one. Sooner or later you will invite other people to contribute. And then those credentials are either forgotten and there as-files or in the git history.
 
-To prevent committing credentials there are special scanners. They look for
-file names or patterns in the source code that look like a private ssh key or something similar.
+To prevent committing credentials there are special scanners. They look for file names or patterns in the source code that look like a private ssh key or something similar.
 
 [Repo security scanner](https://github.com/UKHomeOffice/repo-security-scanner) scans for
 

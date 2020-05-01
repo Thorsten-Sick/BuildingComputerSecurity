@@ -1,28 +1,17 @@
 # Principles {#chapter-principles}
 
-C> By: Thorsten Sick
-
-C> For: Manager, Architects
-
-
 %% State: 70 % Principles
 
 %% TODO: Create visualisation for dependencies using [python graph](https://python-graph-gallery.com/) or [r graph gallery](https://www.r-graph-gallery.com/)
 
-There is a list of the most basic principles you can build security on.
-These principles are very abstract, but are the basics for building more specific tools.
-This is not a complete list.
+There is a list of the most basic principles you can build security on. These principles are very abstract, but are the basics for building more specific tools. This is not a complete list.
 
 ## Bolt-on-security vs security-by-design
 
-Detecting attacks is a typical bolt-on way of security.
-Anti-Virus, Network intrusion detection, behaviour detection, ...
-These kind of things are **bolt-on-security**. The other big security
-philosophy is **security-by-design**.
+Detecting attacks is a typical bolt-on way of security. Anti-Virus, Network intrusion detection, behaviour detection, ...
+These kind of things are **bolt-on-security**. The other big security philosophy is **security-by-design**.
 
-If you are responsible for building a system use **security-by-design**. In many
-cases you are not free to do it the perfect way - for example a manager needs an old
-Internet Explorer to use am esoteric web based application installed on his PC.
+If you are responsible for building a system use **security-by-design**. In many cases you are not free to do it the perfect way - for example a manager needs an old Internet Explorer to use am esoteric web based application installed on his PC.
 In this case **bolt-on-security** (filtering files and URLs) is a valid approach.
 
 Disadvantages of Bolt-on-security is: It adds complexity (file parsing, for example).
@@ -38,8 +27,7 @@ Two tactics with bolt-on-security:
 "internet noise" of attacks. This will reduce your important monitor-log reports.
 * Add it to the innermost perimeter to detect attacks that bypassed your protection.
 
-A whole part of this book covers [bolt-on security](#part-bolt-on).
-If your are stuck with a given design bolt-on will be a good way to go.
+A whole part of this book covers [bolt-on security](#part-bolt-on). If your are stuck with a given design bolt-on will be a good way to go.
 
 %% TODO Extend and fix this chapter
 
@@ -47,10 +35,8 @@ The next principles are part of the security-by-design philosophy
 
 ## Threat modelling
 
-Threat modelling is a process organized by the designer of the software but
-including a multi-skill team of people involved in the project.
-Goal is to identify potential threats to the developed tool as early as possible
-and to find fixes and mitigations.
+Threat modelling is a process organized by the designer of the software but including a multi-skill team of people involved in the project.
+Goal is to identify potential threats to the developed tool as early as possible and to find fixes and mitigations.
 
 It is not complex but can turn out to produce lots of documentation.
 
@@ -61,8 +47,7 @@ There are four basic steps that need to be done to model threats:
 * Rate severity
 * Define fixes and create priority to implement them
 
-For those steps there are many tools (methodologies/checklists) to guide
-your team through.
+For those steps there are many tools (methodologies/checklists) to guide your team through.
 
 Which one to pick will depend on mood, team, and especially your project.
 
@@ -79,8 +64,7 @@ There will be a specific chapter on threat modelling
 ## Reduce Attack Surface
 
 Attack surface is everything that can be reached from the outside.
-These are servers, interfaces, network connections. You can reduce this surface by
-asking yourself some simple questions:
+These are servers, interfaces, network connections. You can reduce this surface by asking yourself some simple questions:
 
 * Which features do you really need ?
     * Remove unnecessary programs and features
@@ -94,8 +78,7 @@ asking yourself some simple questions:
 
 ## Compartmentalisation / Segmentation
 
-Segment your system into small partitions. Define narrow communication channels.
-Maybe they can be one-way (data-diodes). Possible segments can be:
+Segment your system into small partitions. Define narrow communication channels. Maybe they can be one-way (data-diodes). Possible segments can be:
 
 * Multiple isolated VMs on a machine
 * Multiple isolated processes on an OS
@@ -110,10 +93,7 @@ Dropping privileges is a part of that.
 ## Principle of "Least privilege"
 
 [Reducing available privileges](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
-reduces the impact of a hacked process or account. This reduction can be done
-on account level (special web server accounts, for example) or on process
-level (where the process drops privileges during startup - as soon as it does
-not require them anymore).
+reduces the impact of a hacked process or account. This reduction can be done on account level (special web server accounts, for example) or on process level (where the process drops privileges during startup - as soon as it does not require them anymore).
 
 Dropping process privileges is possible on Linux. Not on Windows.
 
@@ -121,26 +101,21 @@ Dropping process privileges is possible on Linux. Not on Windows.
 
 ## Updates
 
-After a vendor created a patch it takes the bad guys a few hours to
-reverse engineer the patch and find the vulnerability which has just
-been patched. Within days there are attacks. Update everything ASAP.
+After a vendor created a patch it takes the bad guys a few hours to reverse engineer the patch and find the vulnerability which has just been patched. Within days there are attacks. Update everything ASAP.
 Especially if it is network connected.
 
 [More on updates](#chapter-updates)
 
 ## Flexibility
 
-Whatever you do: Be flexible. You did threat modelling during the design phase,
-you fixed all vulnerabilities you found. But there will be a hack.
+Whatever you do: Be flexible. You did threat modelling during the design phase, you fixed all vulnerabilities you found. But there will be a hack.
 
 Expect the attacker to find a trick against your tools in the following weeks.
-Have a plan ready to handle that situation. Expect the attacker
-to do something unexpected. Plan for flexibility.
+Have a plan ready to handle that situation. Expect the attacker to do something unexpected. Plan for flexibility.
 
 ## Do not make mistakes
 
-"Bitte immer alles richtig machen" in German. This is the core principle
-especially in Design and Coding. It kind of sounds obvious and boring.
+"Bitte immer alles richtig machen" in German. This is the core principle especially in Design and Coding. It kind of sounds obvious and boring.
 But there are ways to engineer fault-reduction with tools and processes.
 
 Those are for example:
@@ -153,28 +128,22 @@ Those are for example:
 ## De-centralisation
 
 De-centralise everything. Centralised components (servers) can be DDOS-ed.
-Will your IoT device still work when the server is down ? Which functionality
-is available in offline mode ?
+Will your IoT device still work when the server is down ? Which functionality is available in offline mode ?
 Could you add fallback servers to the plan ?
 Could the user override the server for a short time ?
 
 ## Fail gracefully
 
-Do you want your system to fail-close or fail-open ? What does the car's door lock
-do when there is a power outage ? Lock or Open ? Plan these failures and
-the consequences. How can these failures be triggered and by whom ?
+Do you want your system to fail-close or fail-open ? What does the car's door lock do when there is a power outage ? Lock or Open ? Plan these failures and the consequences. How can these failures be triggered and by whom ?
 
 ## Monitor / Incident Response
 
-Expect a hack to happen. But many hacked companies do not notice the breach -
-or do, hundreds of days later and by accident (server misbehaves or similar).
+Expect a hack to happen. But many hacked companies do not notice the breach - or do, hundreds of days later and by accident (server misbehaves or similar).
 
-You do not want to be one of those. You could monitor the devices you own or
-the devices you sold to customers (IoT, for example) for security incidents.
+You do not want to be one of those. You could monitor the devices you own or the devices you sold to customers (IoT, for example) for security incidents.
 For "monitoring sold devices" scenario: respect privacy !
 
-There is SIEM (Security Information and Event Management) software for that.
-Connect your technology to a SIEM.
+There is SIEM (Security Information and Event Management) software for that. Connect your technology to a SIEM.
 
 This enables you to respond ("incident response") when something happens.
 This has several benefits:
@@ -192,24 +161,18 @@ This has several benefits:
 
 ## Educate users
 
-Users want the option to know what their technology is doing. Having two
-layers (simple and detailed) of information will very likely be embraced
+Users want the option to know what their technology is doing. Having two layers (simple and detailed) of information will very likely be embraced
 [^note2].
 
-Your security plan should not depend on users reading, understanding and
-acting upon this information. But having smart users will add new "sensors"
-for unexpected attacks to your environment. Especially attacks containing
-social engineering. Those users would need a fast channel to contact the
-person in charge for reports on attacks.
+Your security plan should not depend on users reading, understanding and acting upon this information. But having smart users will add new "sensors" for unexpected attacks to your environment. Especially attacks containing
+social engineering. Those users would need a fast channel to contact the person in charge for reports on attacks.
 
 %% TODO: Get C.S. to write a chapter
 
 ## Defense in Depth
 
-As protection mechanism will fail - the attackers will find holes - it is better
-to layer defenses.
-To protect an asset it is essential to layer **different kinds** of defenses
-to make attacking more complicated to request different skills.
+As protection mechanism will fail - the attackers will find holes - it is better to layer defenses.
+To protect an asset it is essential to layer **different kinds** of defenses to make attacking more complicated to request different skills.
 
 As for a castle example:
 
@@ -226,60 +189,42 @@ To reach their goal alive.
 
 This will narrow down the number of successful survivors/attackers quite well.
 
-The same is true for your computer system. Combine different technologies to
-protect an asset. Even if you think the one specific layer you just designed
+The same is true for your computer system. Combine different technologies to protect an asset. Even if you think the one specific layer you just designed
 offers 100 % protection.
 
 ## Filter at the endpoint
 
-Thanks to efforts by the EFF, Google and many more the connections between client
-and server are now end-to-end encrypted (HTTPS). Which is an incredible
+Thanks to efforts by the EFF, Google and many more the connections between client and server are now end-to-end encrypted (HTTPS). Which is an incredible
 security improvement.
-Many bolt-on security solutions offer a feature to scan the content of those
-connections with MITM proxies. This is only possible if you sabotage the alert
-system at the endpoints. Because they detect the *attack* a MITM is.
-Systems having a sabotaged alert have trouble detecting malicious attacks.
-Scanning as MITM is a very bad idea.
+Many bolt-on security solutions offer a feature to scan the content of those connections with MITM proxies. This is only possible if you sabotage the alert system at the endpoints. Because they detect the *attack* a MITM is.
+Systems having a sabotaged alert have trouble detecting malicious attacks. Scanning as MITM is a very bad idea.
 
-The solution is: Filter at the endpoints. In the browser, When files are
-written to the endpoint system, ...
+The solution is: Filter at the endpoints. In the browser, When files are written to the endpoint system, ...
 
-The user (or the admin - for larger installations) should also have full control
-about what is filtered.
+The user (or the admin - for larger installations) should also have full control about what is filtered.
 
 %% TODO Perimeter defense vs client defense (Avocado/Coconut?)
 
 ## Tripwires
 
-Add tripwires to your design. One example is to fill your database with some
-fake customers with made up mail addresses. As soon as those mail addresses
-start receiving mails (SPAM), you know the db has been compromised.
+Add tripwires to your design. One example is to fill your database with some fake customers with made up mail addresses. As soon as those mail addresses start receiving mails (SPAM), you know the db has been compromised.
 
-The same for fake "password.txt" files in your system. They get accessed ? You got
-hacked.
+The same for fake "password.txt" files in your system. They get accessed ? You got hacked.
 
-Tripwires are useless if you do not have a monitoring system and a plan how to
-react.
+Tripwires are useless if you do not have a monitoring system and a plan how to react.
 
 ## Slow down the attacker
 
-Bank safes have a timed lock. Only after a certain time they open. Thieves will
-be slowed down. With an alarm system and a police unit to respond this is powerful.
-Without those to additional ingredients it is useless.
-Maybe you can build something similar into your systems. Slow down, alerts
-and response.
+Bank safes have a timed lock. Only after a certain time they open. Thieves will be slowed down. With an alarm system and a police unit to respond this is powerful.
+Without those to additional ingredients it is useless. Maybe you can build something similar into your systems. Slow down, alerts and response.
 
 ## Security by Obscurity
 
-A bad idea. There are disassembler tools that help to reverse engineer
-executables. If any security depends on secrecy
-it will break as soon as an experienced person attacks it. You are an
-experienced engineer but not an experienced attacker. The guys you
-face have the skill set switched: experienced attacker, OK-ish engineer.
+A bad idea. There are disassembler tools that help to reverse engineer executables. If any security depends on secrecy it will break as soon as an experienced person attacks it. You are an
+experienced engineer but not an experienced attacker. The guys you face have the skill set switched: experienced attacker, OK-ish engineer.
 This is why they became attackers.
 
-Long story short: if your defense depends on "as long as the attacker does not know X"
-it already failed.
+Long story short: if your defense depends on "as long as the attacker does not know X" it already failed.
 
 [^note2]: Depends on your users
 
@@ -292,48 +237,36 @@ And just in case you think these disassembler tools are out of some fairy tales:
 
 ## Security Theater
 
-A big show towards the customer faking security features. Most often has an intended
-negative effect on usability - you want it to be noticed. It is also not necessarily cheap.
+A big show towards the customer faking security features. Most often has an intended negative effect on usability - you want it to be noticed. It is also not necessarily cheap.
 
 One typical example is the water bottle ban at airports.
 
-Please double check if what you are implementing is just smoke and mirrors or
-some proper solution. And go for the proper solution.
+Please double check if what you are implementing is just smoke and mirrors or some proper solution. And go for the proper solution.
 
 ## Hollywood threats
 
-Also on the negative side: Thanks to Hollywood movies everyone seems to know
-how an attack looks like - with lots of show effects and world shattering scale.
-When discussing security with security-beginners there will be a tendency for
-the discussion towards those Hollywood threats. Explain to everyone this concept.
-Have some real-world hacker stories ready and try to steer the discussion
-towards a productive region. Even if it is less exciting.
+Also on the negative side: Thanks to Hollywood movies everyone seems to know how an attack looks like - with lots of show effects and world shattering scale.
+When discussing security with security-beginners there will be a tendency for the discussion towards those Hollywood threats. Explain to everyone this concept.
+Have some real-world hacker stories ready and try to steer the discussion towards a productive region. Even if it is less exciting.
 
 ## Further reading
 
 ### Ghost in The Wires
 
-Ghost in The Wires by Kevin Mitnick. Life story from Kevin Mitnick. Famous
-hacker and pen tester. Many described exploits are on the social engineering
-level. Simple to read. Most of the technology described here does not exist
-anymore.
+Ghost in The Wires by Kevin Mitnick. Life story from Kevin Mitnick. Famous hacker and pen tester. Many described exploits are on the social engineering level. Simple to read. Most of the technology described here does not exist anymore.
 
 %% TODO add safari link
 
 ### Beyond Fear
 
-Beyond Fear by Bruce Schneier is a book where a computer security guy analyses
-common physical world security practices like airport security. Teaches thinking
-and critical thinking about security and security promises. Can be read by
+Beyond Fear by Bruce Schneier is a book where a computer security guy analyses common physical world security practices like airport security. Teaches thinking and critical thinking about security and security promises. Can be read by
 non-technical people.
 
 %% TODO add safari link
 
 ### Future Crimes
 
-Future Crimes by Marc Goodman is a book covering the experience of a cyber crime
-police officer. Every chapter is a noteworthy and often entertaining example of
-a real crime. Entertaining and does not require technical knowledge. Good for
+Future Crimes by Marc Goodman is a book covering the experience of a cyber crime police officer. Every chapter is a noteworthy and often entertaining example of a real crime. Entertaining and does not require technical knowledge. Good for
 training critical thinking and security thinking.
 
 %% TODO add safari link

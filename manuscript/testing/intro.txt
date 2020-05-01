@@ -1,13 +1,11 @@
 # Intro {#chapter-testing-intro}
 
-Testing is the last line of defense before your product is shipped to the
-customers. Having the ability to find the vulnerabilities here has serious benefits:
+Testing is the last line of defense before your product is shipped to the customers. Having the ability to find the vulnerabilities here has serious benefits:
 
 * Reduces emergency updates
 * Lets everyone sleep better
 * Creates a more relaxed development cycle
 
 Testing for vulnerabilities is part automation (=engineering) and part hacking.
-As it is using existing tools and not looking for new ways to hack systems it
-does not require 1337 hacking skillz but still kicks the door open to the
+As it is using existing tools and not looking for new ways to hack systems it does not require 1337 hacking skillz but still kicks the door open to the
 interesting world of hacking.

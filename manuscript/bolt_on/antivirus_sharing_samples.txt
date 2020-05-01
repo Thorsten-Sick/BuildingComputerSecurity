@@ -1,43 +1,30 @@
 # Sharing malware samples {#chapter-sharing-samples}
 
-C> By: Thorsten Sick
-
-C> For: Architects
-
 This chapter is about contacting AV vendors and sending them malware you found.
 Also about fixing false positives with the help of those vendors.
 
-Some software companies seem to have bad karma and the software they release
-has a high likely hood of being flagged as malware  - despite being harmless.
-This can be caused by uncommon build tools and post-build processing of the
-software. For those unlucky software teams: Get into close contact with the
+Some software companies seem to have bad karma and the software they release has a high likely hood of being flagged as malware  - despite being harmless.
+This can be caused by uncommon build tools and post-build processing of the software. For those unlucky software teams: Get into close contact with the
 AV companies and fix this problem together. More about that in this chapter.
 
 **AV companies hate causing false positives**
 
 By reporting found FPs you help yourself and them.
 
-They are also interested in the newest malware. Are you running a server that
-turned out to be a malware magnet ? Contact your AV vendor.
+They are also interested in the newest malware. Are you running a server that turned out to be a malware magnet ? Contact your AV vendor.
 
-The basic data the vendors need is the files. But they will also love to have
-some background information. Maybe they already have the sample in their large
-database. But it did not get a proper name or the proper priority because it
-was just "one in a million". So the detection name will just be a number
-or "Agent-something-number" kind of name.
+The basic data the vendors need is the files. But they will also love to have some background information. Maybe they already have the sample in their large database. But it did not get a proper name or the proper priority because it
+was just "one in a million". So the detection name will just be a number or "Agent-something-number" kind of name.
 
-But if you are an NGO or run essential government infrastructure, that could
-increase the priority of the malware a lot - tell the AV vendor that!
+But if you are an NGO or run essential government infrastructure, that could increase the priority of the malware a lot - tell the AV vendor that!
 
-In addition to the file, there is more information that will help the virus
-labs to process the data.
+In addition to the file, there is more information that will help the virus labs to process the data.
 
 You do not have to submit all those info, the list is more an inspiration.
 
 **Storing first**
 
-If you have a suspicious file you want to share you should store it properly
- on your computer first.
+If you have a suspicious file you want to share you should store it properly on your computer first.
 
 Some things to know:
 * Stored files are no problem. Executed are
@@ -81,14 +68,11 @@ in your report will help the AV labs to scan their database for info:
 
 ## The reason why your software is detected as a false positive (all the time)
 
-In the AV company's virus lab unknown software is classified. Basically into
-the categories "cleanstuff" (harmless) and "malware".
+In the AV company's virus lab unknown software is classified. Basically into the categories "cleanstuff" (harmless) and "malware".
 
-There are lots of classifiers in virus labs. And normally unknown software
-will have to face all of them.
+There are lots of classifiers in virus labs. And normally unknown software will have to face all of them.
 
-**Analysis sandboxes**: Virtual Machines that observe the software
-running and modifying the system.
+**Analysis sandboxes**: Virtual Machines that observe the software running and modifying the system.
 
 **Structural analysis**: Checks if it is compiled using an exotic compiler, modified from assembler, ...
 
@@ -102,17 +86,14 @@ sample is closer to a "cleanstuff" or the "malware" group.
 
 **Humans**: Analysing unknown software that is in the dark grey area.
 
-Normally a virus lab can get about 4 new malware samples per second. And even
-more clean or broken files in addition. Automatic classification is king.
+Normally a virus lab can get about 4 new malware samples per second. And even more clean or broken files in addition. Automatic classification is king.
 
-If you contact the virus lab they could give you a hint what triggered their
-machines. And how to avoid it.
+If you contact the virus lab they could give you a hint what triggered their machines. And how to avoid it.
 
 ## Where to submit to AV companies
 
 I just googled "avast submit sample" and got directly sent to their page for
-submission: [Avast submission page](https://www.avast.com/report-malicious-file.php). You should submit
-to the AV you are using and maybe to 3 more (for good measure).
+submission: [Avast submission page](https://www.avast.com/report-malicious-file.php). You should submit to the AV you are using and maybe to 3 more (for good measure).
 
 I'll just drop some names here and you can start searching yourself:
 
@@ -120,27 +101,23 @@ Avast, Kaspersky, Eset, Avira, Microsoft Windows Defender, F-Secure, Bitdefender
 
 ## Submission by Mail
 
-Sometimes AV people send mails with attached malware around (from support people
-to the lab, for example). The tradition is:
+Sometimes AV people send mails with attached malware around (from support people to the lab, for example). The tradition is:
 The malware sample is zipped. And password protected. The password is "infected".
 This is to prevent anyone from accidentally double click the wrong file.
 
 No, it is not top-secure. This is not the goal. It is to prevent accidents.
 
-When dealing the whole day with malware you learn one thing: Double clicks happen.
-Do not ask for detail. Renaming a *.exe into a *.vir protects you.
+When dealing the whole day with malware you learn one thing: Double clicks happen. Do not ask for detail. Renaming a *.exe into a *.vir protects you.
 
 ## Security without borders
 
-One of the NGOs handling potential cyber attacks on endangered people is
-[Security Without Borders](https://www.securitywithoutborders.org/)
+One of the NGOs handling potential cyber attacks on endangered people is [Security Without Borders](https://www.securitywithoutborders.org/)
 
 If you are in special danger contact them as well.
 
 ## Citizen Lab
 
-Also relevant for high profile attacks on NGOs is the Citizen Lab. They did
-some interesting and relevant research the last few years.
+Also relevant for high profile attacks on NGOs is the Citizen Lab. They did some interesting and relevant research the last few years.
 
 [Citizenlab](https://citizenlab.ca/)
 
@@ -148,21 +125,17 @@ If you are in special danger contact them as well.
 
 ## CCC
 
-The German hackers - organized in the CCC club - already got some fame for
-finding and analysing the German Government-Trojan. If you have a sample of a
+The German hackers - organized in the CCC club - already got some fame for finding and analysing the German Government-Trojan. If you have a sample of a
 malware that is state sponsored it may be worth the effort to contact them.
 
 [CCC](https://www.ccc.de/)
 
 ## Sucker punch
 
-The AV companies are on the side of their customers and fight online crime. With
-the Kaspersky accusations and more and more state sponsored malware, trust in the
-AV companies is eroding. IMHO the big AV companies practice fair play -
+The AV companies are on the side of their customers and fight online crime. With the Kaspersky accusations and more and more state sponsored malware, trust in the AV companies is eroding. IMHO the big AV companies practice fair play -
 including Kaspersky. But I can understand that non-insiders do not trust them.
 
-If you should not trust the AV guys (because your malware is for example
-Russian state malware and you do not trust Kaspersky), you could do the following:
+If you should not trust the AV guys (because your malware is for example Russian state malware and you do not trust Kaspersky), you could do the following:
 
 * Send the malware to all AV vendors with details why you think it is state sponsored
 * Also send the same samples and description to the big testers
@@ -170,8 +143,7 @@ Russian state malware and you do not trust Kaspersky), you could do the followin
     * [AV-Comparatives](https://www.av-comparatives.org/)
 
 They could include it in the next test. And pressure the AV companies to act.
-AFAIK this has never been done before and I do not know it it will work.
-But as we live in desperate times...I hate peer pressure. But it gets the job done
+AFAIK this has never been done before and I do not know it it will work. But as we live in desperate times...I hate peer pressure. But it gets the job done
 
 
 %% TODO: [FP reduction](https://www.techrepublic.com/article/microsoft-5-tips-for-developers-to-reduce-malware-false-positives/#ftag=RSS56d97e7)

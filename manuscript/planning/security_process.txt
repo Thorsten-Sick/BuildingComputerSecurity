@@ -1,9 +1,5 @@
 # Security process {#chapter-security-process}
 
-C> By: Thorsten Sick
-
-C> For: Manager, Architects
-
 ## Basics
 
 A company needs internal processes to handle security incidents. Incidents will happen. And if everyone knows how to handle those emergencies and had enough fire-drills, handling the incidents will be much smoother than without.
@@ -57,8 +53,7 @@ This time frame can be shortened if malicious actors find it in parallel and abu
 If you can over-achieve from day one and release in 45 days: Do it !
 
 Another thing: Some people think it smart do sue the reporter and never fix the vulnerability. These companies will never again receive responsible
-disclosures from anyone. From this time on they will find their vulnerabilities leaked on pastebin. In a
-non-responsible way. Press pressure and the police will then make them fix their vulnerabilities as fast as possible.
+disclosures from anyone. From this time on they will find their vulnerabilities leaked on pastebin. In a non-responsible way. Press pressure and the police will then make them fix their vulnerabilities as fast as possible.
 
 ## The three steps
 
@@ -91,8 +86,7 @@ Asking for vulnerabilities - and receiving thousands of them - without having in
 Traditional you will need a *security@yourcompany.com* mail address. This is
 published on your homepage (and somewhere in your application) together with directions how to send vulnerability reports.
 
-There should always be someone monitoring the mail account and forwarding the mails to the proper product manager. The whole process from *receiving a mail* to *having a properly prioritised bug report*
-should be as fast as possible. Following the responsible disclosure standard you have 90 days to the point where you release a patch to all your customers.
+There should always be someone monitoring the mail account and forwarding the mails to the proper product manager. The whole process from *receiving a mail* to *having a properly prioritised bug report* should be as fast as possible. Following the responsible disclosure standard you have 90 days to the point where you release a patch to all your customers.
 Losing days to holidays and broken internal communication causes trouble that could have been avoided.
 
 You will get bonus points for publishing a PGP key for that mail address on your homepage.
@@ -124,8 +118,7 @@ Code reviews are a question of culture and habit. It can be hard to get the team
 
 Establish a good relationship with your PR department. There will be an incident. And in that case you will want a short route to someone who can
 communicate the situation to the public, what the workaround is, how large the impact is, how you want to fix it, ...
-In case of an incident, the vulnerability was abused by an attacker. But it is important to move on and show skills in disaster management. This will get
-you some of the respect points back that you just lost. And for that you need to stay in close contact with your users.
+In case of an incident, the vulnerability was abused by an attacker. But it is important to move on and show skills in disaster management. This will get you some of the respect points back that you just lost. And for that you need to stay in close contact with your users.
 
 ### Internal pen tests/code reviews
 
@@ -142,8 +135,7 @@ Then your team can start fixing them.
 ### Example: Mozilla
 
 Mozilla is the Open Source organisation behind Firefox and other projects. They have additional challenges: Their bug tracker is open. And they have
-lots of external coders (Open Source and ones working for other companies by contributing to Mozilla source). This is the reason why they had to achieve
-some things that you will very likely not have to manage.
+lots of external coders (Open Source and ones working for other companies by contributing to Mozilla source). This is the reason why they had to achieve some things that you will very likely not have to manage.
 
 [https://www.mozilla.org/en-US/security/](https://www.mozilla.org/en-US/security/)
 

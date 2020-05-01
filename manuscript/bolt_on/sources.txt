@@ -1,14 +1,9 @@
 # Malware Sources  {#chapter-malware-sources}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers
-
 ## Sources for IOCs
 
 There are many resources online for malware, malicious URLs, other IOCs.
-Some of them have a verification system - which results in good quality
-with low FPs.
+Some of them have a verification system - which results in good quality with low FPs.
 
 Some are real-time. Some others only contain old software.
 

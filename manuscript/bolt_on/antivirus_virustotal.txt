@@ -1,17 +1,10 @@
 # VirusTotal  {#chapter-virustotal}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers
-
-VirusTotal is an online service that scans uploaded files with
-multiple AV solutions. Currently it is owned by Google.
+VirusTotal is an online service that scans uploaded files with multiple AV solutions. Currently it is owned by Google.
 
 [VirusTotal](https://www.virustotal.com/)
 
-Using it is kind of tricky. File upload is simple enough, but
-reading the results and properly interpreting them requires some
-extra knowledge.
+Using it is kind of tricky. File upload is simple enough, but reading the results and properly interpreting them requires some extra knowledge.
 
 1. Scanners are not necessarily up-to-date
 2. Some scanners in there are small, unknown, or have a very specific target
@@ -28,10 +21,8 @@ Now for specific use cases:
 ## DIY AV testing using VirusTotal: Does not work
 
 Doing your own AV test using VirusTotal will not give you proper results.
-Some AVs will be under-performing because their coolest feature
-(for example: behaviour detection) will not work on Google's servers. Other AV solutions
-will not necessarily be up-to-date. And another group will target only very
-specific malware.
+Some AVs will be under-performing because their coolest feature (for example: behaviour detection) will not work on Google's servers. Other AV solutions
+will not necessarily be up-to-date. And another group will target only very specific malware.
 
 AV testing is hard.
 
@@ -39,20 +30,14 @@ And basing your results on VirusTotal will not work.
 
 ## Getting a feeling for a file
 
-If you upload a file or URL it will be scanned by multiple scanners and you
-will get the results. You should check for the scanners with detection on the file first.
+If you upload a file or URL it will be scanned by multiple scanners and you will get the results. You should check for the scanners with detection on the file first.
 Are there any with some reputation ? If yes this is a good sign for "this could really be malicious".
-Has this file been uploaded already some days ago ? If there is detection and the labs
-have this file already for some time you can assume it has been properly analysed. And the detection is no false positive.
+Has this file been uploaded already some days ago ? If there is detection and the labs have this file already for some time you can assume it has been properly analysed. And the detection is no false positive.
 
-Maybe, if you have some time (days): Re-upload your file in a few days again and
-check if the detection did change.
-VirusTotal is sharing the samples with the AV vendors. And AV vendors are very
-motivated to prevent false detections (*false positives*). So if they have this
-file already for some days and it is still detected, it is not a FP.
+Maybe, if you have some time (days): Re-upload your file in a few days again and check if the detection did change.
+VirusTotal is sharing the samples with the AV vendors. And AV vendors are very motivated to prevent false detections (*false positives*). So if they have this file already for some days and it is still detected, it is not a FP.
 
-Of course: You should wait those days only if you have the potentially malicious
-file locked away in your local quarantine.
+Of course: You should wait those days only if you have the potentially malicious file locked away in your local quarantine.
 
 ## Submitting samples
 
@@ -64,11 +49,9 @@ See also [sharing samples](#chapter-sharing-samples).
 
 ## Not to do: Uploading APT samples
 
-If you have a suspicion that the malware sample was a targeted attack (you are
-working for a NGO, journalist, blogger in a regime or admin for a big company)
+If you have a suspicion that the malware sample was a targeted attack (you are working for a NGO, journalist, blogger in a regime or admin for a big company)
 it could be wise **not** to upload it to VirusTotal.
-You will give the attacker the information that you detected the attack. If you
-detected it and blocked it, you could want to play for time. Prepare for the
+You will give the attacker the information that you detected the attack. If you detected it and blocked it, you could want to play for time. Prepare for the
 next attack. In this case: Do not upload it to VirusTotal.
 
 But this is a very special case.

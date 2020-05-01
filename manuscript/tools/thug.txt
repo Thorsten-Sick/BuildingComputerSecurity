@@ -1,9 +1,5 @@
 # Thug {#chapter-thug}
 
-C> By: Thorsten Sick
-
-C> For: Malware Analysts
-
 ## Basics
 
 [Thug](https://github.com/buffer/thug) is a active low-interactive honey client to check web pages for exploits.

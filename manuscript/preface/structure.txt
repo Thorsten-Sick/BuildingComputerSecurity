@@ -1,29 +1,21 @@
 # Structure of this book {#chapter-structure}
 
-This book is meant to be read twice. First by cherry picking interesting
-topics and a second time as toolbox when implementing a feature.
+This book is meant to be read twice. First by cherry picking interesting topics and a second time as toolbox when implementing a feature.
 
-For this reason the book is split. The first few chapters offer an introduction
-to the security landscape. The second part contains chapters helping to
-solve specific problems.
+For this reason the book is split. The first few chapters offer an introduction to the security landscape. The second part contains chapters helping to solve specific problems.
 
-Do not feel bad if you directly skip to something interesting. Or to a chapter
-that is currently relevant for your project.
+Do not feel bad if you directly skip to something interesting. Or to a chapter that is currently relevant for your project.
 
 ## Project phases and audience
 
-A project has different phases. Depending on your institution different
-people could be responsible for each phase. Everyone can contribute to security.
+A project has different phases. Depending on your institution different people could be responsible for each phase. Everyone can contribute to security.
 And security will break at the weakest link.
 
 %% Add Software engineering stages. Also to the chapters
 %% Management, Requirement gathering, High-level design, low-level design, development, testing, deployment, metrics, maintenance
 %% Connect to reference "Beginning Software Engineering"
 
-If possible I will put the responsible job description into the *Audience*
-block at the beginning of each chapter.
-But as the boundaries in your company between the responsibilities can be
-different: it is a suggestion. Stages in development are:
+Stages in development are:
 
 * Management
 * Architecture/Design/Project Management

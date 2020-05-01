@@ -1,7 +1,5 @@
 # Censorship {#chapter-censorship}
 
-C> By: Thorsten Sick
-
 The original internet was planned with lots of resilience. Even if parts of the internet have issues, the rest will route around it.
 
 Centralisation has added dependencies on a few companies. This results in accidental outages or planned censorship.
@@ -74,8 +72,7 @@ in person and confirm their identity by scanning a QR code. Intuitive and secure
 
 #### Telegram
 
-I am not using Telegram. It has several security issues. But on the other hand: Many people are already using it and it "survived" several censorship
-attempts already.
+I am not using Telegram. It has several security issues. But on the other hand: Many people are already using it and it "survived" several censorship attempts already.
 
 Use it but be aware: It is less secure to spying attempts than the other messengers listed here. But the widespread adoption has its own benefits.
 

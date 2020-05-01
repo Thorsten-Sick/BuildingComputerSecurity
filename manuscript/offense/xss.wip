@@ -6,18 +6,17 @@ The attacker can enter some input into the web page. This input will be later di
 
 By setting this input to something that is valid html/javascript the attacker can then execute commands in the victim's browser.
 
-One goal could be to extract the cookies. The JS command
-*document.cookie* gets the local cookies (or writes them). The attacker will later send those cookies to an own server and collect them that way.
+One goal could be to extract the cookies. The JS command *document.cookie* gets the local cookies (or writes them). The attacker will later send those cookies to an own server and collect them that way.
 
 ## Types of XSS
 
 ### Persistent XSS (aka Stored)
 
-Where the attacker can write to a persistent database. When the victim visits, parts of the page are based on this DB.
+Where the attacker can write to a persistent database. When the victim visits the page, parts of the page are based on this DB. If this is not escaped before being sent to the victim, it will execute in this context.
 
 ### Non-Persistent XSS (aka Reflected)
 
-The attacker can use the GET parameter in a URL. A malicious url with the malicious parameter is generated and the user is tricked into clicking it.
+The attacker can use the GET parameter in a URL. A malicious url with the malicious parameter is generated and the user is tricked into clicking it. The user visits the vulnerable page. This will render parts of the page by displaying the GET-Parameter-As-Script and it will execute in page context.
 
 ## Protection
 

@@ -2,23 +2,19 @@
 
 ## Goals
 
-Your next project will be **more secure** than your last project.
-And this will be almost hassle-free. This is the mission of this book.
+Your next project will be **more secure** than your last project. And this will be almost hassle-free. This is the mission of this book.
 
 This is why I wrote it.
 
-[As an experienced engineer, software developer and security guy](#chapter-the-author) I want
-to help you getting started with security features in your projects.
+[As an experienced engineer, software developer and security guy](#chapter-the-author) I want to help you getting started with security features in your projects.
 
-My observation is that there are many specific books for security topics. But
-almost no "getting started" books.
+My observation is that there are many specific books for security topics. But almost no "getting started" books.
 
 This is the itch this book wants to scratch.
 
 ## Release early, release often
 
-One of the reasons I dare to write a book is leanpub's feature to release
-*early* and *often*. That way I can see progress and get feedback.
+One of the reasons I dare to write a book is leanpub's feature to release *early* and *often*. That way I can see progress and get feedback.
 
 Please visit the [forum](https://community.leanpub.com/c/buildingcompute) and
 help me improve the book. Or contact me:
@@ -26,8 +22,7 @@ help me improve the book. Or contact me:
 * On Twitter: @ThorstenSick
 * On Mastodon: @thorsi@chaos.social
 
-As I have been spending lots of time with security focused engineers, the most
-important things I want to learn first from you:
+As I have been spending lots of time with security focused engineers, the most important things I want to learn first from you:
 
 * What causes trouble ?
 * What kind of technology is currently introduced in normal engineering ?
@@ -39,8 +34,7 @@ Boiling down to: What do you need from this book ?
 ## 80/20 or Pareto Principle
 
 Following the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle)
-I will focus on finding the *important* 80 percent of security tips first and
-later filling in the missing 20 percent.
+I will focus on finding the *important* 80 percent of security tips first and later filling in the missing 20 percent.
 
 This will result in:
 
@@ -52,12 +46,10 @@ I also feel like you expect a book containing lots of good tricks instead of poe
 
 ## Form follows function
 
-With every iteration of the book I will tune the optics, improve the layout and
-maybe add images.
+With every iteration of the book I will tune the optics, improve the layout and maybe add images.
 
 But adding new chapters is more important.
 
 ## All this said...
 
-Adding security features to a project can be fun and quite rewarding.
-Cherry-pick ideas from this book and get started.
+Adding security features to a project can be fun and quite rewarding. Cherry-pick ideas from this book and get started.

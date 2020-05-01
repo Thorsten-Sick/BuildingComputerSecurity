@@ -1,19 +1,13 @@
 # Defensive programming {#chapter-defensive-programming}
 
-C> By: Thorsten Sick
-
-C> For: Developers
-
 %% TODO: [CII best practice](https://linux-audit.com/secure-software-development-cii-best-practices/)
 
 ## Short abstract
 
 Defensive programming is coding while expecting your program to be actively attacked.
 It needs some getting used to, but in the end debugging defensive code is much
-simpler than debugging normal code. This positive side effect is caused by
-stricter error handling.
-Errors will cause instant program termination and stack traces (thanks to
-[asserts](#chapter-asserts) and better error handling in unlikely error conditions).
+simpler than debugging normal code. This positive side effect is caused by stricter error handling.
+Errors will cause instant program termination and stack traces (thanks to [asserts](#chapter-asserts) and better error handling in unlikely error conditions).
 
 ## TODO
 
@@ -45,14 +39,10 @@ basic principles will stay the same.
 
 ### Focus on vulnerable code first
 
-You want to especially harden parts in code that use external resources
-(memory, files, ...) and process external data (user input, files content,
-network packages ). Also keep an eye on external code being used (from 3rd party
-libs, from the other team's code, ...)
+You want to especially harden parts in code that use external resources (memory, files, ...) and process external data (user input, files content,
+network packages ). Also keep an eye on external code being used (from 3rd party libs, from the other team's code, ...)
 
-You should expect every input to be at least *accidentally* wrong. In a malware
-attack situation you can even expect the input to be handcrafted to cause as
-much damage as possible (*remote code execution* would be one possible goal of an attacker).
+You should expect every input to be at least *accidentally* wrong. In a malware attack situation you can even expect the input to be handcrafted to cause as much damage as possible (*remote code execution* would be one possible goal of an attacker).
 
 ### Reduce complexity
 
@@ -63,10 +53,8 @@ Complexity is cfreated by bad design or bad code. And complexity causes all kind
 * Development slows down after a certain program size
 * It even make certain sizes of projects impossible to achieve
 
-Ways to manage complexity is *object oriented* design and code. This breaks
-big tasks down into discrete objects.
-So object orientation is a tool to achieve *software components*. If you can
-achieve splitting the project into components by other ways: Great.
+Ways to manage complexity is *object oriented* design and code. This breaks big tasks down into discrete objects.
+So object orientation is a tool to achieve *software components*. If you can achieve splitting the project into components by other ways: Great.
 
 They must:
 
@@ -79,8 +67,7 @@ They must:
 * Reduce global variables
 * Reduce parameters to functions !
 
-Best practice is to create a collection of modules and components to be used
-without modification in several projects.
+Best practice is to create a collection of modules and components to be used without modification in several projects.
 
 That way you will get a good ROI and proof that the components are generic and well designed.
 
@@ -143,15 +130,11 @@ with **strncpy** and **strnprintf** right now. Those variants respect the target
 buffer size. Benefits: You will kill a certain class of bugs that are very
 hard to debug because they only happen on a certain input.
 
-Even better than **strncpy** is **strlcpy** and **strlcat** (which guarantees null termination as well
-as proper size handling). If available, use that.
+Even better than **strncpy** is **strlcpy** and **strlcat** (which guarantees null termination as well as proper size handling). If available, use that.
 
 ### Use external libraries
 
-If you (or your company) solves the same problem in lots of projects, either
-use existing libraries or create your own ones. The behaviour of them should be
-verified and stress tested. That is a very efficient way of getting a
-problem solved with good code quality .
+If you (or your company) solves the same problem in lots of projects, either use existing libraries or create your own ones. The behaviour of them should be verified and stress tested. That is a very efficient way of getting a problem solved with good code quality .
 
 If you are using external libraries:
 
@@ -163,8 +146,7 @@ If you are using external libraries:
 * Wrap the external libraries in you own code.
 * Be ready to update a library in all your projects as soon as a bug is found
 
-If you create your own libraries, maybe release them as open source. To get more
-users to "test" your libraries.
+If you create your own libraries, maybe release them as open source. To get more users to "test" your libraries.
 
 This or establish this library in your company to get more valuable feedback.
 
@@ -184,8 +166,7 @@ If the library has a bug that is not fixed you can filter the data to the lib on
 
 And last - not least:
 
-As an exit strategy you could even replace the external library and use a
-similar one - and your abstraction layer hides that from the application code.
+As an exit strategy you could even replace the external library and use a similar one - and your abstraction layer hides that from the application code.
 
 %% TODO: Expect modifications in the future. Put all knives into the drawer...
 
@@ -194,8 +175,7 @@ similar one - and your abstraction layer hides that from the application code.
 
 ### malloc/free best practice
 
-It is hard not to leak memory in C. There are some fancy tricks to get it
-right anyway.
+It is hard not to leak memory in C. There are some fancy tricks to get it right anyway.
 
 * Define who will free allocated memory (caller or called). If you have a library, support init/deinit
 * After free, set pointer to null
@@ -218,8 +198,7 @@ Validate your input against that and only process positive input.
 
 ### Encrypt all the data sent over network
 
-No matter which network (Bluetooth, WiFi, Internet, Mobile): expect it to be
-hacked and broken. Plan accordingly. Encrypt.
+No matter which network (Bluetooth, WiFi, Internet, Mobile): expect it to be hacked and broken. Plan accordingly. Encrypt.
 
 Do not use your own crypto. Fall back to standards like TLS.
 
@@ -229,20 +208,16 @@ Do not use your own crypto. Fall back to standards like TLS.
 
 ### Exceptions vs. return values
 
-Always handle error return values. You never know what a called
-function/library did internally and when. If you are not checking for errors the
-system can be in an *interesting* state when your code continues. This will
-cause hard to track errors.
+Always handle error return values. You never know what a called function/library did internally and when. If you are not checking for errors the
+system can be in an *interesting* state when your code continues. This will cause hard to track errors.
 
-If possible: use exceptions (because someone else could forget to handle
-return values). Unhandled exceptions will trickle down and be at least handled
+If possible: use exceptions (because someone else could forget to handle return values). Unhandled exceptions will trickle down and be at least handled
 by the default exception handler.
 
 
 ## Basic pattern for C coding
 
-There are many tricks to write secure C code. I tried to collect the most
-basic ones in a sample C program.
+There are many tricks to write secure C code. I tried to collect the most basic ones in a sample C program.
 
 You will also see the only valid reason to use a *goto* in a C program.
 

@@ -1,11 +1,6 @@
 # Testing practice {#chapter-testing}
 
-C> By: Thorsten Sick
-
-C> For: Tester
-
-Testing is an engineering practice. Almost all current projects are at a size
-that "one person and a checklist" are **NOT** an option for testing.
+Testing is an engineering practice. Almost all current projects are at a size that "one person and a checklist" are **NOT** an option for testing.
 
 Instead automated tools and scripts are used.
 
@@ -15,19 +10,16 @@ Today a tester needs the skills and mindset of:
 * hacking
 * administration
 
-Best case is to have CI (continuous integration) or at least a *vagrant*
-environment you can deploy anywhere and run the tests automated.
+Best case is to have CI (continuous integration) or at least a *vagrant* environment you can deploy anywhere and run the tests automated.
 
 ## Have testers
 
-Have those guys with the magic abilities to break things. Make them break your
-product. The more the better. The quality contribution they add scales by
+Have those guys with the magic abilities to break things. Make them break your product. The more the better. The quality contribution they add scales by
 numbers of testers.
 
 While the number of broken code also scales - by number of developers...
 
-Many teams are using the coders to also test. But they subconsciously avoid tricky
-situations and will not find the issues.
+Many teams are using the coders to also test. But they subconsciously avoid tricky situations and will not find the issues.
 
 ## What to test
 
@@ -63,18 +55,14 @@ Just a few ideas what you can test
 
 ## Unit tests
 
-Unit tests are tools to assist developers during development and guarantee a
-certain behaviour of interfaces.
+Unit tests are tools to assist developers during development and guarantee a certain behaviour of interfaces.
 
 This prevents re-factoring from breaking other code.
-Second use of unit tests: Write tests to verify external libs behave the same
-API after updates. This reduces risk from updating external libraries - and makes
-it easier to do that after vulnerabilities are found there.
+Second use of unit tests: Write tests to verify external libs behave the same API after updates. This reduces risk from updating external libraries - and makes it easier to do that after vulnerabilities are found there.
 
 ## Verification tests
 
-Verification tests are scripts that remote control the application and check
-if all promised features work as expected.
+Verification tests are scripts that remote control the application and check if all promised features work as expected.
 
 These tests should check the application and the environment (servers).
 If full automation is achieved, they can be run daily.
@@ -83,10 +71,8 @@ This kind of tests finds *broken features* and *expected bugs*.
 
 ## Performance tests
 
-(Distributed) Denial Of Service attacks (DDOS) are attacks where a system
-resource is depleted. If your servers, your apps or any other part of your
-system faces a hostile environment you should test performance with a focus on
-potential DDOS-able resources. Can the attacker deplete:
+(Distributed) Denial Of Service attacks (DDOS) are attacks where a system resource is depleted. If your servers, your apps or any other part of your
+system faces a hostile environment you should test performance with a focus on potential DDOS-able resources. Can the attacker deplete:
 
 * Network connections
 * Network bandwidth
@@ -95,32 +81,23 @@ potential DDOS-able resources. Can the attacker deplete:
 * Hard disk space
 * Database space
 
-Quotas or a re-design can prevent the attacker from wasting your or your other
-user's resources.
+Quotas or a re-design can prevent the attacker from wasting your or your other user's resources.
 
 ## Destructive testing
 
 [Fuzzing](#chapter-fuzzing) and similar tests aim to find bugs no one expected.
 
-They should run in parallel to normal development. Bugs found that way are added
-to the verification tests to avoid them popping up again at a later stage.
+They should run in parallel to normal development. Bugs found that way are added to the verification tests to avoid them popping up again at a later stage.
 
 ## External reviews
 
-Hire external companies to verify your *software design* and your *code*. This
-is two separate reviews.
-If you are on a limited budget: Verify final product and pray there are no
-design flaws that would force you to change the design and fix the code afterwards.
+Hire external companies to verify your *software design* and your *code*. This is two separate reviews.
+If you are on a limited budget: Verify final product and pray there are no design flaws that would force you to change the design and fix the code afterwards.
 
 There are basically two kinds of tests: *white box testing* and *black box testing*:
-While white box testing (testers get documentation and source code) will give
-you more found bugs for your money - black box testing will give you the hacker
-feeling and as a stunt can maybe better convince your managers to invest
-into security.
+While white box testing (testers get documentation and source code) will give you more found bugs for your money - black box testing will give you the hacker feeling and as a stunt can maybe better convince your managers to invest into security.
 
 Go for white box testing.
-
-
 
 ## Bug bounties
 
@@ -153,5 +130,4 @@ On the pro side are:
 ### Test Driven Development for Embedded C by James W. Grenning
 
 The book [Test Driven Development for Embedded C](https://www.safaribooksonline.com/library/view/test-driven-development/9781941222997/) guides you through the task of unit-testing your embedded applications.
-Most of the tips can be used for any kind of C project. But the additional
-benefit of this book is to also cover the more complex embedded environment.
+Most of the tips can be used for any kind of C project. But the additional benefit of this book is to also cover the more complex embedded environment.

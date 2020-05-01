@@ -1,20 +1,13 @@
 # Beef {#chapter-beef}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Tester, Pen Tester
-
 ## Basics
 
-[Beef](https://beefproject.com/) is a browser exploitation toolkit.
-It is meant to attack browsers in various ways by inserting a small one-line
+[Beef](https://beefproject.com/) is a browser exploitation toolkit. It is meant to attack browsers in various ways by inserting a small one-line
 hook into "harmless" homepages.
 
-That can be done by setting up these pages, infecting existing ones or doing
-a MITM attack onto a web connection.
+That can be done by setting up these pages, infecting existing ones or doing a MITM attack onto a web connection.
 
-Many of these attacks are also integrated into Exploit Kits and spread
-typical malware or help phishing.
+Many of these attacks are also integrated into Exploit Kits and spread typical malware or help phishing.
 
 Beef is relevant for you if you:
 
@@ -24,8 +17,7 @@ Beef is relevant for you if you:
 
 ## Features
 
-Beef has a web interface and will list all hooked browsers. As soon as a
-browser is hooked you can attack it in many different ways.
+Beef has a web interface and will list all hooked browsers. As soon as a browser is hooked you can attack it in many different ways.
 
 * Display Facebook login page popup (phishing)
 * Scan the local network of the browser (ping, ports)
@@ -33,8 +25,7 @@ browser is hooked you can attack it in many different ways.
 * Tunnel connections through the hooked browser
 * Fingerprint the browser
 
-Beef is a tool for targeted attacks. But opportunistic attacks by infected
-web sites to browsers ("drive-by") use similar exploits and technologies.
+Beef is a tool for targeted attacks. But opportunistic attacks by infected web sites to browsers ("drive-by") use similar exploits and technologies.
 
 And this is the common thing your users will experience.
 

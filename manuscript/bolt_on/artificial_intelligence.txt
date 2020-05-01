@@ -1,17 +1,10 @@
 # Artificial intelligence {#chapter-artificial-intelligence}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Analysts
-
-
 Artificial Intelligence became a hot topic in malware protection.
-It is the main selling point of "Next Generation" AV. But to some extend it is
-part of classical AV for more than 10 years now - I wrote some. I know.
+It is the main selling point of "Next Generation" AV. But to some extend it is part of classical AV for more than 10 years now - I wrote some. I know.
 They are just not as good at selling it.
 
-Before we all jump onto the hype train together, let's be honest about
-requirements, strengths and weaknesses of AV with AI.
+Before we all jump onto the hype train together, let's be honest about requirements, strengths and weaknesses of AV with AI.
 
 ## Requirements
 
@@ -51,8 +44,7 @@ requirements, strengths and weaknesses of AV with AI.
 
 ## Sorting the training data
 
-It is very important to have a well sorted training set. To get there it could
-be smart to first clean it. You can use outlier detection (k-means algorithm)
+It is very important to have a well sorted training set. To get there it could be smart to first clean it. You can use outlier detection (k-means algorithm)
 to identify the samples where the nearest neighbours are of a different class.
 
 Analysts then have to verify the classification.
@@ -65,15 +57,11 @@ To improve training performance you should experiment with:
     * The generate different specialised AIs for that
 * Only train the malware of the last year. Not older
 
-If these ideas are reasonable depends on your use case. But that can help you
-to handle your problem. Because a proper AI will needs large training sets.
+If these ideas are reasonable depends on your use case. But that can help you to handle your problem. Because a proper AI will needs large training sets.
 And being able to manage that complexity is one of the main challenges.
 
 ## Further reading
 
-The book "Malware data science" is the perfect book to dive deeper into AI
-for defensive security.
+The book "Malware data science" is the perfect book to dive deeper into AI for defensive security.
 
-The two basic projects are [scikit-learn](https://scikit-learn.org) for generic
-AI and data science (together with *pandas* and some more libraries). And for
-Deep Learning [Keras](https://keras.io).
+The two basic projects are [scikit-learn](https://scikit-learn.org) for generic AI and data science (together with *pandas* and some more libraries). And for Deep Learning [Keras](https://keras.io).

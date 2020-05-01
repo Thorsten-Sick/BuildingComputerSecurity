@@ -1,18 +1,14 @@
 # JavaScript {#chapter-javascript-security}
 
-JavaScript is not a simple language (lots of creative special cases) but it
-is the glue that keeps the web together. It is quite likely that you have to
-mix some JS into your project just to get a fancy web interface or GUI.
+JavaScript is not a simple language (lots of creative special cases) but it is the glue that keeps the web together. It is quite likely that you have to mix some JS into your project just to get a fancy web interface or GUI.
 
-And the environment that developed around JS got very complex and has an
-own personality. (See "The JS eco system" at the end of this chapter).
+And the environment that developed around JS got very complex and has an own personality. (See "The JS eco system" at the end of this chapter).
 
 Three reasons to treat this language like Nitroglycerin when using it.
 
 ## Retire.js
 
-Writing large JS applications is very dependent on frameworks. Which extend
-the language feature set. Those frameworks also have dependencies. And some
+Writing large JS applications is very dependent on frameworks. Which extend the language feature set. Those frameworks also have dependencies. And some
 are not very well maintained.
 
 A large number of vulnerabilities are a result of those 3rd party libraries.
@@ -22,8 +18,7 @@ There is a tool that helps you manage those external libraries.
 [Retire.js](https://retirejs.github.io/retire.js/) Scans for used 3rd party
 libraries with vulnerabilities.
 
-It consists of a database and several interfaces that allow to integrate it into
-any kind of system:
+It consists of a database and several interfaces that allow to integrate it into any kind of system:
 
 * Command line scanner
 * Grunt plugin
@@ -45,23 +40,18 @@ The closest you can get to compiler warnings in JS is a linter. Use it and respe
 Most important: Besides using those things in your IDE, also add them to the build system or VCS. That way everyone in your team automatically uses the
 same style and warnings will be throw even if someone makes a quick-fix using notepad.
 
-ESLint has a very flexible system of config files. Where everything from a
-"project global" config file to "source-code-line" granular setting is possible.
+ESLint has a very flexible system of config files. Where everything from a "project global" config file to "source-code-line" granular setting is possible.
 
-Configuration does not have to be complex. As long as the config file contains
-the directive
+Configuration does not have to be complex. As long as the config file contains the directive
 
 {lang="javascript"}
     "extends":"eslint:recommended"
 
-(which is: default settings) everything is already on the right track. This
-directive can be extended later on.
+(which is: default settings) everything is already on the right track. This directive can be extended later on.
 
-Make sure you have the sane defaults when starting. Later invest some time
-into tuning the rules.
+Make sure you have the sane defaults when starting. Later invest some time into tuning the rules.
 
-Just add more rules, configure and set them to any level out of *off*, *warning*
-and *error*.
+Just add more rules, configure and set them to any level out of *off*, *warning* and *error*.
 
 ESLint can be added at different stages in your development process.
 
@@ -79,40 +69,29 @@ All of them are reasonable.
 
 All those together manage to reduce the stress level of cooperative development. And less bugs is less vulnerabilities.
 
-[ESLint](https://eslint.org) is just one of the linters existing. If you are
-not happy with it, pick another one.
+[ESLint](https://eslint.org) is just one of the linters existing. If you are not happy with it, pick another one.
 
-Before anyone complains: Yes, this is kind of boring rock-solid software
-engineering. But more often than not in the early "let's get started" phases
-of a project it is forgotten. And later on there are so many bugs to fix no
-one has enough time to roll out a system that detects and prevents bugs.
+Before anyone complains: Yes, this is kind of boring rock-solid software engineering. But more often than not in the early "let's get started" phases of a project it is forgotten. And later on there are so many bugs to fix no one has enough time to roll out a system that detects and prevents bugs.
 
 ### Bonus level
 
-Bugs love company. If you find a bug of a certain type in your code the
-chances are high to find similar bugs in this or other projects.
+Bugs love company. If you find a bug of a certain type in your code the chances are high to find similar bugs in this or other projects.
 
-So if you should manually find a bug that ESLint missed, it is worth the
-investment to write a detection for that as a *rule* or *plugin* for ESLint.
+So if you should manually find a bug that ESLint missed, it is worth the investment to write a detection for that as a *rule* or *plugin* for ESLint.
 And run this on your whole code base to find similar bugs.
 
 The ESLint page has documentation on how to write rules.
 
-And remember: *Sharing is caring* If you have an awesome rule, create a
-pull request and get it into the ESLint distribution. That way others can
+And remember: *Sharing is caring* If you have an awesome rule, create a pull request and get it into the ESLint distribution. That way others can
 **use it**, **review it** and **improve it**.
 
-This kind of thing happened to my contributions several times (last time I
-remember was a CPPCheck plugin, but this is a similar situation).
+This kind of thing happened to my contributions several times (last time I remember was a CPPCheck plugin, but this is a similar situation).
 
 ## Strict
 
-JavaScript got to the mess because several competing companies tried to
-define their own variant of JS. This happened during the so called "browser wars".
+JavaScript got to the mess because several competing companies tried to define their own variant of JS. This happened during the so called "browser wars".
 
-To be able to view all web pages the script interpreter in the browsers has
-to be flexible enough to handle all the web pages out there. Event those written
-by amateurs. At least as long as any other competing browser does handle it somehow.
+To be able to view all web pages the script interpreter in the browsers has to be flexible enough to handle all the web pages out there. Event those written by amateurs. At least as long as any other competing browser does handle it somehow.
 
 The JS language developers don't want to break the web by pushing some new rules.
 
@@ -122,8 +101,7 @@ The key word string
 
 *"use strict";*
 
-in a JavaScript code promises the interpreter that the author is an
-experienced developer and shady situations should be handled as errors instead
+in a JavaScript code promises the interpreter that the author is an experienced developer and shady situations should be handled as errors instead
 of "guess what the author could have meant by that".
 
 You should use this construct and promise the interpreter some high-quality JS code.
@@ -132,9 +110,7 @@ You should use this construct and promise the interpreter some high-quality JS c
 
 ## The JS eco system
 
-JS needs lots of frameworks to be written efficiently. This caused the
-creation of *package managers*, *minifiers*, *build systems in JS* - which require
-a mode to *create client scripts* in JS. And this gets us to NodeJS.
+JS needs lots of frameworks to be written efficiently. This caused the creation of *package managers*, *minifiers*, *build systems in JS* - which require a mode to *create client scripts* in JS. And this gets us to NodeJS.
 
 The good news: It is cross platform.
 

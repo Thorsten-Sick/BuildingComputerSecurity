@@ -1,11 +1,8 @@
 # Fuzzing {#chapter-fuzzing}
 
-Fuzzing is inserting random data into the system with the goal to cause invalid
-states. This can be crashing, memory leaks, unresponsiveness, endless loops,
-log storms ...
+Fuzzing is inserting random data into the system with the goal to cause invalid states. This can be crashing, memory leaks, unresponsiveness, endless loops, log storms ...
 
-After you did set up fuzzing tools it runs full-auto for nights and collects
-crash logs and especially the data that caused the crashes.
+After you did set up fuzzing tools it runs full-auto for nights and collects crash logs and especially the data that caused the crashes.
 
 This generated data can be send to any kind of input:
 
@@ -35,8 +32,7 @@ You should start with a simple variant if your program has not been hardened yet
 
 ## Training project
 
-There is a practice target for fuzzing: [Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program
-to test your fuzzer.
+There is a practice target for fuzzing: [Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program to test your fuzzer.
 
 As there are many kinds of fuzzers and you maybe want to experiment with them before getting started with your project.
 
@@ -144,8 +140,7 @@ on your system if you installed the package.
 The most effective way if you have access to the API and code. It is part of Clang 6.0+.
 Clang is available for Ubuntu 18.4
 
-You may notice: Ubuntu 17.10 does not have this Clang installed yet. So you will
-want to install a Clang 6.0 from a PPA.
+You may notice: Ubuntu 17.10 does not have this Clang installed yet. So you will want to install a Clang 6.0 from a PPA.
 
 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)
 

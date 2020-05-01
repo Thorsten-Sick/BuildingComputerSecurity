@@ -1,26 +1,16 @@
 # Basics: Know your enemies {#chapter-attackers}
 
-C> By: Thorsten Sick
+Attackers come in several flavours and can be enemies or friendly. I'll do what most of the security books do: Call the attacker the *adversary*.
 
-C> For: Manager, Architects
+Just because someone found a vulnerability in your application does not make him an enemy. What he does with this knowledge - help or harm you - will define the adversary's moral position.
 
-Attackers come in several flavours and can be enemies or friendly.
-I'll do what most of the security books do: Call the attacker
-the *adversary*.
-
-Just because someone found a vulnerability in your application does not make him
-an enemy. What he does with this knowledge - help or harm you - will define
-the adversary's moral position.
-
-You will possibly feel a reflex like "No one will hack my hardware/software".
-This is a protective reflex which will do you more harm than good. Relax,
+You will possibly feel a reflex like "No one will hack my hardware/software". This is a protective reflex which will do you more harm than good. Relax,
 be open minded and enjoy the taxonomy of hackers.
 
 ## Hackers
 
 The friendly Hackers will notify you as soon as they found a vulnerability in your code.
-Get in touch and they will help you to close it. Be aware: You will get a
-very expensive service (pen testing) for free!
+Get in touch and they will help you to close it. Be aware: You will get a very expensive service (pen testing) for free!
 
 Goal: Curiosity. And fame. And creating a more secure world
 
@@ -47,9 +37,7 @@ Natalie Silvanovich presented the hacking of Tamagotchis at a hacker conference.
 ## University researchers
 
 Similar to hackers. They have more resources. But their goal is more academic:
-They do not necessarily want to produce a working exploit as long as the idea and
-approach are totally new. They will also try to create new hacking technologies
-and push the boundaries a lot more.
+They do not necessarily want to produce a working exploit as long as the idea and approach are totally new. They will also try to create new hacking technologies and push the boundaries a lot more.
 
 Do: Enjoy their ideas
 
@@ -67,16 +55,14 @@ Do: Protect against standard attacks - this is what they will use.
 
 ## Organized Crime
 
-Those are the powers currently creating malware and making lots of money.
-It is organised crime because they have specialists for all those tasks needed to:
+Those are the powers currently creating malware and making lots of money. It is organised crime because they have specialists for all those tasks needed to:
 
 * Build malware
 * Spread it
 * Control it (bot herders)
 * Cash in (money mules)
 
-Their major goal is to make money. As there are lots of ways to do that it is
-hard to predict what they will do. We currently have:
+Their major goal is to make money. As there are lots of ways to do that it is hard to predict what they will do. We currently have:
 
 * Stealing accounts
 * Using bandwidth for DDOS
@@ -85,27 +71,22 @@ hard to predict what they will do. We currently have:
 * Ransomware
 * Crypto miner malware to use the victims power and CPU to mine crypto currencies
 
-Modern malware is modular and can be deployed with several of these attacks
-implemented as modules for the malware.
+Modern malware is modular and can be deployed with several of these attacks implemented as modules for the malware.
 
 The Command and Control interfaces of the malware are shipped with a statistics dashboard where
 attackers can decide what kind of module will currently have the best ROI.
 
-There is malware that first measures the processing power of the machine and
-the number of potential valuable files on disk.
+There is malware that first measures the processing power of the machine and the number of potential valuable files on disk.
 
 * If it finds high processing power and not much user generated content: it runs a crypto miner
 * If it finds lots of user generated content and low processing power it runs as ransomware
 
 ## Nation state actors (NSA)
 
-Nation states have been investing lots of money into keeping the internet
-and computer security low. They even hacked innocent companies to later
+Nation states have been investing lots of money into keeping the internet and computer security low. They even hacked innocent companies to later
 bounce to their original target. This is why the [NSA hacked angry birds](https://www.theguardian.com/world/2014/jan/27/nsa-gchq-smartphone-app-angry-birds-personal-data).
-If a nation state really targets your software or system you need much more
-than just reading this book.
-But on the other hand: Angry birds was a low hanging fruit. With some
-cyber hygiene someone else would have taken their place.
+If a nation state really targets your software or system you need much more than just reading this book.
+But on the other hand: Angry birds was a low hanging fruit. With some cyber hygiene someone else would have taken their place.
 
 Basic things to do:
 
@@ -114,22 +95,17 @@ Basic things to do:
 * If you do not need the data, do not collect it
 * Separate private accounts of your staff from work accounts
 
-This will not protect you from a targeted attack by a nation state. But you
-will not be the softest (and tastiest) target out there at least.
+This will not protect you from a targeted attack by a nation state. But you will not be the softest (and tastiest) target out there at least.
 
 ## In house attackers
 
-According to some statistics (and your special mileage may vary) in house
-attackers are amongst the more common.
+According to some statistics (and your special mileage may vary) in house attackers are amongst the more common.
 
 Disgruntled employees that want to cause trouble before leaving the company.
 
-Split responsibilities, compartmentalize, have backups. Make sure people can
-not be bribed. Do code reviews.
+Split responsibilities, compartmentalize, have backups. Make sure people can not be bribed. Do code reviews.
 
-I prefer to trust people I work with. But this also lifts responsibility
-off the shoulders of people if done right. Makes them sleep better. Do this
-wise and you and your colleagues will benefit even when there is no one
-planning mischief.
+I prefer to trust people I work with. But this also lifts responsibility off the shoulders of people if done right. Makes them sleep better. Do this
+wise and you and your colleagues will benefit even when there is no one planning mischief.
 
 %% TODO: Add Hacktivist

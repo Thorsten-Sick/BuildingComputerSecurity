@@ -1,11 +1,6 @@
 # Clang {#chapter-clang}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Tester
-
-A compiler can assist you in creating secure software. There are several major
-features you can expect from it:
+A compiler can assist you in creating secure software. There are several major features you can expect from it:
 
 * Warnings
 * More in-depth static code analysis (while compiling)
@@ -14,18 +9,14 @@ features you can expect from it:
 * Fuzzing
 
 [Clang](https://clang.llvm.org/) is a compiler in the same league as GCC. It is the C-front end for LLVM.
-Basic command lines are very similar, but it has some different features -
-especially for code verification.
+Basic command lines are very similar, but it has some different features - especially for code verification.
 
-A good make target for those tests would be *make check*. Keep in mind when
-writing your make file.
+A good make target for those tests would be *make check*. Keep in mind when writing your make file.
 
 ## Warnings and hardening
 
 There are several levels of warnings you can activate during the compile phase.
-Best practice is to take some hours to fix all warnings. After that warnings
-will help you find issues in the new code you just wrote. And reduce time
-needed to track down bugs.
+Best practice is to take some hours to fix all warnings. After that warnings will help you find issues in the new code you just wrote. And reduce time needed to track down bugs.
 
 * Security warnings: *-Wformat -Wformat-security -Werror=format-security*
 * Fortify source: *-D_FORTIFY_SOURCE=2*
@@ -42,8 +33,7 @@ needed to track down bugs.
 
 See more [Clang cheat sheet](https://blog.quarkslab.com/clang-hardening-cheat-sheet.html)
 
-Clang command line is very similar to GCC command line. So you should pick
-some generic tips from the [compiling](#chapter-compiling) chapter.
+Clang command line is very similar to GCC command line. So you should pick some generic tips from the [compiling](#chapter-compiling) chapter.
 
 ## Static analysis
 
@@ -61,28 +51,22 @@ It will use the project's Makefile to build the project and analyse it afterward
 
 ## Dynamic code analysis
 
-With Clang you can add some compile switches to activate several Dynamic Code
-analysis technologies. This will add special features into the resulting binary.
+With Clang you can add some compile switches to activate several Dynamic Code analysis technologies. This will add special features into the resulting binary.
 Those features are meant to test the binary while it is running.
 
-Those special binaries are meant to be run on your test servers, by your
-developers, maybe by close friends...maybe even by you testers outside of the company.
+Those special binaries are meant to be run on your test servers, by your developers, maybe by close friends...maybe even by you testers outside of the company.
 
 But those special binaries are slow. And crash.
 
 So you should not ship them to your customers that way.
 
-One of the most valuable ways to use these special binaries is to run them to
-your large, automated test set.
+One of the most valuable ways to use these special binaries is to run them to your large, automated test set.
 
-Be aware that many of those dynamic code analysis tools will come with a
-slowdown like 2x-15x....and factor 2 to 10 increased memory usage.
+Be aware that many of those dynamic code analysis tools will come with a slowdown like 2x-15x....and factor 2 to 10 increased memory usage.
 
 If you tests monitor for excessive memory usage and timing... those will fail.
 
-One more thing: Some of those tests will only run properly on Linux. Some will
-also work on Windows - but not as reliable as on Linux. As this is currently
-a work-in-progress: check the Clang homepage for the Windows support of your
+One more thing: Some of those tests will only run properly on Linux. Some will also work on Windows - but not as reliable as on Linux. As this is currently a work-in-progress: check the Clang homepage for the Windows support of your
 Clang version before hunting phantom-bugs.
 
 ## ASAN (Address Sanitizer)
@@ -95,8 +79,7 @@ Compile with *-fsanitize=address* . [Some more options to that are available](ht
 ## LSAN (Leak Sanitizer)
 
 Included in ASAN. Detects memory leaks with minor overhead.
-Memory leaks are sneaky and need a program running for a long time and
-through a lot of states. Check if your automated tests have a good coverage.
+Memory leaks are sneaky and need a program running for a long time and through a lot of states. Check if your automated tests have a good coverage.
 
 It is part of ASAN. To use it standalone, compile with *-fsanitize=leak*.
 
@@ -112,13 +95,11 @@ The compile flag for UBSan is *-fsanitize=undefined*. It has many [more flags](h
 
 Detects uninitialized memory reads.
 
-The compile flag is *-fsanitize=memory*. Like the other checks it has many more
-settings and flags. Please [check the documentation](https://clang.llvm.org/docs/MemorySanitizer.html)
+The compile flag is *-fsanitize=memory*. Like the other checks it has many more settings and flags. Please [check the documentation](https://clang.llvm.org/docs/MemorySanitizer.html)
 
 ## Thread Sanitizer
 
-Detects data races between threads. If your program does not use threading, you
-do not have to test it. Obviously.
+Detects data races between threads. If your program does not use threading, you do not have to test it. Obviously.
 
 Compile flag is *-fsanitize=thread*
 
@@ -135,8 +116,7 @@ There are three ways to get code coverage in Clang:
 
 When using Sanitizers "Sanitizer Coverage" is the tool developed for this situation.
 
-To get the GCC style coverage, compile with *-ftest-coverage* and run with
-*gcov - A*
+To get the GCC style coverage, compile with *-ftest-coverage* and run with *gcov - A*
 
 Your goal is to design the tests in a way that results in 100% coverage.
 
@@ -145,5 +125,4 @@ Your goal is to design the tests in a way that results in 100% coverage.
 
 ## Fuzzing
 
-Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more
-details read the [fuzzing chapter](#chapter-fuzzing).
+Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more details read the [fuzzing chapter](#chapter-fuzzing).

@@ -1,9 +1,5 @@
 # Updates {#chapter-updates}
 
-C> By: Thorsten Sick
-
-C> For: Manager, Architects, Developers
-
 As soon as your system reaches a certain level of complexity, you will require updates. Reason for that are the inevitable bugs and feature requests.
 
 And as bugs can be vulnerabilities you will not be offering a secure solution without updates.
@@ -81,8 +77,7 @@ This config file will be checked against the public key file on the end-system. 
 The secret key must be stored on an isolated system. Not a build machine and especially not the download server. You sign the update binary or config config
 prior to release with this key.
 
-You will want a second emergency key (its public part also distributed to the clients). This one is stored in a safe. If the first key is compromised you can can
-revoke it and do an emergency update now binding the emergency key to the clients.
+You will want a second emergency key (its public part also distributed to the clients). This one is stored in a safe. If the first key is compromised you can can revoke it and do an emergency update now binding the emergency key to the clients.
 
 
 ## Verify version - only upgrade

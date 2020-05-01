@@ -3,10 +3,8 @@
 I have been struggling if to add this chapter. I totally despise scare tactics.
 IMHO they are unethical and they can backfire. People get to scared to act.
 
-But as a normal engineer you normally do not have the perspective and the
-tools of the attacker. And as long as you do not have at least a bit of
-understanding for the atackers capabilities you assume your technology is
-secure - while it is not.
+But as a normal engineer you normally do not have the perspective and the tools of the attacker. And as long as you do not have at least a bit of
+understanding for the atackers capabilities you assume your technology is secure - while it is not.
 
 For that reason I add the *Offense* part to the book.
 But:

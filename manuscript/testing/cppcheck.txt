@@ -1,18 +1,11 @@
 # Cppcheck {#chapter-cppcheck}
 
-C> By: Thorsten Sick
+Cppcheck is a more advanced static code analysis tool than flawfinder. The drawback: It is more complicated.
 
-C> For: Developers, Tester
-
-Cppcheck is a more advanced static code analysis tool than flawfinder.
-The drawback: It is more complicated.
-
-Where flawfinder checks with string searches for dangerous function calls,
-Cppcheck compiles the program to go more in depth. It does care for the
+Where flawfinder checks with string searches for dangerous function calls, Cppcheck compiles the program to go more in depth. It does care for the
 structure of the program - which flawfinder just can not do.
 
-These more complex pre-processing steps are the base for the additional fancy
-features Cppcheck offers.
+These more complex pre-processing steps are the base for the additional fancy features Cppcheck offers.
 
 You can find Cppcheck here:
 
@@ -31,8 +24,7 @@ There is a MSI installer for Windows as well.
 
 ## The Makefile
 
-As you basically call CppCheck like any compiler you can integrate it into your
-default Makefile as a specific target.
+As you basically call CppCheck like any compiler you can integrate it into your default Makefile as a specific target.
 
 A
 
@@ -43,26 +35,21 @@ would then run CppCheck.
 
 ## Feature: Library verification
 
-CppCheck checks if library functions are used as intended. It knows about the
-standard libraries. If you use less common ones you should add your own
+CppCheck checks if library functions are used as intended. It knows about the standard libraries. If you use less common ones you should add your own
 configuration for those. The CppCheck manual has more about that.
 
 To edit the configuration file for the library use the CppCheck GUI.
 
-If the library is a common and public one, you may think about contributing the
-configuration to the CppCheck project.
+If the library is a common and public one, you may think about contributing the configuration to the CppCheck project.
 
-Now for the extra trick: If your team produces in-house libraries you should
-generate one of those config files and ship it with the library. This enables
-others to properly use the library. And improves code quality and reduces silly
+Now for the extra trick: If your team produces in-house libraries you should generate one of those config files and ship it with the library. This enables others to properly use the library. And improves code quality and reduces silly
 bug reports to your team.
 
 %% TODO ## Feature: MISRA
 
 %% TODO ## Feature platform
 
-A feature that can assist you customizing the checks to cover your needs is
-dumping the data and processing it with Python.
+A feature that can assist you customizing the checks to cover your needs is dumping the data and processing it with Python.
 
 Existing python tools are in the *addons* folder of CppCheck.
 

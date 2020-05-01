@@ -1,9 +1,5 @@
 # Software Design Checklist {#chapter-design-checklist}
 
-C> By Thorsten Sick
-
-C> For Designers, Managers, Architects and Developers
-
 ## My secret source
 
 Software design is a big time investment. In your lifetime you will not be able to make all possible design mistakes and learn from them.

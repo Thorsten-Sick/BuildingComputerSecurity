@@ -90,6 +90,8 @@
 
 **IPS / Intrusion Prevention System**: IDS with the ability to automatically stop potential attacks (firewall up, terminate processes, ...)
 
+**Least Privilege**: Grant a process only the least privileges required to do its task. If something goes south, the impact is minimized.
+
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
 **QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
@@ -103,6 +105,8 @@
 ** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
+
+**Trusted Computing Base (TCB)**: The part of a system that **MUST** work properly to ensure security. Keep this small.
 
 **UAF / Use After Free vulnerability**: Typical memory corruption bug
 

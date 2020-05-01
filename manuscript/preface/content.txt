@@ -8,9 +8,7 @@ Describes the types of adversaries your project can face. And their high-level g
 
 ### Attacker's goals
 
-An in depth list of goals and sub-goals the attackers have - things you will
-want to prevent happening. Block the [attack](#chapter-attackers-goals),
-protect your system.
+An in depth list of goals and sub-goals the attackers have - things you will want to prevent happening. Block the [attack](#chapter-attackers-goals), protect your system.
 
 ### Principles
 
@@ -20,10 +18,8 @@ High level [principles](#chapter-principles) you can use to design a secure syst
 
 ### Threat modelling
 
-A mixed group of people (engineers, architects, managers) meets for a
-*threat modelling* session. Understanding the strengths and weaknesses of the product and the planned new features. "What would an attacker want ?",
-"How would he get that ?". Identifying that is the first step to protect the
-valuable assets.
+A mixed group of people (engineers, architects, managers) meets for a *threat modelling* session. Understanding the strengths and weaknesses of the product and the planned new features. "What would an attacker want ?",
+"How would he get that ?". Identifying that is the first step to protect the valuable assets.
 It can sound intimidating. But there are so many different approaches to make it simple and even fun. I collected a range of "best of" approaches in
 [this chapter](#chapter-threat-modelling).
 
@@ -35,20 +31,16 @@ A good design can speed up development, simplify testing, and increase security.
 
 ### Vulnerabilities
 
-Your software - and maybe even your hardware will have bugs that turn into
-vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities) will cover the essence and taxonomy of vulnerabilities. Understanding that will make decisions based on vulnerabilities simpler.
+Your software - and maybe even your hardware will have bugs that turn into vulnerabilities. Ready to be exploited by an attacker. The chapter [Vulnerabilities](#chapter-vulnerabilities) will cover the essence and taxonomy of vulnerabilities. Understanding that will make decisions based on vulnerabilities simpler.
 
 ### Security process
 
-Internal set up of a project will decide if a external vulnerability report
-is a disaster for the project release cycle or can be handled in a relaxed
+Internal set up of a project will decide if a external vulnerability report is a disaster for the project release cycle or can be handled in a relaxed
 and simple way. Being prepared for the inevitable is central in  [this chapter](#chapter-security-process).
 
 ### Software Design Checklist
 
-The [Software Design Checklist](#chapter-design-checklist) introduces you to
-a source to learn about typical software design flaws. It also starts to
-create an (incomplete) list of typical flaws encountered it real world failed projects.
+The [Software Design Checklist](#chapter-design-checklist) introduces you to a source to learn about typical software design flaws. It also starts to create an (incomplete) list of typical flaws encountered it real world failed projects.
 
 ### UX
 
@@ -56,8 +48,7 @@ How to create a [user interface in a secure way](#chapter-user-interface) - prev
 
 ### Updates
 
-As soon as a software reaches a certain complexity you need updates to ship
-patches. This chapter guides you through the challenge of [shipping updates in a secure way](#chapter-updates).
+As soon as a software reaches a certain complexity you need updates to ship patches. This chapter guides you through the challenge of [shipping updates in a secure way](#chapter-updates).
 
 ### Passwords
 
@@ -117,10 +108,8 @@ to abuse by the attacker. Covered in [this chapter](#chapter-compiling).
 
 ### Clang LLVM
 
-Clang is a compiler in the GCC league. It adds some more features for static
-and dynamic testing of your code. Those features are cool enough that you
-should consider compiling at least the test version using [Clang and those
-settings](#chapter-clang).
+Clang is a compiler in the GCC league. It adds some more features for static and dynamic testing of your code. Those features are cool enough that you
+should consider compiling at least the test version using [Clang and those settings](#chapter-clang).
 
 ### JavaScript security
 
@@ -131,8 +120,7 @@ But those can be fixed by tools you can integrate seamlessly into your workflow.
 
 ### Testing compiled binaries
 
-To verify that the compiler properly hardened your executable the way you
-wanted you (or your testers) will want to use some tools. [This is described here](#chapter-testing-compiling).
+To verify that the compiler properly hardened your executable the way you wanted you (or your testers) will want to use some tools. [This is described here](#chapter-testing-compiling).
 
 ### Flawfinder
 
@@ -143,8 +131,7 @@ In addition to your compiler the tool [Flawfinder](#chapter-flawfinder) gets you
 [CPPCheck](#chapter-cppcheck) is Flawfinder enhanced. With the small drawback that you will have to invest some time in configuration. This chapter will help you there.
 
 ### Testing
-Is it still testing or already hacking our own product ?
-There are many tricks to make software testing more aggressive and which will shine some light on vulnerabilities in [this chapter](#chapter-testing).
+Is it still testing or already hacking our own product ? There are many tricks to make software testing more aggressive and which will shine some light on vulnerabilities in [this chapter](#chapter-testing).
 
 
 ### Fuzzing
@@ -153,20 +140,17 @@ There are many tricks to make software testing more aggressive and which will sh
 
 ## Tools
 
-Several tools are essential to build secure software. This covers version
-control systems, SSH and many others that "just" support you in getting
+Several tools are essential to build secure software. This covers version control systems, SSH and many others that "just" support you in getting
 your tasks done. Those are covered in this part of the book.
 
 ### SSH
 
-A very powerful tool that goes way beyond just replacing Telnet. Know it and
-simplify your work while being more secure. Or - if you build embedded
+A very powerful tool that goes way beyond just replacing Telnet. Know it and simplify your work while being more secure. Or - if you build embedded
 systems - integrate it in there.
 
 ### Git
 
-Git as a version control system is the core of your development workflow. So
-it is also a perfect spot to add automated code quality tools. You learned
+Git as a version control system is the core of your development workflow. So it is also a perfect spot to add automated code quality tools. You learned
 about those tools in the other chapters. And this chapter gives you some hints where to get started integrating them into [Git](#chapter-git).
 
 %% TODO Openssl
@@ -186,8 +170,7 @@ How to properly read antivirus tests. As antivirus is neither a silver bullet no
 
 ### Antivirus integration
 
-Antivirus can only scan files it gets access to. Many projects could benefit
-from an [interface between the project and an already installed antivirus](#chapter-antivirus-integration). And Microsoft is offering one.
+Antivirus can only scan files it gets access to. Many projects could benefit from an [interface between the project and an already installed antivirus](#chapter-antivirus-integration). And Microsoft is offering one.
 
 ### Antivirus sharing samples
 
@@ -200,28 +183,23 @@ There are several reasons to contact an antivirus vendor
 
 ### Antivirus: VirusTotal
 
-VirusTotal is the go-to way of quick scanning potential malware and
-false positives. But has an own tricky personality. Knowing that will [prevent you from coming to the wrong conclusions](#chapter-virustotal).
+VirusTotal is the go-to way of quick scanning potential malware and false positives. But has an own tricky personality. Knowing that will [prevent you from coming to the wrong conclusions](#chapter-virustotal).
 
 
 ### Antivirus: Behaviour based classification
 
-Unknown samples must be classified before detection can be created. A quite
-reliable way to achieve that is behaviour based classification. Especially it is quite simple to interpret the resulting log for malicious behaviour. [The basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
+Unknown samples must be classified before detection can be created. A quite reliable way to achieve that is behaviour based classification. Especially it is quite simple to interpret the resulting log for malicious behaviour. [The basics are covered in this chapter](#chapter-antivirus-behaviour-based-classification)
 
 ### IOC sources
 
-[IOC sources](#chapter-malware-sources) is a collection of lists of so
-called Indicator Of Compromise Sources. Those are Malware executables, hashes, URLs, registry key, ...
+[IOC sources](#chapter-malware-sources) is a collection of lists of so called Indicator Of Compromise Sources. Those are Malware executables, hashes, URLs, registry key, ...
 
-The lists can be used for training, learning or (if they are curated)
-event directly blacklisting.
+The lists can be used for training, learning or (if they are curated) event directly blacklisting.
 
 
 ## Offense
 
-Even if you are playing Defense - it is very important to know the tools,
-tricks and tactics of Offense. The basics are covered here.
+Even if you are playing Defense - it is very important to know the tools, tricks and tactics of Offense. The basics are covered here.
 
 ### Kill chain
 
@@ -234,24 +212,20 @@ An early part of manual attacks is reconnaissance of the target. There are sever
 
 ### Google Dorks
 
-[Google Dorks](#chapter-google-dork) are simple reconnaissance tricks
-abusing Google. Using them it is possible to learn about vulnerabilities in
+[Google Dorks](#chapter-google-dork) are simple reconnaissance tricks abusing Google. Using them it is possible to learn about vulnerabilities in
 web pages without event connecting to them once.
 
 ### BeEF
 
-[BeEF - Browser exploitation Framework](#chapter-beef) helps you exploiting
-browsers. And those are very often the most central application in a person's life.
+[BeEF - Browser exploitation Framework](#chapter-beef) helps you exploiting browsers. And those are very often the most central application in a person's life.
 
 ### Burp Suite
 
-[Burp suite](#chapter-burp) is attacking the other way: Connecting to a web
-page and while crawling it enumerating the vulnerabilities.
+[Burp suite](#chapter-burp) is attacking the other way: Connecting to a web page and while crawling it enumerating the vulnerabilities.
 
 ### Mitmproxy
 
-[Mitmproxy](#chapter-mitmproxy) is a python proxy to intercept especially
-HTTP communication. Valuable for development of network communication, testing and pen testing.
+[Mitmproxy](#chapter-mitmproxy) is a python proxy to intercept especially HTTP communication. Valuable for development of network communication, testing and pen testing.
 
 %% TODO Metasploit
 
@@ -278,9 +252,7 @@ Who wrote this book and: Why ?
 
 ### Authors
 
-As the security field is so large I want to have other authors contribute to
-their field of expertise. This chapter is ready to introduce them. Even if I
-just slowly started to invite people.
+As the security field is so large I want to have other authors contribute to their field of expertise. This chapter is ready to introduce them. Even if I just slowly started to invite people.
 
 ### Changelog
 
@@ -288,5 +260,4 @@ Read this first after you got an updated book
 
 ### License
 
-If you want to do anything else with this book besides reading it -
-this chapter is for you.
+If you want to do anything else with this book besides reading it - this chapter is for you.

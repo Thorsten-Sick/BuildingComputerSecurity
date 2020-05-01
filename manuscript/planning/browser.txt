@@ -1,9 +1,5 @@
 # Browser security {#chapter-browser-security}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers
-
 %%  State: 80 % Browser
 
 Browsers are one of the most complex things running on your computer. They are basically a small operating system.
@@ -86,13 +82,11 @@ To protect yourself and do your own tracker-tracking use [Privacy Badger](https:
 
 ### Social Icons: Facebook and Twitter trackers
 
-The Facebook and Twitter buttons you can find on many pages ("Share on Twitter") are trackers: As soon as you see the Facebook button, Facebook knows you
-visited this page. If you have a Facebook account you use with this browser: Facebook will connect your Facebook identity to the page you are currently visiting. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your identity.
+The Facebook and Twitter buttons you can find on many pages ("Share on Twitter") are trackers: As soon as you see the Facebook button, Facebook knows you visited this page. If you have a Facebook account you use with this browser: Facebook will connect your Facebook identity to the page you are currently visiting. If you do not have a Facebook account it will track you as pseudonymous id until you create an account: after that it can link this to your identity.
 
 What exactly each of the companies is doing on their backend DB is unknown. But this scenario is possible and the most likely one.
 
-To protect yourself there are ways to **de-activate** the button until it is **activated** with a first click. The the social media company will know - and
-the user can use the button as normal.
+To protect yourself there are ways to **de-activate** the button until it is **activated** with a first click. The the social media company will know - and the user can use the button as normal.
 
 Several Extensions offer this. Privacy Badger is amongst them.
 
@@ -203,14 +197,11 @@ So please harden your web sites if you run any. To help you do that there is the
 
 ## Attack on Routers
 
-As the browser is the configuration interface for your local network (WiFi Access point, routers, ....) malware running in hacked pages can try to exploit
-standard user names, vulnerabilities or long lasting login cookies to manipulate the settings of your router.
+As the browser is the configuration interface for your local network (WiFi Access point, routers, ....) malware running in hacked pages can try to exploit standard user names, vulnerabilities or long lasting login cookies to manipulate the settings of your router.
 
-A standard goal is to set the DNS used by your router to the attacker's DNS server. Every entry there is the same as for an official DNS. Exceptions are: Banks
-(now leading to phishing sites) and maybe update sites for your Anti-Virus leading to nowhere.
+A standard goal is to set the DNS used by your router to the attacker's DNS server. Every entry there is the same as for an official DNS. Exceptions are: Banks (now leading to phishing sites) and maybe update sites for your Anti-Virus leading to nowhere.
 
-Update your router, do not go for the cheap ones. Log out after configuration. Maybe use a different browser profile or browser for Administration tasks  -
-and not the one you use for browsing for cat videos.
+Update your router, do not go for the cheap ones. Log out after configuration. Maybe use a different browser profile or browser for Administration tasks  - and not the one you use for browsing for cat videos.
 
 Examples:
 

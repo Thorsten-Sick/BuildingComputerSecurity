@@ -1,7 +1,6 @@
 # Recon-NG {#chapter-recon-ng}
 
-[Recon-NG](https://github.com/lanmaster53/recon-ng) is a Web Reconnaissance framework. It can be used to investigate
-web pages, people, companies and their connections with each other.
+[Recon-NG](https://github.com/lanmaster53/recon-ng) is a Web Reconnaissance framework. It can be used to investigate web pages, people, companies and their connections with each other.
 
 One strength is that it is using 3rd party info and does not necessarily directly connect to the target.
 

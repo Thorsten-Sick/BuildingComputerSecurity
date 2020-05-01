@@ -1,12 +1,9 @@
 # Intro {#chapter-background-intro}
 
-This book is written for the experienced engineer, manager, tester. And not
-for experienced security experts. So far security knowledge has not been very
-accessible. There are films - and most are horribly wrong. And there are complex
-books covering a specific topic in depth.
+This book is written for the experienced engineer, manager, tester. And not for experienced security experts. So far security knowledge has not been very
+accessible. There are films - and most are horribly wrong. And there are complex books covering a specific topic in depth.
 
-If you not hyper-focused on security is is quite easy to either get lost in myths or
-complexity.
+If you not hyper-focused on security is is quite easy to either get lost in myths or complexity.
 
 I want to get you the foundations to contribute to the security of your product.
 

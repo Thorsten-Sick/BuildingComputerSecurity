@@ -1,9 +1,5 @@
 # Software Design {#chapter-design}
 
-C> By Thorsten Sick
-
-C> For Designers, Managers, Architects and Developers
-
 Architecture and design already starts long before someone starts to code. As it can also include preparing the environment, tools and getting the requirement it has a blurred line to management tasks.
 
 Microsoft had a very bad security reputation many years ago. This is why they started to use their "Security Development Life cycle" in their project - resulting in incredible security improvements.

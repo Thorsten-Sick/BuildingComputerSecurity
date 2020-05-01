@@ -1,18 +1,12 @@
 # Behaviour based classification {#chapter-antivirus-behaviour-based-classification}
 
-C> By: Thorsten Sick
-
-C> For: Architects
-
-Classification is the process that gets you from "I have a file and do not know what it is"
-to "this file is malware".
+Classification is the process that gets you from "I have a file and do not know what it is" to "this file is malware".
 
 Bonus points for the type of malware (trojans, infectors, ...) or the exact family name.
 
 Even more bonus points for a detailed analysis.
 
-There are several ways to classify files. And one of them is behaviour based.
-This is: observing the behaviour of the file and judging based on that.
+There are several ways to classify files. And one of them is behaviour based. This is: observing the behaviour of the file and judging based on that.
 
 **Advantages**
 
@@ -32,40 +26,29 @@ This is: observing the behaviour of the file and judging based on that.
 
 ## Container, Virtual Machines or Bare Metal
 
-Behaviour analysis of malware can either happen on virtual machines or Bare
- Metal. Both systems must be reset after each malware run. So a virtual
+Behaviour analysis of malware can either happen on virtual machines or Bare Metal. Both systems must be reset after each malware run. So a virtual
  machine is much faster.
 
-Container technology is cool for deployment but it is **not** a security feature
-and does **not** properly isolate the guest from the host.
-Also: You can not simulate a totally different system in the container than on
-the host.
+Container technology is cool for deployment but it is **not** a security feature and does **not** properly isolate the guest from the host.
+Also: You can not simulate a totally different system in the container than on the host.
 
-So it is either a Virtual Machine or a (slow) Bare Metal system with hardware
-support for the reset.
+So it is either a Virtual Machine or a (slow) Bare Metal system with hardware support for the reset.
 
-If you use virtual machines: Run them on a dedicated analysis server and not
-on office environment.
+If you use virtual machines: Run them on a dedicated analysis server and not on office environment.
 
 ## Networking
 
-Malware is trying to connect to the C&C server. It needs either a real
-connection to the internet or a simulated server landscape.
+Malware is trying to connect to the C&C server. It needs either a real connection to the internet or a simulated server landscape.
 
-You want to separate the analysis machine from the company network. First to
-avoid the malware to escape into the office net. Second to avoid your IP to be
-blacklisted by ISPs as malware source.
+You want to separate the analysis machine from the company network. First to avoid the malware to escape into the office net. Second to avoid your IP to be blacklisted by ISPs as malware source.
 
-The analysis sandbox should be able to monitor network connections - so you do
-not have to do that centrally at a firewall. If your sandbox does not offer
-sufficient network monitoring you can log the connections at a firewall.
+The analysis sandbox should be able to monitor network connections - so you do not have to do that centrally at a firewall. If your sandbox does not offer sufficient network monitoring you can log the connections at a firewall.
 
 But be aware that many connections will be hidden (tunneled through a non-suspicious protocol like DNS) or encrypted.
 
 ## Pafish
 
-Virtual machines have a big disadvantage: They can be detected. Several
-characteristics are so typical for Virtual Machines that malware could detect
+Virtual machines have a big disadvantage: They can be detected. Several characteristics are so typical for Virtual Machines that malware could detect
 them and just play nice.
 
 There is a tool named [pafish](https://github.com/a0rtega/pafish) that detects sandboxes the way malware does.
@@ -78,17 +61,14 @@ This is based on:
 * Registry keys
 * Default settings for virtual machines
 
-Remove all those traces and you should be able to run malware without it detecting
-the machine.
+Remove all those traces and you should be able to run malware without it detecting the machine.
 
-Also: Never ever depend on one way to classify only ! Always use additional
-classifiers in parallel.
+Also: Never ever depend on one way to classify only ! Always use additional classifiers in parallel.
 
 ## VMCloak
 
 [VMCloak](http://vmcloak.org/) is a tool similar to
-[Vagrant](https://www.vagrantup.com) - it creates virtual machines. But the
-main goal is to hide them from malware detection.
+[Vagrant](https://www.vagrantup.com) - it creates virtual machines. But the main goal is to hide them from malware detection.
 
 Use VMCloak to create a virtual machine and test with Pafish if it can be detected.
 
@@ -98,22 +78,17 @@ Those VMs can be controlled by tools like Cuckoo to do the analysis.
 
 ## Cuckoo Sandbox
 
-[Cuckoo Sandbox](https://cuckoosandbox.org/) is an analysis environment. After setup you push files in and
-get behaviour reports, dropped files and verdicts out.
+[Cuckoo Sandbox](https://cuckoosandbox.org/) is an analysis environment. After setup you push files in and get behaviour reports, dropped files and verdicts out.
 
-As you will want to set it up on a special machine and getting your own
-configuration will take hours or days it deserves an own chapter.
+As you will want to set it up on a special machine and getting your own configuration will take hours or days it deserves an own chapter.
 
-With a bit of luck the online service version of Cuckoo Sandbox
-[malwr.com](https://malwr.com) is up and you can use that for non-private analysis.
+With a bit of luck the online service version of Cuckoo Sandbox [malwr.com](https://malwr.com) is up and you can use that for non-private analysis.
 
 ## Small print
 
-I contributed to Pafish, VMCloak and Cuckoo Sandbox - so I may be biased. On the
-other hand: There are either no real alternatives or people keep telling me
+I contributed to Pafish, VMCloak and Cuckoo Sandbox - so I may be biased. On the other hand: There are either no real alternatives or people keep telling me
 those tools are good.
 
-For Cuckoo Sandbox there are alternatives. Just check if they are re-branded
-Cuckoos or something unique.
+For Cuckoo Sandbox there are alternatives. Just check if they are re-branded Cuckoos or something unique.
 
 %% TODO Further reading

@@ -1,9 +1,5 @@
 # Crypto algorithms {#chapter-crypto-algorithms}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers
-
 Crypto Algorithms are the basic building blocks of encryption. Above them are protocols ("how do we glue algorithms together to achieve our goal ?"). And above the protocols are libraries offering an easy programming interface to use a protocol.
 
 In many cases the user of the library still has to pick the algorithm to slot into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
@@ -17,8 +13,7 @@ Normally experts will warn months or even years before a realistic attack on an 
 
 **Be prepared to swap the algorithm used in your products and services**
 
-If you rely on a crypto book on your desk, check out the date it was published. During the last years new attacks have been invented and some algorithms and
-protocols did not age well. If your decisions still are based on a book from 1995 they will be wrong - even if the book was great at that time.
+If you rely on a crypto book on your desk, check out the date it was published. During the last years new attacks have been invented and some algorithms and protocols did not age well. If your decisions still are based on a book from 1995 they will be wrong - even if the book was great at that time.
 
 Be aware: This chapter is an extreme simplification. If crypto security is an essential part of your project dig deeper and use the *further reading* section.
 

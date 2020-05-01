@@ -9,8 +9,7 @@ It has the benefits that it is fast and simple. It can be run with commit hooks 
 Disadvantage is the potential for false positives and that it will miss a big chunk of vulnerabilities. As it is simple and cheap: Do it. And do other things as well.
 
 **Dynamic code analysis**:
-Runs a specially compiled version of your program and checks it for
-mis-behaviour. Very good at finding tricky memory bugs and similar issues. It is powerful if you have an automated test framework or fuzzer that does the running of your program for you. Can be done nightly or at least during weekends. You should of course fix all found bugs.
+Runs a specially compiled version of your program and checks it for mis-behaviour. Very good at finding tricky memory bugs and similar issues. It is powerful if you have an automated test framework or fuzzer that does the running of your program for you. Can be done nightly or at least during weekends. You should of course fix all found bugs.
 **Important**:
 You do not want to release this special version compiled with dynamic code analysis. It is for your testers only. Because side effects of dynamic code analysis is slow down and increased size.
 

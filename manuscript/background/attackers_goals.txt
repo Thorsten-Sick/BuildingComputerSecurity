@@ -1,9 +1,5 @@
 # Attacker's goals {#chapter-attackers-goals}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Manager
-
 Attackers have goals they want to achieve. Many of them are linked to *making money*.
 In those cases there are some specific things to be aware of:
 

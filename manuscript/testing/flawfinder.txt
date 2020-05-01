@@ -1,15 +1,9 @@
 # Flawfinder {#chapter-flawfinder}
 
-C> By: Thorsten Sick
-
-C> For: Developers, Testers
-
 [Flawfinder](https://www.dwheeler.com/flawfinder/)
 
-Flawfinder is a simple static code analysis tool. One of the "grep on speed"
-kind. It is simple - so it should be one of the first tools to use to verify
-your code. One nice thing: It puts the important messages first. So start
-checking the code from top to bottom.
+Flawfinder is a simple static code analysis tool. One of the "grep on speed" kind. It is simple - so it should be one of the first tools to use to verify
+your code. One nice thing: It puts the important messages first. So start checking the code from top to bottom.
 
 As it is simple it will not find all vulnerabilities. You should continue with
 other tools and code-reviews even if flawfinder gives you green lights.
@@ -23,8 +17,7 @@ Flawfinder has two important modes:
 
 ## Finding issues
 
-[Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program
-to test your fuzzer.
+[Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program to test your fuzzer.
 
 Running flawfinder on Fuzzgoat results in this kind of log:
 
@@ -84,8 +77,7 @@ Running flawfinder on Fuzzgoat results in this kind of log:
 
 ## Finding inputs
 
-As inputs into a program must be verified, filtered and sanitized it is a
-handy feature of flawfinder to search for code offering inputs.
+As inputs into a program must be verified, filtered and sanitized it is a handy feature of flawfinder to search for code offering inputs.
 
 Use that tool and spend some time writing code to verify the input data.
 

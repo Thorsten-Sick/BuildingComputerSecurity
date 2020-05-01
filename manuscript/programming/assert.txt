@@ -1,34 +1,21 @@
 # Asserts {#chapter-asserts}
 
-C> By: Thorsten Sick
-
-C> For: Developers
-
 Asserts are debugging tools.
 
-They are a building block to guarantee **robust** code. And robust code is
-the foundation for secure code.
+They are a building block to guarantee **robust** code. And robust code is the foundation for secure code.
 
-Basically they test for program states **that should never happen**. If they
-trigger they terminate the program right away. That way it is quite simple to
-detect defects.
+Basically they test for program states **that should never happen**. If they trigger they terminate the program right away. That way it is quite simple to detect defects.
 
 In C asserts are only active in the Debug version of the program.
 
 A simple way of doing module tests "light" (as in "unit tests") is to use an assert.
-Asserts are used during the development and debug phase and will be switched off
-in release (by define NDEBUG for C). Asserts make sure a certain condition is
-true. If not, the program aborts and you can start debugging it.
-By using asserts you can trigger this easy-to-debug abort program crash to the issue
-where an invalid state has been generated. Without an assert it could happen
-that your program limps on and crashes in some very unrelated function.
+Asserts are used during the development and debug phase and will be switched off in release (by define NDEBUG for C). Asserts make sure a certain condition is true. If not, the program aborts and you can start debugging it.
+By using asserts you can trigger this easy-to-debug abort program crash to the issue where an invalid state has been generated. Without an assert it could happen that your program limps on and crashes in some very unrelated function.
 Debugging that is much harder.
 
-Good places to put you assert-commands are at the *beginning* and the *end*
-of functions and *after complex calculations* internally.
+Good places to put you assert-commands are at the *beginning* and the *end* of functions and *after complex calculations* internally.
 
-You should never check any state with asserts that could theoretically happen
-in your program. For that there is normal error handling code.
+You should never check any state with asserts that could theoretically happen in your program. For that there is normal error handling code.
 
 ## Asserts in C
 
@@ -39,8 +26,7 @@ in your program. For that there is normal error handling code.
         return ERROR;
     }
 
-Good things to check are pointers in parameters where the contract
-defines that they must point to a structure:
+Good things to check are pointers in parameters where the contract defines that they must point to a structure:
 
 {lang="c"}
     #include <assert.h>
@@ -63,8 +49,7 @@ As said before:
 * Before calling 3rd party functions check you honour their contract
 * After calling 3rd party functions: To verify they did not change their contract
 
-For release compile you will switch it off with **NDEBUG**. So there will be no
-runtime penalty for extreme validation.
+For release compile you will switch it off with **NDEBUG**. So there will be no runtime penalty for extreme validation.
 
 There is no reason to hold back when adding asserts.
 
@@ -76,16 +61,12 @@ There is no reason to hold back when adding asserts.
         File "<stdin>", line 1, in <module>
     AssertionError
 
-Assertions in python trigger *AssertionError* exceptions. They can be
-de-activated by the python command line switches *-O* or *-OO*
-(basic and extended optimization).
+Assertions in python trigger *AssertionError* exceptions. They can be de-activated by the python command line switches *-O* or *-OO* (basic and extended optimization).
 
-To have the full benefit of assertions (terminating programs) you should
-stick to best practice for error handling and never create "catch all"
+To have the full benefit of assertions (terminating programs) you should stick to best practice for error handling and never create "catch all"
 exception handlers but handle specific exceptions.
 
-That way **AssertionError** will not be handled by your code and cause
-program termination.
+That way **AssertionError** will not be handled by your code and cause program termination.
 
 ## JavaScript
 
@@ -94,8 +75,7 @@ program termination.
         AssertionError [ERR_ASSERTION]: testmessage
             at Console.assert (console.js:194:23)
 
-The disadvantage is that can not been toggled. It is active in *release*
-and *debug* version. Which makes aggressive usage of asserts risky. IMHO this
+The disadvantage is that can not been toggled. It is active in *release* and *debug* version. Which makes aggressive usage of asserts risky. IMHO this
 difference in usage is so huge that I would dare to call it "assert in name only".
 
 [Assert at MDN](https://developer.mozilla.org/en-US/docs/Web/API/console/assert)
