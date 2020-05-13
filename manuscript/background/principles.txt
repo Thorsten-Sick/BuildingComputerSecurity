@@ -159,6 +159,8 @@ This has several benefits:
 
 %% TODO: Write SIEM chapter for IoT projects and similar
 
+%% TODO: Check out sigma for SIEMs (https://github.com/Neo23x0/sigma)
+
 ## Educate users
 
 Users want the option to know what their technology is doing. Having two layers (simple and detailed) of information will very likely be embraced

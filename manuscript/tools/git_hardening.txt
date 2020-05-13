@@ -90,3 +90,5 @@ W> magic *find --name* and *fgrep* to write your own small checker.
 %% Two factor authentication
 
 %% Open Source testing: SonarCloud, CodeClimate, Snyk
+
+%% TODO: Gerrit, collaborative code review tool for git

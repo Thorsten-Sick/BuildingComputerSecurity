@@ -172,6 +172,10 @@ As it can be extended using python plugins, it is very flexible.
 %% [Code coverage](https://codecov.io)
 %% [Code review](https://www.codefactor.io)
 %% [Travis build system](https://travis-ci.org/)
-
+%% Todo: Type test system for Python: [PyType](https://google.github.io/pytype/)
 
 %% TODO: See also profiling.wip for stuff that is cool but not relevant here
+
+%% TODO: Pylint https://www.pylint.org
+
+%% TODO: Python static type checker: https://mypy-lang.org

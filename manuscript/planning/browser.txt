@@ -542,3 +542,8 @@ covers many attacks on web browsers. Its focus is on the BeEF framework.
 %% TODO: [XSS](https://github.com/dxa4481/XSSOauthPersistence)
 
 %% TODO: Routers inject coinhive script into websites (Mikrotick ISP routers from SN675)
+
+
+%% TODO: https://media.ccc.de/v/35c3-9979-the_layman_s_guide_to_zero-day_engineering
+
+%% TODO: https://media.ccc.de/v/35c3-9579-attacking_chrome_ipc

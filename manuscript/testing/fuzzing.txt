@@ -202,3 +202,15 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 
 %% TODO: Check out "spike": network based fuzzing
+
+%% TODO: Check AFL QEMU integration, This will work on non-instrumented binaries
+
+%% TODO; Check Honggfuzz
+
+%% TODO: Combine fuzz engines by swapping input samples. That way they will cover each other's weaknesses.
+
+%% TODO: Book "Building Secure and Reliable Systems", chapter 13
+
+%% TODO: Special compile flag -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
+
+%% TODO: OSS Fuzz: https://google.github.io/oss-fuzz/
