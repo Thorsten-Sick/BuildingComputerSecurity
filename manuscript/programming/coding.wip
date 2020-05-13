@@ -104,3 +104,7 @@ Also: Maybe you could want to uninstall some of those tools....
 %% https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
 
 %% Secure Programming Book: https://www.dwheeler.com/secure-programs/
+
+%% Static code analysis for c/C++/objective C and Java: https://fbinfer.com
+
+%% Worst case execution time test too: https://www.absint.com
