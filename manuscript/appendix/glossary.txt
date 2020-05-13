@@ -6,6 +6,8 @@
 
 **Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emitting more data than they receive are vulnerable. Also quite often uses stateless protocols like UDP because the initiator is different from the victim.
 
+**Anycast**: Several servers share the same IP address. The client connects to the closest one. Relevant if only one of them is hacked and serves malware...
+
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
 
 **ASLR**: Mitigation strategy to load code into **random** areas of the memory. Makes writing of exploits harder

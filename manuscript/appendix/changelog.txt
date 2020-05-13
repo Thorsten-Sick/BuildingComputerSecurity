@@ -67,6 +67,8 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming
 
 * Reworked layout. Removed headers from chapters
+* Extended Glossary
+
 
 %% TODO: Write tool to identify dangling .txt files
 
