@@ -1,0 +1,527 @@
+part;title;level;todos;words;link
+preface;This book;1;0;7;#chapter-this-book
+preface;Goals;2;0;118;
+preface;Release early, release often;2;0;285;
+preface;80/20 or Pareto Principle;2;0;425;
+preface;Form follows function;2;0;467;
+preface;All this said...;2;0;501;
+preface;Structure of this book;1;0;103;#chapter-structure
+preface;Project phases and audience;2;0;263;
+preface;Content;1;0;6;#chapter-content
+preface;Background;2;0;11;
+preface;Know your enemies;3;0;48;
+preface;Attacker's goals;3;0;87;
+preface;Principles;3;0;129;
+preface;Planning;2;0;134;
+preface;Threat modelling;3;0;241;
+preface;Software Design;3;0;307;
+preface;Vulnerabilities;3;0;364;
+preface;Security process;3;0;419;
+preface;Software Design Checklist;3;0;466;
+preface;UX;3;0;495;
+preface;Updates;3;0;536;
+preface;Passwords;3;0;581;
+preface;Browser;3;0;643;
+preface;Censorship;3;0;729;
+preface;IoT;3;0;763;
+preface;CAN;3;0;815;
+preface;Bluetooth LE;3;0;858;
+preface;TLS;3;0;893;
+preface;Crypto algorithms;3;0;949;
+preface;Programming;2;0;954;
+preface;Code analysis tools table;3;0;990;
+preface;Defensive programming;3;0;1051;
+preface;Assert;3;0;1094;
+preface;Compiling;3;0;1139;
+preface;Clang LLVM;3;0;1195;
+preface;JavaScript security;3;0;1250;
+preface;Testing;2;0;1255;
+preface;Testing compiled binaries;3;0;1295;
+preface;Flawfinder;3;0;1324;
+preface;CPPCheck;3;0;1360;
+preface;Testing;3;0;1403;
+preface;Fuzzing;3;0;1448;
+preface;Tools;2;0;1497;
+preface;SSH;3;0;1543;
+preface;Git;3;0;1628;
+preface;Bolt-on security;2;0;1673;
+preface;Antivirus tests;3;0;1711;
+preface;Antivirus integration;3;0;1754;
+preface;Antivirus sharing samples;3;0;1828;
+preface;Antivirus: VirusTotal;3;0;1874;
+preface;Antivirus: Behaviour based classification;3;0;1932;
+preface;IOC sources;3;0;1998;
+preface;Offense;2;0;2035;
+preface;Google Dorks;3;0;2074;
+preface;BeEF;3;0;2107;
+preface;Burp Suite;3;1;2158;
+preface;Appendix;2;0;2184;
+preface;External References;3;0;2204;
+preface;Glossary;3;0;2250;
+preface;The author;3;0;2266;
+preface;Authors;3;0;2314;
+preface;Changelog;3;0;2331;
+preface;License;3;0;2358;
+background;Intro;1;0;153;#chapter-background-intro
+background;Basics: Know your enemies;1;0;141;#chapter-attackers
+background;Hackers;2;0;351;
+background;University researchers;2;0;452;
+background;Script kiddies;2;0;511;
+background;Organized Crime;2;0;785;
+background;Nation state actors (NSA);2;0;970;
+background;In house attackers;2;1;1097;
+background;Attacker's goals;1;0;302;#chapter-attackers-goals
+background;Ransomware;2;0;354;
+background;Mining;2;0;432;
+background;Credential stealing;2;1;603;
+background;Injecting advertising;2;0;717;
+background;Banking;2;0;824;
+background;Wiping;2;0;919;
+background;Sending SPAM;2;0;1018;
+background;DDOS for hire;2;0;1083;
+background;Proxy for further attacks;2;0;1173;
+background;Persistence;2;0;1312;
+background;A trick: Living off the land;2;0;1428;
+background;A common requirement: C&C server;2;0;1569;
+background;Selecting victims;2;0;1584;
+background;Targeted attacks;3;0;1682;
+background;Opportunistic attacks;3;3;1809;
+background;Principles;1;1;93;#chapter-principles
+background;Bolt-on-security vs security-by-design;2;0;373;
+background;Threat modelling;2;1;593;
+background;Reduce Attack Surface;2;1;734;
+background;Compartmentalisation / Segmentation;2;0;841;
+background;Principle of "Least privilege";2;1;937;
+background;Updates;2;0;1000;
+background;Flexibility;2;0;1079;
+background;Do not make mistakes;2;0;1154;
+background;De-centralisation;2;0;1216;
+background;Fail gracefully;2;0;1272;
+background;Monitor / Incident Response;2;2;1478;
+background;Educate users;2;1;1592;
+background;Defense in Depth;2;0;1756;
+background;Filter at the endpoint;2;0;1928;
+background;Tripwires;2;0;2025;
+background;Slow down the attacker;2;0;2101;
+background;Security by Obscurity;2;0;2272;
+background;Security Theater;2;0;2359;
+background;Hollywood threats;2;0;2450;
+background;Further reading;2;0;2456;
+background;Ghost in The Wires;3;0;2523;
+background;Beyond Fear;3;0;2584;
+background;Future Crimes;3;0;2651;
+planning;Intro;1;0;97;#chapter-planning-intro
+planning;Threat Modelling;1;0;408;#chapter-threat-modelling
+planning;Security cards;2;0;476;
+planning;STRIDE;2;1;506;
+planning;Attack tree;2;0;600;
+planning;Persona non Grata;2;0;687;
+planning;CVSS;2;0;781;
+planning;Thorsten Style;2;0;959;
+planning;Software Design;1;2;98;#chapter-design
+planning;Preparation;2;0;103;
+planning;Infrastructure;3;0;187;
+planning;Hardening Open Source Development;2;2;345;
+planning;Basics;2;0;350;
+planning;Fixing Bugs;3;0;443;
+planning;Data files;3;0;488;
+planning;Complexity;2;0;1111;
+planning;System architecture;2;0;1159;
+planning;Further reading;2;0;1165;
+planning;Security Engineering;3;0;1238;#reference-book-security-engineering
+planning;Vulnerabilities;1;0;316;#chapter-vulnerabilities
+planning;Vulnerability knowledge pools;2;0;400;
+planning;Building bugs and flaws;2;0;490;
+planning;CVSS Score;2;0;593;
+planning;Security process;2;6;811;
+planning;Security process;1;0;22;#chapter-security-process
+planning;Basics;2;0;156;
+planning;Good and bad ways to find vulnerabilities;2;0;970;
+planning;The three steps;2;1;1187;
+planning;Example: Mozilla;2;6;1434;
+planning;Software Design Checklist;1;0;27;#chapter-design-checklist
+planning;My secret source;2;0;175;
+planning;Checklist;2;0;632;
+planning;Further reading;2;0;693;
+planning;Specific;3;0;746;
+planning;Sources for talks;3;0;760;
+planning;User interfaces;1;2;140;#chapter-user-interface
+planning;Todo;2;0;195;
+planning;Not todo;2;0;215;
+planning;Attacks;2;0;434;
+planning;Details Todo list;2;0;441;
+planning;Find usability experts;3;0;507;
+planning;Secure setting is default;2;0;653;
+planning;Prevent warning fatigue;3;0;775;
+planning;Show marker on warning;3;0;832;
+planning;Unique warning ID ?;3;0;889;
+planning;Create event logs;3;0;955;
+planning;Stop the user's momentum;3;0;1130;
+planning;Details Not-todo list;2;0;1137;
+planning;Show security UI on external content area;3;0;1195;
+planning;Not deciding is the secure option;3;0;1252;
+planning;Over-simplify;3;0;1405;
+planning;Updates;1;1;51;#chapter-updates
+planning;Todo;2;0;113;
+planning;Not todo;2;0;139;
+planning;Response Time;2;0;532;
+planning;Details todo list;2;0;539;
+planning;Be able to rollback;3;0;604;
+planning;Verify signature;3;0;743;
+planning;Secure key handling;3;0;848;
+planning;Verify version - only upgrade;2;0;931;
+planning;Track distribution;2;0;960;
+planning;Be able to stop updates;2;0;1023;
+planning;Distributing the updates;2;1;1232;
+planning;Compress updates;2;0;1296;
+planning;Diff updates;2;0;1395;
+planning;Incentives;2;1;1455;
+planning;Automatic updates;2;0;1545;
+planning;Control the update infrastructure;2;0;1632;
+planning;Details Not-todo list;2;0;1639;
+planning;TOCTTOU Time of check to time of use - error;3;0;1759;
+planning;Break the update chain;2;0;1816;
+planning;Passwords;1;0;50;#chapter-passwords
+planning;PINs;2;0;152;
+planning;Passwords;2;0;228;
+planning;Passphrases;2;0;290;
+planning;Entropy matters;2;0;621;
+planning;Password hints;2;0;646;
+planning;Preventing copy & paste;2;0;775;
+planning;Forgot password;2;0;873;
+planning;TTL for passwords;2;0;914;
+planning;Autofill trap;2;0;969;
+planning;Stolen passwords;2;1;1100;
+planning;Cracking passwords;2;0;1146;
+planning;Rainbow tables;2;0;1307;
+planning;Word lists;3;1;1382;
+planning;Keyloggers;2;0;1551;
+planning;IoT: Initial passwords;2;0;1647;
+planning;Salting;2;0;1770;
+planning;Pepper;2;3;1914;
+planning;Browser security;1;0;196;#chapter-browser-security
+planning;Choosing the right browser;2;1;264;
+planning;Harden your browser;2;2;396;
+planning;Basic browser security philosophy;2;0;524;
+planning;Ads/Malvertizing;2;0;753;
+planning;Privacy;2;0;928;
+planning;Social Icons: Facebook and Twitter trackers;3;0;1120;
+planning;Exploit Kits;2;2;1364;
+planning;Cookies;2;0;1540;
+planning;Fingerprinting;2;0;1634;
+planning;TLS/SSL/HTTPS;2;3;1904;
+planning;Facebook;2;0;1919;
+planning;BeEF;2;0;2012;
+planning;Burp Suite;2;0;2136;
+planning;Attack on Routers;2;3;2334;
+planning;Phishing;2;3;2550;
+planning;Pseudonymity;2;0;2657;
+planning;Further reading;2;0;2663;
+planning;The Browser Hacker's Handbook;3;6;2869;
+planning;Crypto mining;2;1;3023;
+planning;Pony / Fareit;2;0;3173;
+planning;URL blacklists;2;0;3273;
+planning;Browser god modes;2;0;3280;
+planning;Chrome keyboard shortcuts;3;0;3323;
+planning;Chrome command line parameters;3;0;3478;
+planning;Network Security;4;0;3547;
+planning;Crypto security;4;0;3607;
+planning;Sandbox;4;0;3651;
+planning;Plugins/Extensions;4;0;3702;
+planning;Everything else;4;1;3750;
+planning;Special chrome URLs;3;23;4481;
+planning;Censorship;1;0;189;#chapter-censorship
+planning;Mapping censorship;2;0;220;
+planning;OONI by the Tor project;3;0;306;
+planning;Netblocks;3;0;338;
+planning;Blocked.org.uk;3;0;381;
+planning;Censorship countermeasures;2;0;402;
+planning;Messenger;3;0;407;
+planning;Jabber + OMEMO;4;0;554;
+planning;Signal;4;0;621;
+planning;Threema;4;0;709;
+planning;Telegram;4;0;793;
+planning;Browser replacement;3;0;799;
+planning;Tor browser;4;1;999;
+planning;Network infrastructure;3;0;1113;
+planning;DNS;4;0;1251;
+planning;File sharing;3;1;1357;
+planning;Further reading;2;2;1415;
+planning;IoT security;1;0;52;#chapter-iot
+planning;Class break;2;0;217;
+planning;Interfaces (UART, JTAG);2;0;559;
+planning;Public key challenge response;3;2;934;
+planning;CAN Bus;1;0;209;#chapter-can-bus
+planning;can-utils;2;0;297;
+planning;candump;3;0;416;
+planning;Other tools in can-utils;3;0;658;
+planning;PEAK CAN controller specific;3;0;843;
+planning;Python;2;1;1156;
+planning;Fuzzing the CAN bus with python;2;0;1392;
+planning;Further reading;2;0;1408;
+planning;The Car Hacker's Handbook: A Guide for the Penetration Tester;3;5;1554;
+planning;Bluetooth LE;1;0;24;#chapter-btle
+planning;Basics;2;0;280;
+planning;Potential attacks;2;0;474;
+planning;BLE Security;2;0;732;
+planning;Nordic Semiconductor: nRF Connect;2;0;822;
+planning;Basic OS tools;2;1;1010;
+planning;Bleah - Bluetooth LE hacking;2;0;1343;
+planning;Bluepy - python library for Bluetooth le;2;1;1424;
+planning;BlueZ;2;0;1452;
+planning;Adafruit Bluetooth LE sniffer;2;3;1757;
+planning;Crackle: BTLE key cracking;3;0;1973;
+planning;Training: BLE CTF (Capture the Flag);2;1;2129;
+planning;Further reading;2;0;2204;
+planning;Book: Make: Bluetooth;3;0;2272;#reference-book-make-bluetooth
+planning;Book: IoT Projects with Bluetooth Low Energy;3;4;2455;#reference-book-iot-projects-with-bluetooth-low-energy
+planning;Woot13 presentation on BTLE hacking (especially sniffing);3;0;2570;#reference-presentation-btle-sniffing
+planning;SHA2017 presentation on BTLE hacking "hack-a-ble";3;0;2598;#reference-presentation-hack-a-ble
+planning;Lockpicking in the IoT;3;3;2690;#reference-presentation-lockpicking-in-the-iot
+planning;Blue Hydra;3;1;2720;
+planning;TLS aka SSL aka HTTPS;1;0;406;#chapter-tls
+planning;TLS handshake;2;0;577;
+planning;What to encrypt (for web pages);2;0;853;
+planning;Mozilla server side TLS config guide;2;0;908;
+planning;Certificates;2;0;1204;
+planning;Certificate content and structure;2;0;1266;
+planning;Revocation (OCSP = Online Certificate Status Protocol);2;0;1438;
+planning;OCSP Stapling;2;0;1540;
+planning;Key/Certificate lifetime;2;0;1667;
+planning;Testing TLS;2;0;1726;
+planning;HSTS - HTTP Strict Transport Security;2;2;1894;
+planning;HPKP - HTTP Public Key Pinning;2;0;2105;
+planning;Certificate Transparency;2;0;2201;
+planning;UDP: DTLS;2;0;2221;
+planning;Weaknesses and catastrophes;2;0;2284;
+planning;Testing SSL;2;0;2308;
+planning;Further reading;2;0;2314;
+planning;Serious Cryptography by Jean-Philippe Aumasson;3;0;2364;
+planning;The Mozilla TLS guide;3;0;2411;
+planning;Statistics;3;0;2425;
+planning;Talks;3;7;2579;
+planning;Crypto algorithms;1;0;379;#chapter-crypto-algorithms
+planning;Hash functions;2;1;833;
+planning;HMAC or MAC;2;1;950;
+planning;Password hash functions;2;2;1226;
+planning;Stream Ciphers;2;2;1316;
+planning;Block Ciphers;2;0;1367;
+planning;Algorithms;3;0;1439;
+planning;Modes;3;1;1633;
+planning;Authenticated Encryption;2;1;1880;
+planning;Asymmetric Ciphers;2;1;1938;
+planning;Key exchange;2;0;2090;
+planning;Elliptic Curve Cryptography (ECC);2;0;2204;
+planning;Key length;2;0;2282;
+planning;Further reading;2;0;2288;
+planning;Serious Cryptography by Jean-Philippe Aumasson;3;0;2338;
+planning;The Mozilla TLS guide;3;0;2385;
+planning;BetterCrypto.org;3;4;2526;
+programming;Intro;1;0;124;#chapter-programming-intro
+programming;Requirements for code analysis tools;1;0;560;#chapter-code-analysis-tools-table
+programming;Some background;2;0;698;
+programming;Defensive programming;1;1;29;#chapter-defensive-programming
+programming;Short abstract;2;0;110;
+programming;TODO;2;0;167;
+programming;Typical attacks on programs;2;0;313;
+programming;Details todo list;2;0;320;
+programming;Focus on vulnerable code first;3;0;443;
+programming;Reduce complexity;3;17;998;
+programming;Memory writing mess;3;0;1136;
+programming;Use external libraries;3;2;1572;
+programming;malloc/free best practice;3;0;1797;
+programming;Input validation;3;0;1847;
+programming;Encrypt all the data sent over network;3;2;1926;
+programming;Exceptions vs. return values;3;0;2024;
+programming;Basic pattern for C coding;2;1;3063;
+programming;Memsad rabbit hole;2;0;3243;#memsad
+programming;Further reading;2;0;3249;
+programming;CERT coding standards for C and C++;3;0;3285;
+programming;Wikipedia;3;0;3301;
+programming;Secure programming Cookbook;3;0;3341;
+programming;Building secure software;3;0;3392;
+programming;Writing unmaintainable code;3;0;3447;
+programming;Secure coding in C and C++;3;0;3491;
+programming;Asserts;1;0;277;#chapter-asserts
+programming;Asserts in C;2;0;558;
+programming;Assert for python;2;0;692;
+programming;JavaScript;2;1;809;
+programming;Positive side effects of asserts;2;1;895;
+programming;Compiling;1;1;394;#chapter-compiling
+programming;Build system;2;0;589;
+programming;Use Docker;2;1;686;
+programming;Use Vagrant;2;0;910;
+programming;Vagrant for build system;3;0;1078;
+programming;Vagrant for testing system;3;1;1194;
+programming;Compile for Linux;2;0;1289;
+programming;Reproducible builds;2;0;1435;
+programming;Compiler warnings/static code analysis;2;0;1486;
+programming;Static code analysis;2;0;1493;
+programming;Compile switches;3;0;1678;
+programming;Special tool: Splint;3;0;1708;
+programming;Special tool: Flawfinder;3;0;1778;
+programming;Special tool: CPPCheck;3;1;1949;
+programming;Mitigation and hardening;2;0;2055;
+programming;Mitigation/hardening switches;3;0;2061;
+programming;GCC;4;11;2376;
+programming;Clang;1;0;160;#chapter-clang
+programming;Warnings and hardening;2;0;371;
+programming;Static analysis;2;1;473;
+programming;Dynamic code analysis;2;0;726;
+programming;ASAN (Address Sanitizer);2;0;783;
+programming;LSAN (Leak Sanitizer);2;0;862;
+programming;UBSan (Undefined Behaviour Sanitizer);2;0;908;
+programming;Memory Sanitizer;2;0;951;
+programming;Thread Sanitizer;2;0;1001;
+programming;Code coverage;2;1;1112;
+programming;Fuzzing;2;0;1139;
+programming;JavaScript;1;0;104;#chapter-javascript-security
+programming;Retire.js;2;2;279;
+programming;Use a linter: ESLint;2;0;714;
+programming;Bonus level;3;0;889;
+programming;Strict;2;0;1078;
+programming;The JS eco system;2;0;1205;
+testing;Intro;1;0;108;#chapter-testing-intro
+testing;Testing compiled binaries;1;0;144;#chapter-testing-compiling
+testing;Linux;2;2;444;
+testing;Windows;2;0;823;
+testing;Description of the fields;3;1;1047;
+testing;Attached info;2;0;1191;
+testing;Flawfinder;1;0;164;#chapter-flawfinder
+testing;Finding issues;2;0;925;
+testing;Finding inputs;2;0;1346;
+testing;Cppcheck;1;0;173;#chapter-cppcheck
+testing;The Makefile;2;0;227;
+testing;Feature: Library verification;2;0;484;
+testing;Further reading;2;1;516;
+testing;Testing practice;1;0;114;#chapter-testing
+testing;Have testers;2;0;204;
+testing;What to test;2;2;400;
+testing;Unit tests;2;0;480;
+testing;Verification tests;2;0;550;
+testing;Performance tests;2;0;656;
+testing;Destructive testing;2;0;711;
+testing;External reviews;2;0;850;
+testing;Bug bounties;2;1;1059;
+testing;Further Reading;2;0;1065;
+testing;Test Driven Development for Embedded C by James W. Grenning;3;0;1135;
+testing;Code Coverage;1;0;149;#chapter-code-coverage
+testing;GCC;2;3;403;
+testing;Fuzzing;1;0;372;#chapter-fuzzing
+testing;Training project;2;0;427;
+testing;Fuzzing hardware;2;0;532;
+testing;DIY fuzzer;2;1;918;
+testing;Radamsa;2;0;1077;
+testing;AFL American fuzzy lop;2;0;1307;
+testing;libFuzzer;2;1;1411;
+testing;More fuzzing tricks;2;10;1674;
+tools;Intro;1;0;157;#chapter-tools-intro
+tools;SSH;1;0;23;#chapter-ssh
+tools;Reasons for SSH;2;0;216;
+tools;Background;2;0;510;
+tools;Client configuration;3;0;642;
+tools;known_hosts;3;1;780;
+tools;Key generation;2;0;959;
+tools;Show (managed) keys;2;0;1043;
+tools;Deploying keys;2;0;1226;
+tools;Get a shell;2;0;1309;
+tools;Execute commands;2;0;1377;
+tools;File transfer (scp);2;0;1465;
+tools;SSHFS;2;0;1588;
+tools;GIT;2;0;1763;
+tools;SSH Tunneling;2;3;1919;
+tools;Telnet;2;0;1967;
+tools;Further reading;2;0;1973;
+tools;SSH, The Secure Shell: The Definitive Guide, 2nd Edition;3;0;2072;
+tools;GIT hardening;1;0;319;#chapter-git
+tools;Do not commit credentials and secrets;2;2;659;
+bolt_on;Intro;1;0;176;#chapter-bolt-on-intro
+bolt_on;Anti Virus tests;1;0;25;#chapter-antivirus-tests
+bolt_on;Abstract;2;0;307;
+bolt_on;Methods;2;0;323;
+bolt_on;Classic scan;3;0;440;
+bolt_on;Real-world protection tests;3;0;540;
+bolt_on;DIY malware tests;3;0;647;
+bolt_on;Eicar;2;1;853;#chapter-eicar
+bolt_on;Windows Defender;2;0;1001;
+bolt_on;Antivirus Integration;1;0;64;#chapter-antivirus-integration
+bolt_on;What to scan;2;0;254;
+bolt_on;AMSI;2;1;554;
+bolt_on;Google Safe Browsing;2;0;734;
+bolt_on;Sharing malware samples;1;2;763;#chapter-sharing-samples
+bolt_on;The reason why your software is detected as a false positive (all the time);2;0;1019;
+bolt_on;Where to submit to AV companies;2;0;1107;
+bolt_on;Submission by Mail;2;0;1228;
+bolt_on;Security without borders;2;0;1270;
+bolt_on;Citizen Lab;2;0;1324;
+bolt_on;CCC;2;0;1384;
+bolt_on;Sucker punch;2;1;1606;
+bolt_on;VirusTotal;1;0;269;#chapter-virustotal
+bolt_on;DIY AV testing using VirusTotal: Does not work;2;0;362;
+bolt_on;Getting a feeling for a file;2;0;577;
+bolt_on;Submitting samples;2;0;650;
+bolt_on;Not to do: Uploading APT samples;2;3;791;
+bolt_on;Behaviour based classification;1;0;311;#chapter-antivirus-behaviour-based-classification
+bolt_on;Container, Virtual Machines or Bare Metal;2;0;454;
+bolt_on;Networking;2;0;600;
+bolt_on;Pafish;2;0;737;
+bolt_on;VMCloak;2;0;812;
+bolt_on;Cuckoo Sandbox;2;0;909;
+bolt_on;Small print;2;0;983;
+bolt_on;Malware Sources;1;0;23;#chapter-malware-sources
+bolt_on;Sources for IOCs;2;0;116;
+bolt_on;Exploit kits;2;0;132;
+bolt_on;C&C;2;0;143;
+bolt_on;Malware;2;0;156;
+bolt_on;Malicious URLs;2;0;168;
+bolt_on;Phishing;2;0;179;
+bolt_on;Data breaches;2;0;191;
+offense;Intro;1;0;204;#chapter-offense-intro
+offense;Google Dork;1;0;29;#chapter-google-dork
+offense;Basics;2;0;110;
+offense;SEO expertise;2;0;280;
+offense;Vulnerability indicators;2;0;379;
+offense;Defense;2;0;436;
+offense;Further reading;2;0;482;
+offense;Beef;1;0;26;#chapter-beef
+offense;Basics;2;0;153;
+offense;Features;2;0;276;
+offense;Defense;2;0;313;
+offense;Further reading;2;1;350;
+offense;Burp suite;1;0;27;#chapter-burp
+offense;Basics;2;0;57;
+offense;Defense;2;0;144;
+offense;Further reading;2;1;174;
+appendix;External references and resources;1;0;13;#chapter-references
+appendix;Book: Practical Internet of Things Security;3;0;135;#reference-book-practical-iot-security
+appendix;Book: "Test driven development for embedded C";3;1;219;#reference-book-tdd-4-embedded-c
+appendix;The Browser Hacker's Handbook;3;5;319;#reference-book-browser-hacker-handbook
+appendix;Book: IoT Penetration Cookbook;3;0;373;#reference-book-iot-penetration-cookbook
+appendix;The human mind;2;0;380;
+appendix;Book: Pragmatic Thinking and Learning;3;0;438;#reference-book-pragmatic-thinking-and-learning
+appendix;Driving Technical Change;3;0;499;#reference-book-driving-technical-change
+appendix;Anti Patterns;3;0;589;#reference-book-anti-patterns
+appendix;Testing projects;2;0;597;
+appendix;Getting used to security;2;0;633;
+appendix;Workshops;2;1;658;
+appendix;CTF;2;1;709;
+appendix;Economics;2;1;832;
+appendix;Glossary;1;7;1232;#chapter-glossary
+appendix;The author;1;1;402;#chapter-the-author
+appendix;The origin story: External brain;2;0;508;
+appendix;Authors;1;0;93;#chapter-authors
+appendix;Credits;1;0;107;#chapter-credits
+appendix;Changelog;1;8;281;#chapter-changelog
+appendix;April 2019;2;0;308;
+appendix;March 2019;2;0;404;
+appendix;February 2019;2;0;460;
+appendix;January 2019;2;0;630;
+appendix;December 2018;2;0;696;
+appendix;November 2018;2;0;794;
+appendix;October 2018;2;0;881;
+appendix;September 2018;2;0;937;
+appendix;August 2018;2;0;1036;
+appendix;July 2018;2;1;1119;
+appendix;June 2018;2;0;1168;
+appendix;May 2018, initial release;2;0;1231;
+appendix;License;1;0;24;#chapter-license
