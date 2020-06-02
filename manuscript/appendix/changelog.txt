@@ -62,6 +62,10 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add Pwnagotchi
 
+## May 2020
+
+* Extended Glossary
+
 ## April 2020
 
 %% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming

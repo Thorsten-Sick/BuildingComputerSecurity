@@ -50,6 +50,8 @@
 
 **DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
 
+**Differential privacy**: Is a way to collect statistical data on clients/users without compromising the privacy of specific users
+
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel

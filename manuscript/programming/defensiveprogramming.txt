@@ -120,10 +120,13 @@ Other ways to reduce complexity:
 
 ### Memory writing mess
 
-memcpy/strcpy/gets/...
+%% TODO: Rewrite
 
-Do not copy more bytes than the buffer can contain. Strings in C have a
-terminating 0 byte, take this into consideration...
+C, C++ and assembler lack *memory safety*. Complexity in handling memory and pointers results in a high percentage of bugs caused by memory issues in those languages.
+
+memcpy/strcpy/gets are the main culprits.
+
+Do not copy more bytes than the buffer can contain. Strings in C have a terminating 0 byte, take this into consideration...
 
 Search in your code for **strcpy**, **sprintf**, ... those functions are to be replaced
 with **strncpy** and **strnprintf** right now. Those variants respect the target
