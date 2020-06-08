@@ -41,6 +41,13 @@ Better filter it (used that for *ping*):
     frida-trace -p <pid> -i "*sendto*"
     # 824 ms sendto(sockfd=0x3, buf=0x..., len=0x40, flags=0x0, dest_addr=0x..., addrlen=0x10)
 
+%% TODO: http://www.hexacorn.com/blog/2020/05/29/my-first-encounter-with-frida/
+%% TODO: https://github.com/MicrosoftDocs/sdk-api
+%% TODO: http://www.hexacorn.com/blog/2020/05/31/fridatrace-quick-dirty-api-monitor/
+
+%%%%%%%%%%%%%%%%
+
+
 %% TODO: Frida fuzzing https://www.kitploit.com/2020/04/frida-api-fuzzer-this-experimetal.html
 
 %% TODO: Bypassing Xamarin/Mono certificate pinning: https://www.gosecure.net/blog/2020/04/06/bypassing-xamarin-certificate-pinning-on-android/

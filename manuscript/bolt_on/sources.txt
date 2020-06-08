@@ -33,7 +33,7 @@ Download samples from there to get new malware
 
 ## Malicious SSL Certificates
 
-[SSL Blacklist](https://sslbl.abuse.ch)
+[SSL block list](https://sslbl.abuse.ch)
 
 ## Phishing
 

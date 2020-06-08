@@ -307,3 +307,5 @@ There are also CTF competitions:
 %% TODO: state of the web: almanac.httparchive.org/en/2019
 
 %% TODO: @Cryptolaemus (Emotet IOCs)
+
+%% https://code.likeagirl.io/pushing-left-like-a-boss-part-1-80f1f007da95

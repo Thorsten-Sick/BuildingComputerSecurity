@@ -194,7 +194,7 @@ Unknown samples must be classified before detection can be created. A quite reli
 
 [IOC sources](#chapter-malware-sources) is a collection of lists of so called Indicator Of Compromise Sources. Those are Malware executables, hashes, URLs, registry key, ...
 
-The lists can be used for training, learning or (if they are curated) event directly blacklisting.
+The lists can be used for training, learning or (if they are curated) event directly blocklisting.
 
 
 ## Offense

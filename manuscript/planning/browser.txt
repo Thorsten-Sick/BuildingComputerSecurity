@@ -33,7 +33,7 @@ Test them and maybe you will at least get a second browser for certain use cases
 
 A more basic checklist is that you ensure three general things are secured:
 
-* The web server and its content - it will be executed within your browser. URL blacklists are used by the browser to block access to known malicious sites.
+* The web server and its content - it will be executed within your browser. URL block lists are used by the browser to block access to known malicious sites.
 * The network connection - TLS all the things. HTTPS-Everywhere covers that.
 * The client side: Browser and Extensions
 
@@ -219,9 +219,9 @@ Phishing is a social engineering attack but can contain steps that are technical
 
 As the goal is credentials browsers normally store them - and are also a part of the social engineering aspect.
 
-Besides blacklisting phishing sites user education is also an important protection.
+Besides block listing phishing sites user education is also an important protection.
 
-Many browsers do already blacklist phishing sites. If you want to build something similar, Phishtank could be a source for your blacklist. Adding internal data (submitted by aware users) to your blacklist is also smart. If several of your customers are targeted in parallel and the first one reports a URL you protect the others by adding it to a blacklist.
+Many browsers do already block list phishing sites. If you want to build something similar, Phishtank could be a source for your blacklist. Adding internal data (submitted by aware users) to your blacklist is also smart. If several of your customers are targeted in parallel and the first one reports a URL you protect the others by adding it to a blacklist.
 
 %% TODO: [Phish report](https://github.com/MalwareReverseBrasil/phishreport)
 
@@ -265,11 +265,11 @@ For browsers this is relevant in several ways:
 * The stolen passwords are later used to infect innocent sites with malware
     * This is why they are targeting FTP clients
 
-## URL blacklists
+## URL block lists
 
-GSB (Google Safe Browsing) is a URL blacklist that is used to protect against malicious URLs. There are others and Firefox also has an own system.
+GSB (Google Safe Browsing) is a URL block list that is used to protect against malicious URLs. There are others and Firefox also has an own system.
 
-To QA the usage of blacklist (and check the warning dialogues) there is a list of test urls:
+To QA the usage of block list (and check the warning dialogues) there is a list of test urls:
 
 * Firefox Malware [http://itisatrap.org/firefox/its-an-attack.html](http://itisatrap.org/firefox/its-an-attack.html)
 * Firefox Phishing [http://itisatrap.org/firefox/its-a-trap.tml](http://itisatrap.org/firefox/its-a-trap.tml)

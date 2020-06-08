@@ -40,7 +40,7 @@ A large folder containing historic and current malware is scanned. The percentag
 
 The results will be biased because the focus is on historic malware. The dangerous - current - malware is under-represented.
 
-The tested AV products can not use some of their protection tools like URL blacklists, behaviour detection, cloud technology, ...
+The tested AV products can not use some of their protection tools like URL block lists, behaviour detection, cloud technology, ...
 
 This is not used that often anymore.
 
@@ -51,7 +51,7 @@ For that reason this kind of tests is replaced by:
 Current malware is used to "infect" machines where a full AV product is running.
 The antivirus can use all its features to protect the machine.
 
-* URL blacklist
+* URL block list
 * Static file scanning
 * Cloud scanning
 * Behaviour analysis

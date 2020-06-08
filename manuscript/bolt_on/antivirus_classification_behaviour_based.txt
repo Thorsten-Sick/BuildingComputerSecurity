@@ -40,7 +40,7 @@ If you use virtual machines: Run them on a dedicated analysis server and not on 
 
 Malware is trying to connect to the C&C server. It needs either a real connection to the internet or a simulated server landscape.
 
-You want to separate the analysis machine from the company network. First to avoid the malware to escape into the office net. Second to avoid your IP to be blacklisted by ISPs as malware source.
+You want to separate the analysis machine from the company network. First to avoid the malware to escape into the office net. Second to avoid your IP to be block listed by ISPs as malware source.
 
 The analysis sandbox should be able to monitor network connections - so you do not have to do that centrally at a firewall. If your sandbox does not offer sufficient network monitoring you can log the connections at a firewall.
 

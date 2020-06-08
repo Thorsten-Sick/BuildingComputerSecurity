@@ -8,11 +8,17 @@
 
 **Anycast**: Several servers share the same IP address. The client connects to the closest one. Relevant if only one of them is hacked and serves malware...
 
+**Approved List**: A list of url/hashes/... that got approved as being harmless
+
 **APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
 
 **ASLR**: Mitigation strategy to load code into **random** areas of the memory. Makes writing of exploits harder
 
 **Backdoor**: A constructed way for an attacker to connect to a vulnerable system and execute code
+
+**Blacklist**: Deprecated, see "Block List"
+
+**Block List**: A list of items like URLs, hashes, ... that trigger a blocking
 
 **BLE**: Bluetooth Low Energy
 
@@ -189,6 +195,8 @@
 **Waterhole attack**: Targeted phishing attack using a hacked/manufactured homepage the victim is known to visit and trust
 
 **Weaponizing**: Making an exploit easy and reliable to use.
+
+**Whitelist**: Deprecated term. See "Approved List"
 
 %% XSS, reflective
 

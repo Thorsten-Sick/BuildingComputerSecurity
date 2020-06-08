@@ -194,8 +194,8 @@ It is hard not to leak memory in C. There are some fancy tricks to get it right 
 
 ### Input validation
 
-Do not start to blacklist characters or combinations of characters. Instead:
-Create a whitelist of characters and an exact pattern of data you allow.
+Do not start to block list characters or combinations of characters. Instead:
+Create a approved list of characters and an exact pattern of data you allow.
 
 Validate your input against that and only process positive input.
 

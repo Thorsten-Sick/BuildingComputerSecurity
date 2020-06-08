@@ -103,8 +103,8 @@ Still a goal of malware authors is to use the acquired botnet to send out SPAM.
 The reasons they need a cluster of hacked computers are:
 
 * They need the bandwidth for millions of Spams
-* machines sending SPAM get blacklisted at central lists. The criminals have to rotate those machines
-    * *If your mails end up as SPAM quite often, check if you are blacklisted somewhere*
+* machines sending SPAM get block listed at central lists. The criminals have to rotate those machines
+    * *If your mails end up as SPAM quite often, check if you are block listed somewhere*
 
 Protection is to **monitor (firewall) outbound traffic**
 
@@ -124,7 +124,7 @@ doing further attacks on other systems. If those 3rd parties notice the attack
 they can not trace the connection back to the attacker. On a network level it
 looks like the attack originated from the proxy.
 
-Those would get blacklisted or sued.
+Those would get block listed or sued.
 
 Protection is **network monitoring**. Also of outbound traffic.
 
