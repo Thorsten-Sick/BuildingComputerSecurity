@@ -1,19 +1,16 @@
 # GIT hardening {#chapter-git}
 
-Git allows to write *hooks* on certain events.
+The GIT eco system grew and GIT is one of the most used VCS nowadays. GIT itself does offer some features tht you can use to increase the security of the build process. In addition to that code hosters (like Githuba nd Gitlab) offer additional CI/CD features that you can use to simplify the development process and at the same time improve code quality and security.
 
-Hooks are simple scripts in a special folder that are executed when this event occurs.
+## Pure Git
 
-These can be *pre-commit*, *post-checkout* or similar.
-
-In addition to the differentiation by event that triggers it there are two style of hooks:
+Git allows to write *hooks* on certain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
 
 **Local hooks** are client side and the developer maintains them to simplify their workflow.
 
 **Server-side hooks** are run on the server. They can be run right before the push happens - and this way **enforce** a policy.
 
-When setting up a team process it is smart to search the web for "git-hooks" and use it wisely to improve everyone's workflow (local hooks) and centrally
-enforce policy (server-side hooks).
+When setting up a team process it is smart to search the web for "git-hooks" and use it wisely to improve everyone's workflow (local hooks) and centrally enforce policy (server-side hooks).
 
 This way especially security relevant things can be cared for ("does it compile without warnings ?" would be the simplest one).
 
@@ -32,7 +29,7 @@ This has big benefits on:
 
 Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets"
 
-## Do not commit credentials and secrets
+### Do not commit credentials and secrets
 
 Credentials carry permissions and privileges. Like "signing a file" and "access to a server". You do not want those in a Git repository. Even if it is a private one. Sooner or later you will invite other people to contribute. And then those credentials are either forgotten and there as-files or in the git history.
 
@@ -92,3 +89,24 @@ W> magic *find --name* and *fgrep* to write your own small checker.
 %% Open Source testing: SonarCloud, CodeClimate, Snyk
 
 %% TODO: Gerrit, collaborative code review tool for git
+
+### Github
+
+Github offers so called *actions* to create your own workflow for your project. Those actions can contain any tool that you read about in this book so far. For example: Static Code analysis. On certain stages in your coding workflow you can trigger those actions. Good stages can be:
+
+* When someone starts a Pull Request
+* When code gets merged into your master branch
+* Before debug/release build
+
+That way you can enforce a minimum code quality.
+
+The configuration is managed in several *yaml* files you can create in the folder *.github/workflow*
+
+Especially interesting for Pull Requests (PR) will be to test only the changed files. The trick to extract these look like:
+
+{lang="bash"}
+    - name: List changed files, check for string "do not release" as a test
+      run: |
+        URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files"
+        FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
+        ! fgrep "do not release" -q $FILES  # Check if the text "do not release" is in a PR file. Fail the PR if it is.

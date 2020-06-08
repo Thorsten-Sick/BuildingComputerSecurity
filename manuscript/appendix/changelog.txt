@@ -64,11 +64,15 @@ changelog to make it simpler for you to find the new sections.
 
 ## May 2020
 
+%% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming
+
+
 * Extended Glossary
+* Extending Git hardening (turning it into CI/CD + Security)
+* Replacing whitelist/blacklist with *approved list* and *block list*
 
 ## April 2020
 
-%% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming
 
 * Reworked layout. Removed headers from chapters
 * Extended Glossary
