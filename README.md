@@ -40,6 +40,11 @@ sudo apt install mscgen
 
 (http://www.mcternan.me.uk/mscgen/)
 
+Aspell example
+--------------
+
+aspell --lang=EN_UK --word-list-path=./aspell -c manuscript/appendix/glossary.txt
+
 
 For Future Use
 --------------

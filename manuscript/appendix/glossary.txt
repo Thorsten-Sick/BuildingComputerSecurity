@@ -30,7 +30,7 @@
 
 **BLE L2CAP**: Encapsulating data into packets
 
-**BLE Service**: Several Characteristics combined create a service. A default service for BTLE would contain device information
+**BLE Service**: Several Characteristics combined create a service. A default service for BLE would contain device information
 
 **BLE Profile**: Profiles combine several services. They standardize specific device classes
 
@@ -81,6 +81,8 @@
 **Deep Packet Inspection**: A filter looks into the deeper layers of packets. Complex, and causes issues with encrypted data. Better don't do it.
 
 **Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
+
+**DGA / Domain generation Algorithm**: An malware algorithm generating domain names based on a counter/time to connect to.
 
 **Domain Flux**: Way to hide C&C servers. A domain name generator creates changing domain names
 
@@ -167,6 +169,8 @@
 **ROP / Return Oriented Programming**: If an executable is compiled with DEP it is not possible to insert new shellcode to execute. ROP uses *existing* code from the victim-executable and chains those ROP gadgets into a new order to achieve the goal.
 
 %% TODO SROP (Pagedout 2, p 54)
+
+**Sigma rules**: Sigma rules are for logs what Yara is for files https://github.com/Neo23x0/sigma
 
 **SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
 
