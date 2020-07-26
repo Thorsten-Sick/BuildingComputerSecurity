@@ -1,0 +1,38 @@
+# CAPEv2
+
+CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox.
+
+## Features
+
+### Features it shares with Cuckoo
+
+* API hooking
+
+### Unique features
+
+* Debugger
+* Payload extraction
+* Configuration dumping
+
+%% Missing in CAPEv2 doc: Suricata, Debugger, Payload extraction, Configuration extraction
+
+## Installation
+
+https://github.com/doomedraven/Tools/blob/master/Sandbox/cape2.sh
+
+Run it with ./cape2.sh
+
+## Links
+
+https://kalilinuxtutorials.com/cape-malware-configuration-payload-extraction/
+
+[Author's blog](https://www.doomedraven.com/)
+
+### On Github
+
+[CAPEv2](https://github.com/kevoreilly/CAPEv2)
+[Monitor code](https://github.com/ctxis/capemon)
+it is based on [Spender Sandbox](https://github.com/spender-sandbox/cuckoo-modified)
+which is based on [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)
+
+%% Features to verify: Process injection (OS, bit), Process dumper = unpacker, config extractor, Debugger,  Python3, volatility, which VMs supported ?, simulated networks ?, fog server support, dist.py, supported windows versions, are tags for vms supported

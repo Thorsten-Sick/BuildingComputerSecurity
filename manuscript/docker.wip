@@ -1,3 +1,32 @@
+# Docker
+
+## Building blocks
+
+### Images
+
+Images are ready defined "virtual machines"
+
+* Getting: *docker pull <name>*
+    * *--detach* runs it in the background
+    * *--name* alias name for other commands
+    * *--publish <host-port>:<container port>* Connects the host port to the container port
+* Running: *docker run <name>*
+* List: *docker image ls*
+* Remove: *docker image rm <name>*
+
+
+### Containers
+
+Containers are running images
+
+* List: *docker ps* add *--all* for stopped ones as well
+* Remove: *docker rm <name>* Deletes a container
+    * *--force* will also stop it first
+
+### Dockerfile
+
+* Build into image: *docker build --tag testtag:1.0 .* in the folder with the Dockerfile
+
 %% TODO: https://linux-audit.com/security-best-practices-for-building-docker-images/
 
 
@@ -13,3 +42,7 @@ https://learning.oreilly.com/learning-paths/learning-path-docker/9781788997355/
 %% TODO: https://github.com/docker/docker-bench-security
 
 %% TODO: https://gvisor.dev 
+
+## Links
+
+[Docs](https://docs.docker.com/)
