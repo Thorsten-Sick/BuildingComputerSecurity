@@ -4,7 +4,7 @@ The GIT eco system grew and GIT is one of the most used VCS nowadays. GIT itself
 
 ## Pure Git
 
-Git allows to write *hooks* on certain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
+Git allows to write *hooks* on chromium/src/.clang-tidycertain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
 
 **Local hooks** are client side and the developer maintains them to simplify their workflow.
 
