@@ -114,7 +114,7 @@
 
 **Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
 
-** SNI / Server Name Indicator **: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
+**SNI / Server Name Indicator**: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
 

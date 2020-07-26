@@ -109,7 +109,8 @@ Especially interesting for Pull Requests (PR) will be to **test only the changed
       run: |
         URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files"
         FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
-        ! fgrep "do not release" -q $FILES  # Check if the text "do not release" is in a PR file. Fail the PR if it is.
+        ! fgrep "do not release" -q $FILES
+        # Check if the text "do not release" is in a PR file. Fail the PR if it is.
 
 ## Getting it done
 
