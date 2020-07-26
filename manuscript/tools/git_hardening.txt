@@ -1,10 +1,10 @@
 # GIT hardening {#chapter-git}
 
-The GIT eco system grew and GIT is one of the most used VCS nowadays. GIT itself does offer some features tht you can use to increase the security of the build process. In addition to that code hosters (like Githuba nd Gitlab) offer additional CI/CD features that you can use to simplify the development process and at the same time improve code quality and security.
+The GIT ecosystem grew and GIT is one of the most used VCS nowadays. GIT itself does offer some features you can use to increase the security of the build process. In addition to that code hosters (like Github and Gitlab) offer additional CI/CD features to simplify the development process and - at the same time - improve code quality and security.
 
 ## Pure Git
 
-Git allows to write *hooks* on chromium/src/.clang-tidycertain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
+Git allows to write *hooks* on certain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
 
 **Local hooks** are client side and the developer maintains them to simplify their workflow.
 
@@ -25,7 +25,7 @@ This has big benefits on:
 * code quality
 * enforces best practice even in dire situations
     * gives the developers an explanation towards management ("This will take one more hour, gotta do this right or it will not be checked in")
-* lift team spirit, because **THE MACHINE** enforces the coding style, not the other developer who is a grumpy guy and does not allow anything creative
+* lift team spirit, because **THE MACHINE** enforces the coding style, not this developer who is a grumpy guy and does not allow anything creative
 
 Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets"
 
@@ -35,7 +35,7 @@ Credentials carry permissions and privileges. Like "signing a file" and "access 
 
 To prevent committing credentials there are special scanners. They look for file names or patterns in the source code that look like a private ssh key or something similar.
 
-[Repo security scanner](https://github.com/UKHomeOffice/repo-security-scanner) scans for
+For example: [Repo security scanner](https://github.com/UKHomeOffice/repo-security-scanner) scans for
 
 * Different private keys
 * Different command histories
@@ -98,11 +98,11 @@ Github offers so called *actions* to create your own workflow for your project. 
 * When code gets merged into your master branch
 * Before debug/release build
 
-That way you can enforce a minimum code quality.
+That way you can enforce a minimum code quality. Or run the unit tests before anyone has to review the code of the PR manually.
 
 The configuration is managed in several *yaml* files you can create in the folder *.github/workflow*
 
-Especially interesting for Pull Requests (PR) will be to test only the changed files. The trick to extract these look like:
+Especially interesting for Pull Requests (PR) will be to **test only the changed files**. The trick to extract these look like:
 
 {lang="bash"}
     - name: List changed files, check for string "do not release" as a test
@@ -110,3 +110,8 @@ Especially interesting for Pull Requests (PR) will be to test only the changed f
         URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files"
         FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
         ! fgrep "do not release" -q $FILES  # Check if the text "do not release" is in a PR file. Fail the PR if it is.
+
+## Getting it done
+
+Sit down with your team, find a workflow to extend code quality, improve security and reduce manual work for Pull Requests.
+Later on extend that to other stations of the life cycle of your projects. Like checking the main branch of your VCS on a daily basis. Or check before moving the code to production.

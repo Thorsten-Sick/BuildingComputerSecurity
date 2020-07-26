@@ -62,10 +62,11 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add Pwnagotchi
 
-## May 2020
 
 %% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming
+%% TODO: Write tool to identify dangling .txt files
 
+## May 2020
 
 * Extended Glossary
 * Extending Git hardening (turning it into CI/CD + Security)
@@ -77,8 +78,6 @@ changelog to make it simpler for you to find the new sections.
 * Reworked layout. Removed headers from chapters
 * Extended Glossary
 
-
-%% TODO: Write tool to identify dangling .txt files
 
 * Extended Glossary
 
