@@ -59,6 +59,8 @@ Technologies to reduce the impact of those attacks would be:
 None of these is perfect.
 If a computer is infected by a running malware, the game is over.
 
+%% TODO: Read and add https://blog.xpnsec.com/exploring-mimikatz-part-1/ https://blog.xpnsec.com/exploring-mimikatz-part-2/
+
 ## Injecting advertising
 
 Advertising is a crazy market with lots of actors. Some of the Ad companies do
