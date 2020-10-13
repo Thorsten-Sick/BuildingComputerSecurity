@@ -66,9 +66,9 @@ Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second sca
 
 Looking at this and the Pareto principle will result in: Build several manageable projects and layer your security.
 
-**Important**: This is for detection technology where you are ok with statistical effects. If you build a defense
+**Important**: This is for detection technology where you are OK with statistical effects. If you build a defense
 that should block the attacker go for the 100% and do not leave a gap, thinking: "Well, this gap in the defenses is
-just 20% of the whole defense and Thorsten said that is ok."
+just 20% of the whole defense and Thorsten said that is OK."
 
 ### Cause pain
 
@@ -171,7 +171,7 @@ They will not detect much. Malware is normally polymorphic. But if you can creat
 without effort: Use them in addition to better tools.
 
 Important: CRC32, MD5 and SHA1 are dead.
-Use Sha256 instead. If you feel fancy look at SSDeep
+Use SHA256 instead. If you feel fancy look at SSDeep
 
 %% TODO: Add Box
 
