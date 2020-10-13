@@ -1,17 +1,20 @@
-# Detection
+# Antivirus detection {#chapter-antivirus-detection}
 
 %% State: 30 % Detection
 
-Detection and filtering are bolt-on-security. It can be added to any existing system.
+Detection and filtering are bolt-on-security. They can be added to any existing system.
 
 To avoid confusion, I will use three terms in this book and define them here:
 
-**Detection** is using an existing database, matching that against network packets, files or behaviour on the client system and preventing
-detected items from causing harm.
+**Detection** is using an existing database, matching that against network packets, files or behaviour on the client
+system and preventing detected items from causing harm.
 
-**Classification** is used to create such a database: Unknown objects are classified either manually or by some tools into at least the categories good/bad. Maybe we can also identify the families or the type of malware (trojan, worm).
+**Classification** is used to create such a database: Unknown objects are classified either manually or by some tools
+into at least the categories good/bad. Maybe we can also identify the families or the type of malware (trojan, worm).
 
-**Analysis** Is an in depth analysis of a malware to learn about the used technology, tricks and origin. An analysis is important to improve classification technology. It also produces interesting blog posts. Quite often an analysis will eat days and weeks of a specialist's time.
+**Analysis** Is an in depth analysis of a malware to learn about the used technology, tricks and origin. An analysis
+is important to improve classification technology. It also produces interesting blog posts. Quite often an analysis
+will eat days and weeks of a specialist's time.
 
 ## Pro detection technology
 
@@ -22,18 +25,20 @@ detected items from causing harm.
 
 ## Con detection technology
 
-* Fast Flux beats IP filtering
 * It is a statistics game. Do not expect perfect security
-* Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
 * If file processing by the detection technology is not sandboxed: It becomes a new attack vector
 * If file processing is done in kernel: Double plus not good
 * "Clean" detection should not be read as "Clean". It is "did not find anything"
+* Not all files are scanned (HTTPS stream: MITM or do not scan it ?)
+* Fast Flux beats IP filtering
 
 ## Tips
 
-* Double Tap: Use two different technologies to detect one malware
-* Malware behaviour does not change often. Behaviour detection can stay stable for months
-* Malware hash chances constantly. Only do this if fully automated
+There are several ways to improve detection
+
+* Double Tap: Use two different technologies to detect one malware. If one detection is broken you still have the other
+* Detect behaviour. Malware behaviour does not change often. Behaviour detection can stay stable for months
+* Malware hash changes constantly. Only do this if detection using hashes is fully automated and does not waste your time
 * Detection patterns will be OK for minutes or hours
 * Structural generics will be OK for hours
 * Bad guys have their own "VirusTotal" malware scanner to create their malware FUD (Fully Un Detected)
@@ -42,13 +47,41 @@ detected items from causing harm.
 ** Detection technology that is not accessible to the bad guys lasts a lot longer (smaller "AVs" benefit - create you own in house AV ?)
 * Do not send feedback to the attacker ("Your mail has been blocked"). Maybe postpone feedback for one day. That way the attacker can not tune the attack to your defense
 
-There is a statistics trick how to boost the combination of different detection technologies.
-To get a good combination combine several _different_ technologies together.
+To achieve that - even if you are just using existing AV technology - combine several of those into layers of defense.
+
+### Background and statistics
+
+The Pareto principle and statistics of layered defense can be your biggest ally. The [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle)
+observes that "80% of consequences come from 20% of the causes" - or with 20% of the total effort you can get 80% of
+the detection. And the last 20% will be incredible hard to achieve.
+
+Knowing that there is a statistics trick how to boost the combination of different detection technologies.
+To get a good combination combine several **different** technologies together.
 
 I will be using simple numbers to make a point now:
 Lets assume we have three different scanners each having 90% detection (a bad detection quality).
+But those are chained together and uses different technology (no white labeling).
 Out of 1000 attacks 100 will pass the first scanner. 10 will pass the second scanner.
-1 will get past the third one. Much better than first assumed. Very important: Make sure they use different technologies. Or the same samples not detected by number one will also not be detected by number 2....
+1 will get past the third one. 99.9 % detection is much better than first assumed.
+
+Looking at this and the Pareto principle will result in: Build several manageable projects and layer your security.
+
+**Important**: This is for detection technology where you are ok with statistical effects. If you build a defense
+that should block the attacker go for the 100% and do not leave a gap, thinking: "Well, this gap in the defenses is
+just 20% of the whole defense and Thorsten said that is ok."
+
+### Cause pain
+
+You can detect malware on different layers. File hash, file pattern, file structure, behaviour, ....
+Malware authors built tools that pack or re-compile the malware constantly. So the "outer" layers of the malware are
+cheap to modify. Detecting those will break you detection almost instantly as soon as new variants are released.
+
+But going for the inner layers (behaviour) will make it much harder for the malware authors to modify and test
+their new variants - they will need a new behaviour.
+
+Detect the things that are complex to modify.
+
+This concept is called the [Pyramid of pain](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html)
 
 ## Choosing technology
 
@@ -66,16 +99,18 @@ YMMV
 
 It could also be important to check for privacy commitment. F-Secure has some detailed ones, for example:
 
-https://www.f-secure.com/en/web/legal/principles
+[F-Secure privacy](https://www.f-secure.com/en/web/legal/principles)
 
 ### Numbers
 
 In tests you should aim for a detection rating north of 95 % and a False Positive Rating south of 0.05 %.
-For False Positives (detection on innocent files): If you have a well maintained system with only basic and boring files a higher FP rating will also work for you.
+For False Positives (detection on innocent files): If you have a well maintained system with only basic and boring
+files a higher FP rating will also work for you.
 
 If you have a heterogeneous landscape, many computers, fancy extraordinary tools: Aim for a lower FP rating.
 
-Many FPs the AVs have in tests are on quite exotic shareware files. It is quite possible you will not have (or want) them in your system anyway.
+Many FPs the AVs have in tests are on quite exotic shareware files. It is quite possible you will not have (or want)
+them in your system anyway.
 
 ### Test institutions
 
@@ -103,11 +138,12 @@ The old way. A large batch of malware is scanned. Percentage of detection is the
 Problem here:
 
 * Not all detection technology is tested. Especially behaviour detection is not used on static scans
-* Many samples will be weeks or months old in this set. Current malware is under-represented
+* Many samples will be weeks or months old in this set. Current malware is under-represented. And this is the relevant one
 
 Real-world-tests:
 
-A Virtual Machine gets prepared to simulate a normal system. A script surfs to an infected page. The whole product can now prevent infection of the system - or fail.
+A Virtual Machine gets prepared to simulate a normal system. A script surfs to an infected page. The whole product can
+now prevent infection of the system - or fail.
 
 This has its own challenges for the testers.
 
@@ -121,29 +157,33 @@ As for which test to trust: Go for Real-world tests. As soon as you have the pro
 
 ## DIY detection
 
-There are different tools to detect malware. Normally you do have some internal knowledge covering which apps are malicious and which are benign. For more on that see the "DIY classification" chapter. Detection is how you get this knowledge from your lab to the computer you want to protect.
+There are different tools to detect malware. Normally you do have some internal knowledge covering which apps are
+malicious and which are benign. For more on that see the "DIY classification" chapter. Detection is how you get this
+knowledge from your lab to the computer you want to protect.
 
 %% TODO: write DIY classification chapter, add link
 
 ### Hashes
 
-The simplest and most reliable way is file hashes. The good thing: If your classification is correct they will not add FPs on their own. The bad news:
-They will not detect much. Malware is normally polymorphic. But if you can create them by a script "for free" and without effort: Use them in addition to better tools.
+The simplest and most reliable way is file hashes. The good thing: If your classification is correct they will not add
+FPs on their own. The bad news:
+They will not detect much. Malware is normally polymorphic. But if you can create them by a script "for free" and
+without effort: Use them in addition to better tools.
 
 Important: CRC32, MD5 and SHA1 are dead.
 Use Sha256 instead. If you feel fancy look at SSDeep
 
 %% TODO: Add Box
 
-    Optional background: With the large number of files currently released it is
-    even possible to have accidental MD5 collisions. Result will be two totally
-    different files with the same MD5. And this will fuck up your DB if it is MD5 based.
+%%    Optional background: With the large number of files currently released it is
+%%    even possible to have accidental MD5 collisions. Result will be two totally
+%%    different files with the same MD5. And this will fuck up your DB if it is MD5 based.
 
 ### Yara
 
 The tool to create your own file detection is Yara. A tutorial can be found here:
 
-https://www.real0day.com/hacking-tutorials/yara
+[Yara](https://www.real0day.com/hacking-tutorials/yara)
 
 Yara combines logic and (regex) patterns into a quite simple config language.
 
@@ -157,7 +197,8 @@ Yara combines logic and (regex) patterns into a quite simple config language.
 
 ## DIY classification
 
-You have an unknown sample and want to learn if it is malicious. This is the step you normally do *before* you do detection.
+You do classify a sample if it is unknown and you want to learn if it is malicious. This is the step you
+normally do *before* you do detection.
 
 **VirusTotal**: One way to do classification is to run it through a multi scanner like [VirusTotal](https://www.virustotal.com).
 You will benefit from the classification work of several virus labs. Negative side effects:
@@ -173,7 +214,4 @@ You will benefit from the classification work of several virus labs. Negative si
 
 
 
-%% TODO: Pyramid of pain: https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
-%% TODO: Pareto principle
-%% TODO: Statistics anomaly when combining different techs
 %% TODO: Specialized and hidden detection - attacker does not get feedback
