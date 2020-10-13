@@ -1,9 +1,5 @@
 # Kill chain {#chapter-kill-chain}
 
-C> By: Thorsten Sick
-
-C> For: Architects, Developers, Tester, Pen Tester
-
 ## Basics
 
 A kill chain is the chain of the single steps of an attack. Some of those steps are optional, specific for a type of target, ...
@@ -16,6 +12,8 @@ The "looting" phase is also affected: A bunch of innocents is infected. Now the 
 **Targeted attacks** Do have an Intelligence phase before the attack. Also: As soon as the attacker invaded the systems they are more likely to want to get persistence and target specific vulnerable files/servers/... they knew of beforehand.
 
 [MITRE ATT&CK](https://attack.mitre.org) lists those attack chain steps plus the common techniques used there.
+
+%% TODO: MITRE defense https://shield.mitre.org
 
 The important takeaway: As a defender you can break this attack chain at any stage.
 

@@ -197,6 +197,7 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 %% TODO: Fuzzing basics: https://labs.mwrinfosecurity.com/blog/what-the-fuzz
 %% Network protocol fuzzing: https://blog.own.sh/introduction-to-network-protocol-fuzzing-buffer-overflow-exploitation/
 
+%% TODO: More network fuzzing: https://hakin9.org/fuzzowski-the-network-protocol-fuzzer-that-we-will-want-to-use/
 
 %% TODO: https://github.com/mxmssh/manul coverage guided cross platform fuzzer
 

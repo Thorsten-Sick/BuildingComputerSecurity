@@ -33,9 +33,28 @@
 Windows 7: https://cuckoo.sh/win7ultimate.iso
 
 
+%% TODO: NTP sandbox detection  https://isc.sans.edu/diary/rss/26534
+
+
+## Anti VM, Anti hooking
+
+%% TODO: https://winternl.com/memfuck/
+%% TODO: https://github.com/rwfpl/rewolf-wow64ext
+
+## Scan from hypervisor
+
+%% TODO: Volatility
+
+%% TODO: https://github.com/tklengyel/drakvuf
+
+%% TODO VMI (Virtual Machine Introspection)
+
 ## Further reading
 
 
 %% TODO Suricata IDS plus Cuckoo: https://suricata.readthedocs.io/en/suricata-5.0.0/what-is-suricata.html
 
 %% TODO https://capesandbox.com/analysis/10149/
+
+%% TODO: Zeek.org rules for behaviour
+%% TODO: https://medium.com/@abhijithraom1990/bro-zeek-the-modern-watchtower-9ef61b09f255

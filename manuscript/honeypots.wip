@@ -3,3 +3,20 @@
 %% TODO: Pass the hash with honeypots https://blog.stealthbits.com/detecting-pass-the-hash-honeypots/
 
 %% TODO: apt instal tinyhoneypot
+
+
+%% TODO 32C3 talk on honeypots
+
+%% TODO: Thug
+
+%% TODO: SSH https://github.com/cowrie/cowrie
+
+%% TODO: IP Cameras https://github.com/CMSecurity/CameraObscura
+
+%% TODO: Mail https://github.com/CMSecurity/mailhon
+
+%% Combination: https://github.com/telekom-security/tpotce
+
+%% Collection: https://github.com/paralax/awesome-honeypots
+
+%% TODO: SNARE Web application honeypot https://github.com/mushorg/snare
