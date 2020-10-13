@@ -65,6 +65,10 @@ Remove all those traces and you should be able to run malware without it detecti
 
 Also: Never ever depend on one way to classify only ! Always use additional classifiers in parallel.
 
+## Al-Khaser
+
+[Al-Khaser](https://github.com/LordNoteworthy/al-khaser) extends the scope of PaFish to also include anti-debugging, anti-dumping and anti-disassembly.
+
 ## VMCloak
 
 [VMCloak](http://vmcloak.org/) is a tool similar to
