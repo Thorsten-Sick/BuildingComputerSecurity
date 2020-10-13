@@ -54,6 +54,8 @@
 
 %% TODO: **CSRF & Cross site request forgery**
 
+**Dedik**: Stolen RDP access to a windows server. Used as first step for Ransomware attacks (2020: 70% of Ransomware attacks started that way). Dedik = Dedicated server
+
 **DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
 
 **Differential privacy**: Is a way to collect statistical data on clients/users without compromising the privacy of specific users
@@ -65,6 +67,10 @@
 **Dynamite phishing**: Automated spear phishing. The malware silently collects mail communication to later fake new phishing mails for new victims
 
 **ELF**: Linux executable file format
+
+**EDR /Endpoint Detection and Response**: Endpoint protection with a deeper analysis system and an array of potential responses to attacks
+
+**EPP / End Point Protection**: Passive Endpoint protection
 
 **Exploit**: Attack on a vulnerability
 
