@@ -66,6 +66,16 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Hydra, nmap, sqlinjecion, frida, defensive programming
 %% TODO: Write tool to identify dangling .txt files
 
+## October 2020
+
+* Extended Behaviour based classification
+* Added Antivirus detection chapter
+
+## August 2020
+
+* Extended External References
+
+
 ## May 2020
 
 * Extended Glossary
