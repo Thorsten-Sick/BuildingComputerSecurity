@@ -5,9 +5,7 @@ https://www.n00py.io/2018/06/executing-meterpreter-in-memory-on-windows-10-and-b
 %% Metasploitable: https://sourceforge.net/projects/metasploitable/files/Metasploitable2/
 
 
-%% TODO: Nessus
 
-%% TODO: Open Vas
 
 %% TODO: Armitage
 
@@ -16,3 +14,13 @@ https://blog.rapid7.com/2018/10/09/introducing-metasploits-first-evasion-module/
 
 
 %% Exploit pack: http://exploitpack.com/
+
+%% Exploit chain with beef and metasploit: https://medium.com/@bluedenkare/1-click-meterpreter-exploit-chain-with-beef-and-av-amsi-bypass-96b0eb61f1b6
+
+
+
+## Something similar: Vulnerability Assessment
+
+%% TODO: Nessus Vulnerability Assessment
+
+%% TODO: Open Vas /OpenVas https://www.openvas.org/index-de.html   Vulnerability Assessment
