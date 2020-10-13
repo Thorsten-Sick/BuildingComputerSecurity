@@ -229,6 +229,8 @@ Many browsers do already block list phishing sites. If you want to build somethi
 
 %% TODO: [Spear Phishing](https://securityaffairs.co/wordpress/75033/hacking/industrial-sector-spear-phishing.html)
 
+%% TODO: Campaign duration: 21h: https://www.zdnet.com/article/phishing-campaigns-from-first-to-last-victim-take-21h-on-average/
+
 * [Phishtank](https://www.phishtank.com)
 * [Phishstats](https://phishstats.info)
 
