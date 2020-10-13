@@ -142,7 +142,7 @@ Show them with
 
 %% TODO: Shodan
 
-
+%% TODO: HFinger: https://github.com/CERT-Polska/hfinger  Recognizing malware network requests in pcap packages
 
 %% TODO: Virtual Host scan: https://github.com/codingo/VHostScan
 
