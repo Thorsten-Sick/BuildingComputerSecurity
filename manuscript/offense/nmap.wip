@@ -8,6 +8,24 @@ nmap -p- <ip>  # scan all ports there
 
 nmap -sV <ip>  # find version of server there
 
+## RDP
+
+nmap -P0 -T4 192.168.0.1/24 --open
+
+* P0: Switch of pinging the system first
+* T4: Fast mode
+* Show open ports. 3389 is RDP.
+
+nmap -P0 -p 3389 --script rdp-ntlm-info 192.168.1.1
+
+* -p 3389: Standard RDP port
+* rdp-ntlm-info: Special script to extract RDP info
+
+
+%% TODO: More, German: https://www.heise.de/hintergrund/Remote-Desktop-via-RDP-Testen-und-angreifen-3-4-4702968.html
+
+%% TODO: The (Linux) tool xfreerdp allows to specify which security to use (command line)
+%% TODO: Hydra supports RDP
 
 ## udp scanning specialised tool: udp-proto-scanner
 
