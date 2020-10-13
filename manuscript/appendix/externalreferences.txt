@@ -131,7 +131,9 @@ The Chaos Computer Club has several conferences in Germany. Those have different
 
 Blackhat is a security conference with events in US, Europa and Asia (so don't get confused).
 
-[Blackhat USA 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsWrfkjwFSI256x1u2Zy49VI)
+* [Blackhat USA 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsWrfkjwFSI256x1u2Zy49VI)
+* [Blackhat Europe 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsXiPOP3gxN6ultoj0rAR6Yn)
+* [Blackhat Asia 2019 Playlist](https://www.youtube.com/playlist?list=PLH15HpR5qRsUNQiyeUFNzFzNFBrQrP1lp)
 
 ### Shmoocon 2006 - 2020
 
@@ -155,11 +157,26 @@ Blackhat is a security conference with events in US, Europa and Asia (so don't g
 
 ### Defcon
 
+%% TODO: Generic https://media.defcon.org/
+
 * [Defcon 26](https://www.youtube.com/user/DEFCONConference/videos)
+* [Defcon 28](https://media.defcon.org/DEF%20CON%2028/)
+    * [Main stage on youtube](https://www.youtube.com/playlist?list=PL9fPq3eQfaaBk9DFnyJRpxPi8Lz1n7cFv)
 
 ### BSides
 
 [BSides](https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG)
+
+### Radare Con
+
+2020:
+
+* https://github.com/radareorg/r2con2020
+
+%% TODO. Verify if not edited and moved:
+%% https://www.youtube.com/watch?v=sgNDYgLyAP4&feature=youtu.be
+%% https://www.youtube.com/watch?v=gUeL2JcCChM&feature=youtu.be
+%% https://www.youtube.com/watch?v=A9wodVpSFds&feature=youtu.be
 
 ### Purdue University seminar
 
