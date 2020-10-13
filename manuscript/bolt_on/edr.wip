@@ -1,0 +1,9 @@
+# EDR and other big picture stuff
+
+%% TODO: https://marcusedmondson.com/2020/07/29/detecting-mitre-attck-technique-t1218-010-regsvr32/
+%% TODO: https://marcusedmondson.com/2020/07/29/detecting-mitre-attck-technique-part-2-t1003-001-lsass-memory/
+
+%% ## Lateral movement
+
+%% TODO: https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-1-wmi-event-subscription/
+

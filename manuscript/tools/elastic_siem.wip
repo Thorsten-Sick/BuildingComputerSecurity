@@ -1,0 +1,13 @@
+# Elastic Search SIEM
+
+https://www.elastic.co/siem
+
+Based on the so called ELK stack (Elastic, Logstash, Kibana).
+
+## Logstash
+
+Logstash collects data from one source (db, logs, beats, ...) converts it through filters and outputs it to
+some other source (Elastic DB, other DB, json files, stdout, ...).
+
+It can run directly on the monitored host or on a special cluster to pre-process log data.
+
