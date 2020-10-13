@@ -123,6 +123,11 @@ https://github.com/Microsoft/ProcDump-for-Linux
 https://www.darkreading.com/attacks-breaches/mirai-evolves-from-iot-devices-to-linux-servers/d/d-id/1333329?_mc=rss_x_drr_edt_aud_dr_x_x-rss-simple
 
 
+## Initcalls
+
+https://www.collabora.com/news-and-blog/blog/2020/07/14/introduction-to-linux-kernel-initcalls/
+https://www.collabora.com/news-and-blog/blog/2020/09/25/initcalls-part-2-digging-into-implementation/
+
 %% TODO: Linux hardening guide https://github.com/trimstray/the-practical-linux-hardening-guide
 
 
