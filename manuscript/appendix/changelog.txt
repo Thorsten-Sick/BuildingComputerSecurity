@@ -75,6 +75,7 @@ changelog to make it simpler for you to find the new sections.
 * Extended glossary
 * Extended Kill chain
 * Extended External References
+* Extended SSH
 
 ## August 2020
 
