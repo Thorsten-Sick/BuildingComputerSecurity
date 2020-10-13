@@ -214,7 +214,11 @@ For the basics: [GitHub has a good explanation](https://help.github.com/articles
 
 After that, set up your web browser to use a proxy. Or your whole OS.
 
+## Logs
 
+Logins can be found in */var/log/auth.log*
+
+On how to process them using logstash: [logstash for auth log](https://www.elastic.co/blog/grokking-the-linux-authorization-logs)
 
 %% ## Mass SSH
 
