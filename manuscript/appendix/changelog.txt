@@ -70,6 +70,8 @@ changelog to make it simpler for you to find the new sections.
 
 * Extended Behaviour based classification
 * Added Antivirus detection chapter
+* Extended glossary
+* Extended Kill chain
 
 ## August 2020
 

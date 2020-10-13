@@ -99,7 +99,7 @@ That way the malware author can later on infect the web servers and new victims 
 ## Command and Control
 
 Malware attacks very often need a remote control. This is an external server that allows a botnet overview and the potential to remote control all bots, groups of bots or a single bot.
-New malware components can be downloaded to the victims, data exfiltrated, ransomware encryption started, or cryptominers executed.
+New malware components can be downloaded to the victims, data exfiltrated, ransomware encryption started, or crypto miners executed.
 
 These C&C servers need to be connected from the clients. Which results in:
 
