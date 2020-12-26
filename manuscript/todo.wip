@@ -25,11 +25,18 @@ Binary analysis: https://github.com/securing/DumpsterDiver
 
 Social engineering business case: https://www.europol.europa.eu/newsroom/news/eur-8-million-700-bank-accounts-and-money-mules-little-known-tricks-of-social-engineering-fraudsters
 
+Social engineering pretext: https://pretext-project.github.io/
+
 
 Anti-AV service: https://hotforsecurity.bitdefender.com/blog/russian-hacker-gets-35-years-in-prison-for-running-counter-av-service-19925.html
 
 
+%%%%%%%%%
+## Threat landscape
 
+Overview and reports on existing threat landscape:
+
+* https://www.enisa.europa.eu/topics/threat-risk-management/threats-and-trends/enisa-threat-landscape
 
 
 %% %%%%%%%%%% Throwhammer / Rowhammer
@@ -144,6 +151,9 @@ Mermaidjs.github.io  https://mermaidjs.github.io/
 http://plantuml.com/
 https://casual-effects.com/markdeep/
 Railroad diagrams: https://bottlecaps.de/rr/ui
+
+Python backend to create data visualisation web pages:
+https://www.streamlit.io/
 
 
 -----------------
@@ -267,3 +277,26 @@ Books: Mc Graw, "Software Security: Building Security in"
 Book: "Secure By DEsign"
 Book: "Secure Programming Cookbook for C and C++"
 Book: "Secure Coding in C and C++, Second Edition"
+
+--------------
+Add those special search engines:
+https://twitter.com/trimstray/status/1328004644807860224?s=09
+-censys.io : Internet service scanning
+-shodan.io  : IoT search engine
+-viz.greynoise.io : Internet service scanning
+-zoomeye.org: chinese
+-onyphe.io: Internet service scanning
+-wigle.net: Internet service scanning, seems to be crowd-scanning
+-intelx.io: domain, url, email, ip, cdir, bitcoin, ....
+- https://fofa.so/ : chinese
+-hunter.io: email addredsses
+-zorexeye.com: sites, images, apps, software
+-pulsedive.com: urls, domains, iocs
+-netograph.io: ip, domain, subnets, certificates
+-vigilante.pw: database breaches
+-pipl.com: people
+-abuse.ch: malware, phishing, ssl, urls, C&C servers
+-maltiverse.com/search. IOCs
+-insecam.org: ip video cameras
+
+(If I did not do so already)

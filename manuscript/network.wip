@@ -148,4 +148,8 @@ Show them with
 
 %% TODO: https://github.com/alphaSeclab/awesome-network-stuff
 
-&& TODO: HTRAN connection bouncer https://github.com/HiwinCN/HTran
+%% TODO: HTRAN connection bouncer https://github.com/HiwinCN/HTran
+
+%% TODO: Data extraction from PCAP: https://github.com/lgandx/PCredz
+
+%% TODO: Amass network mapping https://github.com/OWASP/Amass

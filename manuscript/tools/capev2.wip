@@ -28,6 +28,139 @@ https://kalilinuxtutorials.com/cape-malware-configuration-payload-extraction/
 
 [Author's blog](https://www.doomedraven.com/)
 
+# Features (reporting/processing)
+
+## Reporting modules:
+
+Mitre (new): Uses a MITRE DB file to add Mitre Att@ack data (ttp name, description, id) to a report
+
+Bingraph: Binary file graph. Histogram, Entropy. https://github.com/geekscrapy/binGraph
+
+JsonDump (In Cuckoo): Dump result as JSON. HMIL needs that
+
+ReportHTML: Long HTML report. Important for human review of results
+
+ReportHTML Summary: Short HTML report
+
+ReportPDF: Create PDF report
+
+MAEC41: ignore
+
+MAEC5: Could be very interesting for future AI research. As it a more codensed, graph like data    https://maecproject.github.io/releases/5.0/MAEC_Core_Specification.pdf
+
+MongoDB (In Cuckoo): We don't need it
+
+ElasticsearchDB (In Cuckoo): We don't need it
+
+Retention: This is the garbage collection
+
+Syslog: Logging. Maybe nice to have for larger setups
+
+Moloch (In Cuckoo)
+
+ResubmitExe: Dropped exes are sent back to Cuckoo. No idea if smart. Worth a try
+
+Malheur: Module seems to be missing
+
+Compression: Compressing the report. Nice to have
+
+Misp (In Cuckoo): IOC sharing. Not relevant for our experimental system. But very nice for productive use
+
+Callback: Notify if analysis is done. Nice for Dashboards or similar
+
+Distributed: Module missing
+
+submitCAPE. Resubmit detected malware samples into CAPE with malware specific additional handling (debug, extract config)
+
+CompressResult: Compress data for MongoDB
+
+Ramfsclean: Garbage collection for memdumps
+
+
+Missing in CAPE:
+
+* Singlefile
+* Notification
+* Mattermost
+
+
+
+
+## Processing modules
+
+Curtain: Powershell de-obfuscation https://github.com/karttoon/curtaincuckoo/
+
+Sysmon: Process sysmon logs https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
+
+Analysis Info: General information
+
+Decompression: Decompresses artifacts compressed by CAPE for re-analysis
+
+Behaviour: Process behaviour log
+
+Debug: Process CAPE errors
+
+Detections: Config for different detection modules
+
+Dropped: Process dropped files and extract some info
+
+ProcDump: Add meta data to process dumps
+
+ProcMemory: Analyse process memory dumps (with yara)
+
+Procmon: Process MS procmon data https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
+
+Memory (Volatility): Volatility processing
+
+Usage: CPU/memory statistics
+
+Network: Processes PCAP
+
+Loop Detection: --
+
+Static: All kinds of static analysis: file magic, OLE tools, V8
+
+Strings: Extract printable strings
+
+Trid: File type detection https://mark0.net/soft-trid-e.html
+
+Targetinfo: Base info: filename, url
+
+Virustotal: Request info or submit files from VT
+
+Suricata: suricata network processing   https://suricata-ids.org/
+
+CIF: ??? https://csirtgadgets.com/collective-intelligence-framework
+
+Deduplication: Deduplicate screenshots
+
+VBA2Graph: Generate VBA call graph https://github.com/MalwareCantFly/Vba2Graph
+
+JA3: TLS fingerprinting a client https://github.com/salesforce/ja3
+
+MaliciousMacrobot: Office document triage https://github.com/egaus/MaliciousMacroBot
+
+XLSDeobf: XLM macro deobfuscator https://github.com/DissectMalware/XLMMacroDeobfuscator
+
+boxjs: ???
+
+Missing in CAPE (but was in Cuckoo):
+
+* APK info
+* Baseline
+* Buffer
+* Doridmon
+* DumpTLS
+* Extracted
+* Googleplay
+* Irma
+* Misp
+* Screenshots
+* Snort
+
+
+
+
 ### On Github
 
 [CAPEv2](https://github.com/kevoreilly/CAPEv2)
@@ -36,3 +169,9 @@ it is based on [Spender Sandbox](https://github.com/spender-sandbox/cuckoo-modif
 which is based on [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)
 
 %% Features to verify: Process injection (OS, bit), Process dumper = unpacker, config extractor, Debugger,  Python3, volatility, which VMs supported ?, simulated networks ?, fog server support, dist.py, supported windows versions, are tags for vms supported
+
+%% TODO: CAPEv2 + FOG server: https://mariohenkel.medium.com/using-cape-sandbox-and-fog-to-analyze-malware-on-physical-machines-4dda328d4e2c
+
+%% TODO: Network cloning and management. For bare metal analysis machines: https://fogproject.org/
+
+

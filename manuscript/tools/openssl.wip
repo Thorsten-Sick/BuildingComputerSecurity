@@ -1,3 +1,6 @@
+# OpenSSL and Encryption
+
+## OpenSSL
 
 View vert file:
 openssl x509 -in mycertfile.pem -noout -text
@@ -7,3 +10,10 @@ openssl s_client --showcerts website.de:443 </dev/null 2>/dev/null |openssl x509
 
 
 %% TODO: https://twitter.com/b0rk/status/1087524713939722240?s=09
+
+
+## Network Fingerprinting
+
+JA3 (passive TLS fingerprints): TLS fingerprinting a client https://github.com/salesforce/ja3
+
+Jarm (active TLS fingerprints): https://github.com/salesforce/jarm and https://github.com/botherder/jarm

