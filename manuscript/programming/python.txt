@@ -81,6 +81,10 @@ One is stable, one is for development (*devel-req.txt* and *stable-req.txt*).
 
 That way we can experiment with new library versions without breaking anything.
 
+### Unit tests
+
+https://docs.python.org/3/library/unittest.html
+
 ### Code Coverage
 
 The tool [Coverage](https://coverage.readthedocs.io/en/v4.5.x/) offers code coverage. Which is important as a base measurement to create unit tests and similar.
@@ -121,8 +125,7 @@ Tox can be bootstrapped by running
 {language="bash"}
     tox-quickstart
 
-It requires a *setup.py* file. See previous chapter. The result is a *tox.ini* file describing all the potential combinations of tests, python
-versions and modules.
+It requires a *setup.py* file. See previous chapter. The result is a *tox.ini* file describing all the potential combinations of tests, python versions and modules.
 
 Run it by calling
 

@@ -48,3 +48,6 @@ A good defense is to keep your frameworks, web apps and plugins up to date. Mayb
 [Mastering Kali Linux for Advanced Penetration Testing - Second Edition](https://learning.oreilly.com/library/view/mastering-kali-linux/9781787120235)
 
 %% TODO Review [Practical Web Penetration Testing](https://learning.oreilly.com/library/view/practical-web-penetration/9781788624039/)
+
+
+%% https://github.com/opsdisk/pagodo

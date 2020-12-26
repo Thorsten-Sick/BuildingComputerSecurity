@@ -1,0 +1,9 @@
+# Threat intelligence
+
+## OASIS STIX
+
+https://oasis-open.github.io/cti-documentation/
+
+Python API: https://github.com/oasis-open/cti-python-stix2
+
+Using this API for the MITRE ATT&CK data model: https://github.com/mitre/cti/blob/master/USAGE.md

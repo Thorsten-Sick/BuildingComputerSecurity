@@ -1,0 +1,37 @@
+# Vagrant
+
+
+## Boxes
+
+Boxes are base VMs. Out of those Vagrant machines are generated using the *Vagrant* file.
+Most of the time you will be using existing public boxes.
+
+
+### Creating boxes
+
+{lang="bash"}
+    vagrant package --base 'Windows 10 x64'
+
+Will create a box out of the **running** VirtualBox machine with the given name.
+Network interface must be set to NAT.
+
+The box will not be automatically added to the known boxes
+
+### Listing Boxes
+
+{lang="bash"}
+    vagrant box list
+
+### Adding the new box
+
+{lang="bash"}
+    vagrant box add --name windows10_64 "file:///home/ts/vagrantboxes/win10_64/package.box"
+
+Whitespace in the URI causes trouble....
+
+This will add the new box to the list of available boxes with the chose name
+
+### Deleting a box
+
+{lang="bash"}
+    vagrant box remove windows10_64

@@ -140,11 +140,19 @@
 
 **Living off the land**: A tactics where the attacker uses pre-installed software for the attack. This reduces detectable malware on the system
 
+%%  TODO: MAEC5
+
 **Malware**: Malicious software
+
+%% TODO: MISP
 
 **MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
+
+%% TODO: MITRE
+
+%% TODO: MITRE Att@ck
 
 **Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
 
@@ -165,6 +173,8 @@
 **Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
 
 **Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
+
+%% TODO: STIX2
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 
