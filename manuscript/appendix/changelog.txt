@@ -68,6 +68,11 @@ changelog to make it simpler for you to find the new sections.
 
 %% TODO: Add Malware
 
+## December 2020
+
+%% Extend Google dork with searche ngines (in todo.wip)
+%% Python unit tests need proper content
+
 ## October 2020
 
 * Extended Behaviour based classification
