@@ -3,3 +3,6 @@
 https://osquery.io/schema/4.4.0/
 
 Similar: https://github.com/orlikoski/CyLR  (Especially file meta data extraction)
+
+Finding run keys: https://rhq.reconinfosec.com/tactics/persistence/#user-specific-run-keys
+Also: https://attack.mitre.org/techniques/T1547/001/

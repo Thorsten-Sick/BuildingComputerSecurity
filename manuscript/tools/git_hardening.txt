@@ -76,6 +76,8 @@ W> magic *find --name* and *fgrep* to write your own small checker.
 
 %% https://github.com/awslabs/git-secrets
 
+%% TODO: https://github.com/deepfence/SecretScanner?utm_source=social_share
+
 %% TODO: GPG keys to GIT
 
 

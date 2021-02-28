@@ -215,3 +215,5 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 %% TODO: Special compile flag -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
 
 %% TODO: OSS Fuzz: https://google.github.io/oss-fuzz/
+
+%% TODO: Put python fuzzer either here or into python: https://github.com/google/atheris

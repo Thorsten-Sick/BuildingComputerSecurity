@@ -100,6 +100,11 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 
 %% TODO Verify certificate (host name !)
 
+%% TODO: Verify
+%% snap install --classic certbot
+%% ln -s /snap/bin/certbot /usr/bin/certbot
+%% certbot --nginx    or certbot --apache
+
 ## Certificate content and structure
 
 Certificates can be stored in different container formats. Conversion can be required.
@@ -246,3 +251,5 @@ There is also one page that will never use SSL/TLS and can be quite handy for te
 %% TODO: https://github.com/drwetter/testssl.sh  SSL/TLS test tool
 
 %% TODO: https://decoder.link/
+
+%% SSL Configuration generator for webserver, databases and similar: https://ssl-config.mozilla.org/
