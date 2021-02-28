@@ -52,7 +52,7 @@
 
 **CERT**: Computer Emergency Response Team. Handles security breaches in organisations or nations.
 
-%% TODO: **CSRF & Cross site request forgery**
+**CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requstz on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
 
 **Dedik**: Stolen RDP access to a windows server. Used as first step for Ransomware attacks (2020: 70% of Ransomware attacks started that way). Dedik = Dedicated server
 
@@ -94,11 +94,11 @@
 
 **DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
 
-%% TODO: **EFF**:
+**DVA / Damn Vulnerable Application** (Also: Damn Vulnerable Web application): A insecure application to train hacking on or test tools
 
 **Evercookies**: Are snippets stored in the browser like cookies. Storage is JavaScript Local storage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
 
-%% TODO: Firewall (Web app firewall ?)
+**Firewall**: Network filter. Can reduce allowed traffic on a network connection. Smarter firewalls can maintain some state and decided based on who initiated a connection - internal or external computer ?
 
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
 
@@ -108,15 +108,27 @@
 
 **IPS / Intrusion Prevention System**: IDS with the ability to automatically stop potential attacks (firewall up, terminate processes, ...)
 
+**Implant**: A tool used by the attacker to maintain access to an exploited system. Normally has some form of connection to the attacker's infrastructure to be controlled
+
 **Least Privilege**: Grant a process only the least privileges required to do its task. If something goes south, the impact is minimized.
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
+**Persistence**: Attackers can do a hit and run - stealing data - or try to maintain access to the target by runnign implants there or getting the credentials. That way the "attack survives a reboot". This would be called "persistence".
+
+**Persistence(system)**: System level persistence can be gained by running code on a single system. Often done as a hidden rootkit in kernel mode
+
+**Persistence(network)**: Persistence by controlling several systems by either stolen credentials or compromise of a core infrastructure in the network.
+
 **QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
+
+**RAT / Remote access trojan**: An implant to gain persistence. Can remote control OS functionalities.
 
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
+
+**Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
 
 **Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
 
@@ -140,19 +152,19 @@
 
 **Living off the land**: A tactics where the attacker uses pre-installed software for the attack. This reduces detectable malware on the system
 
-%%  TODO: MAEC5
+**MAEC5**: Malware sample description language. Covers static features like hashes and behaviour. [MAEC5](https://maecproject.github.io/documentation/maec5-docs/#introduction)
 
 **Malware**: Malicious software
 
-%% TODO: MISP
+**MISP**: Open standard for threat information sharing. Also a sharing platform. Focus on IOC. [MISP](https://www.misp-project.org/index.html)
 
 **MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
 
 **MITM**: Man/Monster in the Middle. Network connections are broken up in the middle by the attacker to spy or modify network packets
 
-%% TODO: MITRE
+**MITRE**: Non profit organisation doing security research
 
-%% TODO: MITRE Att@ck
+**MITRE Att@ck**: A taxonomy for attacker TTPs. [MITRE](https://attack.mitre.org/)
 
 **Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
 
@@ -161,6 +173,8 @@
 **RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
 
 **Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controls.
+
+**ROI**: Return on investment. A business metric. But as attackers want to make money, make them pay for it by detecting their tools, sharing this knowledge. And make it very expensive for them to attack.
 
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 
@@ -172,9 +186,11 @@
 
 **Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
 
+**Stack Clash**: A vulnerability on Linux/BSD systems. Stack Guard Page should protect against Stack-Overflows. But it can be tricked into overwriting memory. A compiler switch can protect against Stack Clash.
+
 **Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
 
-%% TODO: STIX2
+**STIX2**: A data format to exchange threat intel. More focussed on Attack Groups/Identity/Threat actor/Campaign. [STIX2](https://oasis-open.github.io/cti-documentation/)
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 

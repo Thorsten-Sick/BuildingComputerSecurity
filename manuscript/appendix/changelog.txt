@@ -72,6 +72,12 @@ changelog to make it simpler for you to find the new sections.
 
 %% Extend Google dork with searche ngines (in todo.wip)
 %% Python unit tests need proper content
+%% Hydra
+%% OODA loop: Important background info !
+
+* Extended glossary
+* Updated python chapter
+%% TODO: Check if mitre att@ck is handled properly there
 
 ## October 2020
 

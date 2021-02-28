@@ -42,9 +42,12 @@ of the project itself.
 Choose wisely which combination of tools you want to use.
 
 %% Book: "The Hitchhiker's Guide to Python" for modern python processes
+%% Online version: https://docs.python-guide.org/
 
 %% https://geekflare.com/find-python-security-vulnerabilities/
 %% https://medium.com/@prasincs/open-source-static-analysis-for-security-in-2018-part-1-python-348e9c1af1cd
+
+%% TODO: Python3 type checks
 
 ## Virtualenv build environment
 
@@ -112,6 +115,76 @@ Tox will require proper packaging. And setup.py is the traditional way to do pac
 
 For all the [details visit](https://setuptools.readthedocs.io/en/latest/).
 
+### Flake8 coding style verification
+
+In some teams coding style discussions can take away lots of valuable time from code reviews it could be smart to automatically check the coding style.
+
+*flake8* is the python tool to do that.
+
+It can run without configuration. But with larger projects, it could be smart to have a project specific configuration in the *.flake8* file (or your tox.ini).
+
+Just leaving this idea here. It helped me once to focus our meetings and code reviews on learning and real issues, not on coding style.
+
+[flake8](https://pypi.org/project/flake8/)
+
+### Safety
+
+The [safety](https://pyup.io/safety) tool is a dependency checker. It checks your project for vulnerable modules. This is essential for secure and robust code. It just does not spark glamour - but gets the job done (which is more important).
+
+{lang="bash"}
+    pipenv install safety
+    safety check -r requirements.txt
+    safety check    # To check installed libraries
+
+*Safety* has lots of features. Especially those that will help you to insert it into your build chain (Docker, Travis, GitHub).
+
+The free database is updated once a month. You can buy an API key for faster DB updates.
+
+If you have to update your requirements.txt, you can use a tool like [upgrade-requirements](https://pypi.org/project/upgrade-requirements/) to simplify your life
+
+### Bandit, static code analysis
+
+[Bandit](https://github.com/PyCQA/bandit) is a tool to identify typical vulnerabilities by static code analysis.
+
+It can be configured by putting a *.bandit* file into the project path.
+
+As it can be extended using python plugins, it is very flexible.
+
+{lang="bash"}
+    pip3 install bandit
+    bandit -r path/to/your/code
+
+### Pylint, stricter than flake8
+
+A linter wich adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
+For that reason it is wise to add it last (as soon as the flake8 warnings are fixed) and use a config file with exceptions for warnings you decide to ignore.
+
+To generate a configuration file:
+
+{lang="bash"}
+    pylint --generate-rcfile > pylint.rc
+
+To scan using this configuration:
+{lang="bash"}
+    pylint --rcfile=pylint.rc  *.py
+
+To get help for specific reported issues:
+{lang="bash"}
+    pylint --help-msg=missing-module-docstring
+
+Maybe you do not want to add it to the automated, enforced test prior to every release but first use it as a tool to improve code quality.
+
+It is also possible to disable specific warnings for a single line of code, a function or a block. To disable a warning for a function just add *#pylint disable=*
+
+{lang="python"}
+    def example(args):  # pylint: disable=unused-argument
+        """ An example where args is not used in the code but still an argument passed to the function """
+
+        print("That's all folks")
+
+
+[pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
+
 ### Tox
 
 We currently (year 2019) have the situation of python 2 to python 3 migration.
@@ -134,51 +207,51 @@ Run it by calling
 
 And it will create Virtualenvs for all potential system combinations and test your project.
 
-### Flake8 coding style verification
+Parts of the tox ini file that do the testing:
 
-In some teams coding style discussions can take away lots of valuable time from code reviews it could be smart to automatically check the coding style.
-
-*flake8* is the python tool to do that.
-
-It can run without configuration. But with larger projects, it could be smart to have a project specific configuration in the *.flake8* file (or your tox.ini).
-
-Just leaving this idea here. It helped me once to focus our meetings and code reviews on learning and real issues, not on coding style.
-
-[flake8](https://pypi.org/project/flake8/)
-
-### Safety
-
-The [safety](https://pyup.io/safety) tool is a dependency checker. It checks your project for vulnerable modules. This is essential for secure and robust code. It just does not spark glamour - but gets the job done (which is more
-important).
-
-{lang="bash"}
-    pipenv install safety
-    safety check -r requirements.txt
-    safety check    # To check installed libraries
-
-*Safety* has lots of features. Especially those that will help you to insert it into your build chain (Docker, Travis, GitHub).
-
-The free database is updated once a month. You can buy an API key for faster DB updates.
+{language="ini"}
+    [testenv]
+    deps = -rrequirements.txt
+            flake8
+            safety
+            bandit
 
 
-### Bandit, static code analysis
+    commands =
+        coverage run --source=app -m unittest discover -s tests
+        # Ignoring:
+        # E501: line too long
+        flake8 --ignore E501
+        # Check if dependencies are vulnerable
+        safety check -r requirements.txt
+        # Bandit check for common vulnerabilities
+        bandit -ll -r *.py app/
 
-[Bandit](https://github.com/PyCQA/bandit) is a tool to identify typical vulnerabilities by static code analysis.
+It contains:
 
-It can be configured by putting a *.bandit* file into the project path.
-
-As it can be extended using python plugins, it is very flexible.
+* Unit tests
+* Code coverage
+* Flake8
+* Safety: dependency check on requirements
+* Bandit: Checks for common vulnerabilities
 
 
 %% TODO: Other tools, available on GitHub as a service
-%% [Code quality for python](https://landscape.io)
-%% [Code coverage](https://codecov.io)
-%% [Code review](https://www.codefactor.io)
-%% [Travis build system](https://travis-ci.org/)
+
 %% Todo: Type test system for Python: [PyType](https://google.github.io/pytype/)
 
 %% TODO: See also profiling.wip for stuff that is cool but not relevant here
 
-%% TODO: Pylint https://www.pylint.org
-
 %% TODO: Python static type checker: https://mypy-lang.org
+
+%% TODO: PyPi supply chain attack: https://www.bleepingcomputer.com/news/security/researcher-hacks-over-35-tech-firms-in-novel-supply-chain-attack/
+
+%% TODO: Python fuzzer https://github.com/google/atheris  (link to fuzzing)
+
+
+%% ------------ not relevant
+
+%% [Code quality for python](https://landscape.io)
+%% [Code coverage](https://codecov.io)
+%% [Code review](https://www.codefactor.io)
+%% [Travis build system](https://travis-ci.org/)
