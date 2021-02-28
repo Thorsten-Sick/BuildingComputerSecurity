@@ -52,7 +52,7 @@
 
 **CERT**: Computer Emergency Response Team. Handles security breaches in organisations or nations.
 
-**CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requstz on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
+**CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requests on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
 
 **Dedik**: Stolen RDP access to a windows server. Used as first step for Ransomware attacks (2020: 70% of Ransomware attacks started that way). Dedik = Dedicated server
 
@@ -114,7 +114,7 @@
 
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
 
-**Persistence**: Attackers can do a hit and run - stealing data - or try to maintain access to the target by runnign implants there or getting the credentials. That way the "attack survives a reboot". This would be called "persistence".
+**Persistence**: Attackers can do a hit and run - stealing data - or try to maintain access to the target by running implants there or getting the credentials. That way the "attack survives a reboot". This would be called "persistence".
 
 **Persistence(system)**: System level persistence can be gained by running code on a single system. Often done as a hidden rootkit in kernel mode
 
@@ -190,7 +190,7 @@
 
 **Static Code analysis**: Analyse code without executing it. Compiler warnings are the best known example. Also linters.
 
-**STIX2**: A data format to exchange threat intel. More focussed on Attack Groups/Identity/Threat actor/Campaign. [STIX2](https://oasis-open.github.io/cti-documentation/)
+**STIX2**: A data format to exchange threat intel. More focused on Attack Groups/Identity/Threat actor/Campaign. [STIX2](https://oasis-open.github.io/cti-documentation/)
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 

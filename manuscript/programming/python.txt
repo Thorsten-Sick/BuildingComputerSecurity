@@ -2,7 +2,7 @@
 
 Python does not deal with pointers to memory (a constant source of issues in C-Languages) or is flexible/crazy like JavaScript. But even a simple and deterministic language without complex memory handling can have tricky areas causing security issues.
 
-And some of them are very sikmilar to what is known from the other languages.
+And some of them are very similar to what is known from the other languages.
 
 As **robust** code is more **secure** code those tools simplify the development process, hunt down bugs *and* fix security issues.
 
@@ -156,7 +156,7 @@ As it can be extended using python plugins, it is very flexible.
 
 ### Pylint, stricter than flake8
 
-A linter wich adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
+A linter which adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
 For that reason it is wise to add it last (as soon as the flake8 warnings are fixed) and use a config file with exceptions for warnings you decide to ignore.
 
 To generate a configuration file:
