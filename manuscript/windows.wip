@@ -56,7 +56,21 @@ UAC bypass: https://github.com/hfiref0x/UACME
 
 https://github.com/buftas/Active-Directory-Exploitation-Cheat-Sheet
 
+AD security review: https://www.hub.trimarcsecurity.com/post/securing-active-directory-performing-an-active-directory-security-review
+
+Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from-linux/
+
 %% TODO: Active directory cheat sheet: https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
 
 %%%%%%%%%%%%%
 %% Windows deep dive: https://channel9.msdn.com/Shows/Going+Deep   Lots of videos
+
+
+%% Powershell
+
+% https://leanpub.com/powershell101
+
+%%%%%%%%%%%%%%%
+%% windows IPC:
+%% https://csandker.io/2021/01/10/Offensive-Windows-IPC-1-NamedPipes.html
+%% https://csandker.io/2021/02/21/Offensive-Windows-IPC-2-RPC.html

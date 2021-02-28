@@ -35,3 +35,12 @@ This will add the new box to the list of available boxes with the chose name
 
 {lang="bash"}
     vagrant box remove windows10_64
+
+
+## Shares
+
+The directory containing the Vagrantfile is mounted into the VM. In Linux it is */vagrant/* on Windows it is
+*\\VBOXSVR\vagrant*
+
+To map it: *net use X: \\VBOXSVR\vagrant*
+

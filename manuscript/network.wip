@@ -153,3 +153,5 @@ Show them with
 %% TODO: Data extraction from PCAP: https://github.com/lgandx/PCredz
 
 %% TODO: Amass network mapping https://github.com/OWASP/Amass
+
+%% TODO: Tool nethogs to find processes that use lots of bandwidth

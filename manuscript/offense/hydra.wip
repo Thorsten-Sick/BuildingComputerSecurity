@@ -1,12 +1,18 @@
 # Hydra password brute forcing
 
+A network logon cracker using brute force.
+
 [original](https://www.ssec.wsc.edu/hydra/download.html)
 [current git](https://github.com/vanhauser-thc/thc-hydra)
 
-
-Hydra brute forces passwords for services.
 
 {lang="bash"}
     hydra -L users.txt -P pwds.txt <IP> ssh
 
 Brute forces all combinations of username:pwd that can be created out of the lists in those text files.
+
+%% TODO: Test some protocols and add them:  cvs ftp ftps http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] mssql mysql(v4) mysql5 ncp   pop3[s]  postgres  rdp   rexec rlogin rsh smb smtp[s] smtp-enum ssh sshkey svn  xmpp
+%% TODO: Add RSMngler: https://tools.kali.org/password-attacks/rsmangler
+%% TODO Add Crunch: https://tools.kali.org/password-attacks/crunch
+
+%% TODO Add Patator https://github.com/lanjelot/patator

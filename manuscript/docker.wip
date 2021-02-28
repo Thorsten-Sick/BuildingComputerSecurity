@@ -43,6 +43,42 @@ https://learning.oreilly.com/learning-paths/learning-path-docker/9781788997355/
 
 %% TODO: https://gvisor.dev 
 
+
+### Docker security
+
+Docker is not directly a security tool. But by reducing complexity (or better splitting it) it can conitrbute to proper engineering and thus to more security.
+There are specific mistakes you can make when running docker containers that will result in weak security and docker-escapes.
+
+%% TODO: Deeper research, find pages with examples for those attacks
+
+#### Mistakes
+
+Mounting sensitive files into the docker container is a grave mistake. That includes /etc or binary folders or the docker socket in */var/run/docker.sock*.
+
+Another mistake is to reduce Cgroup capability protection by running docker with the *--privileged* flag.
+
+#### Attacker tricks
+
+If an attacker can write to the base file system, she still can not execute programs on the host, except:
+
+* Manage docker using the available docker socket
+* Adding a ssh user, allow sudo and then connect to an already running sshd from the docker
+* Add something to the cronjobs
+
+
+### Defense
+
+%% TODO: Break out the Box (BOTB) tool
+%% TODO: Amicontained tool
+
+%% TODO: Remove unneeded containers
+
+%% TODO: If using external images as base, very that they are what they claim (and not also include some bitcoin miner)
+
+%% TODO: Take away docker daemon prvilieges (running as root): It does not really need them most of the time
+
 ## Links
 
 [Docs](https://docs.docker.com/)
+
+%% TODO: Check out podman as docker alternative
