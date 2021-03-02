@@ -78,7 +78,6 @@ changelog to make it simpler for you to find the new sections.
 
 * Extended glossary
 * Updated python chapter
-%% TODO: Check if mitre att@ck is handled properly there
 
 ## October 2020
 

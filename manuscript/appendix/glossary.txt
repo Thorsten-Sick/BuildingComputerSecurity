@@ -164,7 +164,7 @@
 
 **MITRE**: Non profit organisation doing security research
 
-**MITRE Att@ck**: A taxonomy for attacker TTPs. [MITRE](https://attack.mitre.org/)
+**MITRE Att@ck**: A taxonomy for attacker TTPs. [see: MITRE](https://attack.mitre.org/)
 
 **Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
 

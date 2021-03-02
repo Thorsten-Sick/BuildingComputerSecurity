@@ -51,30 +51,26 @@ Choose wisely which combination of tools you want to use.
 
 ## Virtualenv build environment
 
-%% TODO: https://docs.python-guide.org/dev/virtualenvs/
-
 Virtualenv is a way to handle several python projects on your system in parallel without installing the dependencies globally. This prevents the classic "dll hell" of Windows.
 
-You can use Virtualenv directly. Or use one of the simplification wrappers.
-*pipenv* is one of those.
+To install and create a virtual environment in you project folder execute:
 
 {lang="bash"}
-    pipenv --three install requests
+    sudo apt-get install python3-venv
+    python3 -m venv venv    # Creates the ven sub folder
+    source venv/bin/activate  # Activates the environment
+    deactivate  # De-activate the virtual environment
 
-Installs requests for this project. *--three* starts a python 3 environment.
-
-You can then export all installed requirements into a requirements file for your project using:
-
-{lang="bash"}
-    pipenv install flask
-    pip freeze > requirements.txt  # Export your installed requirements to a file
-
-Switching to it is done by
+In this virtual environment you can now use pip to install requirements and export them to a requirements file:
 
 {lang="bash"}
-    pipenv shell
-    pipenv install -r requirements.txt   # Install requirements.txt content
-    exit   # Exit pipenv shell
+    pip3 install flask
+    pip3 freeze > requirements.txt  # Export your installed requirements to a file
+
+Installing all requirements in a requirements.txt files can be done by:
+
+{lang="bash"}
+    pip3 install -r requirements.txt   # Install requirements.txt content
 
 Now we have a VCS safe way to handle requirements and to update them on all build and development systems.
 
@@ -84,38 +80,44 @@ One is stable, one is for development (*devel-req.txt* and *stable-req.txt*).
 
 That way we can experiment with new library versions without breaking anything.
 
-### Unit tests
+More on [venvs](https://docs.python.org/3/library/venv.html)
 
-https://docs.python.org/3/library/unittest.html
+## Unit tests
 
-### Code Coverage
+There are several unit test libraries for python. Basic features are the same everywhere. But to give you some idea about the potential I will describe the feature set of
+[unittest](https://docs.python.org/3/library/unittest.html) here:
+
+* Basic unit tests
+* Unit tests that can be discovered (place several unit test files in folder tests and call *unittest discover -s tests* to execute them)
+* Asserts on return values
+* Can assert on exceptions raised
+* Classes and methods can be mocked
+    * return values
+    * exceptions raised
+    * test for parameters they got called with
+
+And to verify if  enough code is checked by *unittest* you can use the tool coverage
+
+## Code Coverage
 
 The tool [Coverage](https://coverage.readthedocs.io/en/v4.5.x/) offers code coverage. Which is important as a base measurement to create unit tests and similar.
 
 To run your program in coverage, call:
 
 {lang="bash"}
-    pipenv install coverage
+    pip3 install coverage
     coverage run myprogram.py
     coverage html
     firefox htmlcov/index.html
 
-To run coverage together with *pytest* (covered later) switch into the python environment and run:
+To run coverage together with *unittest* switch into the python environment and run:
 
 {lang="bash"}
-    coverage run -m pytest
+    coverage run --source=app -m unittest discover -s tests
 
-This will generate a code coverage of your unit tests.
+This will generate a code coverage of your unit tests. Taking into account all you source files in the *app* folder.
 
-### Packaging with setup.py
-
-Tox will require proper packaging. And setup.py is the traditional way to do packages.
-
-[setup.py](https://packaging.python.org/tutorials/packaging-projects/) basics can be found here.
-
-For all the [details visit](https://setuptools.readthedocs.io/en/latest/).
-
-### Flake8 coding style verification
+## Flake8 coding style verification
 
 In some teams coding style discussions can take away lots of valuable time from code reviews it could be smart to automatically check the coding style.
 
@@ -127,12 +129,12 @@ Just leaving this idea here. It helped me once to focus our meetings and code re
 
 [flake8](https://pypi.org/project/flake8/)
 
-### Safety
+## Safety
 
 The [safety](https://pyup.io/safety) tool is a dependency checker. It checks your project for vulnerable modules. This is essential for secure and robust code. It just does not spark glamour - but gets the job done (which is more important).
 
 {lang="bash"}
-    pipenv install safety
+    pip3 install safety
     safety check -r requirements.txt
     safety check    # To check installed libraries
 
@@ -142,24 +144,22 @@ The free database is updated once a month. You can buy an API key for faster DB 
 
 If you have to update your requirements.txt, you can use a tool like [upgrade-requirements](https://pypi.org/project/upgrade-requirements/) to simplify your life
 
-### Bandit, static code analysis
+## Bandit, static code analysis
 
-[Bandit](https://github.com/PyCQA/bandit) is a tool to identify typical vulnerabilities by static code analysis.
-
-It can be configured by putting a *.bandit* file into the project path.
-
-As it can be extended using python plugins, it is very flexible.
+[Bandit](https://github.com/PyCQA/bandit) is a tool to identify typical vulnerabilities by static code analysis. It can be configured by putting a *.bandit* file into the project path. If the large feature set it offers by default is not enough for you:  it can be extended using python plugins.
 
 {lang="bash"}
     pip3 install bandit
     bandit -r path/to/your/code
 
-### Pylint, stricter than flake8
+## Pylint, stricter than flake8
 
 A linter which adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
 For that reason it is wise to add it last (as soon as the flake8 warnings are fixed) and use a config file with exceptions for warnings you decide to ignore.
 
 To generate a configuration file:
+
+%% TODO: Add installation
 
 {lang="bash"}
     pylint --generate-rcfile > pylint.rc
@@ -185,13 +185,19 @@ It is also possible to disable specific warnings for a single line of code, a fu
 
 [pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
 
-### Tox
+## Packaging with setup.py
 
-We currently (year 2019) have the situation of python 2 to python 3 migration.
-Even in the future without python 2 there will be (smaller) differences between python versions.
+Tox will require proper packaging. And setup.py is the traditional way to do packages.
 
-Unit tests **must** run on all python versions supported by your software. *Tox*
-automates this.
+[setup.py](https://packaging.python.org/tutorials/packaging-projects/) basics can be found here.
+
+For all the [details visit](https://setuptools.readthedocs.io/en/latest/).
+
+## Tox
+
+All code should now be migrated from python 2 to python 3. But even if this is the case, there are (smaller) differences between python sub-versions.
+
+Unit tests and other tests **must** run on all python versions supported by your software. And *Tox* automates this.
 
 Tox can be bootstrapped by running
 
