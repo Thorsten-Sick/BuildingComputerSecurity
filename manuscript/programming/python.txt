@@ -57,9 +57,9 @@ To install and create a virtual environment in you project folder execute:
 
 {lang="bash"}
     sudo apt-get install python3-venv
-    python3 -m venv venv    # Creates the ven sub folder
+    python3 -m venv venv      # Creates the ven sub folder
     source venv/bin/activate  # Activates the environment
-    deactivate  # De-activate the virtual environment
+    deactivate                # De-activate the virtual environment
 
 In this virtual environment you can now use pip to install requirements and export them to a requirements file:
 
@@ -88,9 +88,9 @@ There are several unit test libraries for python. Basic features are the same ev
 [unittest](https://docs.python.org/3/library/unittest.html) here:
 
 * Basic unit tests
-* Unit tests that can be discovered (place several unit test files in folder tests and call *unittest discover -s tests* to execute them)
-* Asserts on return values
-* Can assert on exceptions raised
+* Unit tests that can be discovered (place several unit test files in folder *tests* and call *unittest discover -s tests* to execute them)
+* Your tests can asserts on function return values
+* *Unittest* can assert on exceptions raised
 * Classes and methods can be mocked
     * return values
     * exceptions raised
@@ -165,16 +165,18 @@ To generate a configuration file:
     pylint --generate-rcfile > pylint.rc
 
 To scan using this configuration:
+
 {lang="bash"}
     pylint --rcfile=pylint.rc  *.py
 
 To get help for specific reported issues:
+
 {lang="bash"}
     pylint --help-msg=missing-module-docstring
 
-Maybe you do not want to add it to the automated, enforced test prior to every release but first use it as a tool to improve code quality.
+Maybe you do not want to add it to the automated, enforced test prior to every release. Then use it as a tool to improve code quality by starting it manually.
 
-It is also possible to disable specific warnings for a single line of code, a function or a block. To disable a warning for a function just add *#pylint disable=*
+It is also possible to disable specific warnings for a single line of code, a function or a block. To disable a warning for a function just add a specific comment:
 
 {lang="python"}
     def example(args):  # pylint: disable=unused-argument
@@ -183,7 +185,7 @@ It is also possible to disable specific warnings for a single line of code, a fu
         print("That's all folks")
 
 
-[pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
+[Pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
 
 ## Packaging with setup.py
 
