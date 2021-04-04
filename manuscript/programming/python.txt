@@ -84,8 +84,7 @@ More on [venvs](https://docs.python.org/3/library/venv.html)
 
 ## Unit tests
 
-There are several unit test libraries for python. Basic features are the same everywhere. But to give you some idea about the potential I will describe the feature set of
-[unittest](https://docs.python.org/3/library/unittest.html) here:
+There are several unit test libraries for python. Basic features are the same everywhere. But to give you some idea about the potential I will describe the feature set of [unittest](https://docs.python.org/3/library/unittest.html) here:
 
 * Basic unit tests
 * Unit tests that can be discovered (place several unit test files in folder *tests* and call *unittest discover -s tests* to execute them)
@@ -96,7 +95,7 @@ There are several unit test libraries for python. Basic features are the same ev
     * exceptions raised
     * test for parameters they got called with
 
-And to verify if  enough code is checked by *unittest* you can use the tool coverage
+To verify if  enough code is checked by *unittest* you should use the tool coverage
 
 ## Code Coverage
 
@@ -151,6 +150,16 @@ If you have to update your requirements.txt, you can use a tool like [upgrade-re
 {lang="bash"}
     pip3 install bandit
     bandit -r path/to/your/code
+
+It is possible to disable bandit on a specific line of code. Please properly review it before de-activation !
+
+The *nosec* command does the trick here.
+
+{lang="python"}
+    def example(args):  # nosec
+        """ An example where args is not used in the code but still an argument passed to the function """
+
+        print("That's all folks")
 
 ## Pylint, stricter than flake8
 

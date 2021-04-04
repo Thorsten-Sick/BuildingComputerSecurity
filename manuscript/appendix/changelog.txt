@@ -78,6 +78,7 @@ changelog to make it simpler for you to find the new sections.
 
 * Extended glossary
 * Extended "design"
+* Extended python
 
 ## February 2021
 
