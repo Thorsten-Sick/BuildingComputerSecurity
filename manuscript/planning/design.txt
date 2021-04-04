@@ -92,12 +92,32 @@ To maintain flexibility, automatically reduce issues and keep your engineers foc
 * Compartmentalize GitHub projects
 * Create incident response process
 
-For attackers you supply chain is a valid target. Hacking the chain between the code your developers wrote, the build system, the signature server, the update server and the updater on your customer's system has some benefits for the attacker:
+For attackers your **supply chain** is a valid target. Hacking the chain between the code your developers wrote, the build system, the signature server, the update server and the updater on your customer's system has some benefits for the attacker:
 
 * Several options to find weaknesses
 * The potential to attack all the customers at once
 
-Harden those systems.
+Harden those systems. Be also aware of two more things:
+
+### External software being part of your supply chain
+
+All tools you use. All libraries you link to are part of your supply chain. An attacker can attack those to attack you and others. Maybe they are just the weakes link.
+
+There are central components many use in their network or their build systems. Those are valid targets for the attackers. And there are several options for the attacker to attack you through those components
+
+* Simply buy the company building them and silently add "special features"
+* Hack those companies
+* Pay an insider to insert extra code
+* Modify the download server to server malicious components or just the old version - with vulnerabilities
+
+The added special features can then threaten you build system, your network environment or your product
+
+### You being part of someone else's supply chain
+
+If you are building a software product others are using to run their network or build software you could be part of a supply chain attack.
+
+Preventing attackers to modify your software is essential to protect everyone relying on you. A secured build environment, monitored access, signed binaries as output and secure update channels are key features you should have.
+
 
 %% TODO: Tools to check for checked in credentials in detail
 %% TODO: Reproducible builds in detail

@@ -74,6 +74,11 @@ changelog to make it simpler for you to find the new sections.
 %% OODA loop: Important background info !
 
 
+## April 2021
+
+* Extended glossary
+* Extended "design"
+
 ## February 2021
 
 * Extended glossary
