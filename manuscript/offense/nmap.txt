@@ -1,34 +1,38 @@
-# nmap
+# Nmap {#chapter-nmap}
 
 Nmap is a network and port scanner. Thanks to a scripting interface it can be used in a very flexible way.
 
-## Excluding ips
+## Excluding IPs
+
+The most important parameter to not accidentally harm the network or trigger detection:
 
 {lang="bash"}
     nmap --exclude 127.0.0.1,127.0.0.2
 
-Will exclude those two IPs from any attack. The most important tool to not accidentally harm the network or trigger detection.
+This will exclude those two IPs from any attack.
 
 ## Finding hosts
 
-When port scans are done, a ping scan to verify if the host is online is included. But if you just want to ping the host call
+When doing port scans, a ping scan to verify if the host is online is included by default. But if you just want to ping the host call
 
 {lang="bash"}
     nmap -sP localhost
 
-Of course you can also use network ranges, urls or wildcards
+Of course you can also use network ranges, URLs or wildcards:
 
 {lang="bash"}
     nmap -sP 192.168.178.*
 
-The traceroute parameter will add a fancy traceroute output. But must be run with root privileges
-
-For host discovery there are other, more stealthy variants like SYN host discovery, ICMP variants, ...
+The traceroute parameter will add a fancy traceroute output. But must be run with root privileges.
 
 {lang="bash"}
     sudo nmap -sP heise.de --traceroute
 
+For host discovery there are other, more stealthy variants like SYN host discovery, ICMP variants, ... Nmap is much more powerful than *ping*. Check out the man page.
+
 ## Finding ports
+
+After you know the hosts, your next step is to identify open ports - and running services. This is the default mode for Nmap, so no parameter is required.
 
 {lang="bash"}
     nmap  localhost
@@ -40,11 +44,11 @@ For host discovery there are other, more stealthy variants like SYN host discove
     80/tcp   open  http
     111/tcp  open  rpcbind
 
-Returns the open ports of a machine. Scan defaults to the most common ports. But with the *-p-* parameter you can scan all. This will take longer.
+Returns the open ports of a machine. Be aware: The scan defaults to the most common ports. For performance reasons. But with the *-p-* parameter you can scan all ports.
 
 ## OS detection
 
-nmap can give you a rough OS detection using the *-O* switch. Running port detection is default, so you will get that for free.
+Nmap offers OS detection using the *-O* switch. Running port detection is default, so you will get that for free.
 
 {lang="bash"}
     sudo nmap -O  localhost
@@ -64,9 +68,12 @@ nmap can give you a rough OS detection using the *-O* switch. Running port detec
     OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 1.58 seconds
 
+OS detection is based on [network stack behaviour](https://nmap.org/book/osdetect-methods.html) this is why it might
+not be exact if the same network stack is shared by closely related versions of a specific OS.
+
 ## Finding services
 
-Service detection will try to identify the services and version numbers running behind those ports. *-sV* is the way to get that
+Service detection will try to identify the services and version numbers running behind the open ports. *-sV* is the way to get that
 
 {lang="bash"}
     sudo nmap -sV  localhost
@@ -83,7 +90,8 @@ Service detection will try to identify the services and version numbers running 
 
 ## Being noisy
 
-Benefit of bing noisy is that the scan is faster. Side effect can be broken middle boxes, scanners, sensors or service afterwardss.
+Benefit of being noisy is that the scan is faster. Side effect can be broken middle boxes, scanners, sensors or services afterwards.
+But this side effect could be exactly what you are looking for when testing your own technology and infrastructure.
 
 {lang="bash"}
     nmap -T5 --min-parallelism 100 --max-scan-delay 1 localhost
@@ -101,10 +109,11 @@ A sneaky way to scan and hide from monitors can be achieved by this combination 
 
 * -T is the timing template. 0 is slowest, 5 is fastest
 * -F fast mode: scan fewer ports than default
-* -D RND:5 will create 5 decoy ips the target is scanned from
+* -D RND:5 will create 5 decoy IPs the target is scanned from
 * --randomize-hosts will randomize the order of the target hosts - you should have more than one target for this to have an effect
 
-There are many more settings löike fragmentation to play with. Patience is the limiting factor here.
+There are many more settings like fragmentation to play with. Patience is the limiting factor here. For more see the man page.
+This can be very relevant for tuning your detection technology.
 
 ## Scripts
 
@@ -113,12 +122,18 @@ I will just drop some examples. Please take some time and browse through this fo
 
 ### RDP
 
+The Remote Desktop Protocol is something you will encounter quite often in a Windows environment.
+
+To do some initial port scanning:
+
 {lang="bash}
     nmap -P0 -T4 192.168.0.1/24 --open
 
-* P0: Switch of pinging the system first
+* P0: Switch off pinging the system first
 * T4: Fast mode
 * Show open ports. 3389 is RDP.
+
+And to extract RDP info next:
 
 {lang="bash}
     nmap -P0 -p 3389 --script rdp-ntlm-info 192.168.1.1
@@ -126,9 +141,32 @@ I will just drop some examples. Please take some time and browse through this fo
 * -p 3389: Standard RDP port
 * rdp-ntlm-info: Special script to extract RDP info
 
-The tool hydra supports RDP as well.
+The tool *hydra* supports RDP as well and can brute force user names/passwords.
+
+### SMB Server message block
+
+Server Message Block is handling file, printer and server features in Windows networks. There is a bunch of specific SMB scripts for Nmap.
+
+Get supported SMB protocols
+
+{lang="bash"}
+    nmap -p 445 --script smb-protocols <ip>
+
+Get OS
+{lang="bash"}
+    nmap -p 445 --script smb-os-discovery <ip>
+
+List active shares and permissions
+{lang="bash"}
+    nmap -p 445 --script smb-enum-shares <ip>
+
+List users
+{lang="bash"}
+    nmap -p 445 --script smb-enum-users <ip>
 
 ### Vulnerability scanner
+
+There are specific vulnerability scanner tools. But as a starter Nmap scripts can do pretty well.
 
 [Vulners](https://github.com/vulnersCom/nmap-vulners)
 
@@ -137,13 +175,10 @@ The tool hydra supports RDP as well.
 
 Will report vulnerabilities found on the system. Verifying with a "proper" vulnerability scanner or manually could be wise.
 
-%% ## Sources
-%% Video Tutorial "Nmap for Penetration Testing: From Beginner to Advanced" https://learning.oreilly.com/videos/nmap-for-penetration/9781801074421/
+## Sources
 
-
-
-
-
+* [Video Tutorial "Nmap for Penetration Testing: From Beginner to Advanced"](https://learning.oreilly.com/videos/nmap-for-penetration/9781801074421/)
+* [Nmap doc](https://nmap.org/)
 
 
 %% TODO: More, German: https://www.heise.de/hintergrund/Remote-Desktop-via-RDP-Testen-und-angreifen-3-4-4702968.html

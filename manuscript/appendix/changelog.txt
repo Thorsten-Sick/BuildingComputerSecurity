@@ -76,7 +76,7 @@ changelog to make it simpler for you to find the new sections.
 %% SQL injection
 %% Metasploit (link from vulnerabilities)
 %% NMap
-%% The whole taching stuff
+%% The whole teaching stuff
 
 ## June 2021
 
@@ -84,10 +84,11 @@ New:
 
 Big additions:
 
-* Extended Glossary
+* Added (Nmap chapter)(#chapter-nmap)
 
 Small additions:
 
+* Extended Glossary
 * Behaviour based classification
 * Kill chain
 * Passwords
