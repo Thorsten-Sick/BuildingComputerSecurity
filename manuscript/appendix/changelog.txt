@@ -84,7 +84,7 @@ New:
 
 Big additions:
 
-* Added (Nmap chapter)(#chapter-nmap)
+* Added [Nmap chapter](#chapter-nmap)
 
 Small additions:
 

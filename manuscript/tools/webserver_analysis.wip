@@ -68,7 +68,7 @@ already results in
 * ssl certificate details
 * OS
 
-For more Nmap knowledge, go to the specific (Nmap chapter)(#chapter-nmap)
+For more Nmap knowledge, go to the specific [Nmap chapter](#chapter-nmap)
 
 %% nmap enum scripts can enumerate methods supported by the server (GET, POST, ...) and hidden files and directories:
 %% Search for http* scripts in the nmap script folder
