@@ -7,6 +7,7 @@ It is important that you rate those resources for yourself. I have my personal c
 * ALERT: Resources being fast on alerting. But I do not expect in depth coverage
 * DEEP: Slow (months after the incident) but incredibly deep coverage
 * SIMPLE: Resources to share with non-tech people
+* KNOWLEDGE: General knowledge covering specific technology. Not a source for threat intelligence
 
 All of them have their benefits and you should always use the proper source for the task at hand.
 
@@ -28,27 +29,19 @@ A very methodical book covering
 
 A good overview.
 
-Potential improvement: Go deeper into details and specific technology.
-For example: Crypto chapter is a good start but really using crypto will
-require more books to be read. Says the one writing a
-"security overview book"...I know....
+Potential improvement: Go deeper into details and specific technology. For example: Crypto chapter is a good start but really using crypto will
+require more books to be read. Says the one writing a "security overview book"...I know....
 
 ### Book: "Test driven development for embedded C" {#reference-book-tdd-4-embedded-c}
 
 Test Driven Development for Embedded C by James W. Grenning
 
-A pragmatic and step-by-step approach how to develop for embedded systems in C
-and still benefit from unit tests.
+A pragmatic and step-by-step approach how to develop for embedded systems in C and still benefit from unit tests.
 
 This book will improve your software quality and security.
 
 
-
-
-
 %% TODO: The car hacker's handbook
-
-
 
 ### The Browser Hacker's Handbook {#reference-book-browser-hacker-handbook}
 
@@ -78,15 +71,13 @@ Wide spectrum of offensive technologies. Good to create a checklist what to prot
 
 Pragmatic Thinking and Learning, by Andy Hunt
 
-Explains your most important tool as a computer expert: Your brain. How to use
-it, how to learn. A very important book for me. Written for the engineer.
+Explains your most important tool as a computer expert: Your brain. How to use it, how to learn. A very important book for me. Written for the engineer.
 
 ### Driving Technical Change {#reference-book-driving-technical-change}
 
 Driving Technical Change, by Terrence Ryan
 
-A book explaining how to introduce new technologies in a team or company. Simple
-to read but with very essential tricks for the tech guy how to get mental
+A book explaining how to introduce new technologies in a team or company. Simple to read but with very essential tricks for the tech guy how to get mental
 boulders blocking change out of the way.
 
 ### Anti Patterns {#reference-book-anti-patterns}
@@ -166,6 +157,8 @@ Blackhat is a security conference with events in US, Europa and Asia (so don't g
 ### BSides
 
 [BSides](https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG)
+
+[BsidesSF 2021](https://bsidessf.org/schedule)
 
 ### Radare Con
 

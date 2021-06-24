@@ -252,7 +252,7 @@ It contains:
 * Safety: dependency check on requirements
 * Bandit: Checks for common vulnerabilities
 
-
+%% TODO: https://github.com/treebeardtech/pytest-deepcov
 %% TODO: Other tools, available on GitHub as a service
 
 %% Todo: Type test system for Python: [PyType](https://google.github.io/pytype/)

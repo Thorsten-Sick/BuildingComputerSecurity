@@ -163,7 +163,13 @@ PHP commands to use:
 * phpinfo();
 * passthru("commandline command");
 
+## Scan for HTTP/HTTPS servers
 
+https://github.com/tomnomnom/httprobe
+
+## REST Web API scanning / HTTP parameter discovery
+
+https://github.com/s0md3v/Arjun
 
 %%%%%%%%%%%%%%%
 

@@ -69,9 +69,29 @@ changelog to make it simpler for you to find the new sections.
 %% TODO: Add Malware
 
 %% Extend Google dork with searche ngines (in todo.wip)
-%% Python unit tests need proper content
 %% Hydra
 %% OODA loop: Important background info !
+
+%% merge books and external references, fix safari links
+%% SQL injection
+%% Metasploit (link from vulnerabilities)
+%% NMap
+%% The whole taching stuff
+
+## June 2021
+
+New:
+
+Big additions:
+
+* Extended Glossary
+
+Small additions:
+
+* Behaviour based classification
+* Kill chain
+* Passwords
+* Vulnerabilities
 
 
 ## April 2021
@@ -79,6 +99,7 @@ changelog to make it simpler for you to find the new sections.
 * Extended glossary
 * Extended "design"
 * Extended python
+%% TODO: Fix the whole book thing
 
 ## February 2021
 

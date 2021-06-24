@@ -68,6 +68,12 @@ already results in
 * ssl certificate details
 * OS
 
+%% nmap enum scripts can enumerate methods supported by the server (GET, POST, ...) and hidden files and directories:
+%% Search for http* scripts in the nmap script folder
+
+%% nmap -p 80 --script http-enum <target ip>   to find find hidden folders
+%% add link to nmap
+
 %% TODO: https://nmap.org/book/nse.html
 
 %% TODO: What can shodan offer us here ?

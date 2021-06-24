@@ -1,0 +1,15 @@
+# SMB Server message block
+
+## nmap
+
+nmap -p 445 --script smb-protocols <ip>
+get supported SMB protocols
+
+nmap -p 445 --script smb-os-discovery <ip>
+get OS
+
+nmap -p 445 --script smb-enum-shares <ip>
+list active shares and permissions
+
+nmap -p 445 --script smb-enum-users <ip>
+list users

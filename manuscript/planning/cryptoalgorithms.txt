@@ -242,3 +242,5 @@ A source for a more specific evaluation of your required [key length is here](ht
 %% TODO: Ange's [MD5 Attack](https://github.com/corkami/pocs/blob/master/collisions/README.md)
 
 %% TODO: Kerckhoff's principle: https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle
+
+%% TODO: Add and research Cryptool 2 training tool for encryption training

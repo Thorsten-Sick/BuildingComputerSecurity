@@ -57,6 +57,10 @@ W> It is currently not maintained.
 W> But the database is very good. Maybe you can use it together with some bash
 W> magic *find --name* and *fgrep* to write your own small checker.
 
+%% https://github.com/securing/DumpsterDiver
+%% https://github.com/zricethezav/gitleaks
+
+
 %% Active search for specific patterns:
 %% GIT miner : https://github.com/UnkL4b/GitMiner
 

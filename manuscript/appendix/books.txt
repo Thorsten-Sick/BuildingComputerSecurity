@@ -1,0 +1,371 @@
+# AI
+
+Streaming systems
+https://learning.oreilly.com/library/view/streaming-systems/9781491983867/
+
+Data science from scratch
+https://learning.oreilly.com/library/view/data-science-from/9781492041122/
+
+Natural Language Processing with PyTorch
+https://learning.oreilly.com/library/view/natural-language-processing/9781491978221/
+
+Generative Deep Learning
+https://learning.oreilly.com/library/view/generative-deep-learning/9781492041931/
+
+Machine Learning Pocket Reference
+https://learning.oreilly.com/library/view/machine-learning-pocket/9781492047537/
+
+Building Machine Learning Powered Applications
+https://learning.oreilly.com/library/view/building-machine-learning/9781492045106/
+
+Practical Synthetic Data Generation
+https://learning.oreilly.com/library/view/practical-synthetic-data/9781492072737/
+
+Practical Deep Learning for Cloud, Mobile, and Edge
+https://learning.oreilly.com/library/view/practical-deep-learning/9781492034858/
+
+Strengthening Deep Neural Networks
+https://learning.oreilly.com/library/view/strengthening-deep-neural/9781492044949/
+
+Deep Reinforcement Learning Hands-On
+https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781788834247/
+
+Malware Data Science (!!!)
+https://learning.oreilly.com/library/view/malware-data-science/9781492067672/
+
+Hands-On Machine Learning with Scikit-Learn and TensorFlow
+https://learning.oreilly.com/library/view/hands-on-machine-learning/9781491962282/
+
+Keras Deep Learning Cookbook
+https://learning.oreilly.com/library/view/keras-deep-learning/9781788621755/
+
+# Android
+
+Android Security
+https://learning.oreilly.com/library/view/android-security/9781439896464/
+
+Android Security Internals
+https://learning.oreilly.com/library/view/android-security-internals/9781457185496/
+
+Android Malware and Analysis
+https://learning.oreilly.com/library/view/android-malware-and/9781482252200/
+
+# Bluetooth
+
+Bluetooth Low Energy: The Developer's Handbook
+https://learning.oreilly.com/library/view/bluetooth-low-energy/9780132888394/
+
+Make: Bluetooth
+https://learning.oreilly.com/library/view/make-bluetooth/9781680451108/
+
+Building Bluetooth Low Energy Systems
+https://learning.oreilly.com/library/view/building-bluetooth-low/9781786461087/
+
+IoT Projects with Bluetooth Low Energy
+https://learning.oreilly.com/library/view/iot-projects-with/9781788399449/
+
+Kali Linux Wireless Penetration Testing Cookbook
+https://learning.oreilly.com/library/view/kali-linux-wireless/9781783554089/
+
+# C
+
+C in a Nutshell, 2nd Edition
+https://learning.oreilly.com/library/view/c-in-a/9781491924174/
+
+21st Century C, 2nd Edition
+https://learning.oreilly.com/library/view/21st-century-c/9781491904428/
+
+C Pocket Reference
+https://learning.oreilly.com/library/view/c-pocket-reference/0596004362/
+
+Practical C Programming, 3rd Edition
+https://learning.oreilly.com/library/view/practical-c-programming/1565923065/
+
+Secure Programming Cookbook for C and C++
+https://learning.oreilly.com/library/view/secure-programming-cookbook/0596003943/
+
+GDB Pocket Reference
+https://learning.oreilly.com/library/view/gdb-pocket-reference/9780596100278/
+
+Mastering Algorithms with C
+https://learning.oreilly.com/library/view/mastering-algorithms-with/1565924533/
+
+# Cloud
+
+Pentesting Azure Applications
+https://learning.oreilly.com/library/view/pentesting-azure-applications/9781492069416/
+
+# DevSecOps
+
+Learning Continuous Integration with TeamCity
+https://learning.oreilly.com/library/view/learning-continuous-integration/9781849699518/
+
+# Elasticsearch
+
+Advanced Elasticsearch 7.0
+https://learning.oreilly.com/library/view/advanced-elasticsearch-70/9781789957754/
+
+Elasticsearch: The Definitive Guide
+https://learning.oreilly.com/library/view/elasticsearch-the-definitive/9781449358532/
+
+# Embedded Systems
+
+Practical Industrial Internet of Things Security
+https://learning.oreilly.com/library/view/practical-industrial-internet/9781788832687/
+
+Designing Embedded Hardware, 2nd Edition
+https://learning.oreilly.com/library/view/designing-embedded-hardware/0596007558/
+
+Making Embedded Systems
+https://learning.oreilly.com/library/view/making-embedded-systems/9781449308889/
+
+The Hardware Hacker
+https://learning.oreilly.com/library/view/the-hardware-hacker/9781492019169/
+
+Test Driven Development for Embedded C
+https://learning.oreilly.com/library/view/test-driven-development/9781941222997/
+
+# Julia
+
+Learning Julia
+https://learning.oreilly.com/library/view/learning-julia/9781785883279/
+
+Think Julia
+https://learning.oreilly.com/library/view/think-julia/9781492045021/
+
+# Knowledge Transfer
+
+Stories that Move Mountains: Storytelling and Visual Design for Persuasive Presentations
+https://learning.oreilly.com/library/view/stories-that-move/9781118423998/
+
+Design for Hackers: Reverse-Engineering Beauty
+https://learning.oreilly.com/library/view/design-for-hackers/9781119998952/
+
+Weniger schlecht über IT schreiben
+https://learning.oreilly.com/library/view/weniger-schlecht-uber/9781492070177/
+
+# Management
+
+Beginning Software Engineering
+https://learning.oreilly.com/library/view/beginning-software-engineering/9781118969175/
+
+Peopleware: Productive Projects and Teams, Third Edition
+https://learning.oreilly.com/library/view/peopleware-productive-projects/9780133440706/
+
+Managing the Unmanageable: Rules, Tools, and Insights for Managing Software People and Teams
+https://learning.oreilly.com/library/view/managing-the-unmanageable/9780132981187/
+
+
+# Muss lesen
+
+! Special category !
+
+Merkmalskonstruktion für Machine Learning
+https://learning.oreilly.com/library/view/merkmalskonstruktion-fur-machine/9781492072089/
+
+Weniger schlecht programmieren
+https://learning.oreilly.com/library/view/weniger-schlecht-programmieren/9783955615697/
+
+Weniger schlecht Projekte managen
+https://learning.oreilly.com/library/view/weniger-schlecht-projekte/9781098124694/
+
+The Phoenix Project
+https://learning.oreilly.com/library/view/the-phoenix-project/9781457191350/
+
+Tribe of Hackers Red Team
+https://learning.oreilly.com/library/view/tribe-of-hackers/9781119643326/
+
+Tribe of Hackers
+https://learning.oreilly.com/library/view/tribe-of-hackers/9781119643371/
+
+Learning Malware Analysis
+https://learning.oreilly.com/library/view/learning-malware-analysis/9781788392501/
+
+Agile Application Security
+https://learning.oreilly.com/library/view/agile-application-security/9781491938836/
+
+The Pragmatic Programmer: your journey to mastery, 20th Anniversary Edition, 2nd Edition
+https://learning.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+
+Programming WebAssembly with Rust
+https://learning.oreilly.com/library/view/programming-webassembly-with/9781680506846/
+
+Practical Binary Analysis
+https://learning.oreilly.com/library/view/practical-binary-analysis/9781492071204/
+
+# Performance
+
+Designing for Sustainability
+https://learning.oreilly.com/library/view/designing-for-sustainability/9781491935767/
+
+High Performance Python, 2nd Edition
+https://learning.oreilly.com/library/view/high-performance-python/9781492055013/
+
+# Python
+
+Fluent Python, 2nd Edition
+https://learning.oreilly.com/library/view/fluent-python-2nd/9781492056348/
+
+Python Penetration Testing Essentials
+https://learning.oreilly.com/library/view/python-penetration-testing/9781789138962/
+
+Python Cookbook, 3rd Edition
+https://learning.oreilly.com/library/view/python-cookbook-3rd/9781449357337/
+
+Python in a Nutshell, 3rd Edition
+https://learning.oreilly.com/library/view/python-in-a/9781491913833/
+
+Black Hat Python
+https://learning.oreilly.com/library/view/black-hat-python/9781457189807/
+
+Fluent Python
+https://learning.oreilly.com/library/view/fluent-python/9781491946237/
+
+Violent Python
+https://learning.oreilly.com/library/view/violent-python/9781597499576/
+
+# Security
+
+Nmap for Penetration Testing: From Beginner to Advanced
+
+Good video tutorial covering Nmap.
+
+https://learning.oreilly.com/videos/nmap-for-penetration/9781801074421/
+
+
+Intelligence-Driven Incident Response
+
+High level and strategic knowledge on how to do incident response. Relevant for all people involved in this kind of process and thanks to the strategic perspective also good for managers.
+
+https://learning.oreilly.com/library/view/intelligence-driven-incident-response/9781491935187/
+
+The Site Reliability Workbook
+https://learning.oreilly.com/library/view/the-site-reliability/9781492029496/
+
+Site Reliability Engineering
+https://learning.oreilly.com/library/view/site-reliability-engineering/9781491929117/
+
+Learning Malware Analysis
+https://learning.oreilly.com/library/view/learning-malware-analysis/9781788392501/
+
+Agile Application Security
+https://learning.oreilly.com/library/view/agile-application-security/9781491938836/
+
+Cuckoo Malware Analysis
+https://learning.oreilly.com/library/view/cuckoo-malware-analysis/9781782169239/
+
+Practical Malware Analysis
+https://learning.oreilly.com/library/view/practical-malware-analysis/9781593272906/
+
+Practical Binary Analysis
+https://learning.oreilly.com/library/view/practical-binary-analysis/9781492071204/
+
+Malware Data Science
+https://learning.oreilly.com/library/view/malware-data-science/9781492067672/
+
+Ninja Hacking
+https://learning.oreilly.com/library/view/ninja-hacking/9781597495899/
+
+PoC||GTFO
+https://learning.oreilly.com/library/view/pocgtfo/9781492067528/
+
+PoC or GTFO, Volume 2
+https://learning.oreilly.com/library/view/poc-or-gtfo/9781492069393/
+
+Beautiful Security
+https://learning.oreilly.com/library/view/beautiful-security/9780596801786/
+
+Building Secure Software: How to Avoid Security Problems the Right Way
+https://learning.oreilly.com/library/view/building-secure-software/9780672334092/
+
+The Browser Hacker's Handbook
+https://learning.oreilly.com/library/view/the-browser-hackers/9781118662090/
+
+Crafting the InfoSec Playbook
+https://learning.oreilly.com/library/view/crafting-the-infosec/9781491913598/
+
+The Web Application Hacker's Handbook, 2nd Edition
+https://learning.oreilly.com/library/view/the-web-application/9781118026472/
+
+Google Hacking for Penetration Testers, 3rd Edition
+https://learning.oreilly.com/library/view/google-hacking-for/9780128029824/
+
+The Field Guide to Understanding 'Human Error', 3rd Edition
+https://learning.oreilly.com/library/view/the-field-guide/9781317031833/
+
+Open Source Fuzzing Tools
+https://learning.oreilly.com/library/view/open-source-fuzzing/9781597491952/
+
+Building a Modern Security Program
+https://learning.oreilly.com/library/view/building-a-modern/9781492044680/
+
+Advanced Penetration Testing
+https://learning.oreilly.com/library/view/advanced-penetration-testing/9781119367680/
+
+Abusing the Internet of Things
+https://learning.oreilly.com/library/view/abusing-the-internet/9781491902899/
+
+Hacking Exposed Wireless, Third Edition
+https://learning.oreilly.com/library/view/hacking-exposed-wireless/9780071827621/
+
+Gray Hat Hacking The Ethical Hacker's Handbook, Fifth Edition, 5th Edition
+https://learning.oreilly.com/library/view/gray-hat-hacking/9781260108422/
+
+Network Security with OpenSSL
+https://learning.oreilly.com/library/view/network-security-with/059600270X/
+
+Hands-On Red Team Tactics
+https://learning.oreilly.com/library/view/hands-on-red-team/9781788995238/
+
+Mastering Metasploit - Third Edition
+https://learning.oreilly.com/library/view/mastering-metasploit-/9781788990615/
+
+Cybersecurity - Attack and Defense Strategies
+https://learning.oreilly.com/library/view/cybersecurity-attack/9781788475297/
+
+Python Penetration Testing Essentials
+https://learning.oreilly.com/library/view/python-penetration-testing/9781789138962/
+
+Black Hat Python
+https://learning.oreilly.com/library/view/black-hat-python/9781457189807/
+
+IoT Penetration Testing Cookbook
+https://learning.oreilly.com/library/view/iot-penetration-testing/9781787280571/
+
+Serious Cryptography
+https://learning.oreilly.com/library/view/serious-cryptography/9781492067511/
+
+The Myths of Security
+https://learning.oreilly.com/library/view/the-myths-of/9780596803957/
+
+# Software Engineering
+
+Agile Estimating and Planning
+https://learning.oreilly.com/library/view/agile-estimating-and/9780137126347/
+
+Head First Design Patterns
+https://learning.oreilly.com/library/view/head-first-design/0596007124/
+
+
+
+
+-----------
+Books needing review
+Books: Mc Graw, "Software Security: Building Security in"
+Book: "Secure By Design"
+Book: "Secure Programming Cookbook for C and C++"
+Book: "Secure Coding in C and C++, Second Edition"
+
+* Read Apres Security books:
+- Cybersecurity incident response
+- Cyber Security o Azure
+- Enterprise Cybersecurity
+- identity attack vectors
+- open source intelligence
+- practical Cyber forensics
+- privileged attack vectors
+- professional red teaming
+- waging Cyber war
+
+Alice and Bob Learn Application Security
+https://www.amazon.de/Alice-Bob-Learn-Application-Security/dp/1119687357/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2OXYN599CKO7A&dchild=1&keywords=alice+and+bob+learn+application+security&qid=1617012705&sprefix=alice+and+bob%2Caps%2C178&sr=8-1

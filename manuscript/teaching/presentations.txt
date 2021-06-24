@@ -1,0 +1,48 @@
+# Presentations
+
+## Fonts
+
+https://fontawesome.com (icons)
+"Alle gut hackbar":
+https://www.fontzillion.com/fonts/barmee/afarat_ibn_blady
+
+Samurai Font (Brush Font)
+https://creativemarket.com/nurrehmettt/2646145-Fujimaru-Ninjas-Brush-Font
+
+## Photos/Diagrams/Icons
+
+https://creativemarket.com/
+
+istockphoto.com
+
+Free:
+https://www.pexels.com/
+https://www.pixelio.de/
+https://pixabay.com/
+https://search.creativecommons.org/
+
+https://www.openideo.com/challenge-briefs/cybersecurity-visuals
+
+## Diagrams
+
+Diagrams:
+Zenuml.com
+
+# Inkscape by Ange
+https://speakerdeck.com/ange/an-introduction-to-inkscape
+
+- Dot
+https://github.com/bbc/bbplot
+https://bbc.github.io/rcookbook/
+
+Python seaborn uses matplotlib for statistics
+Python http://altair-viz.github.io/ for statistics (seems more powerful than seaborn)
+
+
+Mermaidjs.github.io  https://mermaidjs.github.io/
+http://plantuml.com/
+https://casual-effects.com/markdeep/
+Railroad diagrams: https://bottlecaps.de/rr/ui
+
+Python backend to create data visualisation web pages:
+https://www.streamlit.io/

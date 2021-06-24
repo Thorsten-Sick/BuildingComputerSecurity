@@ -80,6 +80,16 @@ https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
     $q->fetch();  // Fetch the data, can be in a loop
     print "<h2>" . $title . "</h2>" . $message;
 
+## MySQL enumeration using nmap
+
+nmap does support mysql by scripts.
+
+* mysql-info: basic information. version, capabilities
+* mysql-enum: enumerate user accounts
+* mysql-brute: brute forces access to the mysql db
+* mysql-empty-password: Check for user accounts with empty passwords
+
+
 ## Further reading
 
 ### SQL injection attacks and defense
@@ -88,3 +98,5 @@ https://learning.oreilly.com/library/view/sql-injection-attacks/9781597499637
 
 
 %% TODO: SQL injection cheat sheet: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
+

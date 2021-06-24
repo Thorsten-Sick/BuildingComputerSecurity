@@ -8,7 +8,7 @@ by @notdan
 
 https://linux-audit.com/linux-host-discovery-with-nmap/
 
-%% TODO: NMAP scripting
+%% TODO: NMAP scripting, link to nmap
 
 
 ## Packet manipulation
@@ -133,6 +133,109 @@ Show them with
     ip addr del 127.0.0.1 dev eth1
 
 
+## Tunnel
+
+### Chisel
+
+https://github.com/jpillora/chisel
+
+
+## Tools
+
+%% TODO: Test and comment those tools
+
+### Connection check
+
+* ping
+* traceroute
+* tcpraceroute
+
+### Downloading
+
+* curl
+* wget
+* httpie
+
+### DNS lookup
+
+* dig
+* nslookup
+* whois
+
+### SSH
+
+* ssh
+* scp
+* rsync
+* sftp
+
+### PCAP
+
+* ngrep
+* tcpdump
+* wireshark
+* tshark (command line analysis tool)
+* tcpflow (assemble tcp streams)
+* hping3 (create tcp packets)
+
+### Local network settings
+
+* ifconfig
+* route
+* arp
+* ip (replacement for ifconfig, route)  %% TODO: check what else. Get used to it
+* ethtool (manage physical network devices)
+* iw/owconfig  (manage wireless cards)
+* sysctl (manage network stack)  %% TODO: Dig deeper
+
+### Local network analysis
+
+* netstat
+* ss
+* lsof
+* fuser
+* iptraf
+* nethogs
+* iftop
+* ntop
+* ab (benchmarking)
+* nload
+* iperf
+
+### More offensive
+
+* mitmproxy
+* nmap
+* zenmap (nmap gui)
+* p0f (identify OS of host connecting to you)  %% TODO: Test
+
+### More creative
+
+* nc (manual tp connections)
+* socat (proxy a tcp socket to a unix domain socket ++) %% TODO: Test
+
+### VPN and encryption
+
+* openssl
+* stunnel (create a SSL proxy)
+* openvpn (old vpn)
+* wireguard (newer vpn)
+
+### Firewalls
+
+* iptables (old)
+* nftables (new)
+
+### Quick http server
+
+* python3 -m http.server (serve files from a dir)
+
+### Tools
+
+* ipcalc: Calc ip addresses and masks
+
+Source: https://wizardzines.com/#posters
+
 
 %% IPOsint: https://github.com/j3ssie/IPOsint
 %% OSint : https://github.com/kpcyrd/sn0int
@@ -141,6 +244,8 @@ Show them with
 %% TODO: The future internet: https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20181218/Documents/Geoff_Huston_Presentation.pdf
 
 %% TODO: Shodan
+
+%% TODO: Greynoise.io https://greynoise.io/
 
 %% TODO: HFinger: https://github.com/CERT-Polska/hfinger  Recognizing malware network requests in pcap packages
 
@@ -155,3 +260,5 @@ Show them with
 %% TODO: Amass network mapping https://github.com/OWASP/Amass
 
 %% TODO: Tool nethogs to find processes that use lots of bandwidth
+
+%% Check IP on external databases (Virus Total...) https://github.com/jreisinger/checkip

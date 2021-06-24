@@ -68,9 +68,14 @@ Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from
 
 %% Powershell
 
-% https://leanpub.com/powershell101
+%% https://leanpub.com/powershell101
 
 %%%%%%%%%%%%%%%
 %% windows IPC:
 %% https://csandker.io/2021/01/10/Offensive-Windows-IPC-1-NamedPipes.html
 %% https://csandker.io/2021/02/21/Offensive-Windows-IPC-2-RPC.html
+
+%%%%%%%%%
+%% Token Privileges:
+%% https://twitter.com/fr0gger_/status/1379465943965909000/photo/1
+%% https://github.com/hatRiot/token-priv/blob/master/abusing_token_eop_1.0.txt

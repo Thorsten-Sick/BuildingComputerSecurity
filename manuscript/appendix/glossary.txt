@@ -16,6 +16,8 @@
 
 **Backdoor**: A constructed way for an attacker to connect to a vulnerable system and execute code
 
+**Beacon**: The C2 server on the public internet which is contacted by the implants on the victims local network. Connection is usually done in a regular interval. Depending on the malware this can be from minuets to months. Using this short beacon messages the implant fetches new instructions
+
 **Blacklist**: Deprecated, see "Block List"
 
 **Block List**: A list of items like URLs, hashes, ... that trigger a blocking
@@ -44,13 +46,17 @@
 
 **Canary**: A trigger that will alert in an intrusion attempt. Code canaries for example are values in the code that trigger when being overwritten
 
-**C&C**: Command and Control server. Central control over a botnet
+**CAPEC / Common Attack Pattern Enumeration and Classification**: A MITRE taxonomy for attack patterns. https://capec.mitre.org/
+
+**C&C aka C2**: Command and Control server. Central control over a botnet
 
 **Class break**: A Class break is a vulnerability that breaks the whole device class. Instead of just one single device. Example: Same master key on all devices leaks
 
 **CORS/ Cross-origin-resource-sharing**: Mechanism to define exceptions for the SOP (Same-origin-policy) in the HTTP header
 
 **CERT**: Computer Emergency Response Team. Handles security breaches in organisations or nations.
+
+**CRITs / Collaborative Research Into Threats** Threat intelligence sharing platform by MITRE. See TIP. https://crits.github.io/
 
 **CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requests on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
 
@@ -156,7 +162,9 @@
 
 **Malware**: Malicious software
 
-**MISP**: Open standard for threat information sharing. Also a sharing platform. Focus on IOC. [MISP](https://www.misp-project.org/index.html)
+**MaaS / Malware as a service**: Organised crime split malware creation and using malware against a target into different roles. Malware creators offer malware "as a service" to the second group
+
+**MISP**: Open standard for threat information sharing. Also a sharing platform. Focus on IOC. [MISP](https://www.misp-project.org/index.html). See also. TIP
 
 **MISRA C**: Guidelines for safe C programming. Tools (compiler and static code analyser) support it. Some of the safety issues are also security issues. Check it out. Low hanging fruit.
 
@@ -193,6 +201,10 @@
 **STIX2**: A data format to exchange threat intel. More focused on Attack Groups/Identity/Threat actor/Campaign. [STIX2](https://oasis-open.github.io/cti-documentation/)
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
+
+**TIP / Threat intelligence platform**: Threat intelligence sharing between organisations. See MISP or CRITs by MITRE
+
+**TLP / Traffic Light Protocol by DHS**: defines threat intelligence information sharing policy. From public to secret. Using 4 coloured levels
 
 **PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
 

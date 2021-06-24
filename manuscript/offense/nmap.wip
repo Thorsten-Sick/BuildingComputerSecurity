@@ -1,39 +1,166 @@
 # nmap
 
-nmap <ip> # scan ip
+Nmap is a network and port scanner. Thanks to a scripting interface it can be used in a very flexible way.
 
-nmap -p <port> <ip>  #  scan only port
+## Excluding ips
 
-nmap -p- <ip>  # scan all ports there
+{lang="bash"}
+    nmap --exclude 127.0.0.1,127.0.0.2
 
-nmap -sV <ip>  # find version of server there
+Will exclude those two IPs from any attack. The most important tool to not accidentally harm the network or trigger detection.
 
-## RDP
+## Finding hosts
 
-nmap -P0 -T4 192.168.0.1/24 --open
+When port scans are done, a ping scan to verify if the host is online is included. But if you just want to ping the host call
+
+{lang="bash"}
+    nmap -sP localhost
+
+Of course you can also use network ranges, urls or wildcards
+
+{lang="bash"}
+    nmap -sP 192.168.178.*
+
+The traceroute parameter will add a fancy traceroute output. But must be run with root privileges
+
+For host discovery there are other, more stealthy variants like SYN host discovery, ICMP variants, ...
+
+{lang="bash"}
+    sudo nmap -sP heise.de --traceroute
+
+## Finding ports
+
+{lang="bash"}
+    nmap  localhost
+    Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-21 12:34 CEST
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.000047s latency).
+    Not shown: 996 closed ports
+    PORT     STATE SERVICE
+    80/tcp   open  http
+    111/tcp  open  rpcbind
+
+Returns the open ports of a machine. Scan defaults to the most common ports. But with the *-p-* parameter you can scan all. This will take longer.
+
+## OS detection
+
+nmap can give you a rough OS detection using the *-O* switch. Running port detection is default, so you will get that for free.
+
+{lang="bash"}
+    sudo nmap -O  localhost
+    Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-21 12:38 CEST
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.000026s latency).
+    Not shown: 996 closed ports
+    PORT     STATE SERVICE
+    80/tcp   open  http
+    111/tcp  open  rpcbind
+    Device type: general purpose
+    Running: Linux 2.6.X
+    OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+    OS details: Linux 2.6.32
+    Network Distance: 0 hops
+
+    OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 1.58 seconds
+
+## Finding services
+
+Service detection will try to identify the services and version numbers running behind those ports. *-sV* is the way to get that
+
+{lang="bash"}
+    sudo nmap -sV  localhost
+    Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-21 12:39 CEST
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.0000040s latency).
+    Not shown: 996 closed ports
+    PORT     STATE SERVICE VERSION
+    80/tcp   open  http    Apache httpd 2.4.46 ((Ubuntu))
+    111/tcp  open  rpcbind 2-4 (RPC #100000)
+
+    Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 6.37 seconds
+
+## Being noisy
+
+Benefit of bing noisy is that the scan is faster. Side effect can be broken middle boxes, scanners, sensors or service afterwardss.
+
+{lang="bash"}
+    nmap -T5 --min-parallelism 100 --max-scan-delay 1 localhost
+
+* -T is the timing template. 0 is slowest, 5 is fastest
+* --min-parallelism 100 will set 100 scan threads
+* --max-scan-delay 1 will reduce any scan delay
+
+## Being silent
+
+A sneaky way to scan and hide from monitors can be achieved by this combination of settings (keep in mind: Much slower):
+
+{lang="bash}
+    sudo nmap -T1 -F -D RND:5 -f --randomize-hosts localhost
+
+* -T is the timing template. 0 is slowest, 5 is fastest
+* -F fast mode: scan fewer ports than default
+* -D RND:5 will create 5 decoy ips the target is scanned from
+* --randomize-hosts will randomize the order of the target hosts - you should have more than one target for this to have an effect
+
+There are many more settings löike fragmentation to play with. Patience is the limiting factor here.
+
+## Scripts
+
+There are several specific scripts stored in */usr/share/nmap/scripts/* Most of them are for specific services.
+I will just drop some examples. Please take some time and browse through this folder of scripts for inspiration
+
+### RDP
+
+{lang="bash}
+    nmap -P0 -T4 192.168.0.1/24 --open
 
 * P0: Switch of pinging the system first
 * T4: Fast mode
 * Show open ports. 3389 is RDP.
 
-nmap -P0 -p 3389 --script rdp-ntlm-info 192.168.1.1
+{lang="bash}
+    nmap -P0 -p 3389 --script rdp-ntlm-info 192.168.1.1
 
 * -p 3389: Standard RDP port
 * rdp-ntlm-info: Special script to extract RDP info
+
+The tool hydra supports RDP as well.
+
+### Vulnerability scanner
+
+[Vulners](https://github.com/vulnersCom/nmap-vulners)
+
+{lang="bash"}
+    nmap -sV --script vulners --script-args mincvss=5.0  localhost
+
+Will report vulnerabilities found on the system. Verifying with a "proper" vulnerability scanner or manually could be wise.
+
+%% ## Sources
+%% Video Tutorial "Nmap for Penetration Testing: From Beginner to Advanced" https://learning.oreilly.com/videos/nmap-for-penetration/9781801074421/
+
+
+
+
+
 
 
 %% TODO: More, German: https://www.heise.de/hintergrund/Remote-Desktop-via-RDP-Testen-und-angreifen-3-4-4702968.html
 
 %% TODO: The (Linux) tool xfreerdp allows to specify which security to use (command line)
-%% TODO: Hydra supports RDP
 
-## udp scanning specialised tool: udp-proto-scanner
-
-[udp-proto-scanner](https://github.com/portcullislabs/udp-proto-scanner) simulates a client trying to connect to a udp server.
-
-That way udp services can be scanned.
-
-{lang="bash"}
-    udp-proto-scanner.pl <ip>
+%% ### udp scanning specialised tool: udp-proto-scanner
+%% [udp-proto-scanner](https://github.com/portcullislabs/udp-proto-scanner) simulates a client trying to connect to a udp server.
+%% That way udp services can be scanned.
+%% {lang="bash"}
+%%    udp-proto-scanner.pl <ip>
 
 %% TODO: Check out Tsunami engine: https://github.com/google/tsunami-security-scanner
+
+%% TODO: Add tool "searchsploit" to identify exploits in services that nmap detected by -sV
+
+%% TODO script dns-brute  (try on https://digi.ninja/projects/zonetransferme.php zonetransfer.me)
+
+
+%% Video Tutorial "Nmap for Penetration Testing: From Beginner to Advanced" https://learning.oreilly.com/videos/nmap-for-penetration/9781801074421/

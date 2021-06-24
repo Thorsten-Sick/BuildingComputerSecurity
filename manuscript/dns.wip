@@ -84,6 +84,27 @@ Local network discovery.
 
 https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 
+## DNS name generation
+
+https://github.com/ProjectAnte/dnsgen
+
+https://github.com/infosec-au/altdns
+
+You will also want to use a performant DNS resolver:
+
+https://github.com/blechschmidt/massdns
+
+
+## Alternative DNS servers
+
+1.1.1.1/1.0.0.1 : Cloudflare https://en.wikipedia.org/wiki/1.1.1.1
+Freifunk München: 5.1.66.255  185.150.99.255  2001:678:ed0:f000::  2001:678:e68:f000:: https://ffmuc.net/wiki/doku.php?id=knb:dohdot
+
+## DNS leak test
+
+http://dns-leak.com/
+
+
 %%%%%%%%%
 
 %% TODO: tool dnsrecon seems cool
@@ -95,7 +116,7 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 %% sudo dnseval.py -f list.txt -c 5 <target-url>  # compare dns-es
 %% sudo dnstraceroute.px --expert --asn -C -s <dns-ip> <target-url>
 
-
+%% Sec list has a DNS list for sub domain brute forcing: https://github.com/danielmiessler/SecLists
 
 %% TODO: Subdomain Takeover research.
 %% Short and wrong:
@@ -111,3 +132,5 @@ https://www.gnucitizen.org/blog/name-mdns-poisoning-attacks-inside-the-lan/
 
 
 %% Link to CCC Camp 2019 Talk: https://media.ccc.de/v/Camp2019-10213-doh_or_don_t
+
+%% Practice Zone transfers on this free site: https://digi.ninja/projects/zonetransferme.php

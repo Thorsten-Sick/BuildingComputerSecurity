@@ -81,11 +81,11 @@ Developers and testers can avoid them during the development phase or detect the
 
 There are chapters in this book covering this - because it is the essence of security.
 
-## Search engines for exploits
+## Search engines for exploits and vulnerabilities
 
 Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both seem to have a strong focus and bias. So I suggest you either use several or experiment with them to find the one matching your requirements.
 
-Some exploit tools (metasploit) are also a good source for exploits. Going for the paid version is smart if you want the newest exploits.
+Some exploit tools (Metasploit) are also a good source for exploits. Going for the paid version is smart if you want the newest exploits.
 
 Search engines to try are:
 
@@ -96,6 +96,7 @@ Search engines to try are:
 * [Exploit-db](https://www.exploit-db.com)
 * [Rapid 7 (Metasploit) vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
 * [snyk.io](https://snyk.io)
+* [OSV Open Source Vulnerabilities](https://osv.dev/)
 
 A special case if you are more interested in web security is this sub-database for [Google hacking](https://www.exploit-db.com/google-hacking-database/)
 

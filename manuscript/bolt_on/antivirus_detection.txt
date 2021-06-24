@@ -215,3 +215,5 @@ You will benefit from the classification work of several virus labs. Negative si
 
 
 %% TODO: Specialized and hidden detection - attacker does not get feedback
+
+%% TODO AV Engine: https://www.adlice.com/making-an-antivirus-engine-the-guidelines

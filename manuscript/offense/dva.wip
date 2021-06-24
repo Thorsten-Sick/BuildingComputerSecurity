@@ -9,3 +9,21 @@ https://github.com/RedTeamOperations/Vulnerable_Machine/blob/master/Escalate%20-
 https://sourceforge.net/projects/owaspbwa/files/1.2/
 +
 https://code.google.com/archive/p/owaspbwa/wikis/UserGuide.wiki
+
+https://www.vulnhub.com/
+
+## Metasploitable 2
+
+Vulnerable Ubuntu VM
+
+https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/
+
+AFAIK: Available on Vagrant
+
+## Metasploitable 3
+
+Windows machine
+
+https://github.com/rapid7/metasploitable3
+
+AFAIK: Available on Vagrant

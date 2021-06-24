@@ -69,7 +69,7 @@ Also: Never ever depend on one way to classify only ! Always use additional clas
 
 ## Al-Khaser
 
-[Al-Khaser](https://github.com/LordNoteworthy/al-khaser) extends the scope of PaFish to also include anti-debugging, anti-dumping and anti-disassembly.
+[Al-Khaser](https://github.com/LordNoteworthy/al-khaser) extends the scope of Pafish to also include anti-debugging, anti-dumping and anti-disassembly.
 
 ## VMCloak
 
@@ -96,5 +96,11 @@ I contributed to Pafish, VMCloak and Cuckoo Sandbox - so I may be biased. On the
 those tools are good.
 
 For Cuckoo Sandbox there are alternatives. Just check if they are re-branded Cuckoos or something unique.
+
+## Something different: Inserting virtual machine traces into the system
+
+A fun project that inserts typical VM traces into a system to sabotage malware that does use Anti-VM techniques is [malwarescarecrow](https://github.com/kaganisildak/malwarescarecrow)
+
+It is the exact opposite of Pafish and VMCloak. I guess it is not silver bullet but worth to try it in a master thesis if you want to write one.
 
 %% TODO Further reading

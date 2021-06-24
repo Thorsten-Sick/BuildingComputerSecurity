@@ -132,84 +132,11 @@ Toolkit: https://silentbreaksecurity.com/introducing-the-red-team-toolkit/
 For Fun:
 NES CSS: https://bcrikko.github.io/NES.css/
 
----------------------
-Diagrams:
-Zenuml.com
-
-# Inkscape by Ange
-https://speakerdeck.com/ange/an-introduction-to-inkscape
-
-- Dot
-https://github.com/bbc/bbplot
-https://bbc.github.io/rcookbook/
-
-Python seaborn uses matplotlib for statistics
-Python http://altair-viz.github.io/ for statistics (seems more powerful than seaborn)
-
-
-Mermaidjs.github.io  https://mermaidjs.github.io/
-http://plantuml.com/
-https://casual-effects.com/markdeep/
-Railroad diagrams: https://bottlecaps.de/rr/ui
-
-Python backend to create data visualisation web pages:
-https://www.streamlit.io/
-
-
------------------
-Print on demand:
-https://www.bod.de/
-https://pressbooks.com/for-authors/
-http://www.booksandtales.com/pod/index.php
-https://www.epubli.de/
-https://www.bookmundo.de/
-http://www.bookmarket.com/ondemand.htm
-lulu.com
-packt publishing ?
-----------
-Fonts:
-
-https://fontawesome.com (icons)
-"Alle gut hackbar":
-https://www.fontzillion.com/fonts/barmee/afarat_ibn_blady
-
-Samurai Font (Brush Font)
-https://creativemarket.com/nurrehmettt/2646145-Fujimaru-Ninjas-Brush-Font
-
--------------
-Photos/Diagrams/Icons for presentations
-
-https://creativemarket.com/
-
-istockphoto.com
-
-Free:
-https://www.pexels.com/
-https://www.pixelio.de/
-https://pixabay.com/
-https://search.creativecommons.org/
 
 
 ----------
-Screencast recorder
 
-asciinema: For command line: https://asciinema.org/
-OBS: https://obsproject.com/de
-
------------
-%% TODO: Anti Virus guidelines https://www.adlice.com/making-an-antivirus-engine-the-guidelines/
-Visuals
-https://www.openideo.com/challenge-briefs/cybersecurity-visuals
-
---------------
-Backgrounds:
-
-https://www.templatemonster.com/blog/free-background-generators
-
-Generators:
-https://dragdropsite.github.io/waterpipe.js
-
----------------
+ q
 
 %% TODO: Secret knowledge https://github.com/trimstray/the-book-of-secret-knowledge
 
@@ -278,12 +205,7 @@ https://www.apriorit.com/dev-blog/367-anti-reverse-engineering-protection-techni
 ROP tutorial: https://nagarrosecurity.com/blog/interactive-rop-tutorial
 ----------
 Malware simulator: https://github.com/redcanaryco/chain-reactor
------------
-Books needing review
-Books: Mc Graw, "Software Security: Building Security in"
-Book: "Secure By DEsign"
-Book: "Secure Programming Cookbook for C and C++"
-Book: "Secure Coding in C and C++, Second Edition"
+
 
 --------------
 Add those special search engines:
@@ -307,3 +229,12 @@ https://twitter.com/trimstray/status/1328004644807860224?s=09
 -insecam.org: ip video cameras
 
 (If I did not do so already)
+
+--------------------
+Tools to check out for analysis:
+
+exiftool (exif information reading)
+Peid (packer, cryptor, ... detecing)
+CFF Explorer pe editing
+xorstrings/xorsearch: search for strings in an encoded binary https://blog.didierstevens.com/programs/xorsearch/
+Vipermonkey
