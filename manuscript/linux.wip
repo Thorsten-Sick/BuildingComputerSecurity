@@ -9,6 +9,10 @@ https://linux-audit.com/security-program-implementing-linux-security/
 Rootkits: https://linux-audit.com/intrusion-detection-linux-rootkits/
 https://linux-audit.com/dealing-with-linux-malware-insights-by-the-author-of-rkhunter/
 
+Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-ebpf-a-love-story
+
+%% EBPF Fuzzer: https://github.com/snorez/ebpf-fuzzer
+
 ## Lynis
 
 https://linux-audit.com/how-to-create-custom-tests-in-lynis/
@@ -149,3 +153,7 @@ https://www.collabora.com/news-and-blog/blog/2020/09/25/initcalls-part-2-digging
 
 
 %% TODO: Linux Kernel Map https://makelinux.github.io/kernel/map/
+
+%% Defense map https://github.com/a13xp0p0v/linux-kernel-defence-map
+
+%% Kernel module programming guide: https://sysprog21.github.io/lkmpg/

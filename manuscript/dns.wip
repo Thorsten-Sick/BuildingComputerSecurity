@@ -127,6 +127,7 @@ http://dns-leak.com/
 %% Anyone on the 2nd hoster to take the subdomain and host the own stuff.
 %% Can result in cookie theft (depends on cookie config) and impersonating.
 
+%% TODO Zone transfer
 
 %% http://dnsviz.net/
 

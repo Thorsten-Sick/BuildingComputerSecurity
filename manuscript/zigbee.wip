@@ -3,7 +3,7 @@ KillerBee: ""
 Chibi
 ZigBee hacking: https://www.blackhat.com/docs/us-15/materials/us-15-Zillner-ZigBee-Exploited-The-Good-The-Bad-And-The-Ugly.pdf
 
-https://www.safaribooksonline.com/library/view/iot-penetration-testing/9781787280571/e188fd84-e21f-4c90-8dc4-6bb2c610cbc9.xhtml
+[IoT Penetration Testing Cookbook, Understanding and Exploiting ZigBee](https://learning.oreilly.com/library/view/iot-penetration-testing/9781787280571/e188fd84-e21f-4c90-8dc4-6bb2c610cbc9.xhtml)
 
 
     Hardware: Atmel RzRaven USB Stick flashed with KillerBee firmware

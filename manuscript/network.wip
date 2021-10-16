@@ -264,3 +264,5 @@ Source: https://wizardzines.com/#posters
 %% TODO: Tool nethogs to find processes that use lots of bandwidth
 
 %% Check IP on external databases (Virus Total...) https://github.com/jreisinger/checkip
+
+%% TODO: Netcalc tool

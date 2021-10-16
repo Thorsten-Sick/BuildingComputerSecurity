@@ -1,4 +1,4 @@
-
+# OSQuery
 
 https://osquery.io/schema/4.4.0/
 
@@ -6,3 +6,16 @@ Similar: https://github.com/orlikoski/CyLR  (Especially file meta data extractio
 
 Finding run keys: https://rhq.reconinfosec.com/tactics/persistence/#user-specific-run-keys
 Also: https://attack.mitre.org/techniques/T1547/001/
+
+
+## OSQuery vs MITRE ATT@CK
+
+https://github.com/teoseller/osquery-attck
+
+## OSQuery Python binding
+
+https://github.com/osquery/osquery-python
+
+## OSQuery GO Binding
+
+https://github.com/osquery/osquery-go

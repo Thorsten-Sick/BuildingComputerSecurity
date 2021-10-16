@@ -135,6 +135,8 @@ There are several levels of warnings in your compiler. If those are not enough, 
 * gcc -D_FORTIFY_SOURCE=1: Macros replace some risky functions (memcpy, ...) and check the parameters - during compile time [Fortify Source](https://access.redhat.com/blogs/766093/posts/1976213)
 * Check for format buffer overflow: *-Wformat-overflow=1* (the conservative setting)
 
+%% TODO: https://airbus-seclab.github.io/c-compiler-security/
+
 %% TODO: Clang warnings
 
 %% TODO: Visual Studio warnings

@@ -1,6 +1,12 @@
 
 %% TODO: Robber is open source tool for finding executables prone to DLL hijacking
 https://github.com/MojtabaTajik/Robber
+%% TODO: https://twitter.com/last0x00/status/1435160730035183616?t=mLlLu-dmw7HGmihkAGI-yQ&s=09
+%% - Find dll loads by procmon (create file)
+%% - Filter for privileged processes (Integrity System/High)
+%% - Check in stack trace for LoadLibrary (if Createfile is called by that)
+%% - Check if path can be written to by user
+
 
 ## Registry
 
@@ -36,8 +42,8 @@ https://docs.microsoft.com/en-us/sysinteernals/
 
 ## Further reading
 
-Windows Internals, Part 1
-Windows Internals, Part 2
+Windows Internals, Part 1: https://learning.oreilly.com/library/view/windows-internals-seventh/9780133986471/
+Windows Internals, Part 2: https://learning.oreilly.com/library/view/windows-internals-part/9780135462348/
 
 (updated regularly, last edition I saw was 7th, 2017)
 
@@ -60,7 +66,12 @@ AD security review: https://www.hub.trimarcsecurity.com/post/securing-active-dir
 
 Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from-linux/
 
+%% Tool to analyse AD: https://github.com/BloodHoundAD/BloodHound
+%% https://posts.specterops.io/bloodhound-versus-ransomware-a-defenders-guide-28147dedb73b
+
 %% TODO: Active directory cheat sheet: https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+
+
 
 %%%%%%%%%%%%%
 %% Windows deep dive: https://channel9.msdn.com/Shows/Going+Deep   Lots of videos
@@ -79,3 +90,6 @@ Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from
 %% Token Privileges:
 %% https://twitter.com/fr0gger_/status/1379465943965909000/photo/1
 %% https://github.com/hatRiot/token-priv/blob/master/abusing_token_eop_1.0.txt
+
+%%%%%%%%
+%% Windows Events https://github.com/countercept/chainsaw
