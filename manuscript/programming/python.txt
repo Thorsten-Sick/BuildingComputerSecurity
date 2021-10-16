@@ -188,7 +188,7 @@ Maybe you do not want to add it to the automated, enforced test prior to every r
 It is also possible to disable specific warnings for a single line of code, a function or a block. To disable a warning for a function just add a specific comment:
 
 {lang="python"}
-    def example(args):  # pylint: disable=unused-argument
+    def example(args):  # pylint: disable=unused-argument, no-sef-use
         """ An example where args is not used in the code but still an argument passed to the function """
 
         print("That's all folks")
@@ -264,6 +264,9 @@ It contains:
 %% TODO: PyPi supply chain attack: https://www.bleepingcomputer.com/news/security/researcher-hacks-over-35-tech-firms-in-novel-supply-chain-attack/
 
 %% TODO: Python fuzzer https://github.com/google/atheris  (link to fuzzing)
+
+%% TODO: pyre als erweiterung (daemon) fuer mypy
+%% TODO: pysa als Erweiterung fuer Pyre (taint checker)
 
 
 %% ------------ not relevant
