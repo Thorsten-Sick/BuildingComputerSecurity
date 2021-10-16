@@ -59,3 +59,5 @@ Better filter it (used that for *ping*):
 %% Windows reversing, symbol lookup https://darungrim.com/research/2020-06-17-using-frida-for-windows-reverse-engineering.html
 
 %% Nike run club Android: https://yasoob.me/posts/reverse-engineering-nike-run-club-using-frida-android/
+
+%% Pokemon Go Anti Frida: https://www.romainthomas.fr/post/21-07-pokemongo-anti-frida-jailbreak-bypass/

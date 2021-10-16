@@ -50,8 +50,10 @@ Just a few ideas what you can test
 %% Also: [CIS for Ubuntu](https://www.cisecurity.org/benchmark/ubuntu_linux/)
 
 %% TODO: Lynis security auditing for Linux
+%% https://cisofy.com/lynis/
 %% [Lynis](https://linuxsecurity.expert/tools/lynis/)
 %% [Lunar](https://linuxsecurity.expert/tools/lunar/)
+%% OpenScap vulnerability testing and system hardening https://github.com/OpenSCAP/openscap
 
 ## Unit tests
 

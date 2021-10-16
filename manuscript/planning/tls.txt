@@ -69,6 +69,8 @@ Tools for that kind of attacks are:
 * [WiFi Pineapple](https://www.wifipineapple.com/)
 * [Fiddler](https://www.telerik.com/fiddler)
 
+%% Intercept traffic by instrumenting target process https://github.com/SySS-Research/hallucinate
+
 ## Mozilla server side TLS config guide
 
 TLS is a toolbox for encryption which is mainly used in the browser to server communication. For this reason Mozilla offers a simple guide how to best set up your server.
@@ -104,6 +106,8 @@ Thanks to Let's encrypt you should not need those self signed certificates anymo
 %% snap install --classic certbot
 %% ln -s /snap/bin/certbot /usr/bin/certbot
 %% certbot --nginx    or certbot --apache
+
+%% TODO: Certificates do not verify the *content*. Just the *server* and EV certificates the *owner*
 
 ## Certificate content and structure
 

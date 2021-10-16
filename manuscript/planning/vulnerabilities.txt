@@ -93,7 +93,7 @@ Search engines to try are:
 * [CVE](https://cve.mitre.org)
 * [NVD](https://nvd.nist.gov/vuln/)
 * [Vuldb](https://vuldb.com)
-* [Exploit-db](https://www.exploit-db.com)
+* [Exploit-db](https://www.exploit-db.com) Also offers links to the vulnerable binaries to train exploitation on
 * [Rapid 7 (Metasploit) vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
 * [snyk.io](https://snyk.io)
 * [OSV Open Source Vulnerabilities](https://osv.dev/)

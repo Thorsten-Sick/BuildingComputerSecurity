@@ -217,3 +217,5 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 %% TODO: OSS Fuzz: https://google.github.io/oss-fuzz/
 
 %% TODO: Put python fuzzer either here or into python: https://github.com/google/atheris
+
+%% TODO Game fuzzing using snapshots: http://blog.ret2.io/2021/07/21/wtf-snapshot-fuzzing/
