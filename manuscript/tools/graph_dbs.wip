@@ -1,0 +1,18 @@
+# Graph DB stuff
+
+## Graph DBs
+
+* Neo4js
+* Titan (distributed)
+* Janus (free)
+* Neptune (Amazon)
+* Datastax = Cassandra + TinkerPop
+
+## Query Languages
+
+* Cypher
+* Gremlin
+* SPARQL
+* GraphQL (TinkerPop)
+
+
