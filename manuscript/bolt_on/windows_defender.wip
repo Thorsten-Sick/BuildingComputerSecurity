@@ -1,0 +1,29 @@
+
+Windows Defender logs are there in a human readable form:
+
+{lang="bash"}
+    cd C:\ProgramData\Microsoft\Windows Defender\Support
+    type MPDetection-20210702-151316.log
+
+Disable MS defender https://jv16powertools.com/how-to-disable-windows-defender-windows-10/
+
+{lang}
+    Windows Registry Editor Version 5.00
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+        "DisableAntiSpyware"=dword:00000001
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection\]
+        "DisableRealtimeMonitoring"=dword:00000001
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
+        "SubmitSamplesConsent"=dword:00000002
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
+        "SpynetReporting"=dword:00000000
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions]
+        "Exclusions_Paths"=dword:00000001
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Paths]
+        "0"="C:\Users\"
