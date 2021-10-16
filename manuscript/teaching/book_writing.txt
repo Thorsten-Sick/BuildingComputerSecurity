@@ -9,3 +9,5 @@ https://www.bookmundo.de/
 http://www.bookmarket.com/ondemand.htm
 lulu.com
 packt publishing
+
+Converting between different doc formats: https://pandoc.org/index.html
