@@ -56,19 +56,35 @@
 
 **CERT**: Computer Emergency Response Team. Handles security breaches in organisations or nations.
 
+**Command injection**: If the attacker is able to inject a command to the system shell (and the data is not sanitized) this is a command (line) injection. See [OWASP](https://owasp.org/www-community/attacks/Command_Injection)
+
 **CRITs / Collaborative Research Into Threats** Threat intelligence sharing platform by MITRE. See TIP. https://crits.github.io/
 
 **CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requests on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
+
+**Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
+
+**Deep Packet Inspection**: A filter looks into the deeper layers of packets. Complex, and causes issues with encrypted data. Better don't do it.
+
+**Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
 
 **Dedik**: Stolen RDP access to a windows server. Used as first step for Ransomware attacks (2020: 70% of Ransomware attacks started that way). Dedik = Dedicated server
 
 **DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
 
+**DGA / Domain generation Algorithm**: An malware algorithm generating domain names based on a counter/time to connect to.
+
 **Differential privacy**: Is a way to collect statistical data on clients/users without compromising the privacy of specific users
+
+**Domain Flux**: Way to hide C&C servers. A domain name generator creates changing domain names
 
 **DOS**: Denial Of Service - Attack that exhausts resources of the target (CPU, memory, network, storage)
 
 **DDOS**: Distributes DOS - Attack is done by many systems in parallel
+
+**DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
+
+**DVA / Damn Vulnerable Application** (Also: Damn Vulnerable Web application): A insecure application to train hacking on or test tools
 
 **Dynamite phishing**: Automated spear phishing. The malware silently collects mail communication to later fake new phishing mails for new victims
 
@@ -77,6 +93,8 @@
 **EDR /Endpoint Detection and Response**: Endpoint protection with a deeper analysis system and an array of potential responses to attacks
 
 **EPP / End Point Protection**: Passive Endpoint protection
+
+**Evercookies**: Are snippets stored in the browser like cookies. Storage is JavaScript Local storage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
 
 **Exploit**: Attack on a vulnerability
 
@@ -88,27 +106,13 @@
 
 **FP**: False Positive. A harmless URL or file is detected as malicious
 
-**Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
-
-**Deep Packet Inspection**: A filter looks into the deeper layers of packets. Complex, and causes issues with encrypted data. Better don't do it.
-
-**Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
-
-**DGA / Domain generation Algorithm**: An malware algorithm generating domain names based on a counter/time to connect to.
-
-**Domain Flux**: Way to hide C&C servers. A domain name generator creates changing domain names
-
-**DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
-
-**DVA / Damn Vulnerable Application** (Also: Damn Vulnerable Web application): A insecure application to train hacking on or test tools
-
-**Evercookies**: Are snippets stored in the browser like cookies. Storage is JavaScript Local storage, Flash storage, ... hard to delete those data snippets. AKA Zombie Cookies
-
 **Firewall**: Network filter. Can reduce allowed traffic on a network connection. Smarter firewalls can maintain some state and decided based on who initiated a connection - internal or external computer ?
 
 **Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
 
 **Honeypot**: A Honeypot is a simulated vulnerable system to attract attackers. The attacks will then be analysed to learn about the attackers.
+
+**HVCI**: Hypervisor Protected Code Integrity, aka "memory integrity", a Windows feature [HVCI](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/device-guard-and-credential-guard)
 
 **IDS / Intrusion Detection System**: Monitor in a network to analyse that for malicious activity. Using rules it can notify admins if anomalies are detected
 
@@ -116,49 +120,17 @@
 
 **Implant**: A tool used by the attacker to maintain access to an exploited system. Normally has some form of connection to the attacker's infrastructure to be controlled
 
-**Least Privilege**: Grant a process only the least privileges required to do its task. If something goes south, the impact is minimized.
-
-**NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
-
-**Persistence**: Attackers can do a hit and run - stealing data - or try to maintain access to the target by running implants there or getting the credentials. That way the "attack survives a reboot". This would be called "persistence".
-
-**Persistence(system)**: System level persistence can be gained by running code on a single system. Often done as a hidden rootkit in kernel mode
-
-**Persistence(network)**: Persistence by controlling several systems by either stolen credentials or compromise of a core infrastructure in the network.
-
-**QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
-
-**RAT / Remote access trojan**: An implant to gain persistence. Can remote control OS functionalities.
-
-**RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
-
-**Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
-
-**Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
-
-**Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
-
-**SNI / Server Name Indicator**: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
-
-**Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
-
-**Trusted Computing Base (TCB)**: The part of a system that **MUST** work properly to ensure security. Keep this small.
-
-**UAF / Use After Free vulnerability**: Typical memory corruption bug
-
-%% TODO: Write article covering all types of memory bugs
-
-**IDS / Intrusion Detection System**: System or network monitor for anomalies that indicate malicious behaviour.
-
-**IPS / Intrusion Prevention System**: An IDS that can prevent attacks after detecting them.
-
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
+
+**Least Privilege**: Grant a process only the least privileges required to do its task. If something goes south, the impact is minimized.
 
 **Kill chain**: Phases of an attack
 
 **Living off the land**: A tactics where the attacker uses pre-installed software for the attack. This reduces detectable malware on the system
 
 **MAEC5**: Malware sample description language. Covers static features like hashes and behaviour. [MAEC5](https://maecproject.github.io/documentation/maec5-docs/#introduction)
+
+**MBEC**: mode-based execution control: Windows memory integrity feature, requires CPU support
 
 **Malware**: Malicious software
 
@@ -174,15 +146,45 @@
 
 **MITRE Att@ck**: A taxonomy for attacker TTPs. [see: MITRE](https://attack.mitre.org/)
 
+**NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
+
 **Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
 
-%% TODO path traversal
+**Patch Guard**: Windows kernel patch protection, protects some memory structures from being modified
+
+**PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
+
+**Persistence**: Attackers can do a hit and run - stealing data - or try to maintain access to the target by running implants there or getting the credentials. That way the "attack survives a reboot". This would be called "persistence".
+
+**Persistence(system)**: System level persistence can be gained by running code on a single system. Often done as a hidden rootkit in kernel mode
+
+**Persistence(network)**: Persistence by controlling several systems by either stolen credentials or compromise of a core infrastructure in the network.
+
+**Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
+
+**QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
+
+**RAT / Remote access trojan**: An implant to gain persistence. Can remote control OS functionalities.
+
+**RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
 **RCE**: Remote Code Execution. An attacker is able to execute code without physical access to the system. Very bad.
+
+**Regular Expression DOS**: Non optimized regular expressions can require lots of CPU. If the attacker is able to submit an own Regex, it is possible to DOS the target system [OWASP](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)
 
 **Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controls.
 
 **ROI**: Return on investment. A business metric. But as attackers want to make money, make them pay for it by detecting their tools, sharing this knowledge. And make it very expensive for them to attack.
+
+**ROP / Return Oriented Programming**: If an executable is compiled with DEP it is not possible to insert new shellcode to execute. ROP uses *existing* code from the victim-executable and chains those ROP gadgets into a new order to achieve the goal.
+
+**Round-Robin DNS**: Old system for load balancing that does not work with modern clients or IPv6. TTL is short lived.
+
+**SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
+
+**Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
+
+**Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
 
 **Shellcode**: The payload in an exploit. Shellcode either pops a shell or establishes a connection to the attacker in the internet, ... This is where malicious things happen.
 
@@ -190,9 +192,19 @@
 
 **SIEM / Security Information and Event Management**: Collect and analyse different security relevant data into logs. Actions are triggered based on this data.
 
+**Sigma rules**: Sigma rules are for logs what Yara is for files https://github.com/Neo23x0/sigma
+
+**SNI / Server Name Indicator**: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
+
 **SOC / Security Operations Center**: The team running SIEMs in an organisation.
 
+**SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
+
 **Spam**: Unwanted Advertising mails. Or similar messages on other channels. Often sent from hacked PCs to abuse their bandwidth.
+
+**Spear Phishing**: Targeted phishing. Learn about the target first to create better social engineering attack
+
+**SQLI / SQL Injection**: SQL *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
 
 **Stack Clash**: A vulnerability on Linux/BSD systems. Stack Guard Page should protect against Stack-Overflows. But it can be tricked into overwriting memory. A compiler switch can protect against Stack Clash.
 
@@ -202,39 +214,23 @@
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 
+**Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
+
+**Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reporters on attacks and threat actors. Focus is on Advanced attacks
+
 **TIP / Threat intelligence platform**: Threat intelligence sharing between organisations. See MISP or CRITs by MITRE
 
 **TLP / Traffic Light Protocol by DHS**: defines threat intelligence information sharing policy. From public to secret. Using 4 coloured levels
-
-**PE**: Portable Executable file. On Windows .exe and .dll (and some others). Starts wit a DOS Header (MZ)
-
-**Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
-
-**ROP / Return Oriented Programming**: If an executable is compiled with DEP it is not possible to insert new shellcode to execute. ROP uses *existing* code from the victim-executable and chains those ROP gadgets into a new order to achieve the goal.
-
-%% TODO SROP (Pagedout 2, p 54)
-
-**Sigma rules**: Sigma rules are for logs what Yara is for files https://github.com/Neo23x0/sigma
-
-**SOP / Same-origin-policy**: Web browser security principle: Elements of a web site must be from the same server
-
-**Spear Phishing**: Targeted phishing. Learn about the target first to create better social engineering attack
-
-**SQLI / SQL Injection**: SQL *commands* can be sent through the user interface to the database backend. Instead of just *values* (which was the developer's intention)
-
-%% TODO: Find cheat sheet
-
-**SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
-
-**Threat intelligence**: A service offered by security companies (or peer-to-peer). Can start with sharing IOCs and end with detailed reporters on attacks and threat actors. Focus is on Advanced attacks
 
 **TOR**: The Onion Router. Overlay network over the internet to ensure anonymity of clients and servers
 
 **Trust boundary**: Who do you trust with what ? If your project integrated 3rd party compilers, tools, library, ... you are already trusting someone. Knowing *who you trust* and *how far* is the trick.
 
-**XSS, Persistent**: An attacker can store a script on the web server that is for another user rendered. As it is a script it will execute in the context of the victim's page.
+**Trusted Computing Base (TCB)**: The part of a system that **MUST** work properly to ensure security. Keep this small.
 
-**XSS, Reflected**: The attacker can add a script to a url parameter which is part of the rendered page. This script will then run in page context
+**UAF / Use After Free vulnerability**: Typical memory corruption bug
+
+**VBS**. Virtualization Based Security, a Windows feature to isolate parts of the memory from the OS. [VBS](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs)
 
 **Vulnerability**: A bug or a flaw that has security implications
 
@@ -245,6 +241,22 @@
 **Weaponizing**: Making an exploit easy and reliable to use.
 
 **Whitelist**: Deprecated term. See "Approved List"
+
+**XSS, Persistent**: An attacker can store a script on the web server that is for another user rendered. As it is a script it will execute in the context of the victim's page.
+
+**XSS, Reflected**: The attacker can add a script to a url parameter which is part of the rendered page. This script will then run in page context
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% TODO: Write article covering all types of memory bugs
+
+%% TODO path traversal
+
+
+%% TODO SROP (Pagedout 2, p 54)
+
+%% TODO: Find cheat sheet
 
 %% XSS, reflective
 
@@ -257,7 +269,6 @@
 %% Perfect forward secrecy
 
 %% TODO: Responsible/full disclosure
-
 
 %% win32k - windows syscall containing lots of vulnerable GUI functionality - process can disable its usage (research how) starting win8
 %% NULL pointer de reference: in kernel process can access memory at NULL page (mitigation from win8+)
