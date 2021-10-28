@@ -369,12 +369,12 @@ The best checklist I found so far is this:
 
 ### Secure programming Cookbook
 
-The [Secure Programming Cookbook](https://www.safaribooksonline.com/library/view/secure-programming-cookbook/0596003943/)
+The [Secure Programming Cookbook](https://learning.oreilly.com/library/view/secure-programming-cookbook/0596003943/)
 has lots of receipts for common secure programming problems. It is more focussed ont the Operating System level (Windows, Linux).
 
 ### Building secure software
 
-While the book [Building Secure Software](https://www.safaribooksonline.com/library/view/building-secure-software/9780672334092/) is
+While the book [Building Secure Software](https://learning.oreilly.com/library/view/building-secure-software/9780672334092/) is
 more focussed on typical C issues. It is thinner, a bit older but a very good start. Put this one on your desk. And read it.
 
 ### Writing unmaintainable code
@@ -384,5 +384,4 @@ is a funny document describing the hell of bad code - and how to create it. If y
 
 ### Secure coding in C and C++
 
-The big gun is [Secure coding in C and C++](https://www.safaribooksonline.com/library/view/secure-coding-in/9780132981989/). Draw this one last, if the other books are read.
-Or if you have sufficient time.
+The big gun is [Secure coding in C and C++](https://learning.oreilly.com/library/view/secure-coding-in/9780132981989/). Draw this one last, if the other books are read. Or if you have sufficient time.

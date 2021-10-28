@@ -213,7 +213,7 @@ A source for a more specific evaluation of your required [key length is here](ht
 
 ### Serious Cryptography by Jean-Philippe Aumasson
 
-[Serious Cryptography](https://www.safaribooksonline.com/library/view/serious-cryptography/9781492067511/) is Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.
+[Serious Cryptography](https://learning.oreilly.com/library/view/serious-cryptography/9781492067511/) is Mathematics paired with some hands-on. It contains lots of common mistakes being made when using those algorithms and protocols. It should be on your desk when building something with cryptography.
 
 ### The Mozilla TLS guide
 

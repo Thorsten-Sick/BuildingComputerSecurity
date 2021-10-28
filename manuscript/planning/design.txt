@@ -126,6 +126,6 @@ Preventing attackers to modify your software is essential to protect everyone re
 
 ### Security Engineering {#reference-book-security-engineering}
 
-[Security Engineering by Ross J. Anderson](https://www.safaribooksonline.com/library/view/security-engineering-a/9780470068526/)
+[Security Engineering by Ross J. Anderson](https://learning.oreilly.com/library/view/security-engineering-a/9780470068526/)
 
 A book more focused on Designers/Architects. Lots of chapters with specific topics. Some may not be relevant for you. But as the book is very good you either soldier on or you cherry pick interesting chapters. No matter what of those you are doing: Read it.

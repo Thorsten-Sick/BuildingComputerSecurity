@@ -1,8 +1,6 @@
 ## Stages of learning
 
-There are several smart ways to learn. They are described in the book *Pragmatic Thinking and Learning* by Andy Hunt.
-
-%% TODO add safari link
+There are several smart ways to learn. They are described in the book [Pragmatic Thinking and Learning](https://learning.oreilly.com/library/view/pragmatic-thinking-and/9781680500196/) by Andy Hunt.
 
 A simplified version is:
 

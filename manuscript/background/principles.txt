@@ -260,18 +260,13 @@ Have some real-world hacker stories ready and try to steer the discussion toward
 
 Ghost in The Wires by Kevin Mitnick. Life story from Kevin Mitnick. Famous hacker and pen tester. Many described exploits are on the social engineering level. Simple to read. Most of the technology described here does not exist anymore.
 
-%% TODO add safari link
-
 ### Beyond Fear
 
 Beyond Fear by Bruce Schneier is a book where a computer security guy analyses common physical world security practices like airport security. Teaches thinking and critical thinking about security and security promises. Can be read by
 non-technical people.
-
-%% TODO add safari link
 
 ### Future Crimes
 
 Future Crimes by Marc Goodman is a book covering the experience of a cyber crime police officer. Every chapter is a noteworthy and often entertaining example of a real crime. Entertaining and does not require technical knowledge. Good for
 training critical thinking and security thinking.
 
-%% TODO add safari link

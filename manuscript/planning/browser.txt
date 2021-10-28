@@ -420,7 +420,7 @@ I focus on the urls relevant for security or general purpose. There are many mor
 
 ### The Browser Hacker's Handbook
 
-[The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://www.safaribooksonline.com/search/?query=The%20Browser%20Hacker%27s%20Handbook)
+[The Browser Hacker's Handbook by Michele Orru , Christian Frichot , Wade Alcorn](https://learning.oreilly.com/library/view/the-browser-hackers/9781118662090/)
 covers many attacks on web browsers. Its focus is on the BeEF framework.
 
 ### Web site for browser tests

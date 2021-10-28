@@ -245,7 +245,7 @@ Telnet is deprecated. Use SSH. Everywhere. Just now (end of 2018) there were sev
 A book from 2005. Does not cover all features and some tips might not be compatible with the current ssh version. But it covers a wide range of SSH features. And I also do not think the SSH project is one of those that love to break compatibility and add lots of incompatible features with
 each release ...
 
-[SSH, The Secure Shell: The Definitive Guide, 2nd Edition](https://www.safaribooksonline.com/library/view/ssh-the-secure/0596008953/)
+[SSH, The Secure Shell: The Definitive Guide, 2nd Edition](https://learning.oreilly.com/library/view/ssh-the-secure/0596008953/)
 
 
 %% TODO: SSH tarpit https://github.com/skeeto/endlessh
