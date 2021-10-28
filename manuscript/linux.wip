@@ -9,9 +9,23 @@ https://linux-audit.com/security-program-implementing-linux-security/
 Rootkits: https://linux-audit.com/intrusion-detection-linux-rootkits/
 https://linux-audit.com/dealing-with-linux-malware-insights-by-the-author-of-rkhunter/
 
+## EBPF
+
 Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-ebpf-a-love-story
 
 %% EBPF Fuzzer: https://github.com/snorez/ebpf-fuzzer
+
+%% EBPf tools https://github.com/richinseattle/ebpf-tools
+
+%% BPF core https://nakryiko.com/posts/bpf-core-reference-guide/
+
+## Sysmon
+
+%% https://github.com/Sysinternals/SysmonForLinux
+
+%% https://github.com/microsoft/MSTIC-Sysmon/tree/main/linux/configs
+
+%% https://medium.com/@olafhartong/sysmon-for-linux-57de7ca48575
 
 ## Lynis
 
@@ -151,6 +165,7 @@ https://www.collabora.com/news-and-blog/blog/2020/09/25/initcalls-part-2-digging
 %% https://www.thirtythreeforty.net/posts/2020/03/mastering-embedded-linux-part-4-adding-features/
 %% https://www.thirtythreeforty.net/posts/2020/05/mastering-embedded-linux-part-5-platform-daemons/
 
+%% Password quality enforcer: sudo apt install libpam-pwquality   Has lots of options
 
 %% TODO: Linux Kernel Map https://makelinux.github.io/kernel/map/
 

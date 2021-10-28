@@ -128,6 +128,9 @@ http://dns-leak.com/
 %% Can result in cookie theft (depends on cookie config) and impersonating.
 
 %% TODO Zone transfer
+%% If it is enabled, Everyone can see the all data in the DNS server.
+%% If there is a sub-domain hosted on a cloud provider in there (say AWS) anyone can
+%% host their own version of it on AWS and steal the zone. This allows Cookies theft.
 
 %% http://dnsviz.net/
 

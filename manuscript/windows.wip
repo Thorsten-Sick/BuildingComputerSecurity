@@ -40,6 +40,14 @@ If you want to do exactly what the title says: Doing registry forensics. A very 
 
 https://docs.microsoft.com/en-us/sysinteernals/
 
+## Auditing
+
+%% TODO: https://github.com/mdecrevoisier/Windows-auditing-mindmap
+
+## WMI
+
+Series of offensive WMI techniques: https://0xinfection.github.io/posts/wmi-basics-part-1/
+
 ## Further reading
 
 Windows Internals, Part 1: https://learning.oreilly.com/library/view/windows-internals-seventh/9780133986471/
