@@ -55,6 +55,10 @@ If you can over-achieve from day one and release in 45 days: Do it !
 Another thing: Some people think it smart do sue the reporter and never fix the vulnerability. These companies will never again receive responsible
 disclosures from anyone. From this time on they will find their vulnerabilities leaked on pastebin. In a non-responsible way. Press pressure and the police will then make them fix their vulnerabilities as fast as possible.
 
+%% TODO: https://better-save-then-sorry.de/
+
+%% TODO: https://unverantwortli.ch/
+
 ## The three steps
 
 There are three steps to roll out this kind of processes. The last one (asking for vulnerabilities) is optional.

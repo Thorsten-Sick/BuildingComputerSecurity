@@ -188,6 +188,7 @@ The tool to create your own file detection is Yara. A tutorial can be found here
 Yara combines logic and (regex) patterns into a quite simple config language.
 
 %% TODO: Also good for binary processing is https://kaitai.io/
+%% TODO: UI for that https://github.com/Dvd848/pytai
 
 
 ### SNORT

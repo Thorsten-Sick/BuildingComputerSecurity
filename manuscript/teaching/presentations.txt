@@ -46,3 +46,5 @@ Railroad diagrams: https://bottlecaps.de/rr/ui
 
 Python backend to create data visualisation web pages:
 https://www.streamlit.io/
+
+Book Fundamentals of Data Visualization https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/
