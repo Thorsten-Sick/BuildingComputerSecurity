@@ -75,8 +75,17 @@ changelog to make it simpler for you to find the new sections.
 %% merge books and external references, fix safari links
 %% SQL injection
 %% Metasploit (link from vulnerabilities)
-%% NMap
 %% The whole teaching stuff
+
+%% Rework python
+%% OSQuery
+
+
+## October 2021
+
+* Fixed safari links (now learning.oreilly)
+* Cleaned up and extended glossary
+
 
 ## June 2021
 
