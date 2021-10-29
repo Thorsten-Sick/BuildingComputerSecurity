@@ -161,6 +161,8 @@ The *nosec* command does the trick here.
 
         print("That's all folks")
 
+%% TODO: Bandit supports plugins
+
 ## Pylint, stricter than flake8
 
 A linter which adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
@@ -192,6 +194,8 @@ It is also possible to disable specific warnings for a single line of code, a fu
         """ An example where args is not used in the code but still an argument passed to the function """
 
         print("That's all folks")
+
+%% pylint can be extended by plugins. astroid package will help parsing the AST syntax tree
 
 
 [Pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
@@ -252,6 +256,16 @@ It contains:
 * Safety: dependency check on requirements
 * Bandit: Checks for common vulnerabilities
 
+
+
+%% TODO: Python static type checker: https://mypy-lang.org
+%% TODO: pyre als erweiterung (daemon) fuer mypy
+%% TODO: pysa als Erweiterung fuer Pyre (taint checker)
+
+%% TODO: mccabe to measure complexity
+
+
+
 %% TODO: https://github.com/treebeardtech/pytest-deepcov
 %% TODO: Other tools, available on GitHub as a service
 
@@ -259,15 +273,11 @@ It contains:
 
 %% TODO: See also profiling.wip for stuff that is cool but not relevant here
 
-%% TODO: Python static type checker: https://mypy-lang.org
+
 
 %% TODO: PyPi supply chain attack: https://www.bleepingcomputer.com/news/security/researcher-hacks-over-35-tech-firms-in-novel-supply-chain-attack/
 
 %% TODO: Python fuzzer https://github.com/google/atheris  (link to fuzzing)
-
-%% TODO: pyre als erweiterung (daemon) fuer mypy
-%% TODO: pysa als Erweiterung fuer Pyre (taint checker)
-
 
 %% ------------ not relevant
 
