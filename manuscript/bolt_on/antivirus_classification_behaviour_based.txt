@@ -106,3 +106,5 @@ A fun project that inserts typical VM traces into a system to sabotage malware t
 It is the exact opposite of Pafish and VMCloak. I guess it is not silver bullet but worth to try it in a master thesis if you want to write one.
 
 %% TODO Further reading
+
+%% TODO: Uroboros: https://github.com/evilsocket/uroboros

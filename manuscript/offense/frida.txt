@@ -61,3 +61,5 @@ Better filter it (used that for *ping*):
 %% Nike run club Android: https://yasoob.me/posts/reverse-engineering-nike-run-club-using-frida-android/
 
 %% Pokemon Go Anti Frida: https://www.romainthomas.fr/post/21-07-pokemongo-anti-frida-jailbreak-bypass/
+
+%% https://github.com/cyberheartmi9/Frida-Guide

@@ -171,6 +171,13 @@ https://github.com/tomnomnom/httprobe
 
 https://github.com/s0md3v/Arjun
 
+%%%%%%%%% Best practice
+
+%% Do not run PHP or framework in debug mode
+%% Do not share config file
+%% do not share code files
+%% do not share .git folder
+
 %%%%%%%%%%%%%%%
 
 %% TODO: Subdomain enumeration: https://github.com/cakinney/domained

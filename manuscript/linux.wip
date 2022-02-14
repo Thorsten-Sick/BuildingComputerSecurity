@@ -4,6 +4,13 @@
 
 https://linux-audit.com/security-program-implementing-linux-security/
 
+## Systemd
+
+{lang="bash"}
+    systemd-analyze security
+
+Systemd also has a container system for the running services
+
 ## Malware
 
 Rootkits: https://linux-audit.com/intrusion-detection-linux-rootkits/
@@ -26,6 +33,8 @@ Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-e
 %% https://github.com/microsoft/MSTIC-Sysmon/tree/main/linux/configs
 
 %% https://medium.com/@olafhartong/sysmon-for-linux-57de7ca48575
+
+%% https://github.com/olafhartong/sysmon-cheatsheet
 
 ## Lynis
 

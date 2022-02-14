@@ -224,6 +224,7 @@ On how to process them using logstash: [logstash for auth log](https://www.elast
 
 %% [mass ssh](https://github.com/trimstray/massh-enum)
 
+%% SSH MITM attack: https://github.com/ssh-mitm/ssh-mitm
 
 %% X Forwarding
 
@@ -232,6 +233,8 @@ On how to process them using logstash: [logstash for auth log](https://www.elast
 %% TODO: locking down ssh
 
 %% TODO: Python and SSH ?
+
+%% Against brute forcing: fail2ban and denyhosts
 
 ## Telnet
 
