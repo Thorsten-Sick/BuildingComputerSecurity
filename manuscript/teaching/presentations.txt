@@ -1,5 +1,25 @@
 # Presentations
 
+## Presentation frameworks
+
+https://github.com/attakei/sphinx-revealjs
+https://sphinx-revealjs.readthedocs.io/en/latest/#
+
+### Reveal and Sphinx
+
+https://github.com/hakimel/reveal.js
+
+### Others
+
+https://github.com/dzello/reveal-hugo
+
+https://potato-presenter.de/
+
+%% Python backend to create data visualisation web pages:
+%% https://www.streamlit.io/
+
+
+
 ## Fonts
 
 https://fontawesome.com (icons)
@@ -23,28 +43,4 @@ https://search.creativecommons.org/
 
 https://www.openideo.com/challenge-briefs/cybersecurity-visuals
 
-## Diagrams
 
-Diagrams:
-Zenuml.com
-
-# Inkscape by Ange
-https://speakerdeck.com/ange/an-introduction-to-inkscape
-
-- Dot
-https://github.com/bbc/bbplot
-https://bbc.github.io/rcookbook/
-
-Python seaborn uses matplotlib for statistics
-Python http://altair-viz.github.io/ for statistics (seems more powerful than seaborn)
-
-
-Mermaidjs.github.io  https://mermaidjs.github.io/
-http://plantuml.com/
-https://casual-effects.com/markdeep/
-Railroad diagrams: https://bottlecaps.de/rr/ui
-
-Python backend to create data visualisation web pages:
-https://www.streamlit.io/
-
-Book Fundamentals of Data Visualization https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/

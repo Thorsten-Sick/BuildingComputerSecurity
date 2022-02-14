@@ -19,6 +19,12 @@ On Linux, a tool to verify the hardening settings is *hardening-check* which can
 
 [Hardening-check](https://github.com/ProhtMeyhet/hardening-check)
 
+It is also in the devscripts debian package:
+
+{lang="bash}
+    sudo apt install devscripts
+    hardening-check <file>
+
 It will check for:
 
 * PIE (ASLR)

@@ -37,6 +37,8 @@ https://dragdropsite.github.io/waterpipe.js
 
 OBS: https://obsproject.com/de
 
+OBS can mix several streams. Output can be a file (recording) or a stream to a public platform. To use Discord to stream, right click on the main canvas and create a preview windows. Stream that using Discord.
+
 ## Asciinema
 
 asciinema: For command line: https://asciinema.org/
