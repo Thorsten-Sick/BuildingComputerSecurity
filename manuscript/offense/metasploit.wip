@@ -392,6 +392,8 @@ Linking to NTDLL (often required for Windows):
 * Meterpreter: Implant running on a target. Just in memory. Will connect to your Metasploit and offer a commandline
 
 
+%% Cheat sheet: https://www.tunnelsup.com/metasploit-cheat-sheet/
+
 %% ## Something similar: Vulnerability Assessment
 
 %% TODO: Nessus Vulnerability Assessment

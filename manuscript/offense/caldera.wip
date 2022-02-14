@@ -7,7 +7,7 @@ Attack frameworks
 https://github.com/mitre/caldera
 https://caldera.readthedocs.io/en/latest/CALDERA-2.0.html
 
-Caldera is written in Python. Uses a web UI. It can be extended:
+Caldera is written in Python. It uses a web UI. It can be extended:
 
 * By using the existing REST API and scripting
 * Writing Python plugins
@@ -16,7 +16,7 @@ Caldera is written in Python. Uses a web UI. It can be extended:
 The agent must be installed on the target prior to instrumenting it.  There are several agents
 (using different programming languages and communication channels).
 
-The target systems downloads a agent fromt he caldera server and executes it. If the agent is in a compiled
+The target systems downloads a agent from the caldera server and executes it. If the agent is in a compiled
 language it can be compiled on the server for some polymorphism.
 
 The Web UI has a help section how to install the clients. Just to give you some estimation how simple it is, here some scripts.
@@ -68,3 +68,5 @@ https://github.com/OTRF/mordor
 
 
 %% Building adversaries: https://feed.prelude.org/p/mimicking-evil
+
+%% https://github.com/DiedB/caldera-precomp

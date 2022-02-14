@@ -1,0 +1,21 @@
+# Tools to manage PDFs on you system
+
+## tracker3
+
+Default in ubuntu, used in the Nautilus search.
+
+tracker3 info <file> gives file details
+
+tracker3 search "Thorsten AND Foo"
+
+Fore more advanced features check out the command line
+
+## Recoll
+
+Very powerful. Check if the Ubuntu version is up to date.
+
+https://www.lesbonscomptes.com/recoll/
+
+## OCR
+
+* gImageReader

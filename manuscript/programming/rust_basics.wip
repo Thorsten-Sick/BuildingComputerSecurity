@@ -1,0 +1,46 @@
+# Rust basics
+
+My own collection of rust basics. Maybe we will get a rust security chapter (in a separate file) sooner or later.
+
+Format code: "rustfmt"
+
+## Included
+
+It already contains:
+
+* Build system
+* Unit tests
+* Dependency handling
+* Documentation (for existing features and a way to generate documentation from code)
+
+## Installing
+
+Install on ubuntu
+
+{lang="bash"}
+    sudo snap install rustup
+    rustup install stable
+    rustup default stable
+
+Test versions and installation
+
+{lang="bash"}
+    cargo --version
+    rustc --version
+
+Create first program
+
+{lang="bash}
+    cargo new hello-world
+
+The created directory will contain the configuration and a sample code file.
+
+Execute with
+
+{lang="bash"}
+    cargo run
+
+Getting documentation
+
+{lang="bash"}
+    rustup doc --std

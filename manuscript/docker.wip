@@ -77,6 +77,8 @@ If an attacker can write to the base file system, she still can not execute prog
 
 %% TODO: Take away docker daemon prvilieges (running as root): It does not really need them most of the time
 
+%% Container vulnerability analysis: https://github.com/quay/clair
+
 ## Links
 
 [Docs](https://docs.docker.com/)

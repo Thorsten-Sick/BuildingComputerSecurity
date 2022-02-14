@@ -1,21 +1,40 @@
 # OSQuery
 
-https://osquery.io/schema/4.4.0/
+## Installation
+
+For Linux there are packages and a repositories.
+
+For Windows a MSI and a chocolatey repo.
+
+Downloads can be found here https://osquery.io/downloads/official
+
+## Schema
+
+https://osquery.io/schema
 
 Similar: https://github.com/orlikoski/CyLR  (Especially file meta data extraction)
 
 Finding run keys: https://rhq.reconinfosec.com/tactics/persistence/#user-specific-run-keys
 Also: https://attack.mitre.org/techniques/T1547/001/
 
+## Python bindings
+
+https://github.com/osquery/osquery-python
+
+The bindings support querying the running OSQuery and also writing own extensions. The extensions will not receive the specific request but generate a dumb table without any information covering the query.
+
+## OSQuery GO binding
+
+https://github.com/osquery/osquery-go
+
+## OSQuery Rust bindings
+
+## OSQuery C bindings
 
 ## OSQuery vs MITRE ATT@CK
 
 https://github.com/teoseller/osquery-attck
 
-## OSQuery Python binding
 
-https://github.com/osquery/osquery-python
 
-## OSQuery GO Binding
 
-https://github.com/osquery/osquery-go

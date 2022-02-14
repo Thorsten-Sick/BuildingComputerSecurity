@@ -1,5 +1,10 @@
 # Profiling / Performance
 
+
+!!!!! Notes just for me !!!!! If I want a chapter in the book, cherry-pick stuff !!!!!
+
+
+
 Making programs fast:
 
 * Doing nothing is faster than CPU
@@ -42,11 +47,19 @@ Optimize:
 
 ### PySpy
 
-%% TODO: Performance/Profiler: PySpy (https://github.com/benfred/py-spy)
+[Py-Spy](https://github.com/benfred/py-spy)
+
 %% Does (not yet) have callgrind exports
 %% PySpy is good to profile servers which do not terminate.
 %% Offers a top style display !
 
+{lang="bash"}
+    pip install py-spy
+
+It can attach to running processes using the PID or start the process itself:
+
+{lang="bash"}
+    py-spy record -o flame.svg -- python myprogram.py
 
 ### Timeit
 %% Array types and numpy can be faster than lists
@@ -55,18 +68,52 @@ Optimize:
 
 ### CProfile
 
-Good for functions
-Can export statistics for pstats module
-SnakeViz is UI for CProfile
+{lang="bash"}
+    python -m cProfile -s myprogram.py
+
+Will generate a table on stdout.
+
+To store profiles in a file, call it with:
+
+{lang="bash"}
+    python -m cProfile -o profile.stats myprogram.py
+
+The module "pstats" can load them and process them as well. For digging deeper into the data.
+
+{lang="python"}
+    import pstats
+    p = pstats.Stats("profile.stats")
+    # now: storing, printing, ...
+
+If you just want to have a better view on the data than with the default stdout (and not process the data somehow), use the "snakeviz" visualisation tool.
+
+* Good for function calls
+* It is **not** doing line by line observations
+* It can export statistics for pstats module
+
 
 ### Line_profiler
 
+It requires a decorator "@profile" to mark the functions to observe. "kernprof" is the tool to execute the target with.
+
+* It is slow
+*
+
 ### Memory_profiler
 
-MProf memory profiler tool with diagram. You can add a timestamp to add markers to the profile
 IPython %memit magic available
 
+{lang="bash"}
+    pip install memory_profiler
+    pip install psutil
+
+To visualize it, use *mprof*. You can add a marker using "with profile.timestamp:" in your code.
+
+* It is really slow
+
 ### Unix time tool
+
+Simply use unix time command. Check how much time is spent in user and sys time. If sum of those is much greater than real time: This is an IO problem.
 
 
 ### Further Reading
@@ -124,3 +171,11 @@ should be in
 ### System benchmark
 
 tool: sysbench does memory, CPU, IO, ...
+
+## Books
+
+"High performance python" https://learning.oreilly.com/library/view/high-performance-python/9781492055013/
+
+## Napkin Math
+
+https://github.com/sirupsen/napkin-math

@@ -1,6 +1,6 @@
 # CAPEv2
 
-CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox.
+CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox. Its focus is on dumping files.
 
 ## Features
 

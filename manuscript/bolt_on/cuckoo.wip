@@ -2,6 +2,9 @@
 
 %% TODO: Sort out with "antivirus-detection-behaviour-based"
 
+%% https://github.com/cert-ee/cuckoo3/
+
+%% Hypervisor scanning: https://github.com/CERT-Polska/drakvuf-sandbox
 
 ## Basics
 
@@ -34,6 +37,10 @@ Windows 7: https://cuckoo.sh/win7ultimate.iso
 
 https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 
+Windows 10:
+
+https://app.vagrantup.com/StefanScherer/boxes/windows_10
+
 Or use MSDN
 
 %% TODO: NTP sandbox detection  https://isc.sans.edu/diary/rss/26534
@@ -43,6 +50,7 @@ Or use MSDN
 
 %% TODO: https://winternl.com/memfuck/
 %% TODO: https://github.com/rwfpl/rewolf-wow64ext
+%% TODO: https://rp.os3.nl/2020-2021/p68/report.pdf
 
 ## Scan from hypervisor
 

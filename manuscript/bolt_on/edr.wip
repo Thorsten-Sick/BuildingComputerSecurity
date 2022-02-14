@@ -7,3 +7,6 @@
 
 %% TODO: https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-1-wmi-event-subscription/
 
+## Elastic search - Logstash - FileBeat
+
+Elastic search offers an EDR solution. Filebeat processes log files and this data can be forwarded to a central ES instance, or a json file.
