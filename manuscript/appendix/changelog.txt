@@ -77,9 +77,15 @@ changelog to make it simpler for you to find the new sections.
 %% Metasploit (link from vulnerabilities)
 %% The whole teaching stuff
 
-%% Rework python
+%% More python
 %% OSQuery
+%% CAPE to Cuckoo
+%% There: small print nicer
+%% Caldera
 
+## 2022
+
+* Small extensions to video.txt, testing_compiling.txt, presentations.txt
 
 ## October 2021
 
