@@ -45,6 +45,15 @@ Aspell example
 
 aspell --lang=EN_UK --word-list-path=./aspell -c manuscript/appendix/glossary.txt
 
+Vale example
+------------
+
+Vale is a smarter spellchecker with additional writing guides.
+
+vale manuscript/teaching/*.txt
+
+Dicts is in vale_styles/spelling. The ignore list is there as well.
+
 
 For Future Use
 --------------

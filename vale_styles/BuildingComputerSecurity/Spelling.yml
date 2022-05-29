@@ -1,0 +1,7 @@
+extends: spelling
+message: "Rechtschreibprüfung: '%s'"
+dicpath: vale_styles/spelling
+dictionaries:
+  - en_GB
+level: warning
+ignore: vale_styles/spelling/ignore.txt
