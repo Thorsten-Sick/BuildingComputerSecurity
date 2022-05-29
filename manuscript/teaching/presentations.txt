@@ -2,10 +2,10 @@
 
 ## Presentation frameworks
 
+### Reveal and Sphinx
+
 https://github.com/attakei/sphinx-revealjs
 https://sphinx-revealjs.readthedocs.io/en/latest/#
-
-### Reveal and Sphinx
 
 https://github.com/hakimel/reveal.js
 

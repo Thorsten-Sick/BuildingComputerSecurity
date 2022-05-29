@@ -1,6 +1,7 @@
 # Frida {#chapter-frida}
 
 %% TODO: Add this to the book !
+%% TODO: https://learnfrida.info/
 
 A kind of manual Cuckoo monitor:
 
@@ -63,3 +64,9 @@ Better filter it (used that for *ping*):
 %% Pokemon Go Anti Frida: https://www.romainthomas.fr/post/21-07-pokemongo-anti-frida-jailbreak-bypass/
 
 %% https://github.com/cyberheartmi9/Frida-Guide
+
+%% https://learnfrida.info/
+%% There is also a printed version !
+
+
+%% https://github.com/cyberark/Symda

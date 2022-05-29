@@ -159,6 +159,7 @@ A large collection of alternative to centralised and surveilled services can be 
 
 
 %% # Privacy combination
+%% How to be a digital revolutionary by violet blue https://www.adafruit.com/product/3532
 %% Brave browser
 %% ProtonVPN
 %% Tresorit

@@ -222,3 +222,5 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% Grammar based fuzzing:
 %% For binary formats like images: https://github.com/uds-se/FormatFuzzer
+
+%% Linux kernel: syzkaller, coverage guided kernel fuzzer https://xairy.io/articles/syzkaller-external-network

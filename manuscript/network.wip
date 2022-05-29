@@ -155,6 +155,7 @@ https://github.com/jpillora/chisel
 ### Downloading
 
 * curl
+* curl-impersonate (https://github.com/lwthiker/curl-impersonate)
 * wget
 * httpie
 
@@ -238,6 +239,10 @@ https://github.com/jpillora/chisel
 
 Source: https://wizardzines.com/#posters
 
+### Books
+
+%% https://learning.oreilly.com/library/view/attacking-network-protocols/9781492067504/
+
 
 %% IPOsint: https://github.com/j3ssie/IPOsint
 %% OSint : https://github.com/kpcyrd/sn0int
@@ -266,3 +271,9 @@ Source: https://wizardzines.com/#posters
 %% Check IP on external databases (Virus Total...) https://github.com/jreisinger/checkip
 
 %% TODO: Netcalc tool
+
+%% https://github.com/jafarlihi/rconn
+
+%% TODO: https://github.com/jafarlihi/rconn
+
+%% https://www.inetsim.org/downloads.html
