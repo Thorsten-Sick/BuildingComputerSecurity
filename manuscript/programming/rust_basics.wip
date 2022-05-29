@@ -1,8 +1,29 @@
 # Rust basics
 
+%% Idea: create a language overview. Rust and Golang get the same structure. Compare them. Make switching from C simpler.
+
 My own collection of rust basics. Maybe we will get a rust security chapter (in a separate file) sooner or later.
 
+%% https://www.rust-lang.org/learn
+
 Format code: "rustfmt"
+
+# When to use it
+
+* Mirrors C++
+* system programming
+* os development
+* more machine oriented than Golang
+* Borrow checker for memory
+* Rust is faster than Golang
+* Memory safety built in
+* Rust is built for concurrent programming. Thanks to the borrow checker undefined behaviour is prevented
+* Used in  Linux Kernel and Firefox
+* It is a disciplined language
+
+## IDE
+
+IntelliJ PyCharm has a rust plugin.
 
 ## Included
 
@@ -28,6 +49,8 @@ Test versions and installation
     cargo --version
     rustc --version
 
+## Bootstrapping a project
+
 Create first program
 
 {lang="bash}
@@ -35,12 +58,76 @@ Create first program
 
 The created directory will contain the configuration and a sample code file.
 
+
+## Building / executing
+
 Execute with
 
 {lang="bash"}
     cargo run
 
+Just build with
+
+{lang="bash"}
+    cargo build
+
+The default build is always a debug build.
+
+## Error checks
+
+And to just check for errors use:
+
+{lang="bash"}
+    cargo check
+
+(This can be activated int he IDE)
+
+## Documentation
+
 Getting documentation
 
 {lang="bash"}
     rustup doc --std
+
+## Tests
+
+Unit tests are marked with the *#[test]* attribute before a function.
+They can be either together with the code in the same file or in a special file.
+
+{lang="bash"}
+    cargo test
+
+will find and run them.
+
+## Libraries
+
+Finding libraries: https://lib.rs/
+
+## Cross compiling
+
+Install the toolchain:
+
+{lang="bash"}
+    rustup target add arm-linux-androideabi
+
+Build:
+
+{lang="bash"}
+    cargo build --target=arm-linux-androideabi
+
+Platform matrix: https://doc.rust-lang.org/nightly/rustc/platform-support.html
+
+## Tutorials:
+
+* https://www.rust-lang.org/learn
+* https://rust-cli.github.io/book/crates/index.html
+* https://doc.rust-lang.org/stable/embedded-book/intro/index.html
+* Cargo book: https://doc.rust-lang.org/cargo/
+* Python bindings: https://lib.rs/crates/pyo3  and maturin (https://github.com/PyO3/maturin)
+
+% https://doc.rust-lang.org/cargo/commands/cargo-check.html
+
+## Books
+
+%% command-line Rust https://learning.oreilly.com/library/view/command-line-rust/9781098109424/?utm_medium=email&utm_source=platform+b2b&utm_campaign=engagement&utm_content=whats+new+new+amp+20220207
+%% https://learning.oreilly.com/library/view/programming-rust-2nd/9781492052586/

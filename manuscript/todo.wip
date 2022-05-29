@@ -211,23 +211,34 @@ Malware simulator: https://github.com/redcanaryco/chain-reactor
 --------------
 Add those special search engines:
 https://twitter.com/trimstray/status/1328004644807860224?s=09
--censys.io : Internet service scanning
--shodan.io  : IoT search engine
--viz.greynoise.io : Internet service scanning
--zoomeye.org: chinese
--onyphe.io: Internet service scanning
--wigle.net: Internet service scanning, seems to be crowd-scanning
--intelx.io: domain, url, email, ip, cdir, bitcoin, ....
+- censys.io : Internet service scanning
+- shodan.io  : IoT search engine
+- https://www.greynoise.io/viz : Internet service scanning
+- zoomeye.org: chinese
+- onyphe.io: Internet service scanning
+- wigle.net: Internet service scanning, seems to be crowd-scanning
+- intelx.io: domain, url, email, ip, cdir, bitcoin, ....
 - https://fofa.so/ : chinese
--hunter.io: email addredsses
--zorexeye.com: sites, images, apps, software
--pulsedive.com: urls, domains, iocs
--netograph.io: ip, domain, subnets, certificates
--vigilante.pw: database breaches
--pipl.com: people
--abuse.ch: malware, phishing, ssl, urls, C&C servers
--maltiverse.com/search. IOCs
--insecam.org: ip video cameras
+- hunter.io: email addredsses
+- zorexeye.com: sites, images, apps, software
+- pulsedive.com: urls, domains, iocs
+- netograph.io: ip, domain, subnets, certificates
+- vigilante.pw: database breaches
+- pipl.com: people
+- abuse.ch: malware, phishing, ssl, urls, C&C servers
+- maltiverse.com/search. IOCs
+- insecam.org: ip video cameras
+- https://fullhunt.io/ attack surface intelligence
+- https://redhuntlabs.com/online-ide-search pastebin and similar
+- https://www.onyphe.io/ different stuff
+- https://ivre.rocks/ nmap and similar
+- https://www.binaryedge.io/ organisations, their assets
+- https://socradar.io/ attack surface
+- https://synapsint.com/ osint
+- https://intelx.io/ domains, urls, bitcoins
+- https://vulners.com/ vulnerabilities
+- https://spyse.com/ internet (asn, ip, ...)
+- https://hunter.io/ osint
 
 (If I did not do so already)
 
@@ -239,3 +250,12 @@ Peid (packer, cryptor, ... detecing)
 CFF Explorer pe editing
 xorstrings/xorsearch: search for strings in an encoded binary https://blog.didierstevens.com/programs/xorsearch/
 Vipermonkey
+
+-------------- From Mail:
+Find a place for them:
+
+ https://stackoverflow.com/questions/33644499/what-does-it-mean-when-they-say-react-is-xss-protected
+
+ Just in Time Credentials: short term permissions
+
+ Expiring unused permissions: https://netflixtechblog.com/introducing-aardvark-and-repokid-53b081bf3a7e

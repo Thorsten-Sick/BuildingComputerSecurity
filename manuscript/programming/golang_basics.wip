@@ -1,5 +1,129 @@
 # Golang basics
 
+%% Idea: create a language overview. Rust and Golang get the same structure. Compare them. Make switching from C simpler.
+
 My own collection of golang basics. Maybe we will get a golang security chapter (in a separate file) sooner or later.
 
-Format Go using "gofmt"
+Format Go using "gofmt" and lint using "golint"
+
+# When to use it
+
+* Mirrors Python
+* web development
+* databases
+* network programming
+* Garbage collection
+* much more performant than python (slower than Rust)
+* Memory safety built in
+* Goroutines: concurrency (use it if you have multiple processors)
+* Used at Google (large scale applications)
+
+# IDE
+
+Several IDEs are available. Atom is one:
+
+{lang="bash"}
+    sudo snap install atom --classic
+
+Golang plugins:
+The *go-plus* plugin
+https://atom.io/packages/ide-golang
+
+## Installing
+
+## Bootstrapping a project
+
+{lang="bash}
+    cd projectdir
+    go mod init example/hello
+    #edit hello.go
+    go run .
+
+## Building / executing
+
+{lang="bash"}
+    go run .
+
+To build it
+
+{lang="bash"}
+    go build
+
+## Error checks
+
+{lang="bash}
+    go vet
+
+## Documentation
+
+Use "godoc"
+
+## Tests
+
+Unit tests are run with
+
+{lang="bash"}
+    go test
+
+### Fuzzing
+
+https://tip.golang.org/doc/fuzz/
+
+## Libraries
+
+Finding libraries https://pkg.go.dev
+
+https://devdocs.io/go/
+
+The tool
+
+{lang="bash"}
+    go mod tidy
+
+will modify your *go.mod* file and add requirements
+
+Using github as source and not
+
+{lang="bash"}
+    go get <github url>
+
+will download a package
+
+https://www.digitalocean.com/community/tutorials/importing-packages-in-go
+
+## Cross compiling
+
+{lang="bash"}
+    GOOS=darwin GOARCH=386 go build test.go
+
+Available GOOS values are:
+
+* darwin
+* windows
+* linux
+
+Available GOARCH values are:
+
+* i386
+* arm
+* amd64
+* wasm
+
+see:
+
+* https://golangcookbook.com/chapters/running/cross-compiling/
+* https://dave.cheney.net/2015/03/03/cross-compilation-just-got-a-whole-lot-better-in-go-1-5
+* support matrix: https://gist.github.com/lizkes/975ab2d1b5f9d5fdee5d3fa665bcfde6
+* webassembly: https://www.sitepen.com/blog/compiling-go-to-webassembly
+
+## Tutorials
+
+https://www.tutorialspoint.com/go/index.htm
+
+https://go.dev/
+
+## Books
+
+%% Black hat Go https://learning.oreilly.com/library/view/black-hat-go/9781098122645/
+* https://golangcookbook.com/
+%% https://learning.oreilly.com/library/view/learning-go/9781492077206/

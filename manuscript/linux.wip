@@ -28,6 +28,8 @@ Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-e
 
 ## Sysmon
 
+%% https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/mitre-att-amp-ck-technique-coverage-with-sysmon-for-linux/ba-p/2858219
+
 %% https://github.com/Sysinternals/SysmonForLinux
 
 %% https://github.com/microsoft/MSTIC-Sysmon/tree/main/linux/configs
@@ -41,6 +43,8 @@ Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-e
 https://linux-audit.com/how-to-create-custom-tests-in-lynis/
 
 https://cisofy.com/lynis/
+
+%% https://linux-audit.com/lynis-3-major-release/
 
 ## Updates and upgrades
 
@@ -94,9 +98,56 @@ https://linux-audit.com/kernel-hardening-disable-and-blacklist-linux-modules/
 
 https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/
 
-## Debugging
+## System analysis
+
+### strace
+
+trace process events on system level
 
 Strace: https://linux-audit.com/the-ultimate-strace-cheat-sheet/
+
+Important parameters are:
+
+* -f follow forks
+* -e event filter
+* -p pid
+
+You can find a list of syscalls in *man 2 syscalls*
+
+Of course there are libraries to write own tracers:
+
+* [Rust](https://github.com/blaind/hstrace)
+* [Python](https://python-ptrace.readthedocs.io/en/latest/)
+
+### ltrace
+
+trace process events on library level. Less abstract than strace. But needs a dynamically linked library.
+
+Important parameters are:
+
+* -f follow forks
+* -e event filter
+* -p pid
+* -C make C++ functions more readable (demangled)
+
+
+### lsof
+
+Everything is a file on Unix. This lists open files.
+
+* Open files (-c matching process names)
+* Network traffic (-i4 and -i6 matching network addresses)
+* NFS (-N)
+
+### systemtap
+
+A system wide tool to gather tracing and profiling data. A script is compiled into a kernel module which monitors the system.
+
+%% https://learning.oreilly.com/library/view/embedded-linux-development/9781788399210/15c3eac3-2273-4cbf-b9d2-801b0998a8d1.xhtml
+
+### Audit
+
+Add events to audit with *auditctl* and search in the resulting logs with *ausearch*
 
 ## Password
 
@@ -155,19 +206,41 @@ https://www.darkreading.com/attacks-breaches/mirai-evolves-from-iot-devices-to-l
 https://www.collabora.com/news-and-blog/blog/2020/07/14/introduction-to-linux-kernel-initcalls/
 https://www.collabora.com/news-and-blog/blog/2020/09/25/initcalls-part-2-digging-into-implementation/
 
+## Debian packages
+
+
+Find debian package for file:
+
+{lang="bash"}
+    $ sudo apt install apt-file
+    $ apt-file update
+    $ apt-file find -F /usr/bin/gcc-9
+    gcc-9: /usr/bin/gcc-9
+
+Check if file was modified
+
+{lang="bash"}
+    $ sudo apt-get install debsums
+    $ debsums -a gcc-9
+    /usr/bin/x86_64-linux-gnu-gcc-9                                               OK
+    /usr/bin/x86_64-linux-gnu-gcc-ar-9                                            OK
+    /usr/bin/x86_64-linux-gnu-gcc-nm-9                                            OK
+    /usr/bin/x86_64-linux-gnu-gcc-ranlib-9                                        OK
+    /usr/bin/x86_64-linux-gnu-gcov-9                                              OK
+
+Important: It is just verifying MD5. And MD5 is not secure anymore. You could use different tools like tripwire (https://www.redhat.com/sysadmin/security-monitoring-tripwire)
+
 %% TODO: Linux hardening guide https://github.com/trimstray/the-practical-linux-hardening-guide
 
 
 %% AVML (Aquire volatile memory for linux: https://github.com/microsoft/avml)
 
 
-%% TODO: ltrace (library call trace): "ltrace -C -f -e 'getenv'" > all getenv calls by the observed process or its forks
-
-
 %% TODO: replacement for top command: "nmon"
 
 %% ## Embedded Linux
 
+%% https://learning.oreilly.com/library/view/embedded-linux-development/9781788399210/
 %% https://www.thirtythreeforty.net/posts/2019/08/mastering-embedded-linux-part-1-concepts/
 %% https://www.thirtythreeforty.net/posts/2019/12/mastering-embedded-linux-part-2-hardware/
 %% https://www.thirtythreeforty.net/posts/2020/01/mastering-embedded-linux-part-3-buildroot/
@@ -181,3 +254,7 @@ https://www.collabora.com/news-and-blog/blog/2020/09/25/initcalls-part-2-digging
 %% Defense map https://github.com/a13xp0p0v/linux-kernel-defence-map
 
 %% Kernel module programming guide: https://sysprog21.github.io/lkmpg/
+
+%% Securing mount points https://linux-audit.com/securing-mount-points-on-linux/
+
+%% syzkaller fuzzer: see fuzzing

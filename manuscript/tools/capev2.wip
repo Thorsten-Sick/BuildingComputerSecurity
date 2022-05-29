@@ -1,6 +1,13 @@
 # CAPEv2
 
-CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox. Its focus is on dumping files.
+CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox. Its focus is on dumping configuration files and unpacking malware.
+For that it integrates a debugger which can be programmatically triggered on specified events.
+
+It prefers the sandbox to be KVM.
+
+https://github.com/kevoreilly/CAPEv2
+
+Documentation: https://capev2.readthedocs.io/en/latest/#
 
 ## Features
 
@@ -21,6 +28,11 @@ CAPE is a malware analysis sandbox. And extension to Cuckoo sandbox. Its focus i
 https://github.com/doomedraven/Tools/blob/master/Sandbox/cape2.sh
 
 Run it with ./cape2.sh
+
+### Windows ISOs
+
+You can get a Windows ISO from https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
 
 ## Links
 
@@ -174,4 +186,27 @@ which is based on [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)
 
 %% TODO: Network cloning and management. For bare metal analysis machines: https://fogproject.org/
 
+%% https://www.inetsim.org/downloads.html
 
+### Checklist for client installation
+
+On controller (aka host)
+
+* Install dependencies *sudo ./cape2.sh base cape*
+* configure
+
+
+
+On target (aka guest)
+* Get Windows trial version
+* Import OVA into Virtual Box
+* Resize HD ! The 40 GB will be too small if you add Windows updates
+* Firewall off
+* Maybe check for Windows updates
+* Windows Updates off
+* Adjust the network settings: ping the host from the client (essential), maybe make sure the client can ping the internet.
+* Install python. Some python versions do not work with Windows 7 ! But there is a Python 3.8
+* Additional Apps installed
+* Update for these Apps off
+* Maybe install VirtualBox Guest application (convenient, but could be detected)
+* Add Agent

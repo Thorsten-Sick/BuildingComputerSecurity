@@ -172,10 +172,49 @@ should be in
 
 tool: sysbench does memory, CPU, IO, ...
 
+## Linux system profiling
+
+From bootup to user logged in:
+
+{lang="bash"}
+    systemd-analyze blame
+
+Lists the programs being run. rom slowest to fastest.
+
+Listing the critical chain (aka path)
+
+{lang="bash"}
+    systemd-analyze critical-chain
+
+Getting a nice plot:
+{lang="bash"}
+    systemd-analyze plot >removeme/plot.svg
+
+Makers will contain the timestamp with @ and the runtime for each step.
+
+Detailed investigation with
+
+{lang="bash"}
+    journalctl -xeu snapd
+
+* x: extend log with info texts
+* e: end of the journal
+* u snapd: Filter for snapd
+
 ## Books
 
 "High performance python" https://learning.oreilly.com/library/view/high-performance-python/9781492055013/
 
+"Understanding software dynamics" https://learning.oreilly.com/library/view/understanding-software-dynamics/9780137589692/
+
 ## Napkin Math
 
 https://github.com/sirupsen/napkin-math
+
+## Python
+
+https://wiki.python.org/moin/PythonSpeed/PerformanceTips
+https://jiffyclub.github.io/snakeviz/
+https://pypi.org/project/ProfileEye/
+
+Memray: Memory profiling for Python https://github.com/bloomberg/memray
