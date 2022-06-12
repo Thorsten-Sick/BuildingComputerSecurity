@@ -47,7 +47,6 @@ Choose wisely which combination of tools you want to use.
 %% https://geekflare.com/find-python-security-vulnerabilities/
 %% https://medium.com/@prasincs/open-source-static-analysis-for-security-in-2018-part-1-python-348e9c1af1cd
 
-%% TODO: Python3 type checks
 
 ## Virtualenv build environment
 
@@ -200,6 +199,29 @@ It is also possible to disable specific warnings for a single line of code, a fu
 
 [Pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
 
+### MyPy, static type checker
+
+MyPy is a tool that can be run on code and check at "compile time" if type contracts are respected.
+In Python 3 you can optionally annotate variables with the type they must be (and here you have lots of flexibility).
+MyPy will then check if this is respected. Important: At runtime this is ignored. So there are no behaviour changes for your  runtime.
+But it can support you a lot.
+And you can use it partially: All APIs and interfaces between parts of the project developed by different people should be priority
+
+{lang="bash"}
+    mypy app/
+
+There are many flags that make the checks more strict to find corner cases, For example "Optional" types can be None.
+And MyPy can check if those variables are verified to be not None before their methods are used (for example). *--strict-optional* is doing that.
+
+Will check the code in the folder app.
+
+To toggle mypy off for a specific line of code, add *#type: ignore*. Some external libraries are not using type annotation yet.
+
+{lang="python}
+    from fabric import Connection  # type: ignore
+
+[MyPy]](https://mypy-lang.org)
+
 ## Packaging with setup.py
 
 Tox will require proper packaging. And setup.py is the traditional way to do packages.
@@ -256,24 +278,58 @@ It contains:
 * Safety: dependency check on requirements
 * Bandit: Checks for common vulnerabilities
 
+
+## Dependencies
+
+Python dependencies are best handled using a virtualenv and a requirements.txt file whichs pins the exact version numbers to ensure reproducability.
+
+The Safety tool is already scanning your dependencies for vulnerable ones. In addition you can also check for old ones or update your requirements.txt. There are two more tools for you to add to your build chain:
+
+### pipdeptree
+
+Displays a dependency tree (this includes the dependencies your depend on indirectly)
+
+{lang="bash}
+    pip install pipdeptree
+    pipdeptree
+
+You can set it to throw an error whenever there is a warning concerning old dependencies used in your project using:
+
+{lang="bash"}
+    pipdeptree -w fail
+
+This is a bit drastic. Maybe you would prefer to have a weekly task to check dependencies, update them and test if your projects still works with the new versions (it should)
+
+%% TODO: - pydeps for detailed dependencies
+
+### pip-upgrade
+
+To upgrade the pinned dependencies in your requirements.txt you can use pip-upgrade.
+
+{lang="bash"}
+    pip install pip-upgrade
+    pip-upgrade requirements.txt
+
+This will modify the file and pull the newest versions. Just run your automated tests afterwards to ensure everything is still working.
+
 %% TODO: Add Robust Python https://learning.oreilly.com/library/view/robust-python/9781098100650/
 
-%% TODO: Python static type checker: https://mypy-lang.org
 %% TODO: pyre als erweiterung (daemon) fuer mypy
 %% TODO: pysa als Erweiterung fuer Pyre (taint checker)
 
 %% TODO: mccabe to measure complexity
 
-
+%% TODO: https://python-poetry.org/
 
 %% TODO: https://github.com/treebeardtech/pytest-deepcov
 %% TODO: Other tools, available on GitHub as a service
 
-%% Todo: Type test system for Python: [PyType](https://google.github.io/pytype/)
-
 %% TODO: See also profiling.wip for stuff that is cool but not relevant here
 
 
+
+%% TODO: - pyan3 a static call graph generator
+%% TODO: - "python -m cProfile -o deps.profile test.py" "gprof2dot --format=pstat deps.profile -o deps.dot" for run time call graph
 
 %% TODO: PyPi supply chain attack: https://www.bleepingcomputer.com/news/security/researcher-hacks-over-35-tech-firms-in-novel-supply-chain-attack/
 

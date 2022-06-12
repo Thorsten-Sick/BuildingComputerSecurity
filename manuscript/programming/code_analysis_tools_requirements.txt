@@ -60,3 +60,6 @@ The two things that require code modification only modify special debug code. So
 Unit tests can be run on Linux or Windows. They will even run on embedded systems.
 But there you will have to handle memory space issues (the binary will be huge)
 and redirect the report to UART. I would define that as a bonus goal after the unit tests run on Linux or Windows.
+
+
+%% TODO: Review Semgrep https://security.humanativaspa.it/semgrep-ruleset-for-c-c-vulnerability-research/
