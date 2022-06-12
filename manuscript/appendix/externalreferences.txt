@@ -110,6 +110,8 @@ The Chaos Computer Club has several conferences in Germany. Those have different
 
 [Usenix 2019](https://www.usenix.org/conference/usenixsecurity19/technical-sessions)
 
+[Usenix 2020](https://www.usenix.org/conference/usenixsecurity20/technical-sessions)
+
 ### Hack.lu
 
 [Hack.lu](https://hack.lu/) is a security conference in Luxembourg. Talks are recorded, but it seems there is no central storage besides YouTube where you can find them.
@@ -160,6 +162,8 @@ Blackhat is a security conference with events in US, Europa and Asia (so don't g
 [BSides](https://www.youtube.com/playlist?list=PLqdWoaf0o9zfBsqpP6XZucJNke0X3fZQG)
 
 [BsidesSF 2021](https://bsidessf.org/schedule)
+
+[BSides TLV 2021] (https://www.youtube.com/playlist?list=PLkNlAwTF5yEvS0IDS8zRanqUfTWxadcV4)
 
 ### Radare Con
 
