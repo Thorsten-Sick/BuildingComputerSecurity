@@ -1,10 +1,10 @@
 # Fuzzing {#chapter-fuzzing}
 
-Fuzzing is inserting random data into the system with the goal to cause invalid states. This can be crashing, memory leaks, unresponsiveness, endless loops, log storms ...
+Fuzzing inserts random data into the system with the goal to cause invalid states. This can crash the application, leak memory, cause unresponsiveness, trigger endless loops, create log storms ...
 
-After you did set up fuzzing tools it runs full-auto for nights and collects crash logs and especially the data that caused the crashes.
+After you did set up fuzzing tools it runs full-auto for nights and collects crash logs and the data that caused the crashes.
 
-This generated data can be send to any kind of input:
+You can send this generated data to any kind of input:
 
 * Command line
 * File
@@ -19,32 +19,32 @@ This generated data can be send to any kind of input:
 * WiFi and Bluetooth
 * at the library API (libfuzzer)
 
-If you ship software that includes 3rd party libraries or programs, you should fuzz those as well. You ship it to customers with your tools - you are responsible.
+If you ship software that includes 3rd party libraries or programs, you should fuzz those as well. You ship it to customers with your tools - it becomes your responsibility.
 
-If the project you ship involves 3rd party tools (dhcp client, DNS server, ...) they are also valid fuzzing goals.
+If the project you ship involves 3rd party tools (DHCP client, DNS server, ...) remember you can fuzz them as well.
 
-An important step in fuzzing is to keep the relevant input data for the debugging session later. This can be done by keeping the files. Some fuzzers have a predictable algorithm that generates the same permutations for a given seed. For those just keep the seed in a database and re-create the input data before debugging.
+An important step in fuzzing is to keep the relevant input data for the debugging session later. At least keep the files in a separate folder. Some fuzzers have a predictable algorithm that generates the same permutations for a given seed. For those just keep the seed in a database and re-create the input data before debugging.
 
-There are several fuzzers, from simple random data generators to coverage based like libfuzzer and AFL.
-All of them have advantages and disadvantages.
+Dozens of fuzzers are available, from simple random data generators to coverage based like libfuzzer and AFL.
+They have different advantages and disadvantages.
 
-You should start with a simple variant if your program has not been hardened yet. And while patching the bugs you find, you can improve the fuzzer.
+You should start with a simple variant if your program is not hardened yet. And while patching the bugs you find, you can improve the fuzzer.
 
 ## Training project
 
-There is a practice target for fuzzing: [Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat) is a vulnerable C program to test your fuzzer.
+If you are looking for a practice target for fuzzing check out [Fuzzgoat](https://github.com/fuzzstati0n/fuzzgoat). It is a vulnerable C program to test your fuzzer.
 
 As there are many kinds of fuzzers and you maybe want to experiment with them before getting started with your project.
 
 ## Fuzzing hardware
 
 You can fuzz embedded devices. In addition to be able to send the broken data to the device (UART, BLE, ...) you also need a way to evaluate the system health.
-Anything that works like a ping (like: request version information over WiFi) is already quite good.
-Another thing is: You want to be able to reset the device. LAN controlled power sockets are a way. Or toggling the reset button using a micro controller and a small circuit.
+Anything that works like a ping (like: request version information over WiFi) is already good.
+Another thing: You want to be able to reset the device. LAN controlled power sockets offer a way. Or toggling the reset button using a micro controller and a small circuit.
 
 ## DIY fuzzer
 
-It is quite simple to write own fuzzers. The tools later in this chapter will be much more powerful, but with some tricks the core concept of fuzzers is simple:
+It's quite simple to write own fuzzers. The tools later in this chapter will be much more powerful, but with some tricks the core concept of fuzzers is simple:
 
 * Create data that has a *almost* valid structure. You want it to be processed code deeper in the victim's project
 * For the same reason: Create *valid checksums* for your fake data
@@ -110,8 +110,8 @@ Taking an example from Radamsa (check out the link, there are more examples).
 AFL is a very sophisticated fuzzer. It uses compile-time instrumentation and a genetic algorithm to discover new test cases. For that it does a *Code Coverage* on the victim binary and tries to create data in a way that every existing code path is used.
 
 Pro:
-    * It is fast
-    * It is exhaustive
+    * Fast
+    * Exhaustive
 
 Con:
     * It needs instrumented binaries - you have to re-compile them
@@ -137,10 +137,10 @@ on your system if you installed the package.
 
 ## libFuzzer
 
-The most effective way if you have access to the API and code. It is part of Clang 6.0+.
+The most effective way if you have access to the API and code - a part of Clang 6.0+.
 Clang is available for Ubuntu 18.4
 
-You may notice: Ubuntu 17.10 does not have this Clang installed yet. So you will want to install a Clang 6.0 from a PPA.
+You may notice: Ubuntu 17.10 does not have this Clang installed yet. You will want to install a Clang 6.0 from a PPA.
 
 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)
 
@@ -151,10 +151,10 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 ## More fuzzing tricks
 
 * Parallelize fuzzing
-    * Google's [ClusterFuzz](https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md) is an example
+    * Google's [ClusterFuzz](https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md) for example
 * Do it on Linux. It has more powerful monitoring tools for dynamic code analysis
 * Fix found bugs ASAP, so your fuzzer can dig deeper
-    * There are smart fuzzers that can cluster the crashes by the bugs they very likely belong to
+    * Some smart fuzzers can cluster the crashes by the bugs they belong to
 
 ## Further reading
 
@@ -177,7 +177,7 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% TODO: [Fuzzing: Art, Science, and Engineering](https://arxiv.org/pdf/1812.00140.pdf)
 %% TODO: [Angora: Efficient Fuzzing by Principled Search](https://arxiv.org/abs/1803.01307)
-%% TODO read: [What You Corrupt Is Not What You Crash:
+%% TODO: read: [What You Corrupt Is Not What You Crash:
 %% [Challenges in Fuzzing Embedded Devices](http://s3.eurecom.fr/docs/ndss18_muench.pdf)
 
 
@@ -206,7 +206,7 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% TODO: Check AFL QEMU integration, This will work on non-instrumented binaries
 
-%% TODO; Check Honggfuzz
+%% TODO: Check Honggfuzz  https://github.com/google/honggfuzz
 
 %% TODO: Combine fuzz engines by swapping input samples. That way they will cover each other's weaknesses.
 
@@ -218,9 +218,11 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% TODO: Put python fuzzer either here or into python: https://github.com/google/atheris
 
-%% TODO Game fuzzing using snapshots: http://blog.ret2.io/2021/07/21/wtf-snapshot-fuzzing/
+%% TODO: Game fuzzing using snapshots: http://blog.ret2.io/2021/07/21/wtf-snapshot-fuzzing/
 
 %% Grammar based fuzzing:
 %% For binary formats like images: https://github.com/uds-se/FormatFuzzer
 
 %% Linux kernel: syzkaller, coverage guided kernel fuzzer https://xairy.io/articles/syzkaller-external-network
+
+%% TODO: Java fuzzer https://www.code-intelligence.com/blog/engineering-jazzer
