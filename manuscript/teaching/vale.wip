@@ -1,0 +1,37 @@
+# Vale
+
+A linter for texts: Proof reading texts.
+
+https://github.com/errata-ai/vale
+https://atom.io/packages/atomic-vale
+
+## Installation
+
+https://github.com/errata-ai/vale/releases
+
+## config
+
+It needs a file *.vale.ini* which must contain a path to installed styles (*StylesPath*). Plus a list of styles to use (*BasedOnStyles*)
+
+## Inline config
+
+in rst:
+
+{lang="rst"}
+  .. vale off
+  .. vale on
+
+
+## Spell check
+
+You can get dictionaries from here. The one you use must be referenced by a yaml file.
+
+You should also add an ignore file and link it there. The yaml file is of the type "extends: spelling"
+
+https://github.com/freedesktop/libreoffice-dictionaries
+
+**If dictionary files can not be loaded, convert them to UTF-8**
+
+## German
+
+There are some basic German rules available here: https://github.com/cusyio/cusy-design-system/tree/main/docs/.vale
