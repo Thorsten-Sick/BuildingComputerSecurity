@@ -83,9 +83,24 @@ changelog to make it simpler for you to find the new sections.
 %% There: small print nicer
 %% Caldera
 
+%%  TODO:
+%% CAPEv2
+%% common weaknesses
+%% docker
+%% golang
+%% java
+%% linux
+%% malware
+%% network
+%% rust
+%% todo
+
+
 ## 2022
 
 * Small extensions to video.txt, testing_compiling.txt, presentations.txt
+* Extended external references
+*
 
 ## October 2021
 
@@ -351,7 +366,7 @@ of existing chapters.
 * Added *attacker's goals*
 * Added *antivirus-tests*
 * Added *antivirus-integration*
-* Changed PDF format to A5 for a typical book-size PDF
+* Changed PDF to A5 for a typical book-size PDF
 * Added basic *fuzzing* chapter
 * Extended "Defensive programming"
 * Extended "principles"
