@@ -9,8 +9,8 @@ done_files =
 .PHONY: vale, vale-enforce
 
 # Vale spell check and text linter for all chapters I am currently working on
-vale: $(quality_files)
-	vale $(quality_files)
+vale:
+	vale --config .vale.ini `find manuscript -name "*.txt"`
 
 # Enforce vale on the CI/CD system for "done" chapters
 vale-enforce: $(done_files)
