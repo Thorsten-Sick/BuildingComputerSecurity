@@ -183,7 +183,7 @@ As for a castle example:
 
 A castle **on a hill** has a **moat**, **walls** and **archers**.
 
-So attackers have to be:
+Attackers will have to be:
 
 * Good runners
 * Swimmers

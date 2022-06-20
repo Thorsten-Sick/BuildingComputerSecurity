@@ -16,7 +16,7 @@ Vulnerabilities want to be managed. And fixed. To get the terms right:
 * **managing** vulnerabilities is the awareness of the current state of the system - as realistic as possible
 * **fixing** vulnerabilities (and rolling out the update) removes them
 
-So it is a race between the attackers - wanting to get to the stage of *exploit* or *weaponized exploit* and the defenders - wanting the *patches rolled out* to all of their customers.
+It is a race between the attackers - wanting to get to the stage of *exploit* or *weaponized exploit* and the defenders - wanting the *patches rolled out* to all of their customers.
 
 The tricky part is not to miss the start of the race. And be well organised to push towards the goal.
 
@@ -28,7 +28,7 @@ In that case:
 * Less effort for the attacker
 * The race for the attacker gets shorter: From the patch stage to where the last customer applied the patch.
 
-There are vulnerabilities only known to the defenders. Or only known to the attackers. So one party can already run the race while the other is waiting for the start.
+There are vulnerabilities only known to the defenders. Or only known to the attackers. One party can already run the race while the other is waiting for the start.
 
 Knowledge management and starting early is essential here.
 
@@ -83,7 +83,7 @@ There are chapters in this book covering this - because it is the essence of sec
 
 ## Search engines for exploits and vulnerabilities
 
-Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both seem to have a strong focus and bias. So I suggest you either use several or experiment with them to find the one matching your requirements.
+Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both seem to have a strong focus and bias. I suggest you either use several or experiment with them to find the one matching your requirements.
 
 Some exploit tools (Metasploit) are also a good source for exploits. Going for the paid version is smart if you want the newest exploits.
 

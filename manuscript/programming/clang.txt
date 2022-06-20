@@ -33,7 +33,7 @@ Best practice is to take some hours to fix all warnings. After that warnings wil
 
 See more [Clang cheat sheet](https://blog.quarkslab.com/clang-hardening-cheat-sheet.html)
 
-Clang command line is very similar to GCC command line. So you should pick some generic tips from the [compiling](#chapter-compiling) chapter.
+Clang command line is very similar to GCC command line. You can pick some generic tips from the [compiling](#chapter-compiling) chapter.
 
 ## Static analysis
 
@@ -58,7 +58,7 @@ Those special binaries are meant to be run on your test servers, by your develop
 
 But those special binaries are slow. And crash.
 
-So you should not ship them to your customers that way.
+Obviously you should not ship them to your customers that way.
 
 One of the most valuable ways to use these special binaries is to run them to your large, automated test set.
 

@@ -92,7 +92,7 @@ Some very restrictive states limit the Tor browser. For those there are extra mo
 The Tor browser can access special ".onion" URLs. That is the Dark part of the web.
 
 This may sound spooky. But even Facebook has a an entry door on the Dark side of the web. [Facebook on Tor](https://www.facebookcorewwwi.onion/)
-So it is is not as big a thing as you may think.
+It is is not as big a thing as you may think.
 
 Install the Tor browser and give it a try. You may not need it now. But maybe later.
 

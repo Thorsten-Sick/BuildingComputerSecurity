@@ -56,7 +56,7 @@ If your program handles archives, scan them twice:
 
 The reason for that:
 
-* The full archive in case the malware is split into several files. So the scanner can build up the context graph.
+* The full archive in case the malware is split into several files. The scanner can build up the context graph.
 * The single files: If the archive is password protected it is possible that the scanner was not able to handle it. But after you extracted the files, everything is fine.
 
 You can test your implementation with the [EICAR](#chapter-eicar) test malware.

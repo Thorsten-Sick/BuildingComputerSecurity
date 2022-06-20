@@ -73,7 +73,7 @@ just 20% of the whole defense and Thorsten said that is OK."
 ### Cause pain
 
 You can detect malware on different layers. File hash, file pattern, file structure, behaviour, ....
-Malware authors built tools that pack or re-compile the malware constantly. So the "outer" layers of the malware are
+Malware authors built tools that pack or re-compile the malware constantly. The "outer" layers of the malware are
 cheap to modify. Detecting those will break you detection almost instantly as soon as new variants are released.
 
 But going for the inner layers (behaviour) will make it much harder for the malware authors to modify and test
@@ -109,7 +109,7 @@ files a higher FP rating will also work for you.
 
 If you have a heterogeneous landscape, many computers, fancy extraordinary tools: Aim for a lower FP rating.
 
-Many FPs the AVs have in tests are on quite exotic shareware files. It is quite possible you will not have (or want)
+Many FPs the AVs have in tests are on quite exotic shareware files. It is possible you will not have (or want)
 them in your system anyway.
 
 ### Test institutions

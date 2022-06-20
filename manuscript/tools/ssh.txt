@@ -33,9 +33,9 @@ Both belong together. And you also want to have a key pair per server you connec
 The public key does not need top be protected. You can copy it around, put it on untrusted systems, share it or even print it in the newspaper. The file
 containing it has the *.pub* extension.
 
-The secret key is Top Secret. It should be protected by a *passphrase*. So someone getting the file will still not be able to unlock it as the passphrase is missing.
+The secret key is Top Secret. It should be protected by a *passphrase*. In case someone extracts the file this person will still not be able to unlock it as the passphrase is missing.
 
-The passphrase is optional. But you should use it. There are tools that store it as long as you do not reboot your computer - so you just have to enter it
+The passphrase is optional. But you should use it. There are tools that store it as long as you do not reboot your computer - you just have to enter it
 once after you log in.
 
 On a server without keyboard that has no tech person to manage it after a reboot a passphrase could cause trouble....

@@ -1,8 +1,8 @@
 # Requirements for code analysis tools {#chapter-code-analysis-tools-table}
 
-There is a long list of tools supporting you during the development cycle. Some have specific requirements. So some will not be use able in your situation.
+There is a long list of tools supporting you during the development cycle. Some have specific requirements - and you will not be able to use them in your situation.
 
-Some of my projects are embedded projects. So the requirement "compiles on Linux" is quite hard when the release target is a micro controller
+Some of my projects are embedded projects - the requirement "compiles on Linux" is quite hard when the release target is a micro controller
 without an OS.
 
 An option here is to at least test the part of the code that are not hardware depended on Linux.
@@ -55,7 +55,7 @@ An option here is to at least test the part of the code that are not hardware de
 There is a large number of fuzzing and dynamic code analysis tools for Linux.
 Being able to compile at least core parts of the code and execute them on Linux will make your life much simpler.
 
-The two things that require code modification only modify special debug code. So you will not mess up your release build.
+The two things that require code modification only modify special debug code. This way you will not mess up your release build.
 
 Unit tests can be run on Linux or Windows. They will even run on embedded systems.
 But there you will have to handle memory space issues (the binary will be huge)

@@ -35,7 +35,7 @@ Are there any with some reputation ? If yes this is a good sign for "this could 
 Has this file been uploaded already some days ago ? If there is detection and the labs have this file already for some time you can assume it has been properly analysed. And the detection is no false positive.
 
 Maybe, if you have some time (days): Re-upload your file in a few days again and check if the detection did change.
-VirusTotal is sharing the samples with the AV vendors. And AV vendors are very motivated to prevent false detections (*false positives*). So if they have this file already for some days and it is still detected, it is not a FP.
+VirusTotal is sharing the samples with the AV vendors. And AV vendors are very motivated to prevent false detections (*false positives*). If they have this file already for some days and it is still detected, it is not a FP.
 
 Of course: You should wait those days only if you have the potentially malicious file locked away in your local quarantine.
 

@@ -45,7 +45,7 @@ With *responsible disclosure* the reporter reports the vulnerability by mail and
 After the release the company writes a warning for the users to update - a blog post also thanking the researcher. These credits are the "payment" the researcher receives for a job that could also have gotten him thousands of dollars when hired for a so called "pen(etration) test".
 Why 90 days ? As the experience of security people is: Many companies are lazy - they would
 wish to fix the bug in the next version they sell.
-We all know how this will turn out: no one will get a fix. People are vulnerable and the vulnerability is abused. So 90 days. Then disclosure. This is fair and puts a (low) pressure on the company to step our of their development schedule and get things done.
+We all know how this will turn out: no one will get a fix. People are vulnerable and the vulnerability is abused. This is why the 90 days deadline exists. Afte that details are disclosed. This is fair and puts a (low) pressure on the company to step our of their development schedule and get things done.
 
 [^90days]: 90 days is the most friendly default variant. It can be less (30 days) or much less (0 days). Do not take this for granted. You could also just find vulnerability reports for your product at places like [Seclists](https://seclists.org/bugtraq/)
 
@@ -94,7 +94,7 @@ There should always be someone monitoring the mail account and forwarding the ma
 Losing days to holidays and broken internal communication causes trouble that could have been avoided.
 
 You will get bonus points for publishing a PGP key for that mail address on your homepage.
-So a reporter can send you a confidential mail.
+A reporter can send you a confidential mail using PGP.
 Of course: while PGP is not rocket science, many people will be inexperienced using it. This requires PGP-fire drills with your support people.
 
 ### security.txt
@@ -111,7 +111,7 @@ Nothing magic. But practical.
 
 Establish a culture of code reviews on VCS check-ins and on other important way-points. Like releases or after finding bugs.
 
-Bugs cluster. So it is very likely that a type of bug can be found on similar places in the code. If you find a bug, look for similar issues.
+Bugs cluster. It is very likely that a type of bug can be found on similar places in the code. If you find a bug, look for similar issues.
 Other good metrics how to find code that needs to be reviewed can be found in the book "Software Design X-rays".
 
 %% TODO: Add link to book
@@ -127,9 +127,9 @@ In case of an incident, the vulnerability was abused by an attacker. But it is i
 ### Internal pen tests/code reviews
 
 After you have your processes for bug prioritisation and vulnerability handling in place and all the hot areas of your code are bug-free you can hire external *pen testers*. This companies are specialists for finding vulnerabilities and bugs.
-If you did not fix well known issues before hiring them, you are wasting money. If you do not have processes for dealing with issues - you are wasting money. So please get your team and processes in perfect shape first.
+If you did not fix well known issues before hiring them, you are wasting money. If you do not have processes for dealing with issues - you are wasting money. Please get your team and processes in perfect shape first.
 
-Standard process when hiring pen testers is to define a scope (the most risky parts of your project) and they will review it. Bugs will be created and prioritised.
+Standard process when hiring pen testers is to define a sc	ope (the most risky parts of your project) and they will review it. Bugs will be created and prioritised.
 
 Then your team can start fixing them.
 

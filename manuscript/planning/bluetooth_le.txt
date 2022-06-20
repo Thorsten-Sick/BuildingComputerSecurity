@@ -16,7 +16,7 @@ There are also "profiles" which are standardized services/characteristics for a 
 A good way to get started is [Adafruit BLE](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction)
 
 I am using Kali Linux for many of my tests/attacks on my devices. Sometimes it can be hard to find a Bluetooth device that is working correctly
-(the built-in Bluetooth adapter of my laptop fails). So search your drawers for a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
+(the built-in Bluetooth adapter of my laptop fails). Search your drawers for a working device. In my case it is a LogiLink BT USB adapter BT0037. YMMV.
 
 ## Potential attacks
 
@@ -38,7 +38,7 @@ compared to a wired connection it adds complexity and increases the attack surfa
 
 ## BLE Security
 
-BLE security is weaker than the Bluetooth classic security. Limiting factor is the pairing of devices. It requires a pin number to be entered - but with small and cheap devices without human interaction (keypad, display) this is hard to achieve.
+BLE security is weaker than the Bluetooth classic security. Limiting factor is the pairing of devices. It requires a pin to be entered - but with small and cheap devices without human interaction (keypad, display) this is hard to achieve.
 
 The options for pairing are:
 
@@ -178,7 +178,7 @@ BlueZ is the Linux kernel part (and user space tools) for Bluetooth. Bluepy sits
 
 ## Adafruit Bluetooth LE sniffer
 
-So far we have been checking the higher OSI layers. If you want to go down to single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer" and the "Ubertooth".
+We have been checking the higher OSI layers. If you want to go down to single packets there are two affordable options: "Adafruit Bluefruit LE Sniffer" and the "Ubertooth".
 
 Experimenting with the Adafruit I got challenged by some glitches (maybe my fault -or the tools are better tested with the Ubertooth).
 

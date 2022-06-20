@@ -31,7 +31,7 @@ Errors will cause instant program termination and stack traces (thanks to [asser
 These are typical attacks. Operating system, system environment and programming
 language used will define the exact way the attacks will try to accomplish their goal.
 
-So the choice of the defense technology will also depend on those factors. The
+The choice of the defense technology will also depend on those factors. The
 basic principles will stay the same.
 
 
@@ -54,7 +54,7 @@ Complexity is cfreated by bad design or bad code. And complexity causes all kind
 * It even make certain sizes of projects impossible to achieve
 
 Ways to manage complexity is *object oriented* design and code. This breaks big tasks down into discrete objects.
-So object orientation is a tool to achieve *software components*. If you can achieve splitting the project into components by other ways: Great.
+Object orientation is a tool to achieve *software components*. If you can achieve splitting the project into components by other ways: Great.
 
 They must:
 

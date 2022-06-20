@@ -49,7 +49,7 @@ As said before:
 * Before calling 3rd party functions check you honour their contract
 * After calling 3rd party functions: To verify they did not change their contract
 
-For release compile you will switch it off with **NDEBUG**. So there will be no runtime penalty for extreme validation.
+For release compile you will switch it off with **NDEBUG**. That way there will be no runtime penalty for extreme validation.
 
 There is no reason to hold back when adding asserts.
 

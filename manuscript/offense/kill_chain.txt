@@ -48,7 +48,7 @@ The initial access phase is over as soon as the attacker can run any code on the
 
 ## Persistence
 
-Most malware wants to survive a reboot of the system. So adding the own file to *autostart* or similar services is an important step.
+Most malware wants to survive a reboot of the system. Adding a malware startup file to *autostart* or similar services is an important step.
 
 Persistence leaves traces and is kind of obvious if the defender knows where to look for it. But there are many parts of the system that start a program after reboot - not just autostart.
 
@@ -59,10 +59,10 @@ And there is another option - some malware can deal without persistence:
 
 ## Privilege Escalation
 
-After the first attack, many attackers only have the user's privileges. Not Admin/Root/System. So another exploit is used to *escalate privileges*.
+After the first attack, many attackers only have the user's privileges. Not Admin/Root/System. This is why another exploit is used to *escalate privileges*.
 The other exploit does not have to be in the same application that has been the infection vector.
 
-So even if the application you wrote did not offer the initial access, it can still be a part of the kill chain by offering the privilege escalation vulnerability.
+Even if the application you wrote did not offer the initial access, it can still be a part of the kill chain by offering the privilege escalation vulnerability.
 
 When coding: Drop privileges and wrap your program into a restricting sandbox to protect it from being a part of the kill chain.
 
@@ -79,7 +79,7 @@ And this is the so called "sandbox escape".
 ## Defense Evasion
 
 There are different defensive technologies. Logging, Anti Virus, Behaviour analysis...
-The attacker will want to not trigger any alarms. So the attacker uses tricks to hide tools, actions and traffic from any observer.
+The attacker will want to not trigger any alarms. Tricks are used to hide tools, actions and traffic from any observer.
 
 ## Lateral Movement
 

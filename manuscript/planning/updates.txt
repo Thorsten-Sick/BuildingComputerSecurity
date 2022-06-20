@@ -92,7 +92,7 @@ You want to track your update roll out. And if systems are functional post-updat
 
 ## Be able to stop updates
 
-If you roll out a broken update, you should be able to remove it from your update servers very quick. So other users do not risk ruining their systems.
+If you roll out a broken update, you should be able to remove it from your update servers very quick. That way other users do not risk ruining their systems.
 Automatic roll back (mentioned a few chapters above) will take care for the updated systems.
 
 Slowly increasing the percentage of client systems getting the update offered is also part of this. Start with a few percent, measure success, increase percentage.

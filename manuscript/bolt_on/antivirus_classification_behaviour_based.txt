@@ -26,13 +26,13 @@ There are several ways to classify files. And one of them is behaviour based. Th
 
 ## Container, Virtual Machines or Bare Metal
 
-Behaviour analysis of malware can either happen on virtual machines or Bare Metal. Both systems must be reset after each malware run. So a virtual
+Behaviour analysis of malware can either happen on virtual machines or Bare Metal. Both systems must be reset after each malware run. A virtual
  machine is much faster.
 
 Container technology is cool for deployment but it is **not** a security feature and does **not** properly isolate the guest from the host.
 Also: You can not simulate a totally different system in the container than on the host.
 
-So it is either a Virtual Machine or a (slow) Bare Metal system with hardware support for the reset.
+It is either a Virtual Machine or a (slow) Bare Metal system with hardware support for the reset.
 
 If you use virtual machines: Run them on a dedicated analysis server and not on office environment.
 
@@ -42,7 +42,7 @@ Malware is trying to connect to the C&C server. It needs either a real connectio
 
 You want to separate the analysis machine from the company network. First to avoid the malware to escape into the office net. Second to avoid your IP to be block listed by ISPs as malware source.
 
-The analysis sandbox should be able to monitor network connections - so you do not have to do that centrally at a firewall. If your sandbox does not offer sufficient network monitoring you can log the connections at a firewall.
+The analysis sandbox should be able to monitor network connections - you do not have to do that centrally at a firewall. If your sandbox does not offer sufficient network monitoring you can log the connections at a firewall.
 
 But be aware that many connections will be hidden (tunneled through a non-suspicious protocol like DNS) or encrypted.
 
@@ -94,7 +94,7 @@ With a bit of luck the online service version of Cuckoo Sandbox [malwr.com](http
 
 ## Small print
 
-I contributed to Pafish, VMCloak and Cuckoo Sandbox - so I may be biased. On the other hand: There are either no real alternatives or people keep telling me
+I contributed to Pafish, VMCloak and Cuckoo Sandbox - I may be biased. On the other hand: There are either no real alternatives or people keep telling me
 those tools are good.
 
 For Cuckoo Sandbox there are alternatives. Just check if they are re-branded Cuckoos or something unique.

@@ -14,7 +14,7 @@ By reporting found FPs you help yourself and them.
 They are also interested in the newest malware. Are you running a server that turned out to be a malware magnet ? Contact your AV vendor.
 
 The basic data the vendors need is the files. But they will also love to have some background information. Maybe they already have the sample in their large database. But it did not get a proper name or the proper priority because it
-was just "one in a million". So the detection name will just be a number or "Agent-something-number" kind of name.
+was just "one in a million". The detection name will just be a number or "Agent-something-number" kind of name.
 
 But if you are an NGO or run essential government infrastructure, that could increase the priority of the malware a lot - tell the AV vendor that!
 
@@ -30,7 +30,7 @@ Some things to know:
 * Stored files are no problem. Executed are
 * Your AV will have a so called *Quarantine*. This is an encrypted file storing the found malware
     * One of the less known reasons it encrypts the found malware: That way it will not be detected a second time by another scanner and cause confusion
-* Most malware is multi-staged. So several files, URLs and registry entries are involved. Gotta catch them all
+* Most malware is multi-staged. Several files, URLs and registry entries are involved. Gotta catch them all
 * There is file-less malware that only exists in memory or registry keys. It is hard to extract that from your system
 * Rename your malware files from .exe to .vir. It is a tradition that protects you from accidentally starting it.
     * Better use a zip file with the password *infected*

@@ -77,7 +77,7 @@ Before anyone complains: Yes, this is kind of boring rock-solid software enginee
 
 Bugs love company. If you find a bug of a certain type in your code the chances are high to find similar bugs in this or other projects.
 
-So if you should manually find a bug that ESLint missed, it is worth the investment to write a detection for that as a *rule* or *plugin* for ESLint.
+If you should manually find a bug that ESLint missed, it is worth the investment to write a detection for that as a *rule* or *plugin* for ESLint.
 And run this on your whole code base to find similar bugs.
 
 The ESLint page has documentation on how to write rules.

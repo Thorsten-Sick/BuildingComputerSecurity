@@ -55,7 +55,7 @@ The Ads you see online are very often not only pictures or animations - they als
 Web pages are selling parts of the screen space to Ad companies. Those either re-sell it to other Ad companies or offer the space to entities who want to
 advertise something.
 
-So it is very unclear who is responsible for the ad content and code you see embedded in a page.
+It is very unclear who is responsible for the ad content and code you see embedded in a page.
 
 As the Ads are targeted, the company paying to display the Ad can define who will see it:
 
@@ -121,7 +121,7 @@ For a defender the take-aways are:
 
 Cookies are essential for many homepages to work properly. The reason is that there is not other way to memorize the history of a user (even the most recent one) for a web server.
 
-So it sets cookies (key and value pairs) in the user's browser. The browser submits the cookies linked to a page whenever a new page is requested.
+It sets cookies (key and value pairs) in the user's browser. The browser submits the cookies linked to a page whenever a new page is requested.
 
 But the same technology can be used to track users and observe them.
 
@@ -136,7 +136,7 @@ The extension "Privacy Badger" uses an internal list to block tracking cookies w
 ## Fingerprinting
 
 Besides cookies there are other ways to identify a unique user. This is called *fingerprinting*. By using as many system specific features that
-are available in the browser as possible it creates a kind of unique id for this browser.
+are available in the browser as possible it creates a unique id for this browser.
 
 Screen size, languages, installed fonts, user agent, OS platform, browser plugins ...
 
@@ -193,7 +193,7 @@ As BeEF is a very specific tool and not many people will require it it gets a sp
 
 Burp suite is a tool to check web pages for vulnerabilities. Vulnerabilities in web sites lead to hacked web sites. Hacked web sites lead to web sites with browser exploits (BeEF or Exploit Kits). Browser exploits lead to hacked browsers after they visited this page.
 
-So please harden your web sites if you run any. To help you do that there is the [Burp Suite](#chapter-burp).
+Please harden your web sites if you run any. To help you do that there is the [Burp Suite](#chapter-burp).
 
 ## Attack on Routers
 
@@ -505,7 +505,7 @@ covers many attacks on web browsers. Its focus is on the BeEF framework.
 
 %% [Google Cloud Ultramem machines](https://cloudplatform.googleblog.com/2018/07/now-shipping-ultramem-machine-types-with-up-to-4tb-of-ram.html)
 
-%% TODO: [CanOnion header idea - so pages can re-direct](https://twitter.com/AlecMuffett/status/1054789626156720134)
+%% TODO: [CanOnion header idea - pages can re-direct](https://twitter.com/AlecMuffett/status/1054789626156720134)
 
 %% TODO: [HTTPLab (interactive web server)](https://github.com/gchaincl/httplab)
 

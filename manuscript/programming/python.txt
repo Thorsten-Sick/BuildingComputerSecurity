@@ -203,7 +203,7 @@ It is also possible to disable specific warnings for a single line of code, a fu
 
 MyPy is a tool that can be run on code and check at "compile time" if type contracts are respected.
 In Python 3 you can optionally annotate variables with the type they must be (and here you have lots of flexibility).
-MyPy will then check if this is respected. Important: At runtime this is ignored. So there are no behaviour changes for your  runtime.
+MyPy will then check if this is respected. Important: At runtime this is ignored - resulting in no behaviour changes in your runtime.
 But it can support you a lot.
 And you can use it partially: All APIs and interfaces between parts of the project developed by different people should be priority
 

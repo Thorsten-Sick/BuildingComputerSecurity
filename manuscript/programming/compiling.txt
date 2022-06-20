@@ -100,7 +100,7 @@ If you have no CI system running, at least build your own Vagrant testing toolbo
 ## Compile for Linux
 
 Linux has many powerful code verification tools (fuzzing, ...).
-Even if you develop for Windows it would be an idea to try to build your code on Linux. Maybe at least parts of your system - especially libraries to process file or data formats. So you can use these Linux specific testing tools to test your code.
+Even if you develop for Windows it would be an idea to try to build your code on Linux. Maybe at least parts of your system - especially libraries to process file or data formats. Use these Linux specific testing tools to test your code.
 
 This is why Tavis Ormandy ported Windows Defender to Linux: to test it for vulnerabilities: [Tavis on Twitter](https://twitter.com/taviso/status/867134496935563264)
 and [Tavis Ormandy loadlibrary](https://github.com/taviso/loadlibrary)

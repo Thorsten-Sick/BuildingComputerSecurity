@@ -2,8 +2,8 @@
 
 [Flawfinder](https://www.dwheeler.com/flawfinder/)
 
-Flawfinder is a simple static code analysis tool. One of the "grep on speed" kind. It is simple - so it should be one of the first tools to use to verify
-your code. One nice thing: It puts the important messages first. So start checking the code from top to bottom.
+Flawfinder is a simple static code analysis tool. One of the "grep on speed" kind. It is simple - it should be one of the first tools to use to verify
+your code. One nice thing: It puts the important messages first. Start checking the code from top to bottom.
 
 As it is simple it will not find all vulnerabilities. You should continue with
 other tools and code-reviews even if flawfinder gives you green lights.

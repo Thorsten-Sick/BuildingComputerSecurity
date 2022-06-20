@@ -150,7 +150,7 @@ systems - integrate it in there.
 
 ### Git
 
-Git as a version control system is the core of your development workflow. So it is also a perfect spot to add automated code quality tools. You learned
+Git as a version control system is the core of your development workflow. It is also a perfect spot to add automated code quality tools. You learned
 about those tools in the other chapters. And this chapter gives you some hints where to get started integrating them into [Git](#chapter-git).
 
 %% TODO Openssl

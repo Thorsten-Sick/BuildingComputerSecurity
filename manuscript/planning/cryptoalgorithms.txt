@@ -2,7 +2,7 @@
 
 Crypto Algorithms are the basic building blocks of encryption. Above them are protocols ("how do we glue algorithms together to achieve our goal ?"). And above the protocols are libraries offering an easy programming interface to use a protocol.
 
-In many cases the user of the library still has to pick the algorithm to slot into the protocol. So a basic knowledge of the algorithms will prevent many bugs.
+In many cases the user of the library still has to pick the algorithm to slot into the protocol. A basic knowledge of the algorithms will prevent many bugs.
 
 I will skip the mathematics and try to build simple "Good vs Bad" tables. If you want to dig deeper, please read the books in the links.
 
@@ -193,7 +193,7 @@ is often faster.
 
 If possible replace your RSA and DH with ECC.
 
-EC crypto depends on one special parameter: the curve it runs on. The curve has to be special. So you can not make up your own. Instead use one of the standard curves:
+EC crypto depends on one special parameter: the curve it runs on. The curve has to be special. You can not make up your own. Instead use one of the standard curves:
 
 * NIST curves
 * Curve25519 (which is very common)

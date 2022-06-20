@@ -118,5 +118,5 @@ This should lead to the secure default.
 Security is complex. Sometimes you can not have one indicator for all kinds of risks and attacks.
 
 This happened to the browser developers because the situation changed during the last years.
-The lock icon next to the URL bar always indicated "The connection is secure". But as users started to understand this icon as "This page is secure" malware started to TLS-encrypt the connection. So users would see the lock and assumed the page content is OK.
+The lock icon next to the URL bar always indicated "The connection is secure". But as users started to understand this icon as "This page is secure" malware started to TLS-encrypt the connection. Users would see the lock and assumed the page content is OK.
 This also sabotaged scanning proxies. Browser vendors will now either need more icons (one for the page, one for the connection). Or start indicating differently (red bar for unencrypted connections). While a malware attack will be blocked hard with the whole tab displaying info on a red background.
