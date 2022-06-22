@@ -250,7 +250,7 @@ Source: https://wizardzines.com/#posters
 
 %% TODO: The future internet: https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20181218/Documents/Geoff_Huston_Presentation.pdf
 
-%% TODO: Shodan
+%% TODO: Shodan https://www.sans.org/blog/getting-the-most-out-of-shodan-searches/
 
 %% TODO: Greynoise.io https://greynoise.io/
 
@@ -277,3 +277,5 @@ Source: https://wizardzines.com/#posters
 %% TODO: https://github.com/jafarlihi/rconn
 
 %% https://www.inetsim.org/downloads.html
+
+%% xray enhanced network scanner and osint https://securityonline.info/xray-tool-recon-mapping-osint-gathering-public-networks/

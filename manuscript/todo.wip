@@ -259,3 +259,8 @@ Find a place for them:
  Just in Time Credentials: short term permissions
 
  Expiring unused permissions: https://netflixtechblog.com/introducing-aardvark-and-repokid-53b081bf3a7e
+ 
+ ----------------------- OWASP sources
+web testing:  https://owasp.org/www-project-application-security-verification-standard/
+ design: https://owasp.org/www-project-proactive-controls/
+ cheat sheet: https://owasp.org/www-project-cheat-sheets/
