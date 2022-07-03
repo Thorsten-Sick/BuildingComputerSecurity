@@ -1,4 +1,4 @@
-# Cuckoo Sandbox
+%% # Cuckoo Sandbox
 
 %% TODO: Sort out with "antivirus-detection-behaviour-based"
 
@@ -6,15 +6,15 @@
 
 %% Hypervisor scanning: https://github.com/CERT-Polska/drakvuf-sandbox
 
-## Basics
+%% ## Basics
 
-## Setup
+%% ## Setup
 
 %% TODO: https://hatching.io/blog/cuckoo-sandbox-setup
 
-## Writing detection rules
+%% ## Writing detection rules
 
-## Weaknesses
+%% ## Weaknesses
 
 %% TODO https://github.com/David-Reguera-Garcia-Dreg/anticuckoo
 
@@ -25,7 +25,7 @@
 %% TODO: More evasions: https://evasions.checkpoint.com/
 
 
-## Ideas
+%% ## Ideas
 
 %% TODO: Simulate network using honeypots (printer, desktops, server)
 
@@ -41,18 +41,18 @@ Windows 10:
 
 https://app.vagrantup.com/StefanScherer/boxes/windows_10
 
-Or use MSDN
+%% Or use MSDN
 
 %% TODO: NTP sandbox detection  https://isc.sans.edu/diary/rss/26534
 
 
-## Anti VM, Anti hooking
+%% ## Anti VM, Anti hooking
 
 %% TODO: https://winternl.com/memfuck/
 %% TODO: https://github.com/rwfpl/rewolf-wow64ext
 %% TODO: https://rp.os3.nl/2020-2021/p68/report.pdf
 
-## Scan from hypervisor
+%% ## Scan from hypervisor
 
 %% TODO: Volatility
 
@@ -60,7 +60,7 @@ Or use MSDN
 
 %% TODO VMI (Virtual Machine Introspection)
 
-## Further reading
+%% ## Further reading
 
 
 %% TODO Suricata IDS plus Cuckoo: https://suricata.readthedocs.io/en/suricata-5.0.0/what-is-suricata.html

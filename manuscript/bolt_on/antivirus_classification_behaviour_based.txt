@@ -1,12 +1,12 @@
 # Behaviour based classification {#chapter-antivirus-behaviour-based-classification}
 
-Classification is the process that gets you from "I have a file and do not know what it is" to "this file is malware".
+Classification is the process that gets you from "I have a file and do not know what this is" to "this file is malware".
 
 Bonus points for the type of malware (trojans, infectors, ...) or the exact family name.
 
-Even more bonus points for a detailed analysis.
+Even more bonus points for a detailed behaviour analysis.
 
-There are several ways to classify files. And one of them is behaviour based. This is: observing the behaviour of the file and judging based on that.
+There are many ways to classify files. And one of them is behaviour based. This is: observing the behaviour of the file and judging based on that.
 
 **Advantages**
 
@@ -20,9 +20,11 @@ There are several ways to classify files. And one of them is behaviour based. Th
 * Malware *could* escape the analysis sandbox (bad configuration, unpatched vulnerabilities)
 * Malware *could* detect it is running in a virtual machine and stop doing malicious things
 * Especially Trojans could do the things advertised for minutes - and after that do malicious stuff
-* It is slow. Even when running 30 VMs in parallel on a dedicated machine for 3 minutes each you will not have a good throughput
+* It is slow. Even when running 30 VMs in parallel on a dedicated machine for 3 minutes each it will lack a good throughput
     * please do the maths for your malware situation
     * having worked for an AV vendor: We got 4 unique and new samples per second
+
+In the Open Source world [Cuckoo Sandbox](https://cuckoosandbox.org/) became the standard tool for this kind of analysis. But development staled and the project was continued as [CAPEv2](https://github.com/kevoreilly/CAPEv2).
 
 ## Container, Virtual Machines or Bare Metal
 
@@ -48,14 +50,13 @@ But be aware that many connections will be hidden (tunneled through a non-suspic
 
 ## Pafish
 
-Virtual machines have a big disadvantage: They can be detected. Several characteristics are so typical for Virtual Machines that malware could detect
-them and just play nice.
+Virtual machines have a big disadvantage: They can be detected. Several characteristics are so typical for Virtual Machines that malware can detect them and just play nice.
 
 There is a tool named [pafish](https://github.com/a0rtega/pafish) that detects sandboxes the way malware does.
 
-This is based on:
+Detection is based on:
 
-* Number of cpu cores
+* Number of CPU cores
 * Hard disk names
 * Installed guest tools
 * Registry keys
@@ -63,7 +64,7 @@ This is based on:
 
 Remove all those traces and you should be able to run malware without it detecting the machine.
 
-Also: Never ever depend on one way to classify only ! Always use additional classifiers in parallel.
+Also: Never ever depend on one single way to classify ! Always use additional classifiers in parallel.
 
 %% TODO: Add Anti-Sandbox tricks statistics https://www.ptsecurity.com/ww-en/analytics/antisandbox-techniques/
 
@@ -76,35 +77,101 @@ Also: Never ever depend on one way to classify only ! Always use additional clas
 [VMCloak](http://vmcloak.org/) is a tool similar to
 [Vagrant](https://www.vagrantup.com) - it creates virtual machines. But the main goal is to hide them from malware detection.
 
-Use VMCloak to create a virtual machine and test with Pafish if it can be detected.
+Use VMCloak to create a virtual machine and test if Pafish can identify it as VM.
 
-Those VMs can be controlled by tools like Cuckoo to do the analysis.
+CAPEv2 controls those VMs to do the analysis.
 
 %% TODO: https://www.cyberbit.com/blog/endpoint-security/anti-vm-and-anti-sandbox-explained/
 
 %% https://github.com/d4rksystem/VMwareCloak
 
-## Cuckoo Sandbox
+## CAPEv2 Sandbox
 
-[Cuckoo Sandbox](https://cuckoosandbox.org/) is an analysis environment. After setup you push files in and get behaviour reports, dropped files and verdicts out.
+CAPEv2 is an analysis environment. After setup you push files in and get behaviour reports, dropped files and verdicts out.
 
 As you will want to set it up on a special machine and getting your own configuration will take hours or days it deserves an own chapter.
 
-With a bit of luck the online service version of Cuckoo Sandbox [malwr.com](https://malwr.com) is up and you can use that for non-private analysis.
-
 ## Small print
 
-I contributed to Pafish, VMCloak and Cuckoo Sandbox - I may be biased. On the other hand: There are either no real alternatives or people keep telling me
-those tools are good.
+I contributed to Pafish, VMCloak and Cuckoo Sandbox - I am biased. But as far as 
+I know here are either no real alternatives or people keep telling me those tools are good.
 
-For Cuckoo Sandbox there are alternatives. Just check if they are re-branded Cuckoos or something unique.
+Cuckoo Sandbox became CAPEv2.
 
 ## Something different: Inserting virtual machine traces into the system
 
-A fun project that inserts typical VM traces into a system to sabotage malware that does use Anti-VM techniques is [malwarescarecrow](https://github.com/kaganisildak/malwarescarecrow)
+A fun project that inserts typical VM traces into a system to sabotage malware that does use Anti-VM techniques is [malwarescarecrow](https://github.com/kaganisildak/malwarescarecrow).
 
-It is the exact opposite of Pafish and VMCloak. I guess it is not silver bullet but worth to try it in a master thesis if you want to write one.
+This adds VM markers into a system and hopes malware will stop and hide.
+
+This concept is the exact opposite of Pafish and VMCloak. It's no silver bullet but worth to try it in a master thesis if you want to write one.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% TODO Further reading
 
-%% TODO: Uroboros: https://github.com/evilsocket/uroboros
+%% TODO: Uroboros single process monitoring for Linux: https://github.com/evilsocket/uroboros
+
+%% # Cuckoo Sandbox
+
+%% TODO: Sort out with "antivirus-detection-behaviour-based"
+
+%% https://github.com/cert-ee/cuckoo3/
+
+%% Hypervisor scanning: https://github.com/CERT-Polska/drakvuf-sandbox
+
+%% ## Basics
+
+%% ## Setup
+
+%% TODO: https://hatching.io/blog/cuckoo-sandbox-setup
+
+%% ## Writing detection rules
+
+%% ## Weaknesses
+
+%% TODO https://github.com/David-Reguera-Garcia-Dreg/anticuckoo
+
+%% TODO: Pafish
+
+%% TODO: https://0x00sec.org/t/defeating-userland-hooks-ft-bitdefender/12496
+
+%% TODO: More evasions: https://evasions.checkpoint.com/
+
+
+%% ## Ideas
+
+%% TODO: Simulate network using honeypots (printer, desktops, server)
+
+%% TODO: Polyswarm to get malware for detection improvements
+
+%% Or use MSDN
+
+%% TODO: NTP sandbox detection  https://isc.sans.edu/diary/rss/26534
+
+
+%% ## Anti VM, Anti hooking
+
+%% TODO: https://winternl.com/memfuck/
+%% TODO: https://github.com/rwfpl/rewolf-wow64ext
+%% TODO: https://rp.os3.nl/2020-2021/p68/report.pdf
+
+%% ## Scan from hypervisor
+
+%% TODO: Volatility
+
+%% TODO: https://github.com/tklengyel/drakvuf
+
+%% TODO VMI (Virtual Machine Introspection)
+
+%% ## Further reading
+
+
+%% TODO Suricata IDS plus Cuckoo: https://suricata.readthedocs.io/en/suricata-5.0.0/what-is-suricata.html
+
+%% TODO https://capesandbox.com/analysis/10149/
+
+%% TODO: Zeek.org rules for behaviour
+%% TODO: https://medium.com/@abhijithraom1990/bro-zeek-the-modern-watchtower-9ef61b09f255

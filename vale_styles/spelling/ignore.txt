@@ -84,3 +84,13 @@ afl
 radamsa
 usr
 lang
+Pafish
+Uroboros
+Suricata
+VirusTotal
+GitHub
+MISP
+Procmon
+Sysmon
+YARA
+PowerShell

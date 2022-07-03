@@ -54,6 +54,7 @@ bolt_on/antivirus_sharing_samples.txt
 bolt_on/antivirus_virustotal.txt
 bolt_on/antivirus_detection.txt
 bolt_on/antivirus_classification_behaviour_based.txt
+bolt_on/capev2.txt
 bolt_on/sources.txt
 offense/part_offense.txt
 offense/intro.txt

@@ -96,11 +96,13 @@ changelog to make it simpler for you to find the new sections.
 %% todo
 
 
-## 2022
+## July 2022
 
 * Small extensions to video.txt, testing_compiling.txt, presentations.txt
 * Extended external references
-*
+* Text cleanup based on vale
+* Improved behaviour classification
+* Added CAPEv2 chapter
 
 ## October 2021
 
