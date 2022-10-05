@@ -1,0 +1,19 @@
+Dependencies
+############
+
+All the recursive dependencies in a project are called the "Software Bill of Materials" or SBOM.
+
+AKA "Software supply chain"
+
+
+Microsoft created a tool to generate a SBOM database: https://github.com/microsoft/sbom-tool
+
+To create a graph of components, use:
+
+https://github.com/microsoft/component-detection
+
+Container scanning:
+
+https://github.com/anchore/syft
+
+Add Grype for vulnerability scanning https://github.com/anchore/grype
