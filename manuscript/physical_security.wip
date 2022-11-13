@@ -2,6 +2,8 @@
 
 ## Locks
 
+%% https://research.nccgroup.com/2022/07/25/technical-advisory-multiple-vulnerabilities-in-nuki-smart-locks-cve-2022-32509-cve-2022-32504-cve-2022-32502-cve-2022-32507-cve-2022-32503-cve-2022-32510-cve-2022-32506-cve-2022-32508-cve-2/
+
 ## Special screws
 
 ## Tamper detection by switches
@@ -13,3 +15,6 @@
 ## Tamper detection by nail polish
 
 ## Locking it away
+
+
+%% Fake PDF signer https://gitlab.com/edouardklein/falsisign

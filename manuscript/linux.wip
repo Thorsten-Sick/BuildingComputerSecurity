@@ -26,6 +26,8 @@ Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-e
 
 %% BPF core https://nakryiko.com/posts/bpf-core-reference-guide/
 
+%% https://networkop.co.uk/post/2021-03-ebpf-intro/
+
 ## Sysmon
 
 %% https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/mitre-att-amp-ck-technique-coverage-with-sysmon-for-linux/ba-p/2858219
@@ -40,6 +42,8 @@ Kernel hacking with EBPF https://www.graplsecurity.com/post/kernel-pwning-with-e
 
 ## Lynis
 
+https://linux-audit.com/unix-security-audit-perform-an-audit-in-3-minutes/
+
 https://linux-audit.com/how-to-create-custom-tests-in-lynis/
 
 https://cisofy.com/lynis/
@@ -50,7 +54,11 @@ https://cisofy.com/lynis/
 
 https://linux-audit.com/upgrading-external-packages-with-unattended-upgrade/
 
+https://linux-audit.com/missing-packages-do-not-trust-external-repositories/
+
 ## Hardening
+
+%% https://linux-audit.com/why-linux-security-hardening-scripts-might-backfire/
 
 Hiding processes: https://linux-audit.com/linux-system-hardening-adding-hidepid-to-proc/
 
@@ -98,6 +106,22 @@ https://linux-audit.com/kernel-hardening-disable-and-blacklist-linux-modules/
 
 https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/
 
+https://linux-audit.com/determine-file-and-related-package/
+
+https://linux-audit.com/simplifying-security-choose-the-right-toolkit-not-tool/
+
+https://linux-audit.com/5-tips-to-protect-the-root-account/
+
+https://linux-audit.com/how-and-why-linux-daemons-drop-privileges/
+
+https://linux-audit.com/audit-ssh-configurations-hashknownhosts-option/
+
+https://linux-audit.com/find-disable-insecure-services-linux/
+
+https://linux-audit.com/protect-linux-systems-against-sslv3-poodle-vulnerability/
+
+https://linux-audit.com/linux-audit-framework-using-aureport/
+
 ## System analysis
 
 ### strace
@@ -118,6 +142,8 @@ Of course there are libraries to write own tracers:
 
 * [Rust](https://github.com/blaind/hstrace)
 * [Python](https://python-ptrace.readthedocs.io/en/latest/)
+
+https://linux-audit.com/the-ultimate-strace-cheat-sheet/
 
 ### ltrace
 
@@ -196,6 +222,10 @@ https://linux-audit.com/dealing-with-a-compromised-linux-system/
 https://linux-audit.com/understand-and-configure-core-dumps-work-on-linux/
 https://github.com/Microsoft/ProcDump-for-Linux
 
+## Processes
+
+https://linux-audit.com/auditing-linux-processes/
+
 ## Mirai on Linux server
 
 https://www.darkreading.com/attacks-breaches/mirai-evolves-from-iot-devices-to-linux-servers/d/d-id/1333329?_mc=rss_x_drr_edt_aud_dr_x_x-rss-simple
@@ -235,6 +265,8 @@ Important: It is just verifying MD5. And MD5 is not secure anymore. You could us
 
 %% AVML (Aquire volatile memory for linux: https://github.com/microsoft/avml)
 
+https://linux-audit.com/understanding-memory-information-on-linux-systems/
+
 
 %% TODO: replacement for top command: "nmon"
 
@@ -258,3 +290,48 @@ Important: It is just verifying MD5. And MD5 is not secure anymore. You could us
 %% Securing mount points https://linux-audit.com/securing-mount-points-on-linux/
 
 %% syzkaller fuzzer: see fuzzing
+
+%% https://linux-audit.com/running-processes-and-daemons-on-linux-systems/
+
+% https://linux-audit.com/audit-installed-compilers-and-their-packages/
+
+%% https://linux-audit.com/linux-server-security-three-steps-to-secure-each-system/
+
+%% https://linux-audit.com/distributing-ssh-keys-using-ssh-copy-id-manually-automated/
+
+%% https://github.com/trimstray/otseca
+
+## Linux Kernel exploitation
+
+https://0x434b.dev/dabbling-with-linux-kernel-exploitation-ctf-challenges-to-learn-the-ropes/
+
+https://0x434b.dev/learning-linux-kernel-exploitation-part-2-cve-2022-0847/
+
+
+## Server hardening
+
+https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/
+https://linux-audit.com/linux-server-hardening-most-important-steps-to-secure-systems/
+
+
+## Container
+
+https://linux-audit.com/docker-security-best-practices-for-your-vessel-and-containers/
+
+https://linux-audit.com/docker-security-how-containers-not-help-you/
+
+## vulnerability scanning
+
+https://linux-audit.com/vulnerability-scanning-the-destiny-to-disappointment/
+
+%% https://github.com/google/kmsan
+
+%% https://www.redhat.com/sysadmin/mastering-systemd
+
+%% https://decoded.avast.io/davidalvarez/linux-threat-hunting-syslogk-a-kernel-rootkit-found-under-development-in-the-wild/
+
+%% Linux Kernel exploit https://www.graplsecurity.com/post/iou-ring-exploiting-the-linux-kernel
+
+%% ELF experimental anti-tamper https://github.com/elfmaster/maya
+
+%% Syzkaller in web : https://storage.googleapis.com/syzkaller/cover/ci-qemu-upstream.html

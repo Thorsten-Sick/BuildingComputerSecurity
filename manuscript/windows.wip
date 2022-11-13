@@ -86,7 +86,15 @@ Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from
 
 %% TODO: Active directory cheat sheet: https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
 
+## PE
 
+%% Export dumper https://github.com/iilegacyyii/ExportDumper
+%% Hijack Libs Dll Hijacking https://hijacklibs.net/
+%% Discover and exploit dll hijacking: https://github.com/knight0x07/ImpulsiveDLLHijack
+
+## WinAPI
+
+%% https://dennisbabkin.com/winapisearch/
 
 %%%%%%%%%%%%%
 %% Windows deep dive: https://channel9.msdn.com/Shows/Going+Deep   Lots of videos
@@ -110,3 +118,15 @@ Dumping LAPS passwords: https://www.n00py.io/2020/12/dumping-laps-passwords-from
 %% Windows Events https://github.com/countercept/chainsaw
 
 %% Pe Info: https://github.com/declarativesystems/pe_info
+
+%% Shared mem
+
+
+%% Kernel Exploits
+%% https://www.abatchy.com/2018/01/kernel-exploitation-1
+%% https://www.abatchy.com/2018/01/kernel-exploitation-2
+%% https://www.abatchy.com/2018/01/kernel-exploitation-3
+%% https://www.abatchy.com/2018/01/kernel-exploitation-4
+%%
+
+%% https://www.wietzebeukema.nl/blog/save-the-environment-variables

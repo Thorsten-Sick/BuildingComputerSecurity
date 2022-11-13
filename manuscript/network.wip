@@ -1,3 +1,7 @@
+
+# Network and infrastructure
+
+
 ## Grabbing IP addresses from ASN
 
 whois -h whois.radb.net -- '-i origin AS36459' |grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
@@ -55,6 +59,8 @@ Basic firewall:
 ## Mitmproxy
 
 https://mitmproxy.org/
+
+%% https://github.com/RedTeamPentesting/pretender
 
 ## ARP
 
@@ -158,6 +164,18 @@ https://github.com/jpillora/chisel
 * curl-impersonate (https://github.com/lwthiker/curl-impersonate)
 * wget
 * httpie
+
+### TLS / SSL
+
+* SSLyze
+
+Things toc heck:
+
+* heartbleed
+* certificate validation
+* renegotiation issues
+
+Also: https://observatory.mozilla.org/
 
 ### DNS lookup
 
@@ -279,3 +297,17 @@ Source: https://wizardzines.com/#posters
 %% https://www.inetsim.org/downloads.html
 
 %% xray enhanced network scanner and osint https://securityonline.info/xray-tool-recon-mapping-osint-gathering-public-networks/
+
+%% mDNS enumeration: https://github.com/evilsocket/spycast
+
+## Books
+
+https://learning.oreilly.com/library/view/practical-security-automation/9781789802023/bae7eb09-119a-41a3-8112-cec27c36b844.xhtml#:-:text=The%20scope%20of%20infrastructure%20security
+https://learn.cisecurity.org/benchmarks
+https://static.open-scap.org/  (https://github.com/OpenSCAP/scap-workbench/releases)
+
+%% DDOS tool https://github.com/MatrixTM/MHDDoS
+
+%% TCP: Proxy and analyze: https://github.com/kevwan/tproxy
+
+% Network speedbump net slowdown https://github.com/kffl/speedbump

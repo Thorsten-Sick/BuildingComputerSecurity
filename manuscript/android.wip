@@ -1,3 +1,31 @@
 %% TODO: ADB to get an app. SMALI to siassemble; Manipulate (change url, ...); reassemble; Then sign and run: Test and document that
 
 https://www.youtube.com/watch?v=squuwVQiPgg
+
+# Vulnerable app
+
+https://github.com/dineshshetty/Android-InsecureBankv2
+goatdroid.apk https://github.com/nvisium-jack-mannino/OWASP-GoatDroid-Project
+
+# Secure coding
+
+https://www.jssec.org/dl/android_securecoding_en/index.html
+
+# Tools
+
+APKTool: Extract content (manifest)
+JADX: De compile Java
+
+SAST: Fireline http://magic.360.cn/en/article_en.html
+SAST: Facebook infer
+SAST(privacy): Androwarn, privacy scanning of DALVIK
+SAST: QARK, Scans APK https://resources.infosecinstitute.com/topic/qark-a-tool-for-automated-android-app-assessments/
+SAST/DAST: MobSF, scans APK, iOS, Windows. Dynamic and static https://mobsf.github.io/Mobile-Security-Framework-MobSF/
+
+# Malware
+
+%% https://maldroid.github.io/android-malware-samples/
+
+# Books
+
+https://learning.oreilly.com/library/view/practical-security-automation/9781789802023/

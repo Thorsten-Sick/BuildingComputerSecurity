@@ -1,0 +1,48 @@
+# Embedded
+
+## RTOS
+
+https://www.digikey.com/en/maker/projects/what-is-a-realtime-operating-system-rtos/28d8087f53844decafa5000d89608016#:~:text=A%20real-time%20operating%20system%20(RTOS)%20is%20an%20operating,resource%20management,%20and%20device%20drivers
+
+## KataOS
+
+https://lwn.net/Articles/911332/
+
+## Firmware reversing
+
+https://www.youtube.com/watch?v=GIU4yJn2-2A
+
+## SIM cards
+
+%% https://gitea.osmocom.org/sim-card/pysim/commit/21caf32e3d145a0655d9252ba7c9be1eb6928000
+%% https://gitea.osmocom.org/sim-card
+
+### Book
+
+https://www.freertos.org/Documentation/RTOS_book.html
+
+%% https://www.youtube.com/watch?v=nruUuDalNR0
+
+%% https://github.com/e-m-b-a/embark
+%% https://github.com/e-m-b-a/emba
+
+
+%% OFRAK
+%% https://www.wired.com/story/ofrak-iot-reverse-engineering-tool/
+%% https://github.com/redballoonsecurity/ofrak
+%% https://www.youtube.com/watch?v=U2Lr6Hf6gOY
+
+
+%% Fuzzware
+%% https://github.com/fuzzware-fuzzer/fuzzware
+%% https://www.usenix.org/conference/usenixsecurity22/presentation/scharnowski
+
+%% Firmware extraction https://unblob.org/
+
+%% Introduction to Firmware Reversing https://www.youtube.com/watch?v=GIU4yJn2-2A
+
+%% https://thehackernews.com/2022/06/unpatched-critical-flaws-disclosed-in-u.html
+
+%% https://www.osfc.io/
+
+%% https://t.co/UqTQUBU7h4
