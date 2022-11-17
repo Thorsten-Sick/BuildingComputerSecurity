@@ -1,5 +1,7 @@
 # Fuzzing {#chapter-fuzzing}
 
+%% Run fuzzers in sandboxes / VMs !
+
 Fuzzing inserts random data into the system with the goal to cause invalid states. This can crash the application, leak memory, cause unresponsiveness, trigger endless loops, create log storms ...
 
 After you did set up fuzzing tools it runs full-auto for nights and collects crash logs and the data that caused the crashes.
@@ -101,11 +103,22 @@ Taking an example from Radamsa (check out the link, there are more examples).
        test $? -gt 127 && break
      done
 
+## Dharma
+
+A simple Grammar language lets you define the structure of the data to generate. This is a solution for more complex data formats. Full random would lead to many inputs rejected quite early by sanity checks in the target.
+
+https://github.com/mozillasecurity/dharma
+
+%% ## Format Fuzzer
+%% %% For binary formats like images: https://github.com/uds-se/FormatFuzzer
 
 
 ## AFL American fuzzy lop
 
-%% TODO: Research AFL-Unicorn
+
+%% Coverage guided mutation based fuzzing
+
+%% It needs re-compilation. This is why you need the source.
 
 AFL is a very sophisticated fuzzer. It uses compile-time instrumentation and a genetic algorithm to discover new test cases. For that it does a *Code Coverage* on the victim binary and tries to create data in a way that every existing code path is used.
 
@@ -137,6 +150,10 @@ on your system if you installed the package.
 
 ## libFuzzer
 
+%% Coverage guided mutation based fuzzing
+
+%% Compared to AFL: It fuzzes a function (not a process) and this makes it faster. But there is more manual work.
+
 The most effective way if you have access to the API and code - a part of Clang 6.0+.
 Clang is available for Ubuntu 18.4
 
@@ -148,6 +165,12 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 
 %% .. TODO: more libFuzzer
 
+
+%% ## AFL-Unicorn
+%% Fuzz any binaries (especially firmware) without havingthe source. Supports several arhcitectures
+%% https://medium.com/hackernoon/afl-unicorn-fuzzing-arbitrary-binary-code-563ca28936bf
+%% https://github.com/Battelle/afl-unicorn
+
 ## More fuzzing tricks
 
 * Parallelize fuzzing
@@ -156,12 +179,66 @@ LibFuzzer supports a Corpus for Input and Output samples to test with. This impr
 * Fix found bugs ASAP, so your fuzzer can dig deeper
     * Some smart fuzzers can cluster the crashes by the bugs they belong to
 
+%% ## Interacting with the target:
+
+%% If it is a Windows GUI:
+
+%% * Pywinauto https://pywinauto.readthedocs.io/en/latest/ to click all the buttons
+%% * Pyperclip https://pypi.org/project/pyperclip/ to transfer the manipulated data. It is cross platform
+
+%% With pywinauto you can also check for popping error dialogs
+
+
+%% ## Automated crash analysis
+
+%% Windows: Bugid https://github.com/SkyLined/BugId
+%% Linux:
+%% * https://github.com/pwndbg/pwndbg
+%% * https://github.com/jfoote/exploitable
+
+
+%% ## Minimizing input
+
+%%Lithium https://github.com/MozillaSecurity/lithium
+
+%% ## JVM fuzzing (Java, Kotlin)
+
+%% Coverage guided
+%% Jazzer: https://github.com/CodeIntelligenceTesting/jazzer
+%% https://www.code-intelligence.com/blog/engineering-jazzer
+%% https://media.ccc.de/v/froscon2022-2772-introduction_to_modern_fuzzing
+
+%% ## JS fuzzing
+
+%% https://github.com/CodeIntelligenceTesting/jazzer.js
+
+
+%% Comes with examples
+
+
+%% ## Sanitizers
+
+%% To turn issues into crashes. Expect a slowdown
+
+%% ASan (Adress), MSan (Memory), UBSan (Undefined Behaviour) , TSan (Thread)
+
+%% JVM: Bug detector
+
+
 ## Further reading
 
 Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/download/PagedOut_002_beta2.pdf) contains a good check list for your fuzzing project.
 
+%% https://media.ccc.de/v/mch2022-180-bug-hunting-for-normal-people
+
+
+%% https://www.dedoimedo.com/computers/crash-book.html
+
+%% Should be in this book above: https://www.dedoimedo.com/computers/crash.html
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% TODO: [Clusterfuzz](https://opensource.googleblog.com/2019/02/open-sourcing-clusterfuzz.html)
+%% TODO: Continuous fuzzing [Clusterfuzz](https://opensource.googleblog.com/2019/02/open-sourcing-clusterfuzz.html)
+%% OSS-Fuzz by google: Clusterfuzz for Open Source software, OneFuzz is the similar tool by MS
 
 %% TODO run under Valgrind or strace or gdb
 
@@ -221,8 +298,11 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 %% TODO: Game fuzzing using snapshots: http://blog.ret2.io/2021/07/21/wtf-snapshot-fuzzing/
 
 %% Grammar based fuzzing:
-%% For binary formats like images: https://github.com/uds-se/FormatFuzzer
 
 %% Linux kernel: syzkaller, coverage guided kernel fuzzer https://xairy.io/articles/syzkaller-external-network
 
 %% TODO: Java fuzzer https://www.code-intelligence.com/blog/engineering-jazzer
+
+%% Other vulnerability classes than memory corruption (SQLI, XSRF): https://security.googleblog.com/2022/09/fuzzing-beyond-memory-corruption.html
+
+%% They want to make fuzzing simple: https://github.com/CodeIntelligenceTesting/cifuzz
