@@ -128,3 +128,5 @@ I'll just list the moving parts for reference.
 
 %% List of languages that compile to JS: https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
 %% Python and Go for example can be cross compiled
+
+%% SAST: eslint security plugin: https://www.npmjs.com/package/eslint-plugin-security
