@@ -138,3 +138,5 @@ A strong focus is on web applications (being internet facing they are a perfect 
 
 
 %% TODO: [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)
+
+%% https://github.com/zeronetworks/BlueHound
