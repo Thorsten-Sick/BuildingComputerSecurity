@@ -70,3 +70,5 @@ Better filter it (used that for *ping*):
 
 
 %% https://github.com/cyberark/Symda
+
+%% https://github.com/frida/frida/releases/tag/16.0.0
