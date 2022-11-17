@@ -94,3 +94,5 @@ This is all a bit much for a WiFi enabled toaster. But maybe in some cases this 
 
 %% TODO: Shodan
 %% TODO: [Shodan queries](https://github.com/jakejarvis/awesome-shodan-queries)
+
+%% Security camera mapping https://gitlab.com/hostile.node/watcher
