@@ -335,3 +335,5 @@ https://linux-audit.com/vulnerability-scanning-the-destiny-to-disappointment/
 %% ELF experimental anti-tamper https://github.com/elfmaster/maya
 
 %% Syzkaller in web : https://storage.googleapis.com/syzkaller/cover/ci-qemu-upstream.html
+
+%% Kernel config hardening check https://github.com/a13xp0p0v/kconfig-hardened-check
