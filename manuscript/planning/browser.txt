@@ -474,6 +474,8 @@ covers many attacks on web browsers. Its focus is on the BeEF framework.
 
 %% TODO: [Web Assembly](https://hacks.mozilla.org/2018/10/webassemblys-post-mvp-future/)
 
+%% https://blog.protekkt.com/blog/basic-webassembly-buffer-overflow-exploitation-example
+
 %% ## Web sockets
 
 %% TODO: [Web Sockets](https://www.blackhillsinfosec.com/how-to-hack-websockets-and-socket-io/)

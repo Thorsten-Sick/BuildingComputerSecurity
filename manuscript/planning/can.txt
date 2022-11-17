@@ -136,6 +136,8 @@ into a binary representation based on a given format. One line will handle all y
 
 %% TODO: Also good for binary processing is https://kaitai.io/
 
+%% a cross-language binary format parser generator https://kaitai.io/news/2022/07/08/kaitai-struct-v0.10-released.html
+
 ## Fuzzing the CAN bus with python
 
 When I fuzz a device I will first find ways to detect if the device is behaving normal: Read the firmware version by CAN bus and comparing the results to the expected value.
