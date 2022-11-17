@@ -127,3 +127,16 @@ https://go.dev/
 %% Black hat Go https://learning.oreilly.com/library/view/black-hat-go/9781098122645/
 * https://golangcookbook.com/
 %% https://learning.oreilly.com/library/view/learning-go/9781492077206/
+
+%%%%%%%%%%
+
+%% SAST: gosec  https://github.com/securego/gosec
+
+%% https://www.elttam.com/blog/golang-codereview/
+
+%% https://github.com/maruel/panicparse
+
+
+
+%%  go install golang\.org/x/tools/cmd/godoc@latest godoc -http=:6060
+%% documentation is now hosted locally 

@@ -1,0 +1,20 @@
+# REST API
+
+## Testing frameworks
+JMeter
+FuzzDB
+Robot Framework https://robotframework.org/
+OWASP ZAP
+Fiddler https://www.telerik.com/fiddler
+Python Requests
+https://github.com/BBVA/apicheck
+
+## Checklist
+
+https://github.com/shieldfy/API-Security-Checklist
+
+## Vulnerable API
+
+https://github.com/rahulunair/vulnerable-api
+
+? http://zero.webappsecurity.com/index.html ?

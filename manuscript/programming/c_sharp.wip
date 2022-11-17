@@ -1,0 +1,8 @@
+# c# {#chapter-c_sharp}
+
+Mono code is in *.cs files
+
+{lang="bash"}
+    sudo apt install mono-complete
+
+Mono can JIT compile when a mono code file (*.cs) is executed on commandline.

@@ -131,3 +131,9 @@ Platform matrix: https://doc.rust-lang.org/nightly/rustc/platform-support.html
 
 %% command-line Rust https://learning.oreilly.com/library/view/command-line-rust/9781098109424/?utm_medium=email&utm_source=platform+b2b&utm_campaign=engagement&utm_content=whats+new+new+amp+20220207
 %% https://learning.oreilly.com/library/view/programming-rust-2nd/9781492052586/
+
+
+%% ## Projects
+%% https://github.com/viperproject/prusti-dev
+
+%% RUST based OS, training: https://os.phil-opp.com/

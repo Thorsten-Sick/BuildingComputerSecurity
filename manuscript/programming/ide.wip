@@ -1,0 +1,49 @@
+# IDE
+
+## VSCode
+
+### Marketplace:
+
+@category:"" to search extensions by category
+
+@installed: View installed extensions
+
+### Shortcuts
+
+(Linux)
+
+Command palette: Ctrl+ Shift + P
+
+There is your central control:
+
+{lang="bash"}
+    > command
+    filename
+    filename:lineno
+    filename@symbol
+
+Extensions can also add commands !
+
+Ctrl + space: Autocomplete
+Shift + Alt + Up/Down: Add a new cursor there
+Mark a word, Ctrl + Shift + L: Add a cursor at all those marked words
+
+### Running and debugging
+
+F5: Run
+
+A *launch.json* file defines how the code is run. You can add several configurations there.
+
+Other languages than Js based ones need a debugger extension installed.
+
+All debugger infos (breakpoints, watched variables, stack) can be found in the bar on the left.
+
+### Writing extensions
+
+## IntelliJ
+
+### Marketplace
+
+### Shortcuts
+
+### Writing Extensions

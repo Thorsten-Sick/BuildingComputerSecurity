@@ -1,19 +1,147 @@
-Dependencies
-############
+# Dependencies and supply chain
 
 All the recursive dependencies in a project are called the "Software Bill of Materials" or SBOM.
 
 AKA "Software supply chain"
 
+%% SCA: Software composition Analyse tools => they create dependency graphs
 
-Microsoft created a tool to generate a SBOM database: https://github.com/microsoft/sbom-tool
+## SPDX
 
-To create a graph of components, use:
+SPDX is an ISO standard for data exchange. It contains package information (source, license)
 
-https://github.com/microsoft/component-detection
+It can also contain security references. Those are IDS that can then be referenced in vulnerability databases.
 
-Container scanning:
+https://spdx.dev/
+
+## CycloneDX 
+
+This BOM data format is created by OWASP. It supports vulnerability data for the packages. There are different flavours available (json, xml).
+
+https://cyclonedx.org/
+
+## SLSA
+
+SLSA is a guideline for secure builds. It is an open source project run by several big companies to attest quality levels to the components in the supply chain.
+
+https://slsa.dev/
+
+Code produced by a SLSA build chain will contain a signed certificate. This can be checked using the slsa-verifier https://github.com/slsa-framework/slsa-github-generator
+Int his repo there are also build tool that create this certificate.
+
+## Scorecard
+
+Scorecard is a tool that guides you through secure software development (especially the build process). You can find the tool here:
+https://github.com/ossf/scorecard
+In addition this project also scans OpenSource projects and has a database with the security scores of 1 million of the most critical ones.
+This can be relevant for a more detailed insight into your dependencies.
+
+## Tools
+
+There are three major toolchains I found.
+
+The Microsoft one is closely tied to Github.
+Depending on where you host your code that can be a extra benefit.
+
+### SYFT and GRYPE
+
+SYFT does container and source scanning:
 
 https://github.com/anchore/syft
 
+It can scan dependency files, compiled binaries (jar) or containers
+
+Output formats:
+
+* CycloneDX
+* SPDX
+* syft-json
+* github dependency snapshot format
+
 Add Grype for vulnerability scanning https://github.com/anchore/grype
+
+Output formats:
+
+* CycloneDX
+* Sarif
+* json
+
+Grype is Mac and Linux only.
+
+I verified it works for Java, JS and Python
+
+More is supporded according to the documentation: https://github.com/anchore/grype#features
+
+### OWASP Dependency check
+
+https://github.com/jeremylong/DependencyCheck
+
+Output formats:
+
+* Sarif
+* Json
+* HTML
+
+It is Open Source, simple to install and run. Data does contain details for the vulnerabilities found.
+
+This dependency check works for JS projects
+
+### Microsoft SBOM Tool
+
+Microsoft created a tool to generate a SBOM database in Exports SPDX 2.2
+format: https://github.com/microsoft/sbom-tool
+
+It can scan a project and using package name and company name as command line parameter create a SPDX json file.
+
+At its core there is a component detection you can use standalone:
+
+https://github.com/microsoft/component-detection
+
+It will generate a own json format and is a bit simpler.
+
+Plenty of programming languages are supported. And the source can be extended.
+
+
+%% I was not impressed by the Microsoft tool and would currently go for Grype
+
+%% ### UNISBOM
+%% Software BOM on any OS:
+%% https://github.com/evilsocket/unisbom
+
+
+%% ### Dependabot
+
+%% Automated dependency update
+
+%% Dependabot https://github.com/dependabot
+
+%% ### Renovate
+
+%% https://github.com/renovatebot/renovate
+
+%% ### Open SBOM Generator
+
+%% open SBOM generator https://github.com/opensbom-generator/spdx-sbom-generator
+
+%% ### GUAC data aggregation
+
+%% Google GUAC https://security.googleblog.com/2022/10/announcing-guac-great-pairing-with-slsa.html
+%% https://thehackernews.com/2022/10/google-launches-guac-open-source.html
+%% https://github.com/guacsec/guac
+
+%% (Ruby and node packages)
+%% TODO: Dependency check: https://github.com/jgamblin/DepCheck-Action
+
+%% https://github.com/firefart/hijagger
+
+%% Code analysis for vulnerabilities
+%% https://semgrep.dev/ 
+%% https://security.humanativaspa.it/automating-binary-vulnerability-discovery-with-ghidra-and-semgrep/
+
+%% https://github.com/firefart/hijagger
+
+%% https://socket.dev/
+
+%% https://media.ccc.de/v/mch2022-230-how-to-secure-the-software-supply-chain
+
+%% Getting Gcc dependencies (if there is no dependency config): gcc -MM

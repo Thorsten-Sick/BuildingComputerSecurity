@@ -1,0 +1,38 @@
+# JavaScript {#chapter-java-security}
+
+SAST: find-sec-bugs: https://find-sec-bugs.github.io/
+
+Dependency check: https://owasp.org/www-project-dependency-check/
+
+# Java decompiler
+
+https://java-decompiler.github.io/
+
+# Vulnerable Lab
+
+https://github.com/CSPF-Founder/JavaVulnerableLab
+
+https://owasp.org/www-project-juice-shop/
+doc: https://pwning.owasp-juice.shop/
+
+# Java Sandbox and policy
+
+Two external policy files define the sandbox:
+
+* $JREHOME/lib/security/java.policy is global for all Java VMs
+* ~/.java.policy is user specific
+
+They can be edited manually or managed by *policytool*
+
+There the specific restrictions for all Java packages are managed.
+
+%% Check: When starting from command line by default there is no sandbox. It must be started with *java -Djava.security.manager <args>*
+%% But it is possible to load a specificpolicy file there: *java -Djava.security.manager -Djava.security.policy=java.policyfile TheApp*
+
+The master control file for the sandbox is the security file:
+
+$JREHOME/lib/security/java.security
+
+%% https://developers.redhat.com/articles/2022/04/19/best-practices-java-single-core-containers#
+
+%% Java sec audit https://frycos.github.io/vulns4free/2022/05/24/security-code-audit-fails.html
