@@ -64,6 +64,8 @@
 
 **Dark Web**: Intentionally hidden parts of the web. Most common TOR pages
 
+**DAST**: Dynamic Application Security Testing. Testing by executing the program in a special test harness. Maybe compiler flags like ASan
+
 **Deep Packet Inspection**: A filter looks into the deeper layers of packets. Complex, and causes issues with encrypted data. Better don't do it.
 
 **Deep Web**: Parts of the web, that is not indexed by search engines (intranets, everything behind a login, ....)
@@ -182,6 +184,8 @@
 
 **SafeSEH**: A windows compiler feature to mitigate attacks abusing the Exception Handler. Attackers can modify the the exception table. The cause an exception. By that they then can control program flow. SafeSEH mitigates that.
 
+**SAST**: Static Application Security Testing. This can be compiler warnings or special tools
+
 **Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
 
 **Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
@@ -246,6 +250,7 @@
 
 **XSS, Reflected**: The attacker can add a script to a url parameter which is part of the rendered page. This script will then run in page context
 
+**XXE**: XML External Entity injection: The attacker uses modified XML sent to the server to access internal data like files
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
