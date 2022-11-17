@@ -1,16 +1,6 @@
 # DVA Damn Vulnerable Application
 
-https://github.com/rarecoil/awesome-dva
-
-https://dvwa.co.uk/
-
-https://github.com/RedTeamOperations/Vulnerable_Machine/blob/master/Escalate%20-%20A%20Windows%20Vulnerable%20Virtual%20Machine
-
-https://sourceforge.net/projects/owaspbwa/files/1.2/
-+
-https://code.google.com/archive/p/owaspbwa/wikis/UserGuide.wiki
-
-https://www.vulnhub.com/
+To test your tools and skills
 
 ## Metasploitable 2
 
@@ -27,3 +17,52 @@ Windows machine
 https://github.com/rapid7/metasploitable3
 
 AFAIK: Available on Vagrant
+
+# Web sites
+
+https://github.com/CSPF-Founder/JavaVulnerableLab
+
+## Damn Vulnerable Web application
+
+As docker:
+
+https://hub.docker.com/r/vulnerables/web-dvwa/
+
+docker run --rm -it -p 8888:80 vulnerables/web-dvwa
+
+(maintained here: https://github.com/opsxcq/docker-vulnerable-dvwa), a bit outdated
+
+or to install into a VM:
+
+https://github.com/digininja/DVWA (maintained)
+
+## OWASP Juice Shop
+
+https://owasp.org/www-project-juice-shop/
+
+The juice shop has a very good documentation: https://pwning.owasp-juice.shop/
+
+## Java Vulnerable Lab
+
+https://github.com/CSPF-Founder/JavaVulnerableLab
+
+
+
+# Unsorted
+
+https://github.com/rarecoil/awesome-dva
+
+https://github.com/RedTeamOperations/Vulnerable_Machine/blob/master/Escalate%20-%20A%20Windows%20Vulnerable%20Virtual%20Machine
+
+https://sourceforge.net/projects/owaspbwa/files/1.2/
+
+https://code.google.com/archive/p/owaspbwa/wikis/UserGuide.wiki
+
+https://www.vulnhub.com/
+
+
+## Vulnerable Docker container
+https://hub.docker.com/u/vulnerables
+
+%% Vulnerable App: https://owasp.org/www-project-webgoat/     git clone https://github.com/WebGoat/WebGoat
+%% Vulnerable App: https://owasp.org/www-project-node.js-goat/

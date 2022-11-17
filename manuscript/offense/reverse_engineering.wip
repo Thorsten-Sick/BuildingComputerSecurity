@@ -1,0 +1,21 @@
+# Reverse Engineering
+
+## Hex Editors
+
+%% https://github.com/WerWolv/ImHex
+
+## Trace explorer
+
+%% https://blog.ret2.io/2021/04/20/tenet-trace-explorer/
+
+## PDB
+
+%% Process PDB files https://github.com/ergrelet/resym
+
+## Header file parser
+
+https://github.com/BehroozAbbassi/sdkffi
+
+## Tutorial
+
+https://github.com/mytechnotalent/Reverse-Engineering

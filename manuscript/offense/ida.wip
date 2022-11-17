@@ -1,3 +1,7 @@
 # IDA
 
 %% TODO: IDA Python https://medium.com/malware-buddy/reverse-engineering-tips-ida-python-bd0ce64a48ed
+
+%% Vulnerability finding: https://www.accenture.com/us-en/blogs/security/finding-vulnerabilities-vulfi-ida-plugin
+
+%% https://blog.ret2.io/2020/09/11/lucid-hexrays-microcode-explorer/
