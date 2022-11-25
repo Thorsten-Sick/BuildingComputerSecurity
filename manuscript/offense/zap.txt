@@ -1,6 +1,6 @@
 # ZAP {#chapter-zap}
 
-[ZAP proxy](https://www.zaproxy.org/) is similar to Burp suite. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
+[ZAP proxy](https://www.zaproxy.org/) is similar to the Burp suite. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
 
 ## Basics
 
@@ -71,7 +71,7 @@ You can use ZAP as Proxy between Selenium and the target. Selenium is a complex 
 Selenium needs so called webdrivers to interact with the different browsers. There are several ways to install them, the python way is:
 
 {lang="bash"}
-    pip install webdriver-manager ## In addition to selenium ! This handles driver installation
+    pip install webdriver-manager
 
 Chrome / Chromium web driver seems to be more advanced at the moment, it can for example access the console log which Firefox can not (yet).
 
