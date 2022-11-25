@@ -1,0 +1,94 @@
+# ZAP {#chapter-zap}
+
+[ZAP proxy](https://www.zaproxy.org/) is similar to Burp suite. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
+
+## Basics
+
+The GUI offers basic features. As those are a lot it is still complex. To support you read the [documentation](https://www.zaproxy.org/docs/) which is good. Reading this chapter and parts of the documentation should already get you started.
+See this chapter as a teaser.
+
+## Docker installation
+
+Simplest way to install it is by using the [docker image](https://www.zaproxy.org/docs/docker/)
+
+## Experimenting
+
+To experiment with ZAP or Burp suite there is the vulnerable [Juice shop](https://owasp.org/www-project-juice-shop/) or the dockerized [web-dvwa](https://hub.docker.com/r/vulnerables/web-dvwa/).
+
+## Authentication
+
+Using Zap with sites you have to authenticate to turns out to be quite complicated. The *context * is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
+
+## Scan modes
+
+ZAP offers different scan modes:
+
+spider: Detect all resources and URLs on the target
+passive: Find issues by listening
+active: Find issues by actively interacting. This one is risky.
+
+## Scripting
+
+By installing an addon from the marketplace you can unlock python scripting. There are also "community scripts" you can use as example. That way you can start automate security testing with ZAP.
+
+It offers different kind of scripts:
+
+* Standalone scripts: Can be run manually
+* Targeted scripts: Will be added to a right click menu (history item, sites tree)
+* Proxy scripts: can modify request/response data, must be enabled to work
+* HTTP sender scripts: Proxy scripts that also run with Spider, fuzzer, ...
+* Passive scan scripts: Just look, don't touch
+* Active scan scripts: Touch and maybe break things
+
+## CLI
+
+ZAP also offers a command line interface
+
+{lang="bash"}
+    pip install --upgrade zapcli
+    $ zap-cli  spider       http://target.com
+
+More on the [CLI project page](https://github.com/Grunny/zap-cli)
+
+## Get ZAP results
+
+To get ZAP results in your automation use curl
+
+{lang="bash"}
+    curl   "http://localhost:8090/JSON/core/view/alerts"
+
+## ZAP as proxy
+
+For a more targeted approach you can use ZAP as a proxy for your own tools or manual inspection using a browser.
+Proxy your browser through ZAP, surf the page and get passive scan results in ZAP.
+
+## Selenium
+
+If you are serious using CI/CD to check your project, automate the browser using Selenium:
+
+You can use ZAP as Proxy between Selenium and the target. Selenium is a complex tool. But to get you started some basic information.
+
+Selenium needs so called webdrivers to interact with the different browsers. There are several ways to install them, the python way is:
+
+{lang="bash"}
+    pip install webdriver-manager ## In addition to selenium ! This handles driver installation
+
+Chrome / Chromium web driver seems to be more advanced at the moment, it can for example access the console log which Firefox can not (yet).
+
+Selenium by default only offers the browser perspective. Use [Selenium wire](https://pypi.org/project/selenium-wire/) to get requests/responses data.
+
+Much more Selenium documentation is available here:
+
+* https://www.selenium.dev/documentation/
+* https://www.selenium.dev/selenium/docs/api/py/index.html#
+
+## Python requests
+
+If you do not need a full featured web browser you can also use a proxy with python requests. Add BeautifulSoup and urllib and you can start scripting your interaction.
+This combination is enough for some brute forcing, web scraping and crawling and similar. Proxied through ZAP you will also get passive scan data on the page.
+
+%% Check if MITMPROXY can be used https://mitmproxy.org/#mitmweb
+
+%% zap-cli quick-scan -s xss,sqli --spider -r http://nodegoat.herokuapp.com/  # command line scan
+%% zap-cli alerts  # show alerts
+%% zap-cli report -o   ZAP_Report.html  -f html   # generate report

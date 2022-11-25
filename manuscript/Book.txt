@@ -63,6 +63,7 @@ offense/recon-ng.txt
 offense/google_dork.txt
 offense/beef.txt
 offense/burp.txt
+offense/zap.txt
 offense/mitmproxy.txt
 offense/nmap.txt
 appendix/part_appendix.txt

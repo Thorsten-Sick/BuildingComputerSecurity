@@ -96,6 +96,17 @@ changelog to make it simpler for you to find the new sections.
 %% todo
 
 
+%% Secret scanning. Link to credential scanners in "git hardening"
+%% Fuzzing
+
+
+## November 2022
+
+* Updating my Author-page
+* Update in [Vulnerabilities](#chapter-vulnerabilities)
+* Updated [Git hardening chapter](#chapter-git)
+* Adding [ZAP](#chapter-zap)
+
 ## July 2022
 
 * Small extensions to video.txt, testing_compiling.txt, presentations.txt
