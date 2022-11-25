@@ -4,16 +4,10 @@ I have to tell you my origin story. Because you should know where we are going
 if you join me by reading this book. I hope it is not boring as no radioactive
 spiders are involved....
 
-Trouble shooter and one-man-team somehow happened to be my role quite often.
-I am a software developer and engineer who also took the role of
-architect/project manager in many security related projects. Which gave me a
-good and wide perspective on things in the IT world.
+Trouble shooter and one-man-team somehow happened to be my role. This and team expert for security.
+I am a software developer and engineer who also took the role of architect/project manager in security related projects. Which gave me a good and wide perspective on things in the IT world.
 
-After studying Computer Science (Dipl. Ing FH at University Ravensburg
-Weingarten, a German title) I went to Avira. An Anti-Virus/Endpoint
-bolt-on-security company.
-I handled several projects in teams or connected to teams. More focused on the
-architect role or the developer role. Amongst the things I did is:
+After studying Computer Science (Dipl. Ing FH at University Ravensburg Weingarten, a German title) I went to Avira. An Anti-Virus/Endpoint bolt-on-security company. I handled core detection projects as part of teams. I was focused on the engineering/architect and developer roles. Amongst the things I did is:
 
 * An AI SPAM filter in C: String processing in C....
 * A full Anti-Virus engine. Cross-compilable. For WinCE, Linux, PalmOS and Symbian. C
@@ -25,14 +19,14 @@ architect role or the developer role. Amongst the things I did is:
     * Scan into these virtual machines without installing anything (Volatility)
     * Classify malware based on behaviour ([Cuckoo Sandbox](https://cuckoosandbox.org/))
 * Create the architecture of a security/privacy focused Chromium based browser
-* Went to the Embedded and IoT world
+* Went to the Embedded and IoT world at Feo, another company
+* Mvoing to Avast I wrote a simulation environment to experiment with advanced attacks named [PurpleDome](https://github.com/avast/PurpleDome)
+
 
 Right in the middle of doing all those things I started to sort my knowledge
 and experience. Resulting in this book.
 
-%% TODO: Add links to the achievements above
-
-These are the bricks of experience and knowledge this book is built out of.
+Currently I am Lead Security expert at Primion where I can use all my knowledge.
 
 You can reach me
 
@@ -45,10 +39,7 @@ You can reach me
 ## The origin story: External brain
 
 This book was already written once. As my external brain. Just for me.
-I collect my knowledge in "external brains". My own wikis or similar.
-My security knowledge external-brain just grew to a stage where I thought
-"well, you just wrote a book". And after finding *leanpub* which fits my
-style of tackling projects I decided I could transfer my external
-brain (written for me) into a book (written for tech people world wide).
+I collect my knowledge in "external brains" a private wiki.
+My security knowledge external-brain just grew to a stage where I thought "well, you just wrote a book". And after finding *leanpub* which fits my style of tackling projects I decided I can transfer my external brain (written for me) into a book (written for tech people world wide).
 
 And this is currently happening.
