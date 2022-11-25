@@ -1,14 +1,11 @@
 # Vulnerabilities {#chapter-vulnerabilities}
 
-C> By: Thorsten Sick
+Vulnerabilities have to be managed. And fixed. To get the terms right:
 
-C> For: Managers, Developers, Testers
-
-Vulnerabilities want to be managed. And fixed. To get the terms right:
-
-* **Bugs** are mistakes in **code**
-* **Flaws** are mistakes in the **design** of the software
+* **bugs** are mistakes in **code**
+* **flaws** are mistakes in the **design** of the software
 * **bugs** and **flaws** *can* be **vulnerabilities**
+* **weaknesses** are bugs or flaws that could be **vulnerabilities**
 * *some* vulnerabilities can be **exploited**
 * *some* **exploits** can be **weaponized** - made simple to use and reliable
 * **vulnerabilities** can also be patched.....
@@ -16,19 +13,19 @@ Vulnerabilities want to be managed. And fixed. To get the terms right:
 * **managing** vulnerabilities is the awareness of the current state of the system - as realistic as possible
 * **fixing** vulnerabilities (and rolling out the update) removes them
 
-It is a race between the attackers - wanting to get to the stage of *exploit* or *weaponized exploit* and the defenders - wanting the *patches rolled out* to all of their customers.
+This is a race between the attackers - wanting to get to the stage of *exploit* or *weaponized exploit* and the defenders - wanting the *patches rolled out* to all their customers.
 
 The tricky part is not to miss the start of the race. And be well organised to push towards the goal.
 
 For the defenders it starts as soon as they learn about the bug/flaw. For the attacker it also starts at that stage of finding a bug/flaw.
 
-A special case is when updates are rolled out slowly:
+A special case is when updates are rolled out slow:
 A patch is already developed and the attacker reverse-engineers it to find the bug.
-In that case:
+In that case there will be:
 * Less effort for the attacker
 * The race for the attacker gets shorter: From the patch stage to where the last customer applied the patch.
 
-There are vulnerabilities only known to the defenders. Or only known to the attackers. One party can already run the race while the other is waiting for the start.
+There are vulnerabilities only known to the defenders. Or only known to the attackers. One party can already run the race while the other is not aware there is a race happening.
 
 Knowledge management and starting early is essential here.
 
@@ -41,23 +38,24 @@ There are several pools where knowledge about vulnerabilities can be found:
 * Public knowledge [CVE](https://cve.mitre.org), [Rapid7](https://www.rapid7.com/db/vulnerabilities), [VulDB](https://vuldb.com) or [NVD](https://nvd.nist.gov/vuln/)
 * The darker markets for exploits [Zerodium](https://zerodium.com/program.html) - they are not interested in patching vulnerabilities
 
-You can use them in several ways:
+You can use them in different ways:
 
 * Monitor for vulnerabilities in your own products
-* Monitor for vulnerabilities in libraries and tools your product uses
+* Watch for vulnerabilities in libraries and tools your product uses
 * Learn from other projects mistakes and check if you have similar vulnerabilities
 
 ## Building bugs and flaws
 
-A system/program can get bugs and flaws from different sources:
+There are different ways a bug or flaw are introduced into your system:
 
-* As a managed system by the installed applications (written by third parties)
-* As a software project by third party libraries
+* in a managed system by the installed applications (written by third parties)
+* In a software project by third party libraries
     * Old library version used - the vulnerability is known
     * Current library version used - the vulnerability is unknown
-* As a software project by flaws/bugs introduced by your own team
+    * The library is malicious
+* In a software project by flaws/bugs introduced by your own team
 
-Keep close track on those sources
+Keep close track on those sources of vulnerabilities
 
 ## CVSS Score
 
@@ -70,9 +68,9 @@ For the harder cases you can do:
     * [CVSS-V3 calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 * Prioritize the bug into your backlog
 * Fix it
-* Roll out update
+* Roll out the update
 
-And constantly monitor if the vulnerability stays fixed or if you have a regression. Use automated tests here.
+And constantly check if the vulnerability stays fixed or if you have a regression. Use automated tests here.
 
 ## Security process
 
@@ -83,7 +81,7 @@ There are chapters in this book covering this - because it is the essence of sec
 
 ## Search engines for exploits and vulnerabilities
 
-Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both seem to have a strong focus and bias. I suggest you either use several or experiment with them to find the one matching your requirements.
+Basic sources for the newest exploits are either *search engines* or *mailing lists*. Both have a strong focus and bias. I suggest you either use several or experiment with them to find the one matching your requirements.
 
 Some exploit tools (Metasploit) are also a good source for exploits. Going for the paid version is smart if you want the newest exploits.
 
@@ -141,13 +139,13 @@ Those are:
 * Release
 * Maintenance
 
-Fixing bugs in the early phases is quite cheap. While fixing a Design bug (called "flaw") after Release can be horribly expensive - you have to process the change through all the phases in between Design and Release.
+Fixing bugs in the early phases is cheap. While fixing a design bug (called "flaw") after release can be horribly expensive - you have to process the change through all the phases between *design* and *release*.
 
-TL;DR: Fix bugs early. Verify your Design. Fix bugs fast.
+TL;DR: Fix bugs early. Verify your design. Fix bugs fast.
 
 
 %% https://github.com/github/advisory-database
 
 %% use after free: https://www.youtube.com/watch?v=PKqMsaKGdlM
 
-%% Scan for vulnerabilities in binaries (ghidra): https://github.com/KeenSecurityLab/BinAbsInspector
+%% Scan for vulnerabilities in binaries (Ghidra): https://github.com/KeenSecurityLab/BinAbsInspector
