@@ -1,1 +1,5 @@
 https://github.com/shehackspurple/TTT-Pushing-Left
+
+SAST scanning OASIS format: Static Analysis Results Interchange Format (SARIF) https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning
+
+data-flow analysis: Where does critical data end ?

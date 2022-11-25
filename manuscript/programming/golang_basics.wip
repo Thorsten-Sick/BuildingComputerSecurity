@@ -29,6 +29,12 @@ Golang plugins:
 The *go-plus* plugin
 https://atom.io/packages/ide-golang
 
+## VS Code
+
+https://code.visualstudio.com/docs/languages/go
+
+https://github.com/golang/vscode-go/wiki/features
+
 ## Installing
 
 ## Bootstrapping a project
@@ -60,10 +66,36 @@ Use "godoc"
 
 ## Tests
 
+Unit tests are a "batteries included" feature in Golang.
+The *testify* package extends that: https://github.com/stretchr/testify
+
 Unit tests are run with
 
 {lang="bash"}
     go test
+
+They are in *name_test.go* files parallel to the code files. Test functions names should start with "Test" and take the parameter "t *testing.T".
+
+
+%% https://golangdocs.com/golang-unit-testing
+%% https://medium.com/nerd-for-tech/writing-unit-tests-in-golang-part-1-introducing-testify-c0d458442412
+
+Mocking can be simplified by using *Mockery* to generate default mocks.
+
+{lang="bash"}
+    go get github.com/vektra/mockery/v2/.../
+    go run github.com/vektra/mockery/v2 --all
+
+%% https://medium.com/nerd-for-tech/writing-unit-tests-in-golang-part-2-mocking-d4fa1701a3ae
+
+
+%% https://medium.com/nerd-for-tech/writing-unit-tests-in-golang-part3-test-suite-6cca903be9ab
+
+%% Todo Coverage: go test -v -cover
+
+%% TODO IDE integration
+
+%% Todo performance
 
 ### Fuzzing
 
@@ -140,3 +172,7 @@ https://go.dev/
 
 %%  go install golang\.org/x/tools/cmd/godoc@latest godoc -http=:6060
 %% documentation is now hosted locally 
+
+%% Go has an own vulnerability database: https://go.dev/blog/vuln
+%% $ go install golang.org/x/vuln/cmd/govulncheck@latest
+%% $ govulncheck ./...

@@ -137,6 +137,12 @@ There are several levels of warnings in your compiler. If those are not enough, 
 
 %% TODO: https://airbus-seclab.github.io/c-compiler-security/
 
+%% TODO: -D_FORTIFY_SOURCE=2 (maybe 3 !)
+%% TODO: -fsanitize=bounds fsanitize-undefined-trap-on-error
+%% TODO: -fstrict-flex-arrays
+%% TODO: -Wstringop-truncation
+
+
 %% TODO: Clang warnings
 
 %% TODO: Visual Studio warnings

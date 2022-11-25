@@ -335,6 +335,8 @@ This will modify the file and pull the newest versions. Just run your automated 
 
 %% TODO: Python fuzzer https://github.com/google/atheris  (link to fuzzing)
 
+%% GuardDog: Identify malicious PyPi packages https://securitylabs.datadoghq.com/articles/guarddog-identify-malicious-pypi-packages/
+
 %% ------------ not relevant
 
 %% [Code quality for python](https://landscape.io)
