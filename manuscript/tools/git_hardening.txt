@@ -29,58 +29,18 @@ This has big benefits on:
 
 Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets"
 
-### Do not commit credentials and secrets
-
-Credentials carry permissions and privileges. Like "signing a file" and "access to a server". You do not want those in a Git repository. Even if it is a private one. Sooner or later you will invite other people to contribute. And then those credentials are either forgotten and there as-files or in the git history.
-
-To prevent committing credentials there are special scanners. They look for file names or patterns in the source code that look like a private ssh key or something similar.
-
-For example: [Repo security scanner](https://github.com/UKHomeOffice/repo-security-scanner) scans for
-
-* Different private keys
-* Different command histories
-* Configuration files
-* Password files
-* PCAPs and other dumps
-
-It is using:
-
-* Filename
-* Path
-* File extension
-
-to identify critical content.
-
-W> ## Warning
-W>
-W> It is currently not maintained.
-W> But the database is very good. Maybe you can use it together with some bash
-W> magic *find --name* and *fgrep* to write your own small checker.
-
-%% https://github.com/securing/DumpsterDiver
-%% https://github.com/zricethezav/gitleaks
 
 
-%% Active search for specific patterns:
-%% GIT miner : https://github.com/UnkL4b/GitMiner
 
-%% TODO: https://github.com/michenriksen/gitrob
-%% TODO: https://github.com/BishopFox/GitGot
 
-%% (Ruby and node packages)
-%% TODO: Dependency check: https://github.com/jgamblin/DepCheck-Action
+
 
 %% ## Security alerts
 %%https://blog.github.com/2018-07-12-security-vulnerability-alerts-for-python/
 %%https://github.com/srcclr/commit-watcher
 
 
-%% High entropy strings:
-%% Search for Tokens https://github.com/dxa4481/truffleHog
 
-%% https://github.com/awslabs/git-secrets
-
-%% TODO: https://github.com/deepfence/SecretScanner?utm_source=social_share
 
 %% TODO: GPG keys to GIT
 
