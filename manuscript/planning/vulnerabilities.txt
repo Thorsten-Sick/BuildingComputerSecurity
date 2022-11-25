@@ -97,6 +97,7 @@ Search engines to try are:
 * [Rapid 7 (Metasploit) vulnerabilities](https://www.rapid7.com/db/vulnerabilities)
 * [snyk.io](https://snyk.io)
 * [OSV Open Source Vulnerabilities](https://osv.dev/)
+* [Globalsecuritydatabase](https://globalsecuritydatabase.org/)
 
 A special case if you are more interested in web security is this sub-database for [Google hacking](https://www.exploit-db.com/google-hacking-database/)
 
@@ -109,6 +110,8 @@ A special case if you are more interested in web security is this sub-database f
 
 
 %% TODO:  [Privilege escalation by AV software](https://hackercombat.com/new-trend-antivirus-software-exploited-to-launch-privilege-escalation-attack/)
+
+%% https://github.com/Ignitetechnologies/Privilege-Escalation
 
 %% TODO: [Beebug](https://github.com/invictus1306/beebug)
 
@@ -141,3 +144,10 @@ Those are:
 Fixing bugs in the early phases is quite cheap. While fixing a Design bug (called "flaw") after Release can be horribly expensive - you have to process the change through all the phases in between Design and Release.
 
 TL;DR: Fix bugs early. Verify your Design. Fix bugs fast.
+
+
+%% https://github.com/github/advisory-database
+
+%% use after free: https://www.youtube.com/watch?v=PKqMsaKGdlM
+
+%% Scan for vulnerabilities in binaries (ghidra): https://github.com/KeenSecurityLab/BinAbsInspector
