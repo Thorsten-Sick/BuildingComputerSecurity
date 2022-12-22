@@ -1,5 +1,8 @@
 # REST API
 
+APIs need API gateways to protect against DOS attacks
+Microservices are by default reachable via APIs.
+
 ## Testing frameworks
 JMeter
 FuzzDB
