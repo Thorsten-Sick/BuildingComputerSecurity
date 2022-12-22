@@ -64,3 +64,5 @@ and redirect the report to UART. I would define that as a bonus goal after the u
 
 
 %% TODO: Review Semgrep https://security.humanativaspa.it/semgrep-ruleset-for-c-c-vulnerability-research/
+
+%% List of SAST tools https://owasp.org/www-community/Source_Code_Analysis_Tools

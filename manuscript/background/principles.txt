@@ -63,6 +63,12 @@ There will be a specific chapter on threat modelling
 
 %% TODO: Add EFF tutorial https://sec.eff.org/topics/threat-modeling
 
+%% Attack Tree https://en.wikipedia.org/wiki/Attack_tree
+
+%% STRIDE https://en.wikipedia.org/wiki/STRIDE_%28security%29
+
+%% PASTA by OWASP (pdf) http://www.owasp.org/images/a/aa/AppSecEU2012_PASTA.pdf
+
 ## Reduce Attack Surface
 
 Attack surface is everything that can be reached from the outside.

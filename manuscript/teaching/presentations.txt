@@ -1,4 +1,4 @@
-# Presentations
+# Presentations {#chapter-presentations}
 
 ## Presentation frameworks
 
@@ -18,7 +18,33 @@ https://potato-presenter.de/
 %% Python backend to create data visualisation web pages:
 %% https://www.streamlit.io/
 
+{lang="bash"}
+    pip install sphinx-revealjs
 
+Quickstart documentation:
+
+{lang="bash"}
+    sphinx-quickstart
+
+Add to conf file:
+
+{lang="conf"}
+    extensions = ['sphinx_revealjs']
+
+    revealjs_static_path = ["_static"]
+    revealjs_script_conf = {"controls": True,
+						"progress": True,
+						"history": True,
+						"center": True,
+						"transition": "slide",
+						"slideNumber": False}
+
+Build
+
+{lang="bash"}
+    make revealjs
+
+For more Sphinx features see [Documentation](#chapter-documentation)
 
 ## Fonts
 
