@@ -19,3 +19,8 @@ https://github.com/BehroozAbbassi/sdkffi
 ## Tutorial
 
 https://github.com/mytechnotalent/Reverse-Engineering
+
+## Binary files reverse engineering
+
+Decoder for binary data, like jq for files
+https://github.com/wader/fq

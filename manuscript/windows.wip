@@ -14,6 +14,8 @@ A typical Windows design flaw. Linux has LD_LIBRARY_PATH to override /etc/ld.so.
 %% - Check if path can be written to by user
 
 
+%% https://github.com/redteamsocietegenerale/DLLirant
+
 ## Registry
 
 Stored in *Windows\system32\config* folder:

@@ -337,3 +337,5 @@ https://linux-audit.com/vulnerability-scanning-the-destiny-to-disappointment/
 %% Syzkaller in web : https://storage.googleapis.com/syzkaller/cover/ci-qemu-upstream.html
 
 %% Kernel config hardening check https://github.com/a13xp0p0v/kconfig-hardened-check
+
+%% Exploitation https://0x434b.dev/dabbling-with-linux-kernel-exploitation-ctf-challenges-to-learn-the-ropes/

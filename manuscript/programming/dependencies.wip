@@ -4,9 +4,25 @@ All the recursive dependencies in a project are called the "Software Bill of Mat
 
 AKA "Software supply chain"
 
+And there are plenty of problems introduced into your project by the supply chain
+
+## Problems
+
+### Vulnerable versions
+
+Software will contain vulnerabilities. As soon as those are discovered the race between the bad and the good guys starts. While the bad guys try to write an exploit and use it, the good guys fix the issue and roll out patched versions.
+
+Being fast is essential here.
+
+### Malicious versions
+
+The original author could intentionally ship a malicious library. Or the repo was hijacked (called repo jacking). You can protect yourself against that by waiting some time until you use a specific version and hop the few months you waited were enough to uncover the malicious code.
+
 %% SCA: Software composition Analyse tools => they create dependency graphs
 
-## SPDX
+## Protocols
+
+### SPDX
 
 SPDX is an ISO standard for data exchange. It contains package information (source, license)
 
@@ -14,13 +30,15 @@ It can also contain security references. Those are IDS that can then be referenc
 
 https://spdx.dev/
 
-## CycloneDX 
+### CycloneDX 
 
 This BOM data format is created by OWASP. It supports vulnerability data for the packages. There are different flavours available (json, xml).
 
 https://cyclonedx.org/
 
-## SLSA
+## Concepts
+
+### SLSA
 
 SLSA is a guideline for secure builds. It is an open source project run by several big companies to attest quality levels to the components in the supply chain.
 
@@ -29,12 +47,16 @@ https://slsa.dev/
 Code produced by a SLSA build chain will contain a signed certificate. This can be checked using the slsa-verifier https://github.com/slsa-framework/slsa-github-generator
 Int his repo there are also build tool that create this certificate.
 
-## Scorecard
+### Scorecard
 
 Scorecard is a tool that guides you through secure software development (especially the build process). You can find the tool here:
 https://github.com/ossf/scorecard
 In addition this project also scans OpenSource projects and has a database with the security scores of 1 million of the most critical ones.
 This can be relevant for a more detailed insight into your dependencies.
+
+### Pinning
+
+Some languages like Golang already support dependency pinning. A file with the hashes of all used dependencies is generated and must be checked in witht he code. After that it verifies on every build that the hashes match. That way a hijacked repository can not push a manipulated dependency into your build process.
 
 ## Tools
 
@@ -102,7 +124,26 @@ It will generate a own json format and is a bit simpler.
 Plenty of programming languages are supported. And the source can be extended.
 
 
-%% I was not impressed by the Microsoft tool and would currently go for Grype
+## Package research
+
+When fixing dependencies you want to research which packages have been released and when. Which license they have and which dependencies on their own.
+
+A good page to do that is [libraries.io()]https://libraries.io/). It also has an API to automate some of your tasks.
+A python module for that is [pybraries](https://pypi.org/project/pybraries/), Golang is supported by [go-librariesio](https://github.com/hackebrot/go-librariesio).
+
+## Tactics
+
+Depending on your security requirements you can update all your dependencies at once (and test if you broke anything) or at least focus on CRITICAL vulnerabilities.
+To cover for malicious packages you can also have a minimum age for the package version you are using and hope someone would have found that backdoor by now.
+
+Combined that would result in a tactic like:
+
+* Instantly update all packages with a CRITICAL vulnerability
+* Packages with lower vulnerabilities get updated to a version that:
+    * Is at least 6 months old
+    * has a lower vulnerability score than the current version
+
+
 
 %% ### UNISBOM
 %% Software BOM on any OS:
@@ -145,3 +186,5 @@ Plenty of programming languages are supported. And the source can be extended.
 %% https://media.ccc.de/v/mch2022-230-how-to-secure-the-software-supply-chain
 
 %% Getting Gcc dependencies (if there is no dependency config): gcc -MM
+
+%% List of dependency checkers: https://owasp.org/www-community/Component_Analysis

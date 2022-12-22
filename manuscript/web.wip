@@ -30,6 +30,7 @@ https://portswigger.net/blog/practical-web-cache-poisoning
 ## CSP
 
 Cross site scripting protection. A security header is set in the http reply restricting external resources allowed to be loaded.
+This is one of the core mitigation tool for Web based software.
 
 %% https://uselesscsp.com/
 

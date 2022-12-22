@@ -1,0 +1,18 @@
+# Documentation {#chapter-documentation}
+
+As documentation is boring but esential we need tools to support it. Documentation helps communicating in the team and to your future self. It reduces mental load. And can help manage complex tasks.
+
+Documentation can come as a separate PDF file or as embedded hint in the IDE. Both are relevant. Do not under estimate them.
+
+## Sphinx
+
+Sphinx is a documentation generator that is fed with RST files and commented code files. It is especially used in the python world.
+
+Most important is to keep your documentation up to date. To do that without exttra effort you need tools to parse the source code and extract the data automatically.
+
+* sphinx-argparse Comment your argparse commands
+* sphinxcontrib-autoyaml Can comment yaml configuration files
+* sphinxcontrib.asciinema Can embed animated CLI videos
+* sphinx-revealjs Can generate [presentations](#chapter-presentations) as output
+
+More extensions can be found on the [official page](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
