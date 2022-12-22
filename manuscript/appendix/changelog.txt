@@ -96,9 +96,13 @@ changelog to make it simpler for you to find the new sections.
 %% todo
 
 
-%% Secret scanning. Link to credential scanners in "git hardening"
 %% Fuzzing
 
+## December 2022
+
+* Added [Secret Scanning](#chapter-secret-scanning)
+* Improved [ZAP](#chapter-zap)
+* Improved [Git hardening](#chapter-git)
 
 ## November 2022
 

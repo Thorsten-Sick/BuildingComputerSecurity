@@ -11,13 +11,26 @@ See this chapter as a teaser.
 
 Simplest way to install it is by using the [docker image](https://www.zaproxy.org/docs/docker/)
 
+For Ubuntu there is a simple to use snap package:
+
+{lang="bash"}
+    sudo snap install zaproxy --classic
+
+If you want to directly install the package you will need Java
+
+{lang="bash"}
+    sudo apt install default-jre
+
+Unzip the archive and start it with *./zap.sh*.
+Using the archive package simplifies the proxy part, because ZAP will not be sandboxed and can start the browser directly.
+
 ## Experimenting
 
 To experiment with ZAP or Burp suite there is the vulnerable [Juice shop](https://owasp.org/www-project-juice-shop/) or the dockerized [web-dvwa](https://hub.docker.com/r/vulnerables/web-dvwa/).
 
 ## Authentication
 
-Using Zap with sites you have to authenticate to turns out to be quite complicated. The *context * is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
+Using Zap with sites you have to authenticate to turns out to be complicated. The *context * is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
 
 ## Scan modes
 
@@ -26,6 +39,21 @@ ZAP offers different scan modes:
 spider: Detect all resources and URLs on the target
 passive: Find issues by listening
 active: Find issues by actively interacting. This one is risky.
+
+## As a proxy
+
+https://www.zaproxy.org/docs/desktop/start/proxies/
+
+ZAP starts a proxy at localhost:8080 by default.
+
+You can also start a browser through the page "Manual Explore" directly in ZAP. Thanks to the SNAP sandbox this can turn out to be tricky if you installed ZAP via SNAP.
+
+Starting chromium with a proxy:
+
+{lang="bash"}
+    chromium --proxy-server=localhost:8080 --ignore-certificate-errors
+
+* You can also add your local ZAP certificate instead of setting *ignore-certificate-errors*
 
 ## Scripting
 

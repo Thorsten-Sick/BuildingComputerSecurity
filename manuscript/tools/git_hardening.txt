@@ -1,37 +1,33 @@
 # GIT hardening {#chapter-git}
 
-The GIT ecosystem grew and GIT is one of the most used VCS nowadays. GIT itself does offer some features you can use to increase the security of the build process. In addition to that code hosters (like Github and Gitlab) offer additional CI/CD features to simplify the development process and - at the same time - improve code quality and security.
+The GIT ecosystem grew and GIT is one of the most used VCS nowadays. GIT itself does offer some features you can use to increase the security of the build process. Internet hosting services for code (like Github and Gitlab) offer additional CI/CD features to simplify the development process and - at the same time - improve code quality and security.
 
 ## Pure Git
 
-Git allows to write *hooks* on certain events. Hooks are simple scripts in a special folder that are executed when this event occurs. These can be *pre-commit*, *post-checkout* or similar. In addition to the differentiation by event that triggers it there are two style of hooks:
+Git allows to write *hooks* on certain events. Hooks are simple scripts in a special folder that execute when this event occurs. These can be *pre-commit*, *post-checkout* or similar. There are two style of hooks:
 
 **Local hooks** are client side and the developer maintains them to simplify their workflow.
 
-**Server-side hooks** are run on the server. They can be run right before the push happens - and this way **enforce** a policy.
+**Server-side hooks** run on the server - right before the push happens - and this way **enforce** a policy.
 
-When setting up a team process it is smart to search the web for "git-hooks" and use it wisely to improve everyone's workflow (local hooks) and centrally enforce policy (server-side hooks).
+When setting up a team process it is smart to search the web for "git-hooks" and use it to improve everyone's workflow (local hooks) and centrally enforce policy (server-side hooks).
 
-This way especially security relevant things can be cared for ("does it compile without warnings ?" would be the simplest one).
+This way security relevant things can be cared for ("does it compile without warnings ?" would be the simplest one).
 
-Other ideas would be:
+Other things to enforce:
 
 * Coding style
 * Good (long) commit messages with links to issues
-* Code changes only if unit tests are added as well
+* Added unit tests covering the new code
 
 This has big benefits on:
 
 * code quality
 * enforces best practice even in dire situations
     * gives the developers an explanation towards management ("This will take one more hour, gotta do this right or it will not be checked in")
-* lift team spirit, because **THE MACHINE** enforces the coding style, not this developer who is a grumpy guy and does not allow anything creative
+* lift team spirit, because **THE MACHINE** enforces the coding style, not this other developer who is a grumpy guy and prevents anything creative
 
-Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets"
-
-
-
-
+Other problems this will prevent are VCS specific issues like "Do no commit credentials and secrets" by using credential scanners.
 
 
 
@@ -58,17 +54,17 @@ Other problems this will prevent are VCS specific issues like "Do no commit cred
 
 ### Github
 
-Github offers so called *actions* to create your own workflow for your project. Those actions can contain any tool that you read about in this book so far. For example: Static Code analysis. On certain stages in your coding workflow you can trigger those actions. Good stages can be:
+Github offers so called *actions* to create your own workflow for your project. Those actions can contain almost any tool that you read about in this book so far. For example: Static Code analysis. On certain stages in your coding workflow you can trigger those actions. Good stages can be:
 
-* When someone starts a Pull Request
+* When someone starts a Pull Request (PR)
 * When code gets merged into your master branch
 * Before debug/release build
 
 That way you can enforce a minimum code quality. Or run the unit tests before anyone has to review the code of the PR manually.
 
-The configuration is managed in several *yaml* files you can create in the folder *.github/workflow*
+The configuration is stored in *yaml* files in the folder *.github/workflow*
 
-Especially interesting for Pull Requests (PR) will be to **test only the changed files**. The trick to extract these look like:
+Interesting for Pull Requests (PR) will be to **test only the changed files**. The trick to extract these look like:
 
 {lang="bash"}
     - name: List changed files, check for string "do not release" as a test
@@ -81,4 +77,4 @@ Especially interesting for Pull Requests (PR) will be to **test only the changed
 ## Getting it done
 
 Sit down with your team, find a workflow to extend code quality, improve security and reduce manual work for Pull Requests.
-Later on extend that to other stations of the life cycle of your projects. Like checking the main branch of your VCS on a daily basis. Or check before moving the code to production.
+Later extend that to other stations of the life cycle of your projects. Like checking the main branch of your VCS on a daily basis. Or check before moving the code to production.
