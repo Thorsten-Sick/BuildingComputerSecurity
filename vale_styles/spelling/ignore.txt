@@ -118,3 +118,5 @@ pcaps
 allowlist
 Sarif
 Golang's
+sudo
+zaproxy

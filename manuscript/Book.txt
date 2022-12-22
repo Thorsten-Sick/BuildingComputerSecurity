@@ -41,6 +41,7 @@ testing/cppcheck.txt
 testing/testing.txt
 testing/coverage.txt
 testing/fuzzing.txt
+testing/secret_scanning.txt
 tools/part_tools.txt
 tools/intro.txt
 tools/ssh.txt

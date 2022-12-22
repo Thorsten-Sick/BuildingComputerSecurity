@@ -1,17 +1,17 @@
 # ZAP {#chapter-zap}
 
-[ZAP proxy](https://www.zaproxy.org/) is similar to the Burp suite. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
+[ZAP proxy](https://www.zaproxy.org/) is similar to the Burp suite. With this tool you can test your web site or your web API for vulnerabilities. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
 
 ## Basics
 
-The GUI offers basic features. As those are a lot it is still complex. To support you read the [documentation](https://www.zaproxy.org/docs/) which is good. Reading this chapter and parts of the documentation should already get you started.
+The GUI offers basic features. As those are a lot it is still complex. To support you read the [documentation](https://www.zaproxy.org/docs/) which has a good quality and should cover your questions. Reading this chapter and parts of the documentation should be enough to get you started.
 See this chapter as a teaser.
 
 ## Docker installation
 
 Simplest way to install it is by using the [docker image](https://www.zaproxy.org/docs/docker/)
 
-For Ubuntu there is a simple to use snap package:
+For Ubuntu it is simpler to just use snap package:
 
 {lang="bash"}
     sudo snap install zaproxy --classic
@@ -21,7 +21,9 @@ If you want to directly install the package you will need Java
 {lang="bash"}
     sudo apt install default-jre
 
-Unzip the archive and start it with *./zap.sh*.
+The direct way of installation is to download the [archive](https://www.zaproxy.org/download/)
+
+Unzip the archive and start ZAP with *./zap.sh* on Linux.
 Using the archive package simplifies the proxy part, because ZAP will not be sandboxed and can start the browser directly.
 
 ## Experimenting
@@ -30,15 +32,15 @@ To experiment with ZAP or Burp suite there is the vulnerable [Juice shop](https:
 
 ## Authentication
 
-Using Zap with sites you have to authenticate to turns out to be complicated. The *context * is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
+Using Zap with sites you have to authenticate to turns out to be complicated. The *context* is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
 
 ## Scan modes
 
 ZAP offers different scan modes:
 
-spider: Detect all resources and URLs on the target
-passive: Find issues by listening
-active: Find issues by actively interacting. This one is risky.
+* spider: Detect all resources and URLs on the target
+* passive: Find issues by listening
+* active: Find issues by actively interacting. This one is risky.
 
 ## As a proxy
 
@@ -53,7 +55,7 @@ Starting chromium with a proxy:
 {lang="bash"}
     chromium --proxy-server=localhost:8080 --ignore-certificate-errors
 
-* You can also add your local ZAP certificate instead of setting *ignore-certificate-errors*
+You can also add your local ZAP certificate instead of setting *ignore-certificate-errors* at the browser command line.
 
 ## Scripting
 
@@ -74,7 +76,7 @@ ZAP also offers a command line interface
 
 {lang="bash"}
     pip install --upgrade zapcli
-    $ zap-cli  spider       http://target.com
+    zap-cli spider http://target.com
 
 More on the [CLI project page](https://github.com/Grunny/zap-cli)
 
@@ -108,7 +110,7 @@ Selenium by default only offers the browser perspective. Use [Selenium wire](htt
 Much more Selenium documentation is available here:
 
 * https://www.selenium.dev/documentation/
-* https://www.selenium.dev/selenium/docs/api/py/index.html#
+* https://www.selenium.dev/selenium/docs/api/py/index.html
 
 ## Python requests
 
