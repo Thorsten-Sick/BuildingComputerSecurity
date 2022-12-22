@@ -186,6 +186,10 @@
 
 **SAST**: Static Application Security Testing. This can be compiler warnings or special tools
 
+**SBOM** Software Bill of Materials
+
+**SCA**: Software Component Analysis
+
 **Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
 
 **Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
