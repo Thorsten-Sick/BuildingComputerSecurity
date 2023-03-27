@@ -16,8 +16,37 @@ https://github.com/BBVA/apicheck
 
 https://github.com/shieldfy/API-Security-Checklist
 
+% * access control (Authentication, Authorization)
+% * Logs, 
+% * Permissions, 
+% * Load limiters (after failed login attempts), 
+% * no predictable IDs, 
+% * if unknown Id is used: Block, 
+% * Firewall, 
+% * Load balancer, 
+% * reverse proxy um https zu terminieren, 
+% * WAF
+% * Input verification
+% * DOS/DDOS protection => Rate limit per user
+% * Protect the hardware !
+
+%* Always check incoming content type
+%* Always verify input data (Regex)
+%* On response: Set content type and encoding
+%* Encode data with proper (JSON) library. No DIY
+%* Exceptions should not echo back user data
+%* If sending back data: Sanitize it using a library
+%* SQL needs prepared statements
+%* Reduce database user permissions
+
 ## Vulnerable API
 
 https://github.com/rahulunair/vulnerable-api
 
 ? http://zero.webappsecurity.com/index.html ?
+
+## OWASP API security
+
+https://owasp.org/www-project-api-security/
+
+%% Train API hacking in this hackable online API: https://reqres.in/
