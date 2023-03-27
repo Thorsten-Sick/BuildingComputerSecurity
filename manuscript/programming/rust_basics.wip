@@ -137,3 +137,5 @@ Platform matrix: https://doc.rust-lang.org/nightly/rustc/platform-support.html
 %% https://github.com/viperproject/prusti-dev
 
 %% RUST based OS, training: https://os.phil-opp.com/
+
+%% RUST guarantees memory safety. (use after free, double free, memory leaks). It does not use Garbage collection

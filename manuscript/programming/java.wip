@@ -1,4 +1,4 @@
-# JavaScript {#chapter-java-security}
+# Java {#chapter-java-security}
 
 SAST: find-sec-bugs: https://find-sec-bugs.github.io/
 
@@ -36,3 +36,5 @@ $JREHOME/lib/security/java.security
 %% https://developers.redhat.com/articles/2022/04/19/best-practices-java-single-core-containers#
 
 %% Java sec audit https://frycos.github.io/vulns4free/2022/05/24/security-code-audit-fails.html
+
+%% https://spotbugs.github.io/

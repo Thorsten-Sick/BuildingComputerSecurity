@@ -176,3 +176,12 @@ https://go.dev/
 %% Go has an own vulnerability database: https://go.dev/blog/vuln
 %% $ go install golang.org/x/vuln/cmd/govulncheck@latest
 %% $ govulncheck ./...
+
+%% Tool "deptree" shows dependency graph of "go mod"
+
+%% Magic 3 build steps in go:
+%% go mod init project
+%% go mod tidy
+%% go build a.go b.go c.go
+
+%% Go uses garbage collection: https://tip.golang.org/doc/gc-guide
