@@ -132,3 +132,5 @@ On the pro side are:
 ### Test Driven Development for Embedded C by James W. Grenning
 
 The book [Test Driven Development for Embedded C](https://learning.oreilly.com/library/view/test-driven-development/9781941222997/) guides you through the task of unit-testing your embedded applications. Most of the tips can be used for any kind of C project. But the additional benefit of this book is to also cover the more complex embedded environment.
+
+%% Security testing guide https://owasp.org/www-project-web-security-testing-guide/
