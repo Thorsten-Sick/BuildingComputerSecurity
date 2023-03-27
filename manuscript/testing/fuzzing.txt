@@ -306,3 +306,7 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 %% Other vulnerability classes than memory corruption (SQLI, XSRF): https://security.googleblog.com/2022/09/fuzzing-beyond-memory-corruption.html
 
 %% They want to make fuzzing simple: https://github.com/CodeIntelligenceTesting/cifuzz
+
+%% https://github.com/fuzzdb-project/fuzzdb
+
+%% Security lists, including fuzzing seeds https://github.com/danielmiessler/SecLists
