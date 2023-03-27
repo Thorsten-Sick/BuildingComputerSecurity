@@ -36,6 +36,8 @@ This is one of the core mitigation tool for Web based software.
 
 %% https://www.cspisawesome.com/
 
+%% https://csp-evaluator.withgoogle.com/
+
 https://addons.mozilla.org/en-US/firefox/addon/laboratory-by-mozilla/
 
 ## X-Content-Type header
@@ -231,3 +233,8 @@ https://github.com/s0md3v/Arjun
 %% TODO vulnerability scanner Nuclei https://github.com/projectdiscovery/nuclei
 
 %% https://www.blackhatethicalhacking.com/tools/arjun/
+
+%% Analyse http header: https://github.com/rfc-st/humble
+
+%% Web application and API fuzzing: https://github.com/xmendez/wfuzz
+%% Another is Arjun: https://github.com/s0md3v/Arjun.git
