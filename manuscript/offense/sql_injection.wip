@@ -89,6 +89,10 @@ nmap does support mysql by scripts.
 * mysql-brute: brute forces access to the mysql db
 * mysql-empty-password: Check for user accounts with empty passwords
 
+## SQLmap
+
+SQL injection tool https://sqlmap.org/
+
 
 ## Further reading
 

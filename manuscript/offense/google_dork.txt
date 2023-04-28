@@ -55,3 +55,5 @@ A good defense is to keep your frameworks, web apps and plugins up to date. Mayb
 %% # Git DORK
 
 %% https://github.com/obheda12/GitDorker
+
+%% Google hacking database: https://www.exploit-db.com/google-hacking-database

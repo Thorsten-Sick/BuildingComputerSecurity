@@ -66,12 +66,18 @@ Execute with
 {lang="bash"}
     cargo run
 
-Just build with
+Default compilation is with debug symbols. To get a release build, use_
+
+{lang="bash"}
+    cargo run --release
+
+
+To just build it call
 
 {lang="bash"}
     cargo build
 
-The default build is always a debug build.
+The default build is always a debug build. You will also have to set *--release* for a release build.
 
 ## Error checks
 

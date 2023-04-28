@@ -238,3 +238,20 @@ https://github.com/s0md3v/Arjun
 
 %% Web application and API fuzzing: https://github.com/xmendez/wfuzz
 %% Another is Arjun: https://github.com/s0md3v/Arjun.git
+
+%% Web Authentication: "HTTP Digest authentication" sends a salted hash to the server. But the Hash is MD5....avoid !
+%% Web Authentication "HTTP Basic authentication" send username + password in header. Encrypt channel ! It iwll be sent with every single request... Could be better
+%% Web Authentication "HTTP Bearer" introduced by OAuth2. Use that if possible (https://tools.ietf.org/html/rfc6750)
+%% Token based authentication: After login, server generates a random cookie. Verifies this with the DB when needed. You can also use HTML5 local storage
+%% Make sure cookies expire after some time, are https only, not accesible through javascript. Not setting cookies with expire/max age makes them session cookies expiring when tab is closed. Also do some time out server side.
+
+%% When storing API AUTHENTICATION tokes on a database: hash them ! Like passwords
+%% Store those tokens on separate DB server (not API server)
+%% The API server should use a secret to HMAC sign the token before sending it to the client. DB only has the vanilla token without HMAC signature
+
+%% XSS:
+%% https://github.com/payloadbox/xss-payload-list
+%% https://netsec.expert/posts/xss-in-2020/index.html
+
+%% WAF
+%% WAF and WAF bypass https://github.com/0xInfection/Awesome-WAF

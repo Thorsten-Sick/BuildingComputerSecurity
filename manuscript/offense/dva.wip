@@ -60,6 +60,14 @@ https://code.google.com/archive/p/owaspbwa/wikis/UserGuide.wiki
 
 https://www.vulnhub.com/
 
+API: https://github.com/OWASP/crAPI
+
+Web app: https://github.com/DevSlop/Pixi
+
+GraphQL API: https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application (GraphQL)
+
+API: http://reqres.in (Online)
+
 
 ## Vulnerable Docker container
 https://hub.docker.com/u/vulnerables

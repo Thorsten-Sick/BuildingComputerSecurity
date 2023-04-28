@@ -30,7 +30,7 @@ It can also contain security references. Those are IDS that can then be referenc
 
 https://spdx.dev/
 
-### CycloneDX 
+### CycloneDX
 
 This BOM data format is created by OWASP. It supports vulnerability data for the packages. There are different flavours available (json, xml).
 
@@ -126,10 +126,18 @@ Plenty of programming languages are supported. And the source can be extended.
 
 ## Package research
 
+### Libraries.io
+
 When fixing dependencies you want to research which packages have been released and when. Which license they have and which dependencies on their own.
 
-A good page to do that is [libraries.io()]https://libraries.io/). It also has an API to automate some of your tasks.
+A good page to do that is [libraries.io](https://libraries.io/). It also has an API to automate some of your tasks.
 A python module for that is [pybraries](https://pypi.org/project/pybraries/), Golang is supported by [go-librariesio](https://github.com/hackebrot/go-librariesio).
+
+### Deps.dev
+
+[Deps.dev](https://deps.dev/) can list sub dependencies and that way build a graph. It also supports identifying vulnerabilities in specific versions.
+
+For more read the [documentation](https://docs.deps.dev/api/v3alpha/index.html)
 
 ## Tactics
 
@@ -176,7 +184,7 @@ Combined that would result in a tactic like:
 %% https://github.com/firefart/hijagger
 
 %% Code analysis for vulnerabilities
-%% https://semgrep.dev/ 
+%% https://semgrep.dev/
 %% https://security.humanativaspa.it/automating-binary-vulnerability-discovery-with-ghidra-and-semgrep/
 
 %% https://github.com/firefart/hijagger
@@ -188,3 +196,6 @@ Combined that would result in a tactic like:
 %% Getting Gcc dependencies (if there is no dependency config): gcc -MM
 
 %% List of dependency checkers: https://owasp.org/www-community/Component_Analysis
+
+
+%% guac https://thehackernews.com/2022/10/google-launches-guac-open-source.html

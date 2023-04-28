@@ -307,6 +307,10 @@ Page 50 called "Fuzzing Essentials" of [PagedOut 2](https://pagedout.institute/d
 
 %% They want to make fuzzing simple: https://github.com/CodeIntelligenceTesting/cifuzz
 
-%% https://github.com/fuzzdb-project/fuzzdb
+%% Fuzzing payloads: https://github.com/fuzzdb-project/fuzzdb
 
-%% Security lists, including fuzzing seeds https://github.com/danielmiessler/SecLists
+%% Security lists, including fuzzing seeds/ Fuzzing payloads: https://github.com/danielmiessler/SecLists
+
+%% command line fuzzing: https://github.com/ariary/cfuzz
+
+%% web application fuzzing (also has fuzzing payloads): https://github.com/xmendez/wfuzz    and https://wfuzz.readthedocs.io/en/latest/

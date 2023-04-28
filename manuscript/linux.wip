@@ -320,6 +320,9 @@ https://linux-audit.com/docker-security-best-practices-for-your-vessel-and-conta
 
 https://linux-audit.com/docker-security-how-containers-not-help-you/
 
+
+%% Linux container hardening book (free): https://research.nccgroup.com/2016/06/29/ncc-group-whitepaperunderstanding-and-hardeninglinux-containersjune-29-2016-version-1-1/
+
 ## vulnerability scanning
 
 https://linux-audit.com/vulnerability-scanning-the-destiny-to-disappointment/

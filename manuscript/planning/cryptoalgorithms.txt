@@ -246,3 +246,5 @@ A source for a more specific evaluation of your required [key length is here](ht
 %% TODO: Add and research Cryptool 2 training tool for encryption training
 
 %% https://github.com/cr-marcstevens/hashclash/tree/collisiondetection/src/collisiondetection
+
+%% Noise Protocol Framework: Framework to create Crypto protocols https://noiseprotocol.org/

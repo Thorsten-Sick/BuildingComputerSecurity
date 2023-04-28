@@ -175,3 +175,12 @@ over several versions.
 
 %% Certificates
 %% [Stolen Certificates](https://thehackernews.com/2018/07/digital-certificate-malware.html)
+
+%% Releases: https://media.ccc.de/v/glt23-341-better-code-through-better-releases
+%% * Do daily releases (not yearly. You still know what has been done. Smaller steps, features are launched when ready, security fixes re faster)
+%% * Dark launch of features (features are there. Code path is de-activated by config "feature toggles")
+%% * Daily binary releases can be beta releases. When they are ready and features are added: remove beta
+%% * Google style: Feature only for a small percentage of users
+%% * Backwards compatibility
+%% * Graceful degradation (instead of breaking)
+%% * Rollback

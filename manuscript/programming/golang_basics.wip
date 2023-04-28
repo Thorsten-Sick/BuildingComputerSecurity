@@ -128,6 +128,11 @@ https://www.digitalocean.com/community/tutorials/importing-packages-in-go
 {lang="bash"}
     GOOS=darwin GOARCH=386 go build test.go
 
+To list available targets, call
+
+{lang="bash"}
+    go tool dist list
+
 Available GOOS values are:
 
 * darwin
@@ -140,6 +145,25 @@ Available GOARCH values are:
 * arm
 * amd64
 * wasm
+
+During execution, you can check the architecture using the runtime package
+
+{lang="go"}
+    import "runtime"
+    import "fmt"
+
+    // ...
+    fmt.Printf("%s %s", runtime.GOOS, runtime.GOARCH)
+
+For more complex compilations, there is a *golang* container on docker you can use to isolate cross compilation runs from the system.
+
+Or GOX: https://github.com/mitchellh/gox
+
+## Release management
+
+https://goreleaser.com
+
+
 
 see:
 
@@ -171,11 +195,12 @@ https://go.dev/
 
 
 %%  go install golang\.org/x/tools/cmd/godoc@latest godoc -http=:6060
-%% documentation is now hosted locally 
+%% documentation is now hosted locally
 
 %% Go has an own vulnerability database: https://go.dev/blog/vuln
 %% $ go install golang.org/x/vuln/cmd/govulncheck@latest
 %% $ govulncheck ./...
+%% https://security.googleblog.com/2023/04/supply-chain-security-for-go-part-1.html
 
 %% Tool "deptree" shows dependency graph of "go mod"
 
@@ -185,3 +210,9 @@ https://go.dev/
 %% go build a.go b.go c.go
 
 %% Go uses garbage collection: https://tip.golang.org/doc/gc-guide
+
+
+%% Green, power and go
+%% Go profiler: https://go.dev/blog/pprof
+%% Go benchmarks https://pkg.go.dev/testing#hdr-Benchmarks
+%% effective go https://go.dev/doc/effective_go

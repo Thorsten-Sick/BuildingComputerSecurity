@@ -140,3 +140,18 @@ A strong focus is on web applications (being internet facing they are a perfect 
 %% TODO: [drawio for threat modelling](https://michenriksen.com/blog/drawio-for-threat-modeling/)
 
 %% https://github.com/zeronetworks/BlueHound
+
+%% Abuser: Anyone who wants to abuse the system
+%% asset: Things of value. Monetary or other
+%% Threat: Means by which an abuser can compromise an asset. Human abusers or catastrophes (bush fire)
+%% CIA: Confidentiality, Integrity, Availability
+%% No Hollywood scenarios ! Be realistic
+%% Defense in depth
+
+%% Manual Method for Threat Modelling
+%% Tool based Threat Modelling (Wiki, PPT, Threat Modelling tool) => Check box type is downside
+
+%% MS Threat Model tool: https://learn.microsoft.com/de-de/azure/security/develop/threat-modeling-tool
+%% OWASP Threat modeling tool: https://owasp.org/www-project-threat-dragon/
+%% OWASP Trheat modeling cookbook: https://owasp.org/www-project-threat-model-cookbook/
+%% OWASP Threat modeling cheat sheet: https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html

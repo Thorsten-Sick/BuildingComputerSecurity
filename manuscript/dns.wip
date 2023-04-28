@@ -7,7 +7,7 @@
 
 %% TODO
 
-## Attack: DNS Cache poisoning
+## Attack: DNS Cache poisoning: Attacker sends fake DNS message to DNS. This caches it
 
 %% TODO
 
@@ -57,7 +57,7 @@ QUIC as transport for DNS (Google protocol)
 
 DNS via cloud services (Q9, Cloudflare, ...)
 
-## DNS Rebinding attacks
+## DNS Rebinding attacks: Attacker controlled DNs returns different IPs on first and second request. On first request it is a legitimate IP. On second request it is the internal IP. The victim validates on the first URL, but causes modifications on the second call. Fix. Always use TLS
 
 %% https://medium.com/@brannondorsey/attacking-private-networks-from-the-internet-with-dns-rebinding-ea7098a2d325
 %% Also: IoT

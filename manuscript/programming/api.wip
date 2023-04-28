@@ -4,40 +4,127 @@ APIs need API gateways to protect against DOS attacks
 Microservices are by default reachable via APIs.
 
 ## Testing frameworks
-JMeter
-FuzzDB
-Robot Framework https://robotframework.org/
-OWASP ZAP
-Fiddler https://www.telerik.com/fiddler
-Python Requests
-https://github.com/BBVA/apicheck
+
+* JMeter
+* FuzzDB
+* Robot Framework https://robotframework.org/
+* OWASP ZAP
+* Fiddler https://www.telerik.com/fiddler
+* Python Requests
+* https://github.com/BBVA/apicheck
+* Nikto: Web appl vulnerability scan https://github.com/sullo/nikto
+* Arjun http parameter discovery https://github.com/s0md3v/Arjun
+* Postman (API interface tool)
+* Burp suite
+* Gobuster (brute force URIs + DNS subdomains)   https://github.com/OJ/gobuster  (maintained)
+* kiterunner, more complex requests than gobuster https://github.com/assetnote/kiterunner  can use wordlists  (not maintained)
+* wfuzz can also brute force passwords, and fuzz api (not maintained)
+
+### DNS scanning
+
+### URI scanning
+
+* Gobuster (brute force URIs + DNS subdomains)   https://github.com/OJ/gobuster  (maintained)
+* kiterunner, more complex requests than gobuster https://github.com/assetnote/kiterunner  can use wordlists  (not maintained)
+
+### HTTP Authentication
+
+https://raiderauth.com/
+
+### REST content Fuzzing
+
+### HTTP parameter discovery
+
+### Manual API interface browsing
+
+* Postman (API interface tool)
+
+### Proxy
+
+* OWASP ZAP
+* Burp suite
+
+
+## Lists of public APIs
+
+https://apislist.com/
+
+https://rapidapi.com/hub
+
+https://apis.guru/
+
+
+
+## API specifications
+
+### OpenAPI Specification 3.0 (OAS) aka Swagger
+
+Machine readable as JSON or YAML
+
+### RESTful API Modeling Language (RAML)
+
+YAML only
+
+https://github.com/raml-org/raml-spec
 
 ## Checklist
 
 https://github.com/shieldfy/API-Security-Checklist
 
-% * access control (Authentication, Authorization)
-% * Logs, 
-% * Permissions, 
-% * Load limiters (after failed login attempts), 
-% * no predictable IDs, 
-% * if unknown Id is used: Block, 
-% * Firewall, 
-% * Load balancer, 
-% * reverse proxy um https zu terminieren, 
-% * WAF
-% * Input verification
-% * DOS/DDOS protection => Rate limit per user
-% * Protect the hardware !
+https://owasp.org/www-project-api-security/
 
-%* Always check incoming content type
-%* Always verify input data (Regex)
-%* On response: Set content type and encoding
-%* Encode data with proper (JSON) library. No DIY
-%* Exceptions should not echo back user data
-%* If sending back data: Sanitize it using a library
-%* SQL needs prepared statements
-%* Reduce database user permissions
+%% * access control (Authentication, Authorization) => Brute force it
+%% * SSL tester for every API call
+%% * scan all  possible http methods (GET,PUT ,POST, ...)
+%% * HTTP Header content is also input !
+%% * Logs,
+%% * Permissions,
+%% * Load limiters (after failed login attempts),
+%% * no predictable IDs,
+%% * if unknown Id is used: Block,
+%% * Firewall,
+%% * Load balancer,
+%% * reverse proxy um https zu terminieren,
+%% * WAF
+%% * Input verification
+%% * DOS/DDOS protection => Rate limit per user
+%% * Protect the hardware !
+
+%% * Always check incoming content type
+%% * Always verify input data (Regex)
+%% * On response: Set content type and encoding
+%% * Encode data with proper (JSON) library. No DIY
+%% * Exceptions should not echo back user data
+%% * If sending back data: Sanitize it using a library
+%% * SQL needs prepared statements
+%% * Reduce database user permissions
+%% * Use API documentation as a hint
+%% * APIs must only return a minimal set of Information. To make it granular and make it simpler to restrict info by permission
+%% * Verify that APIs only write the data keys they are allowed to write !
+%% Check if old API is still reachable. Also limit dev API !
+
+%% Rate limiting as early as possible
+%% Loging before and after authentication
+
+%% Strict header settings
+
+%% use modern password hashing - which is expensive -this is why we do rate limiting first
+
+%% Always encrypt connections
+%% Do not forget logout options
+%% IDs must never be sequences
+
+%% In OAuth2 you can define a scope: which part of the API can the token access. Used decides. But not the object ! This is DAC ( Discretionary Access Control) . On top of that can be MAC (Mandatory Access Control) where the user does not have all access himself
+
+%% URLs can contain short lived capabilties by attaching a unique token
+
+%% Logging
+
+%% Access control can be
+%% Group based
+%% Role based
+%% Capability based (very granular, can be revoked)
+%% Macaroon are crypto token for capabilities. But in addition new restriction can be appended to them by any user. "scripting" https://research.google/pubs/pub41892/    https://www.clever-cloud.com/blog/engineering/2021/04/12/introduction-to-biscuit/    https://github.com/rescrv/libmacaroons    https://github.com/biscuit-auth/biscuit-go    https://github.com/biscuit-auth
 
 ## Vulnerable API
 
@@ -45,8 +132,60 @@ https://github.com/rahulunair/vulnerable-api
 
 ? http://zero.webappsecurity.com/index.html ?
 
+https://github.com/snoopysecurity/dvws-node
+
+https://github.com/erev0s/VAmPI
+
+https://github.com/OWASP/crAPI
+
+https://github.com/DevSlop/Pixi
+
+https://owasp.org/www-project-juice-shop/
+
+https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application (GraphQL)
+
+http://reqres.in (Online)
+
+https://tryhackme.com/ (Online)
+
+https://www.hackthebox.com/ (Online)
+
+https://learning.oreilly.com/library/view/hacking-apis/9781098130244/c05.xhtml#:-:text=Adding%20Other%20Vulnerable%20Apps
+
 ## OWASP API security
 
 https://owasp.org/www-project-api-security/
 
+## JWT
+
+Contain user data, a signature and the crypto-settings. Make sure to verify the crypto settings and check the signature. You will also need a DB of revoked JWTs or valid JWTs at the backend.
+Avoid the "none" algorithm for obvious reasons. The attacker can change the algortihm and if you do not verify downgrade it.
+ The "jwt_tool" can be valuable for jwt hacking.
+
+{lang="bash"}
+    jwt_tool <JWT Token> -C -d /wordlist.txt
+
+Will try to find the secret by hash cracking.
+
+Also check authentication token randomness: Log in everal times (1000), get the tokens and find similarieites
+
 %% Train API hacking in this hackable online API: https://reqres.in/
+
+%% https://swagger.io/tools/swagger-codegen/
+
+
+%% Buch
+%% API security in action: https://learning.oreilly.com/library/view/api-security-in/9781617296024
+%% Hacking APIs: https://learning.oreilly.com/library/view/hacking-apis/9781098130244/
+
+%% Prevent replay attacks: Nonces, time frames, challenge-response Example "unlock door"
+%% Can messages be blocked ? Receiver moved to a state where no message is accepted anymore ?
+
+%% IoT end-to-end REST protocol: https://tools.ietf.org/html/rfc8613
+
+%% IoT devices need a secret key burned on creation. Maybe have one key per company but then hash it together with something device unique (MAC). the server can then do the same.
+
+%% ACE-OAuth (Authorization for Constrained Environments using OAuth2) https://tools.ietf.org/html/rfc8628     https://datatracker.ietf.org/doc/html/draft-ietf-ace-oauth-authz-33
+%%
+
+https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html

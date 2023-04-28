@@ -36,12 +36,16 @@ Gattack offers those attacks:
 
 %% TODO: Check in tool if those are there
 
+%% Sniffer: https://github.com/mikeryan/ice9-bluetooth-sniffer
 
 
 
 
 
-
+%% https://medium.com/@arunmag/how-i-reverse-engineered-and-exploited-a-smart-massager-ee7c9f21bf33
+%% https://medium.com/@arunmag/my-journey-towards-reverse-engineering-a-smart-band-bluetooth-le-re-d1dea00e4de2
+%% https://medium.com/@yogeshojha/i-hacked-xiaomi-miband-3-and-here-is-how-i-did-it-43d68c272391
+%% https://www.getkisi.com/blog/smart-locks-hacked-bluetooth-ble
 
 
 

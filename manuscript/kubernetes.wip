@@ -1,0 +1,11 @@
+# Kubernetes
+
+## Starting a local cluster
+
+Minikube https://minikube.sigs.k8s.io/docs/
+
+## Security
+
+https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+
+https://www.youtube.com/watch?v=v6a37uzFrCw

@@ -25,6 +25,17 @@ Optimize:
 * Quick outs: For functions with a high chance of quitting early: Test soon and don't do what you do not need anyway
 * Use the compiler's optimization. It knows best
 
+With the new CPU architecture:
+
+Modern CPUs rewrite programs to be executed in as many parallel micro instructions as possible. This results in new optimization strategies.
+
+* Reduce memory access
+* No conditional jumps - it can be faster to calculate both branches and drop the wrong one
+* Loops operating on one value are bad. As they can not be parallelized. Split the loop. Make bigger steps...
+* Build big data structures that can move properly into cache. No data with many useless links to other structures.
+
+% https://media.ccc.de/v/jev22-4704-die_mikroarchitektur_moderner_prozessoren
+
 ## Perf
 
 * Perf offers performance metrics for a process. CPU, swaps, Cache misses, ....
@@ -125,7 +136,7 @@ Book "High Performance Python" (Preview)
 %% TODO: Hotshot was a python 2 profiler
 %% TODO: kcachegrind has conversion scripts for other profilers
 %% TODO: PYthon 3 uses cProfile/profile for profiling (see default doc)
- or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot. 
+ or Yappi (https://pypi.org/project/yappi)  Python internal are: cProfile, Profile and hotshot.
 
 ## C
 
@@ -218,3 +229,21 @@ https://jiffyclub.github.io/snakeviz/
 https://pypi.org/project/ProfileEye/
 
 Memray: Memory profiling for Python https://github.com/bloomberg/memray
+
+%% Green and power:
+%% comparing languages: https://sites.google.com/view/energy-efficiency-languages/
+
+%% https://www.linux-magazin.de/links/?id=48615
+%% https://greensoftware.foundation/
+%% https://github.com/thegreenwebfoundation/green-cost-explorer
+%% https://github.com/powerapi-ng/
+%% https://github.com/fenrus75/powertop
+%% https://github.com/Green-Software-Foundation/patterns
+
+%% Green, power and go
+%% https://www.linux-magazin.de/links/?id=48614
+%% Go profiler: https://go.dev/blog/pprof
+%% https://github.com/owncloud/cdperf
+%% Load tesing https://k6.io/open-source/
+%% Go benchmarks https://pkg.go.dev/testing#hdr-Benchmarks
+%% effective go https://go.dev/doc/effective_go

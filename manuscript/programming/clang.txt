@@ -126,3 +126,6 @@ Your goal is to design the tests in a way that results in 100% coverage.
 ## Fuzzing
 
 Clang is a part of the fuzzing tools **AFL** and **libFuzzer**. For more details read the [fuzzing chapter](#chapter-fuzzing).
+
+
+%% Todo: Research new settings. It seems to be possible to init X86 registers with 0 against ROP

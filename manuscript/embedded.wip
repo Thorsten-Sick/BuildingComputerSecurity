@@ -55,3 +55,8 @@ https://www.freertos.org/Documentation/RTOS_book.html
 %% Glitching https://github.com/BitBangingBytes/Glitchy
 
 %% https://blog.xilokar.info/firmware-key-extraction-by-gaining-el3.html?s=09
+
+%% DTLS for IoT devices = TLS for UDP
+
+%% Encryption: AEs CCM seems common on IOT devices, has some drawbacks: https://web.cs.ucdavis.edu/~rogaway/papers/ccm.pdf
+%% Also small is ChaCha20-Poly1305
