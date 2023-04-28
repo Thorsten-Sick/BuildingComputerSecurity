@@ -165,7 +165,7 @@ The *nosec* command does the trick here.
 ## Pylint, stricter than flake8
 
 A linter which adds more detection on top of flake8 is pylint. It can be quite noisy (even without using the option to extend it with own plugins).
-For that reason it is wise to add it last (as soon as the flake8 warnings are fixed) and use a config file with exceptions for warnings you decide to ignore.
+For that reason it is wise to add it last (as soon as the flake8 warnings are fixed) and use a configuration file with exceptions for warnings you decide to ignore.
 
 To generate a configuration file:
 
@@ -199,11 +199,11 @@ It is also possible to disable specific warnings for a single line of code, a fu
 
 [Pylint documentation](http://pylint.pycqa.org/en/latest/user_guide/index.html)
 
-### MyPy, static type checker
+### Mypy, static type checker
 
-MyPy is a tool that can be run on code and check at "compile time" if type contracts are respected.
+Mypy is a tool that can be run on code and check at "compile time" if type contracts are respected.
 In Python 3 you can optionally annotate variables with the type they must be (and here you have lots of flexibility).
-MyPy will then check if this is respected. Important: At runtime this is ignored - resulting in no behaviour changes in your runtime.
+Mypy will then check if this is respected. Important: At runtime this is ignored - resulting in no behaviour changes in your runtime.
 But it can support you a lot.
 And you can use it partially: All APIs and interfaces between parts of the project developed by different people should be priority
 
@@ -222,7 +222,11 @@ To toggle mypy off for a specific line of code, add *#type: ignore*. Some extern
 
 [MyPy]](https://mypy-lang.org)
 
+Mypy does have a guide how to transition existing projects to full Mypy coverage. https://mypy.readthedocs.io/en/latest/existing_code.html
+
 ## Packaging with setup.py
+
+%% TODO: pyproject.toml is the new alternative. Research and replace !
 
 Tox will require proper packaging. And setup.py is the traditional way to do packages.
 
@@ -278,10 +282,16 @@ It contains:
 * Safety: dependency check on requirements
 * Bandit: Checks for common vulnerabilities
 
+## Nox
+
+If you prefer a python-script way to learning the Tox configuration syntax, you can try Nox.
+
+You can find [Nox documentation](https://nox.thea.codes/en/stable/index.html) online. It fills the Tox niche in the ecosystem.
+
 
 ## Dependencies
 
-Python dependencies are best handled using a virtualenv and a requirements.txt file whichs pins the exact version numbers to ensure reproducability.
+Python dependencies are best handled using a virtualenv and a requirements.txt file which pins the exact version numbers to ensure reproducibility.
 
 The Safety tool is already scanning your dependencies for vulnerable ones. In addition you can also check for old ones or update your requirements.txt. There are two more tools for you to add to your build chain:
 
@@ -312,10 +322,24 @@ To upgrade the pinned dependencies in your requirements.txt you can use pip-upgr
 
 This will modify the file and pull the newest versions. Just run your automated tests afterwards to ensure everything is still working.
 
+## Documentation
+
+Managing complexity is one of the essential parts of programming. Especially in long lasting projects or if more people are involved you will need documentation.
+The python ecosystem has its own tools and tricks.
+
+[Sphinx](https://www.sphinx-doc.org/en/master/) is a documentation generator using rst files and the documented python code to generate documentation. It can be extended with several interesting extensions to reduce the documentation effort enormously.
+
+In a collaborative environment you also want to enforce code documentation quality.
+
+[Docstr_coverage](https://pypi.org/project/docstr-coverage/) can output the coverage of python documentation without checking its style.
+While [pydocstyle](https://pypi.org/project/pydocstyle/) checks the documentation for PEP 257 compatibility.
+
+Adding those can make documentation verification part of your CI/CD pipeline and fix the documentation problem once and for all.
+
 %% TODO: Add Robust Python https://learning.oreilly.com/library/view/robust-python/9781098100650/
 
-%% TODO: pyre als erweiterung (daemon) fuer mypy
-%% TODO: pysa als Erweiterung fuer Pyre (taint checker)
+%% TODO: pyre as extension (daemon) for mypy
+%% TODO: pysa as extension for Pyre (taint checker)
 
 %% TODO: mccabe to measure complexity
 
@@ -337,9 +361,17 @@ This will modify the file and pull the newest versions. Just run your automated 
 
 %% GuardDog: Identify malicious PyPi packages https://securitylabs.datadoghq.com/articles/guarddog-identify-malicious-pypi-packages/
 
+
 %% ------------ not relevant
 
 %% [Code quality for python](https://landscape.io)
 %% [Code coverage](https://codecov.io)
 %% [Code review](https://www.codefactor.io)
 %% [Travis build system](https://travis-ci.org/)
+
+%% poetry ? https://python-poetry.org/   and  https://medium.com/@paweldudzinski/python-applications-continuous-integration-with-poetry-and-gitlab-pipelines-ac539888251a
+%% pipdeptree and graphviz for dependency graph
+%% pydeps for detailed dependencies
+%% pyan3 a static call graph generator
+%% "python -m cProfile -o deps.profile test.py" "gprof2dot --format=pstat deps.profile -o deps.dot" for run time call graph
+
