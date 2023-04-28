@@ -37,6 +37,8 @@ If your tool supports it: Do so.
 
 ### Code reviews
 
+%% TODO: Similar chapter is in security_process.txt
+
 A good source for a code review checklist is http://cwe.mitre.org/ (Common weakness enumeration).
 
 I'd get the top 5 of those weaknesses (depending on what I expect to find in my
@@ -46,10 +48,32 @@ After that they should be added to the Coding Style document of the team.
 
 Other secure coding standards can be found here:
 
+## Code review guide
+
+OWASP wrote a [code review guide](https://owasp.org/www-project-code-review-guide/). 
+
 ## Tools for code reviews
 
 Use tools for code reviews (details in "compiling"). Static and Dynamic code
 analysis can improve your code a lot. But do not trust them blindly. They will not find everything.
+
+
+## Application Security Verification
+
+Using [ASVS](https://owasp.org/www-project-application-security-verification-standard/) you should verify your application's security.
+This can happen during design, when you do a PR at a code merge or at a special session.
+ASVS is written for web applications and their pain points.
+
+[MASVS](https://mas.owasp.org/MASVS/) is a similar project for Mobil applications.
+
+A tool named [OWASP Security Knowledge Framework](https://owasp.org/www-project-security-knowledge-framework/) can be used to step you through the process. The data the process is based in are those two documents.
+
+## Top 10 or 25 issues
+
+Several organisations compiled lists of the top issues applications have.
+
+* [OWASP Top 10](https://owasp.org/www-project-top-ten/) for web applications
+* [Sans 25](https://www.sans.org/top25-software-errors/)
 
 ## General
 
