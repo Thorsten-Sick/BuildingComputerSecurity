@@ -2,17 +2,21 @@
 
 **0-day**: An exploit used by the attackers before the vulnerability is known to the defender. They are expensive on the black market. Typical malware does not need 0-days. As many users do not patch their systems.
 
+**ABAC**: Attribute based access control. A logic decides based on attributes of different objects (subject, resource, action, environment) if access is permitted.
+
 **Adware**: Malware that shows Ads. As the Ad ecosystem generates money for viewed Ads this is how attackers convert infections to money
 
-**Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emitting more data than they receive are vulnerable. Also quite often uses stateless protocols like UDP because the initiator is different from the victim.
+**Amplification attacks**: Are attacks where a 3rd party is used to attack the target with amplified bandwidth. Services emitting more data than they receive are vulnerable. Often uses stateless protocols like UDP because the initiator is different from the victim.
 
-**Anycast**: Several servers share the same IP address. The client connects to the closest one. Relevant if only one of them is hacked and serves malware...
+**Anycast**: Servers share the same IP address. The client connects to the closest one. Relevant if only one of them is hacked and serves malware...
 
 **Approved List**: A list of url/hashes/... that got approved as being harmless
 
-**APT**: Advanced Persistent Threat. Advanced malware. Quite often by governments. Or just very advanced malware.
+**APT**: Advanced Persistent Threat. Advanced malware. Often government backed. Or just very advanced malware.
 
 **ASLR**: Mitigation strategy to load code into **random** areas of the memory. Makes writing of exploits harder
+
+**ASVS**: Application Security Verification Standard: This OWASP project lists different ways to verify the security of an application.
 
 **Backdoor**: A constructed way for an attacker to connect to a vulnerable system and execute code
 
@@ -86,6 +90,8 @@
 
 **DNG / Domain Name Generator**: Part of a malicious script generating possible URLs for C&C servers by time. By registering some of them the attacker can reduce take downs and still get connecting bots.
 
+**DTLS**: Datagram TLS - TLS for short UDP messages (see: IoT)
+
 **DVA / Damn Vulnerable Application** (Also: Damn Vulnerable Web application): A insecure application to train hacking on or test tools
 
 **Dynamite phishing**: Automated spear phishing. The malware silently collects mail communication to later fake new phishing mails for new victims
@@ -110,7 +116,7 @@
 
 **Firewall**: Network filter. Can reduce allowed traffic on a network connection. Smarter firewalls can maintain some state and decided based on who initiated a connection - internal or external computer ?
 
-**Heap Spraying**: Loading the exploit code several times into several memory areas. Also uses *NOP slides*
+**Heap Spraying**: Loading the exploit code several times into different memory areas. Also uses *NOP slides*
 
 **Honeypot**: A Honeypot is a simulated vulnerable system to attract attackers. The attacks will then be analysed to learn about the attackers.
 
@@ -124,7 +130,11 @@
 
 **IOC**: Indicator of Compromise. A file-hash, URL, registry key or similar feature left by the malware when a system is infected.
 
-**Least Privilege**: Grant a process only the least privileges required to do its task. If something goes south, the impact is minimized.
+**JWT**: JSON web token. A "cookie" for authentication with added data. Stored on the client. The JWT is signed by the server.
+
+**Kerckhoff’s Principle**: A cryptosystem should be secure, even if everything about the system, except the key, is public knowledge.
+
+**Key rotation**: Periodically change the encryption key
 
 **Kill chain**: Phases of an attack
 
@@ -148,7 +158,11 @@
 
 **MITRE Att@ck**: A taxonomy for attacker TTPs. [see: MITRE](https://attack.mitre.org/)
 
+**mutual TLS / mTLS**: Both sides, client and server, authenticate to each other using certificates
+
 **NOP slide**: Increases the target the instruction pointer has to hit to get to the exploit code. Done by adding NO operation codes to the beginning.
+
+**Open redirect**: A vulnerability where a legitimate website can be tricked into HTTP redirecting a visitor to a url supplied by the attacker
 
 **Patch gap**: Gap between a security patch in a 3rd party library and a patched release of the main product using this library
 
@@ -164,9 +178,17 @@
 
 **Phishing**: Attack using social engineering to get credentials. Can involve malware or exploits as well
 
+**POLA / Principle Of Least Authortity** see POLP
+
+**POLP / Principle Of Least Privilege**: Users are granted the smallest set of privileges they need to get their assigned tasks done
+
+**POMP / Principle Of Minimal Privilege**: see POLP
+
 **QUIC**: A Google protocol based on UDP to replace TCP. By adding TCP features to UDP
 
 **RAT / Remote access trojan**: An implant to gain persistence. Can remote control OS functionalities.
+
+**RBAC / Role based Access Control**: Every user has a role. Those roles come with permissions
 
 **RBN / Russian Business Network**: Rogue ISP offering bullet proof hosting (take downs by police not easy)
 
@@ -188,9 +210,11 @@
 
 **SBOM** Software Bill of Materials
 
-**SCA**: Software Component Analysis
+**SCA**: Software Component Analysis: Check external software components for vulnerabilities and license compliance issues
 
 **Self guided malware**: Malware for air-gapped systems. Does not need a connection to a control server. Has all the propagation/infection logic built in. Not a common thing. But Stuxnet was one of those.
+
+**Session fixation**: Vulnerability caused by not creating a new session on login but recycling an old one. The attacker injects his token into the victims browser. As soon as the victim logs in, the attacker has parallel access to the account.
 
 **Session Hijacking**: The login token of a session is stolen. While this is valid the attacker has access
 
@@ -201,6 +225,8 @@
 **SIEM / Security Information and Event Management**: Collect and analyse different security relevant data into logs. Actions are triggered based on this data.
 
 **Sigma rules**: Sigma rules are for logs what Yara is for files https://github.com/Neo23x0/sigma
+
+**SKF**: Security Knowledge Framework: OWASP expert system to build and verify secure software https://owasp.org/www-project-security-knowledge-framework/
 
 **SNI / Server Name Indicator**: Part of the header to indicate which one of the hosted servers to contact. Could be encrypted if ESNI (Encrypted SNI) is used.
 
@@ -221,6 +247,8 @@
 **STIX2**: A data format to exchange threat intel. More focused on Attack Groups/Identity/Threat actor/Campaign. [STIX2](https://oasis-open.github.io/cti-documentation/)
 
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
+
+**Sub domain hijacking aka sub domain takeover**: The attacks is able to claim an abandoned web host with still existing DNS entries. Now it is compromised....
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
 
@@ -256,6 +284,8 @@
 
 **XXE**: XML External Entity injection: The attacker uses modified XML sent to the server to access internal data like files
 
+**Zero Trust**: All network requests must be authenticated. Even those originating from the own network
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% TODO: Write article covering all types of memory bugs
@@ -271,7 +301,7 @@
 
 %% mixed content
 
-%% nacl
+%% NACL
 
 %% forward secrecy
 
