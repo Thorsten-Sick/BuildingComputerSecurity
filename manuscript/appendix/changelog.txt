@@ -108,8 +108,8 @@ changelog to make it simpler for you to find the new sections.
 
 * [ZAP](#chapter-zap) updated
 * [Passwords](#chapter-passwords) updated
-* [vulnerabilities](#chapter-vulnerabilities) updated
-* [python](#chapter-python-security) updated
+* [Vulnerabilities](#chapter-vulnerabilities) updated
+* [Python](#chapter-python-security) updated
 * [Git hardening](#chapter-git) updated
 
 ## December 2022
