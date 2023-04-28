@@ -52,7 +52,7 @@ Other problems this will prevent are VCS specific issues like "Do no commit cred
 
 %% TODO: Gerrit, collaborative code review tool for git
 
-### Github
+## Github
 
 Github offers so called *actions* to create your own workflow for your project. Those actions can contain almost any tool that you read about in this book so far. For example: Static Code analysis. On certain stages in your coding workflow you can trigger those actions. Good stages can be:
 
