@@ -72,6 +72,13 @@ For the harder cases you can do:
 
 And constantly check if the vulnerability stays fixed or if you have a regression. Use automated tests here.
 
+## OWASP Risk Rating
+
+The OWASP Risk Rating is a similar system to assign a score to a vulnerability. It also takes the skills of a potential attacker into account.
+
+[OWASP Risk Rating](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology) also comes with a convenient {online calculator](https://www.owasp-risk-rating.com/).
+
+
 ## Security process
 
 Managers can build [internal processes](#chapter-security-process) to manage vulnerabilities and to avoid them.
@@ -149,3 +156,6 @@ TL;DR: Fix bugs early. Verify your design. Fix bugs fast.
 %% use after free: https://www.youtube.com/watch?v=PKqMsaKGdlM
 
 %% Scan for vulnerabilities in binaries (Ghidra): https://github.com/KeenSecurityLab/BinAbsInspector
+
+%% https://www.cvedetails.com/
+%%
