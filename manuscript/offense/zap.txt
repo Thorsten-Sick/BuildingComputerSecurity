@@ -1,6 +1,6 @@
 # ZAP {#chapter-zap}
 
-[ZAP proxy](https://www.zaproxy.org/) is similar to the Burp suite. With this tool you can test your web site or your web API for vulnerabilities. It was written by OWASP and is free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
+[ZAP proxy](https://www.zaproxy.org/) is similar to the Burp suite. With this tool you can test your web site or your web API for vulnerabilities. ZAP is by OWASP and free. You can extend it by scripting, writing own plugins or installing those from the marketplace.
 
 ## Basics
 
@@ -24,7 +24,7 @@ If you want to directly install the package you will need Java
 The direct way of installation is to download the [archive](https://www.zaproxy.org/download/)
 
 Unzip the archive and start ZAP with *./zap.sh* on Linux.
-Using the archive package simplifies the proxy part, because ZAP will not be sandboxed and can start the browser directly.
+Using the archive package simplifies the proxy part, because installing it this way ZAP is not sandboxed and can start the browser directly.
 
 ## Experimenting
 
@@ -32,13 +32,13 @@ To experiment with ZAP or Burp suite there is the vulnerable [Juice shop](https:
 
 ## Authentication
 
-Using Zap with sites you have to authenticate to turns out to be complicated. The *context* is where you configure the authentication. Then add the authentication type per domain. Add user/pwd to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
+Using Zap with sites you have to authenticate is complicated. It needs some special configuration. The *context* is where you configure the authentication. Then add the authentication type per domain. Add user/password pair to the database and activate it. You can test different authentications on [Jigsaw authentication tests](jigsaw.w3c.org).
 
 ## Scan modes
 
 ZAP offers different scan modes:
 
-* spider: Detect all resources and URLs on the target
+* spider: Detect all resources and URLs on the target aka crawler
 * passive: Find issues by listening
 * active: Find issues by actively interacting. This one is risky.
 
@@ -63,9 +63,9 @@ By installing an addon from the marketplace you can unlock python scripting. The
 
 It offers different kind of scripts:
 
-* Standalone scripts: Can be run manually
-* Targeted scripts: Will be added to a right click menu (history item, sites tree)
-* Proxy scripts: can modify request/response data, must be enabled to work
+* Standalone scripts: Run manually
+* Targeted scripts: Added to a right click menu (history item, sites tree)
+* Proxy scripts: Can modify request/response data, must be enabled to work
 * HTTP sender scripts: Proxy scripts that also run with Spider, fuzzer, ...
 * Passive scan scripts: Just look, don't touch
 * Active scan scripts: Touch and maybe break things
@@ -98,14 +98,14 @@ If you are serious using CI/CD to check your project, automate the browser using
 
 You can use ZAP as Proxy between Selenium and the target. Selenium is a complex tool. But to get you started some basic information.
 
-Selenium needs so called webdrivers to interact with the different browsers. There are several ways to install them, the python way is:
+Selenium needs so called webdrivers to interact with the different browsers. There are different ways to install them, the python way is:
 
 {lang="bash"}
     pip install webdriver-manager
 
-Chrome / Chromium web driver seems to be more advanced at the moment, it can for example access the console log which Firefox can not (yet).
+Chrome / Chromium web driver is currently more advanced, it can for example access the console log which Firefox can not (yet).
 
-Selenium by default only offers the browser perspective. Use [Selenium wire](https://pypi.org/project/selenium-wire/) to get requests/responses data.
+Selenium offers the browser perspective. Use [Selenium wire](https://pypi.org/project/selenium-wire/) to get requests/responses data.
 
 Much more Selenium documentation is available here:
 
