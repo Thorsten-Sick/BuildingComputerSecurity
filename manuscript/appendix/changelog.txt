@@ -97,6 +97,20 @@ changelog to make it simpler for you to find the new sections.
 
 
 %% Fuzzing
+%% Merge offense/vulnerability_scannint to planning/vulnerabilities
+%% SQLinjection
+
+
+%% Synergies: Python, golang, API, Web, TLS, Dependencies, profiling, sql injection
+%% merge coding.wip and security_process chapter "code reviews"
+
+## April 2023
+
+* [ZAP](#chapter-zap) updated
+* [Passwords](#chapter-passwords) updated
+* [vulnerabilities](#chapter-vulnerabilities) updated
+* [python](#chapter-python-security) updated
+* [Git hardening](#chapter-git) updated
 
 ## December 2022
 
