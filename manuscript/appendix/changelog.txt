@@ -106,8 +106,8 @@ changelog to make it simpler for you to find the new sections.
 
 ## Aug 2025
 
-* [RSS](#chapter-rss-feed}) feed space started
-* [AV behaviour based classification]({#chapter-antivirus-behaviour-based-classification}) extended
+* [RSS](#chapter-rss-feed) feed space started
+* [AV behaviour based classification](#chapter-antivirus-behaviour-based-classification) extended
 * [Principles](#chapter-principles) extended
 * [Anti Virus sharing samples](#chapter-sharing-samples) extended
 * [Google dork](#chapter-google-dork) extended

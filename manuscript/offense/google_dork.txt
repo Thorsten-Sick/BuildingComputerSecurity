@@ -40,7 +40,7 @@ Finding these vulnerable sites is much easier with an exploit database like [exp
 ## Defense
 
 This technology will help the attacker assess potential vulnerabilities (SQL injection, old software). It is wise to search your own page using Google Dork with Google Alerts to get notified.
-A good defense is to keep your frameworks, web apps and plugins up to date. Using Google dorks to attack your own infrastructure you can identify vulnerabilities.
+A good defense is to keep your frameworks, web apps and plugins up to date. By using Google dorks to scan your own infrastructure you can identify vulnerabilities.
 
 ## Further reading
 

@@ -69,6 +69,7 @@ offense/mitmproxy.txt
 offense/nmap.txt
 appendix/part_appendix.txt
 appendix/externalreferences.txt
+appendix/rss_feeds.txt
 appendix/glossary.txt
 appendix/theauthor.txt
 appendix/authors.txt
