@@ -143,17 +143,17 @@ A strong focus is on web applications (being internet facing they are a perfect 
 
 JSON scheme for [YAML in Code](https://dev.to/brpaz/how-to-create-your-own-auto-completion-for-json-and-yaml-files-on-vs-code-with-the-help-of-json-schema-k1i)
 
-I also installed the YAML extension "YAML by Readhat" to get the setting for YAML schemes
+I also installed the YAML extension "YAML by Redhat" to get the setting for YAML schemes
 
 ### Visual Studio Code
 
 * Install extension YAML by Red Hat
 * Run
+
 {lang="bash"}
     docker run --rm -it -v "$(pwd)":/app/work threagile/threagile --create-editing-support -output /app/work
 
 * This creates schema.json and live-templates.txt
-
 * In settings configure YAML schemas:
 
 {lang="yaml"}
