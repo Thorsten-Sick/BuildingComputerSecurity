@@ -22,6 +22,7 @@ As you are using  more advanced search engine features. If you want to go for Go
 |Find by filetype  |filetype:txt    |filetype:txt        |
 |Find parts of URL |inurl:bar       |inurl:bar[^broken]  |
 |Find in title     |intitle:foo     |intitle:foo         |
+|Find in text      |intext:bar      |                    |
 
 [^broken]: This feature seems to be broken at the moment
 
@@ -38,8 +39,8 @@ Finding these vulnerable sites is much easier with an exploit database like [exp
 
 ## Defense
 
-This technology will help the attacker assess potential vulnerabilities (SQL injection, old software).
-A good defense is to keep your frameworks, web apps and plugins up to date. Maybe sometimes use Google dorks yourself on your own pages to identify vulnerabilities.
+This technology will help the attacker assess potential vulnerabilities (SQL injection, old software). It is wise to search your own page using Google Dork with Google Alerts to get notified.
+A good defense is to keep your frameworks, web apps and plugins up to date. Using Google dorks to attack your own infrastructure you can identify vulnerabilities.
 
 ## Further reading
 

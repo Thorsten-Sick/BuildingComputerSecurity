@@ -107,6 +107,8 @@ Search engines to try are:
 A special case if you are more interested in web security is this sub-database for [Google hacking](https://www.exploit-db.com/google-hacking-database/)
 
 
+%% Tool spdx-to-osv (https://github.com/spdx/spdx-to-osv creates JSON vulnerability file from SPDX document
+
 %% # Exploitation
 
 %% ## Post exploitation
@@ -159,3 +161,10 @@ TL;DR: Fix bugs early. Verify your design. Fix bugs fast.
 
 %% https://www.cvedetails.com/
 %%
+
+%% Other score: EPSS https://www.first.org/epss/
+%% Quote: Exploit Prediction Scoring System (EPSS) is a data-driven effort for estimating the likelihood (probability) that a software vulnerability will be exploited in the wild
+
+%% Other score: VPR: Vulnerability Priority Rating
+%% https://www.tenable.com/sc-dashboards/vulnerability-priority-rating-vpr-summary
+

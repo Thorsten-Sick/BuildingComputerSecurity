@@ -106,6 +106,20 @@ reduces the impact of a hacked process or account. This reduction can be done on
 
 Dropping process privileges is possible on Linux. Not on Windows.
 
+At least you can terminate the program if is run by root (as long as it is a potentially vulnerable program).
+
+### Landlock
+
+Newer Linux kernels are shipped with the landlock module. Ths allows code to manage the own privileges. Your program should drop all privileges it does not need at startup.Many programming languages do support that:
+
+* C: https://en.ittrip.xyz/c-language/c-sandbox-security
+* Rust: https://docs.rs/landlock/latest/landlock/
+* Golang: https://github.com/landlock-lsm/go-landlock
+* Python: https://github.com/Edward-Knight/landlock
+
+For command line execution use the cmdline tool "landrun"
+
+
 %% TODO: Write several chapters, depending on type of isolation
 
 ## Updates
@@ -275,4 +289,3 @@ non-technical people.
 
 Future Crimes by Marc Goodman is a book covering the experience of a cyber crime police officer. Every chapter is a noteworthy and often entertaining example of a real crime. Entertaining and does not require technical knowledge. Good for
 training critical thinking and security thinking.
-

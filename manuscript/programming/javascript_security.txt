@@ -130,3 +130,7 @@ I'll just list the moving parts for reference.
 %% Python and Go for example can be cross compiled
 
 %% SAST: eslint security plugin: https://www.npmjs.com/package/eslint-plugin-security
+
+%% Typescript class validator: https://github.com/typestack/class-validator
+
+%% Unit tests https://jestjs.io/

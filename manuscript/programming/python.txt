@@ -142,6 +142,8 @@ The free database is updated once a month. You can buy an API key for faster DB 
 
 If you have to update your requirements.txt, you can use a tool like [upgrade-requirements](https://pypi.org/project/upgrade-requirements/) to simplify your life
 
+%% Also add OSSAudit https://github.com/illikainen/ossaudit
+
 ## Bandit, static code analysis
 
 [Bandit](https://github.com/PyCQA/bandit) is a tool to identify typical vulnerabilities by static code analysis. It can be configured by putting a *.bandit* file into the project path. If the large feature set it offers by default is not enough for you:  it can be extended using python plugins.
@@ -375,3 +377,6 @@ Adding those can make documentation verification part of your CI/CD pipeline and
 %% pyan3 a static call graph generator
 %% "python -m cProfile -o deps.profile test.py" "gprof2dot --format=pstat deps.profile -o deps.dot" for run time call graph
 
+%% Python code check: Ruff (https://github.com/astral-sh/ruff)
+
+%% Drop root privileges

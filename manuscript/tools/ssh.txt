@@ -256,5 +256,17 @@ each release ...
 %% https://medium.com/linuxstories/linux-how-to-create-an-ssh-tunnel-as-a-systemd-service-73e6e0fff19b
 
 %% fail2ban to block brute forcing  https://www.fail2ban.org/wiki/index.php/Main_Page
+%% You write a filter and logic for logs. On trigger it will block an ip address
+
 
 %% tarpit honeypot endlessh https://jakami.de/2021/09/ssh-honeypot-fuer-angreifer-mit-endlessh/
+
+%% Tiny-ssh-honeypot
+
+%% https://github.com/jtesta/ssh-audit    ssh audits
+
+%% OpenSSH will remove DSA keys.
+
+%% WIP: SSH3 https://github.com/francoismichel/ssh3
+
+%% TODO: Check SSH signed certificates und permission flags.

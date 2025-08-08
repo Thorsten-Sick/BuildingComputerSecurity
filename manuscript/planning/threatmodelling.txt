@@ -1,10 +1,10 @@
 # Threat Modelling {#chapter-threat-modelling}
 
-Threat modeling is a way to get an honest overview of the security state of a project. It should be done quite early (design phase) and continued during the project - especially when requirements change...
+Threat modelling is a way to get an honest overview of the security state of a project. It should be done quite early (design phase) and continued during the project - especially when requirements change...
 
 There are several methods for threat modelling.
 
-The big goal of all of then is to achieve better knowledge of all the bad things that could happen.
+The big goal of all of then is to achieve better knowledge of all the bad things that could happen by methodically covering the project.
 
 To achieve this big goal there are lots of sub-goals you could want to achieve. The priority of those depends on circumstances like the company goals, the project state, ...
 
@@ -66,6 +66,8 @@ After you read the details, here a short checklist for your convenience:
 * Denial of Service
 * Elevation of privilege
 
+%% TODO: Stride-LM    integrates Lateral Movement
+
 ## Attack tree
 
 Attack trees are built by first defining *targets* an attacker can have ("crash server") and then adding details. This is done by adding more and more details with each step ("DDOS network", "DOS RAM", ...). More and more deeper levels are added.
@@ -103,7 +105,7 @@ Just check some boxes in the online calculator and you will receive a CVSS score
 
 [CVSS calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
-## Thorsten Style
+## Coffee machine chat style
 
 I am more a person who loves to enable others. I observed myself to quite often get into "coffee-machine chats" where I trigger the evil neurons of people to make them think about the bad things that could happen to their projects. A 1:1 brainstorming with technical background lessons in 10 minutes in a relaxed atmosphere.
 
@@ -128,11 +130,34 @@ Put this table on a whiteboard and mark those boxes that are relevant for your p
 %% And: https://github.com/swimlane/pyattck
 %% And: https://pyattck.readthedocs.io/en/latest/
 
+%% Cyber kill chain https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+
 ## OWASP (Open Web Application Security Project)
 
 Their mission is to improve the security of software. The offer heaps of free material and tools assisting you in that task.
 
 A strong focus is on web applications (being internet facing they are a perfect target for attacks). A core project is ["OWASP Top 10"](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) listing the top 10 most common web application security risks.
+
+
+## Threat Modeling using Threagile
+
+JSON scheme for YAML in Code: https://dev.to/brpaz/how-to-create-your-own-auto-completion-for-json-and-yaml-files-on-vs-code-with-the-help-of-json-schema-k1i
+I also installed the YAML extension "YAML by Readhat" to get the setting for YAML schemes
+
+### Visual Studio Code
+
+* Install extension YAML by Red Hat
+* Run "docker run --rm -it -v "$(pwd)":/app/work threagile/threagile --create-editing-support -output /app/work"
+* This creates schema.json and live-templates.txt
+
+* In settings configure YAML schemas:
+
+    "yaml.schemas": {
+        "home/your-folder/threagile/schema.json": "*.yaml"
+    },
+
+* Activate schemas by lower right button when editing the YAML file
+* live-templates can be used as snippets
 
 %% TODO: Still in incubator: [OWASP embedded application security](https://www.owasp.org/index.php/OWASP_Embedded_Application_Security)
 
@@ -155,3 +180,28 @@ A strong focus is on web applications (being internet facing they are a perfect 
 %% OWASP Threat modeling tool: https://owasp.org/www-project-threat-dragon/
 %% OWASP Trheat modeling cookbook: https://owasp.org/www-project-threat-model-cookbook/
 %% OWASP Threat modeling cheat sheet: https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
+
+%% https://learning.oreilly.com/library/view/threat-modeling/9781492056546/
+
+%% Check trust boundaries
+%% Attack tree
+%% Fishbone diagrams (Ishikawa)
+%% Also cover invisible stuff: OS, updates, containers, dependencies like OS components, supply chain, programming language
+%% Security / trust boundaries: Which external elements do we have to trust ? HW/SW/Services
+%% Logging: Which exceptional events do we monitor ?
+%% Backup ? Recovery ?
+
+%% Sequence diagram, data flow diagram
+
+%% Give them ideas: ATTACK, CWE, CAPEC https://capec.mitre.org/ "Domains of Attack"
+
+%% STRIDE explained
+%% https://learning.oreilly.com/library/view/threat-modeling/9781492056546/ch03.html#:-:text=This%20is%20what%20STRIDE%20stands%20for%3A,S
+
+%% Continueous threat modeling checklist https://github.com/Autodesk/continuous-threat-modeling/blob/master/Secure_Developer_Checklist.md
+
+%% This standard calls for a SBOM  https://owasp.org/www-project-software-component-verification-standard/
+
+%% TODO: When creating a concept, gather information on: policies, prodecures and incident responts playbooks. Endpoints 8all machine types), Certificate expiration, Internet footprint, Networking devices, Logging and monitoring, ISP contacts and internet access, external vendors the company depends on, applications being used
+%% A incident response playbook needs a defined trigger. A process to identify an incident. If there is none, the incident will never be declared
+%% Threats: Ransomware, DDOS, employees, insider threats, data exfiltration

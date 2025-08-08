@@ -132,10 +132,18 @@ Block ciphers are encrypting the data block-by-block. The **mode** defines *if* 
 |Electronic Codebook (ECB)   |Broken |
 |Cipher Block Chaining (CBC) |OK     |
 |Counter Mode (CTR)          |Good   |
+|Authenticated Enc. .. (AEAD)|Perfect|
 
-%% TODO: Add CCM
+%% TODO: Add CCM  https://en.wikipedia.org/wiki/CCM_mode
+%% TODO: Add GCM  https://en.wikipedia.org/wiki/Galois/Counter_Mode
 
-If possible use CTR. Some of those modes need not only the password but also a number named *IV* (initialisation vector) or *nonce* (number used only once). This number can be public. But it has an important requirement: Do not recycle it ! This number must be used once only. For the next data you encrypt use a different one. With that requirement: A **counter** would be do the job.
+If possible use AEAD.
+
+Some of those modes need more data in addition to the password to initialize the encryption: a number named *IV* (initialisation vector) or *nonce* (number used only once). This number can be public. But it has an important requirement: Do not recycle it ! This number must be used once only. For the next data you encrypt use a different one. With that requirement: A **counter** would do the job pretty well.
+
+
+%% TODO: Broken are 1024 bit RSA/DSA; 160 bit ECDSA; 80/112 bit 2TDEA; MD5
+%% TODO: Good password hashing: PBKDF2+salt+>32bit iterations >=10000
 
 ## Authenticated Encryption
 
@@ -209,6 +217,13 @@ Depending on your computing power, lifetime of your product and adversary this m
 
 A source for a more specific evaluation of your required [key length is here](https://www.keylength.com/).
 
+## Best practice
+
+* Never encrypt without authentication: [The cryptographic doom principle](https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html)
+
+%% BSI guide: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR02102/BSI-TR-02102-2.html
+%% https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02103/tr02103_node.html
+
 ## Further reading
 
 ### Serious Cryptography by Jean-Philippe Aumasson
@@ -248,3 +263,5 @@ A source for a more specific evaluation of your required [key length is here](ht
 %% https://github.com/cr-marcstevens/hashclash/tree/collisiondetection/src/collisiondetection
 
 %% Noise Protocol Framework: Framework to create Crypto protocols https://noiseprotocol.org/
+
+%% Data must always be encrypted - in transit or at rest

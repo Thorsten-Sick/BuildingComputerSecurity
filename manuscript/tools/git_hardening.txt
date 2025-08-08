@@ -36,6 +36,16 @@ Other problems this will prevent are VCS specific issues like "Do no commit cred
 %%https://github.com/srcclr/commit-watcher
 
 
+%% Adding empty git folder: put .gitkeep file into the folder
+
+%% Git GUIs:
+%% * Git Cola (Python)
+%% * GitG
+%% * Gitqlient
+%% * Relagit
+%% * Gitnuro
+
+%% Bash prompt: https://github.com/magicmonty/bash-git-prompt
 
 
 %% TODO: GPG keys to GIT

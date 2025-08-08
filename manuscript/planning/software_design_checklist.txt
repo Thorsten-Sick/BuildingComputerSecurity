@@ -68,3 +68,11 @@ Some hacking talks that worked well as source for information. There are many mo
 * [35C3 What the Fax?!](https://media.ccc.de/v/35c3-9462-what_the_fax)
 
 Use talks about projects similar to yours to collect design mistakes made by others.
+
+
+%% CIS security controls  cisecurity.org/controls
+%% - vulnerability management + secure configuration
+%% - data protection and recovery: Backups
+%% - account management and access control, strong authentication
+%% - secure configuration
+%% - security benchmarks and guidelines

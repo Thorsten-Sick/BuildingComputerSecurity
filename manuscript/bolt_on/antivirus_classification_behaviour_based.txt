@@ -93,7 +93,7 @@ As you will want to set it up on a special machine and getting your own configur
 
 ## Small print
 
-I contributed to Pafish, VMCloak and Cuckoo Sandbox - I am biased. But as far as 
+I contributed to Pafish, VMCloak and Cuckoo Sandbox - I am biased. But as far as
 I know here are either no real alternatives or people keep telling me those tools are good.
 
 Cuckoo Sandbox became CAPEv2.
@@ -175,3 +175,10 @@ This concept is the exact opposite of Pafish and VMCloak. It's no silver bullet 
 
 %% TODO: Zeek.org rules for behaviour
 %% TODO: https://medium.com/@abhijithraom1990/bro-zeek-the-modern-watchtower-9ef61b09f255
+
+%% TODO: OSQuery
+%% TODO: OSSEC https://www.ossec.net/
+
+%% A SIEM must also detect if there are gaps in the logs
+
+%% You need to centralize logs and search them

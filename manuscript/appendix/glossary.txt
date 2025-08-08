@@ -62,6 +62,8 @@
 
 **Command injection**: If the attacker is able to inject a command to the system shell (and the data is not sanitized) this is a command (line) injection. See [OWASP](https://owasp.org/www-community/attacks/Command_Injection)
 
+**Common Platform Enumeration**: A unique ID for software products, can be used to query vulnerability databases and software asset management
+
 **CRITs / Collaborative Research Into Threats** Threat intelligence sharing platform by MITRE. See TIP. https://crits.github.io/
 
 **CSRF aka XSRF - Cross site request forgery**: The attacker tricks the user to issue a HTTP requests on a site where the user has an open session. This HTTP request triggers an action on the server on behalf of the user.
@@ -77,6 +79,8 @@
 **Dedik**: Stolen RDP access to a windows server. Used as first step for Ransomware attacks (2020: 70% of Ransomware attacks started that way). Dedik = Dedicated server
 
 **DEP**: Data execution prevention. Parts of the memory are marked as non-execute (=NX)
+
+**DFIR**: Digital forensics and incident response
 
 **DGA / Domain generation Algorithm**: An malware algorithm generating domain names based on a counter/time to connect to.
 
@@ -96,9 +100,11 @@
 
 **Dynamite phishing**: Automated spear phishing. The malware silently collects mail communication to later fake new phishing mails for new victims
 
+**EDR /Endpoint Detection and Response**: Endpoint protection with a deeper analysis system and an array of potential responses to attacks
+
 **ELF**: Linux executable file format
 
-**EDR /Endpoint Detection and Response**: Endpoint protection with a deeper analysis system and an array of potential responses to attacks
+**EMET**: Enhanced Mitigation Experience Toolkit for Windows hardening. Now integrated into Windows Defender Exploit Guard
 
 **EPP / End Point Protection**: Passive Endpoint protection
 
@@ -196,6 +202,8 @@
 
 **Regular Expression DOS**: Non optimized regular expressions can require lots of CPU. If the attacker is able to submit an own Regex, it is possible to DOS the target system [OWASP](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)
 
+**Reproducible Build**: The software build chain must create hash-identical software on different build systems. That way some supply chain attacks can be mitigated.
+
 **Reverse shell**: A command shell running on a hacked PC. To get out through NAT/Firewall it connects back from the infected PC to a server the attacker controls.
 
 **ROI**: Return on investment. A business metric. But as attackers want to make money, make them pay for it by detecting their tools, sharing this knowledge. And make it very expensive for them to attack.
@@ -249,6 +257,8 @@
 **StrongNaming**: Authentication for .NET libraries. Signed binaries with version verification and pinned key.
 
 **Sub domain hijacking aka sub domain takeover**: The attacks is able to claim an abandoned web host with still existing DNS entries. Now it is compromised....
+
+**Supply chain attack**: The attacker manipulates a software, library or compiler used by the victim to attack the victim or the victims's customer
 
 **Suricata**: Open Source IDS [Suricata](https://suricata-ids.org/)
 

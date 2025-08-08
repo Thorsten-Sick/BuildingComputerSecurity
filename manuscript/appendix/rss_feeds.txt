@@ -1,0 +1,11 @@
+# RSS feeds as news source {#chapter-rss-feed}
+
+The internet is becoming more brittle thanks to enshittified search engines and AI summaries. One way to tie together 'classic' web information sources is RSS feeds. They announce news and changes. To access the RSS space you will need a reader.
+
+## RSS reader
+
+* Liferea
+
+## Security RSS sources
+
+TODO

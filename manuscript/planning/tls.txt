@@ -21,7 +21,9 @@ Current version of TLS is 1.3.
 Between TLS version steps there are several years. A step in a minor version number means lots of improvements. TLS 1.3 is a re-work that removes many of the security issues the old versions had.
 Especially risky features and parameters that could be used in TLS < 1.3. Long story short: Use TLS 1.3.
 
-For the transition phase you could monitor the versions used to connect to your servers and de-activate old versions you do not see anymore. Older versions have vulnerabilities.
+For the transition phase you could monitor the versions used to connect to your servers and de-activate old versions you do not see any more. Older versions have vulnerabilities.
+
+Use the AEAD mode for TLS. it is Authenticated Encryption with Associated Data.
 
 ## TLS handshake
 
@@ -96,10 +98,42 @@ manually accept it as a user.
 
 Thanks to Let's encrypt you should not need those self signed certificates anymore.
 
-%% TODO Add Let's Encrypt chapter
+## Let's Encrypt chapter
+
+Let's encrypt simplifies getting a valid certificate. It just is not an EV certificate.
+There are several tools to get a certificate. The default one is [Certbot](: )https://certbot.eff.org/)
+
+Example: Raspberry Pi with NGinx Web server:
+
+Add "server_names_hash_bucket_size  64;" to the server config file
+
+{lang="bash"}
+  sudo apt install certbot
+  apt install python-certbot-nginx     #nginx plugin for certbot
+  certbot --nginx
+
+Renewing should be automated in crontab. Test it using
+
+{lang="bash"}
+  certbot renew --dry-run
+
+%% Mein Fehler beim renewing: /usr/lib/python3/dist-packages/certbot_nginx/http_01.py    editieren, einmal False durch True ersetzen, weil das in die Config patched
+%% https://github.com/certbot/certbot/blob/873f979a25cc29bba93627eb08697baaa894d640/certbot-nginx/certbot_nginx/_internal/http_01.py#L105
+
+Test going to
+https://www.ssllabs.com/ssltest/analyze.html?d=example.com
+
+
+
+
 
 %% [Let's Encrypt wildcard](https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579)
-%% https://letsencrypt.org/getting-started/
+
+https://letsencrypt.org/getting-started/
+https://letsencrypt.org/docs/
+
+
+
 
 %% TODO Verify certificate (host name !)
 

@@ -119,6 +119,8 @@ And this is the big [reproducible builds](https://reproducible-builds.org/) proj
 
 Reproducible builds are not simple. But achieving them will be a large step in secure development.
 
+%% https://media.ccc.de/v/camp2023-57236-reproducible_builds_the_first_ten_years
+
 ## Static code analysis
 
 The cheapest way to increase security is to activate warnings in your compiler. Fix all those warnings. After that you have a useful system that warns you during development of anything strange in your code.
@@ -141,6 +143,7 @@ There are several levels of warnings in your compiler. If those are not enough, 
 %% TODO: -fsanitize=bounds fsanitize-undefined-trap-on-error
 %% TODO: -fstrict-flex-arrays
 %% TODO: -Wstringop-truncation
+%% TODO: -fharden-control-flow-redundancy
 
 
 %% TODO: Clang warnings

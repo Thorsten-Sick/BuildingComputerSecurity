@@ -35,6 +35,7 @@ Some things to know:
 * Rename your malware files from .exe to .vir. It is a tradition that protects you from accidentally starting it.
     * Better use a zip file with the password *infected*
     * One step better (to avoid accidents) is to use a crypto container like [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/)
+    * An old alternative to Veracrypt is Truecrypt. Not availanble anymore. But maybe you can remember it.
 
 **Info for malware**
 

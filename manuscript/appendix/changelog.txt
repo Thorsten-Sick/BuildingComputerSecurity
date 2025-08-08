@@ -83,7 +83,7 @@ changelog to make it simpler for you to find the new sections.
 %% There: small print nicer
 %% Caldera
 
-%%  TODO:
+%% TODO:
 %% CAPEv2
 %% common weaknesses
 %% docker
@@ -103,6 +103,21 @@ changelog to make it simpler for you to find the new sections.
 
 %% Synergies: Python, golang, API, Web, TLS, Dependencies, profiling, sql injection
 %% merge coding.wip and security_process chapter "code reviews"
+
+## Aug 2025
+
+* [RSS](#chapter-rss-feed}) feed space started
+* [AV behaviour based classification]({#chapter-antivirus-behaviour-based-classification}) extended
+* [Principles](#chapter-principles) extended
+* [Anti Virus sharing samples](#chapter-sharing-samples) extended
+* [Google dork](#chapter-google-dork) extended
+* [Browser security](#chapter-browser-security) extended
+* [Cryptographic algorithms](#chapter-crypto-algorithms) extended
+* [Passwords](#chapter-passwords) extended
+* [Threat modelling](#chapter-threat-modelling) extended
+* [TLS](#chapter-tls) extended
+* [Secret scanning](#chapter-secret-scanning) extended
+
 
 ## April 2023
 

@@ -346,8 +346,8 @@ https://learning.oreilly.com/library/view/agile-estimating-and/9780137126347/
 Head First Design Patterns
 https://learning.oreilly.com/library/view/head-first-design/0596007124/
 
-
-
+Defensive Security Handbook
+https://www.oreilly.com/library/view/defensive-security-handbook/9781098127237/
 
 -----------
 Books needing review
