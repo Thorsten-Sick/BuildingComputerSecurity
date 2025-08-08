@@ -6,6 +6,8 @@ My own collection of rust basics. Maybe we will get a rust security chapter (in 
 
 %% https://www.rust-lang.org/learn
 
+%% https://doc.rust-lang.org/book/title-page.html
+
 Format code: "rustfmt"
 
 # When to use it
@@ -33,6 +35,13 @@ It already contains:
 * Unit tests
 * Dependency handling
 * Documentation (for existing features and a way to generate documentation from code)
+
+Visual Studio Code has the Extension:
+
+* rust-analyzer
+
+It has lots of support including displaying dark-grey in code help (do not get confused: This is not saved with the code)
+
 
 ## Installing
 
@@ -145,3 +154,16 @@ Platform matrix: https://doc.rust-lang.org/nightly/rustc/platform-support.html
 %% RUST based OS, training: https://os.phil-opp.com/
 
 %% RUST guarantees memory safety. (use after free, double free, memory leaks). It does not use Garbage collection
+
+
+
+%%% SSDLC features
+%% Code formating:
+%% Dependency management:
+%% Finding vulnerabilities in dependencies:
+%% Ensure crates/dependencies are signed: Cargo.lock file has hashes
+%% Lock versions for reproducible builds: Cargo.lock file
+%% Compile documentation: cargo doc --open
+%% Verify documentation:
+%% Enforce documentation:
+%% Enforce typing: Rust does have a strong type system

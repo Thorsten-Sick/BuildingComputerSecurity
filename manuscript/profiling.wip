@@ -40,6 +40,8 @@ Modern CPUs rewrite programs to be executed in as many parallel micro instructio
 
 * Perf offers performance metrics for a process. CPU, swaps, Cache misses, ....
 
+%% Tool Hotspot: https://www.kdab.com/hotspot-gui-linux-perf-profiler/
+
 ### Perf
 
 ### perf-top
@@ -247,3 +249,10 @@ Memray: Memory profiling for Python https://github.com/bloomberg/memray
 %% Load tesing https://k6.io/open-source/
 %% Go benchmarks https://pkg.go.dev/testing#hdr-Benchmarks
 %% effective go https://go.dev/doc/effective_go
+
+%% UI for tracing: https://perfetto.dev/
+
+%% Also: Top, VMStat, Iotop, Ss
+%% sysstat for background data collection
+
+%% Statistics: Measures are absolute numbers. Metrics are compared to a baseline

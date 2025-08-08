@@ -5,7 +5,7 @@ Microservices are by default reachable via APIs.
 
 ## Testing frameworks
 
-* JMeter
+* JMeter (load testing)
 * FuzzDB
 * Robot Framework https://robotframework.org/
 * OWASP ZAP
@@ -72,6 +72,10 @@ https://github.com/raml-org/raml-spec
 https://github.com/shieldfy/API-Security-Checklist
 
 https://owasp.org/www-project-api-security/
+
+%% https://roadmap.sh/best-practices/api-security
+
+%% https://nonamesecurity.com/blog/changes-to-the-owasp-api-security-top-ten-2019-to-2023
 
 %% * access control (Authentication, Authorization) => Brute force it
 %% * SSL tester for every API call

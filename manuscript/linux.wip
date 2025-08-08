@@ -4,12 +4,44 @@
 
 https://linux-audit.com/security-program-implementing-linux-security/
 
+## CVE are dead
+Linux does not use CVEs.
+For a secure (embedded) system, use LTS - Debian or Yocto
+
+https://kernel-recipes.org/en/2019/talks/cves-are-dead-long-live-the-cve/
+
+https://social.kernel.org/objects/ecd6cb2c-770c-4258-9a62-876ac8e11d94
+
+Make sure to auto test before deploying
+
+Stable/Long Term releases happen 1-2 times a week. There is a security fix once a week.
+
+Kernel maintainers fix bugs and dp mpt care if it is security related.
+
 ## Systemd
 
 {lang="bash"}
     systemd-analyze security
 
 Systemd also has a container system for the running services
+
+There is a script showing commits done to the configured kernel
+
+## Sudo
+
+Check sudo configuration:
+
+{lang="bash"}
+    sudo /usr/sbin/visudo --check -file=/etc/sudoers
+
+log every sudo call:
+Set: Defaults log_input
+log file will be: /var/log/sudo-io/
+
+
+## List cpu vulnerabilities
+
+cat /sys/devices/system/cpu/vulnerabilities/*
 
 ## Malware
 
@@ -157,6 +189,12 @@ Important parameters are:
 * -C make C++ functions more readable (demangled)
 
 
+### ftrace
+
+https://www.kernel.org/doc/html/latest/trace/ftrace.html
+
+Linux kernel function tracer
+
 ### lsof
 
 Everything is a file on Unix. This lists open files.
@@ -268,6 +306,10 @@ Important: It is just verifying MD5. And MD5 is not secure anymore. You could us
 https://linux-audit.com/understanding-memory-information-on-linux-systems/
 
 
+%% Harden by disable running services
+
+%% Harden by Desktop firewalls
+
 %% TODO: replacement for top command: "nmon"
 
 %% ## Embedded Linux
@@ -342,3 +384,9 @@ https://linux-audit.com/vulnerability-scanning-the-destiny-to-disappointment/
 %% Kernel config hardening check https://github.com/a13xp0p0v/kconfig-hardened-check
 
 %% Exploitation https://0x434b.dev/dabbling-with-linux-kernel-exploitation-ctf-challenges-to-learn-the-ropes/
+
+%% Capabilities: man capabilities, setcap and getcap command
+
+%% Space grade linux  https://elisa.tech/space-grade-linux-sig/
+%% More: https://essr.esa.int/
+%% More:

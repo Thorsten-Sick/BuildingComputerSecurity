@@ -21,6 +21,10 @@ https://linux-audit.com/linux-host-discovery-with-nmap/
 
 https://github.com/secdev/scapy
 
+## TCP strack fuzzing and testing: Packetdrill
+
+https://github.com/google/packetdrill
+
 ## Router
 
 https://thehackernews.com/2018/05/vpnfilter-router-hacking.html
@@ -169,13 +173,15 @@ https://github.com/jpillora/chisel
 
 * SSLyze
 
-Things toc heck:
+Things to check:
 
 * heartbleed
 * certificate validation
 * renegotiation issues
 
 Also: https://observatory.mozilla.org/
+
+%% sslscan  git clone https://github.com/rbsec/sslscan ; make static; sslscan --no-failed --xml=nodegoat_SSLscan.xml nodegoat.kerokuapp.com
 
 ### DNS lookup
 
@@ -196,8 +202,11 @@ Also: https://observatory.mozilla.org/
 * tcpdump
 * wireshark
 * tshark (command line analysis tool)
+* pyshark https://github.com/KimiNewt/pyshark
 * tcpflow (assemble tcp streams)
 * hping3 (create tcp packets)
+
+eBPF based Ptcpdump extends tcpdump.
 
 ### Local network settings
 
@@ -257,6 +266,55 @@ Also: https://observatory.mozilla.org/
 
 Source: https://wizardzines.com/#posters
 
+%% Netcat das schweizer Taschenmesser für Netzwerke
+%% Socat ist wohl eine verbesserte Version
+
+%% Tool subfinder finds subdomains
+%% gobuster for directory enumeration
+
+%% Suricata
+%%%%%%%%%%%
+%% Grafische Darstellung der JSON: Evebox
+%% "fritzdump" hilft bei pcap und fritz boxen
+%% "tcpreplay" spielt pcaps wieder ins netz
+%% eicar für netzwerke: http://testmynids.org/uid/index.html
+
+%% Zeek
+%%%%%%%%%%%%
+%% https://zeek.org/
+
+%% * supports scripting
+
+%% * Can run on  multiple nodes
+
+%% Security Onion
+%%%%%%%%%%%%%%%%%
+%% https://securityonionsolutions.com/
+
+%% SNORT
+%%%%%%%%%%
+%% https://www.snort.org/  (IDS/IPS)
+
+
+
+
+%% * Signature based detection
+%% * Anomaly based detection
+%% * heuristics analysis
+%% * Protocol analysis
+
+%% * file extraction
+%% * TLS/SSL inspection
+
+
+%% Detection tricks
+%% Uncommon connections: Bits send7received, unexpected connection length
+
+%% Test detection
+%% continuously test own detection (scripted)
+%% target are fake machines - this can be filtered
+%% Get external audits
+
 ### Books
 
 %% https://learning.oreilly.com/library/view/attacking-network-protocols/9781492067504/
@@ -288,6 +346,8 @@ Source: https://wizardzines.com/#posters
 
 %% Check IP on external databases (Virus Total...) https://github.com/jreisinger/checkip
 
+%% GEOIP lookup https://github.com/axllent/goiplookup
+
 %% TODO: Netcalc tool
 
 %% https://github.com/jafarlihi/rconn
@@ -300,6 +360,10 @@ Source: https://wizardzines.com/#posters
 
 %% mDNS enumeration: https://github.com/evilsocket/spycast
 
+%% Sicheres filesharing
+%% OnionShare (pip hat die Kommandozeilenversion)
+%% Unison
+
 ## Books
 
 https://learning.oreilly.com/library/view/practical-security-automation/9781789802023/bae7eb09-119a-41a3-8112-cec27c36b844.xhtml#:-:text=The%20scope%20of%20infrastructure%20security
@@ -311,3 +375,31 @@ https://static.open-scap.org/  (https://github.com/OpenSCAP/scap-workbench/relea
 %% TCP: Proxy and analyze: https://github.com/kevwan/tproxy
 
 % Network speedbump net slowdown https://github.com/kffl/speedbump
+
+%% Tool to check certs: certinfo
+
+%% HTTP/2 : https://cloud.google.com/blog/products/identity-security/how-it-works-the-novel-http2-rapid-reset-ddos-attack?hl=en
+
+%% Protocols using plaintext credentials: Telnet, FTP, SNMPv2, HTTP, old SMB
+
+%% Insecure and deprecated: SNMPv1, SNMPv2c
+
+%% Switch hardening; Use VLANs, enable port security, disable unused ports,limit number of MAC addresses per port, DHCP snooping, dynamic ARP inspection
+%% VLans restrict broadcasts only tot he target VLAN
+
+%% Firewall: egress filtering: Find breaches and reduce leaks
+%% Do not forget IPv6 traffic !
+
+%% TACACS+: Central authentication for network equipment ?
+
+%% ARP poisoning/MAC spoofing: fight with port security, sticky ports, DHCP snooping, danymic ARP isnepction
+
+%% Avoid amplification attacks through the network infrastructure
+
+%% Public facing services on a CDN
+
+%% Break down network into manageable zones /better to scan, firewall and reduces broadcast traffic)
+
+%% Network ACL: A filter that restricts traffic between subnets and IP addresses. Applied by routers or simialar
+
+%% NAC Network Access Control802.1X protocol, Authentication at the port level. Devices authenticate to be connected

@@ -43,8 +43,9 @@ https://learning.oreilly.com/learning-paths/learning-path-docker/9781788997355/
 
 %% TODO: https://github.com/docker/docker-bench-security
 
-%% TODO: https://gvisor.dev 
+%% TODO: https://gvisor.dev
 
+%% TODO: docker is for one process only. But using "docker compose" and a yaml file it is possible to create a mesh of interacting processes and their dependencies
 
 ### Docker security
 
@@ -86,3 +87,6 @@ If an attacker can write to the base file system, she still can not execute prog
 [Docs](https://docs.docker.com/)
 
 %% TODO: Check out podman as docker alternative
+
+%% Checking docker images: Grype
+%% Other docker check: Trivy https://github.com/aquasecurity/trivy

@@ -24,3 +24,13 @@
 %% Evilsockets Medusa multiprotocol honeypot: https://github.com/evilsocket/medusa
 
 %% https://github.com/thinkst/opencanary
+
+%% SSH/Telnet: https://github.com/cowrie/cowrie
+
+%% MySQL: https://github.com/sjinks/mysql-honeypotd
+
+%% NoSQL: https://github.com/torque59/nosqlpot
+
+%% Postgres: https://github.com/betheroot/sticky_elephant
+
+%% Multiprotocol network (SMB, FTP): https://github.com/thinkst/opencanary

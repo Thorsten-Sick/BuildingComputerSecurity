@@ -15,3 +15,5 @@ There should be a SHA256 as well !
 %% TODO: Also "signcode" and "chktrust". Needs testing !
 
 %% TODO: SigFlip patching authenticode signed PE files  https://github.com/med0x2e/SigFlip
+
+%% http://csrc.nist.gov/CSRC/media/Publications/white-paper/2018/01/26/security-considerations-for-code-signing/final/documents/security-considerations-for-code-signing.pdf

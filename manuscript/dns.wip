@@ -107,6 +107,10 @@ http://dns-leak.com/
 
 %%%%%%%%%
 
+%% Malware can use DGA (Domain Generation Algotihm)
+
+%% Malware can use Fast Flux
+
 %% TODO: tool dnsrecon seems cool
 
 %% TODO: tool DNSDIAG: dnsdiag.org

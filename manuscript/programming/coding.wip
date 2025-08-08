@@ -50,7 +50,7 @@ Other secure coding standards can be found here:
 
 ## Code review guide
 
-OWASP wrote a [code review guide](https://owasp.org/www-project-code-review-guide/). 
+OWASP wrote a [code review guide](https://owasp.org/www-project-code-review-guide/).
 
 ## Tools for code reviews
 
@@ -132,3 +132,7 @@ Also: Maybe you could want to uninstall some of those tools....
 %% Static code analysis for c/C++/objective C and Java: https://fbinfer.com
 
 %% Worst case execution time test too: https://www.absint.com
+
+%% SUX rule for safer code aka "Rule of two" https://kellyshortridge.com/blog/posts/the-sux-rule-for-safer-code/
+
+%% Secure Coding guidelines are required

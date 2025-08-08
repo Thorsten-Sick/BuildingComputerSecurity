@@ -11,3 +11,5 @@
 %% https://github.com/snovvcrash/usbrip
 
 %% TODO: Userspace USB driver: https://blog.benjojo.co.uk/post/userspace-usb-driver
+
+%% USB device monitor https://github.com/tuna-f1sh/cyme

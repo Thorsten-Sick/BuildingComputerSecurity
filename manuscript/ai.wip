@@ -48,11 +48,34 @@ Clustering first. Getting the labels for the clusters later. The second step is 
 "Learning by doing"
 
 
+# LLM
+
+Running models locally:
+* Huggingface Model hub https://huggingface.co/models
+* OLLAMA: ollama pull <model>; ollama run <model>
+
+## Alpaca
+
+GUI for ollama
+
+## PyGPT
+
+Python AI assistant, uses local OLLama models
+Can do images, transcribe audio and video to text
+
+# LLM use cases in security
+
+## Transpile
+
+LLMs are good at translating one text/language into another. This can be used to disassemble assembler code into readable code (like C or an analysis). This is already used and some malware offers Prompt injection as countermeasure
+
 %% TODO: Keras
+
+%% https://visualvm.github.io/ um heapdumps zu analysieren
 
 %% TODO: Tensorflow
 
-%% TODO: MAlware detection using AI
+%% TODO: Malware detection using AI
 
 %% TODO: Pytorch
 

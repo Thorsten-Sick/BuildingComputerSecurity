@@ -8,6 +8,13 @@ https://www.digikey.com/en/maker/projects/what-is-a-realtime-operating-system-rt
 
 https://lwn.net/Articles/911332/
 
+
+## Buildroot
+
+Buildroot creates linux images.
+Using "make pkg-stats" you can get vulnerability statistics (as html and json)
+
+
 ## Firmware reversing
 
 https://www.youtube.com/watch?v=GIU4yJn2-2A
@@ -31,6 +38,7 @@ https://www.freertos.org/Documentation/RTOS_book.html
 %% https://github.com/e-m-b-a/embark
 %% https://github.com/e-m-b-a/emba
 
+%% Binwalk for firmware analysis
 
 %% OFRAK
 %% https://www.wired.com/story/ofrak-iot-reverse-engineering-tool/
@@ -60,3 +68,5 @@ https://www.freertos.org/Documentation/RTOS_book.html
 
 %% Encryption: AEs CCM seems common on IOT devices, has some drawbacks: https://web.cs.ucdavis.edu/~rogaway/papers/ccm.pdf
 %% Also small is ChaCha20-Poly1305
+
+%% Debugging https://media.ccc.de/v/camp2023-57321-debugging_microcontrollers

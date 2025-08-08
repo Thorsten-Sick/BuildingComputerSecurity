@@ -16,3 +16,33 @@ Most important is to keep your documentation up to date. To do that without extt
 * sphinx-revealjs Can generate [presentations](#chapter-presentations) as output
 
 More extensions can be found on the [official page](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
+
+
+## LaTeX
+
+LaTeX needs an own makefile latexmk. Because sometimes a tool needs to be executed multiple times.
+
+### Converting to pdf
+
+latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" file.tex
+
+### Converting to html
+
+https://github.com/coolwanglu/pdf2htmlEX
+
+### Converting to epub
+
+latexml --dest=$1.xml $1.tex
+latexmlpost -dest=$1.html $1.xml
+ebook-convert $1.html $1.epub --language en --no-default-epub-cover
+
+Alternative:
+sudo apt install texlive-extra-utils
+
+
+https://minireference.com/blog/generating-epub-from-latex/
+
+
+## PDF conversion
+
+### Converting to epub

@@ -1,12 +1,10 @@
 # IDE
 
+Learning the features and power of an IDE can improve coding and code quality.
+
 ## VSCode
 
-### Marketplace:
-
-@category:"" to search extensions by category
-
-@installed: View installed extensions
+A generic IDE for many programming languages. Despite that it is not so special - you can use find many of those features in the IDE of your choice as well.
 
 ### Shortcuts
 
@@ -38,12 +36,43 @@ Other languages than Js based ones need a debugger extension installed.
 
 All debugger infos (breakpoints, watched variables, stack) can be found in the bar on the left.
 
-### Writing extensions
 
-## IntelliJ
+### Extensions
 
-### Marketplace
+Extensions are installed
 
-### Shortcuts
+To search in the Marketplace:
 
-### Writing Extensions
+@category:"" to search extensions by category
+
+@installed: View installed extensions
+
+For text:
+
+* Spell check: Code spell checker https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+* Altervista Thesaurus
+* LaTeX Workshop
+
+For Go:
+
+* "Go" by Google
+
+For Python:
+
+* Python by Microsoft
+* Pylance by Microsoft
+* isort by Microsoft
+* Python extended (code completion)
+
+For Javascript:
+
+* ESLint by Microsoft
+
+
+YAML:
+
+* YAML by Redhat (to use schemes)
+
+Linting:
+
+* "Training spaces" highlights and deletes trailing spaces

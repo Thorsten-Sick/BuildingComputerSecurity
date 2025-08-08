@@ -56,6 +56,14 @@ https://www.heise.de/newsticker/meldung/WPA3-schuetzt-vor-WLAN-Einbruechen-und-k
 
 Needs Lambda / 2
 
+%% WEP: broken
+%% WPA: vulnerabilities (brute force, replay)
+%% WPA2: Underlying protocol weakness, can be broken with some effort
+%% WPA3: Still ok
+
+%% 802.11 allows sending management frames (de-auth !) => Monitor for rogue access points
+
+%% mdk3 can jam the network by sending de-auth packets
 
 %% NMAP for WIFI: https://github.com/calebmadrigal/trackerjacker
 

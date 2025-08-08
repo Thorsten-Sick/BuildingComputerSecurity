@@ -3,3 +3,58 @@
 Microsoft security development lifecycle.
 
 https://www.microsoft.com/en-us/securityengineering/sdl/practices
+
+## Steps
+
+
+### Planning phase
+
+* Define security Requirements
+    * ASVS by OWASP
+    * MASVS by OWASP
+    * https://owasp.org/www-project-iot-security-verification-standard/
+* Design system diagram
+* Provide Training
+* Define Metrics and Compliance Reporting
+* Threat modeling
+* Establish Design Requirements
+* Define Crypto Standards
+* Define common IDE settings
+
+### Implementation and testing phase
+
+* Coding Style
+* Static Typing
+* Secret Scanning
+* Enforce Documentation
+* Dependency scanning, SBOM generation
+* Enforce Code reviews on PR
+* Linting
+* Compiler warnings
+* PEP 8 (Python only)
+* Common vulnerability scanning
+* Unit tests
+* Compilation: Which hardening compiler flags to use ?
+* SAST
+* DAST
+* Docker scanning
+* Code complexity analysis
+* Integration tests
+    * ASVS by OWASP
+    * WSTG for Web https://owasp.org/www-project-web-security-testing-guide/
+    * MASVS + MASTG by OWASP   (MASTG has hands on hints how to test) - MASVS does not have maturity levels in the document
+    * https://owasp.org/www-project-iot-security-verification-standard/
+* Before release: Verify that there is no debug code present ! (strip binaries, remove stack trace output to web pages, ...)
+* Fuzzing
+* Address Sanitizer
+* Security checks for cloud (are the hoster settings secure ?)
+* Web API tests
+* Web API fuzzing/pen tests
+* Web API tests as security gate
+* Harden databases (https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html)
+* Central vulnerability monitoring => Defect Dojo
+* Incident response plan
+
+
+%% Software Assurance Maturity Mode ist der strukturelle Überbau, in den SSDLC einklinkt
+% Platz finden für: https://owaspsamm.org/   https://owasp.org/www-project-samm/

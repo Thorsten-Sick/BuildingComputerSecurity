@@ -1,4 +1,4 @@
-# Dependencies and supply chain
+# Dependencies and the supply chain
 
 All the recursive dependencies in a project are called the "Software Bill of Materials" or SBOM.
 
@@ -92,7 +92,25 @@ Grype is Mac and Linux only.
 
 I verified it works for Java, JS and Python
 
-More is supporded according to the documentation: https://github.com/anchore/grype#features
+More is supported according to the documentation: https://github.com/anchore/grype#features
+
+
+Grype DB update:
+
+Set the environment variable GRYPE_DB_AUTO_UPDATE to false to prevent automated updates (maybe your build server is air gapped). Manually start a DB update by
+
+{lang="bash"}
+    ./grype db update
+
+Using the configuration file you have multiple ways to define exceptions. If you use Grype as security gate on your build system it might be smart to add some vulnerabilities that do not affect your product to this list.
+
+In python projects it is scanning installed packages. So make sure to use pip install to enrich your virtualenv before running grype with dir:/your/project/path
+
+In CI/Cd environments use "fail on" to define the vulnerabilities that make it fail.
+
+{lang="bash"}
+    ./grype -f high dir:/path/to/your/project
+
 
 ### OWASP Dependency check
 
@@ -151,7 +169,26 @@ Combined that would result in a tactic like:
     * Is at least 6 months old
     * has a lower vulnerability score than the current version
 
+# SBOM generation
 
+The SBOM file should be stored together with your product name and version id/last commit in an artifact store.
+
+## Distro2SBOM
+
+https://pypi.org/project/distro2sbom/
+
+
+{lang="bash"}
+    pip install distro2sbom
+    distro2sbom --distro deb --system --format json --output-file sbom.json
+
+(distro2sbom has many command line parameters, you can do more than just checking the locally installed system)
+
+The SBOM can be matched to a current vulnerability DB using Grype:
+
+{lang="bash"}
+    curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b ./grype
+    grype/grype sbom:sbom.json
 
 %% ### UNISBOM
 %% Software BOM on any OS:
@@ -199,3 +236,7 @@ Combined that would result in a tactic like:
 
 
 %% guac https://thehackernews.com/2022/10/google-launches-guac-open-source.html
+
+%% List of supply chain attacks https://github.com/cncf/tag-security/tree/main/supply-chain-security/compromises
+
+%% SLSA supply chain security improvement https://slsa.dev/spec/v1.0/

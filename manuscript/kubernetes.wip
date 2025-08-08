@@ -2,7 +2,17 @@
 
 ## Starting a local cluster
 
-Minikube https://minikube.sigs.k8s.io/docs/
+* Minikube https://minikube.sigs.k8s.io/docs/
+* K3D
+* Kind
+
+A bit larger:
+
+* K3S
+
+## Git Ops
+
+Use pull. ArgoCD seems to be a common tool
 
 ## Security
 

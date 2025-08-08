@@ -1,9 +1,27 @@
+# OSINT
+
 https://github.com/laramies/theHarvester
 https://github.com/DataSploit/datasploit
 
 https://posts.specterops.io/gathering-open-source-intelligence-bee58de48e05
 
 %% TODO: Link to [Recon-NG](#chapter-recon-ng)
+
+
+## OSINT framework
+
+https://osintframework.com/
+
+
+## Maltego OSINT tool
+
+https://www.maltego.com/
+
+Support macros called "Maltego Machines".
+
+
+%%%%%%%%%%%%%%
+
 
 
 %% Phishing Campaigns
@@ -17,3 +35,11 @@ https://github.com/securestate/king-phisher
 %% TODO add Maltego https://www.maltego.com/
 
 https://start.me/p/jj2XEr/osint-global-non-us
+
+%% tools
+
+%% web-check  https://github.com/Lissy93/web-check
+
+## Make your own OSINT check on your company
+
+* What is revealed ?

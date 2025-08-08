@@ -212,7 +212,10 @@ Malware simulator: https://github.com/redcanaryco/chain-reactor
 Add those special search engines:
 https://twitter.com/trimstray/status/1328004644807860224?s=09
 - censys.io : Internet service scanning
-- shodan.io  : IoT search engine
+- shodan.io  : IoT search engine. Shodan monitor helps tracking own footprint.
+- Book "A complete guide to shodan"
+- Book: "Blue team handbook"
+- Book "Hacking Exposed Industrial Control Systems: ICS and SCADA Secruity Secrets & Solutions"
 - https://www.greynoise.io/viz : Internet service scanning
 - zoomeye.org: chinese
 - onyphe.io: Internet service scanning
@@ -278,7 +281,8 @@ https://twitter.com/trimstray/status/1328004644807860224?s=09
 --------------------
 Tools to check out for analysis:
 
-exiftool (exif information reading)
+exiftool (exif information reading, images, office, pdf, ...)
+https://fotoforensics.com/ (more exif)
 Peid (packer, cryptor, ... detecing)
 CFF Explorer pe editing
 xorstrings/xorsearch: search for strings in an encoded binary https://blog.didierstevens.com/programs/xorsearch/
@@ -292,8 +296,10 @@ Find a place for them:
  Just in Time Credentials: short term permissions
 
  Expiring unused permissions: https://netflixtechblog.com/introducing-aardvark-and-repokid-53b081bf3a7e
- 
+
  ----------------------- OWASP sources
 web testing:  https://owasp.org/www-project-application-security-verification-standard/
  design: https://owasp.org/www-project-proactive-controls/
  cheat sheet: https://owasp.org/www-project-cheat-sheets/
+
+%% IRC server Ergo  github.com/ergochat/ergo

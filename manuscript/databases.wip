@@ -6,3 +6,17 @@ SQL injection
 
 
 https://github.com/torque59/Nosql-Exploitation-Framework
+
+
+## Monitor
+
+* Monitor access (also failed)
+* Monitor disruptions
+* Prevent data leaks
+* Prevent unauthorized modifications
+* Backups
+* SQL injection attack attempts
+* Modification by privileged users
+
+
+%% principle of least functionality: Deactivate features not needed: STIG and CIS benchmarks for that

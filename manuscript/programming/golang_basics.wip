@@ -66,6 +66,8 @@ Use "godoc"
 
 ## Tests
 
+### Unit tests
+
 Unit tests are a "batteries included" feature in Golang.
 The *testify* package extends that: https://github.com/stretchr/testify
 
@@ -76,6 +78,12 @@ Unit tests are run with
 
 They are in *name_test.go* files parallel to the code files. Test functions names should start with "Test" and take the parameter "t *testing.T".
 
+To test recursively, and with coverage run
+
+{lang="bash"}
+    go test -coverprofile=coverage.out ./...
+    go tool cover -html=coverage.out -o coverage.html
+    firefox coverage.html
 
 %% https://golangdocs.com/golang-unit-testing
 %% https://medium.com/nerd-for-tech/writing-unit-tests-in-golang-part-1-introducing-testify-c0d458442412
@@ -96,6 +104,15 @@ Mocking can be simplified by using *Mockery* to generate default mocks.
 %% TODO IDE integration
 
 %% Todo performance
+
+### Integration tests
+
+Integration tests support code coverage as well:
+
+https://go.dev/testing/coverage/
+
+https://go.dev/blog/integration-test-coverage
+
 
 ### Fuzzing
 
@@ -203,6 +220,7 @@ https://go.dev/
 %% https://security.googleblog.com/2023/04/supply-chain-security-for-go-part-1.html
 
 %% Tool "deptree" shows dependency graph of "go mod"
+%% Also relevant for dependencies: "go list" and "go mod graph"
 
 %% Magic 3 build steps in go:
 %% go mod init project
@@ -216,3 +234,7 @@ https://go.dev/
 %% Go profiler: https://go.dev/blog/pprof
 %% Go benchmarks https://pkg.go.dev/testing#hdr-Benchmarks
 %% effective go https://go.dev/doc/effective_go
+
+%% Generics: https://go.dev/doc/tutorial/generics
+
+%% Checkout if doing Microservices: Gin Framework, gRPC, Go Kit, Go Micro
